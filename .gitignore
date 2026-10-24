@@ -1,0 +1,19 @@
+# Godot import cache and local Python files
+.godot/
+__pycache__/
+*.py[cod]
+
+# Installable packages are distributed through GitHub Releases.
+*.apk
+*.aab
+*.apks
+dist/
+*.partial
+
+# Local configuration and private signing identities
+.env
+.env.*
+local.properties
+*.jks
+*.keystore
+!tools/signing/debug.keystore
