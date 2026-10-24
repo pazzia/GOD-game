@@ -1,0 +1,305 @@
+class_name StageView
+extends Control
+const Puppet=preload("res://presentation/character_puppet.gd")
+signal target_tapped(kind: String,id: String)
+var kernel: RefCounted
+var translator: Callable
+var selected: String=""
+var inspected: String=""
+var reduced_motion: bool=false
+var clock: float=0
+var _textures: Dictionary={}
+var _hits: Array=[]
+var _puppets: Dictionary={}
+var _kernel_signature: String=""
+var _environments: Dictionary={}
+var _route_frames: Dictionary={}
+var _render_tick: int=-1
+var _render_phase: String=""
+var _route_signature: String=""
+var _tick_elapsed: float=.1
+var _pointer_active: bool=false
+var _pointer_origin: Vector2
+var _tap_cancelled: bool=false
+var _pressed_target: Dictionary={}
+var _font: Font=preload("res://assets/fonts/DejaVuSans.ttf")
+const INK=Color("25243b")
+const CREAM=Color("fff5de")
+const PURPLE=Color("5d43a7")
+const ASSETS={"PROP_STONE_M":"stone","PROP_STONE_L":"stone","PROP_STONE_S":"stone","PROP_FLOAT":"float","PROP_SCREEN":"screen","PROP_CARGO_CRATE":"crate","PROP_TICKET_BOOTH":"ticket_booth","PROP_ANCHOR":"span_anchor","PROP_STONE_ANCHOR":"stone_anchor","PROP_BOLLARD":"wooden_bollard","PROP_BOAT":"boat","PROP_ROPE":"rope","PROP_THREAD":"thread","PROP_CLAMP":"clamp","PROP_COLD_PACK":"cryopack","PROP_DECOY_FLAME":"decoy_fire","PROP_FIRE":"fire_source","PROP_WATER_BOWL":"water_bowl","PROP_HEATED_STONE":"hot_stone","PROP_INSULATED_BOX":"thermobox","PROP_BREAD":"bread","PROP_DESSERT":"dessert","PROP_HIDDEN_FRAME":"frame","PROP_PAPER_BRIDGE":"paper_bridge","PROP_CONTROL_WEIGHT":"control_weight","PROP_HOIST":"hoist","PROP_PAPER_WALL":"paper_gate","PROP_GATE":"wood_gate","PROP_FLAGS":"flags","PROP_STEAM":"steam"}
+const CHARACTERS={"CH01":"felix","CH02":"plum","CH03":"marfa","CH04":"semyon","CH05":"nika","CH06":"lada","CH07":"roza","CH08":"hugo","CH09":"caramelka","CROWD01":"crowd_gardener","CROWD02":"crowd_postwoman","CROWD03":"crowd_fisherman","CROWD04":"crowd_librarian","CROWD05":"crowd_merchant","CROWD06":"crowd_musician"}
+func _ready() -> void:
+	mouse_filter=MOUSE_FILTER_PASS;clip_contents=true;texture_repeat=CanvasItem.TEXTURE_REPEAT_ENABLED
+	_sample_presentation(0)
+	_sync_puppets()
+func _process(delta: float) -> void:
+	if not reduced_motion:clock+=delta
+	_sample_presentation(delta)
+	_sync_puppets()
+	queue_redraw()
+func _ensure_puppet(key: String,actor: String,height: float) -> void:
+	if _puppets.has(key):return
+	var puppet=Puppet.new();puppet.name="Puppet_"+key.replace(":","_");add_child(puppet)
+	if puppet.configure(actor,height) and puppet.rigged:
+		puppet.set_meta("actor",actor);_puppets[key]=puppet
+	else:puppet.queue_free() # Pending actors retain their explicit painted baseline.
+func _route_motion(entity_id: String) -> Dictionary:
+	var result: Dictionary={"moving":false,"facing":1}
+	for actor_id in kernel.state.routes:
+		var task: Dictionary=kernel.state.routes[actor_id]
+		if actor_id!=entity_id and (task.carrier_id!=entity_id or task.get("transport_mode","")=="towed"):continue
+		var route: Dictionary=kernel._find(kernel.definition.navigation.routes,task.route_id)
+		result.facing=1 if kernel._find(kernel.definition.navigation.nodes,route.nodes[-1]).position[0]>=kernel._find(kernel.definition.navigation.nodes,route.nodes[0]).position[0] else -1
+		result.moving=task.progress<(route.nodes.size()-1)*int(route.get("ticks_per_edge",10)) and str(task.get("waiting_for","")).is_empty() and kernel.state.phase=="RUN_RESOLUTION"
+	return result
+func _sync_puppets() -> void:
+	if kernel==null or kernel.state.is_empty():
+		for puppet in _puppets.values():puppet.visible=false
+		return
+	var signature: String=str(kernel.get_instance_id())+":"+str(kernel.state.get("content_digest",""))
+	var height: float=minf(220,size.y*.34)
+	_ensure_puppet("felix","felix",height);_ensure_puppet("plum","plum",height*.364)
+	var wanted: Array=["felix","plum"]
+	for id in kernel.state.entities:
+		if kernel._entities[id].asset_id=="CH09_RIG":
+			var key: String="entity:"+id;wanted.append(key);_ensure_puppet(key,"caramelka",116)
+	for key in _puppets.keys():
+		if key not in wanted:
+			_puppets[key].visible=false;_puppets[key].queue_free();_puppets.erase(key)
+	if signature!=_kernel_signature:
+		for puppet in _puppets.values():puppet.play_state("idle",true)
+		_kernel_signature=signature
+	for key in _puppets:
+		var puppet: Node2D=_puppets[key]
+		var id: String="hero" if key in ["felix","plum"] else key.trim_prefix("entity:")
+		var entity: Dictionary=kernel.state.entities[id]
+		puppet.visible=not entity.removed and kernel._slots[entity.slot].mount_layer!="tray"
+		puppet.process_mode=Node.PROCESS_MODE_INHERIT if puppet.visible else Node.PROCESS_MODE_DISABLED
+		puppet.position=_entity_position(id);puppet.set_reduced_motion(reduced_motion)
+		var motion: Dictionary=_route_motion(id);puppet.set_facing(motion.facing)
+		var loop: String="move" if motion.moving else ("celebrate" if kernel.state.phase=="SUCCESS" else ("observe" if kernel.state.phase in ["PERFORMANCE","REHEARSAL"] else "idle"))
+		if key=="felix":puppet.set_display_height(height)
+		elif key=="plum":
+			puppet.set_display_height(height*.364);puppet.position+=Vector2(height*.73,-height*.59+sin(clock*3)*height*.04)
+			loop="fly" if motion.moving else ("cheer" if kernel.state.phase=="SUCCESS" else "hover")
+		else:puppet.set_display_height(116)
+		puppet.play_state(loop)
+	var order: Array=_puppets.keys()
+	order.sort_custom(func(a,b):return _puppets[a].position.y<_puppets[b].position.y)
+	for key in order:move_child(_puppets[key],get_child_count()-1) # Tree order, never z above sibling modal UI.
+func play_actor(actor: String,animation: String) -> void:
+	_sync_puppets()
+	for key in _puppets:
+		if key==actor or _puppets[key].get_meta("actor","")==actor:_puppets[key].play_state(animation,true)
+func _environment(scene: String) -> Dictionary:
+	if _environments.has(scene):return _environments[scene]
+	var path: String="res://assets/art/environments/"+scene+"/layers.json"
+	var data: Dictionary={}
+	if FileAccess.file_exists(path):
+		var parser=JSON.new()
+		if parser.parse(FileAccess.get_file_as_string(path))==OK and parser.data is Dictionary:data=parser.data
+	var valid: bool=data.get("layers") is Array and data.layers.size()==5
+	if valid:
+		for layer in data.layers:
+			if not layer is Dictionary or not layer.get("file") is String or layer.file.contains("..") or texture("res://assets/art/environments/"+scene+"/"+layer.file)==null:valid=false;break
+	if not valid:data={}
+	_environments[scene]=data
+	return data
+func _draw_environment(scene: String) -> void:
+	var data: Dictionary=_environment(scene)
+	if not data.is_empty():
+		# Full-canvas landscape layers share the exact same 3:2 play rectangle.
+		# They all precede authoritative water, props, actors and witness eye pins.
+		for layer in data.layers:
+			var tex: Texture2D=texture("res://assets/art/environments/"+scene+"/"+layer.file)
+			draw_texture_rect(tex,Rect2(Vector2.ZERO,size),false,Color(1,1,1,float(layer.get("opacity",1))))
+		return
+	var env_name: String={"ENV01":"bg_river","ENV02":"bg_kitchen","ENV03":"bg_archive"}.get(scene,"bg_river")
+	var bg: Texture2D=texture("res://assets/art/environments/"+env_name+".png")
+	if bg!=null:
+		var fitted: Vector2=bg.get_size()*maxf(size.x/bg.get_width(),size.y/bg.get_height())
+		draw_texture_rect(bg,Rect2((size-fitted)/2,fitted),false)
+	else:draw_rect(Rect2(Vector2.ZERO,size),Color("dce5d1"))
+func world(p: Array) -> Vector2:return Vector2(20+float(p[0])*38,36+float(p[1])*((size.y-100)/28.0))
+func _vec(p: Array) -> Vector2:return Vector2(float(p[0]),float(p[1]))
+func texture(path: String) -> Texture2D:
+	if not _textures.has(path):_textures[path]=load(path) if ResourceLoader.exists(path) else null
+	return _textures[path]
+func asset_path(entity_id: String) -> String:
+	var d: Dictionary=kernel._entities[entity_id]
+	if d.asset_id=="CH09_RIG":return "res://assets/art/characters/caramelka.png"
+	var stem: String=ASSETS.get(d.asset_id,"crate")
+	var entity: Dictionary=kernel.state.entities[entity_id]
+	if stem=="fire_source" and "M02" in kernel.state.active_laws:stem="fire_source_cold"
+	if stem=="paper_bridge" and "M03" in kernel.state.active_laws:stem="paper_reinforced"
+	if stem=="water_bowl":
+		var zone: String=d.properties.get("thermal_subject_zone_id","")
+		if kernel.state.get("zones",{}).get(zone,{}).get("phase","")=="frozen":stem="water_bowl_frozen"
+	return "res://assets/art/props/"+stem+".png"
+func _art(path: String,pivot: Vector2,height: float,sway: float=0) -> bool:
+	var tex: Texture2D=texture(path)
+	if tex==null:return false
+	var width: float=height*float(tex.get_width())/float(tex.get_height())
+	draw_set_transform(pivot,sway)
+	draw_texture_rect(tex,Rect2(-width/2,-height,width,height),false)
+	draw_set_transform(Vector2.ZERO)
+	return true
+func _label(value: String,at: Vector2,font_size: int=24,color: Color=INK) -> void:draw_string(_font,at,value,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size,color)
+func _rounded(rect: Rect2,color: Color,radius: int=14) -> void:
+	var style=StyleBoxFlat.new();style.bg_color=color;style.set_corner_radius_all(radius);draw_style_box(style,rect)
+func _draw() -> void:
+	_hits.clear()
+	if kernel==null or kernel.state.is_empty():return
+	var st: Dictionary=kernel.state
+	var scene: String=kernel.definition.get("scene_id","ENV01")
+	_draw_environment(scene)
+	for zone in kernel.definition.get("zones",[]):
+		if zone.kind!="WATER" or not zone.has("polygon"):continue
+		var points: PackedVector2Array=[]
+		for p in zone.polygon:points.append(world(p))
+		var frozen: bool=st.get("zones",{}).get(zone.id,{}).get("phase","")=="frozen"
+		var surface: Texture2D=texture("res://assets/art/props/"+("ice_surface" if frozen else "water_surface")+".png")
+		var uv: PackedVector2Array=[]
+		for point in points:uv.append(point/700.0)
+		if surface!=null:draw_polygon(points,PackedColorArray([Color.WHITE]),uv,surface)
+		else:draw_colored_polygon(points,Color("b6e4ed") if frozen else Color("4c98aa"))
+		var rim: PackedVector2Array=points.duplicate();rim.append(points[0])
+		draw_polyline(rim,Color(.15,.26,.29,.8),5,true)
+		draw_polyline(rim,Color(.87,.96,.93,.8),2,true)
+		if not selected.is_empty() or not inspected.is_empty():
+			for i in range(points.size()):draw_dashed_line(points[i],points[(i+1)%points.size()],Color(.84,.96,.91,.65),2,12,true)
+		for i in range(3):
+			var at: Vector2=points[0]+Vector2(26+i*51,28+i*35)
+			draw_line(at,at+Vector2(29+sin(clock+i)*5,0),Color(.82,.95,.94,.65),3,true)
+	if scene=="ENV01":
+		_art("res://assets/art/props/dock.png",world([6,20])+Vector2(40,32),100)
+		_art("res://assets/art/props/dock.png",world([18,20])+Vector2(-15,32),100)
+	# Slots preserve the exact geometry used by visibility and navigation.
+	for slot in kernel.definition.slots:
+		if slot.mount_layer=="tray":continue
+		var valid: bool=false
+		if selected.begins_with("w:"):valid="witness" in slot.allowed_entity_types
+		elif st.entities.has(selected):valid=kernel._entities[selected].type_id in slot.allowed_entity_types and not st.entities[selected].removed
+		if valid:
+			var pos: Vector2=world(slot.position)
+			draw_circle(pos,30,Color(.99,.95,.78,.65+.1*sin(clock*3)))
+			draw_arc(pos,32,0,TAU,40,PURPLE,3,true)
+			_hits.append({"kind":"slot","id":slot.id,"rect":Rect2(pos-Vector2(72,72),Vector2(144,144))})
+	var ids: Array=st.entities.keys()
+	ids.sort_custom(func(a,b):return world(st.entities[a].position).y<world(st.entities[b].position).y)
+	for id in ids:
+		var e: Dictionary=st.entities[id]
+		var d: Dictionary=kernel._entities[id]
+		if e.removed or id=="hero" or kernel._slots[e.slot].mount_layer=="tray":continue
+		var pos: Vector2=_entity_position(id)
+		var height: float=92
+		if d.material=="STONE":height={"S":64,"M":91,"L":112}.get(d.properties.get("size","M"),91)
+		elif d.apparent_class=="SCREEN":height=150;pos.y+=60
+		elif d.asset_id in ["PROP_FIRE","PROP_HOIST","PROP_TICKET_BOOTH"]:height=150
+		elif d.asset_id=="PROP_PAPER_BRIDGE":height=92
+		elif d.asset_id=="PROP_FLOAT":height=52;pos.y+=22
+		elif d.asset_id=="CH09_RIG":height=116
+		if e.effective.get("buoyant",false) and kernel._position_over_water(e.position):pos.y+=sin(clock*2)*3
+		if not _puppets.has("entity:"+id):_art(asset_path(id),pos,height,sin(clock*2)*.01 if d.asset_id=="CH09_RIG" else 0)
+		if d.material=="STONE" and d.properties.has("size"):
+			_rounded(Rect2(pos-Vector2(61,height+45),Vector2(122,38)),INK,11)
+			_label(_t("stage.load","Груз {capacity}").format({"capacity":int(e.effective.get("carry_capacity",0))}),pos-Vector2(45,height+18),24,CREAM)
+		if not e.get("intact",true):
+			draw_line(pos-Vector2(25,60),pos+Vector2(25,-10),Color("a84148"),5,true)
+		if selected==id:draw_arc(pos,45,0,TAU,40,PURPLE,4,true)
+		var hit_width: float=144
+		var hit_texture: Texture2D=texture(asset_path(id))
+		if hit_texture!=null:hit_width=maxf(144,height*float(hit_texture.get_width())/hit_texture.get_height())
+		var hit_size: Vector2=Vector2(hit_width,maxf(144,height+35))
+		var hit_center: Vector2=pos-Vector2(0,height*.5)
+		_hits.append({"kind":"entity","id":id,"rect":Rect2(hit_center-hit_size/2,hit_size),"anchor":hit_center})
+	# Eye anchors remain true; generous cards below the stage select the same witness.
+	for i in range(kernel.definition.witnesses.size()):
+		var wd: Dictionary=kernel.definition.witnesses[i]
+		var w: Dictionary=st.witnesses[wd.id]
+		var eye: Vector2=kernel.witness_eye(wd.id)
+		var pos: Vector2=world([eye.x,eye.y])
+		var color: Color=Color("276b5c") if w.eligible_vote else (Color("a84148") if w.exposed else CREAM)
+		draw_circle(pos+Vector2(0,3),22,Color(.15,.14,.23,.2));draw_circle(pos,20,color);draw_arc(pos,20,0,TAU,32,INK,2,true)
+		_label(str(i+1),pos+Vector2(-7,8),23,CREAM if w.eligible_vote or w.exposed else INK)
+		_hits.append({"kind":"witness","id":wd.id,"rect":Rect2(pos-Vector2(32,32),Vector2(64,64))})
+	var hero_pos: Vector2=_entity_position("hero")
+	var hero_height: float=minf(220,size.y*.34)
+	if not _puppets.has("felix"):_art("res://assets/art/characters/felix.png",hero_pos,hero_height,sin(clock*2.1)*.012)
+	if not _puppets.has("plum"):_art("res://assets/art/characters/plum.png",hero_pos+Vector2(hero_height*.73,-hero_height*.59+sin(clock*3)*hero_height*.04),hero_height*.364,sin(clock*5)*.09)
+	if not inspected.is_empty() and st.witnesses.has(inspected):
+		var diagnostics: Dictionary=kernel.visibility_for(inspected)
+		for ray in diagnostics.rays:
+			var color: Color=Color(.15,.5,.35,.75) if ray.visible else Color(.66,.25,.29,.6)
+			if ray.method and not ray.visible:color=Color(.36,.26,.65,.55)
+			draw_line(world(ray.from),world(ray.to),color,3,true);draw_circle(world(ray.to),7,color)
+		_rounded(Rect2(18,size.y-74,size.x-36,58),CREAM)
+		_label(_t("stage.vision","Обзор {visible}/3 · Механизм {method}").format({"visible":diagnostics.visible_results,"method":_t("stage.visible","виден") if diagnostics.method_visible else _t("stage.hidden","скрыт")}),Vector2(36,size.y-36),25)
+func _sample_presentation(delta: float) -> void:
+	if kernel==null or kernel.state.is_empty():
+		_route_frames.clear();_render_tick=-1;_render_phase="";_route_signature="";_tick_elapsed=.1;return
+	var signature: String=str(kernel.get_instance_id())+":"+str(kernel.state.get("content_digest",""))
+	var tick: int=int(kernel.state.tick);var phase: String=kernel.state.phase
+	if phase!="RUN_RESOLUTION":
+		_route_frames.clear();_tick_elapsed=.1
+	elif signature!=_route_signature or phase!=_render_phase or tick!=_render_tick or _route_frames.size()!=kernel.state.routes.size():
+		var next: Dictionary={}
+		for id in kernel.state.routes:
+			var task: Dictionary=kernel.state.routes[id]
+			var current: int=int(task.progress);var previous: int=current
+			var old: Dictionary=_route_frames.get(id,{})
+			var continuous: bool=signature==_route_signature and _render_phase==phase and tick==_render_tick+1 and old.get("route_id","")==task.route_id and str(task.get("waiting_for","")).is_empty() and not task.completed
+			if continuous:previous=int(old.get("current",current))
+			next[id]={"route_id":task.route_id,"previous":previous,"current":current,"waiting":str(task.get("waiting_for",""))}
+		_route_frames=next;_tick_elapsed=0
+	else:_tick_elapsed=minf(.1,_tick_elapsed+maxf(delta,0))
+	_route_signature=signature;_render_tick=tick;_render_phase=phase
+func _entity_position(entity_id: String,render_alpha: float=-1) -> Vector2:
+	var pos: Vector2=world(kernel.state.entities[entity_id].position)
+	for actor_id in kernel.state.routes:
+		var task: Dictionary=kernel.state.routes[actor_id]
+		if actor_id==entity_id or (task.carrier_id==entity_id and task.get("transport_mode","")!="towed"):
+			pos=_route_position(task,actor_id,render_alpha)
+		elif entity_id in kernel._entities[actor_id].properties.get("payload_entity_ids",[]):pos=_route_position(task,actor_id,render_alpha)+Vector2(0,-70)
+	return pos
+func _route_position(task: Dictionary,actor_id: String="",render_alpha: float=-1) -> Vector2:
+	var route: Dictionary=kernel._find(kernel.definition.navigation.routes,task.route_id)
+	var edge_ticks: int=int(route.get("ticks_per_edge",10))
+	var progress: float=float(task.progress)
+	var frame: Dictionary=_route_frames.get(actor_id,{})
+	if not frame.is_empty() and frame.route_id==task.route_id and int(frame.current)==int(task.progress) and kernel.state.phase=="RUN_RESOLUTION":
+		var alpha: float=clampf(render_alpha if render_alpha>=0 else _tick_elapsed/.1,0,1)
+		progress=lerpf(float(frame.previous),float(frame.current),alpha)
+	var segment: int=mini(int(progress/edge_ticks),route.nodes.size()-1)
+	var from: Array=kernel._find(kernel.definition.navigation.nodes,route.nodes[segment]).position
+	var to: Array=kernel._find(kernel.definition.navigation.nodes,route.nodes[mini(segment+1,route.nodes.size()-1)]).position
+	return world(from).lerp(world(to),fmod(progress,float(edge_ticks))/edge_ticks)
+func _notification(what: int) -> void:
+	if what==NOTIFICATION_SCROLL_BEGIN:_tap_cancelled=true
+func _target_at(position: Vector2) -> Dictionary:
+	var nearest: Dictionary={};var distance: float=INF
+	for target in _hits:
+		if target.kind=="slot" and target.rect.has_point(position):
+			var d: float=target.rect.get_center().distance_squared_to(position)
+			if d<distance:nearest=target;distance=d
+	if not nearest.is_empty():return nearest
+	for i in range(_hits.size()-1,-1,-1):
+		var target: Dictionary=_hits[i]
+		if target.kind=="slot" or not target.rect.has_point(position):continue
+		var d: float=target.get("anchor",target.rect.get_center()).distance_squared_to(position)
+		if d<distance:nearest=target;distance=d # Equal-distance ties keep the visually frontmost target.
+	return nearest
+func _gui_input(event: InputEvent) -> void:
+	# Release commits a tap. Press/motion bubble to the containing ScrollContainer,
+	# whose native scroll-begin notification cancels taps and descendant buttons.
+	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			_pointer_active=true;_pointer_origin=event.position;_tap_cancelled=false;_pressed_target=_target_at(event.position)
+		else:
+			var activate: bool=_pointer_active and not _tap_cancelled and not event.canceled and _pointer_origin.distance_to(event.position)<=20 and not _pressed_target.is_empty()
+			_pointer_active=false
+			if activate:target_tapped.emit(_pressed_target.kind,_pressed_target.id)
+	elif event is InputEventMouseMotion and _pointer_active and _pointer_origin.distance_to(event.position)>20:_tap_cancelled=true
+
+func _t(key: String,fallback: String) -> String:
+	return translator.call(key,fallback) if translator.is_valid() else fallback

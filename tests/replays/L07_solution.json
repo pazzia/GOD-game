@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "level_id": "L07",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone_a",
+        "slot_id": "near_support"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone_b",
+        "slot_id": "middle_support"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "hero",
+        "route_id": "to_island"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone_a",
+        "slot_id": "far_support"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "hero",
+        "route_id": "to_far"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

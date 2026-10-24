@@ -1,0 +1,199 @@
+GOD / «Почти бог»: наличие материалов и готовность к деплою
+24 октября 2026, Europe/Moscow
+
+ВЕРДИКТ
+Материалы существующей Android debug-версии 0.2.0 build 3 в наличии.
+Повреждённых или потерянных обязательных runtime-ресурсов не найдено.
+Сам тестовый APK существует и проходит проверку состава и подписи.
+Полный релиз по ТЗ и автоматический деплой пока не готовы.
+
+1. ЧТО ПРОВЕРЕНО ЗАНОВО
+- Основной архив: CRC всех 1887 записей корректны; безопасно распакован.
+- Runtime: 1055 файлов; хеши полностью совпадают с ранее проверенным набором.
+  Digest: cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c
+- Реестр: 571 уникальная позиция, ID совпадают с планом; 526 ссылок на уже
+  произведённые файлы/каталоги разрешаются. Пустые actual_files у плановых
+  ресурсов не засчитывались как наличие готового материала.
+- JSON: 201 файл читается; обязательных отсутствующих literal res:// ссылок нет.
+  Один отсутствующий старый аудиокаталог является необязательным: код сначала
+  проверяет FileAccess.file_exists, действующий production-каталог существует.
+- Контент: 30 уровней, 46 эталонных прохождений, включая 16 альтернатив,
+  616 ключей на каждый язык RU/EN; новая межфайловая проверка passed.
+- Графика runtime: 238 PNG, 32 SVG, 81 эмоциональный портрет, 9 наборов
+  раздельных моделей и 15 слоёв трёх окружений. Проверены декодирование,
+  прозрачность, размеры, метаданные и ссылки. Художественная приёмка этим
+  не подменяется. Всего открыты также авторские исходники: 302 PNG.
+- Шрифты: оба TTF успешно загружаются; лицензия DejaVu присутствует.
+- Аудио: все 222 файла полностью декодированы FFmpeg; хеши, длины, частоты,
+  стемы и петли прошли проверку. 15 музыкальных файлов, 5 стингеров,
+  90 вокализаций, 106 вариантов эффектов, 6 атмосфер. Замечаний измерителя нет.
+- JDK 17 доступен. Официальный Godot 4.7.2 загружен и проверен по SHA-512
+  проекта и SHA-256 метаданных официального релиза; версия фактического
+  бинарного файла: 4.7.2.stable.official.ed1daf0bf.
+- Чистый headless-импорт Godot завершился с кодом 0 без ошибок движка.
+
+2. APK
+Файл: Almost-God-0.2.0-debug.apk
+Размер: 118677094 байта.
+SHA-256: 4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451
+ZIP: 1166 записей, CRC корректны.
+Пакет: com.almostgod.game, версия 0.2.0, versionCode 3, ARM64,
+minSDK 24, targetSDK 36; debug-подпись, не магазинная.
+Метаданные 48 наборов, 81 портрет, 238 текстур, 222 аудиоресурса и
+15 слоёв окружения найдены внутри APK; missing=[], mismatched=[].
+Независимая RSA/SHA-256 проверка APK v2 подписи и подписанных дайджестов
+успешна. Сертификат совпадает с сохранённым debug.keystore и certificate.sha256:
+c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893
+Проверка штатным AOSP apksigner: {"exit_code": 0, "packages_verified": 2, "output": ["Verifies", "Verified using v1 scheme (JAR signing): false", "Verified using v2 scheme (APK Signature Scheme v2): true", "Verified using v3 scheme (APK Signature Scheme v3): true", "Verified using v4 scheme (APK Signature Scheme v4): false", "Signer #1 certificate SHA-256 digest: c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893"]}
+
+3. НОВЫЙ ПОЛНЫЙ ПРОГОН
+Команда:
+python3 tools/verify_project.py --godot /absolute/path/to/Godot_v4.7.2-stable_linux.x86_64 --ui
+Итог: 24 из 25 наборов прошли, общий status=failed.
+Runtime-файлы во время прогона не менялись. Кампания: 732 checks, 0 failures.
+Компоновка: 5436 checks, 0 failures. Сложные UI journeys: 59 checks, 0 failures.
+
+Неуспешен test_service_boundaries.gd. Его 28 функциональных проверок проходят,
+процесс возвращает 0, но движок при завершении периодически сообщает:
+WARNING: 22 ObjectDB instances were leaked at exit
+ERROR: 5 resources still in use at exit
+Обёртка verify_project.py правильно считает такой запуск неуспешным.
+Отдельный verbose-перезапуск прошёл. В трёх дополнительных изолированных
+обычных запусках результат повторился один раз: [{"attempt": 1, "process_exit_code": 0, "errors": [], "passed": true}, {"attempt": 2, "process_exit_code": 0, "errors": ["WARNING: 22 ObjectDB instances were leaked at exit (run with `--verbose` for details).", "ERROR: 5 resources still in use at exit (run with --verbose for details)."], "passed": false}, {"attempt": 3, "process_exit_code": 0, "errors": [], "passed": true}]
+Это воспроизводимая нестабильность завершения приёмочного теста. Пока не
+установлено, удерживает ссылки сам тест, сервис или код движка. Нельзя
+объявлять её исправленной либо связывать с прошлыми сбросами сеанса ChatGPT.
+
+4. ЧТО ЕЩЁ НЕ ПРОИЗВЕДЕНО ДЛЯ ПОЛНОГО РЕЛИЗА
+В реестре 78 planned_not_produced: 47 специальных анимаций, 30 scene_overlay
+и один предмет PROP_POSTER. У всех 78 actual_files пуст, плановые файлы не найдены.
+Кроме этого, отдельно остаются направления моделей, полные актёрские циклы,
+интеграция части персонажей/реквизита, полная постановка сцен и слушательская
+приёмка. Наличие базовых ресурсов не закрывает эти частичные позиции.
+Полный перечень отсутствующих позиций приведён ниже.
+
+5. ГОТОВНОСТЬ ПЕРЕДАЧИ В GITHUB
+https://github.com/pazzia/GOD-game на момент проверки содержит только .gitignore.
+В исходном архиве workflow .github/workflows отсутствует; автоматическая
+сборка и публикация APK не настроены. Исходники надо передавать распакованными,
+APK — отдельным артефактом/релизом. В распакованном проекте нет файлов больше
+100 MiB; наибольшие отдельные файлы — несколько MiB. Движок и инструменты
+в исходный архив намеренно не входят: присутствуют bootstrap_native.py,
+native_packages.lock.json и контрольные суммы Godot. Android export templates
+и signing subset надо восстановить в CI; желательно кешировать загрузки.
+Сохранённый тестовый ключ соответствует APK; выпускного магазинного ключа нет.
+
+6. ГРАНИЦЫ ЭТОЙ ПРОВЕРКИ
+Новая сборка APK из исходников в этом проходе не выполнялась: проверялся
+сохранённый APK, его точное соответствие runtime-исходникам, подпись и ресурсы.
+Не выполнялись установка на физический Android, FPS/память/нагрев, iOS,
+покупки, субъективная художественная/звуковая приёмка и тест с новыми игроками.
+Исходный архив и production-код не изменялись; GitHub в этом проходе не изменялся.
+
+7. БЭКЛОГ ПРОВЕРКИ
+PRE-01 / P0 для CI / открыто: нестабильное завершение test_service_boundaries.gd.
+Воспроизведение: новый изолированный XDG_DATA_HOME, headless Godot 4.7.2,
+запуск теста несколько раз; возможны 22 leaked instances и 5 ресурсов.
+Последствие: полный приёмочный runner падает, даже когда 28 assertions прошли.
+Причина отсрочки: текущий проход — аудит готовности, причина удержания ссылок
+ещё не локализована. Следующий шаг: определить владельцев объектов/ресурсов,
+исправить освобождение и повторить проблемный набор и полный прогон.
+
+PRE-02 / P0 для автоматического деплоя / открыто: исходники отсутствуют в main,
+Godot CI и публикация APK не настроены. Следующий шаг: подготовить коммит,
+закреплённый toolchain и workflow с проверками, подписью и публикацией; принять
+результат по реальному успешному запуску и наличию установочного файла.
+
+PRE-03 / P1 полного релиза / открыто: 78 непроизведённых позиций и частичная
+художественная интеграция. Уже связаны с B07/B08/B09 и матрицей ресурсов.
+Следующий шаг: производство/интеграция по IDs ниже и новая приёмка.
+
+PRE-04 / P1 платформенной приёмки / не проведено: физический Android и iOS.
+Связано с B11/B12. Нужны реальные устройства/среда; автоматические проверки
+не засчитываются вместо установки и измерений.
+
+8. ПОЛНЫЙ СПИСОК НЕПРОИЗВЕДЁННЫХ ПОЗИЦИЙ
+CH01_ANIM_DISTRACT | animation | Феликс: distract
+CH01_ANIM_PLACE_PROP | animation | Феликс: place_prop
+CH01_ANIM_CONCEALED_PANIC | animation | Феликс: concealed_panic
+CH01_ANIM_GENUINE_SURPRISE | animation | Феликс: genuine_surprise
+CH01_ANIM_RESCUE_REACT | animation | Феликс: rescue_react
+CH02_ANIM_LAND | animation | Плюм: land
+CH02_ANIM_SCARF | animation | Плюм: scarf
+CH02_ANIM_HIDE | animation | Плюм: hide
+CH02_ANIM_SLEEPY | animation | Плюм: sleepy
+CH02_ANIM_CARRY_NOTE | animation | Плюм: carry_note
+CH03_ANIM_INSPECT_ROPE | animation | Марфа: inspect_rope
+CH03_ANIM_PULL_MOORING | animation | Марфа: pull_mooring
+CH03_ANIM_ARMS_CROSSED | animation | Марфа: arms_crossed
+CH03_ANIM_RESTRAINED_LAUGH | animation | Марфа: restrained_laugh
+CH04_ANIM_MEASURE | animation | Семён: measure
+CH04_ANIM_CROUCH_INSPECT | animation | Семён: crouch_inspect
+CH04_ANIM_GLASSES_WIPE | animation | Семён: glasses_wipe
+CH04_ANIM_POINT_METHOD | animation | Семён: point_method
+CH04_ANIM_THOUGHTFUL_NOD | animation | Семён: thoughtful_nod
+CH05_ANIM_NOTEBOOK_DRAW | animation | Ника: notebook_draw
+CH05_ANIM_LEAN_FORWARD | animation | Ника: lean_forward
+CH05_ANIM_RAISED_HAND | animation | Ника: raised_hand
+CH05_ANIM_SMALL_HOP | animation | Ника: small_hop
+CH05_ANIM_PROTECT_NOTES | animation | Ника: protect_notes
+CH06_ANIM_TASTE | animation | Лада: taste
+CH06_ANIM_KETTLE_CHECK | animation | Лада: kettle_check
+CH06_ANIM_APRON_SHAKE | animation | Лада: apron_shake
+CH06_ANIM_RECIPE_FLIP | animation | Лада: recipe_flip
+CH06_ANIM_DELIGHTED_PLAN | animation | Лада: delighted_plan
+CH07_ANIM_INSPECT | animation | Роза: inspect
+CH07_ANIM_PAGE_TURN | animation | Роза: page_turn
+CH07_ANIM_STAMP_CHECK | animation | Роза: stamp_check
+CH07_ANIM_EYEBROW_RAISE | animation | Роза: eyebrow_raise
+CH07_ANIM_APPROVAL_SMILE | animation | Роза: approval_smile
+CH08_ANIM_GRAND_ENTRANCE | animation | Гуго: grand_entrance
+CH08_ANIM_PREMATURE_BOW | animation | Гуго: premature_bow
+CH08_ANIM_RIBBON_TANGLE | animation | Гуго: ribbon_tangle
+CH08_ANIM_HONEST_HELP | animation | Гуго: honest_help
+CH08_ANIM_SHARED_BOW | animation | Гуго: shared_bow
+CH09_ANIM_WALK | animation | Карамелька: walk
+CH09_ANIM_IDLE_CHEW | animation | Карамелька: idle_chew
+CH09_ANIM_SNIFF | animation | Карамелька: sniff
+CH09_ANIM_NIBBLE_ATTEMPT | animation | Карамелька: nibble_attempt
+CH09_ANIM_SURPRISED_STOP | animation | Карамелька: surprised_stop
+CH09_ANIM_CARGO_BALANCE | animation | Карамелька: cargo_balance
+CH09_ANIM_SAFE_RESCUE | animation | Карамелька: safe_rescue
+CH09_ANIM_SATISFIED | animation | Карамелька: satisfied
+SCENE_L01_OVERLAY | scene_overlay | Камень очень старается: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L02_OVERLAY | scene_overlay | Лучшее место — не первое: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L03_OVERLAY | scene_overlay | А с обратной стороны?: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L04_OVERLAY | scene_overlay | Ветер имеет мнение: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L05_OVERLAY | scene_overlay | Якорь получил повышение: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L06_OVERLAY | scene_overlay | Почти ковчег: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L07_OVERLAY | scene_overlay | Слишком широкая река: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L08_OVERLAY | scene_overlay | Секретов ровно два: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L09_OVERLAY | scene_overlay | Проверка после аплодисментов: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L10_OVERLAY | scene_overlay | Переправа на честном слове: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L11_OVERLAY | scene_overlay | Пламя берёт отпуск: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L12_OVERLAY | scene_overlay | Пирожки с характером: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L13_OVERLAY | scene_overlay | Два очага, одна лодка: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L14_OVERLAY | scene_overlay | Холод под присмотром: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L15_OVERLAY | scene_overlay | Не каждый жар — огонь: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L16_OVERLAY | scene_overlay | Парообразная тайна: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L17_OVERLAY | scene_overlay | Вторая печать: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L18_OVERLAY | scene_overlay | Лодке нужен жидкий путь: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L19_OVERLAY | scene_overlay | Верните печи работу: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L20_OVERLAY | scene_overlay | Праздник наоборот: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L21_OVERLAY | scene_overlay | Лист с характером: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L22_OVERLAY | scene_overlay | Козе не по зубам: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L23_OVERLAY | scene_overlay | Огневой архив: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L24_OVERLAY | scene_overlay | Лёгкое решение: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L25_OVERLAY | scene_overlay | Обратная сторона сертификата: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L26_OVERLAY | scene_overlay | Два места на три чуда: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L27_OVERLAY | scene_overlay | Всё ещё бумага: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L28_OVERLAY | scene_overlay | Сертификат на невозможность: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L29_OVERLAY | scene_overlay | Чудо соперника: уникальные рисованные детали, отдельный альфа-слой
+SCENE_L30_OVERLAY | scene_overlay | Площадь всех возможностей: уникальные рисованные детали, отдельный альфа-слой
+PROP_POSTER | prop | poster: отдельная фактура, тень, пивот, состояния
+
+Основания: исходный архив v10; ASSET_STATUS.csv; REQUIREMENTS_STATUS.csv;
+новые content-validation/art-files/audio-files/project-verification reports;
+новые журнал импорта, APK inspection, APK signature/apksigner reports и повторы
+теста сервисов. Метод APK v2: https://source.android.com/docs/security/features/apksigning/v2
+Официальный движок: https://github.com/godotengine/godot/releases/tag/4.7.2-stable

@@ -1,0 +1,237 @@
+{
+  "kind": "audio_file_measurements",
+  "status": "passed",
+  "files": 222,
+  "music_runtime_files": 15,
+  "stingers": 5,
+  "voices": 90,
+  "sfx_variants": 106,
+  "ambiences": 6,
+  "errors": [],
+  "advisories": [],
+  "measurements": [
+    {
+      "id": "MUS_MAIN_FULL",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.6414058208465576,
+      "loop_seam_sample_step": 8.163042366504669e-05,
+      "lufs_i": -19.1,
+      "true_peak_db": -3.85
+    },
+    {
+      "id": "MUS_RIVER_BED",
+      "decoded_samples": 4800000,
+      "expected_samples": 4800000,
+      "peak_linear": 0.5742748379707336,
+      "loop_seam_sample_step": 0.00028944946825504303,
+      "lufs_i": -21.5,
+      "true_peak_db": -4.82
+    },
+    {
+      "id": "MUS_RIVER_CURIOSITY",
+      "decoded_samples": 4800000,
+      "expected_samples": 4800000,
+      "peak_linear": 0.20277346670627594,
+      "loop_seam_sample_step": 6.582508649444208e-05,
+      "lufs_i": -23.08,
+      "true_peak_db": -13.86
+    },
+    {
+      "id": "MUS_RIVER_TENSION",
+      "decoded_samples": 4800000,
+      "expected_samples": 4800000,
+      "peak_linear": 0.44616419076919556,
+      "loop_seam_sample_step": 0.0,
+      "lufs_i": -30.44,
+      "true_peak_db": -6.6
+    },
+    {
+      "id": "MUS_KITCHEN_BED",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.48246437311172485,
+      "loop_seam_sample_step": 0.00012504891492426395,
+      "lufs_i": -21.72,
+      "true_peak_db": -6.33
+    },
+    {
+      "id": "MUS_KITCHEN_CURIOSITY",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.21682409942150116,
+      "loop_seam_sample_step": 6.737170042470098e-05,
+      "lufs_i": -23.11,
+      "true_peak_db": -13.27
+    },
+    {
+      "id": "MUS_KITCHEN_TENSION",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.2981516122817993,
+      "loop_seam_sample_step": 0.0,
+      "lufs_i": -31.51,
+      "true_peak_db": -10.23
+    },
+    {
+      "id": "MUS_ARCHIVE_BED",
+      "decoded_samples": 5184000,
+      "expected_samples": 5184000,
+      "peak_linear": 0.48467525839805603,
+      "loop_seam_sample_step": 0.00012002664152532816,
+      "lufs_i": -22.27,
+      "true_peak_db": -6.29
+    },
+    {
+      "id": "MUS_ARCHIVE_CURIOSITY",
+      "decoded_samples": 5184000,
+      "expected_samples": 5184000,
+      "peak_linear": 0.18528564274311066,
+      "loop_seam_sample_step": 0.00017255917191505432,
+      "lufs_i": -23.83,
+      "true_peak_db": -14.64
+    },
+    {
+      "id": "MUS_ARCHIVE_TENSION",
+      "decoded_samples": 5184000,
+      "expected_samples": 5184000,
+      "peak_linear": 0.45293039083480835,
+      "loop_seam_sample_step": 0.0,
+      "lufs_i": -31.32,
+      "true_peak_db": -6.37
+    },
+    {
+      "id": "MUS_ALBUM_FULL",
+      "decoded_samples": 3840000,
+      "expected_samples": 3840000,
+      "peak_linear": 0.7163179516792297,
+      "loop_seam_sample_step": 0.00022364151664078236,
+      "lufs_i": -19.53,
+      "true_peak_db": -2.89
+    },
+    {
+      "id": "MUS_FINALE_BED",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.5438101887702942,
+      "loop_seam_sample_step": 0.00031179701909422874,
+      "lufs_i": -21.71,
+      "true_peak_db": -5.29
+    },
+    {
+      "id": "MUS_FINALE_CURIOSITY",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.2055899053812027,
+      "loop_seam_sample_step": 5.7034169003600255e-05,
+      "lufs_i": -23.19,
+      "true_peak_db": -13.73
+    },
+    {
+      "id": "MUS_FINALE_TENSION",
+      "decoded_samples": 4430769,
+      "expected_samples": 4430769,
+      "peak_linear": 0.28344225883483887,
+      "loop_seam_sample_step": 0.0,
+      "lufs_i": -31.52,
+      "true_peak_db": -10.44
+    },
+    {
+      "id": "MUS_CREDITS_FULL",
+      "decoded_samples": 5760000,
+      "expected_samples": 5760000,
+      "peak_linear": 0.6418966054916382,
+      "loop_seam_sample_step": 0.00011907459702342749,
+      "lufs_i": -19.14,
+      "true_peak_db": -3.85
+    },
+    {
+      "id": "MUS_STINGER_PROOF",
+      "decoded_samples": 72000,
+      "expected_samples": 72000,
+      "peak_linear": 0.33636474609375,
+      "loop_seam_sample_step": null,
+      "lufs_i": -18.33,
+      "true_peak_db": -9.46
+    },
+    {
+      "id": "MUS_STINGER_LAW",
+      "decoded_samples": 105600,
+      "expected_samples": 105600,
+      "peak_linear": 0.302947998046875,
+      "loop_seam_sample_step": null,
+      "lufs_i": -19.36,
+      "true_peak_db": -10.36
+    },
+    {
+      "id": "MUS_STINGER_REVEAL",
+      "decoded_samples": 40800,
+      "expected_samples": 40800,
+      "peak_linear": 0.490509033203125,
+      "loop_seam_sample_step": null,
+      "lufs_i": -19.74,
+      "true_peak_db": -6.19
+    },
+    {
+      "id": "MUS_STINGER_CHAPTER",
+      "decoded_samples": 172800,
+      "expected_samples": 172800,
+      "peak_linear": 0.334869384765625,
+      "loop_seam_sample_step": null,
+      "lufs_i": -19.56,
+      "true_peak_db": -9.49
+    },
+    {
+      "id": "MUS_STINGER_FINAL",
+      "decoded_samples": 297600,
+      "expected_samples": 297600,
+      "peak_linear": 0.34564208984375,
+      "loop_seam_sample_step": null,
+      "lufs_i": -19.32,
+      "true_peak_db": -9.23
+    },
+    {
+      "id": "AMB_RIVER_WATER",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.0649685487151146,
+      "loop_seam_sample_step": 0.0026140136178582907
+    },
+    {
+      "id": "AMB_RIVER_WIND",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.06120484322309494,
+      "loop_seam_sample_step": 0.0003570369735825807
+    },
+    {
+      "id": "AMB_KITCHEN_HOUSE",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.06028100475668907,
+      "loop_seam_sample_step": 0.00042868778109550476
+    },
+    {
+      "id": "AMB_KITCHEN_STEAM",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.0714632123708725,
+      "loop_seam_sample_step": 0.004023331217467785
+    },
+    {
+      "id": "AMB_ARCHIVE_PAPER",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.06128181889653206,
+      "loop_seam_sample_step": 0.0064738430082798
+    },
+    {
+      "id": "AMB_ARCHIVE_WIND",
+      "decoded_samples": 1152000,
+      "expected_samples": 1152000,
+      "peak_linear": 0.058273255825042725,
+      "loop_seam_sample_step": 0.0005613723769783974
+    }
+  ],
+  "limits": "No subjective listening, speaker/headphone, mobile interruption or 20-minute scene-mix acceptance."
+}

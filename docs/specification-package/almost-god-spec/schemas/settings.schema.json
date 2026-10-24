@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Settings v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "locale",
+    "audio",
+    "accessibility"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "locale": {
+      "enum": [
+        "ru",
+        "en"
+      ]
+    },
+    "audio": {
+      "type": "object",
+      "required": [
+        "master_volume",
+        "master_muted",
+        "sound_enabled",
+        "categories"
+      ],
+      "properties": {
+        "master_volume": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "master_muted": {
+          "type": "boolean"
+        },
+        "sound_enabled": {
+          "type": "boolean"
+        },
+        "categories": {
+          "type": "object",
+          "required": [
+            "Music",
+            "SFX",
+            "Ambience",
+            "Voice",
+            "UI"
+          ],
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "volume",
+              "enabled"
+            ],
+            "properties": {
+              "volume": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "enabled": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessibility": {
+      "type": "object",
+      "required": [
+        "text_scale",
+        "reduced_motion",
+        "camera_shake",
+        "subtitles",
+        "haptics"
+      ],
+      "properties": {
+        "text_scale": {
+          "enum": [
+            1,
+            1.2,
+            1.4
+          ]
+        },
+        "reduced_motion": {
+          "type": "boolean"
+        },
+        "camera_shake": {
+          "type": "boolean"
+        },
+        "subtitles": {
+          "type": "boolean"
+        },
+        "haptics": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

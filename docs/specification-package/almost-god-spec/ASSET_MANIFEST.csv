@@ -1,0 +1,572 @@
+asset_id,category,stage,description,runtime_path,source_path,bus,loop,duration_seconds,event_id,status,rights
+CH01_MODEL,model_sheet,S1,"Феликс: виды, рост, 8 эмоций, одежда",assets/reference/CH01_model.png,assets/source/characters/CH01/model.kra,,false,,,planned,to_document
+CH01_PORTRAIT,portrait,S1,Феликс: портрет 512px,assets/runtime/characters/CH01/portrait.png,assets/source/characters/CH01/portrait.kra,,false,,,planned,to_document
+CH01_RIG,character_rig,S1,"Феликс: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH01/actor.tscn,assets/source/characters/CH01/parts.kra,,false,,,planned,to_document
+CH01_ANIM_IDLE,animation,S1,Феликс: idle,assets/runtime/characters/CH01/anim/idle.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.idle,planned,to_document
+CH01_ANIM_MOVE,animation,S1,Феликс: move,assets/runtime/characters/CH01/anim/move.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.move,planned,to_document
+CH01_ANIM_TURN,animation,S1,Феликс: turn,assets/runtime/characters/CH01/anim/turn.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.turn,planned,to_document
+CH01_ANIM_OBSERVE,animation,S1,Феликс: observe,assets/runtime/characters/CH01/anim/observe.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.observe,planned,to_document
+CH01_ANIM_SUSPECT,animation,S1,Феликс: suspect,assets/runtime/characters/CH01/anim/suspect.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.suspect,planned,to_document
+CH01_ANIM_ACCEPT,animation,S1,Феликс: accept,assets/runtime/characters/CH01/anim/accept.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.accept,planned,to_document
+CH01_ANIM_REVEAL_REACT,animation,S1,Феликс: reveal_react,assets/runtime/characters/CH01/anim/reveal_react.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.reveal_react,planned,to_document
+CH01_ANIM_CELEBRATE,animation,S1,Феликс: celebrate,assets/runtime/characters/CH01/anim/celebrate.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.celebrate,planned,to_document
+CH01_ANIM_SHOW_BEGIN,animation,S1,Феликс: show_begin,assets/runtime/characters/CH01/anim/show_begin.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.show_begin,planned,to_document
+CH01_ANIM_DISTRACT,animation,S1,Феликс: distract,assets/runtime/characters/CH01/anim/distract.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.distract,planned,to_document
+CH01_ANIM_PLACE_PROP,animation,S1,Феликс: place_prop,assets/runtime/characters/CH01/anim/place_prop.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.place_prop,planned,to_document
+CH01_ANIM_STAMP,animation,S1,Феликс: stamp,assets/runtime/characters/CH01/anim/stamp.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.stamp,planned,to_document
+CH01_ANIM_CONCEALED_PANIC,animation,S1,Феликс: concealed_panic,assets/runtime/characters/CH01/anim/concealed_panic.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.concealed_panic,planned,to_document
+CH01_ANIM_GENUINE_SURPRISE,animation,S1,Феликс: genuine_surprise,assets/runtime/characters/CH01/anim/genuine_surprise.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.genuine_surprise,planned,to_document
+CH01_ANIM_BOW,animation,S1,Феликс: bow,assets/runtime/characters/CH01/anim/bow.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.bow,planned,to_document
+CH01_ANIM_RESCUE_REACT,animation,S1,Феликс: rescue_react,assets/runtime/characters/CH01/anim/rescue_react.tres,assets/source/characters/CH01/rig_source.tscn,,false,0.3–2.0,CH01.rescue_react,planned,to_document
+VO_CH01_CURIOUS_A,voice,S1,"Феликс: curious, дубль a",assets/runtime/audio/voice/CH01/curious_a.ogg,assets/source/audio/voice/CH01/curious_a.wav,Voice,false,0.2–1.0,CH01.voice.curious,planned,to_document
+VO_CH01_CURIOUS_B,voice,S1,"Феликс: curious, дубль b",assets/runtime/audio/voice/CH01/curious_b.ogg,assets/source/audio/voice/CH01/curious_b.wav,Voice,false,0.2–1.0,CH01.voice.curious,planned,to_document
+VO_CH01_DOUBT_A,voice,S1,"Феликс: doubt, дубль a",assets/runtime/audio/voice/CH01/doubt_a.ogg,assets/source/audio/voice/CH01/doubt_a.wav,Voice,false,0.2–1.0,CH01.voice.doubt,planned,to_document
+VO_CH01_DOUBT_B,voice,S1,"Феликс: doubt, дубль b",assets/runtime/audio/voice/CH01/doubt_b.ogg,assets/source/audio/voice/CH01/doubt_b.wav,Voice,false,0.2–1.0,CH01.voice.doubt,planned,to_document
+VO_CH01_ACCEPT_A,voice,S1,"Феликс: accept, дубль a",assets/runtime/audio/voice/CH01/accept_a.ogg,assets/source/audio/voice/CH01/accept_a.wav,Voice,false,0.2–1.0,CH01.voice.accept,planned,to_document
+VO_CH01_ACCEPT_B,voice,S1,"Феликс: accept, дубль b",assets/runtime/audio/voice/CH01/accept_b.ogg,assets/source/audio/voice/CH01/accept_b.wav,Voice,false,0.2–1.0,CH01.voice.accept,planned,to_document
+VO_CH01_SURPRISE_A,voice,S1,"Феликс: surprise, дубль a",assets/runtime/audio/voice/CH01/surprise_a.ogg,assets/source/audio/voice/CH01/surprise_a.wav,Voice,false,0.2–1.0,CH01.voice.surprise,planned,to_document
+VO_CH01_SURPRISE_B,voice,S1,"Феликс: surprise, дубль b",assets/runtime/audio/voice/CH01/surprise_b.ogg,assets/source/audio/voice/CH01/surprise_b.wav,Voice,false,0.2–1.0,CH01.voice.surprise,planned,to_document
+VO_CH01_JOY_A,voice,S1,"Феликс: joy, дубль a",assets/runtime/audio/voice/CH01/joy_a.ogg,assets/source/audio/voice/CH01/joy_a.wav,Voice,false,0.2–1.0,CH01.voice.joy,planned,to_document
+VO_CH01_JOY_B,voice,S1,"Феликс: joy, дубль b",assets/runtime/audio/voice/CH01/joy_b.ogg,assets/source/audio/voice/CH01/joy_b.wav,Voice,false,0.2–1.0,CH01.voice.joy,planned,to_document
+CH02_MODEL,model_sheet,S1,"Плюм: виды, рост, 8 эмоций, одежда",assets/reference/CH02_model.png,assets/source/characters/CH02/model.kra,,false,,,planned,to_document
+CH02_PORTRAIT,portrait,S1,Плюм: портрет 512px,assets/runtime/characters/CH02/portrait.png,assets/source/characters/CH02/portrait.kra,,false,,,planned,to_document
+CH02_RIG,character_rig,S1,"Плюм: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH02/actor.tscn,assets/source/characters/CH02/parts.kra,,false,,,planned,to_document
+CH02_ANIM_IDLE,animation,S1,Плюм: idle,assets/runtime/characters/CH02/anim/idle.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.idle,planned,to_document
+CH02_ANIM_MOVE,animation,S1,Плюм: move,assets/runtime/characters/CH02/anim/move.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.move,planned,to_document
+CH02_ANIM_TURN,animation,S1,Плюм: turn,assets/runtime/characters/CH02/anim/turn.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.turn,planned,to_document
+CH02_ANIM_OBSERVE,animation,S1,Плюм: observe,assets/runtime/characters/CH02/anim/observe.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.observe,planned,to_document
+CH02_ANIM_SUSPECT,animation,S1,Плюм: suspect,assets/runtime/characters/CH02/anim/suspect.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.suspect,planned,to_document
+CH02_ANIM_ACCEPT,animation,S1,Плюм: accept,assets/runtime/characters/CH02/anim/accept.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.accept,planned,to_document
+CH02_ANIM_REVEAL_REACT,animation,S1,Плюм: reveal_react,assets/runtime/characters/CH02/anim/reveal_react.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.reveal_react,planned,to_document
+CH02_ANIM_CELEBRATE,animation,S1,Плюм: celebrate,assets/runtime/characters/CH02/anim/celebrate.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.celebrate,planned,to_document
+CH02_ANIM_HOVER,animation,S1,Плюм: hover,assets/runtime/characters/CH02/anim/hover.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.hover,planned,to_document
+CH02_ANIM_FLY,animation,S1,Плюм: fly,assets/runtime/characters/CH02/anim/fly.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.fly,planned,to_document
+CH02_ANIM_LAND,animation,S1,Плюм: land,assets/runtime/characters/CH02/anim/land.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.land,planned,to_document
+CH02_ANIM_POINT,animation,S1,Плюм: point,assets/runtime/characters/CH02/anim/point.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.point,planned,to_document
+CH02_ANIM_SHIVER,animation,S1,Плюм: shiver,assets/runtime/characters/CH02/anim/shiver.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.shiver,planned,to_document
+CH02_ANIM_SCARF,animation,S1,Плюм: scarf,assets/runtime/characters/CH02/anim/scarf.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.scarf,planned,to_document
+CH02_ANIM_HIDE,animation,S1,Плюм: hide,assets/runtime/characters/CH02/anim/hide.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.hide,planned,to_document
+CH02_ANIM_CHEER,animation,S1,Плюм: cheer,assets/runtime/characters/CH02/anim/cheer.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.cheer,planned,to_document
+CH02_ANIM_SLEEPY,animation,S1,Плюм: sleepy,assets/runtime/characters/CH02/anim/sleepy.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.sleepy,planned,to_document
+CH02_ANIM_CARRY_NOTE,animation,S1,Плюм: carry_note,assets/runtime/characters/CH02/anim/carry_note.tres,assets/source/characters/CH02/rig_source.tscn,,false,0.3–2.0,CH02.carry_note,planned,to_document
+VO_CH02_CURIOUS_A,voice,S1,"Плюм: curious, дубль a",assets/runtime/audio/voice/CH02/curious_a.ogg,assets/source/audio/voice/CH02/curious_a.wav,Voice,false,0.2–1.0,CH02.voice.curious,planned,to_document
+VO_CH02_CURIOUS_B,voice,S1,"Плюм: curious, дубль b",assets/runtime/audio/voice/CH02/curious_b.ogg,assets/source/audio/voice/CH02/curious_b.wav,Voice,false,0.2–1.0,CH02.voice.curious,planned,to_document
+VO_CH02_DOUBT_A,voice,S1,"Плюм: doubt, дубль a",assets/runtime/audio/voice/CH02/doubt_a.ogg,assets/source/audio/voice/CH02/doubt_a.wav,Voice,false,0.2–1.0,CH02.voice.doubt,planned,to_document
+VO_CH02_DOUBT_B,voice,S1,"Плюм: doubt, дубль b",assets/runtime/audio/voice/CH02/doubt_b.ogg,assets/source/audio/voice/CH02/doubt_b.wav,Voice,false,0.2–1.0,CH02.voice.doubt,planned,to_document
+VO_CH02_ACCEPT_A,voice,S1,"Плюм: accept, дубль a",assets/runtime/audio/voice/CH02/accept_a.ogg,assets/source/audio/voice/CH02/accept_a.wav,Voice,false,0.2–1.0,CH02.voice.accept,planned,to_document
+VO_CH02_ACCEPT_B,voice,S1,"Плюм: accept, дубль b",assets/runtime/audio/voice/CH02/accept_b.ogg,assets/source/audio/voice/CH02/accept_b.wav,Voice,false,0.2–1.0,CH02.voice.accept,planned,to_document
+VO_CH02_SURPRISE_A,voice,S1,"Плюм: surprise, дубль a",assets/runtime/audio/voice/CH02/surprise_a.ogg,assets/source/audio/voice/CH02/surprise_a.wav,Voice,false,0.2–1.0,CH02.voice.surprise,planned,to_document
+VO_CH02_SURPRISE_B,voice,S1,"Плюм: surprise, дубль b",assets/runtime/audio/voice/CH02/surprise_b.ogg,assets/source/audio/voice/CH02/surprise_b.wav,Voice,false,0.2–1.0,CH02.voice.surprise,planned,to_document
+VO_CH02_JOY_A,voice,S1,"Плюм: joy, дубль a",assets/runtime/audio/voice/CH02/joy_a.ogg,assets/source/audio/voice/CH02/joy_a.wav,Voice,false,0.2–1.0,CH02.voice.joy,planned,to_document
+VO_CH02_JOY_B,voice,S1,"Плюм: joy, дубль b",assets/runtime/audio/voice/CH02/joy_b.ogg,assets/source/audio/voice/CH02/joy_b.wav,Voice,false,0.2–1.0,CH02.voice.joy,planned,to_document
+CH03_MODEL,model_sheet,S1,"Марфа: виды, рост, 8 эмоций, одежда",assets/reference/CH03_model.png,assets/source/characters/CH03/model.kra,,false,,,planned,to_document
+CH03_PORTRAIT,portrait,S1,Марфа: портрет 512px,assets/runtime/characters/CH03/portrait.png,assets/source/characters/CH03/portrait.kra,,false,,,planned,to_document
+CH03_RIG,character_rig,S1,"Марфа: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH03/actor.tscn,assets/source/characters/CH03/parts.kra,,false,,,planned,to_document
+CH03_ANIM_IDLE,animation,S1,Марфа: idle,assets/runtime/characters/CH03/anim/idle.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.idle,planned,to_document
+CH03_ANIM_MOVE,animation,S1,Марфа: move,assets/runtime/characters/CH03/anim/move.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.move,planned,to_document
+CH03_ANIM_TURN,animation,S1,Марфа: turn,assets/runtime/characters/CH03/anim/turn.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.turn,planned,to_document
+CH03_ANIM_OBSERVE,animation,S1,Марфа: observe,assets/runtime/characters/CH03/anim/observe.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.observe,planned,to_document
+CH03_ANIM_SUSPECT,animation,S1,Марфа: suspect,assets/runtime/characters/CH03/anim/suspect.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.suspect,planned,to_document
+CH03_ANIM_ACCEPT,animation,S1,Марфа: accept,assets/runtime/characters/CH03/anim/accept.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.accept,planned,to_document
+CH03_ANIM_REVEAL_REACT,animation,S1,Марфа: reveal_react,assets/runtime/characters/CH03/anim/reveal_react.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.reveal_react,planned,to_document
+CH03_ANIM_CELEBRATE,animation,S1,Марфа: celebrate,assets/runtime/characters/CH03/anim/celebrate.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.celebrate,planned,to_document
+CH03_ANIM_INSPECT_ROPE,animation,S1,Марфа: inspect_rope,assets/runtime/characters/CH03/anim/inspect_rope.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.inspect_rope,planned,to_document
+CH03_ANIM_PULL_MOORING,animation,S1,Марфа: pull_mooring,assets/runtime/characters/CH03/anim/pull_mooring.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.pull_mooring,planned,to_document
+CH03_ANIM_ARMS_CROSSED,animation,S1,Марфа: arms_crossed,assets/runtime/characters/CH03/anim/arms_crossed.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.arms_crossed,planned,to_document
+CH03_ANIM_RESTRAINED_LAUGH,animation,S1,Марфа: restrained_laugh,assets/runtime/characters/CH03/anim/restrained_laugh.tres,assets/source/characters/CH03/rig_source.tscn,,false,0.3–2.0,CH03.restrained_laugh,planned,to_document
+VO_CH03_CURIOUS_A,voice,S1,"Марфа: curious, дубль a",assets/runtime/audio/voice/CH03/curious_a.ogg,assets/source/audio/voice/CH03/curious_a.wav,Voice,false,0.2–1.0,CH03.voice.curious,planned,to_document
+VO_CH03_CURIOUS_B,voice,S1,"Марфа: curious, дубль b",assets/runtime/audio/voice/CH03/curious_b.ogg,assets/source/audio/voice/CH03/curious_b.wav,Voice,false,0.2–1.0,CH03.voice.curious,planned,to_document
+VO_CH03_DOUBT_A,voice,S1,"Марфа: doubt, дубль a",assets/runtime/audio/voice/CH03/doubt_a.ogg,assets/source/audio/voice/CH03/doubt_a.wav,Voice,false,0.2–1.0,CH03.voice.doubt,planned,to_document
+VO_CH03_DOUBT_B,voice,S1,"Марфа: doubt, дубль b",assets/runtime/audio/voice/CH03/doubt_b.ogg,assets/source/audio/voice/CH03/doubt_b.wav,Voice,false,0.2–1.0,CH03.voice.doubt,planned,to_document
+VO_CH03_ACCEPT_A,voice,S1,"Марфа: accept, дубль a",assets/runtime/audio/voice/CH03/accept_a.ogg,assets/source/audio/voice/CH03/accept_a.wav,Voice,false,0.2–1.0,CH03.voice.accept,planned,to_document
+VO_CH03_ACCEPT_B,voice,S1,"Марфа: accept, дубль b",assets/runtime/audio/voice/CH03/accept_b.ogg,assets/source/audio/voice/CH03/accept_b.wav,Voice,false,0.2–1.0,CH03.voice.accept,planned,to_document
+VO_CH03_SURPRISE_A,voice,S1,"Марфа: surprise, дубль a",assets/runtime/audio/voice/CH03/surprise_a.ogg,assets/source/audio/voice/CH03/surprise_a.wav,Voice,false,0.2–1.0,CH03.voice.surprise,planned,to_document
+VO_CH03_SURPRISE_B,voice,S1,"Марфа: surprise, дубль b",assets/runtime/audio/voice/CH03/surprise_b.ogg,assets/source/audio/voice/CH03/surprise_b.wav,Voice,false,0.2–1.0,CH03.voice.surprise,planned,to_document
+VO_CH03_JOY_A,voice,S1,"Марфа: joy, дубль a",assets/runtime/audio/voice/CH03/joy_a.ogg,assets/source/audio/voice/CH03/joy_a.wav,Voice,false,0.2–1.0,CH03.voice.joy,planned,to_document
+VO_CH03_JOY_B,voice,S1,"Марфа: joy, дубль b",assets/runtime/audio/voice/CH03/joy_b.ogg,assets/source/audio/voice/CH03/joy_b.wav,Voice,false,0.2–1.0,CH03.voice.joy,planned,to_document
+CH04_MODEL,model_sheet,S1,"Семён: виды, рост, 8 эмоций, одежда",assets/reference/CH04_model.png,assets/source/characters/CH04/model.kra,,false,,,planned,to_document
+CH04_PORTRAIT,portrait,S1,Семён: портрет 512px,assets/runtime/characters/CH04/portrait.png,assets/source/characters/CH04/portrait.kra,,false,,,planned,to_document
+CH04_RIG,character_rig,S1,"Семён: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH04/actor.tscn,assets/source/characters/CH04/parts.kra,,false,,,planned,to_document
+CH04_ANIM_IDLE,animation,S1,Семён: idle,assets/runtime/characters/CH04/anim/idle.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.idle,planned,to_document
+CH04_ANIM_MOVE,animation,S1,Семён: move,assets/runtime/characters/CH04/anim/move.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.move,planned,to_document
+CH04_ANIM_TURN,animation,S1,Семён: turn,assets/runtime/characters/CH04/anim/turn.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.turn,planned,to_document
+CH04_ANIM_OBSERVE,animation,S1,Семён: observe,assets/runtime/characters/CH04/anim/observe.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.observe,planned,to_document
+CH04_ANIM_SUSPECT,animation,S1,Семён: suspect,assets/runtime/characters/CH04/anim/suspect.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.suspect,planned,to_document
+CH04_ANIM_ACCEPT,animation,S1,Семён: accept,assets/runtime/characters/CH04/anim/accept.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.accept,planned,to_document
+CH04_ANIM_REVEAL_REACT,animation,S1,Семён: reveal_react,assets/runtime/characters/CH04/anim/reveal_react.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.reveal_react,planned,to_document
+CH04_ANIM_CELEBRATE,animation,S1,Семён: celebrate,assets/runtime/characters/CH04/anim/celebrate.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.celebrate,planned,to_document
+CH04_ANIM_MEASURE,animation,S1,Семён: measure,assets/runtime/characters/CH04/anim/measure.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.measure,planned,to_document
+CH04_ANIM_CROUCH_INSPECT,animation,S1,Семён: crouch_inspect,assets/runtime/characters/CH04/anim/crouch_inspect.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.crouch_inspect,planned,to_document
+CH04_ANIM_GLASSES_WIPE,animation,S1,Семён: glasses_wipe,assets/runtime/characters/CH04/anim/glasses_wipe.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.glasses_wipe,planned,to_document
+CH04_ANIM_POINT_METHOD,animation,S1,Семён: point_method,assets/runtime/characters/CH04/anim/point_method.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.point_method,planned,to_document
+CH04_ANIM_THOUGHTFUL_NOD,animation,S1,Семён: thoughtful_nod,assets/runtime/characters/CH04/anim/thoughtful_nod.tres,assets/source/characters/CH04/rig_source.tscn,,false,0.3–2.0,CH04.thoughtful_nod,planned,to_document
+VO_CH04_CURIOUS_A,voice,S1,"Семён: curious, дубль a",assets/runtime/audio/voice/CH04/curious_a.ogg,assets/source/audio/voice/CH04/curious_a.wav,Voice,false,0.2–1.0,CH04.voice.curious,planned,to_document
+VO_CH04_CURIOUS_B,voice,S1,"Семён: curious, дубль b",assets/runtime/audio/voice/CH04/curious_b.ogg,assets/source/audio/voice/CH04/curious_b.wav,Voice,false,0.2–1.0,CH04.voice.curious,planned,to_document
+VO_CH04_DOUBT_A,voice,S1,"Семён: doubt, дубль a",assets/runtime/audio/voice/CH04/doubt_a.ogg,assets/source/audio/voice/CH04/doubt_a.wav,Voice,false,0.2–1.0,CH04.voice.doubt,planned,to_document
+VO_CH04_DOUBT_B,voice,S1,"Семён: doubt, дубль b",assets/runtime/audio/voice/CH04/doubt_b.ogg,assets/source/audio/voice/CH04/doubt_b.wav,Voice,false,0.2–1.0,CH04.voice.doubt,planned,to_document
+VO_CH04_ACCEPT_A,voice,S1,"Семён: accept, дубль a",assets/runtime/audio/voice/CH04/accept_a.ogg,assets/source/audio/voice/CH04/accept_a.wav,Voice,false,0.2–1.0,CH04.voice.accept,planned,to_document
+VO_CH04_ACCEPT_B,voice,S1,"Семён: accept, дубль b",assets/runtime/audio/voice/CH04/accept_b.ogg,assets/source/audio/voice/CH04/accept_b.wav,Voice,false,0.2–1.0,CH04.voice.accept,planned,to_document
+VO_CH04_SURPRISE_A,voice,S1,"Семён: surprise, дубль a",assets/runtime/audio/voice/CH04/surprise_a.ogg,assets/source/audio/voice/CH04/surprise_a.wav,Voice,false,0.2–1.0,CH04.voice.surprise,planned,to_document
+VO_CH04_SURPRISE_B,voice,S1,"Семён: surprise, дубль b",assets/runtime/audio/voice/CH04/surprise_b.ogg,assets/source/audio/voice/CH04/surprise_b.wav,Voice,false,0.2–1.0,CH04.voice.surprise,planned,to_document
+VO_CH04_JOY_A,voice,S1,"Семён: joy, дубль a",assets/runtime/audio/voice/CH04/joy_a.ogg,assets/source/audio/voice/CH04/joy_a.wav,Voice,false,0.2–1.0,CH04.voice.joy,planned,to_document
+VO_CH04_JOY_B,voice,S1,"Семён: joy, дубль b",assets/runtime/audio/voice/CH04/joy_b.ogg,assets/source/audio/voice/CH04/joy_b.wav,Voice,false,0.2–1.0,CH04.voice.joy,planned,to_document
+CH05_MODEL,model_sheet,S1,"Ника: виды, рост, 8 эмоций, одежда",assets/reference/CH05_model.png,assets/source/characters/CH05/model.kra,,false,,,planned,to_document
+CH05_PORTRAIT,portrait,S1,Ника: портрет 512px,assets/runtime/characters/CH05/portrait.png,assets/source/characters/CH05/portrait.kra,,false,,,planned,to_document
+CH05_RIG,character_rig,S1,"Ника: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH05/actor.tscn,assets/source/characters/CH05/parts.kra,,false,,,planned,to_document
+CH05_ANIM_IDLE,animation,S1,Ника: idle,assets/runtime/characters/CH05/anim/idle.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.idle,planned,to_document
+CH05_ANIM_MOVE,animation,S1,Ника: move,assets/runtime/characters/CH05/anim/move.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.move,planned,to_document
+CH05_ANIM_TURN,animation,S1,Ника: turn,assets/runtime/characters/CH05/anim/turn.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.turn,planned,to_document
+CH05_ANIM_OBSERVE,animation,S1,Ника: observe,assets/runtime/characters/CH05/anim/observe.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.observe,planned,to_document
+CH05_ANIM_SUSPECT,animation,S1,Ника: suspect,assets/runtime/characters/CH05/anim/suspect.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.suspect,planned,to_document
+CH05_ANIM_ACCEPT,animation,S1,Ника: accept,assets/runtime/characters/CH05/anim/accept.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.accept,planned,to_document
+CH05_ANIM_REVEAL_REACT,animation,S1,Ника: reveal_react,assets/runtime/characters/CH05/anim/reveal_react.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.reveal_react,planned,to_document
+CH05_ANIM_CELEBRATE,animation,S1,Ника: celebrate,assets/runtime/characters/CH05/anim/celebrate.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.celebrate,planned,to_document
+CH05_ANIM_NOTEBOOK_DRAW,animation,S1,Ника: notebook_draw,assets/runtime/characters/CH05/anim/notebook_draw.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.notebook_draw,planned,to_document
+CH05_ANIM_LEAN_FORWARD,animation,S1,Ника: lean_forward,assets/runtime/characters/CH05/anim/lean_forward.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.lean_forward,planned,to_document
+CH05_ANIM_RAISED_HAND,animation,S1,Ника: raised_hand,assets/runtime/characters/CH05/anim/raised_hand.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.raised_hand,planned,to_document
+CH05_ANIM_SMALL_HOP,animation,S1,Ника: small_hop,assets/runtime/characters/CH05/anim/small_hop.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.small_hop,planned,to_document
+CH05_ANIM_PROTECT_NOTES,animation,S1,Ника: protect_notes,assets/runtime/characters/CH05/anim/protect_notes.tres,assets/source/characters/CH05/rig_source.tscn,,false,0.3–2.0,CH05.protect_notes,planned,to_document
+VO_CH05_CURIOUS_A,voice,S1,"Ника: curious, дубль a",assets/runtime/audio/voice/CH05/curious_a.ogg,assets/source/audio/voice/CH05/curious_a.wav,Voice,false,0.2–1.0,CH05.voice.curious,planned,to_document
+VO_CH05_CURIOUS_B,voice,S1,"Ника: curious, дубль b",assets/runtime/audio/voice/CH05/curious_b.ogg,assets/source/audio/voice/CH05/curious_b.wav,Voice,false,0.2–1.0,CH05.voice.curious,planned,to_document
+VO_CH05_DOUBT_A,voice,S1,"Ника: doubt, дубль a",assets/runtime/audio/voice/CH05/doubt_a.ogg,assets/source/audio/voice/CH05/doubt_a.wav,Voice,false,0.2–1.0,CH05.voice.doubt,planned,to_document
+VO_CH05_DOUBT_B,voice,S1,"Ника: doubt, дубль b",assets/runtime/audio/voice/CH05/doubt_b.ogg,assets/source/audio/voice/CH05/doubt_b.wav,Voice,false,0.2–1.0,CH05.voice.doubt,planned,to_document
+VO_CH05_ACCEPT_A,voice,S1,"Ника: accept, дубль a",assets/runtime/audio/voice/CH05/accept_a.ogg,assets/source/audio/voice/CH05/accept_a.wav,Voice,false,0.2–1.0,CH05.voice.accept,planned,to_document
+VO_CH05_ACCEPT_B,voice,S1,"Ника: accept, дубль b",assets/runtime/audio/voice/CH05/accept_b.ogg,assets/source/audio/voice/CH05/accept_b.wav,Voice,false,0.2–1.0,CH05.voice.accept,planned,to_document
+VO_CH05_SURPRISE_A,voice,S1,"Ника: surprise, дубль a",assets/runtime/audio/voice/CH05/surprise_a.ogg,assets/source/audio/voice/CH05/surprise_a.wav,Voice,false,0.2–1.0,CH05.voice.surprise,planned,to_document
+VO_CH05_SURPRISE_B,voice,S1,"Ника: surprise, дубль b",assets/runtime/audio/voice/CH05/surprise_b.ogg,assets/source/audio/voice/CH05/surprise_b.wav,Voice,false,0.2–1.0,CH05.voice.surprise,planned,to_document
+VO_CH05_JOY_A,voice,S1,"Ника: joy, дубль a",assets/runtime/audio/voice/CH05/joy_a.ogg,assets/source/audio/voice/CH05/joy_a.wav,Voice,false,0.2–1.0,CH05.voice.joy,planned,to_document
+VO_CH05_JOY_B,voice,S1,"Ника: joy, дубль b",assets/runtime/audio/voice/CH05/joy_b.ogg,assets/source/audio/voice/CH05/joy_b.wav,Voice,false,0.2–1.0,CH05.voice.joy,planned,to_document
+CH06_MODEL,model_sheet,S2,"Лада: виды, рост, 8 эмоций, одежда",assets/reference/CH06_model.png,assets/source/characters/CH06/model.kra,,false,,,planned,to_document
+CH06_PORTRAIT,portrait,S2,Лада: портрет 512px,assets/runtime/characters/CH06/portrait.png,assets/source/characters/CH06/portrait.kra,,false,,,planned,to_document
+CH06_RIG,character_rig,S2,"Лада: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH06/actor.tscn,assets/source/characters/CH06/parts.kra,,false,,,planned,to_document
+CH06_ANIM_IDLE,animation,S2,Лада: idle,assets/runtime/characters/CH06/anim/idle.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.idle,planned,to_document
+CH06_ANIM_MOVE,animation,S2,Лада: move,assets/runtime/characters/CH06/anim/move.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.move,planned,to_document
+CH06_ANIM_TURN,animation,S2,Лада: turn,assets/runtime/characters/CH06/anim/turn.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.turn,planned,to_document
+CH06_ANIM_OBSERVE,animation,S2,Лада: observe,assets/runtime/characters/CH06/anim/observe.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.observe,planned,to_document
+CH06_ANIM_SUSPECT,animation,S2,Лада: suspect,assets/runtime/characters/CH06/anim/suspect.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.suspect,planned,to_document
+CH06_ANIM_ACCEPT,animation,S2,Лада: accept,assets/runtime/characters/CH06/anim/accept.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.accept,planned,to_document
+CH06_ANIM_REVEAL_REACT,animation,S2,Лада: reveal_react,assets/runtime/characters/CH06/anim/reveal_react.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.reveal_react,planned,to_document
+CH06_ANIM_CELEBRATE,animation,S2,Лада: celebrate,assets/runtime/characters/CH06/anim/celebrate.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.celebrate,planned,to_document
+CH06_ANIM_TASTE,animation,S2,Лада: taste,assets/runtime/characters/CH06/anim/taste.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.taste,planned,to_document
+CH06_ANIM_KETTLE_CHECK,animation,S2,Лада: kettle_check,assets/runtime/characters/CH06/anim/kettle_check.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.kettle_check,planned,to_document
+CH06_ANIM_APRON_SHAKE,animation,S2,Лада: apron_shake,assets/runtime/characters/CH06/anim/apron_shake.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.apron_shake,planned,to_document
+CH06_ANIM_RECIPE_FLIP,animation,S2,Лада: recipe_flip,assets/runtime/characters/CH06/anim/recipe_flip.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.recipe_flip,planned,to_document
+CH06_ANIM_DELIGHTED_PLAN,animation,S2,Лада: delighted_plan,assets/runtime/characters/CH06/anim/delighted_plan.tres,assets/source/characters/CH06/rig_source.tscn,,false,0.3–2.0,CH06.delighted_plan,planned,to_document
+VO_CH06_CURIOUS_A,voice,S2,"Лада: curious, дубль a",assets/runtime/audio/voice/CH06/curious_a.ogg,assets/source/audio/voice/CH06/curious_a.wav,Voice,false,0.2–1.0,CH06.voice.curious,planned,to_document
+VO_CH06_CURIOUS_B,voice,S2,"Лада: curious, дубль b",assets/runtime/audio/voice/CH06/curious_b.ogg,assets/source/audio/voice/CH06/curious_b.wav,Voice,false,0.2–1.0,CH06.voice.curious,planned,to_document
+VO_CH06_DOUBT_A,voice,S2,"Лада: doubt, дубль a",assets/runtime/audio/voice/CH06/doubt_a.ogg,assets/source/audio/voice/CH06/doubt_a.wav,Voice,false,0.2–1.0,CH06.voice.doubt,planned,to_document
+VO_CH06_DOUBT_B,voice,S2,"Лада: doubt, дубль b",assets/runtime/audio/voice/CH06/doubt_b.ogg,assets/source/audio/voice/CH06/doubt_b.wav,Voice,false,0.2–1.0,CH06.voice.doubt,planned,to_document
+VO_CH06_ACCEPT_A,voice,S2,"Лада: accept, дубль a",assets/runtime/audio/voice/CH06/accept_a.ogg,assets/source/audio/voice/CH06/accept_a.wav,Voice,false,0.2–1.0,CH06.voice.accept,planned,to_document
+VO_CH06_ACCEPT_B,voice,S2,"Лада: accept, дубль b",assets/runtime/audio/voice/CH06/accept_b.ogg,assets/source/audio/voice/CH06/accept_b.wav,Voice,false,0.2–1.0,CH06.voice.accept,planned,to_document
+VO_CH06_SURPRISE_A,voice,S2,"Лада: surprise, дубль a",assets/runtime/audio/voice/CH06/surprise_a.ogg,assets/source/audio/voice/CH06/surprise_a.wav,Voice,false,0.2–1.0,CH06.voice.surprise,planned,to_document
+VO_CH06_SURPRISE_B,voice,S2,"Лада: surprise, дубль b",assets/runtime/audio/voice/CH06/surprise_b.ogg,assets/source/audio/voice/CH06/surprise_b.wav,Voice,false,0.2–1.0,CH06.voice.surprise,planned,to_document
+VO_CH06_JOY_A,voice,S2,"Лада: joy, дубль a",assets/runtime/audio/voice/CH06/joy_a.ogg,assets/source/audio/voice/CH06/joy_a.wav,Voice,false,0.2–1.0,CH06.voice.joy,planned,to_document
+VO_CH06_JOY_B,voice,S2,"Лада: joy, дубль b",assets/runtime/audio/voice/CH06/joy_b.ogg,assets/source/audio/voice/CH06/joy_b.wav,Voice,false,0.2–1.0,CH06.voice.joy,planned,to_document
+CH07_MODEL,model_sheet,S2,"Роза: виды, рост, 8 эмоций, одежда",assets/reference/CH07_model.png,assets/source/characters/CH07/model.kra,,false,,,planned,to_document
+CH07_PORTRAIT,portrait,S2,Роза: портрет 512px,assets/runtime/characters/CH07/portrait.png,assets/source/characters/CH07/portrait.kra,,false,,,planned,to_document
+CH07_RIG,character_rig,S2,"Роза: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH07/actor.tscn,assets/source/characters/CH07/parts.kra,,false,,,planned,to_document
+CH07_ANIM_IDLE,animation,S2,Роза: idle,assets/runtime/characters/CH07/anim/idle.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.idle,planned,to_document
+CH07_ANIM_MOVE,animation,S2,Роза: move,assets/runtime/characters/CH07/anim/move.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.move,planned,to_document
+CH07_ANIM_TURN,animation,S2,Роза: turn,assets/runtime/characters/CH07/anim/turn.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.turn,planned,to_document
+CH07_ANIM_OBSERVE,animation,S2,Роза: observe,assets/runtime/characters/CH07/anim/observe.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.observe,planned,to_document
+CH07_ANIM_SUSPECT,animation,S2,Роза: suspect,assets/runtime/characters/CH07/anim/suspect.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.suspect,planned,to_document
+CH07_ANIM_ACCEPT,animation,S2,Роза: accept,assets/runtime/characters/CH07/anim/accept.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.accept,planned,to_document
+CH07_ANIM_REVEAL_REACT,animation,S2,Роза: reveal_react,assets/runtime/characters/CH07/anim/reveal_react.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.reveal_react,planned,to_document
+CH07_ANIM_CELEBRATE,animation,S2,Роза: celebrate,assets/runtime/characters/CH07/anim/celebrate.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.celebrate,planned,to_document
+CH07_ANIM_INSPECT,animation,S2,Роза: inspect,assets/runtime/characters/CH07/anim/inspect.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.inspect,planned,to_document
+CH07_ANIM_PAGE_TURN,animation,S2,Роза: page_turn,assets/runtime/characters/CH07/anim/page_turn.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.page_turn,planned,to_document
+CH07_ANIM_STAMP_CHECK,animation,S2,Роза: stamp_check,assets/runtime/characters/CH07/anim/stamp_check.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.stamp_check,planned,to_document
+CH07_ANIM_EYEBROW_RAISE,animation,S2,Роза: eyebrow_raise,assets/runtime/characters/CH07/anim/eyebrow_raise.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.eyebrow_raise,planned,to_document
+CH07_ANIM_APPROVAL_SMILE,animation,S2,Роза: approval_smile,assets/runtime/characters/CH07/anim/approval_smile.tres,assets/source/characters/CH07/rig_source.tscn,,false,0.3–2.0,CH07.approval_smile,planned,to_document
+VO_CH07_CURIOUS_A,voice,S2,"Роза: curious, дубль a",assets/runtime/audio/voice/CH07/curious_a.ogg,assets/source/audio/voice/CH07/curious_a.wav,Voice,false,0.2–1.0,CH07.voice.curious,planned,to_document
+VO_CH07_CURIOUS_B,voice,S2,"Роза: curious, дубль b",assets/runtime/audio/voice/CH07/curious_b.ogg,assets/source/audio/voice/CH07/curious_b.wav,Voice,false,0.2–1.0,CH07.voice.curious,planned,to_document
+VO_CH07_DOUBT_A,voice,S2,"Роза: doubt, дубль a",assets/runtime/audio/voice/CH07/doubt_a.ogg,assets/source/audio/voice/CH07/doubt_a.wav,Voice,false,0.2–1.0,CH07.voice.doubt,planned,to_document
+VO_CH07_DOUBT_B,voice,S2,"Роза: doubt, дубль b",assets/runtime/audio/voice/CH07/doubt_b.ogg,assets/source/audio/voice/CH07/doubt_b.wav,Voice,false,0.2–1.0,CH07.voice.doubt,planned,to_document
+VO_CH07_ACCEPT_A,voice,S2,"Роза: accept, дубль a",assets/runtime/audio/voice/CH07/accept_a.ogg,assets/source/audio/voice/CH07/accept_a.wav,Voice,false,0.2–1.0,CH07.voice.accept,planned,to_document
+VO_CH07_ACCEPT_B,voice,S2,"Роза: accept, дубль b",assets/runtime/audio/voice/CH07/accept_b.ogg,assets/source/audio/voice/CH07/accept_b.wav,Voice,false,0.2–1.0,CH07.voice.accept,planned,to_document
+VO_CH07_SURPRISE_A,voice,S2,"Роза: surprise, дубль a",assets/runtime/audio/voice/CH07/surprise_a.ogg,assets/source/audio/voice/CH07/surprise_a.wav,Voice,false,0.2–1.0,CH07.voice.surprise,planned,to_document
+VO_CH07_SURPRISE_B,voice,S2,"Роза: surprise, дубль b",assets/runtime/audio/voice/CH07/surprise_b.ogg,assets/source/audio/voice/CH07/surprise_b.wav,Voice,false,0.2–1.0,CH07.voice.surprise,planned,to_document
+VO_CH07_JOY_A,voice,S2,"Роза: joy, дубль a",assets/runtime/audio/voice/CH07/joy_a.ogg,assets/source/audio/voice/CH07/joy_a.wav,Voice,false,0.2–1.0,CH07.voice.joy,planned,to_document
+VO_CH07_JOY_B,voice,S2,"Роза: joy, дубль b",assets/runtime/audio/voice/CH07/joy_b.ogg,assets/source/audio/voice/CH07/joy_b.wav,Voice,false,0.2–1.0,CH07.voice.joy,planned,to_document
+CH08_MODEL,model_sheet,S2,"Гуго: виды, рост, 8 эмоций, одежда",assets/reference/CH08_model.png,assets/source/characters/CH08/model.kra,,false,,,planned,to_document
+CH08_PORTRAIT,portrait,S2,Гуго: портрет 512px,assets/runtime/characters/CH08/portrait.png,assets/source/characters/CH08/portrait.kra,,false,,,planned,to_document
+CH08_RIG,character_rig,S2,"Гуго: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH08/actor.tscn,assets/source/characters/CH08/parts.kra,,false,,,planned,to_document
+CH08_ANIM_IDLE,animation,S2,Гуго: idle,assets/runtime/characters/CH08/anim/idle.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.idle,planned,to_document
+CH08_ANIM_MOVE,animation,S2,Гуго: move,assets/runtime/characters/CH08/anim/move.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.move,planned,to_document
+CH08_ANIM_TURN,animation,S2,Гуго: turn,assets/runtime/characters/CH08/anim/turn.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.turn,planned,to_document
+CH08_ANIM_OBSERVE,animation,S2,Гуго: observe,assets/runtime/characters/CH08/anim/observe.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.observe,planned,to_document
+CH08_ANIM_SUSPECT,animation,S2,Гуго: suspect,assets/runtime/characters/CH08/anim/suspect.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.suspect,planned,to_document
+CH08_ANIM_ACCEPT,animation,S2,Гуго: accept,assets/runtime/characters/CH08/anim/accept.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.accept,planned,to_document
+CH08_ANIM_REVEAL_REACT,animation,S2,Гуго: reveal_react,assets/runtime/characters/CH08/anim/reveal_react.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.reveal_react,planned,to_document
+CH08_ANIM_CELEBRATE,animation,S2,Гуго: celebrate,assets/runtime/characters/CH08/anim/celebrate.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.celebrate,planned,to_document
+CH08_ANIM_GRAND_ENTRANCE,animation,S2,Гуго: grand_entrance,assets/runtime/characters/CH08/anim/grand_entrance.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.grand_entrance,planned,to_document
+CH08_ANIM_PREMATURE_BOW,animation,S2,Гуго: premature_bow,assets/runtime/characters/CH08/anim/premature_bow.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.premature_bow,planned,to_document
+CH08_ANIM_RIBBON_TANGLE,animation,S2,Гуго: ribbon_tangle,assets/runtime/characters/CH08/anim/ribbon_tangle.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.ribbon_tangle,planned,to_document
+CH08_ANIM_HONEST_HELP,animation,S2,Гуго: honest_help,assets/runtime/characters/CH08/anim/honest_help.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.honest_help,planned,to_document
+CH08_ANIM_SHARED_BOW,animation,S2,Гуго: shared_bow,assets/runtime/characters/CH08/anim/shared_bow.tres,assets/source/characters/CH08/rig_source.tscn,,false,0.3–2.0,CH08.shared_bow,planned,to_document
+VO_CH08_CURIOUS_A,voice,S2,"Гуго: curious, дубль a",assets/runtime/audio/voice/CH08/curious_a.ogg,assets/source/audio/voice/CH08/curious_a.wav,Voice,false,0.2–1.0,CH08.voice.curious,planned,to_document
+VO_CH08_CURIOUS_B,voice,S2,"Гуго: curious, дубль b",assets/runtime/audio/voice/CH08/curious_b.ogg,assets/source/audio/voice/CH08/curious_b.wav,Voice,false,0.2–1.0,CH08.voice.curious,planned,to_document
+VO_CH08_DOUBT_A,voice,S2,"Гуго: doubt, дубль a",assets/runtime/audio/voice/CH08/doubt_a.ogg,assets/source/audio/voice/CH08/doubt_a.wav,Voice,false,0.2–1.0,CH08.voice.doubt,planned,to_document
+VO_CH08_DOUBT_B,voice,S2,"Гуго: doubt, дубль b",assets/runtime/audio/voice/CH08/doubt_b.ogg,assets/source/audio/voice/CH08/doubt_b.wav,Voice,false,0.2–1.0,CH08.voice.doubt,planned,to_document
+VO_CH08_ACCEPT_A,voice,S2,"Гуго: accept, дубль a",assets/runtime/audio/voice/CH08/accept_a.ogg,assets/source/audio/voice/CH08/accept_a.wav,Voice,false,0.2–1.0,CH08.voice.accept,planned,to_document
+VO_CH08_ACCEPT_B,voice,S2,"Гуго: accept, дубль b",assets/runtime/audio/voice/CH08/accept_b.ogg,assets/source/audio/voice/CH08/accept_b.wav,Voice,false,0.2–1.0,CH08.voice.accept,planned,to_document
+VO_CH08_SURPRISE_A,voice,S2,"Гуго: surprise, дубль a",assets/runtime/audio/voice/CH08/surprise_a.ogg,assets/source/audio/voice/CH08/surprise_a.wav,Voice,false,0.2–1.0,CH08.voice.surprise,planned,to_document
+VO_CH08_SURPRISE_B,voice,S2,"Гуго: surprise, дубль b",assets/runtime/audio/voice/CH08/surprise_b.ogg,assets/source/audio/voice/CH08/surprise_b.wav,Voice,false,0.2–1.0,CH08.voice.surprise,planned,to_document
+VO_CH08_JOY_A,voice,S2,"Гуго: joy, дубль a",assets/runtime/audio/voice/CH08/joy_a.ogg,assets/source/audio/voice/CH08/joy_a.wav,Voice,false,0.2–1.0,CH08.voice.joy,planned,to_document
+VO_CH08_JOY_B,voice,S2,"Гуго: joy, дубль b",assets/runtime/audio/voice/CH08/joy_b.ogg,assets/source/audio/voice/CH08/joy_b.wav,Voice,false,0.2–1.0,CH08.voice.joy,planned,to_document
+CH09_MODEL,model_sheet,S2,"Карамелька: виды, рост, 8 эмоций, одежда",assets/reference/CH09_model.png,assets/source/characters/CH09/model.kra,,false,,,planned,to_document
+CH09_PORTRAIT,portrait,S2,Карамелька: портрет 512px,assets/runtime/characters/CH09/portrait.png,assets/source/characters/CH09/portrait.kra,,false,,,planned,to_document
+CH09_RIG,character_rig,S2,"Карамелька: отдельные части, два ракурса, пивоты",assets/runtime/characters/CH09/actor.tscn,assets/source/characters/CH09/parts.kra,,false,,,planned,to_document
+CH09_ANIM_IDLE,animation,S2,Карамелька: idle,assets/runtime/characters/CH09/anim/idle.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.idle,planned,to_document
+CH09_ANIM_MOVE,animation,S2,Карамелька: move,assets/runtime/characters/CH09/anim/move.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.move,planned,to_document
+CH09_ANIM_TURN,animation,S2,Карамелька: turn,assets/runtime/characters/CH09/anim/turn.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.turn,planned,to_document
+CH09_ANIM_OBSERVE,animation,S2,Карамелька: observe,assets/runtime/characters/CH09/anim/observe.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.observe,planned,to_document
+CH09_ANIM_SUSPECT,animation,S2,Карамелька: suspect,assets/runtime/characters/CH09/anim/suspect.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.suspect,planned,to_document
+CH09_ANIM_ACCEPT,animation,S2,Карамелька: accept,assets/runtime/characters/CH09/anim/accept.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.accept,planned,to_document
+CH09_ANIM_REVEAL_REACT,animation,S2,Карамелька: reveal_react,assets/runtime/characters/CH09/anim/reveal_react.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.reveal_react,planned,to_document
+CH09_ANIM_CELEBRATE,animation,S2,Карамелька: celebrate,assets/runtime/characters/CH09/anim/celebrate.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.celebrate,planned,to_document
+CH09_ANIM_WALK,animation,S2,Карамелька: walk,assets/runtime/characters/CH09/anim/walk.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.walk,planned,to_document
+CH09_ANIM_IDLE_CHEW,animation,S2,Карамелька: idle_chew,assets/runtime/characters/CH09/anim/idle_chew.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.idle_chew,planned,to_document
+CH09_ANIM_SNIFF,animation,S2,Карамелька: sniff,assets/runtime/characters/CH09/anim/sniff.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.sniff,planned,to_document
+CH09_ANIM_NIBBLE_ATTEMPT,animation,S2,Карамелька: nibble_attempt,assets/runtime/characters/CH09/anim/nibble_attempt.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.nibble_attempt,planned,to_document
+CH09_ANIM_SURPRISED_STOP,animation,S2,Карамелька: surprised_stop,assets/runtime/characters/CH09/anim/surprised_stop.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.surprised_stop,planned,to_document
+CH09_ANIM_CARGO_BALANCE,animation,S2,Карамелька: cargo_balance,assets/runtime/characters/CH09/anim/cargo_balance.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.cargo_balance,planned,to_document
+CH09_ANIM_SAFE_RESCUE,animation,S2,Карамелька: safe_rescue,assets/runtime/characters/CH09/anim/safe_rescue.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.safe_rescue,planned,to_document
+CH09_ANIM_SATISFIED,animation,S2,Карамелька: satisfied,assets/runtime/characters/CH09/anim/satisfied.tres,assets/source/characters/CH09/rig_source.tscn,,false,0.3–2.0,CH09.satisfied,planned,to_document
+VO_CH09_CURIOUS_A,voice,S2,"Карамелька: curious, дубль a",assets/runtime/audio/voice/CH09/curious_a.ogg,assets/source/audio/voice/CH09/curious_a.wav,Voice,false,0.2–1.0,CH09.voice.curious,planned,to_document
+VO_CH09_CURIOUS_B,voice,S2,"Карамелька: curious, дубль b",assets/runtime/audio/voice/CH09/curious_b.ogg,assets/source/audio/voice/CH09/curious_b.wav,Voice,false,0.2–1.0,CH09.voice.curious,planned,to_document
+VO_CH09_DOUBT_A,voice,S2,"Карамелька: doubt, дубль a",assets/runtime/audio/voice/CH09/doubt_a.ogg,assets/source/audio/voice/CH09/doubt_a.wav,Voice,false,0.2–1.0,CH09.voice.doubt,planned,to_document
+VO_CH09_DOUBT_B,voice,S2,"Карамелька: doubt, дубль b",assets/runtime/audio/voice/CH09/doubt_b.ogg,assets/source/audio/voice/CH09/doubt_b.wav,Voice,false,0.2–1.0,CH09.voice.doubt,planned,to_document
+VO_CH09_ACCEPT_A,voice,S2,"Карамелька: accept, дубль a",assets/runtime/audio/voice/CH09/accept_a.ogg,assets/source/audio/voice/CH09/accept_a.wav,Voice,false,0.2–1.0,CH09.voice.accept,planned,to_document
+VO_CH09_ACCEPT_B,voice,S2,"Карамелька: accept, дубль b",assets/runtime/audio/voice/CH09/accept_b.ogg,assets/source/audio/voice/CH09/accept_b.wav,Voice,false,0.2–1.0,CH09.voice.accept,planned,to_document
+VO_CH09_SURPRISE_A,voice,S2,"Карамелька: surprise, дубль a",assets/runtime/audio/voice/CH09/surprise_a.ogg,assets/source/audio/voice/CH09/surprise_a.wav,Voice,false,0.2–1.0,CH09.voice.surprise,planned,to_document
+VO_CH09_SURPRISE_B,voice,S2,"Карамелька: surprise, дубль b",assets/runtime/audio/voice/CH09/surprise_b.ogg,assets/source/audio/voice/CH09/surprise_b.wav,Voice,false,0.2–1.0,CH09.voice.surprise,planned,to_document
+VO_CH09_JOY_A,voice,S2,"Карамелька: joy, дубль a",assets/runtime/audio/voice/CH09/joy_a.ogg,assets/source/audio/voice/CH09/joy_a.wav,Voice,false,0.2–1.0,CH09.voice.joy,planned,to_document
+VO_CH09_JOY_B,voice,S2,"Карамелька: joy, дубль b",assets/runtime/audio/voice/CH09/joy_b.ogg,assets/source/audio/voice/CH09/joy_b.wav,Voice,false,0.2–1.0,CH09.voice.joy,planned,to_document
+ENV01_FAR,environment_layer,S1,"Окружение 1, слой far; не запекать интерактив",assets/runtime/environments/env01/far.webp,assets/source/environments/env01/master.kra,,false,,,planned,to_document
+ENV01_MID,environment_layer,S1,"Окружение 1, слой mid; не запекать интерактив",assets/runtime/environments/env01/mid.webp,assets/source/environments/env01/master.kra,,false,,,planned,to_document
+ENV01_SURFACE,environment_layer,S1,"Окружение 1, слой surface; не запекать интерактив",assets/runtime/environments/env01/surface.webp,assets/source/environments/env01/master.kra,,false,,,planned,to_document
+ENV01_FOREGROUND,environment_layer,S1,"Окружение 1, слой foreground; не запекать интерактив",assets/runtime/environments/env01/foreground.webp,assets/source/environments/env01/master.kra,,false,,,planned,to_document
+ENV01_LIGHT,environment_layer,S1,"Окружение 1, слой light; не запекать интерактив",assets/runtime/environments/env01/light.webp,assets/source/environments/env01/master.kra,,false,,,planned,to_document
+ENV02_FAR,environment_layer,S2,"Окружение 2, слой far; не запекать интерактив",assets/runtime/environments/env02/far.webp,assets/source/environments/env02/master.kra,,false,,,planned,to_document
+ENV02_MID,environment_layer,S2,"Окружение 2, слой mid; не запекать интерактив",assets/runtime/environments/env02/mid.webp,assets/source/environments/env02/master.kra,,false,,,planned,to_document
+ENV02_SURFACE,environment_layer,S2,"Окружение 2, слой surface; не запекать интерактив",assets/runtime/environments/env02/surface.webp,assets/source/environments/env02/master.kra,,false,,,planned,to_document
+ENV02_FOREGROUND,environment_layer,S2,"Окружение 2, слой foreground; не запекать интерактив",assets/runtime/environments/env02/foreground.webp,assets/source/environments/env02/master.kra,,false,,,planned,to_document
+ENV02_LIGHT,environment_layer,S2,"Окружение 2, слой light; не запекать интерактив",assets/runtime/environments/env02/light.webp,assets/source/environments/env02/master.kra,,false,,,planned,to_document
+ENV03_FAR,environment_layer,S2,"Окружение 3, слой far; не запекать интерактив",assets/runtime/environments/env03/far.webp,assets/source/environments/env03/master.kra,,false,,,planned,to_document
+ENV03_MID,environment_layer,S2,"Окружение 3, слой mid; не запекать интерактив",assets/runtime/environments/env03/mid.webp,assets/source/environments/env03/master.kra,,false,,,planned,to_document
+ENV03_SURFACE,environment_layer,S2,"Окружение 3, слой surface; не запекать интерактив",assets/runtime/environments/env03/surface.webp,assets/source/environments/env03/master.kra,,false,,,planned,to_document
+ENV03_FOREGROUND,environment_layer,S2,"Окружение 3, слой foreground; не запекать интерактив",assets/runtime/environments/env03/foreground.webp,assets/source/environments/env03/master.kra,,false,,,planned,to_document
+ENV03_LIGHT,environment_layer,S2,"Окружение 3, слой light; не запекать интерактив",assets/runtime/environments/env03/light.webp,assets/source/environments/env03/master.kra,,false,,,planned,to_document
+SCENE_L01_LAYOUT,scene_layout,S1,Камень очень старается: отдельная композиция всех слоёв,content/presentation/L01.json,assets/source/scenes/L01.kra,,false,,,planned,to_document
+SCENE_L01_OVERLAY,scene_overlay,S1,"Камень очень старается: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L01/overlay.png,assets/source/scenes/L01.kra,,false,,,planned,to_document
+SCENE_L02_LAYOUT,scene_layout,S1,Лучшее место — не первое: отдельная композиция всех слоёв,content/presentation/L02.json,assets/source/scenes/L02.kra,,false,,,planned,to_document
+SCENE_L02_OVERLAY,scene_overlay,S1,"Лучшее место — не первое: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L02/overlay.png,assets/source/scenes/L02.kra,,false,,,planned,to_document
+SCENE_L03_LAYOUT,scene_layout,S1,А с обратной стороны?: отдельная композиция всех слоёв,content/presentation/L03.json,assets/source/scenes/L03.kra,,false,,,planned,to_document
+SCENE_L03_OVERLAY,scene_overlay,S1,"А с обратной стороны?: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L03/overlay.png,assets/source/scenes/L03.kra,,false,,,planned,to_document
+SCENE_L04_LAYOUT,scene_layout,S2,Ветер имеет мнение: отдельная композиция всех слоёв,content/presentation/L04.json,assets/source/scenes/L04.kra,,false,,,planned,to_document
+SCENE_L04_OVERLAY,scene_overlay,S2,"Ветер имеет мнение: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L04/overlay.png,assets/source/scenes/L04.kra,,false,,,planned,to_document
+SCENE_L05_LAYOUT,scene_layout,S2,Якорь получил повышение: отдельная композиция всех слоёв,content/presentation/L05.json,assets/source/scenes/L05.kra,,false,,,planned,to_document
+SCENE_L05_OVERLAY,scene_overlay,S2,"Якорь получил повышение: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L05/overlay.png,assets/source/scenes/L05.kra,,false,,,planned,to_document
+SCENE_L06_LAYOUT,scene_layout,S2,Почти ковчег: отдельная композиция всех слоёв,content/presentation/L06.json,assets/source/scenes/L06.kra,,false,,,planned,to_document
+SCENE_L06_OVERLAY,scene_overlay,S2,"Почти ковчег: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L06/overlay.png,assets/source/scenes/L06.kra,,false,,,planned,to_document
+SCENE_L07_LAYOUT,scene_layout,S2,Слишком широкая река: отдельная композиция всех слоёв,content/presentation/L07.json,assets/source/scenes/L07.kra,,false,,,planned,to_document
+SCENE_L07_OVERLAY,scene_overlay,S2,"Слишком широкая река: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L07/overlay.png,assets/source/scenes/L07.kra,,false,,,planned,to_document
+SCENE_L08_LAYOUT,scene_layout,S2,Секретов ровно два: отдельная композиция всех слоёв,content/presentation/L08.json,assets/source/scenes/L08.kra,,false,,,planned,to_document
+SCENE_L08_OVERLAY,scene_overlay,S2,"Секретов ровно два: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L08/overlay.png,assets/source/scenes/L08.kra,,false,,,planned,to_document
+SCENE_L09_LAYOUT,scene_layout,S2,Проверка после аплодисментов: отдельная композиция всех слоёв,content/presentation/L09.json,assets/source/scenes/L09.kra,,false,,,planned,to_document
+SCENE_L09_OVERLAY,scene_overlay,S2,"Проверка после аплодисментов: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L09/overlay.png,assets/source/scenes/L09.kra,,false,,,planned,to_document
+SCENE_L10_LAYOUT,scene_layout,S2,Переправа на честном слове: отдельная композиция всех слоёв,content/presentation/L10.json,assets/source/scenes/L10.kra,,false,,,planned,to_document
+SCENE_L10_OVERLAY,scene_overlay,S2,"Переправа на честном слове: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L10/overlay.png,assets/source/scenes/L10.kra,,false,,,planned,to_document
+SCENE_L11_LAYOUT,scene_layout,S2,Пламя берёт отпуск: отдельная композиция всех слоёв,content/presentation/L11.json,assets/source/scenes/L11.kra,,false,,,planned,to_document
+SCENE_L11_OVERLAY,scene_overlay,S2,"Пламя берёт отпуск: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L11/overlay.png,assets/source/scenes/L11.kra,,false,,,planned,to_document
+SCENE_L12_LAYOUT,scene_layout,S2,Пирожки с характером: отдельная композиция всех слоёв,content/presentation/L12.json,assets/source/scenes/L12.kra,,false,,,planned,to_document
+SCENE_L12_OVERLAY,scene_overlay,S2,"Пирожки с характером: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L12/overlay.png,assets/source/scenes/L12.kra,,false,,,planned,to_document
+SCENE_L13_LAYOUT,scene_layout,S2,"Два очага, одна лодка: отдельная композиция всех слоёв",content/presentation/L13.json,assets/source/scenes/L13.kra,,false,,,planned,to_document
+SCENE_L13_OVERLAY,scene_overlay,S2,"Два очага, одна лодка: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L13/overlay.png,assets/source/scenes/L13.kra,,false,,,planned,to_document
+SCENE_L14_LAYOUT,scene_layout,S2,Холод под присмотром: отдельная композиция всех слоёв,content/presentation/L14.json,assets/source/scenes/L14.kra,,false,,,planned,to_document
+SCENE_L14_OVERLAY,scene_overlay,S2,"Холод под присмотром: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L14/overlay.png,assets/source/scenes/L14.kra,,false,,,planned,to_document
+SCENE_L15_LAYOUT,scene_layout,S2,Не каждый жар — огонь: отдельная композиция всех слоёв,content/presentation/L15.json,assets/source/scenes/L15.kra,,false,,,planned,to_document
+SCENE_L15_OVERLAY,scene_overlay,S2,"Не каждый жар — огонь: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L15/overlay.png,assets/source/scenes/L15.kra,,false,,,planned,to_document
+SCENE_L16_LAYOUT,scene_layout,S2,Парообразная тайна: отдельная композиция всех слоёв,content/presentation/L16.json,assets/source/scenes/L16.kra,,false,,,planned,to_document
+SCENE_L16_OVERLAY,scene_overlay,S2,"Парообразная тайна: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L16/overlay.png,assets/source/scenes/L16.kra,,false,,,planned,to_document
+SCENE_L17_LAYOUT,scene_layout,S2,Вторая печать: отдельная композиция всех слоёв,content/presentation/L17.json,assets/source/scenes/L17.kra,,false,,,planned,to_document
+SCENE_L17_OVERLAY,scene_overlay,S2,"Вторая печать: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L17/overlay.png,assets/source/scenes/L17.kra,,false,,,planned,to_document
+SCENE_L18_LAYOUT,scene_layout,S2,Лодке нужен жидкий путь: отдельная композиция всех слоёв,content/presentation/L18.json,assets/source/scenes/L18.kra,,false,,,planned,to_document
+SCENE_L18_OVERLAY,scene_overlay,S2,"Лодке нужен жидкий путь: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L18/overlay.png,assets/source/scenes/L18.kra,,false,,,planned,to_document
+SCENE_L19_LAYOUT,scene_layout,S2,Верните печи работу: отдельная композиция всех слоёв,content/presentation/L19.json,assets/source/scenes/L19.kra,,false,,,planned,to_document
+SCENE_L19_OVERLAY,scene_overlay,S2,"Верните печи работу: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L19/overlay.png,assets/source/scenes/L19.kra,,false,,,planned,to_document
+SCENE_L20_LAYOUT,scene_layout,S2,Праздник наоборот: отдельная композиция всех слоёв,content/presentation/L20.json,assets/source/scenes/L20.kra,,false,,,planned,to_document
+SCENE_L20_OVERLAY,scene_overlay,S2,"Праздник наоборот: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L20/overlay.png,assets/source/scenes/L20.kra,,false,,,planned,to_document
+SCENE_L21_LAYOUT,scene_layout,S2,Лист с характером: отдельная композиция всех слоёв,content/presentation/L21.json,assets/source/scenes/L21.kra,,false,,,planned,to_document
+SCENE_L21_OVERLAY,scene_overlay,S2,"Лист с характером: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L21/overlay.png,assets/source/scenes/L21.kra,,false,,,planned,to_document
+SCENE_L22_LAYOUT,scene_layout,S2,Козе не по зубам: отдельная композиция всех слоёв,content/presentation/L22.json,assets/source/scenes/L22.kra,,false,,,planned,to_document
+SCENE_L22_OVERLAY,scene_overlay,S2,"Козе не по зубам: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L22/overlay.png,assets/source/scenes/L22.kra,,false,,,planned,to_document
+SCENE_L23_LAYOUT,scene_layout,S2,Огневой архив: отдельная композиция всех слоёв,content/presentation/L23.json,assets/source/scenes/L23.kra,,false,,,planned,to_document
+SCENE_L23_OVERLAY,scene_overlay,S2,"Огневой архив: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L23/overlay.png,assets/source/scenes/L23.kra,,false,,,planned,to_document
+SCENE_L24_LAYOUT,scene_layout,S2,Лёгкое решение: отдельная композиция всех слоёв,content/presentation/L24.json,assets/source/scenes/L24.kra,,false,,,planned,to_document
+SCENE_L24_OVERLAY,scene_overlay,S2,"Лёгкое решение: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L24/overlay.png,assets/source/scenes/L24.kra,,false,,,planned,to_document
+SCENE_L25_LAYOUT,scene_layout,S2,Обратная сторона сертификата: отдельная композиция всех слоёв,content/presentation/L25.json,assets/source/scenes/L25.kra,,false,,,planned,to_document
+SCENE_L25_OVERLAY,scene_overlay,S2,"Обратная сторона сертификата: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L25/overlay.png,assets/source/scenes/L25.kra,,false,,,planned,to_document
+SCENE_L26_LAYOUT,scene_layout,S2,Два места на три чуда: отдельная композиция всех слоёв,content/presentation/L26.json,assets/source/scenes/L26.kra,,false,,,planned,to_document
+SCENE_L26_OVERLAY,scene_overlay,S2,"Два места на три чуда: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L26/overlay.png,assets/source/scenes/L26.kra,,false,,,planned,to_document
+SCENE_L27_LAYOUT,scene_layout,S2,Всё ещё бумага: отдельная композиция всех слоёв,content/presentation/L27.json,assets/source/scenes/L27.kra,,false,,,planned,to_document
+SCENE_L27_OVERLAY,scene_overlay,S2,"Всё ещё бумага: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L27/overlay.png,assets/source/scenes/L27.kra,,false,,,planned,to_document
+SCENE_L28_LAYOUT,scene_layout,S2,Сертификат на невозможность: отдельная композиция всех слоёв,content/presentation/L28.json,assets/source/scenes/L28.kra,,false,,,planned,to_document
+SCENE_L28_OVERLAY,scene_overlay,S2,"Сертификат на невозможность: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L28/overlay.png,assets/source/scenes/L28.kra,,false,,,planned,to_document
+SCENE_L29_LAYOUT,scene_layout,S2,Чудо соперника: отдельная композиция всех слоёв,content/presentation/L29.json,assets/source/scenes/L29.kra,,false,,,planned,to_document
+SCENE_L29_OVERLAY,scene_overlay,S2,"Чудо соперника: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L29/overlay.png,assets/source/scenes/L29.kra,,false,,,planned,to_document
+SCENE_L30_LAYOUT,scene_layout,S2,Площадь всех возможностей: отдельная композиция всех слоёв,content/presentation/L30.json,assets/source/scenes/L30.kra,,false,,,planned,to_document
+SCENE_L30_OVERLAY,scene_overlay,S2,"Площадь всех возможностей: уникальные рисованные детали, отдельный альфа-слой",assets/runtime/scenes/L30/overlay.png,assets/source/scenes/L30.kra,,false,,,planned,to_document
+PROP_STONE_S,prop,S1,"stone_s: отдельная фактура, тень, пивот, состояния",assets/runtime/props/stone_s.tres,assets/source/props/stone_s.kra,,false,,,planned,to_document
+PROP_STONE_M,prop,S1,"stone_m: отдельная фактура, тень, пивот, состояния",assets/runtime/props/stone_m.tres,assets/source/props/stone_m.kra,,false,,,planned,to_document
+PROP_STONE_L,prop,S2,"stone_l: отдельная фактура, тень, пивот, состояния",assets/runtime/props/stone_l.tres,assets/source/props/stone_l.kra,,false,,,planned,to_document
+PROP_FLOAT,prop,S1,"float: отдельная фактура, тень, пивот, состояния",assets/runtime/props/float.tres,assets/source/props/float.kra,,false,,,planned,to_document
+PROP_SCREEN,prop,S1,"screen: отдельная фактура, тень, пивот, состояния",assets/runtime/props/screen.tres,assets/source/props/screen.kra,,false,,,planned,to_document
+PROP_ROPE,prop,S1,"rope: отдельная фактура, тень, пивот, состояния",assets/runtime/props/rope.tres,assets/source/props/rope.kra,,false,,,planned,to_document
+PROP_WOODEN_BOLLARD,prop,S1,"wooden_bollard: отдельная фактура, тень, пивот, состояния",assets/runtime/props/wooden_bollard.tres,assets/source/props/wooden_bollard.kra,,false,,,planned,to_document
+PROP_CARGO_CRATE,prop,S1,"cargo_crate: отдельная фактура, тень, пивот, состояния",assets/runtime/props/cargo_crate.tres,assets/source/props/cargo_crate.kra,,false,,,planned,to_document
+PROP_BOAT,prop,S1,"boat: отдельная фактура, тень, пивот, состояния",assets/runtime/props/boat.tres,assets/source/props/boat.kra,,false,,,planned,to_document
+PROP_CLAMP,prop,S2,"clamp: отдельная фактура, тень, пивот, состояния",assets/runtime/props/clamp.tres,assets/source/props/clamp.kra,,false,,,planned,to_document
+PROP_SANDBAG,prop,S2,"sandbag: отдельная фактура, тень, пивот, состояния",assets/runtime/props/sandbag.tres,assets/source/props/sandbag.kra,,false,,,planned,to_document
+PROP_FRAME,prop,S2,"frame: отдельная фактура, тень, пивот, состояния",assets/runtime/props/frame.tres,assets/source/props/frame.kra,,false,,,planned,to_document
+PROP_PAPER_SHEET,prop,S2,"paper_sheet: отдельная фактура, тень, пивот, состояния",assets/runtime/props/paper_sheet.tres,assets/source/props/paper_sheet.kra,,false,,,planned,to_document
+PROP_CONTROL_WEIGHT,prop,S2,"control_weight: отдельная фактура, тень, пивот, состояния",assets/runtime/props/control_weight.tres,assets/source/props/control_weight.kra,,false,,,planned,to_document
+PROP_DECOY_FIRE,prop,S2,"decoy_fire: отдельная фактура, тень, пивот, состояния",assets/runtime/props/decoy_fire.tres,assets/source/props/decoy_fire.kra,,false,,,planned,to_document
+PROP_CRYOPACK,prop,S2,"cryopack: отдельная фактура, тень, пивот, состояния",assets/runtime/props/cryopack.tres,assets/source/props/cryopack.kra,,false,,,planned,to_document
+PROP_WATER_BOWL,prop,S2,"water_bowl: отдельная фактура, тень, пивот, состояния",assets/runtime/props/water_bowl.tres,assets/source/props/water_bowl.kra,,false,,,planned,to_document
+PROP_FIRE_SOURCE,prop,S2,"fire_source: отдельная фактура, тень, пивот, состояния",assets/runtime/props/fire_source.tres,assets/source/props/fire_source.kra,,false,,,planned,to_document
+PROP_THERMAL_SCREEN,prop,S2,"thermal_screen: отдельная фактура, тень, пивот, состояния",assets/runtime/props/thermal_screen.tres,assets/source/props/thermal_screen.kra,,false,,,planned,to_document
+PROP_HOT_STONE,prop,S2,"hot_stone: отдельная фактура, тень, пивот, состояния",assets/runtime/props/hot_stone.tres,assets/source/props/hot_stone.kra,,false,,,planned,to_document
+PROP_THERMOBOX,prop,S2,"thermobox: отдельная фактура, тень, пивот, состояния",assets/runtime/props/thermobox.tres,assets/source/props/thermobox.kra,,false,,,planned,to_document
+PROP_POSTER,prop,S2,"poster: отдельная фактура, тень, пивот, состояния",assets/runtime/props/poster.tres,assets/source/props/poster.kra,,false,,,planned,to_document
+PROP_WOOD_GATE,prop,S2,"wood_gate: отдельная фактура, тень, пивот, состояния",assets/runtime/props/wood_gate.tres,assets/source/props/wood_gate.kra,,false,,,planned,to_document
+PROP_PAPER_GATE,prop,S2,"paper_gate: отдельная фактура, тень, пивот, состояния",assets/runtime/props/paper_gate.tres,assets/source/props/paper_gate.kra,,false,,,planned,to_document
+PROP_KETTLE,prop,S2,"kettle: отдельная фактура, тень, пивот, состояния",assets/runtime/props/kettle.tres,assets/source/props/kettle.kra,,false,,,planned,to_document
+PROP_TICKET_BOOTH,prop,S1,"ticket_booth: отдельная фактура, тень, пивот, состояния",assets/runtime/props/ticket_booth.tres,assets/source/props/ticket_booth.kra,,false,,,planned,to_document
+UI_LAW_M01,ui_icon,S1,"law_m01: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/law_m01.svg,assets/source/ui/law_m01.svg,,false,,,planned,to_document
+UI_LAW_M02,ui_icon,S1,"law_m02: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/law_m02.svg,assets/source/ui/law_m02.svg,,false,,,planned,to_document
+UI_LAW_M03,ui_icon,S1,"law_m03: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/law_m03.svg,assets/source/ui/law_m03.svg,,false,,,planned,to_document
+UI_VOICE_YES,ui_icon,S1,"voice_yes: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/voice_yes.svg,assets/source/ui/voice_yes.svg,,false,,,planned,to_document
+UI_VOICE_NO,ui_icon,S1,"voice_no: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/voice_no.svg,assets/source/ui/voice_no.svg,,false,,,planned,to_document
+UI_VOICE_WAIT,ui_icon,S1,"voice_wait: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/voice_wait.svg,assets/source/ui/voice_wait.svg,,false,,,planned,to_document
+UI_EYE,ui_icon,S1,"eye: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/eye.svg,assets/source/ui/eye.svg,,false,,,planned,to_document
+UI_METHOD,ui_icon,S1,"method: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/method.svg,assets/source/ui/method.svg,,false,,,planned,to_document
+UI_RESULT,ui_icon,S1,"result: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/result.svg,assets/source/ui/result.svg,,false,,,planned,to_document
+UI_PAUSE,ui_icon,S1,"pause: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/pause.svg,assets/source/ui/pause.svg,,false,,,planned,to_document
+UI_SETTINGS,ui_icon,S1,"settings: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/settings.svg,assets/source/ui/settings.svg,,false,,,planned,to_document
+UI_UNDO,ui_icon,S1,"undo: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/undo.svg,assets/source/ui/undo.svg,,false,,,planned,to_document
+UI_HINT,ui_icon,S1,"hint: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/hint.svg,assets/source/ui/hint.svg,,false,,,planned,to_document
+UI_VOLUME,ui_icon,S1,"volume: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/volume.svg,assets/source/ui/volume.svg,,false,,,planned,to_document
+UI_MUSIC,ui_icon,S1,"music: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/music.svg,assets/source/ui/music.svg,,false,,,planned,to_document
+UI_SFX,ui_icon,S1,"sfx: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/sfx.svg,assets/source/ui/sfx.svg,,false,,,planned,to_document
+UI_AMBIENCE,ui_icon,S1,"ambience: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/ambience.svg,assets/source/ui/ambience.svg,,false,,,planned,to_document
+UI_VOICE,ui_icon,S1,"voice: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/voice.svg,assets/source/ui/voice.svg,,false,,,planned,to_document
+UI_UI,ui_icon,S1,"ui: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/ui.svg,assets/source/ui/ui.svg,,false,,,planned,to_document
+UI_MUTE,ui_icon,S1,"mute: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/mute.svg,assets/source/ui/mute.svg,,false,,,planned,to_document
+UI_SUBTITLES,ui_icon,S1,"subtitles: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/subtitles.svg,assets/source/ui/subtitles.svg,,false,,,planned,to_document
+UI_REDUCED_MOTION,ui_icon,S1,"reduced_motion: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/reduced_motion.svg,assets/source/ui/reduced_motion.svg,,false,,,planned,to_document
+UI_STAR,ui_icon,S1,"star: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/star.svg,assets/source/ui/star.svg,,false,,,planned,to_document
+UI_SLOT_LAW,ui_icon,S1,"slot_law: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/slot_law.svg,assets/source/ui/slot_law.svg,,false,,,planned,to_document
+UI_PIN,ui_icon,S1,"pin: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/pin.svg,assets/source/ui/pin.svg,,false,,,planned,to_document
+UI_LOAD,ui_icon,S1,"load: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/load.svg,assets/source/ui/load.svg,,false,,,planned,to_document
+UI_ROUTE,ui_icon,S1,"route: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/route.svg,assets/source/ui/route.svg,,false,,,planned,to_document
+UI_PLAY,ui_icon,S1,"play: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/play.svg,assets/source/ui/play.svg,,false,,,planned,to_document
+UI_REHEARSAL,ui_icon,S1,"rehearsal: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/rehearsal.svg,assets/source/ui/rehearsal.svg,,false,,,planned,to_document
+UI_ALBUM,ui_icon,S1,"album: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/album.svg,assets/source/ui/album.svg,,false,,,planned,to_document
+UI_BACK,ui_icon,S1,"back: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/back.svg,assets/source/ui/back.svg,,false,,,planned,to_document
+UI_CLOSE,ui_icon,S1,"close: векторный исходник, варианты 64/128/256, без эмодзи",assets/runtime/ui/close.svg,assets/source/ui/close.svg,,false,,,planned,to_document
+UI_THEME,ui_theme,S1,"Кнопки, панели, карточки, состояния focus/pressed/disabled",assets/runtime/ui/theme.tres,assets/source/ui/design_tokens.json,,false,,,planned,to_document
+FONT_MAIN,font,S1,Шрифт с RU/EN; исходная лицензия обязательна,assets/runtime/fonts/main.ttf,assets/source/fonts/LICENSE.txt,,false,,,planned,to_document
+SFX_UI_SELECT_A,sfx,S1,Короткий мягкий тактильный щелчок; вариант a,assets/runtime/audio/sfx/ui_select_a.ogg,assets/source/audio/sfx/ui_select_a.wav,UI,false,0.08–1.5,SFX_UI_SELECT,planned,to_document
+SFX_UI_SELECT_B,sfx,S1,Короткий мягкий тактильный щелчок; вариант b,assets/runtime/audio/sfx/ui_select_b.ogg,assets/source/audio/sfx/ui_select_b.wav,UI,false,0.08–1.5,SFX_UI_SELECT,planned,to_document
+SFX_UI_OPEN_A,sfx,S1,Открытие панели; вариант a,assets/runtime/audio/sfx/ui_open_a.ogg,assets/source/audio/sfx/ui_open_a.wav,UI,false,0.08–1.5,SFX_UI_OPEN,planned,to_document
+SFX_UI_OPEN_B,sfx,S1,Открытие панели; вариант b,assets/runtime/audio/sfx/ui_open_b.ogg,assets/source/audio/sfx/ui_open_b.wav,UI,false,0.08–1.5,SFX_UI_OPEN,planned,to_document
+SFX_UI_CLOSE_A,sfx,S1,Закрытие панели; вариант a,assets/runtime/audio/sfx/ui_close_a.ogg,assets/source/audio/sfx/ui_close_a.wav,UI,false,0.08–1.5,SFX_UI_CLOSE,planned,to_document
+SFX_UI_CLOSE_B,sfx,S1,Закрытие панели; вариант b,assets/runtime/audio/sfx/ui_close_b.ogg,assets/source/audio/sfx/ui_close_b.wav,UI,false,0.08–1.5,SFX_UI_CLOSE,planned,to_document
+SFX_UI_CONFIRM_A,sfx,S1,Подтверждение без музыкальной фанфары; вариант a,assets/runtime/audio/sfx/ui_confirm_a.ogg,assets/source/audio/sfx/ui_confirm_a.wav,UI,false,0.08–1.5,SFX_UI_CONFIRM,planned,to_document
+SFX_UI_CONFIRM_B,sfx,S1,Подтверждение без музыкальной фанфары; вариант b,assets/runtime/audio/sfx/ui_confirm_b.ogg,assets/source/audio/sfx/ui_confirm_b.wav,UI,false,0.08–1.5,SFX_UI_CONFIRM,planned,to_document
+SFX_UI_BACK_A,sfx,S1,Назад; вариант a,assets/runtime/audio/sfx/ui_back_a.ogg,assets/source/audio/sfx/ui_back_a.wav,UI,false,0.08–1.5,SFX_UI_BACK,planned,to_document
+SFX_UI_BACK_B,sfx,S1,Назад; вариант b,assets/runtime/audio/sfx/ui_back_b.ogg,assets/source/audio/sfx/ui_back_b.wav,UI,false,0.08–1.5,SFX_UI_BACK,planned,to_document
+SFX_UI_DROP_VALID_A,sfx,S1,Мягкое закрепление в слоте; вариант a,assets/runtime/audio/sfx/ui_drop_valid_a.ogg,assets/source/audio/sfx/ui_drop_valid_a.wav,UI,false,0.08–1.5,SFX_UI_DROP_VALID,planned,to_document
+SFX_UI_DROP_VALID_B,sfx,S1,Мягкое закрепление в слоте; вариант b,assets/runtime/audio/sfx/ui_drop_valid_b.ogg,assets/source/audio/sfx/ui_drop_valid_b.wav,UI,false,0.08–1.5,SFX_UI_DROP_VALID,planned,to_document
+SFX_UI_DROP_INVALID_A,sfx,S1,"Деликатный возврат, без резкого buzz; вариант a",assets/runtime/audio/sfx/ui_drop_invalid_a.ogg,assets/source/audio/sfx/ui_drop_invalid_a.wav,UI,false,0.08–1.5,SFX_UI_DROP_INVALID,planned,to_document
+SFX_UI_DROP_INVALID_B,sfx,S1,"Деликатный возврат, без резкого buzz; вариант b",assets/runtime/audio/sfx/ui_drop_invalid_b.ogg,assets/source/audio/sfx/ui_drop_invalid_b.wav,UI,false,0.08–1.5,SFX_UI_DROP_INVALID,planned,to_document
+SFX_UI_UNDO_A,sfx,S1,Короткое обратное движение; вариант a,assets/runtime/audio/sfx/ui_undo_a.ogg,assets/source/audio/sfx/ui_undo_a.wav,UI,false,0.08–1.5,SFX_UI_UNDO,planned,to_document
+SFX_UI_UNDO_B,sfx,S1,Короткое обратное движение; вариант b,assets/runtime/audio/sfx/ui_undo_b.ogg,assets/source/audio/sfx/ui_undo_b.wav,UI,false,0.08–1.5,SFX_UI_UNDO,planned,to_document
+SFX_UI_HINT_A,sfx,S1,Открытие подсказки; вариант a,assets/runtime/audio/sfx/ui_hint_a.ogg,assets/source/audio/sfx/ui_hint_a.wav,UI,false,0.08–1.5,SFX_UI_HINT,planned,to_document
+SFX_UI_HINT_B,sfx,S1,Открытие подсказки; вариант b,assets/runtime/audio/sfx/ui_hint_b.ogg,assets/source/audio/sfx/ui_hint_b.wav,UI,false,0.08–1.5,SFX_UI_HINT,planned,to_document
+SFX_UI_STAR_A,sfx,S1,Немелодический блеск; вариант a,assets/runtime/audio/sfx/ui_star_a.ogg,assets/source/audio/sfx/ui_star_a.wav,UI,false,0.08–1.5,SFX_UI_STAR,planned,to_document
+SFX_UI_STAR_B,sfx,S1,Немелодический блеск; вариант b,assets/runtime/audio/sfx/ui_star_b.ogg,assets/source/audio/sfx/ui_star_b.wav,UI,false,0.08–1.5,SFX_UI_STAR,planned,to_document
+SFX_PROP_STONE_DRY_A,sfx,S1,Вес камня по дереву/земле; вариант a,assets/runtime/audio/sfx/prop_stone_dry_a.ogg,assets/source/audio/sfx/prop_stone_dry_a.wav,SFX,false,0.08–1.5,SFX_PROP_STONE_DRY,planned,to_document
+SFX_PROP_STONE_DRY_B,sfx,S1,Вес камня по дереву/земле; вариант b,assets/runtime/audio/sfx/prop_stone_dry_b.ogg,assets/source/audio/sfx/prop_stone_dry_b.wav,SFX,false,0.08–1.5,SFX_PROP_STONE_DRY,planned,to_document
+SFX_PROP_STONE_WATER_A,sfx,S1,Камень входит в воду; вариант a,assets/runtime/audio/sfx/prop_stone_water_a.ogg,assets/source/audio/sfx/prop_stone_water_a.wav,SFX,false,0.08–1.5,SFX_PROP_STONE_WATER,planned,to_document
+SFX_PROP_STONE_WATER_B,sfx,S1,Камень входит в воду; вариант b,assets/runtime/audio/sfx/prop_stone_water_b.ogg,assets/source/audio/sfx/prop_stone_water_b.wav,SFX,false,0.08–1.5,SFX_PROP_STONE_WATER,planned,to_document
+SFX_PROP_FLOAT_REMOVE_A,sfx,S1,Уход скрытого поплавка; вариант a,assets/runtime/audio/sfx/prop_float_remove_a.ogg,assets/source/audio/sfx/prop_float_remove_a.wav,SFX,false,0.5–2.5,SFX_PROP_FLOAT_REMOVE,planned,to_document
+SFX_PROP_FLOAT_REMOVE_B,sfx,S1,Уход скрытого поплавка; вариант b,assets/runtime/audio/sfx/prop_float_remove_b.ogg,assets/source/audio/sfx/prop_float_remove_b.wav,SFX,false,0.5–2.5,SFX_PROP_FLOAT_REMOVE,planned,to_document
+SFX_PROP_ROPE_TENSION_A,sfx,S1,Натягивание каната; вариант a,assets/runtime/audio/sfx/prop_rope_tension_a.ogg,assets/source/audio/sfx/prop_rope_tension_a.wav,SFX,false,0.08–1.5,SFX_PROP_ROPE_TENSION,planned,to_document
+SFX_PROP_ROPE_TENSION_B,sfx,S1,Натягивание каната; вариант b,assets/runtime/audio/sfx/prop_rope_tension_b.ogg,assets/source/audio/sfx/prop_rope_tension_b.wav,SFX,false,0.08–1.5,SFX_PROP_ROPE_TENSION,planned,to_document
+SFX_PROP_ROPE_RELEASE_A,sfx,S1,Освобождение каната; вариант a,assets/runtime/audio/sfx/prop_rope_release_a.ogg,assets/source/audio/sfx/prop_rope_release_a.wav,SFX,false,0.08–1.5,SFX_PROP_ROPE_RELEASE,planned,to_document
+SFX_PROP_ROPE_RELEASE_B,sfx,S1,Освобождение каната; вариант b,assets/runtime/audio/sfx/prop_rope_release_b.ogg,assets/source/audio/sfx/prop_rope_release_b.wav,SFX,false,0.08–1.5,SFX_PROP_ROPE_RELEASE,planned,to_document
+SFX_PROP_SCREEN_OPEN_A,sfx,S1,Дерево и ткань ширмы; вариант a,assets/runtime/audio/sfx/prop_screen_open_a.ogg,assets/source/audio/sfx/prop_screen_open_a.wav,SFX,false,0.08–1.5,SFX_PROP_SCREEN_OPEN,planned,to_document
+SFX_PROP_SCREEN_OPEN_B,sfx,S1,Дерево и ткань ширмы; вариант b,assets/runtime/audio/sfx/prop_screen_open_b.ogg,assets/source/audio/sfx/prop_screen_open_b.wav,SFX,false,0.08–1.5,SFX_PROP_SCREEN_OPEN,planned,to_document
+SFX_PROP_SCREEN_CLOSE_A,sfx,S1,Закрытие ширмы; вариант a,assets/runtime/audio/sfx/prop_screen_close_a.ogg,assets/source/audio/sfx/prop_screen_close_a.wav,SFX,false,0.08–1.5,SFX_PROP_SCREEN_CLOSE,planned,to_document
+SFX_PROP_SCREEN_CLOSE_B,sfx,S1,Закрытие ширмы; вариант b,assets/runtime/audio/sfx/prop_screen_close_b.ogg,assets/source/audio/sfx/prop_screen_close_b.wav,SFX,false,0.08–1.5,SFX_PROP_SCREEN_CLOSE,planned,to_document
+SFX_PROP_CLAMP_A,sfx,S2,Зажим струбцины; вариант a,assets/runtime/audio/sfx/prop_clamp_a.ogg,assets/source/audio/sfx/prop_clamp_a.wav,SFX,false,0.08–1.5,SFX_PROP_CLAMP,planned,to_document
+SFX_PROP_CLAMP_B,sfx,S2,Зажим струбцины; вариант b,assets/runtime/audio/sfx/prop_clamp_b.ogg,assets/source/audio/sfx/prop_clamp_b.wav,SFX,false,0.08–1.5,SFX_PROP_CLAMP,planned,to_document
+SFX_PROP_PAPER_A,sfx,S2,Материальное шуршание бумаги; вариант a,assets/runtime/audio/sfx/prop_paper_a.ogg,assets/source/audio/sfx/prop_paper_a.wav,SFX,false,0.08–1.5,SFX_PROP_PAPER,planned,to_document
+SFX_PROP_PAPER_B,sfx,S2,Материальное шуршание бумаги; вариант b,assets/runtime/audio/sfx/prop_paper_b.ogg,assets/source/audio/sfx/prop_paper_b.wav,SFX,false,0.08–1.5,SFX_PROP_PAPER,planned,to_document
+SFX_PROP_PAPER_C,sfx,S2,Материальное шуршание бумаги; вариант c,assets/runtime/audio/sfx/prop_paper_c.ogg,assets/source/audio/sfx/prop_paper_c.wav,SFX,false,0.08–1.5,SFX_PROP_PAPER,planned,to_document
+SFX_PROP_FRAME_A,sfx,S2,Движение скрытой рамы; вариант a,assets/runtime/audio/sfx/prop_frame_a.ogg,assets/source/audio/sfx/prop_frame_a.wav,SFX,false,0.08–1.5,SFX_PROP_FRAME,planned,to_document
+SFX_PROP_FRAME_B,sfx,S2,Движение скрытой рамы; вариант b,assets/runtime/audio/sfx/prop_frame_b.ogg,assets/source/audio/sfx/prop_frame_b.wav,SFX,false,0.08–1.5,SFX_PROP_FRAME,planned,to_document
+SFX_PROP_WEIGHT_A,sfx,S2,Опускание контрольного груза; вариант a,assets/runtime/audio/sfx/prop_weight_a.ogg,assets/source/audio/sfx/prop_weight_a.wav,SFX,false,0.08–1.5,SFX_PROP_WEIGHT,planned,to_document
+SFX_PROP_WEIGHT_B,sfx,S2,Опускание контрольного груза; вариант b,assets/runtime/audio/sfx/prop_weight_b.ogg,assets/source/audio/sfx/prop_weight_b.wav,SFX,false,0.08–1.5,SFX_PROP_WEIGHT,planned,to_document
+SFX_PROP_KETTLE_A,sfx,S2,Керамика и крышка; вариант a,assets/runtime/audio/sfx/prop_kettle_a.ogg,assets/source/audio/sfx/prop_kettle_a.wav,SFX,false,0.08–1.5,SFX_PROP_KETTLE,planned,to_document
+SFX_PROP_KETTLE_B,sfx,S2,Керамика и крышка; вариант b,assets/runtime/audio/sfx/prop_kettle_b.ogg,assets/source/audio/sfx/prop_kettle_b.wav,SFX,false,0.08–1.5,SFX_PROP_KETTLE,planned,to_document
+SFX_PROP_CRYO_A,sfx,S2,Работа криопака; вариант a,assets/runtime/audio/sfx/prop_cryo_a.ogg,assets/source/audio/sfx/prop_cryo_a.wav,SFX,false,0.08–1.5,SFX_PROP_CRYO,planned,to_document
+SFX_PROP_CRYO_B,sfx,S2,Работа криопака; вариант b,assets/runtime/audio/sfx/prop_cryo_b.ogg,assets/source/audio/sfx/prop_cryo_b.wav,SFX,false,0.08–1.5,SFX_PROP_CRYO,planned,to_document
+SFX_PROP_FIRE_START_A,sfx,S2,Мягкое появление настоящего пламени; вариант a,assets/runtime/audio/sfx/prop_fire_start_a.ogg,assets/source/audio/sfx/prop_fire_start_a.wav,SFX,false,0.08–1.5,SFX_PROP_FIRE_START,planned,to_document
+SFX_PROP_FIRE_START_B,sfx,S2,Мягкое появление настоящего пламени; вариант b,assets/runtime/audio/sfx/prop_fire_start_b.ogg,assets/source/audio/sfx/prop_fire_start_b.wav,SFX,false,0.08–1.5,SFX_PROP_FIRE_START,planned,to_document
+SFX_WITNESS_ACCEPT_A,sfx,S1,Принят отдельный голос; вариант a,assets/runtime/audio/sfx/witness_accept_a.ogg,assets/source/audio/sfx/witness_accept_a.wav,SFX,false,0.08–1.5,SFX_WITNESS_ACCEPT,planned,to_document
+SFX_WITNESS_ACCEPT_B,sfx,S1,Принят отдельный голос; вариант b,assets/runtime/audio/sfx/witness_accept_b.ogg,assets/source/audio/sfx/witness_accept_b.wav,SFX,false,0.08–1.5,SFX_WITNESS_ACCEPT,planned,to_document
+SFX_WITNESS_SUSPECT_A,sfx,S1,Зритель заметил противоречие; вариант a,assets/runtime/audio/sfx/witness_suspect_a.ogg,assets/source/audio/sfx/witness_suspect_a.wav,SFX,false,0.08–1.5,SFX_WITNESS_SUSPECT,planned,to_document
+SFX_WITNESS_SUSPECT_B,sfx,S1,Зритель заметил противоречие; вариант b,assets/runtime/audio/sfx/witness_suspect_b.ogg,assets/source/audio/sfx/witness_suspect_b.wav,SFX,false,0.08–1.5,SFX_WITNESS_SUSPECT,planned,to_document
+SFX_WITNESS_REVEAL_A,sfx,S1,Указание раскрытого метода; вариант a,assets/runtime/audio/sfx/witness_reveal_a.ogg,assets/source/audio/sfx/witness_reveal_a.wav,SFX,false,0.08–1.5,SFX_WITNESS_REVEAL,planned,to_document
+SFX_WITNESS_REVEAL_B,sfx,S1,Указание раскрытого метода; вариант b,assets/runtime/audio/sfx/witness_reveal_b.ogg,assets/source/audio/sfx/witness_reveal_b.wav,SFX,false,0.08–1.5,SFX_WITNESS_REVEAL,planned,to_document
+SFX_WITNESS_GATHER_A,sfx,S1,Рассаживание аудитории; вариант a,assets/runtime/audio/sfx/witness_gather_a.ogg,assets/source/audio/sfx/witness_gather_a.wav,SFX,false,0.5–2.5,SFX_WITNESS_GATHER,planned,to_document
+SFX_WITNESS_GATHER_B,sfx,S1,Рассаживание аудитории; вариант b,assets/runtime/audio/sfx/witness_gather_b.ogg,assets/source/audio/sfx/witness_gather_b.wav,SFX,false,0.5–2.5,SFX_WITNESS_GATHER,planned,to_document
+SFX_CROWD_CLAP_A,sfx,S1,Короткая группа аплодисментов; вариант a,assets/runtime/audio/sfx/crowd_clap_a.ogg,assets/source/audio/sfx/crowd_clap_a.wav,SFX,false,0.5–2.5,SFX_CROWD_CLAP,planned,to_document
+SFX_CROWD_CLAP_B,sfx,S1,Короткая группа аплодисментов; вариант b,assets/runtime/audio/sfx/crowd_clap_b.ogg,assets/source/audio/sfx/crowd_clap_b.wav,SFX,false,0.5–2.5,SFX_CROWD_CLAP,planned,to_document
+SFX_LAW_STAMP_A,sfx,S1,Материальный контакт печати; вариант a,assets/runtime/audio/sfx/law_stamp_a.ogg,assets/source/audio/sfx/law_stamp_a.wav,SFX,false,0.08–1.5,SFX_LAW_STAMP,planned,to_document
+SFX_LAW_STAMP_B,sfx,S1,Материальный контакт печати; вариант b,assets/runtime/audio/sfx/law_stamp_b.ogg,assets/source/audio/sfx/law_stamp_b.wav,SFX,false,0.08–1.5,SFX_LAW_STAMP,planned,to_document
+SFX_LAW_WAVE_A,sfx,S1,Немелодическая волна изменения; вариант a,assets/runtime/audio/sfx/law_wave_a.ogg,assets/source/audio/sfx/law_wave_a.wav,SFX,false,0.08–1.5,SFX_LAW_WAVE,planned,to_document
+SFX_LAW_WAVE_B,sfx,S1,Немелодическая волна изменения; вариант b,assets/runtime/audio/sfx/law_wave_b.ogg,assets/source/audio/sfx/law_wave_b.wav,SFX,false,0.08–1.5,SFX_LAW_WAVE,planned,to_document
+SFX_LAW_STONE_BUOYANCY_A,sfx,S1,Лёгкое освобождение камня; вариант a,assets/runtime/audio/sfx/law_stone_buoyancy_a.ogg,assets/source/audio/sfx/law_stone_buoyancy_a.wav,SFX,false,0.08–1.5,SFX_LAW_STONE_BUOYANCY,planned,to_document
+SFX_LAW_STONE_BUOYANCY_B,sfx,S1,Лёгкое освобождение камня; вариант b,assets/runtime/audio/sfx/law_stone_buoyancy_b.ogg,assets/source/audio/sfx/law_stone_buoyancy_b.wav,SFX,false,0.08–1.5,SFX_LAW_STONE_BUOYANCY,planned,to_document
+SFX_LAW_ANCHOR_UP_A,sfx,S1,Якорь всплывает; вариант a,assets/runtime/audio/sfx/law_anchor_up_a.ogg,assets/source/audio/sfx/law_anchor_up_a.wav,SFX,false,0.08–1.5,SFX_LAW_ANCHOR_UP,planned,to_document
+SFX_LAW_ANCHOR_UP_B,sfx,S1,Якорь всплывает; вариант b,assets/runtime/audio/sfx/law_anchor_up_b.ogg,assets/source/audio/sfx/law_anchor_up_b.wav,SFX,false,0.08–1.5,SFX_LAW_ANCHOR_UP,planned,to_document
+SFX_LAW_FROST_A,sfx,S2,Иней по материалу; вариант a,assets/runtime/audio/sfx/law_frost_a.ogg,assets/source/audio/sfx/law_frost_a.wav,SFX,false,0.08–1.5,SFX_LAW_FROST,planned,to_document
+SFX_LAW_FROST_B,sfx,S2,Иней по материалу; вариант b,assets/runtime/audio/sfx/law_frost_b.ogg,assets/source/audio/sfx/law_frost_b.wav,SFX,false,0.08–1.5,SFX_LAW_FROST,planned,to_document
+SFX_LAW_WATER_FREEZE_A,sfx,S2,Фронт замерзания; вариант a,assets/runtime/audio/sfx/law_water_freeze_a.ogg,assets/source/audio/sfx/law_water_freeze_a.wav,SFX,false,0.08–1.5,SFX_LAW_WATER_FREEZE,planned,to_document
+SFX_LAW_WATER_FREEZE_B,sfx,S2,Фронт замерзания; вариант b,assets/runtime/audio/sfx/law_water_freeze_b.ogg,assets/source/audio/sfx/law_water_freeze_b.wav,SFX,false,0.08–1.5,SFX_LAW_WATER_FREEZE,planned,to_document
+SFX_LAW_WATER_THAW_A,sfx,S2,Оттаивание; вариант a,assets/runtime/audio/sfx/law_water_thaw_a.ogg,assets/source/audio/sfx/law_water_thaw_a.wav,SFX,false,0.08–1.5,SFX_LAW_WATER_THAW,planned,to_document
+SFX_LAW_WATER_THAW_B,sfx,S2,Оттаивание; вариант b,assets/runtime/audio/sfx/law_water_thaw_b.ogg,assets/source/audio/sfx/law_water_thaw_b.wav,SFX,false,0.08–1.5,SFX_LAW_WATER_THAW,planned,to_document
+SFX_LAW_PAPER_STRONG_A,sfx,S2,Упругое натяжение бумаги; вариант a,assets/runtime/audio/sfx/law_paper_strong_a.ogg,assets/source/audio/sfx/law_paper_strong_a.wav,SFX,false,0.08–1.5,SFX_LAW_PAPER_STRONG,planned,to_document
+SFX_LAW_PAPER_STRONG_B,sfx,S2,Упругое натяжение бумаги; вариант b,assets/runtime/audio/sfx/law_paper_strong_b.ogg,assets/source/audio/sfx/law_paper_strong_b.wav,SFX,false,0.08–1.5,SFX_LAW_PAPER_STRONG,planned,to_document
+SFX_LAW_PAPER_STRONG_C,sfx,S2,Упругое натяжение бумаги; вариант c,assets/runtime/audio/sfx/law_paper_strong_c.ogg,assets/source/audio/sfx/law_paper_strong_c.wav,SFX,false,0.08–1.5,SFX_LAW_PAPER_STRONG,planned,to_document
+SFX_ACTOR_STEP_WOOD_A,sfx,S1,Шаг по настилу; вариант a,assets/runtime/audio/sfx/actor_step_wood_a.ogg,assets/source/audio/sfx/actor_step_wood_a.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_WOOD,planned,to_document
+SFX_ACTOR_STEP_WOOD_B,sfx,S1,Шаг по настилу; вариант b,assets/runtime/audio/sfx/actor_step_wood_b.ogg,assets/source/audio/sfx/actor_step_wood_b.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_WOOD,planned,to_document
+SFX_ACTOR_STEP_WOOD_C,sfx,S1,Шаг по настилу; вариант c,assets/runtime/audio/sfx/actor_step_wood_c.ogg,assets/source/audio/sfx/actor_step_wood_c.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_WOOD,planned,to_document
+SFX_ACTOR_STEP_STONE_A,sfx,S1,Шаг по камню; вариант a,assets/runtime/audio/sfx/actor_step_stone_a.ogg,assets/source/audio/sfx/actor_step_stone_a.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_STONE,planned,to_document
+SFX_ACTOR_STEP_STONE_B,sfx,S1,Шаг по камню; вариант b,assets/runtime/audio/sfx/actor_step_stone_b.ogg,assets/source/audio/sfx/actor_step_stone_b.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_STONE,planned,to_document
+SFX_ACTOR_STEP_STONE_C,sfx,S1,Шаг по камню; вариант c,assets/runtime/audio/sfx/actor_step_stone_c.ogg,assets/source/audio/sfx/actor_step_stone_c.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_STONE,planned,to_document
+SFX_ACTOR_STEP_ICE_A,sfx,S2,Осторожный шаг по льду; вариант a,assets/runtime/audio/sfx/actor_step_ice_a.ogg,assets/source/audio/sfx/actor_step_ice_a.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_ICE,planned,to_document
+SFX_ACTOR_STEP_ICE_B,sfx,S2,Осторожный шаг по льду; вариант b,assets/runtime/audio/sfx/actor_step_ice_b.ogg,assets/source/audio/sfx/actor_step_ice_b.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_ICE,planned,to_document
+SFX_ACTOR_STEP_ICE_C,sfx,S2,Осторожный шаг по льду; вариант c,assets/runtime/audio/sfx/actor_step_ice_c.ogg,assets/source/audio/sfx/actor_step_ice_c.wav,SFX,false,0.08–1.5,SFX_ACTOR_STEP_ICE,planned,to_document
+SFX_ACTOR_CLOTH_A,sfx,S1,Плащ и одежда; вариант a,assets/runtime/audio/sfx/actor_cloth_a.ogg,assets/source/audio/sfx/actor_cloth_a.wav,SFX,false,0.08–1.5,SFX_ACTOR_CLOTH,planned,to_document
+SFX_ACTOR_CLOTH_B,sfx,S1,Плащ и одежда; вариант b,assets/runtime/audio/sfx/actor_cloth_b.ogg,assets/source/audio/sfx/actor_cloth_b.wav,SFX,false,0.08–1.5,SFX_ACTOR_CLOTH,planned,to_document
+SFX_BOAT_MOVE_A,sfx,S1,Движение лодки; вариант a,assets/runtime/audio/sfx/boat_move_a.ogg,assets/source/audio/sfx/boat_move_a.wav,SFX,false,0.5–2.5,SFX_BOAT_MOVE,planned,to_document
+SFX_BOAT_MOVE_B,sfx,S1,Движение лодки; вариант b,assets/runtime/audio/sfx/boat_move_b.ogg,assets/source/audio/sfx/boat_move_b.wav,SFX,false,0.5–2.5,SFX_BOAT_MOVE,planned,to_document
+SFX_BOAT_DOCK_A,sfx,S1,Мягкая швартовка; вариант a,assets/runtime/audio/sfx/boat_dock_a.ogg,assets/source/audio/sfx/boat_dock_a.wav,SFX,false,0.08–1.5,SFX_BOAT_DOCK,planned,to_document
+SFX_BOAT_DOCK_B,sfx,S1,Мягкая швартовка; вариант b,assets/runtime/audio/sfx/boat_dock_b.ogg,assets/source/audio/sfx/boat_dock_b.wav,SFX,false,0.08–1.5,SFX_BOAT_DOCK,planned,to_document
+SFX_GOAL_COMPLETE_A,sfx,S1,Немелодический знак цели; вариант a,assets/runtime/audio/sfx/goal_complete_a.ogg,assets/source/audio/sfx/goal_complete_a.wav,SFX,false,0.08–1.5,SFX_GOAL_COMPLETE,planned,to_document
+SFX_GOAL_COMPLETE_B,sfx,S1,Немелодический знак цели; вариант b,assets/runtime/audio/sfx/goal_complete_b.ogg,assets/source/audio/sfx/goal_complete_b.wav,SFX,false,0.08–1.5,SFX_GOAL_COMPLETE,planned,to_document
+SFX_FAIL_RECOVERABLE_A,sfx,S1,Мягкий безопасный срыв; вариант a,assets/runtime/audio/sfx/fail_recoverable_a.ogg,assets/source/audio/sfx/fail_recoverable_a.wav,SFX,false,0.08–1.5,SFX_FAIL_RECOVERABLE,planned,to_document
+SFX_FAIL_RECOVERABLE_B,sfx,S1,Мягкий безопасный срыв; вариант b,assets/runtime/audio/sfx/fail_recoverable_b.ogg,assets/source/audio/sfx/fail_recoverable_b.wav,SFX,false,0.08–1.5,SFX_FAIL_RECOVERABLE,planned,to_document
+SFX_ALBUM_PAGE_A,sfx,S1,Страница альбома; вариант a,assets/runtime/audio/sfx/album_page_a.ogg,assets/source/audio/sfx/album_page_a.wav,UI,false,0.08–1.5,SFX_ALBUM_PAGE,planned,to_document
+SFX_ALBUM_PAGE_B,sfx,S1,Страница альбома; вариант b,assets/runtime/audio/sfx/album_page_b.ogg,assets/source/audio/sfx/album_page_b.wav,UI,false,0.08–1.5,SFX_ALBUM_PAGE,planned,to_document
+SFX_CHAPTER_OPEN_A,sfx,S1,Открытие нового острова; вариант a,assets/runtime/audio/sfx/chapter_open_a.ogg,assets/source/audio/sfx/chapter_open_a.wav,UI,false,0.08–1.5,SFX_CHAPTER_OPEN,planned,to_document
+SFX_CHAPTER_OPEN_B,sfx,S1,Открытие нового острова; вариант b,assets/runtime/audio/sfx/chapter_open_b.ogg,assets/source/audio/sfx/chapter_open_b.wav,UI,false,0.08–1.5,SFX_CHAPTER_OPEN,planned,to_document
+SFX_GUGO_RIBBON_A,sfx,S2,Лента Гуго запуталась; вариант a,assets/runtime/audio/sfx/gugo_ribbon_a.ogg,assets/source/audio/sfx/gugo_ribbon_a.wav,SFX,false,0.08–1.5,SFX_GUGO_RIBBON,planned,to_document
+SFX_GUGO_RIBBON_B,sfx,S2,Лента Гуго запуталась; вариант b,assets/runtime/audio/sfx/gugo_ribbon_b.ogg,assets/source/audio/sfx/gugo_ribbon_b.wav,SFX,false,0.08–1.5,SFX_GUGO_RIBBON,planned,to_document
+SFX_GOAT_BELL_A,sfx,S2,Короткий бубенчик козы; вариант a,assets/runtime/audio/sfx/goat_bell_a.ogg,assets/source/audio/sfx/goat_bell_a.wav,SFX,false,0.08–1.5,SFX_GOAT_BELL,planned,to_document
+SFX_GOAT_BELL_B,sfx,S2,Короткий бубенчик козы; вариант b,assets/runtime/audio/sfx/goat_bell_b.ogg,assets/source/audio/sfx/goat_bell_b.wav,SFX,false,0.08–1.5,SFX_GOAT_BELL,planned,to_document
+SFX_GOAT_BELL_C,sfx,S2,Короткий бубенчик козы; вариант c,assets/runtime/audio/sfx/goat_bell_c.ogg,assets/source/audio/sfx/goat_bell_c.wav,SFX,false,0.08–1.5,SFX_GOAT_BELL,planned,to_document
+SFX_PLUM_FLY_A,sfx,S1,Воздушное движение Плюма; вариант a,assets/runtime/audio/sfx/plum_fly_a.ogg,assets/source/audio/sfx/plum_fly_a.wav,SFX,false,0.08–1.5,SFX_PLUM_FLY,planned,to_document
+SFX_PLUM_FLY_B,sfx,S1,Воздушное движение Плюма; вариант b,assets/runtime/audio/sfx/plum_fly_b.ogg,assets/source/audio/sfx/plum_fly_b.wav,SFX,false,0.08–1.5,SFX_PLUM_FLY,planned,to_document
+MUS_MAIN_FULL,music,S1,"MAIN: full, оригинальная композиция",assets/runtime/audio/music/main_full.ogg,assets/source/audio/music/main/project,Music,true,90–115,MUS_MAIN,planned,to_document
+MUS_RIVER_BED,music,S1,"RIVER: bed, оригинальная композиция",assets/runtime/audio/music/river_bed.ogg,assets/source/audio/music/river/project,Music,true,100,MUS_RIVER,planned,to_document
+MUS_RIVER_CURIOSITY,music,S1,"RIVER: curiosity, оригинальная композиция",assets/runtime/audio/music/river_curiosity.ogg,assets/source/audio/music/river/project,Music,true,100,MUS_RIVER,planned,to_document
+MUS_RIVER_TENSION,music,S1,"RIVER: tension, оригинальная композиция",assets/runtime/audio/music/river_tension.ogg,assets/source/audio/music/river/project,Music,true,100,MUS_RIVER,planned,to_document
+MUS_KITCHEN_BED,music,S2,"KITCHEN: bed, оригинальная композиция",assets/runtime/audio/music/kitchen_bed.ogg,assets/source/audio/music/kitchen/project,Music,true,92.3077,MUS_KITCHEN,planned,to_document
+MUS_KITCHEN_CURIOSITY,music,S2,"KITCHEN: curiosity, оригинальная композиция",assets/runtime/audio/music/kitchen_curiosity.ogg,assets/source/audio/music/kitchen/project,Music,true,92.3077,MUS_KITCHEN,planned,to_document
+MUS_KITCHEN_TENSION,music,S2,"KITCHEN: tension, оригинальная композиция",assets/runtime/audio/music/kitchen_tension.ogg,assets/source/audio/music/kitchen/project,Music,true,92.3077,MUS_KITCHEN,planned,to_document
+MUS_ARCHIVE_BED,music,S2,"ARCHIVE: bed, оригинальная композиция",assets/runtime/audio/music/archive_bed.ogg,assets/source/audio/music/archive/project,Music,true,108,MUS_ARCHIVE,planned,to_document
+MUS_ARCHIVE_CURIOSITY,music,S2,"ARCHIVE: curiosity, оригинальная композиция",assets/runtime/audio/music/archive_curiosity.ogg,assets/source/audio/music/archive/project,Music,true,108,MUS_ARCHIVE,planned,to_document
+MUS_ARCHIVE_TENSION,music,S2,"ARCHIVE: tension, оригинальная композиция",assets/runtime/audio/music/archive_tension.ogg,assets/source/audio/music/archive/project,Music,true,108,MUS_ARCHIVE,planned,to_document
+MUS_ALBUM_FULL,music,S2,"ALBUM: full, оригинальная композиция",assets/runtime/audio/music/album_full.ogg,assets/source/audio/music/album/project,Music,true,80,MUS_ALBUM,planned,to_document
+MUS_FINALE_BED,music,S2,"FINALE: bed, оригинальная композиция",assets/runtime/audio/music/finale_bed.ogg,assets/source/audio/music/finale/project,Music,true,92.3077,MUS_FINALE,planned,to_document
+MUS_FINALE_CURIOSITY,music,S2,"FINALE: curiosity, оригинальная композиция",assets/runtime/audio/music/finale_curiosity.ogg,assets/source/audio/music/finale/project,Music,true,92.3077,MUS_FINALE,planned,to_document
+MUS_FINALE_TENSION,music,S2,"FINALE: tension, оригинальная композиция",assets/runtime/audio/music/finale_tension.ogg,assets/source/audio/music/finale/project,Music,true,92.3077,MUS_FINALE,planned,to_document
+MUS_CREDITS_FULL,music,S2,"CREDITS: full, оригинальная композиция",assets/runtime/audio/music/credits_full.ogg,assets/source/audio/music/credits/project,Music,true,120,MUS_CREDITS,planned,to_document
+MUS_STINGER_PROOF,stinger,S1,PROOF: законченный музыкальный акцент,assets/runtime/audio/music/stinger_proof.ogg,assets/source/audio/music/stingers/project,Music,false,1.2–1.8,MUS_STINGER_PROOF,planned,to_document
+MUS_STINGER_LAW,stinger,S1,LAW: законченный музыкальный акцент,assets/runtime/audio/music/stinger_law.ogg,assets/source/audio/music/stingers/project,Music,false,1.8–2.5,MUS_STINGER_LAW,planned,to_document
+MUS_STINGER_REVEAL,stinger,S1,REVEAL: законченный музыкальный акцент,assets/runtime/audio/music/stinger_reveal.ogg,assets/source/audio/music/stingers/project,Music,false,0.6–1.0,MUS_STINGER_REVEAL,planned,to_document
+MUS_STINGER_CHAPTER,stinger,S2,CHAPTER: законченный музыкальный акцент,assets/runtime/audio/music/stinger_chapter.ogg,assets/source/audio/music/stingers/project,Music,false,3–4,MUS_STINGER_CHAPTER,planned,to_document
+MUS_STINGER_FINAL,stinger,S2,FINAL: законченный музыкальный акцент,assets/runtime/audio/music/stinger_final.ogg,assets/source/audio/music/stingers/project,Music,false,5–7,MUS_STINGER_FINAL,planned,to_document
+AMB_RIVER_WATER,ambience,S1,RIVER_WATER: бесшовный естественный цикл,assets/runtime/audio/ambience/river_water.ogg,assets/source/audio/ambience/river_water.wav,Ambience,true,12–30,AMB_RIVER_WATER,planned,to_document
+AMB_RIVER_WIND,ambience,S1,RIVER_WIND: бесшовный естественный цикл,assets/runtime/audio/ambience/river_wind.ogg,assets/source/audio/ambience/river_wind.wav,Ambience,true,12–30,AMB_RIVER_WIND,planned,to_document
+AMB_KITCHEN_HOUSE,ambience,S2,KITCHEN_HOUSE: бесшовный естественный цикл,assets/runtime/audio/ambience/kitchen_house.ogg,assets/source/audio/ambience/kitchen_house.wav,Ambience,true,12–30,AMB_KITCHEN_HOUSE,planned,to_document
+AMB_KITCHEN_STEAM,ambience,S2,KITCHEN_STEAM: бесшовный естественный цикл,assets/runtime/audio/ambience/kitchen_steam.ogg,assets/source/audio/ambience/kitchen_steam.wav,Ambience,true,12–30,AMB_KITCHEN_STEAM,planned,to_document
+AMB_ARCHIVE_PAPER,ambience,S2,ARCHIVE_PAPER: бесшовный естественный цикл,assets/runtime/audio/ambience/archive_paper.ogg,assets/source/audio/ambience/archive_paper.wav,Ambience,true,12–30,AMB_ARCHIVE_PAPER,planned,to_document
+AMB_ARCHIVE_WIND,ambience,S2,ARCHIVE_WIND: бесшовный естественный цикл,assets/runtime/audio/ambience/archive_wind.ogg,assets/source/audio/ambience/archive_wind.wav,Ambience,true,12–30,AMB_ARCHIVE_WIND,planned,to_document
+CROWD01_MODEL,crowd_model,S1,"садовник: отдельные голова, одежда, силуэт",assets/reference/CROWD01.png,assets/source/crowd/CROWD01.kra,,False,,,planned,to_document
+CROWD01_RIG,crowd_rig,S1,садовник: согласованный общий риг,assets/runtime/crowd/CROWD01/actor.tscn,assets/source/crowd/CROWD01_rig.tscn,,False,,,planned,to_document
+CROWD01_ANIM_IDLE,crowd_animation,S1,садовник: idle,assets/runtime/crowd/CROWD01/idle.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.idle,planned,to_document
+CROWD01_ANIM_MOVE,crowd_animation,S1,садовник: move,assets/runtime/crowd/CROWD01/move.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.move,planned,to_document
+CROWD01_ANIM_OBSERVE,crowd_animation,S1,садовник: observe,assets/runtime/crowd/CROWD01/observe.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.observe,planned,to_document
+CROWD01_ANIM_SUSPECT,crowd_animation,S1,садовник: suspect,assets/runtime/crowd/CROWD01/suspect.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.suspect,planned,to_document
+CROWD01_ANIM_ACCEPT,crowd_animation,S1,садовник: accept,assets/runtime/crowd/CROWD01/accept.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.accept,planned,to_document
+CROWD01_ANIM_CLAP,crowd_animation,S1,садовник: clap,assets/runtime/crowd/CROWD01/clap.tres,assets/source/crowd/CROWD01_rig.tscn,,False,,CROWD01.clap,planned,to_document
+CROWD02_MODEL,crowd_model,S1,"почтальонка: отдельные голова, одежда, силуэт",assets/reference/CROWD02.png,assets/source/crowd/CROWD02.kra,,False,,,planned,to_document
+CROWD02_RIG,crowd_rig,S1,почтальонка: согласованный общий риг,assets/runtime/crowd/CROWD02/actor.tscn,assets/source/crowd/CROWD02_rig.tscn,,False,,,planned,to_document
+CROWD02_ANIM_IDLE,crowd_animation,S1,почтальонка: idle,assets/runtime/crowd/CROWD02/idle.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.idle,planned,to_document
+CROWD02_ANIM_MOVE,crowd_animation,S1,почтальонка: move,assets/runtime/crowd/CROWD02/move.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.move,planned,to_document
+CROWD02_ANIM_OBSERVE,crowd_animation,S1,почтальонка: observe,assets/runtime/crowd/CROWD02/observe.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.observe,planned,to_document
+CROWD02_ANIM_SUSPECT,crowd_animation,S1,почтальонка: suspect,assets/runtime/crowd/CROWD02/suspect.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.suspect,planned,to_document
+CROWD02_ANIM_ACCEPT,crowd_animation,S1,почтальонка: accept,assets/runtime/crowd/CROWD02/accept.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.accept,planned,to_document
+CROWD02_ANIM_CLAP,crowd_animation,S1,почтальонка: clap,assets/runtime/crowd/CROWD02/clap.tres,assets/source/crowd/CROWD02_rig.tscn,,False,,CROWD02.clap,planned,to_document
+CROWD03_MODEL,crowd_model,S2,"рыбак: отдельные голова, одежда, силуэт",assets/reference/CROWD03.png,assets/source/crowd/CROWD03.kra,,False,,,planned,to_document
+CROWD03_RIG,crowd_rig,S2,рыбак: согласованный общий риг,assets/runtime/crowd/CROWD03/actor.tscn,assets/source/crowd/CROWD03_rig.tscn,,False,,,planned,to_document
+CROWD03_ANIM_IDLE,crowd_animation,S2,рыбак: idle,assets/runtime/crowd/CROWD03/idle.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.idle,planned,to_document
+CROWD03_ANIM_MOVE,crowd_animation,S2,рыбак: move,assets/runtime/crowd/CROWD03/move.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.move,planned,to_document
+CROWD03_ANIM_OBSERVE,crowd_animation,S2,рыбак: observe,assets/runtime/crowd/CROWD03/observe.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.observe,planned,to_document
+CROWD03_ANIM_SUSPECT,crowd_animation,S2,рыбак: suspect,assets/runtime/crowd/CROWD03/suspect.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.suspect,planned,to_document
+CROWD03_ANIM_ACCEPT,crowd_animation,S2,рыбак: accept,assets/runtime/crowd/CROWD03/accept.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.accept,planned,to_document
+CROWD03_ANIM_CLAP,crowd_animation,S2,рыбак: clap,assets/runtime/crowd/CROWD03/clap.tres,assets/source/crowd/CROWD03_rig.tscn,,False,,CROWD03.clap,planned,to_document
+CROWD04_MODEL,crowd_model,S2,"библиотекарь: отдельные голова, одежда, силуэт",assets/reference/CROWD04.png,assets/source/crowd/CROWD04.kra,,False,,,planned,to_document
+CROWD04_RIG,crowd_rig,S2,библиотекарь: согласованный общий риг,assets/runtime/crowd/CROWD04/actor.tscn,assets/source/crowd/CROWD04_rig.tscn,,False,,,planned,to_document
+CROWD04_ANIM_IDLE,crowd_animation,S2,библиотекарь: idle,assets/runtime/crowd/CROWD04/idle.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.idle,planned,to_document
+CROWD04_ANIM_MOVE,crowd_animation,S2,библиотекарь: move,assets/runtime/crowd/CROWD04/move.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.move,planned,to_document
+CROWD04_ANIM_OBSERVE,crowd_animation,S2,библиотекарь: observe,assets/runtime/crowd/CROWD04/observe.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.observe,planned,to_document
+CROWD04_ANIM_SUSPECT,crowd_animation,S2,библиотекарь: suspect,assets/runtime/crowd/CROWD04/suspect.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.suspect,planned,to_document
+CROWD04_ANIM_ACCEPT,crowd_animation,S2,библиотекарь: accept,assets/runtime/crowd/CROWD04/accept.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.accept,planned,to_document
+CROWD04_ANIM_CLAP,crowd_animation,S2,библиотекарь: clap,assets/runtime/crowd/CROWD04/clap.tres,assets/source/crowd/CROWD04_rig.tscn,,False,,CROWD04.clap,planned,to_document
+CROWD05_MODEL,crowd_model,S2,"торговец: отдельные голова, одежда, силуэт",assets/reference/CROWD05.png,assets/source/crowd/CROWD05.kra,,False,,,planned,to_document
+CROWD05_RIG,crowd_rig,S2,торговец: согласованный общий риг,assets/runtime/crowd/CROWD05/actor.tscn,assets/source/crowd/CROWD05_rig.tscn,,False,,,planned,to_document
+CROWD05_ANIM_IDLE,crowd_animation,S2,торговец: idle,assets/runtime/crowd/CROWD05/idle.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.idle,planned,to_document
+CROWD05_ANIM_MOVE,crowd_animation,S2,торговец: move,assets/runtime/crowd/CROWD05/move.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.move,planned,to_document
+CROWD05_ANIM_OBSERVE,crowd_animation,S2,торговец: observe,assets/runtime/crowd/CROWD05/observe.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.observe,planned,to_document
+CROWD05_ANIM_SUSPECT,crowd_animation,S2,торговец: suspect,assets/runtime/crowd/CROWD05/suspect.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.suspect,planned,to_document
+CROWD05_ANIM_ACCEPT,crowd_animation,S2,торговец: accept,assets/runtime/crowd/CROWD05/accept.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.accept,planned,to_document
+CROWD05_ANIM_CLAP,crowd_animation,S2,торговец: clap,assets/runtime/crowd/CROWD05/clap.tres,assets/source/crowd/CROWD05_rig.tscn,,False,,CROWD05.clap,planned,to_document
+CROWD06_MODEL,crowd_model,S2,"музыкант: отдельные голова, одежда, силуэт",assets/reference/CROWD06.png,assets/source/crowd/CROWD06.kra,,False,,,planned,to_document
+CROWD06_RIG,crowd_rig,S2,музыкант: согласованный общий риг,assets/runtime/crowd/CROWD06/actor.tscn,assets/source/crowd/CROWD06_rig.tscn,,False,,,planned,to_document
+CROWD06_ANIM_IDLE,crowd_animation,S2,музыкант: idle,assets/runtime/crowd/CROWD06/idle.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.idle,planned,to_document
+CROWD06_ANIM_MOVE,crowd_animation,S2,музыкант: move,assets/runtime/crowd/CROWD06/move.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.move,planned,to_document
+CROWD06_ANIM_OBSERVE,crowd_animation,S2,музыкант: observe,assets/runtime/crowd/CROWD06/observe.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.observe,planned,to_document
+CROWD06_ANIM_SUSPECT,crowd_animation,S2,музыкант: suspect,assets/runtime/crowd/CROWD06/suspect.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.suspect,planned,to_document
+CROWD06_ANIM_ACCEPT,crowd_animation,S2,музыкант: accept,assets/runtime/crowd/CROWD06/accept.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.accept,planned,to_document
+CROWD06_ANIM_CLAP,crowd_animation,S2,музыкант: clap,assets/runtime/crowd/CROWD06/clap.tres,assets/source/crowd/CROWD06_rig.tscn,,False,,CROWD06.clap,planned,to_document
+VFX_LAW_WAVE,vfx,S1,Волна печати,assets/runtime/vfx/law_wave.tscn,assets/source/vfx/law_wave.kra,,False,,,planned,to_document
+VFX_BUOYANCY,vfx,S1,Рябь и всплытие,assets/runtime/vfx/buoyancy.tscn,assets/source/vfx/buoyancy.kra,,False,,,planned,to_document
+VFX_REVEAL,vfx,S1,Указание раскрытого механизма,assets/runtime/vfx/reveal.tscn,assets/source/vfx/reveal.kra,,False,,,planned,to_document
+VFX_WITNESS_VOTE,vfx,S1,Понятный визуальный голос,assets/runtime/vfx/witness_vote.tscn,assets/source/vfx/witness_vote.kra,,False,,,planned,to_document
+VFX_SAFE_RECOVERY,vfx,S1,Безопасный возврат,assets/runtime/vfx/safe_recovery.tscn,assets/source/vfx/safe_recovery.kra,,False,,,planned,to_document
+VFX_FREEZE,vfx,S2,Фронт замерзания,assets/runtime/vfx/freeze.tscn,assets/source/vfx/freeze.kra,,False,,,planned,to_document
+VFX_THAW,vfx,S2,Граница оттаивания,assets/runtime/vfx/thaw.tscn,assets/source/vfx/thaw.kra,,False,,,planned,to_document
+VFX_COLD_FIRE,vfx,S2,Холодное пламя,assets/runtime/vfx/cold_fire.tscn,assets/source/vfx/cold_fire.kra,,False,,,planned,to_document
+VFX_PAPER_STRONG,vfx,S2,Прочная бумага,assets/runtime/vfx/paper_strong.tscn,assets/source/vfx/paper_strong.kra,,False,,,planned,to_document
+VFX_STEAM,vfx,S2,Пар с совпадающей логической маской,assets/runtime/vfx/steam.tscn,assets/source/vfx/steam.kra,,False,,,planned,to_document
+VFX_FINAL,vfx,S2,Финальный общий акцент,assets/runtime/vfx/final.tscn,assets/source/vfx/final.kra,,False,,,planned,to_document
+KEYART_MAIN,key_art,S1,Законченная иллюстрация главного экрана,assets/runtime/ui/keyart.webp,assets/source/ui/keyart.kra,,False,,,planned,to_document

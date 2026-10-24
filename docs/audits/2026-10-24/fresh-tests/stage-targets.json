@@ -1,0 +1,6 @@
+{
+  "checks": 12,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "native_mouse_clicks": 4
+}

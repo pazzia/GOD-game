@@ -1,0 +1,18 @@
+{
+  "kind": "documentation_static_validation",
+  "status": "passed",
+  "checks": [
+    "JSON parse: 13 files",
+    "Traceability and acyclic dependency graph: 79 requirements, 79 test plans, 33 work packages",
+    "Campaign: 30 design cards and 90 distinct per-level hint entries",
+    "L01–L03/settings: used schema subset, references, observation windows and total transport load",
+    "571 planned assets, 15 music stems, 5 stingers, 90 vocalizations; 8-bar notation rhythm"
+  ],
+  "errors": [],
+  "limitations": [
+    "No Godot build or replay executed by this script.",
+    "Schema interpreter implements only keywords used in supplied schemas.",
+    "Asset rows describe required future production, not existing media.",
+    "RU/EN localization is a seed; untranslated entries remain explicit."
+  ]
+}

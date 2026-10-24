@@ -1,0 +1,77 @@
+[
+  {
+    "view": "L01-title",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-title.png"
+  },
+  {
+    "view": "L01-map",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-map.png"
+  },
+  {
+    "view": "L01-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-plan.png"
+  },
+  {
+    "view": "L01-proof",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-proof.png"
+  },
+  {
+    "view": "L01-law",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-law.png"
+  },
+  {
+    "view": "L01-resolution",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-resolution.png"
+  },
+  {
+    "view": "L01-success",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-success.png"
+  },
+  {
+    "view": "L01-settings",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L01-settings.png"
+  },
+  {
+    "view": "L02-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L02-plan.png"
+  },
+  {
+    "view": "L03-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L03-plan.png"
+  },
+  {
+    "view": "L11-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L11-plan.png"
+  },
+  {
+    "view": "L11-law",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L11-law.png"
+  },
+  {
+    "view": "L21-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L21-plan.png"
+  },
+  {
+    "view": "L21-law",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L21-law.png"
+  },
+  {
+    "view": "L30-plan",
+    "exit_code": 0,
+    "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/L30-plan.png"
+  }
+]

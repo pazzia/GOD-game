@@ -1,0 +1,8 @@
+{
+  "tool": "built-in image_gen",
+  "asset": "ENV02/floor",
+  "revision": 2,
+  "source_output": "/workspace/scratch/585c9249475c/generated_images/exec-d74fb0e9-8378-4e5b-b231-0e8751e03e38.png",
+  "reference": "source/environments/ENV02/floor_v1.png",
+  "prompt": "Use case: precise-object-edit.\nEdit target: the attached ENV02 terracotta floor layer. Keep the same full LANDSCAPE1536×1024canvas, warm apricot octagonal clay tiles with tiny cream diamond insets, broad low-contrast gouache material and existing lower paving appearance.\nChange only the paving's UPPER EXTENT: extend the painted terrace UPWARD so its high perspective boundary is at y=200pixels, about20percent of canvasheight, instead of the current boundary aroundy430. Entire bottom80percent must be continuous painted terracotta floor, full width. Paint extra matching smaller tile rows toward that higher boundary with consistent perspective. Top20percent ONLY remains genuine transparent alpha.\nPurpose: actual gameplay bowls and props stand around30–40percent height and need visible ground beneath their bases. This is one independent floor layer, not a complete scene.\nConstraints: preserve original1536×1024dimensions and lower tile style. No added object, building, landscape, plants, food, tools, water, fire, smoke, lettering, UI or watermark. No floor island centered on transparency. Genuine alpha only in the top20percent."
+}

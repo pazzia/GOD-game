@@ -1,0 +1,78 @@
+{
+  "renderer": "native Godot/Mesa/Xvfb",
+  "scope": "Eight base poses and stamp at one clip fraction; manual visual acceptance separate.",
+  "cases": [
+    {
+      "actor": "felix",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/felix-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "plum",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/plum-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "marfa",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/marfa-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "semyon",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/semyon-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "nika",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/nika-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "lada",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/lada-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "roza",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/roza-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "hugo",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/hugo-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "caramelka",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-final/caramelka-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/almost-god/level.schema.json",
+  "title": "Almost God LevelDefinition v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "content_version",
+    "status",
+    "level_id",
+    "chapter",
+    "title_key",
+    "scene_id",
+    "available_myths",
+    "initial_active_laws",
+    "max_active_laws",
+    "required_votes",
+    "entities",
+    "slots",
+    "occluders",
+    "witnesses",
+    "proofs",
+    "navigation",
+    "goals",
+    "hints",
+    "presentation",
+    "canonical_solution_ref",
+    "zones"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "content_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "layout_seed",
+        "implemented",
+        "verified"
+      ]
+    },
+    "level_id": {
+      "type": "string",
+      "pattern": "^L(0[1-9]|[12][0-9]|30)$"
+    },
+    "chapter": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "title_key": {
+      "type": "string"
+    },
+    "scene_id": {
+      "type": "string"
+    },
+    "available_myths": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "M01",
+          "M02",
+          "M03"
+        ]
+      }
+    },
+    "initial_active_laws": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 2,
+      "items": {
+        "enum": [
+          "M01",
+          "M02",
+          "M03"
+        ]
+      }
+    },
+    "max_active_laws": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "required_votes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type_id",
+          "asset_id",
+          "material",
+          "apparent_class",
+          "initial_slot",
+          "movable",
+          "mass_units",
+          "properties"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "type_id": {
+            "type": "string"
+          },
+          "asset_id": {
+            "type": "string"
+          },
+          "material": {
+            "enum": [
+              "STONE",
+              "PAPER",
+              "STEEL",
+              "WOOD",
+              "WATER",
+              "CLOTH",
+              "DECOY",
+              "ORGANIC",
+              "TERRAIN",
+              "FIRE"
+            ]
+          },
+          "apparent_class": {
+            "type": "string"
+          },
+          "initial_slot": {
+            "type": "string"
+          },
+          "movable": {
+            "type": "boolean"
+          },
+          "mass_units": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "properties": {
+            "type": "object"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "position",
+          "zone_id",
+          "mount_layer",
+          "allowed_entity_types"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "position": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "zone_id": {
+            "type": "string"
+          },
+          "mount_layer": {
+            "enum": [
+              "ground",
+              "surface",
+              "below",
+              "screen",
+              "tray"
+            ]
+          },
+          "allowed_entity_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "occluders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "owner_entity",
+          "active_slot",
+          "segment",
+          "channels"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "owner_entity": {
+            "type": "string"
+          },
+          "active_slot": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "segment": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "items": false,
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "channels": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Vision",
+                "Thermal",
+                "Navigation"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "witnesses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "character_id",
+          "initial_view_slot",
+          "views",
+          "expose_ticks",
+          "gap_tolerance_ticks"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "character_id": {
+            "type": "string"
+          },
+          "initial_view_slot": {
+            "type": "string"
+          },
+          "views": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "eye_position",
+                "from_tick",
+                "duration_ticks",
+                "clear_ticks",
+                "look_at"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "eye_position": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "from_tick": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "duration_ticks": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "clear_ticks": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "look_at": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "expose_ticks": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "gap_tolerance_ticks": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "proofs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "myth_id",
+          "result_anchors",
+          "method_anchors",
+          "predicates"
+        ],
+        "properties": {
+          "myth_id": {
+            "enum": [
+              "M01",
+              "M02",
+              "M03"
+            ]
+          },
+          "result_anchors": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "entity_id",
+                "offset"
+              ],
+              "properties": {
+                "entity_id": {
+                  "type": "string"
+                },
+                "offset": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "method_anchors": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "entity_id",
+                "offset"
+              ],
+              "properties": {
+                "entity_id": {
+                  "type": "string"
+                },
+                "offset": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "predicates": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "parameters": {
+                  "type": "object"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        }
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "routes"
+      ],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "position"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "position": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ],
+                "items": false,
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "routes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "nodes",
+              "required_support_entity",
+              "required_support_slot"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nodes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 2
+              },
+              "required_support_entity": {
+                "type": "string"
+              },
+              "required_support_slot": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "goals": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "predicate_id",
+          "parameters",
+          "required"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "state",
+              "latched"
+            ]
+          },
+          "predicate_id": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object"
+          },
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "hints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true
+    },
+    "presentation": {
+      "type": "object",
+      "required": [
+        "layout_asset_id",
+        "overlay_asset_id"
+      ],
+      "properties": {
+        "layout_asset_id": {
+          "type": "string"
+        },
+        "overlay_asset_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "canonical_solution_ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_./-]+\\.json$"
+    },
+    "zones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "REACH",
+              "WATER"
+            ]
+          },
+          "polygon": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "initial_phase": {
+            "enum": [
+              "liquid",
+              "frozen"
+            ]
+          },
+          "initial_thermal_charge": {
+            "type": "integer",
+            "minimum": -30,
+            "maximum": 30
+          }
+        }
+      }
+    }
+  }
+}

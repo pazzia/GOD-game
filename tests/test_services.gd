@@ -1,0 +1,55 @@
+extends SceneTree
+const Audio=preload("res://services/audio_service.gd")
+const Saver=preload("res://services/save_service.gd")
+var failures: Array=[]
+var count: int=0
+func _initialize() -> void:call_deferred("run")
+func run() -> void:
+	var defaults: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"))
+	var player=Audio.new();root.add_child(player);player.configure(defaults.audio)
+	check(is_equal_approx(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")),linear_to_db(.45*.45)),"music gain follows slider squared")
+	player.settings.sound_enabled=false;player.apply_settings()
+	check(not AudioServer.is_bus_mute(AudioServer.get_bus_index("Music")),"sound quick-toggle preserves music")
+	for bus in ["SFX","Ambience","Voice","UI"]:check(AudioServer.is_bus_mute(AudioServer.get_bus_index(bus)),"sound quick-toggle mutes "+bus)
+	player.settings.sound_enabled=true;player.settings.categories.Music.enabled=false;player.apply_settings()
+	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Music")),"independent music switch")
+	check(not AudioServer.is_bus_mute(AudioServer.get_bus_index("SFX")),"effects remain when music off")
+	player.settings.categories.Music.enabled=true;player.settings.categories.Music.volume=0;player.apply_settings()
+	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Music")),"zero slider is true mute")
+	player.settings.master_muted=true;player.apply_settings();player.play_music("music_menu")
+	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Master")),"mute applied before first sound")
+	check(player.music.bus=="Music","music routed to Music")
+	check(player.set_chapter_theme("ENV01"),"river conductor initializes")
+	check(player.music.stream is AudioStreamSynchronized and player.music.stream.stream_count==3,"three stems share a synchronized playback")
+	var sync: AudioStreamSynchronized=player.music.stream
+	check(is_equal_approx(sync.get_sync_stream(0).get_length(),sync.get_sync_stream(1).get_length()) and is_equal_approx(sync.get_sync_stream(1).get_length(),sync.get_sync_stream(2).get_length()),"three stems have equal loop lengths")
+	player.set_phase("PERFORMANCE")
+	for i in range(40):player._process(.1)
+	check(sync.get_sync_stream_volume(2)>-6,"show fades tension into the same timeline")
+	player.set_phase("PLAN_SHOW")
+	for i in range(40):player._process(.1)
+	check(sync.get_sync_stream_volume(2)<-80,"plan fades tension out")
+	player.play("stinger_law","Music")
+	check(player._pool[0].bus=="Music","musical stinger follows Music mute")
+	player.set_paused(true);check(player.music.stream_paused and not player.is_processing(),"background pauses stream and conductor clock")
+	player.set_paused(false);check(not player.music.stream_paused,"resume unpauses audio")
+	var save=Saver.new()
+	check(save.write_slot("test_settings",defaults),"settings atomically commit")
+	check(save.read_slot("test_settings").audio.categories.Music.volume==defaults.audio.categories.Music.volume,"volume persisted")
+	check(save.write_slot("test_recovery",{"marker":"A"}),"recovery write A")
+	check(save.write_slot("test_recovery",{"marker":"B"}),"recovery write B")
+	for iteration in range(2):
+		var corrupt=FileAccess.open("user://test_recovery.json",FileAccess.WRITE);corrupt.store_string("broken");corrupt.close()
+		check(save.read_slot("test_recovery").get("marker","")=="A","last valid backup survives corrupt primary")
+		if iteration==0:check(save.write_slot("test_recovery",{"marker":"C"}),"commit after recovery preserves backup")
+	for name in ["test_settings","test_recovery"]:
+		for suffix in [".json",".json.bak",".json.tmp"]:DirAccess.remove_absolute("user://"+name+suffix)
+	player.shutdown();sync=null;player.free()
+	await create_timer(.15).timeout
+	print("SERVICE TESTS: %d checks; %d failures" % [count,failures.size()])
+	for item in failures:printerr("FAIL: "+item)
+	var report=FileAccess.open("res://build/service-tests.json",FileAccess.WRITE);report.store_string(JSON.stringify({"checks":count,"failures":failures,"engine":Engine.get_version_info().string},"  "))
+	quit(0 if failures.is_empty() else 1)
+func check(passed: bool,message: String) -> void:
+	count+=1
+	if not passed:failures.append(message)

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "actor_id": "semyon",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        660,
+        440
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 420,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        600,
+        805
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 550,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        760,
+        805
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 550,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        660,
+        440
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 420,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        495,
+        525
+      ],
+      "pivot": [
+        0.5,
+        0.12
+      ],
+      "target_height": 390,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        815,
+        525
+      ],
+      "pivot": [
+        0.16,
+        0.12
+      ],
+      "target_height": 370,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        660,
+        470
+      ],
+      "pivot": [
+        0.4,
+        0.94
+      ],
+      "target_height": 400,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        650,
+        785
+      ],
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "target_height": 280,
+      "z_index": 8,
+      "parent": "torso",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        690,
+        700
+      ],
+      "pivot": [
+        0.04,
+        0.88
+      ],
+      "target_height": 300,
+      "z_index": 15,
+      "parent": "right_arm",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/semyon/idle.png",
+    "observe": "res://assets/art/characters/portraits/semyon/observe.png",
+    "suspect": "res://assets/art/characters/portraits/semyon/suspect.png",
+    "accept": "res://assets/art/characters/portraits/semyon/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/semyon/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/semyon/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/semyon/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/semyon/celebrate.png"
+  },
+  "angles": {},
+  "assembly_notes": "Actual assembly inspected twice. Narrow vest/head/legs calibrated; screen-left sleeve moved to front draw order so its fingers hold the left folding-rule end, while screen-right palm supports the other end. Toolbelt and short vest-back remain separate. Solid shoulder cloth overlap, no dark hollow sockets. Native motion and direction art pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.246649+00:00",
+    "evidence": "build/rig-review-final/semyon-keyposes.png",
+    "sha256": "d264b3c915fb6c75a4f444b15267358f09a46e7069c2b02cf464e842a6e02779",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

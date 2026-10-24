@@ -1,0 +1,7 @@
+{
+  "actor": "nika",
+  "kind": "expressions",
+  "prompt": "Use case: identity-preserve. Asset type: production portrait expression atlas for this EXACT referenced character: a curious young girl inventor with ginger bun, teal goggles on forehead, yellow jacket and teal overalls. Preserve identical face structure, age, hairstyle, eyewear and costume. Create a square3by3 grid of exactly nine separate head-and-top-of-shoulder portraits, each fully inside its own cell with ample empty transparent padding, same headscale and threequarterrightview. Orderlefttorighttopbottom: neutralcalm idle with relaxed eyes; attentive observation, eyeswider and eyebrowsraised, closedmouth; skepticalcuriosity with one raised eyebrow and pursedmouth; acceptingapproval with a warm closedsmilenod; surprised discovery of a revealed mechanism, eyeswide and mouthopen; concentratedproblemsolving with slightly knitbrows and determinedmouth; embarrassed amused awkwardsmile and blush; delighted celebration with big opensmile; playful knowingwink. Eight first expressions clearly different at phone size; never mean, scary, violent or exaggerated childish screaming. Original warm handpaintedgouachestorybook, papergrain, soft dimensionalshading and crisp readablefaces matchingreference. Hats/ears/haircomplete. No hands,props,bodybelowshoulders,glow,aura,coloredbg,cellborders,text,labels,digits,logos,watermark. Actualtransparentalpha between portraits.",
+  "source_original": "exec-32de00f9-0640-4858-901e-debf17b4dd09.png",
+  "reference": "nika.png"
+}

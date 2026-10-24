@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "actor_id": "marfa",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        470
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 650,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        565,
+        1000
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 330,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        835,
+        1000
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 330,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        470
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 650,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        455,
+        580
+      ],
+      "pivot": [
+        0.8,
+        0.1
+      ],
+      "target_height": 340,
+      "z_index": -5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        945,
+        580
+      ],
+      "pivot": [
+        0.2,
+        0.12
+      ],
+      "target_height": 320,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        500
+      ],
+      "pivot": [
+        0.6,
+        0.96
+      ],
+      "target_height": 420,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        730,
+        790
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "target_height": 260,
+      "z_index": 8,
+      "parent": "torso",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        1135,
+        855
+      ],
+      "pivot": [
+        0.52,
+        0.05
+      ],
+      "target_height": 430,
+      "z_index": 15,
+      "parent": "right_arm",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/marfa/idle.png",
+    "observe": "res://assets/art/characters/portraits/marfa/observe.png",
+    "suspect": "res://assets/art/characters/portraits/marfa/suspect.png",
+    "accept": "res://assets/art/characters/portraits/marfa/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/marfa/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/marfa/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/marfa/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/marfa/celebrate.png"
+  },
+  "angles": {},
+  "assembly_notes": "Actual assembly inspected twice. Head lowered to overlap collar; shoulder positions/scales calibrated; short work-jacket back, waist sash and right-hand rope remain separate. Two complete legs/boots, two arms, head/torso connected; no hollow sockets. Native animation and directional views pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.245216+00:00",
+    "evidence": "build/rig-review-final/marfa-keyposes.png",
+    "sha256": "40527a826a220992030978945106dd90d9e7b758755aa4b05767c90e6a170e21",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

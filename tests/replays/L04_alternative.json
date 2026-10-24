@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "level_id": "L04",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "float",
+        "slot_id": "stage_float"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone",
+        "slot_id": "stage_stone"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "screen_a",
+        "slot_id": "screen_left_alt"
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "clamp_1",
+        "action": "attach",
+        "target_entity_id": "screen_a"
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "clamp_2",
+        "action": "attach",
+        "target_entity_id": "screen_a"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M01"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M01",
+        "replace_law_id": null
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "float",
+        "action": "remove"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone",
+        "slot_id": "bridge"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "hero",
+        "route_id": "cross"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

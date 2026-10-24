@@ -1,0 +1,298 @@
+{
+  "apk": "AlmostGod-debug.apk",
+  "apk_sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+  "size_bytes": 118677094,
+  "source_runtime_digest_sha256": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+  "runtime_source_files": 1055,
+  "source_digest_scope": "Runtime source, resource bytes, source import settings, project config and export preset; excludes development/authoring/output folders. Staged export rewrites import/remap metadata and local signing/template paths.",
+  "compiled_script_provenance": "Source digest matches reviewed isolated before/after guarded build; bytecode files/remaps verified, not claimed to contain original source text.",
+  "manifest": {
+    "package": "com.almostgod.game",
+    "version_code": 3,
+    "version_name": "0.2.0",
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "portrait": true,
+    "permissions": [
+      "android.permission.VIBRATE"
+    ],
+    "debuggable": true
+  },
+  "resources": {
+    "raw_equal": 51,
+    "imported_resources": 498,
+    "compiled_scripts": 7,
+    "levels": 30,
+    "rig_metadata": 9,
+    "environment_metadata": 3,
+    "portraits": 81,
+    "png_textures": 238,
+    "audio_resources": 222,
+    "referenced_rig_parts": 81,
+    "referenced_environment_layers": 15
+  },
+  "cast_identity": {
+    "unique_actor_mapping": {
+      "CH01": "felix",
+      "CH02": "plum",
+      "CH03": "marfa",
+      "CH04": "semyon",
+      "CH05": "nika",
+      "CH06": "lada",
+      "CH07": "roza",
+      "CH08": "hugo",
+      "CH09": "caramelka",
+      "CROWD01": "crowd_gardener",
+      "CROWD02": "crowd_postwoman",
+      "CROWD03": "crowd_fisherman",
+      "CROWD04": "crowd_librarian",
+      "CROWD05": "crowd_merchant",
+      "CROWD06": "crowd_musician"
+    },
+    "level_cast": {
+      "L01": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "L02": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD02"
+      ],
+      "L03": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CH04"
+      ],
+      "L04": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "L05": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD03"
+      ],
+      "L06": [
+        "CH01",
+        "CH09",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "L07": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "L08": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "L09": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CH04"
+      ],
+      "L10": [
+        "CH01",
+        "CH09",
+        "CH02",
+        "CH03",
+        "CH05",
+        "CROWD06"
+      ],
+      "L11": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L12": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD05"
+      ],
+      "L13": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L14": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CH04"
+      ],
+      "L15": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L16": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L17": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L18": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L19": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L20": [
+        "CH01",
+        "CH02",
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "L21": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L22": [
+        "CH01",
+        "CH09",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L23": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L24": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD04"
+      ],
+      "L25": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CH07"
+      ],
+      "L26": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L27": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L28": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CH07"
+      ],
+      "L29": [
+        "CH01",
+        "CH02",
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "L30": [
+        "CH01",
+        "CH02",
+        "CH03",
+        "CH06",
+        "CH07"
+      ]
+    },
+    "duplicate_world_character_ids": [],
+    "scope": "Packed identities and rig metadata only; no new art quality or full-cycle animation claim."
+  },
+  "native_libraries": [
+    {
+      "name": "lib/arm64-v8a/libc++_shared.so",
+      "elf_load_alignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "compressed": true,
+      "installation_16k_compatible": true
+    },
+    {
+      "name": "lib/arm64-v8a/libgodot_android.so",
+      "elf_load_alignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "compressed": true,
+      "installation_16k_compatible": true
+    }
+  ],
+  "signature_verified_independently": true,
+  "certificate_sha256": "c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893",
+  "failures": [],
+  "checks": 710,
+  "physical_device_tested": false,
+  "signing": "local debug certificate; not store/release signing"
+}

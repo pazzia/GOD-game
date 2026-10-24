@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "packages_verified": 2,
+  "output": [
+    "Verifies",
+    "Verified using v1 scheme (JAR signing): false",
+    "Verified using v2 scheme (APK Signature Scheme v2): true",
+    "Verified using v3 scheme (APK Signature Scheme v3): true",
+    "Verified using v4 scheme (APK Signature Scheme v4): false",
+    "Signer #1 certificate SHA-256 digest: c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893"
+  ]
+}

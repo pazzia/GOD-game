@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "actor_id": "lada",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        570,
+        1110
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 230,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        825,
+        1110
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 230,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        600
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 650,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        470,
+        670
+      ],
+      "pivot": [
+        0.88,
+        0.12
+      ],
+      "target_height": 270,
+      "z_index": -5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        590
+      ],
+      "pivot": [
+        0.5,
+        0.05
+      ],
+      "target_height": 460,
+      "z_index": 3,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        930,
+        670
+      ],
+      "pivot": [
+        0.16,
+        0.18
+      ],
+      "target_height": 300,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        600
+      ],
+      "pivot": [
+        0.53,
+        0.96
+      ],
+      "target_height": 480,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        700,
+        630
+      ],
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "target_height": 150,
+      "z_index": 15,
+      "parent": "torso",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        1190,
+        735
+      ],
+      "pivot": [
+        0.73,
+        0.75
+      ],
+      "target_height": 400,
+      "z_index": 15,
+      "parent": "right_arm",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/lada/idle.png",
+    "observe": "res://assets/art/characters/portraits/lada/observe.png",
+    "suspect": "res://assets/art/characters/portraits/lada/suspect.png",
+    "accept": "res://assets/art/characters/portraits/lada/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/lada/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/lada/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/lada/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/lada/celebrate.png"
+  },
+  "angles": {},
+  "notes": [
+    "cape is her floral shawl, drawn over the bodice with an open center.",
+    "accessory is the red neck bow, parented to torso.",
+    "prop is her wooden spoon, parented to the raised screen-right hand.",
+    "Skirt and apron belong to torso. Legs are deliberately short under the skirt."
+  ],
+  "assembly_notes": "Actual build/lada-rig-assembly.png inspected after scale/pivot calibration: short legs overlap under apron/skirt; neck and two shoulder joints are filled, shawl remains separate, spoon aligns to raised screen-right holding hand. Native8state and directional review pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.249277+00:00",
+    "evidence": "build/rig-review-final/lada-keyposes.png",
+    "sha256": "c7eb11cf47de9c6a2c3540cf324b0c47047a39680c374195f130d28170b9ad43",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

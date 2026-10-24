@@ -1,0 +1,7 @@
+{
+  "actual_art_acceptance": false,
+  "checks": 9,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "fixtures": "same intentional whole-character texture reused per metadata part"
+}

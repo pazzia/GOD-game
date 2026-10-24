@@ -1,0 +1,14 @@
+{
+  "checks": 8,
+  "engine": "4.7.2-stable (official)",
+  "events": 42,
+  "failures": [],
+  "fixture_mouse_from_touch_enabled": true,
+  "hardware_touch": false,
+  "only_fixture_touch_capability_enabled": true,
+  "original_emulate_mouse_from_touch": true,
+  "original_emulate_touch_from_mouse": false,
+  "physical_device_test": false,
+  "production_code_modified": false,
+  "touch_capability_off_then_on": true
+}

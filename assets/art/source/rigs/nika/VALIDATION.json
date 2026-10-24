@@ -1,0 +1,128 @@
+{
+  "actor_id": "nika",
+  "verified_at_utc": "2026-10-23T20:58:33.851986+00:00",
+  "status": "static_assembly_verified",
+  "runtime_animation_verified": false,
+  "source": "source/rigs/nika/parts_v2.png",
+  "preview": "build/nika-rig-assembly.png",
+  "preview_sha256": "ee4b60b468bce1f09b61138a595af20395584889bf625e561598bf855bbf4fd7",
+  "parts": [
+    {
+      "file": "accessory.png",
+      "size": [
+        195,
+        258
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a8019e6b3ceac801fd32cb918e190eecd4080aa00f6d7258419aec1b48f93db3",
+      "png_load": "PASS"
+    },
+    {
+      "file": "cape.png",
+      "size": [
+        347,
+        390
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "306f5734750f8323ba8581d5e4733382264471731ce4b0d90bed2370cd094fcf",
+      "png_load": "PASS"
+    },
+    {
+      "file": "head.png",
+      "size": [
+        464,
+        414
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "e9459166bb88e0165b7ca5b5dbb277ce3d35ad0cc34ef655a0fca1621f4d65b7",
+      "png_load": "PASS"
+    },
+    {
+      "file": "left_arm.png",
+      "size": [
+        265,
+        335
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "ccf8453e6e6dea042670142d5fee1dc5cf7f24145cd1f1bf54d4b7392e8cc853",
+      "png_load": "PASS"
+    },
+    {
+      "file": "left_leg.png",
+      "size": [
+        223,
+        394
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "c4ee491d1c8d449ddf3fe5fc65a6a771bb46d61d41bcd9aacf0321b111849330",
+      "png_load": "PASS"
+    },
+    {
+      "file": "prop.png",
+      "size": [
+        335,
+        337
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "68b880f85c19b43193a5b3c5cd8761ed4010f08bc094f1c510a22b7494bb7d84",
+      "png_load": "PASS"
+    },
+    {
+      "file": "right_arm.png",
+      "size": [
+        266,
+        326
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "c8d98622f743348395396302fbb9d86eb11836b2270bb26cbdba47bee9a1dbd2",
+      "png_load": "PASS"
+    },
+    {
+      "file": "right_leg.png",
+      "size": [
+        287,
+        394
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "8c83fae834c86a910a1d9b90023aac285194403ee9c35db8388ea7a92904bcce",
+      "png_load": "PASS"
+    },
+    {
+      "file": "torso.png",
+      "size": [
+        323,
+        354
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "f0c8c2be0d8f5bab5dc786d513f394ce723655d421cf0cac96822f94d5205d6c",
+      "png_load": "PASS"
+    }
+  ]
+}

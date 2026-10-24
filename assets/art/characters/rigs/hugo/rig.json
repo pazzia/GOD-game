@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "actor_id": "hugo",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        435
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 850,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        590,
+        225
+      ],
+      "pivot": [
+        0.92,
+        0.15
+      ],
+      "target_height": 550,
+      "z_index": -25,
+      "parent": "head",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        630,
+        810
+      ],
+      "pivot": [
+        0.6,
+        0.04
+      ],
+      "target_height": 530,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        800,
+        810
+      ],
+      "pivot": [
+        0.4,
+        0.04
+      ],
+      "target_height": 530,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        430
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 500,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        550,
+        540
+      ],
+      "pivot": [
+        0.5,
+        0.1
+      ],
+      "target_height": 340,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        850,
+        540
+      ],
+      "pivot": [
+        0.12,
+        0.72
+      ],
+      "target_height": 320,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        480
+      ],
+      "pivot": [
+        0.51,
+        0.96
+      ],
+      "target_height": 400,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        700,
+        505
+      ],
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "target_height": 150,
+      "z_index": 15,
+      "parent": "torso",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/hugo/idle.png",
+    "observe": "res://assets/art/characters/portraits/hugo/observe.png",
+    "suspect": "res://assets/art/characters/portraits/hugo/suspect.png",
+    "accept": "res://assets/art/characters/portraits/hugo/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/hugo/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/hugo/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/hugo/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/hugo/celebrate.png"
+  },
+  "angles": {},
+  "notes": [
+    "accessory is his long golden hat ribbon, parented to head.",
+    "prop is a clothing part: the red neck bow, parented to torso.",
+    "Hugo has presenting hands; no wand or invented handheld prop.",
+    "Cape and hat ribbon have independent cloth pivots."
+  ],
+  "assembly_notes": "Actual build/hugo-rig-assembly.png inspected after joint/scale calibration: head/white collar and both shoulders are connected; boot legs overlap under waistcoat; golden ribbon roots under hat and follows head; cape and red neck bow remain independent. No invented held prop. Native8state/directional review pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.253417+00:00",
+    "evidence": "build/rig-review-final/hugo-keyposes.png",
+    "sha256": "f1f70119c5c10b9808b341fd3f67bc70cb3ac0ebb1b8534956bca4860cabf201",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

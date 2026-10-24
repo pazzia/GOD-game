@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "locale": "ru",
+  "audio": {
+    "master_volume": 0.8,
+    "master_muted": false,
+    "sound_enabled": true,
+    "categories": {
+      "Music": {
+        "volume": 0.45,
+        "enabled": true
+      },
+      "SFX": {
+        "volume": 0.75,
+        "enabled": true
+      },
+      "Ambience": {
+        "volume": 0.5,
+        "enabled": true
+      },
+      "Voice": {
+        "volume": 0.65,
+        "enabled": true
+      },
+      "UI": {
+        "volume": 0.65,
+        "enabled": true
+      }
+    }
+  },
+  "accessibility": {
+    "text_scale": 1,
+    "reduced_motion": false,
+    "camera_shake": true,
+    "subtitles": true,
+    "haptics": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "renderer": "native Godot/Mesa/Xvfb",
+  "cases": [
+    {
+      "view": "L01-settings-ru-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final-extra/L01-settings-ru-140-360x640.png",
+      "exists": true,
+      "errors": []
+    }
+  ]
+}

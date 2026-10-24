@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "level_id": "L15",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "thermal_screen",
+        "slot_id": "thermal_block"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "heated_stone",
+        "slot_id": "warm_bowl"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

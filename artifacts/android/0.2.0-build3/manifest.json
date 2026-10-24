@@ -1,0 +1,153 @@
+{
+  "filename": "Almost-God-0.2.0-debug.apk",
+  "size": 118677094,
+  "sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+  "kind": "Existing signed debug APK archived without building or deploying",
+  "parts": [
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part001",
+      "size": 4194304,
+      "sha256": "79de215cdd7f0a198015f8eaebf9a3224b44431543dff07d1d08680187fff5e7"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part002",
+      "size": 4194304,
+      "sha256": "a1620d15c379e47f70306a3ea58abb310d690b5aeb3242dfc23209f174f54093"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part003",
+      "size": 4194304,
+      "sha256": "cb9fec17c90ce32fe5b1a0ca14205bdc55dc7b0640653d87ddb1a50d9b2e18e8"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part004",
+      "size": 4194304,
+      "sha256": "503dc9d5bf9d22ad1d1dda31fb71a659fd1c9e12c29450f31b16021ed4dd4670"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part005",
+      "size": 4194304,
+      "sha256": "29724f5ed85a6bdf5b18e6dac13e3c03eaeedfec81f2b0b10a3d5fa4d0bf2929"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part006",
+      "size": 4194304,
+      "sha256": "e937996dc8392dc7b66d692ea389e22587bfeeebfa016a0bb7daea60a4f412d9"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part007",
+      "size": 4194304,
+      "sha256": "bea3cba9eb812e0e92c4cdbeac9f916451173be5fdbd01d28c1d14135f980b2b"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part008",
+      "size": 4194304,
+      "sha256": "3e75702b3e1c50491ac25ece3ddecbce107339d67dd89e54044621030f502c84"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part009",
+      "size": 4194304,
+      "sha256": "1e71c5e2d9a159bc5a31bc6c1dd9e8602ba0bdeb081599f260df52eb70884b7a"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part010",
+      "size": 4194304,
+      "sha256": "532c42f33bc2932f8adf43d69877eb6ac0b67b27f319dcc868200fbbc9e269ca"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part011",
+      "size": 4194304,
+      "sha256": "ff677483fe36ba5392537a5037d1ec55d64c578d02dce40f359ce0cbb605e831"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part012",
+      "size": 4194304,
+      "sha256": "908041d3a2821b5533912e7bfa59847588bbb56c95753453cb01e519172e4cf3"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part013",
+      "size": 4194304,
+      "sha256": "781fffccacb4daa2346e423cf2a9ed16d1a3707e015bb66ecb22d730fd29e86d"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part014",
+      "size": 4194304,
+      "sha256": "2194c9ee02227cdeb9f5208c9a280d65c603ae642de43bd7d56753f874453da3"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part015",
+      "size": 4194304,
+      "sha256": "976db693d8a2685515ccc4130d7916f33c31b892248812385589d21b9d710c2e"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part016",
+      "size": 4194304,
+      "sha256": "87712fc0be8bae4c174b08cebb826a0e3df546c46dc28d181eebc4a5633628e8"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part017",
+      "size": 4194304,
+      "sha256": "6e2a10515bf9aabfd6542c1a65742504fefb39642e64fee3cc02a549e36ad9a4"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part018",
+      "size": 4194304,
+      "sha256": "97deb0d68248b4cbeb38acbbab8be8b07a31a25bca0b0710037e16222055ab66"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part019",
+      "size": 4194304,
+      "sha256": "bf49d09cbb1eba2187de848957055fe40c384a11164a842a0fc3ef53e0e807e2"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part020",
+      "size": 4194304,
+      "sha256": "0f6ed85fb31b3fe86b3cf36deea9ea77d5a1fa55135bfd99346488d2dfd4074b"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part021",
+      "size": 4194304,
+      "sha256": "646e2870700e8c72bda8d953e3ac1b9826cfd8c617316d21473e6255eee21946"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part022",
+      "size": 4194304,
+      "sha256": "4832f671cc3cb551a818179a316aa9676a8b13842c7b5993ac284a817922c760"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part023",
+      "size": 4194304,
+      "sha256": "e8409b8ae0581ac58ae5e02a3292b0f00df7bf35430a109258e903475031e559"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part024",
+      "size": 4194304,
+      "sha256": "2da17298a91b6a0d90d14d8d96beaa2dac8c0150beafa8345ed249c8235184b3"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part025",
+      "size": 4194304,
+      "sha256": "4cfd1be58b3335980cba9b15d8990a246b77f0020f1a42f71e28699fb59235d0"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part026",
+      "size": 4194304,
+      "sha256": "2716fa43c8069d89db57ebf2514d83285a10436c85a61476174b7a777151523f"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part027",
+      "size": 4194304,
+      "sha256": "700e2396cfcef7cde050fc36cb2facf9b1b9cceb9d58f182042570aeb1fc71cc"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part028",
+      "size": 4194304,
+      "sha256": "e0fc0b5ed24669f1a7d8cb948ed728ccce7f164cb57ea15e6d2617204f4109ec"
+    },
+    {
+      "file": "Almost-God-0.2.0-debug.apk.part029",
+      "size": 1236582,
+      "sha256": "d00878f1d848cc2491dec7055ea3474f8357003602d0dc267ad47dfd8b371c38"
+    }
+  ]
+}

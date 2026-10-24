@@ -1,0 +1,8 @@
+{
+  "chapter_fade_seconds": 1.2,
+  "checks": 21,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "stem_fade_seconds": 0.45,
+  "timing_checks": "simulated conductor clock plus actual AudioStream players; listening not performed"
+}

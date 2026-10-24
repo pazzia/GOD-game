@@ -1,0 +1,236 @@
+{
+  "written_utc": "2026-10-23T21:21:25.535807+00:00",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "core_unchanged_in_this_batch": true,
+  "runtime_technical_freeze": {
+    "game": "1f501409fff228162988fa988fbc9a78e1e1820757e6ffe537ebc16ad3c77e57",
+    "stage": "1b49e3eeff1309472f566d2cc3391ff0b76833d042bd64d11eecac1b82af180a",
+    "audio_terminal": "e84b9fd57b1b73f2b57ef570fe4471821af02893fcb2f95691071572850017eb"
+  },
+  "all_art_frozen": true,
+  "source_sha256": {
+    "core/simulation_kernel.gd": "38bf86532ae28c6838e7892d678df5397e6176e397c52412f9282ed6b8d67c1d",
+    "core/content_validator.gd": "edab11b408defa8eaf51e84e2fe81ce560846860a176faf2f01ffef0153fa897",
+    "services/save_service.gd": "d54668933f01a0a64cb0e1017dc8f22586def58dc3f8a7dd9dcec44b156800d7",
+    "services/audio_service.gd": "e84b9fd57b1b73f2b57ef570fe4471821af02893fcb2f95691071572850017eb",
+    "presentation/game.gd": "1f501409fff228162988fa988fbc9a78e1e1820757e6ffe537ebc16ad3c77e57",
+    "presentation/stage_view.gd": "1b49e3eeff1309472f566d2cc3391ff0b76833d042bd64d11eecac1b82af180a",
+    "presentation/character_puppet.gd": "40403c3483c873d8ea530fae0d2eda5f6a768f87cd1fe586ac26709cd190ccb2",
+    "tools/workbench_model.gd": "45a5d825f2dfb3175fa38671aaaa0a127cf48e5949c24a9bcbec278b48950ba5",
+    "tools/workbench_overlay.gd": "53f4363e5858e11c9a6b7e7cb1ec5804045e4d3aafa562085b86e691a7d0a3d1",
+    "tools/level_workbench.gd": "cf3ce06e8b907189af99cdeeb21c4413f8d4b96ba3b551f325d2cf21283cc2dd",
+    "tools/level_workbench.tscn": "7e360eeeb76138e698369da052ad85052af1aeadd2102065b29edf12d1880afd",
+    "export_presets.cfg": "745dc9afae300386840dcfac60fac9ac00fd715a6011431455000c7e3624a026"
+  },
+  "suites": {
+    "tests/reports/campaign.json": {
+      "checks": 732,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "restored/core; Manager aggregate owns final rerun"
+    },
+    "tests/reports/kernel.json": {
+      "checks": 31,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "restored/core; Manager aggregate owns final rerun"
+    },
+    "tests/reports/s2-regressions.json": {
+      "checks": 37,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "restored/core; Manager aggregate owns final rerun"
+    },
+    "tests/reports/validation.json": {
+      "checks": 26,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "restored/core; Manager aggregate owns final rerun"
+    },
+    "build/service-tests.json": {
+      "checks": 26,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "fresh independent after terminal audio patch"
+    },
+    "tests/reports/service-boundaries.json": {
+      "checks": 28,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "fresh independent after terminal audio patch"
+    },
+    "tests/reports/save-recovery-edges.json": {
+      "checks": 11,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "prior independent; save source unchanged"
+    },
+    "tests/reports/audio-conductor.json": {
+      "checks": 21,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "fresh independent after terminal audio patch"
+    },
+    "tests/reports/audio-transport-edges.json": {
+      "checks": 13,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "fresh independent after terminal audio patch"
+    },
+    "tests/reports/audio-shutdown-edges.json": {
+      "checks": 8,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "fresh independent terminal keepalive"
+    },
+    "tests/reports/audio-shutdown.json": {
+      "checks": 5,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "owner terminal keepalive"
+    },
+    "tests/reports/workbench.json": {
+      "checks": 72,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "prior independent72; Manager aggregate owns final rerun"
+    },
+    "tests/reports/puppet.json": {
+      "checks": 43,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "owner actual part-rig load; art acceptance separate"
+    },
+    "tests/reports/puppet-edges.json": {
+      "checks": 9,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "prior independent API; art metadata changed separately"
+    },
+    "tests/reports/puppet-native.json": {
+      "checks": 5,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "prior native grouped-draw pixels; Manager aggregate owns final rerun"
+    },
+    "tests/reports/stage-boundaries.json": {
+      "checks": 28,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Independent run on prior Stage lifecycle; Manager final aggregate reran on final Stage."
+    },
+    "tests/reports/touch-capability.json": {
+      "checks": 8,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Independent actual native rerun after isolated hit patch; subsequently Manager final aggregate."
+    },
+    "tests/reports/complex-ui-journeys.json": {
+      "checks": 59,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Independent full native initial-to-victory run before isolated hit patch; Manager final aggregate reran on final source."
+    },
+    "tests/reports/layout.json": {
+      "checks": 5436,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "owner measured layout"
+    },
+    "tests/reports/ui-pointer.json": {
+      "checks": 31,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Independent actual native rerun after isolated hit patch; subsequently Manager final aggregate."
+    },
+    "tests/reports/presentation.json": {
+      "checks": 30,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "owner confirmed-tick interpolation/rig binding"
+    },
+    "tests/reports/stage-input-edges.json": {
+      "checks": 7,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Latest Manager final aggregate; stage-input suite also independently executed after isolated hit patch."
+    },
+    "tests/reports/stage-targets.json": {
+      "checks": 12,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Latest Manager final aggregate; owner-authored suite."
+    },
+    "tests/reports/client-loading.json": {
+      "checks": 12,
+      "failures": [],
+      "engine": "4.7.2-stable (official)",
+      "evidence": "Latest Manager final aggregate; owner-authored suite."
+    }
+  },
+  "native_ui_victory_captures": [
+    "build/complex-ui-L11-success.png",
+    "build/complex-ui-L21-success.png",
+    "build/complex-ui-L30-success.png"
+  ],
+  "limits": [
+    "Evidence labels distinguish independent runs, owner tests and Manager final aggregate.",
+    "All-art/source/data freeze was announced by Manager; technical resource/identity checks do not prove artistic quality or complete animation-cycle review.",
+    "UI journeys use real native pointer Controls from authored tick0, accelerated8x; offscreen navigation uses ensure_control_visible.",
+    "Touch experiments use real ScreenTouch/ScreenDrag dispatch with fixture-only touch capability, not physical hardware.",
+    "Audio1200s is a mock conductor clock, not20min listening; keepalive uses actual short SceneTree intervals.",
+    "Final APK ZIP/binary XML/signature bytes and runtime digest independently verified; compiled GDSC provenance uses guarded staged build, not text extraction.",
+    "APK is local debug signed. No physical-device install/FPS/audio interruptions, store signing, S3/full release or full artistic acceptance is claimed."
+  ],
+  "all_art_freeze_authority": "Manager announced final source/art/data freeze; this report adds technical resource/identity verification, not subjective artistic acceptance.",
+  "manager_final_aggregate": {
+    "report": "tests/reports/project-verification.json",
+    "status": "passed",
+    "runtime_digest_sha256": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+    "files_changed_during_verification": [],
+    "commands": 25,
+    "all_command_exits_zero": true,
+    "native_puppet_pixel_rerun": "Manager separately confirmed5/0 after final freeze."
+  },
+  "final_apk_independent": {
+    "apk_sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+    "size_bytes": 118677094,
+    "source_runtime_digest_sha256": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+    "runtime_source_files": 1055,
+    "checks": 710,
+    "failures": [],
+    "signature_verified_independently": true,
+    "certificate_sha256": "c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893",
+    "manifest": {
+      "package": "com.almostgod.game",
+      "version_code": 3,
+      "version_name": "0.2.0",
+      "min_sdk": 24,
+      "target_sdk": 36,
+      "portrait": true,
+      "permissions": [
+        "android.permission.VIBRATE"
+      ],
+      "debuggable": true
+    },
+    "resources": {
+      "raw_equal": 51,
+      "imported_resources": 498,
+      "compiled_scripts": 7,
+      "levels": 30,
+      "rig_metadata": 9,
+      "environment_metadata": 3,
+      "portraits": 81,
+      "png_textures": 238,
+      "audio_resources": 222,
+      "referenced_rig_parts": 81,
+      "referenced_environment_layers": 15
+    },
+    "physical_device_tested": false,
+    "signing": "local debug certificate; not store/release signing",
+    "report": "tests/reports/apk-independent.json",
+    "verifier": "tests/review_final_apk.py",
+    "verifier_sha256": "0904e8202815e4930339c6fb4b3b077a555d67c28df96ec7eef0c878edbae835",
+    "cast_identity": "All30 packed levels have unique world IDs including hero/companion/animals/witnesses;9rig actor_ids match paths; author overrides applied;6crowd identities appear."
+  }
+}

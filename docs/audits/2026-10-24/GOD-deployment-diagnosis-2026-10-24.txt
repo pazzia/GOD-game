@@ -1,0 +1,120 @@
+GOD / «Почти бог»: диагностика незавершённой передачи в GitHub
+Дата проверки: 24 октября 2026, Europe/Moscow.
+Репозиторий: https://github.com/pazzia/GOD-game
+
+ВЫВОД
+Локальная Android debug-сборка 0.2.0, build 3 была завершена и сохранена.
+Не завершена передача исходников и APK в GitHub. Документы подтверждают
+повторные сбросы временной рабочей среды, потерю файлов/исправлений и
+восстановление уже сделанной работы. Точный технический триггер сбросов
+или остановок сеанса не установлен.
+
+ПРОВЕРЕННЫЕ МАТЕРИАЛЫ
+1. Almost-God-Project.zip: версия 10, 330 065 843 байта, 1887 записей,
+   20 Markdown-файлов.
+2. Almost-God-Implementation-Spec.zip: 223 088 байт, 31 запись,
+   10 Markdown-файлов.
+Всего 30 Markdown-файлов, 28 с уникальным содержимым: полное ТЗ и набор
+сценариев приёмки повторяются побайтово. Дополнительно изучены отдельный
+статус проекта и записи реестра идей. Проверены 219 журналов из архива.
+
+ПОЧЕМУ РАБОТА ЗАТЯНУЛАСЬ
+- docs/ARCHITECTURE.md, строка 3: документ описывает восстановление после
+  потери scratch-среды. Старые 355 PASS относятся к утраченным файлам.
+- docs/TECHNICAL_REVIEW.md, строка 3: после сброса среды ядро, валидатор
+  и тесты созданы заново. Строка 29 фиксирует второе восстановление;
+  строка 53 — восстановление v5.
+- docs/DESIGN_REVIEW.md, строки 6–11: потеряны прежние снимки, описан
+  новый прогон перед вторым сбросом. Строка 33 прямо говорит об утрате
+  исправлений отображения воды после сброса.
+- docs/TEAM.md, строка 16: при сбросе код восстанавливается из архива,
+  потерянные изменения воспроизводятся и заново проверяются.
+Это документально объясняет повторное выполнение работы. Вывод о влиянии
+сбросов на задержку основан на этих записях, а не на системном crash dump.
+
+ЧТО СО СБОРКОЙ APK
+Файл Almost-God-0.2.0-debug.apk физически существует, размер 118 677 094
+байта. Заново вычисленный SHA-256:
+4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451
+Он совпадает с docs/PROJECT_STATE.md, build/AlmostGod-debug.build.json
+и tests/reports/apk-independent.json.
+Сохранённый build-отчёт указывает elapsed_seconds=40.22, Godot 4.7.2
+и signature_verified=true. Независимый архивный отчёт: 710 проверок,
+пустой список failures. Общий прогон: status=passed, 25 наборов,
+files_changed_during_verification=[]. Эти тесты в текущем расследовании
+не запускались повторно; новый независимый факт — совпадение хеша APK.
+Физическая установка на Android в архивах не подтверждена.
+
+В старом android-export.log есть сообщение об отсутствующей иконке,
+но этот экспорт дошёл до Signed и DONE. В финальном журнале есть
+предупреждение о несовпадении Android build-tools с Target SDK и выборе
+31.0.2. Наличие сохранённого пакета и итоговых отчётов не позволяет
+считать эти сообщения доказанной причиной остановки сессии.
+
+ЧТО СОСТОЯЛОСЬ В GITHUB
+При проверке main содержит только .gitignore, head:
+a6a7a4e99b6dfb0a1a01d75666c45b927196b19b
+GitHub Actions: 0 запусков. В исходном архиве нет .github/workflows.
+Следовательно, на GitHub не было запущенной сборки, которая могла бы
+зависнуть: исходники ещё не были переданы. Конкретной ошибки git push
+в исследованных журналах нет.
+
+ЧЕГО УСТАНОВИТЬ НЕ УДАЛОСЬ
+В 219 журналах не найдены сообщения об OOM/SIGKILL, инфраструктурном
+тайм-ауте, отказе публикации, remote fatal/GH001 или отклонении доступа,
+объясняющие остановку сеанса. Доступная история также не содержит
+диагностики системы ChatGPT. Нельзя достоверно назвать причиной лимит
+токенов, память, сеть, разрешения, размер файла или сбой платформы.
+Сброс среды документирован; его техническая первопричина неизвестна.
+
+ОТКРЫТЫЙ БЭКЛОГ РАССЛЕДОВАНИЯ
+DEPLOY-01, P0, открыто: исходники и APK GOD не переданы в GitHub.
+Воспроизведение: main содержит только .gitignore; Actions пуст.
+Последствие: нет удалённой сборки и доступного APK в Releases.
+Причина отсрочки: по текущему указанию сначала выполнена диагностика.
+Следующий шаг: перенести распакованные исходники, настроить Godot CI,
+получить успешный запуск и опубликовать APK с проверкой контрольной суммы.
+
+SESSION-01, P1, открыто: повторные потери среды без системной причины.
+Последствие: повторное восстановление и регрессии ранее исправленных мест.
+Причина отсрочки: отсутствуют системные журналы сеанса.
+Следующий шаг: при повторении сохранить текст ошибки/идентификатор сбоя;
+фиксировать исходники и состояние работы удалённо после завершённых шагов.
+
+ПОЛНЫЙ СПИСОК MARKDOWN-ФАЙЛОВ
+
+Almost-God-Project.zip
+- almost-god/README.md
+- almost-god/assets/art/SOURCES.md
+- almost-god/assets/art/source/rigs/marfa/REVIEW.md
+- almost-god/assets/art/source/rigs/nika/PROVENANCE.md
+- almost-god/assets/art/source/rigs/roza/PROVENANCE.md
+- almost-god/assets/art/source/rigs/semyon/REVIEW.md
+- almost-god/docs/ARCHITECTURE.md
+- almost-god/docs/ASSET_NOTICES.md
+- almost-god/docs/BACKLOG.md
+- almost-god/docs/CAMPAIGN_GUIDE.md
+- almost-god/docs/DECISIONS.md
+- almost-god/docs/DESIGN.md
+- almost-god/docs/DESIGN_REVIEW.md
+- almost-god/docs/LEVEL_WORKBENCH.md
+- almost-god/docs/PROJECT_STATE.md
+- almost-god/docs/RIG_CONTRACT.md
+- almost-god/docs/TEAM.md
+- almost-god/docs/TECHNICAL_REVIEW.md
+- almost-god/docs/TECHNICAL_SPECIFICATION.md
+- almost-god/docs/spec/07_ACCEPTANCE_SCENARIOS.md
+
+Almost-God-Implementation-Spec.zip
+- Almost-God-Technical-Specification.md
+- almost-god-spec/01_PRODUCT_AND_RULES.md
+- almost-god-spec/02_CHARACTERS_ART_UI.md
+- almost-god-spec/03_LEVEL_DESIGN.md
+- almost-god-spec/04_AUDIO.md
+- almost-god-spec/05_ENGINE_DATA_RELEASE.md
+- almost-god-spec/06_QA_AND_HANDOFF.md
+- almost-god-spec/07_ACCEPTANCE_SCENARIOS.md
+- almost-god-spec/README.md
+- almost-god-spec/START_CHATGPT.md
+
+Повторяющиеся файлы: docs/TECHNICAL_SPECIFICATION.md и Almost-God-Technical-Specification.md; docs/spec/07_ACCEPTANCE_SCENARIOS.md и almost-god-spec/07_ACCEPTANCE_SCENARIOS.md.

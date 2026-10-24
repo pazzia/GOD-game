@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "level_id": "L05",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "mooring",
+        "action": "attach",
+        "target_entity_id": "bollard"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "cargo",
+        "route_id": "unload"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

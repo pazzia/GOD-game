@@ -1,0 +1,182 @@
+{
+  "actor_id": "roza",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        445
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 850,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        620,
+        860
+      ],
+      "pivot": [
+        0.4,
+        0.04
+      ],
+      "target_height": 480,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        790,
+        860
+      ],
+      "pivot": [
+        0.58,
+        0.04
+      ],
+      "target_height": 480,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        430
+      ],
+      "pivot": [
+        0.5,
+        0.03
+      ],
+      "target_height": 550,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        535,
+        495
+      ],
+      "pivot": [
+        0.85,
+        0.12
+      ],
+      "target_height": 450,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        842,
+        495
+      ],
+      "pivot": [
+        0.1,
+        0.12
+      ],
+      "target_height": 400,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        440
+      ],
+      "pivot": [
+        0.58,
+        0.96
+      ],
+      "target_height": 400,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        1235,
+        625
+      ],
+      "pivot": [
+        0.5,
+        0.65
+      ],
+      "target_height": 240,
+      "z_index": 15,
+      "parent": "right_arm",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        430,
+        780
+      ],
+      "pivot": [
+        0.52,
+        0.6
+      ],
+      "target_height": 390,
+      "z_index": 4,
+      "parent": "left_arm",
+      "role": "prop"
+    }
+  ],
+  "schema_version": 1,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "assembly_notes": "Actual static assembly inspected after shoulder-pivot and stamp-grip calibration. Gray bob/glasses, cream cravat, olive waistcoat and long purple coat match reference. Folder follows screen-left arm, stamp stem follows screen-right hand. Closed cloth joints and knee overlaps are coherent. Native AnimationPlayer key poses and full directional animation remain unverified.",
+  "directional_animation_complete": false,
+  "angles": {},
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/roza/idle.png",
+    "observe": "res://assets/art/characters/portraits/roza/observe.png",
+    "suspect": "res://assets/art/characters/portraits/roza/suspect.png",
+    "accept": "res://assets/art/characters/portraits/roza/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/roza/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/roza/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/roza/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/roza/celebrate.png"
+  },
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.251365+00:00",
+    "evidence": "build/rig-review-final/roza-keyposes.png",
+    "sha256": "353d6b50869f80a980a87c8af80fb58c75374cbfb125db6f5e09aae5f46552ea",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  }
+}

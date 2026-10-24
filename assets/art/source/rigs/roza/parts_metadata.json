@@ -1,0 +1,173 @@
+{
+  "head": {
+    "source": "parts.png",
+    "authored_crop": [
+      0,
+      0,
+      500,
+      400
+    ],
+    "alpha_trim": [
+      58,
+      26,
+      488,
+      381
+    ],
+    "size": [
+      430,
+      355
+    ]
+  },
+  "torso": {
+    "source": "parts.png",
+    "authored_crop": [
+      500,
+      0,
+      815,
+      410
+    ],
+    "alpha_trim": [
+      0,
+      30,
+      315,
+      401
+    ],
+    "size": [
+      315,
+      371
+    ]
+  },
+  "right_arm": {
+    "source": "parts.png",
+    "authored_crop": [
+      815,
+      0,
+      1254,
+      400
+    ],
+    "alpha_trim": [
+      6,
+      65,
+      359,
+      362
+    ],
+    "size": [
+      353,
+      297
+    ]
+  },
+  "left_arm": {
+    "source": "parts.png",
+    "authored_crop": [
+      0,
+      400,
+      460,
+      765
+    ],
+    "alpha_trim": [
+      173,
+      11,
+      425,
+      334
+    ],
+    "size": [
+      252,
+      323
+    ]
+  },
+  "left_leg": {
+    "source": "parts.png",
+    "authored_crop": [
+      480,
+      400,
+      800,
+      820
+    ],
+    "alpha_trim": [
+      72,
+      16,
+      281,
+      403
+    ],
+    "size": [
+      209,
+      387
+    ]
+  },
+  "right_leg": {
+    "source": "parts.png",
+    "authored_crop": [
+      815,
+      400,
+      1130,
+      820
+    ],
+    "alpha_trim": [
+      27,
+      16,
+      212,
+      401
+    ],
+    "size": [
+      185,
+      385
+    ]
+  },
+  "cape": {
+    "source": "parts.png",
+    "authored_crop": [
+      0,
+      765,
+      500,
+      1254
+    ],
+    "alpha_trim": [
+      43,
+      1,
+      471,
+      461
+    ],
+    "size": [
+      428,
+      460
+    ]
+  },
+  "accessory": {
+    "source": "parts.png",
+    "authored_crop": [
+      500,
+      820,
+      800,
+      1254
+    ],
+    "alpha_trim": [
+      41,
+      43,
+      243,
+      373
+    ],
+    "size": [
+      202,
+      330
+    ]
+  },
+  "prop": {
+    "source": "parts.png",
+    "authored_crop": [
+      805,
+      820,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      16,
+      21,
+      416,
+      385
+    ],
+    "size": [
+      400,
+      364
+    ]
+  }
+}

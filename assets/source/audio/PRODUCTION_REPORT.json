@@ -1,0 +1,13 @@
+{
+  "files": 222,
+  "buses": {
+    "Music": 20,
+    "Voice": 90,
+    "UI": 24,
+    "SFX": 82,
+    "Ambience": 6
+  },
+  "max_peak": 0.712174,
+  "source": "tools/expand_audio.py + SCORE.json + 7 MIDI files",
+  "review": "Produced files/peak checks; listening, mastering and mobile interruptions remain separate acceptance."
+}

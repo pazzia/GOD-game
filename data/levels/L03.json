@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "content_version": "1.0.0",
+  "status": "layout_seed",
+  "level_id": "L03",
+  "chapter": 1,
+  "title_key": "level.L03.title",
+  "scene_id": "ENV01",
+  "available_myths": [
+    "M01"
+  ],
+  "initial_active_laws": [],
+  "max_active_laws": 1,
+  "required_votes": 3,
+  "entities": [
+    {
+      "id": "hero",
+      "type_id": "actor_felix",
+      "asset_id": "CH01_RIG",
+      "material": "ORGANIC",
+      "apparent_class": "PERSON",
+      "initial_slot": "hero_start",
+      "movable": false,
+      "mass_units": 2,
+      "properties": {}
+    },
+    {
+      "id": "stone",
+      "type_id": "stone_l",
+      "asset_id": "PROP_STONE_L",
+      "material": "STONE",
+      "apparent_class": "STONE",
+      "initial_slot": "tray_stone",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "size": "L",
+        "carry_capacity": 5,
+        "buoyant": false
+      }
+    },
+    {
+      "id": "float",
+      "type_id": "float",
+      "asset_id": "PROP_FLOAT",
+      "material": "WOOD",
+      "apparent_class": "FLOAT",
+      "initial_slot": "tray_float",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {
+        "supports_entity": "stone",
+        "support_when_slot": "stage_float",
+        "hidden_method": true
+      }
+    },
+    {
+      "id": "screen_a",
+      "type_id": "screen",
+      "asset_id": "PROP_SCREEN",
+      "material": "CLOTH",
+      "apparent_class": "SCREEN",
+      "initial_slot": "tray_screen_a",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {}
+    },
+    {
+      "id": "screen_b",
+      "type_id": "screen",
+      "asset_id": "PROP_SCREEN",
+      "material": "CLOTH",
+      "apparent_class": "SCREEN",
+      "initial_slot": "tray_screen_b",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {}
+    },
+    {
+      "id": "cargo",
+      "type_id": "cargo_crate",
+      "asset_id": "PROP_CARGO_CRATE",
+      "material": "WOOD",
+      "apparent_class": "CARGO",
+      "initial_slot": "cargo_start",
+      "movable": true,
+      "mass_units": 2,
+      "properties": {
+        "transport_mode": "carried",
+        "carrier_entity_id": "hero"
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "tray_stone",
+      "position": [
+        2,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "stone_l"
+      ]
+    },
+    {
+      "id": "tray_float",
+      "position": [
+        4,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "float"
+      ]
+    },
+    {
+      "id": "tray_screen_a",
+      "position": [
+        6,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "stage_stone",
+      "position": [
+        14,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "stone_l"
+      ]
+    },
+    {
+      "id": "stage_float",
+      "position": [
+        14,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "below",
+      "allowed_entity_types": [
+        "float"
+      ]
+    },
+    {
+      "id": "screen_left",
+      "position": [
+        9,
+        6
+      ],
+      "zone_id": "near",
+      "mount_layer": "screen",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "bridge",
+      "position": [
+        12,
+        20
+      ],
+      "zone_id": "near",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "stone_l"
+      ]
+    },
+    {
+      "id": "hero_start",
+      "position": [
+        6,
+        20
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "actor_felix"
+      ]
+    },
+    {
+      "id": "audience_a",
+      "position": [
+        3,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_b",
+      "position": [
+        4,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_c",
+      "position": [
+        5,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "tray_screen_b",
+      "position": [
+        8,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "screen_right",
+      "position": [
+        18,
+        6
+      ],
+      "zone_id": "near",
+      "mount_layer": "screen",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "cargo_start",
+      "position": [
+        7,
+        21
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "cargo_crate"
+      ]
+    }
+  ],
+  "occluders": [
+    {
+      "id": "left_screen",
+      "owner_entity": "screen_a",
+      "active_slot": "screen_left",
+      "segment": [
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          7
+        ]
+      ],
+      "channels": [
+        "Vision"
+      ]
+    },
+    {
+      "id": "right_screen",
+      "owner_entity": "screen_b",
+      "active_slot": "screen_right",
+      "segment": [
+        [
+          18,
+          4
+        ],
+        [
+          18,
+          7
+        ]
+      ],
+      "channels": [
+        "Vision"
+      ]
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "w1",
+      "character_id": "CH03",
+      "initial_view_slot": "audience_a",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            3,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 100,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w2",
+      "character_id": "CH05",
+      "initial_view_slot": "audience_b",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            4,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 100,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w3",
+      "character_id": "CH04",
+      "initial_view_slot": "audience_c",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            5,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 40,
+          "clear_ticks": 35,
+          "look_at": [
+            14,
+            14
+          ]
+        },
+        {
+          "id": "back",
+          "eye_position": [
+            21,
+            3
+          ],
+          "from_tick": 50,
+          "duration_ticks": 40,
+          "clear_ticks": 35,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    }
+  ],
+  "proofs": [
+    {
+      "myth_id": "M01",
+      "result_anchors": [
+        {
+          "entity_id": "stone",
+          "offset": [
+            -1,
+            2
+          ]
+        },
+        {
+          "entity_id": "stone",
+          "offset": [
+            0,
+            3
+          ]
+        },
+        {
+          "entity_id": "stone",
+          "offset": [
+            1,
+            2
+          ]
+        }
+      ],
+      "method_anchors": [
+        {
+          "entity_id": "float",
+          "offset": [
+            0,
+            -3
+          ]
+        }
+      ],
+      "predicates": [
+        {
+          "type": "apparent_class_is",
+          "parameters": {
+            "entity_id": "stone",
+            "value": "STONE"
+          }
+        },
+        {
+          "type": "over_water",
+          "parameters": {
+            "entity_id": "stone",
+            "zone_id": "demo_pool"
+          }
+        },
+        {
+          "type": "stable_support",
+          "parameters": {
+            "entity_id": "stone"
+          }
+        }
+      ]
+    }
+  ],
+  "navigation": {
+    "nodes": [
+      {
+        "id": "start",
+        "position": [
+          6,
+          20
+        ]
+      },
+      {
+        "id": "near_bank",
+        "position": [
+          9,
+          20
+        ]
+      },
+      {
+        "id": "stone_link",
+        "position": [
+          12,
+          20
+        ]
+      },
+      {
+        "id": "far_bank",
+        "position": [
+          15,
+          20
+        ]
+      },
+      {
+        "id": "goal",
+        "position": [
+          18,
+          20
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "id": "cross",
+        "nodes": [
+          "start",
+          "near_bank",
+          "stone_link",
+          "far_bank",
+          "goal"
+        ],
+        "required_support_entity": "stone",
+        "required_support_slot": "bridge"
+      }
+    ]
+  },
+  "goals": [
+    {
+      "id": "delivered",
+      "kind": "latched",
+      "predicate_id": "cargo_delivered",
+      "parameters": {
+        "entity_id": "cargo",
+        "route_id": "cross"
+      },
+      "required": true
+    },
+    {
+      "id": "float_removed",
+      "kind": "state",
+      "predicate_id": "entity_removed",
+      "parameters": {
+        "entity_id": "float"
+      },
+      "required": true
+    }
+  ],
+  "hints": [
+    "level.L03.hint1",
+    "level.L03.hint2",
+    "level.L03.hint3"
+  ],
+  "presentation": {
+    "layout_asset_id": "SCENE_L03_LAYOUT",
+    "overlay_asset_id": "SCENE_L03_OVERLAY"
+  },
+  "canonical_solution_ref": "L03_solution.json",
+  "zones": [
+    {
+      "id": "near",
+      "kind": "REACH"
+    },
+    {
+      "id": "demo_pool",
+      "kind": "WATER",
+      "polygon": [
+        [
+          10,
+          8
+        ],
+        [
+          18,
+          8
+        ],
+        [
+          18,
+          16
+        ],
+        [
+          10,
+          16
+        ]
+      ],
+      "initial_phase": "liquid",
+      "initial_thermal_charge": 0
+    },
+    {
+      "id": "crossing_water",
+      "kind": "WATER",
+      "polygon": [
+        [
+          10,
+          17
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          14,
+          23
+        ],
+        [
+          10,
+          23
+        ]
+      ],
+      "initial_phase": "liquid",
+      "initial_thermal_charge": 0
+    }
+  ]
+}

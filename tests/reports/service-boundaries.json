@@ -1,0 +1,7 @@
+{
+  "checks": 28,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "real_20_minute_listening": false,
+  "simulated_audio_seconds": 1200
+}

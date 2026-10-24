@@ -1,0 +1,8 @@
+{
+  "alternatives": 16,
+  "checks": 732,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "fresh_run": true,
+  "levels": 30
+}

@@ -1,0 +1,756 @@
+{
+  "schema_version": 1,
+  "content_version": "0.2.0",
+  "status": "layout_seed",
+  "level_id": "L23",
+  "chapter": 3,
+  "title_key": "level.L23.title",
+  "scene_id": "ENV03",
+  "available_myths": [
+    "M03",
+    "M02"
+  ],
+  "initial_active_laws": [
+    "M03"
+  ],
+  "max_active_laws": 2,
+  "required_votes": 3,
+  "entities": [
+    {
+      "id": "hero",
+      "type_id": "actor_felix",
+      "asset_id": "CH01_RIG",
+      "material": "ORGANIC",
+      "apparent_class": "PERSON",
+      "initial_slot": "hero_start",
+      "movable": false,
+      "mass_units": 2,
+      "properties": {
+        "locomotion": "walk",
+        "initial_reach_zone_id": "near"
+      }
+    },
+    {
+      "id": "anchor_a",
+      "type_id": "span_anchor",
+      "asset_id": "PROP_ANCHOR",
+      "material": "WOOD",
+      "apparent_class": "ANCHOR",
+      "initial_slot": "anchor_a_start",
+      "movable": false,
+      "mass_units": 1,
+      "properties": {
+        "anchored": true,
+        "grounded": true
+      }
+    },
+    {
+      "id": "anchor_b",
+      "type_id": "span_anchor",
+      "asset_id": "PROP_ANCHOR",
+      "material": "WOOD",
+      "apparent_class": "ANCHOR",
+      "initial_slot": "anchor_b_start",
+      "movable": false,
+      "mass_units": 1,
+      "properties": {
+        "anchored": true,
+        "grounded": true
+      }
+    },
+    {
+      "id": "paper",
+      "type_id": "paper_span",
+      "asset_id": "PROP_PAPER_BRIDGE",
+      "material": "PAPER",
+      "apparent_class": "PAPER",
+      "initial_slot": "stage_paper",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {
+        "span_anchor_entity_ids": [
+          "anchor_a",
+          "anchor_b"
+        ],
+        "span_anchor_offsets": [
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "span_endpoint_offsets": [
+          [
+            -2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "required_anchor_count": 2,
+        "load_slot_ids": [
+          "stage_weight"
+        ],
+        "load_capacity": 1,
+        "tear_resistance": 1,
+        "flammable": true
+      }
+    },
+    {
+      "id": "weight",
+      "type_id": "control_weight",
+      "asset_id": "PROP_CONTROL_WEIGHT",
+      "material": "STEEL",
+      "apparent_class": "CARGO",
+      "initial_slot": "weight_start",
+      "movable": true,
+      "mass_units": 50,
+      "properties": {
+        "transport_mode": "wheeled",
+        "carrier_entity_id": "hero",
+        "move_mode": "hoist",
+        "hoist_entity_id": "hoist"
+      }
+    },
+    {
+      "id": "hoist",
+      "type_id": "hoist",
+      "asset_id": "PROP_HOIST",
+      "material": "WOOD",
+      "apparent_class": "HOIST",
+      "initial_slot": "hoist_start",
+      "movable": false,
+      "mass_units": 0,
+      "properties": {
+        "lift_capacity_units": 60,
+        "service_slot_ids": [
+          "stage_weight",
+          "weight_start"
+        ]
+      }
+    },
+    {
+      "id": "oven",
+      "type_id": "oven",
+      "asset_id": "PROP_FIRE",
+      "material": "FIRE",
+      "apparent_class": "FIRE",
+      "initial_slot": "oven_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "emitter_class": "FIRE",
+        "thermal_delta_per_tick": 1,
+        "thermal_radius_units": 5,
+        "enabled": true
+      }
+    },
+    {
+      "id": "thermal_screen",
+      "type_id": "screen",
+      "asset_id": "PROP_SCREEN",
+      "material": "CLOTH",
+      "apparent_class": "SCREEN",
+      "initial_slot": "thermal_screen_start",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {}
+    },
+    {
+      "id": "bowl",
+      "type_id": "bowl",
+      "asset_id": "PROP_WATER_BOWL",
+      "material": "WOOD",
+      "apparent_class": "WATER_BOWL",
+      "initial_slot": "bowl_start",
+      "movable": false,
+      "mass_units": 1,
+      "properties": {
+        "thermal_subject_zone_id": "demo_water"
+      }
+    },
+    {
+      "id": "flame",
+      "type_id": "decoy_flame",
+      "asset_id": "PROP_DECOY_FLAME",
+      "material": "DECOY",
+      "apparent_class": "FIRE",
+      "initial_slot": "flame_start",
+      "movable": false,
+      "mass_units": 1,
+      "properties": {}
+    },
+    {
+      "id": "cold_pack",
+      "type_id": "cold_pack",
+      "asset_id": "PROP_COLD_PACK",
+      "material": "STEEL",
+      "apparent_class": "COLD_PACK",
+      "initial_slot": "cold_pack_start",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {
+        "emitter_class": "COLD_PACK",
+        "thermal_delta_per_tick": -1,
+        "thermal_radius_units": 3,
+        "enabled": true,
+        "hidden_method": true,
+        "support_when_slot": "stage_cold"
+      }
+    },
+    {
+      "id": "cold_screen",
+      "type_id": "screen",
+      "asset_id": "PROP_SCREEN",
+      "material": "CLOTH",
+      "apparent_class": "SCREEN",
+      "initial_slot": "cold_screen_start",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {}
+    }
+  ],
+  "slots": [
+    {
+      "id": "hero_start",
+      "position": [
+        6,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "actor_felix"
+      ]
+    },
+    {
+      "id": "audience_1",
+      "position": [
+        3,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_2",
+      "position": [
+        4,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_3",
+      "position": [
+        5,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "anchor_a_start",
+      "position": [
+        12,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "span_anchor"
+      ]
+    },
+    {
+      "id": "anchor_b_start",
+      "position": [
+        16,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "span_anchor"
+      ]
+    },
+    {
+      "id": "paper_start",
+      "position": [
+        2,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "paper_span"
+      ]
+    },
+    {
+      "id": "stage_paper",
+      "position": [
+        14,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "paper_span"
+      ]
+    },
+    {
+      "id": "weight_start",
+      "position": [
+        6,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "control_weight"
+      ]
+    },
+    {
+      "id": "stage_weight",
+      "position": [
+        14,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "control_weight"
+      ]
+    },
+    {
+      "id": "hoist_start",
+      "position": [
+        8,
+        12
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "hoist"
+      ]
+    },
+    {
+      "id": "oven_start",
+      "position": [
+        14,
+        9
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "oven"
+      ]
+    },
+    {
+      "id": "thermal_screen_start",
+      "position": [
+        9,
+        25
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "thermal_block",
+      "position": [
+        14,
+        10
+      ],
+      "zone_id": "near",
+      "mount_layer": "screen",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "bowl_start",
+      "position": [
+        20,
+        8
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "bowl"
+      ]
+    },
+    {
+      "id": "flame_start",
+      "position": [
+        21,
+        10
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "decoy_flame"
+      ]
+    },
+    {
+      "id": "cold_pack_start",
+      "position": [
+        2,
+        25
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "cold_pack"
+      ]
+    },
+    {
+      "id": "stage_cold",
+      "position": [
+        20,
+        8
+      ],
+      "zone_id": "near",
+      "mount_layer": "below",
+      "allowed_entity_types": [
+        "cold_pack"
+      ]
+    },
+    {
+      "id": "cold_screen_start",
+      "position": [
+        13,
+        25
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "cold_screen_slot",
+      "position": [
+        9,
+        4
+      ],
+      "zone_id": "near",
+      "mount_layer": "screen",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "near",
+      "kind": "REACH"
+    },
+    {
+      "id": "demo_water",
+      "kind": "WATER",
+      "thermal_position": [
+        20,
+        8
+      ],
+      "polygon": [
+        [
+          18,
+          6
+        ],
+        [
+          22,
+          6
+        ],
+        [
+          22,
+          10
+        ],
+        [
+          18,
+          10
+        ]
+      ],
+      "initial_phase": "liquid",
+      "initial_thermal_charge": 0
+    }
+  ],
+  "occluders": [
+    {
+      "id": "thermal_screen_occluder",
+      "owner_entity": "thermal_screen",
+      "active_slot": "thermal_block",
+      "segment": [
+        [
+          11,
+          10
+        ],
+        [
+          17,
+          10
+        ]
+      ],
+      "channels": [
+        "Thermal"
+      ]
+    },
+    {
+      "id": "cold_screen_occluder",
+      "owner_entity": "cold_screen",
+      "active_slot": "cold_screen_slot",
+      "segment": [
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "channels": [
+        "Vision"
+      ]
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "w1",
+      "character_id": "CH08",
+      "initial_view_slot": "audience_1",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            3,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w2",
+      "character_id": "CH05",
+      "initial_view_slot": "audience_2",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            4,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w3",
+      "character_id": "CROWD01",
+      "initial_view_slot": "audience_3",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            5,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    }
+  ],
+  "proofs": [
+    {
+      "myth_id": "M02",
+      "result_anchors": [
+        {
+          "entity_id": "bowl",
+          "offset": [
+            -1,
+            2
+          ]
+        },
+        {
+          "entity_id": "bowl",
+          "offset": [
+            0,
+            3
+          ]
+        },
+        {
+          "entity_id": "bowl",
+          "offset": [
+            1,
+            2
+          ]
+        }
+      ],
+      "method_anchors": [
+        {
+          "entity_id": "cold_pack",
+          "offset": [
+            0,
+            -3
+          ]
+        }
+      ],
+      "predicates": [
+        {
+          "type": "apparent_class_is",
+          "parameters": {
+            "entity_id": "flame",
+            "value": "FIRE"
+          }
+        },
+        {
+          "type": "observed_water_transition",
+          "parameters": {
+            "zone_id": "demo_water",
+            "from": "liquid",
+            "to": "frozen"
+          }
+        },
+        {
+          "type": "entity_visible",
+          "parameters": {
+            "entity_id": "flame"
+          }
+        }
+      ]
+    }
+  ],
+  "navigation": {
+    "nodes": [
+      {
+        "id": "cross_0",
+        "position": [
+          6,
+          12
+        ]
+      },
+      {
+        "id": "cross_1",
+        "position": [
+          10,
+          12
+        ]
+      },
+      {
+        "id": "cross_2",
+        "position": [
+          14,
+          12
+        ]
+      },
+      {
+        "id": "cross_3",
+        "position": [
+          18,
+          12
+        ]
+      },
+      {
+        "id": "cross_4",
+        "position": [
+          21,
+          12
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "id": "cross",
+        "nodes": [
+          "cross_0",
+          "cross_1",
+          "cross_2",
+          "cross_3",
+          "cross_4"
+        ],
+        "ticks_per_edge": 10,
+        "requirements": [
+          {
+            "type": "support",
+            "parameters": {
+              "kind": "paper",
+              "entity_id": "paper",
+              "slot_id": "stage_paper"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "goals": [
+    {
+      "id": "paper_preserved",
+      "kind": "state",
+      "predicate_id": "entity_intact",
+      "parameters": {
+        "entity_id": "paper"
+      },
+      "required": true
+    },
+    {
+      "id": "arrived_weight",
+      "kind": "latched",
+      "predicate_id": "cargo_delivered",
+      "parameters": {
+        "entity_id": "weight",
+        "route_id": "cross"
+      },
+      "required": true
+    }
+  ],
+  "hints": [
+    "level.L23.hint1",
+    "level.L23.hint2",
+    "level.L23.hint3"
+  ],
+  "presentation": {
+    "layout_asset_id": "SCENE_L23_LAYOUT",
+    "overlay_asset_id": "SCENE_L23_OVERLAY"
+  },
+  "canonical_solution_ref": "L23_solution.json"
+}

@@ -1,0 +1,8 @@
+{
+  "tool": "built-in image_gen",
+  "asset": "ENV03/floor",
+  "revision": 2,
+  "source_output": "/workspace/scratch/585c9249475c/generated_images/exec-032be044-b68d-4328-9c5f-3078ed05d384.png",
+  "reference": "source/environments/ENV03/floor_v1.png",
+  "prompt": "Use case: precise-object-edit.\nEdit target: the attached ENV03 floor layer. Keep the same full LANDSCAPE1536×1024canvas, pale parchment limestone material, broad low-contrast slab style, subtle teal/plum trim at the far left/right and all existing lower paving unchanged.\nChange only the paving's UPPER EXTENT: extend the painted ground UPWARD so its high straight perspective boundary is at y=200 pixels, about20percent of the canvas height, instead of the current middle-height boundary aroundy500. The entire bottom80percent of the canvas must be continuous painted paving, full width, no gap. Draw additional natural matching stone rows into that upper region; make them smaller with perspective. Top20percent ONLY remains genuine transparent alpha.\nPurpose: gameplay props stand at30–40percent height, so they must stand visibly on this ground, not float in a blank background. This is a full-canvas floor layer for a composited mobile game.\nConstraints: preserve the existing lower floor appearance and original1536×1024dimensions. No new object, no scenery, no buildings, no water, no bridge, no plants, no text, no UI, no watermark. Genuine transparent alpha only in the top20percent; no opaque backdrop above the paving. Do not center a small floor patch."
+}

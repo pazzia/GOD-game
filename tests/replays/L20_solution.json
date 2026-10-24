@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "level_id": "L20",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "bread",
+        "slot_id": "bread_box"
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "box",
+        "action": "close"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone",
+        "slot_id": "bridge"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "cold_pack",
+        "slot_id": "stage_cold"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "screen_a",
+        "slot_id": "screen_left"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M02"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M02",
+        "replace_law_id": null
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 60
+    },
+    {
+      "op": "command",
+      "type": "StopResolution",
+      "payload": {}
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "bread",
+        "slot_id": "bread_delivery"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "dessert",
+        "slot_id": "dessert_delivery"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "box",
+        "slot_id": "box_delivery"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "feast",
+        "route_id": "cross"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

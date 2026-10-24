@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "actor_id": "caramelka",
+  "canvas_size": [
+    1400,
+    1000
+  ],
+  "feet_origin": [
+    700,
+    940
+  ],
+  "nominal_height": 940,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "tail",
+      "file": "tail.png",
+      "position": [
+        325,
+        445
+      ],
+      "pivot": [
+        0.94,
+        0.65
+      ],
+      "target_height": 200,
+      "z_index": -20,
+      "parent": "torso",
+      "role": "tail"
+    },
+    {
+      "id": "hind_right_leg",
+      "file": "hind_right_leg.png",
+      "position": [
+        500,
+        610
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 340,
+      "z_index": -14,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "front_right_leg",
+      "file": "front_right_leg.png",
+      "position": [
+        950,
+        610
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 340,
+      "z_index": -13,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "hind_left_leg",
+      "file": "hind_left_leg.png",
+      "position": [
+        420,
+        610
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 340,
+      "z_index": -12,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "front_left_leg",
+      "file": "front_left_leg.png",
+      "position": [
+        870,
+        610
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 340,
+      "z_index": -11,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        625,
+        500
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_height": 450,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        1010,
+        510
+      ],
+      "pivot": [
+        0.5,
+        0.8
+      ],
+      "target_height": 430,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "horns",
+      "file": "horns.png",
+      "position": [
+        1005,
+        220
+      ],
+      "pivot": [
+        0.69,
+        0.94
+      ],
+      "target_height": 200,
+      "z_index": 11,
+      "parent": "head",
+      "role": "horn"
+    },
+    {
+      "id": "collar_bell",
+      "file": "collar_bell.png",
+      "position": [
+        1000,
+        500
+      ],
+      "pivot": [
+        0.5,
+        0.2
+      ],
+      "target_height": 220,
+      "z_index": 20,
+      "parent": "head",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/caramelka/idle.png",
+    "observe": "res://assets/art/characters/portraits/caramelka/observe.png",
+    "suspect": "res://assets/art/characters/portraits/caramelka/suspect.png",
+    "accept": "res://assets/art/characters/portraits/caramelka/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/caramelka/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/caramelka/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/caramelka/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/caramelka/celebrate.png"
+  },
+  "angles": {},
+  "assembly_notes": "Calibrated quadruped anatomy with four separate cloven-hoof legs, compact torso, head/neck, raised tail, paired horns parented to head and teal collar/bell. Fur overlap and actual static assembly inspected; native animation review pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.255020+00:00",
+    "evidence": "build/rig-review-final/caramelka-keyposes.png",
+    "sha256": "7a93adbdbf267f46439805008b45d7f41777d255fcc746abcb6d68415dad1c8c",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

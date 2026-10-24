@@ -1,0 +1,182 @@
+{
+  "actor_id": "nika",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        460
+      ],
+      "pivot": [
+        0.5,
+        0.02
+      ],
+      "target_height": 450,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        625,
+        850
+      ],
+      "pivot": [
+        0.7,
+        0.06
+      ],
+      "target_height": 500,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        785,
+        850
+      ],
+      "pivot": [
+        0.35,
+        0.06
+      ],
+      "target_height": 500,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        460
+      ],
+      "pivot": [
+        0.5,
+        0.03
+      ],
+      "target_height": 440,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        540,
+        560
+      ],
+      "pivot": [
+        0.7,
+        0.14
+      ],
+      "target_height": 380,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        860,
+        560
+      ],
+      "pivot": [
+        0.22,
+        0.16
+      ],
+      "target_height": 370,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        480
+      ],
+      "pivot": [
+        0.63,
+        0.95
+      ],
+      "target_height": 440,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        520,
+        820
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "target_height": 190,
+      "z_index": 15,
+      "parent": "torso",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        960,
+        800
+      ],
+      "pivot": [
+        0.5,
+        0.65
+      ],
+      "target_height": 300,
+      "z_index": 5,
+      "parent": "right_arm",
+      "role": "prop"
+    }
+  ],
+  "schema_version": 1,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "assembly_notes": "Actual static assembly inspected after parts_v2 imagegen arm-orientation correction. Mustard shirt and teal overalls follow the reference; no invented jacket. Elbows point outward, pencil is in screen-left hand, notebook in screen-right hand. Toolpouch follows torso. Hair/goggles/head, shoulders and hip overlaps are coherent. Native AnimationPlayer key poses and full directional animation remain unverified.",
+  "directional_animation_complete": false,
+  "angles": {},
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/nika/idle.png",
+    "observe": "res://assets/art/characters/portraits/nika/observe.png",
+    "suspect": "res://assets/art/characters/portraits/nika/suspect.png",
+    "accept": "res://assets/art/characters/portraits/nika/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/nika/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/nika/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/nika/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/nika/celebrate.png"
+  },
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.247957+00:00",
+    "evidence": "build/rig-review-final/nika-keyposes.png",
+    "sha256": "1275e241e251f38d1c09443919ec7926e837e0a7390f858fe648c88abfbf7678",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  }
+}

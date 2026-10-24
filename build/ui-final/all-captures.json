@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "renderer": "native Godot/Mesa/Xvfb",
+  "source_runtime_digest_sha256": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+  "matching_apk_sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+  "reports": [
+    "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/ui-captures.json",
+    "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final-extra/ui-captures.json"
+  ],
+  "case_count": 31,
+  "cases": [
+    {
+      "view": "L01-title-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-title-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-map-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-map-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-show-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-show-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-proof-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-proof-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-law-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-law-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-resolution-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-resolution-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-moving-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-moving-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-success-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-success-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-settings-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-settings-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L02-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L02-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L03-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L03-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L11-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L11-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L21-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L21-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L30-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L30-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L30-selection-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L30-selection-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L06-plan-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L06-plan-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L06-moving-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L06-moving-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-ru-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-ru-140-360x640.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-en-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-en-140-360x640.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-settings-en-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-settings-en-140-360x640.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-map-en-140-360x800",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-map-en-140-360x800.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L11-plan-en-140-360x800",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L11-plan-en-140-360x800.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L21-plan-en-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L21-plan-en-140-360x640.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L30-selection-en-140-360x800",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L30-selection-en-140-360x800.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-ru-140-360x640-audience",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-ru-140-360x640-audience.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-en-140-360x640-audience",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-en-140-360x640-audience.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L21-plan-ru-140-360x640-audience",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L21-plan-ru-140-360x640-audience.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-ru-140-360x640-audience_end",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-ru-140-360x640-audience_end.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-plan-ru-140-360x640-inventory_end",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final/L01-plan-ru-140-360x640-inventory_end.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-settings-ru-140-360x640",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/ui-final-extra/L01-settings-ru-140-360x640.png",
+      "exists": true,
+      "errors": []
+    }
+  ],
+  "physical_device_tested": false
+}

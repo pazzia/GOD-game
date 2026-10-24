@@ -1,0 +1,5 @@
+{
+  "prompt": "Use case: precise-object-edit. Edit ONLY the four visible dark hollow oval shoulder sockets in the supplied Felix parts atlas: the two on the torso shoulder edges and the upper end of each separated arm. Replace the dark hollow interiors with solid rounded cream shirt fabric that continues the sleeve material, soft natural gouache shading, suitable overlap joints for a2D cutout puppet. Do not leave any open brown/black ellipse at a shoulder. Preserve EXACTLY all nine pieces' positions, scale, orientation, outlines, face, costume, boots, cape, scroll and stamp, and the same1254square canvas/grid. No other changes, no new parts, no text. Keep genuinely transparent background and alpha.",
+  "source_original": "exec-8b1b3bb7-6e58-4398-af68-769f4c1280bb.png",
+  "edit_target": "felix_parts.png"
+}

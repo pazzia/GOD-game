@@ -1,0 +1,539 @@
+WorkerThreadPool: 9 threads, 2 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+SDL: Init OK!
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+Loading resource: res://default_bus_layout.tres remapped: res://default_bus_layout.tres
+Completed load for: 'res://default_bus_layout.tres' remapped 'res://default_bus_layout.tres' at thread -1
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+Loading resource: res://tests/test_service_boundaries.gd remapped: res://tests/test_service_boundaries.gd
+Loading resource: res://assets/fonts/DejaVuSans.ttf remapped: res://assets/fonts/DejaVuSans.ttf
+Loading resource: res://.godot/imported/DejaVuSans.ttf-0dcd47e426510e02f045e926ff1bfdf0.fontdata remapped: res://.godot/imported/DejaVuSans.ttf-0dcd47e426510e02f045e926ff1bfdf0.fontdata
+Completed load for: 'res://assets/fonts/DejaVuSans.ttf' remapped 'res://assets/fonts/DejaVuSans.ttf' at thread -1
+Completed load for: 'res://tests/test_service_boundaries.gd' remapped 'res://tests/test_service_boundaries.gd' at thread -1
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://assets/audio/production/mus_main_full.ogg remapped: res://assets/audio/production/mus_main_full.ogg
+Loading resource: res://.godot/imported/mus_main_full.ogg-c19d926752adc6183793ff239910fa16.oggvorbisstr remapped: res://.godot/imported/mus_main_full.ogg-c19d926752adc6183793ff239910fa16.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_main_full.ogg' remapped 'res://assets/audio/production/mus_main_full.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_water.ogg remapped: res://assets/audio/production/amb_river_water.ogg
+Loading resource: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr remapped: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_water.ogg' remapped 'res://assets/audio/production/amb_river_water.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_wind.ogg remapped: res://assets/audio/production/amb_river_wind.ogg
+Loading resource: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr remapped: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_wind.ogg' remapped 'res://assets/audio/production/amb_river_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_bed.ogg remapped: res://assets/audio/production/mus_river_bed.ogg
+Loading resource: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr remapped: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_bed.ogg' remapped 'res://assets/audio/production/mus_river_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_curiosity.ogg remapped: res://assets/audio/production/mus_river_curiosity.ogg
+Loading resource: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr remapped: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_curiosity.ogg' remapped 'res://assets/audio/production/mus_river_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_tension.ogg remapped: res://assets/audio/production/mus_river_tension.ogg
+Loading resource: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr remapped: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_tension.ogg' remapped 'res://assets/audio/production/mus_river_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_kitchen_house.ogg remapped: res://assets/audio/production/amb_kitchen_house.ogg
+Loading resource: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr remapped: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_kitchen_house.ogg' remapped 'res://assets/audio/production/amb_kitchen_house.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_kitchen_steam.ogg remapped: res://assets/audio/production/amb_kitchen_steam.ogg
+Loading resource: res://.godot/imported/amb_kitchen_steam.ogg-adcb19effcdae728aec8fa8c62f6c285.oggvorbisstr remapped: res://.godot/imported/amb_kitchen_steam.ogg-adcb19effcdae728aec8fa8c62f6c285.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_kitchen_steam.ogg' remapped 'res://assets/audio/production/amb_kitchen_steam.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_bed.ogg remapped: res://assets/audio/production/mus_kitchen_bed.ogg
+Loading resource: res://.godot/imported/mus_kitchen_bed.ogg-6c19381c832bb92356032090da28dba7.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_bed.ogg-6c19381c832bb92356032090da28dba7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_bed.ogg' remapped 'res://assets/audio/production/mus_kitchen_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_curiosity.ogg remapped: res://assets/audio/production/mus_kitchen_curiosity.ogg
+Loading resource: res://.godot/imported/mus_kitchen_curiosity.ogg-9d9e30481d957b337762ad862e32c07e.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_curiosity.ogg-9d9e30481d957b337762ad862e32c07e.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_curiosity.ogg' remapped 'res://assets/audio/production/mus_kitchen_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_tension.ogg remapped: res://assets/audio/production/mus_kitchen_tension.ogg
+Loading resource: res://.godot/imported/mus_kitchen_tension.ogg-9ffa61427309045415e1567652c57db4.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_tension.ogg-9ffa61427309045415e1567652c57db4.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_tension.ogg' remapped 'res://assets/audio/production/mus_kitchen_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_archive_paper.ogg remapped: res://assets/audio/production/amb_archive_paper.ogg
+Loading resource: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr remapped: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_archive_paper.ogg' remapped 'res://assets/audio/production/amb_archive_paper.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_archive_wind.ogg remapped: res://assets/audio/production/amb_archive_wind.ogg
+Loading resource: res://.godot/imported/amb_archive_wind.ogg-81457255ebc8dc88f20d9d656ccdb548.oggvorbisstr remapped: res://.godot/imported/amb_archive_wind.ogg-81457255ebc8dc88f20d9d656ccdb548.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_archive_wind.ogg' remapped 'res://assets/audio/production/amb_archive_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_bed.ogg remapped: res://assets/audio/production/mus_archive_bed.ogg
+Loading resource: res://.godot/imported/mus_archive_bed.ogg-d9f150e7c06c2ea8c5e240b807bdbdd9.oggvorbisstr remapped: res://.godot/imported/mus_archive_bed.ogg-d9f150e7c06c2ea8c5e240b807bdbdd9.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_bed.ogg' remapped 'res://assets/audio/production/mus_archive_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_curiosity.ogg remapped: res://assets/audio/production/mus_archive_curiosity.ogg
+Loading resource: res://.godot/imported/mus_archive_curiosity.ogg-b459a4942280db007e26714b4733a41d.oggvorbisstr remapped: res://.godot/imported/mus_archive_curiosity.ogg-b459a4942280db007e26714b4733a41d.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_curiosity.ogg' remapped 'res://assets/audio/production/mus_archive_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_tension.ogg remapped: res://assets/audio/production/mus_archive_tension.ogg
+Loading resource: res://.godot/imported/mus_archive_tension.ogg-212d7b3394e80e5fec2079de075406b7.oggvorbisstr remapped: res://.godot/imported/mus_archive_tension.ogg-212d7b3394e80e5fec2079de075406b7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_tension.ogg' remapped 'res://assets/audio/production/mus_archive_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_water.ogg remapped: res://assets/audio/production/amb_river_water.ogg
+Loading resource: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr remapped: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_water.ogg' remapped 'res://assets/audio/production/amb_river_water.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_wind.ogg remapped: res://assets/audio/production/amb_river_wind.ogg
+Loading resource: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr remapped: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_wind.ogg' remapped 'res://assets/audio/production/amb_river_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_finale_bed.ogg remapped: res://assets/audio/production/mus_finale_bed.ogg
+Loading resource: res://.godot/imported/mus_finale_bed.ogg-5a9801a0f25276399b1f7f48c5553ea3.oggvorbisstr remapped: res://.godot/imported/mus_finale_bed.ogg-5a9801a0f25276399b1f7f48c5553ea3.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_finale_bed.ogg' remapped 'res://assets/audio/production/mus_finale_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_finale_curiosity.ogg remapped: res://assets/audio/production/mus_finale_curiosity.ogg
+Loading resource: res://.godot/imported/mus_finale_curiosity.ogg-ade186f173ba4a508c845ca942bdade8.oggvorbisstr remapped: res://.godot/imported/mus_finale_curiosity.ogg-ade186f173ba4a508c845ca942bdade8.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_finale_curiosity.ogg' remapped 'res://assets/audio/production/mus_finale_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_finale_tension.ogg remapped: res://assets/audio/production/mus_finale_tension.ogg
+Loading resource: res://.godot/imported/mus_finale_tension.ogg-127b74b666e9c1b34fb1fdc0cae618c7.oggvorbisstr remapped: res://.godot/imported/mus_finale_tension.ogg-127b74b666e9c1b34fb1fdc0cae618c7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_finale_tension.ogg' remapped 'res://assets/audio/production/mus_finale_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/vo_ch03_accept_a.wav remapped: res://assets/audio/production/vo_ch03_accept_a.wav
+Loading resource: res://.godot/imported/vo_ch03_accept_a.wav-693248be958562540cacebc17bab9c1b.sample remapped: res://.godot/imported/vo_ch03_accept_a.wav-693248be958562540cacebc17bab9c1b.sample
+Completed load for: 'res://assets/audio/production/vo_ch03_accept_a.wav' remapped 'res://assets/audio/production/vo_ch03_accept_a.wav' at thread -1
+Loading resource: res://assets/audio/production/amb_river_water.ogg remapped: res://assets/audio/production/amb_river_water.ogg
+Loading resource: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr remapped: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_water.ogg' remapped 'res://assets/audio/production/amb_river_water.ogg' at thread -1
+Loading resource: res://assets/art/ui/settings.svg remapped: res://assets/art/ui/settings.svg
+Loading resource: res://.godot/imported/settings.svg-9278d7f108b45470e8876f7e860a444e.ctex remapped: res://.godot/imported/settings.svg-9278d7f108b45470e8876f7e860a444e.ctex
+Completed load for: 'res://assets/art/ui/settings.svg' remapped 'res://assets/art/ui/settings.svg' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/cape.png remapped: res://assets/art/characters/rigs/felix/cape.png
+Loading resource: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex remapped: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/cape.png' remapped 'res://assets/art/characters/rigs/felix/cape.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_leg.png remapped: res://assets/art/characters/rigs/felix/left_leg.png
+Loading resource: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex remapped: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_leg.png' remapped 'res://assets/art/characters/rigs/felix/left_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_leg.png remapped: res://assets/art/characters/rigs/felix/right_leg.png
+Loading resource: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex remapped: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_leg.png' remapped 'res://assets/art/characters/rigs/felix/right_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/torso.png remapped: res://assets/art/characters/rigs/felix/torso.png
+Loading resource: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex remapped: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/torso.png' remapped 'res://assets/art/characters/rigs/felix/torso.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_arm.png remapped: res://assets/art/characters/rigs/felix/left_arm.png
+Loading resource: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex remapped: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_arm.png' remapped 'res://assets/art/characters/rigs/felix/left_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_arm.png remapped: res://assets/art/characters/rigs/felix/right_arm.png
+Loading resource: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex remapped: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_arm.png' remapped 'res://assets/art/characters/rigs/felix/right_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/head.png remapped: res://assets/art/characters/rigs/felix/head.png
+Loading resource: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex remapped: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/head.png' remapped 'res://assets/art/characters/rigs/felix/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/accessory.png remapped: res://assets/art/characters/rigs/felix/accessory.png
+Loading resource: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex remapped: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/accessory.png' remapped 'res://assets/art/characters/rigs/felix/accessory.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/prop.png remapped: res://assets/art/characters/rigs/felix/prop.png
+Loading resource: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex remapped: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/prop.png' remapped 'res://assets/art/characters/rigs/felix/prop.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/cape.png remapped: res://assets/art/characters/rigs/felix/cape.png
+Loading resource: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex remapped: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/cape.png' remapped 'res://assets/art/characters/rigs/felix/cape.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_leg.png remapped: res://assets/art/characters/rigs/felix/left_leg.png
+Loading resource: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex remapped: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_leg.png' remapped 'res://assets/art/characters/rigs/felix/left_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_leg.png remapped: res://assets/art/characters/rigs/felix/right_leg.png
+Loading resource: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex remapped: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_leg.png' remapped 'res://assets/art/characters/rigs/felix/right_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/torso.png remapped: res://assets/art/characters/rigs/felix/torso.png
+Loading resource: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex remapped: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/torso.png' remapped 'res://assets/art/characters/rigs/felix/torso.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_arm.png remapped: res://assets/art/characters/rigs/felix/left_arm.png
+Loading resource: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex remapped: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_arm.png' remapped 'res://assets/art/characters/rigs/felix/left_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_arm.png remapped: res://assets/art/characters/rigs/felix/right_arm.png
+Loading resource: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex remapped: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_arm.png' remapped 'res://assets/art/characters/rigs/felix/right_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/head.png remapped: res://assets/art/characters/rigs/felix/head.png
+Loading resource: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex remapped: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/head.png' remapped 'res://assets/art/characters/rigs/felix/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/accessory.png remapped: res://assets/art/characters/rigs/felix/accessory.png
+Loading resource: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex remapped: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/accessory.png' remapped 'res://assets/art/characters/rigs/felix/accessory.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/prop.png remapped: res://assets/art/characters/rigs/felix/prop.png
+Loading resource: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex remapped: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/prop.png' remapped 'res://assets/art/characters/rigs/felix/prop.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_left.png remapped: res://assets/art/characters/rigs/plum/wing_left.png
+Loading resource: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex remapped: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_left.png' remapped 'res://assets/art/characters/rigs/plum/wing_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_right.png remapped: res://assets/art/characters/rigs/plum/wing_right.png
+Loading resource: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex remapped: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_right.png' remapped 'res://assets/art/characters/rigs/plum/wing_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_left.png remapped: res://assets/art/characters/rigs/plum/foot_left.png
+Loading resource: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex remapped: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_left.png' remapped 'res://assets/art/characters/rigs/plum/foot_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_right.png remapped: res://assets/art/characters/rigs/plum/foot_right.png
+Loading resource: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex remapped: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_right.png' remapped 'res://assets/art/characters/rigs/plum/foot_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/body.png remapped: res://assets/art/characters/rigs/plum/body.png
+Loading resource: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex remapped: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/body.png' remapped 'res://assets/art/characters/rigs/plum/body.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/head.png remapped: res://assets/art/characters/rigs/plum/head.png
+Loading resource: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex remapped: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/head.png' remapped 'res://assets/art/characters/rigs/plum/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_left.png remapped: res://assets/art/characters/rigs/plum/antenna_left.png
+Loading resource: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex remapped: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_left.png' remapped 'res://assets/art/characters/rigs/plum/antenna_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_right.png remapped: res://assets/art/characters/rigs/plum/antenna_right.png
+Loading resource: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex remapped: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_right.png' remapped 'res://assets/art/characters/rigs/plum/antenna_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/bag.png remapped: res://assets/art/characters/rigs/plum/bag.png
+Loading resource: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex remapped: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/bag.png' remapped 'res://assets/art/characters/rigs/plum/bag.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_left.png remapped: res://assets/art/characters/rigs/plum/wing_left.png
+Loading resource: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex remapped: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_left.png' remapped 'res://assets/art/characters/rigs/plum/wing_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_right.png remapped: res://assets/art/characters/rigs/plum/wing_right.png
+Loading resource: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex remapped: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_right.png' remapped 'res://assets/art/characters/rigs/plum/wing_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_left.png remapped: res://assets/art/characters/rigs/plum/foot_left.png
+Loading resource: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex remapped: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_left.png' remapped 'res://assets/art/characters/rigs/plum/foot_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_right.png remapped: res://assets/art/characters/rigs/plum/foot_right.png
+Loading resource: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex remapped: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_right.png' remapped 'res://assets/art/characters/rigs/plum/foot_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/body.png remapped: res://assets/art/characters/rigs/plum/body.png
+Loading resource: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex remapped: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/body.png' remapped 'res://assets/art/characters/rigs/plum/body.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/head.png remapped: res://assets/art/characters/rigs/plum/head.png
+Loading resource: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex remapped: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/head.png' remapped 'res://assets/art/characters/rigs/plum/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_left.png remapped: res://assets/art/characters/rigs/plum/antenna_left.png
+Loading resource: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex remapped: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_left.png' remapped 'res://assets/art/characters/rigs/plum/antenna_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_right.png remapped: res://assets/art/characters/rigs/plum/antenna_right.png
+Loading resource: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex remapped: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_right.png' remapped 'res://assets/art/characters/rigs/plum/antenna_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/bag.png remapped: res://assets/art/characters/rigs/plum/bag.png
+Loading resource: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex remapped: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/bag.png' remapped 'res://assets/art/characters/rigs/plum/bag.png' at thread -1
+Loading resource: res://assets/art/characters/lada.png remapped: res://assets/art/characters/lada.png
+Loading resource: res://.godot/imported/lada.png-13aeca85c8d6642b6389cde3a0e30915.ctex remapped: res://.godot/imported/lada.png-13aeca85c8d6642b6389cde3a0e30915.ctex
+Completed load for: 'res://assets/art/characters/lada.png' remapped 'res://assets/art/characters/lada.png' at thread -1
+Loading resource: res://assets/art/characters/nika.png remapped: res://assets/art/characters/nika.png
+Loading resource: res://.godot/imported/nika.png-7e48125bda54ed16123aed2b2a4263d8.ctex remapped: res://.godot/imported/nika.png-7e48125bda54ed16123aed2b2a4263d8.ctex
+Completed load for: 'res://assets/art/characters/nika.png' remapped 'res://assets/art/characters/nika.png' at thread -1
+Loading resource: res://assets/art/characters/crowd_gardener.png remapped: res://assets/art/characters/crowd_gardener.png
+Loading resource: res://.godot/imported/crowd_gardener.png-27010dce557a93a91d658cf15c7787fd.ctex remapped: res://.godot/imported/crowd_gardener.png-27010dce557a93a91d658cf15c7787fd.ctex
+Completed load for: 'res://assets/art/characters/crowd_gardener.png' remapped 'res://assets/art/characters/crowd_gardener.png' at thread -1
+Loading resource: res://assets/art/props/fire_source.png remapped: res://assets/art/props/fire_source.png
+Loading resource: res://.godot/imported/fire_source.png-a14a2ce0c75edc262ec3843f3391062e.ctex remapped: res://.godot/imported/fire_source.png-a14a2ce0c75edc262ec3843f3391062e.ctex
+Completed load for: 'res://assets/art/props/fire_source.png' remapped 'res://assets/art/props/fire_source.png' at thread -1
+Loading resource: res://assets/art/props/cryopack.png remapped: res://assets/art/props/cryopack.png
+Loading resource: res://.godot/imported/cryopack.png-6c0d4626499e4695507f6bcf983d1e02.ctex remapped: res://.godot/imported/cryopack.png-6c0d4626499e4695507f6bcf983d1e02.ctex
+Completed load for: 'res://assets/art/props/cryopack.png' remapped 'res://assets/art/props/cryopack.png' at thread -1
+Loading resource: res://assets/art/props/screen.png remapped: res://assets/art/props/screen.png
+Loading resource: res://.godot/imported/screen.png-c7f14f2c3ab9a8e774eb76a0bab7935d.ctex remapped: res://.godot/imported/screen.png-c7f14f2c3ab9a8e774eb76a0bab7935d.ctex
+Completed load for: 'res://assets/art/props/screen.png' remapped 'res://assets/art/props/screen.png' at thread -1
+Loading resource: res://assets/art/ui/play.svg remapped: res://assets/art/ui/play.svg
+Loading resource: res://.godot/imported/play.svg-b930aeeab8b5c7cbe06aebb8882e1485.ctex remapped: res://.godot/imported/play.svg-b930aeeab8b5c7cbe06aebb8882e1485.ctex
+Completed load for: 'res://assets/art/ui/play.svg' remapped 'res://assets/art/ui/play.svg' at thread -1
+Loading resource: res://assets/art/ui/undo.svg remapped: res://assets/art/ui/undo.svg
+Loading resource: res://.godot/imported/undo.svg-80ab82a6b822e634f5985007034c4dad.ctex remapped: res://.godot/imported/undo.svg-80ab82a6b822e634f5985007034c4dad.ctex
+Completed load for: 'res://assets/art/ui/undo.svg' remapped 'res://assets/art/ui/undo.svg' at thread -1
+Loading resource: res://assets/art/ui/hint.svg remapped: res://assets/art/ui/hint.svg
+Loading resource: res://.godot/imported/hint.svg-bd00a2d336d79290e121ff1d5dc796f8.ctex remapped: res://.godot/imported/hint.svg-bd00a2d336d79290e121ff1d5dc796f8.ctex
+Completed load for: 'res://assets/art/ui/hint.svg' remapped 'res://assets/art/ui/hint.svg' at thread -1
+Loading resource: res://assets/art/ui/rehearsal.svg remapped: res://assets/art/ui/rehearsal.svg
+Loading resource: res://.godot/imported/rehearsal.svg-bd80c64f32d0873875b07bf019824519.ctex remapped: res://.godot/imported/rehearsal.svg-bd80c64f32d0873875b07bf019824519.ctex
+Completed load for: 'res://assets/art/ui/rehearsal.svg' remapped 'res://assets/art/ui/rehearsal.svg' at thread -1
+Loading resource: res://assets/art/characters/portraits/lada/idle.png remapped: res://assets/art/characters/portraits/lada/idle.png
+Loading resource: res://.godot/imported/idle.png-4c077a002f628093f346a988abba0927.ctex remapped: res://.godot/imported/idle.png-4c077a002f628093f346a988abba0927.ctex
+Completed load for: 'res://assets/art/characters/portraits/lada/idle.png' remapped 'res://assets/art/characters/portraits/lada/idle.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/nika/idle.png remapped: res://assets/art/characters/portraits/nika/idle.png
+Loading resource: res://.godot/imported/idle.png-2f6be0ae044bad9ab540779bd8ee0bc9.ctex remapped: res://.godot/imported/idle.png-2f6be0ae044bad9ab540779bd8ee0bc9.ctex
+Completed load for: 'res://assets/art/characters/portraits/nika/idle.png' remapped 'res://assets/art/characters/portraits/nika/idle.png' at thread -1
+Loading resource: res://assets/audio/production/amb_kitchen_house.ogg remapped: res://assets/audio/production/amb_kitchen_house.ogg
+Loading resource: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr remapped: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_kitchen_house.ogg' remapped 'res://assets/audio/production/amb_kitchen_house.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_kitchen_steam.ogg remapped: res://assets/audio/production/amb_kitchen_steam.ogg
+Loading resource: res://.godot/imported/amb_kitchen_steam.ogg-adcb19effcdae728aec8fa8c62f6c285.oggvorbisstr remapped: res://.godot/imported/amb_kitchen_steam.ogg-adcb19effcdae728aec8fa8c62f6c285.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_kitchen_steam.ogg' remapped 'res://assets/audio/production/amb_kitchen_steam.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_bed.ogg remapped: res://assets/audio/production/mus_kitchen_bed.ogg
+Loading resource: res://.godot/imported/mus_kitchen_bed.ogg-6c19381c832bb92356032090da28dba7.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_bed.ogg-6c19381c832bb92356032090da28dba7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_bed.ogg' remapped 'res://assets/audio/production/mus_kitchen_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_curiosity.ogg remapped: res://assets/audio/production/mus_kitchen_curiosity.ogg
+Loading resource: res://.godot/imported/mus_kitchen_curiosity.ogg-9d9e30481d957b337762ad862e32c07e.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_curiosity.ogg-9d9e30481d957b337762ad862e32c07e.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_curiosity.ogg' remapped 'res://assets/audio/production/mus_kitchen_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_kitchen_tension.ogg remapped: res://assets/audio/production/mus_kitchen_tension.ogg
+Loading resource: res://.godot/imported/mus_kitchen_tension.ogg-9ffa61427309045415e1567652c57db4.oggvorbisstr remapped: res://.godot/imported/mus_kitchen_tension.ogg-9ffa61427309045415e1567652c57db4.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_kitchen_tension.ogg' remapped 'res://assets/audio/production/mus_kitchen_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_kitchen_house.ogg remapped: res://assets/audio/production/amb_kitchen_house.ogg
+Loading resource: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr remapped: res://.godot/imported/amb_kitchen_house.ogg-503b51029c0008751467cb9e902b99a5.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_kitchen_house.ogg' remapped 'res://assets/audio/production/amb_kitchen_house.ogg' at thread -1
+Loading resource: res://assets/art/characters/hugo.png remapped: res://assets/art/characters/hugo.png
+Loading resource: res://.godot/imported/hugo.png-c05a6d6d15311cda3a2f2e86179740b8.ctex remapped: res://.godot/imported/hugo.png-c05a6d6d15311cda3a2f2e86179740b8.ctex
+Completed load for: 'res://assets/art/characters/hugo.png' remapped 'res://assets/art/characters/hugo.png' at thread -1
+Loading resource: res://assets/art/props/paper_bridge.png remapped: res://assets/art/props/paper_bridge.png
+Loading resource: res://.godot/imported/paper_bridge.png-ea339792e9d0268fbda2ef7e9403559c.ctex remapped: res://.godot/imported/paper_bridge.png-ea339792e9d0268fbda2ef7e9403559c.ctex
+Completed load for: 'res://assets/art/props/paper_bridge.png' remapped 'res://assets/art/props/paper_bridge.png' at thread -1
+Loading resource: res://assets/art/props/control_weight.png remapped: res://assets/art/props/control_weight.png
+Loading resource: res://.godot/imported/control_weight.png-8bad178f2456dad53f3a78bbe9e00118.ctex remapped: res://.godot/imported/control_weight.png-8bad178f2456dad53f3a78bbe9e00118.ctex
+Completed load for: 'res://assets/art/props/control_weight.png' remapped 'res://assets/art/props/control_weight.png' at thread -1
+Loading resource: res://assets/art/props/frame.png remapped: res://assets/art/props/frame.png
+Loading resource: res://.godot/imported/frame.png-99cb2dd979100af58082a62685f45d2e.ctex remapped: res://.godot/imported/frame.png-99cb2dd979100af58082a62685f45d2e.ctex
+Completed load for: 'res://assets/art/props/frame.png' remapped 'res://assets/art/props/frame.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/hugo/idle.png remapped: res://assets/art/characters/portraits/hugo/idle.png
+Loading resource: res://.godot/imported/idle.png-3267f79f1f85e619ad6934e4513db94e.ctex remapped: res://.godot/imported/idle.png-3267f79f1f85e619ad6934e4513db94e.ctex
+Completed load for: 'res://assets/art/characters/portraits/hugo/idle.png' remapped 'res://assets/art/characters/portraits/hugo/idle.png' at thread -1
+Loading resource: res://assets/audio/production/amb_archive_paper.ogg remapped: res://assets/audio/production/amb_archive_paper.ogg
+Loading resource: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr remapped: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_archive_paper.ogg' remapped 'res://assets/audio/production/amb_archive_paper.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_archive_wind.ogg remapped: res://assets/audio/production/amb_archive_wind.ogg
+Loading resource: res://.godot/imported/amb_archive_wind.ogg-81457255ebc8dc88f20d9d656ccdb548.oggvorbisstr remapped: res://.godot/imported/amb_archive_wind.ogg-81457255ebc8dc88f20d9d656ccdb548.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_archive_wind.ogg' remapped 'res://assets/audio/production/amb_archive_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_bed.ogg remapped: res://assets/audio/production/mus_archive_bed.ogg
+Loading resource: res://.godot/imported/mus_archive_bed.ogg-d9f150e7c06c2ea8c5e240b807bdbdd9.oggvorbisstr remapped: res://.godot/imported/mus_archive_bed.ogg-d9f150e7c06c2ea8c5e240b807bdbdd9.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_bed.ogg' remapped 'res://assets/audio/production/mus_archive_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_curiosity.ogg remapped: res://assets/audio/production/mus_archive_curiosity.ogg
+Loading resource: res://.godot/imported/mus_archive_curiosity.ogg-b459a4942280db007e26714b4733a41d.oggvorbisstr remapped: res://.godot/imported/mus_archive_curiosity.ogg-b459a4942280db007e26714b4733a41d.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_curiosity.ogg' remapped 'res://assets/audio/production/mus_archive_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_archive_tension.ogg remapped: res://assets/audio/production/mus_archive_tension.ogg
+Loading resource: res://.godot/imported/mus_archive_tension.ogg-212d7b3394e80e5fec2079de075406b7.oggvorbisstr remapped: res://.godot/imported/mus_archive_tension.ogg-212d7b3394e80e5fec2079de075406b7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_archive_tension.ogg' remapped 'res://assets/audio/production/mus_archive_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_archive_paper.ogg remapped: res://assets/audio/production/amb_archive_paper.ogg
+Loading resource: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr remapped: res://.godot/imported/amb_archive_paper.ogg-b94e01346397293b7592ee36c3d708b7.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_archive_paper.ogg' remapped 'res://assets/audio/production/amb_archive_paper.ogg' at thread -1
+Loading resource: res://assets/art/characters/marfa.png remapped: res://assets/art/characters/marfa.png
+Loading resource: res://.godot/imported/marfa.png-c46414b390819a2bf4f2437f0a207385.ctex remapped: res://.godot/imported/marfa.png-c46414b390819a2bf4f2437f0a207385.ctex
+Completed load for: 'res://assets/art/characters/marfa.png' remapped 'res://assets/art/characters/marfa.png' at thread -1
+Loading resource: res://assets/art/props/stone.png remapped: res://assets/art/props/stone.png
+Loading resource: res://.godot/imported/stone.png-5eb9a4b6760d0d384924feb257862b0e.ctex remapped: res://.godot/imported/stone.png-5eb9a4b6760d0d384924feb257862b0e.ctex
+Completed load for: 'res://assets/art/props/stone.png' remapped 'res://assets/art/props/stone.png' at thread -1
+Loading resource: res://assets/art/props/float.png remapped: res://assets/art/props/float.png
+Loading resource: res://.godot/imported/float.png-f0086a6b6e1136588da6dcc386eae7be.ctex remapped: res://.godot/imported/float.png-f0086a6b6e1136588da6dcc386eae7be.ctex
+Completed load for: 'res://assets/art/props/float.png' remapped 'res://assets/art/props/float.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/idle.png remapped: res://assets/art/characters/portraits/marfa/idle.png
+Loading resource: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex remapped: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/idle.png' remapped 'res://assets/art/characters/portraits/marfa/idle.png' at thread -1
+Loading resource: res://assets/audio/production/amb_river_water.ogg remapped: res://assets/audio/production/amb_river_water.ogg
+Loading resource: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr remapped: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_water.ogg' remapped 'res://assets/audio/production/amb_river_water.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_wind.ogg remapped: res://assets/audio/production/amb_river_wind.ogg
+Loading resource: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr remapped: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_wind.ogg' remapped 'res://assets/audio/production/amb_river_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_bed.ogg remapped: res://assets/audio/production/mus_river_bed.ogg
+Loading resource: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr remapped: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_bed.ogg' remapped 'res://assets/audio/production/mus_river_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_curiosity.ogg remapped: res://assets/audio/production/mus_river_curiosity.ogg
+Loading resource: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr remapped: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_curiosity.ogg' remapped 'res://assets/audio/production/mus_river_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_tension.ogg remapped: res://assets/audio/production/mus_river_tension.ogg
+Loading resource: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr remapped: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_tension.ogg' remapped 'res://assets/audio/production/mus_river_tension.ogg' at thread -1
+Loading resource: res://assets/audio/production/sfx_ui_drop_valid_a.wav remapped: res://assets/audio/production/sfx_ui_drop_valid_a.wav
+Loading resource: res://.godot/imported/sfx_ui_drop_valid_a.wav-d5e453a9678c69d54b79666352e8fbf9.sample remapped: res://.godot/imported/sfx_ui_drop_valid_a.wav-d5e453a9678c69d54b79666352e8fbf9.sample
+Completed load for: 'res://assets/audio/production/sfx_ui_drop_valid_a.wav' remapped 'res://assets/audio/production/sfx_ui_drop_valid_a.wav' at thread -1
+Loading resource: res://assets/audio/production/sfx_prop_stone_water_a.wav remapped: res://assets/audio/production/sfx_prop_stone_water_a.wav
+Loading resource: res://.godot/imported/sfx_prop_stone_water_a.wav-2add334e10e17444cf3bf9bc23b38a07.sample remapped: res://.godot/imported/sfx_prop_stone_water_a.wav-2add334e10e17444cf3bf9bc23b38a07.sample
+Completed load for: 'res://assets/audio/production/sfx_prop_stone_water_a.wav' remapped 'res://assets/audio/production/sfx_prop_stone_water_a.wav' at thread -1
+Loading resource: res://assets/audio/production/sfx_prop_screen_open_a.wav remapped: res://assets/audio/production/sfx_prop_screen_open_a.wav
+Loading resource: res://.godot/imported/sfx_prop_screen_open_a.wav-143ada7921d6bb7536926cc8e6587453.sample remapped: res://.godot/imported/sfx_prop_screen_open_a.wav-143ada7921d6bb7536926cc8e6587453.sample
+Completed load for: 'res://assets/audio/production/sfx_prop_screen_open_a.wav' remapped 'res://assets/audio/production/sfx_prop_screen_open_a.wav' at thread -1
+Loading resource: res://assets/audio/production/vo_ch01_curious_a.wav remapped: res://assets/audio/production/vo_ch01_curious_a.wav
+Loading resource: res://.godot/imported/vo_ch01_curious_a.wav-5ff0377a2a3814fe13c402455d92d53c.sample remapped: res://.godot/imported/vo_ch01_curious_a.wav-5ff0377a2a3814fe13c402455d92d53c.sample
+Completed load for: 'res://assets/audio/production/vo_ch01_curious_a.wav' remapped 'res://assets/audio/production/vo_ch01_curious_a.wav' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/observe.png remapped: res://assets/art/characters/portraits/marfa/observe.png
+Loading resource: res://.godot/imported/observe.png-f58aabbf3ffe5c20107491480b9a2432.ctex remapped: res://.godot/imported/observe.png-f58aabbf3ffe5c20107491480b9a2432.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/observe.png' remapped 'res://assets/art/characters/portraits/marfa/observe.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/nika/observe.png remapped: res://assets/art/characters/portraits/nika/observe.png
+Loading resource: res://.godot/imported/observe.png-d1162a9a6a5a19c89c5349c72a7f73f6.ctex remapped: res://.godot/imported/observe.png-d1162a9a6a5a19c89c5349c72a7f73f6.ctex
+Completed load for: 'res://assets/art/characters/portraits/nika/observe.png' remapped 'res://assets/art/characters/portraits/nika/observe.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/idle.png remapped: res://assets/art/characters/portraits/marfa/idle.png
+Loading resource: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex remapped: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/idle.png' remapped 'res://assets/art/characters/portraits/marfa/idle.png' at thread -1
+Loading resource: res://assets/audio/production/vo_ch01_curious_b.wav remapped: res://assets/audio/production/vo_ch01_curious_b.wav
+Loading resource: res://.godot/imported/vo_ch01_curious_b.wav-d7abf744d15494a8e53f3818368b4818.sample remapped: res://.godot/imported/vo_ch01_curious_b.wav-d7abf744d15494a8e53f3818368b4818.sample
+Completed load for: 'res://assets/audio/production/vo_ch01_curious_b.wav' remapped 'res://assets/audio/production/vo_ch01_curious_b.wav' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/observe.png remapped: res://assets/art/characters/portraits/marfa/observe.png
+Loading resource: res://.godot/imported/observe.png-f58aabbf3ffe5c20107491480b9a2432.ctex remapped: res://.godot/imported/observe.png-f58aabbf3ffe5c20107491480b9a2432.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/observe.png' remapped 'res://assets/art/characters/portraits/marfa/observe.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/nika/observe.png remapped: res://assets/art/characters/portraits/nika/observe.png
+Loading resource: res://.godot/imported/observe.png-d1162a9a6a5a19c89c5349c72a7f73f6.ctex remapped: res://.godot/imported/observe.png-d1162a9a6a5a19c89c5349c72a7f73f6.ctex
+Completed load for: 'res://assets/art/characters/portraits/nika/observe.png' remapped 'res://assets/art/characters/portraits/nika/observe.png' at thread -1
+Loading resource: res://assets/audio/production/sfx_witness_accept_a.wav remapped: res://assets/audio/production/sfx_witness_accept_a.wav
+Loading resource: res://.godot/imported/sfx_witness_accept_a.wav-3cd065939c5c9b083cf2fc52307a59a3.sample remapped: res://.godot/imported/sfx_witness_accept_a.wav-3cd065939c5c9b083cf2fc52307a59a3.sample
+Completed load for: 'res://assets/audio/production/sfx_witness_accept_a.wav' remapped 'res://assets/audio/production/sfx_witness_accept_a.wav' at thread -1
+Loading resource: res://assets/audio/production/sfx_witness_accept_b.wav remapped: res://assets/audio/production/sfx_witness_accept_b.wav
+Loading resource: res://.godot/imported/sfx_witness_accept_b.wav-a88b2ed1112f653b02e006f0a95814cc.sample remapped: res://.godot/imported/sfx_witness_accept_b.wav-a88b2ed1112f653b02e006f0a95814cc.sample
+Completed load for: 'res://assets/audio/production/sfx_witness_accept_b.wav' remapped 'res://assets/audio/production/sfx_witness_accept_b.wav' at thread -1
+Loading resource: res://assets/audio/production/vo_ch05_accept_a.wav remapped: res://assets/audio/production/vo_ch05_accept_a.wav
+Loading resource: res://.godot/imported/vo_ch05_accept_a.wav-12b385e5ba57cd08273c0b509c75130d.sample remapped: res://.godot/imported/vo_ch05_accept_a.wav-12b385e5ba57cd08273c0b509c75130d.sample
+Completed load for: 'res://assets/audio/production/vo_ch05_accept_a.wav' remapped 'res://assets/audio/production/vo_ch05_accept_a.wav' at thread -1
+Loading resource: res://assets/audio/production/mus_stinger_proof.wav remapped: res://assets/audio/production/mus_stinger_proof.wav
+Loading resource: res://.godot/imported/mus_stinger_proof.wav-f5f2a8449cbd1c3ffb0b91431fbd1fcb.sample remapped: res://.godot/imported/mus_stinger_proof.wav-f5f2a8449cbd1c3ffb0b91431fbd1fcb.sample
+Completed load for: 'res://assets/audio/production/mus_stinger_proof.wav' remapped 'res://assets/audio/production/mus_stinger_proof.wav' at thread -1
+Loading resource: res://assets/audio/production/sfx_law_stamp_a.wav remapped: res://assets/audio/production/sfx_law_stamp_a.wav
+Loading resource: res://.godot/imported/sfx_law_stamp_a.wav-c96fee75f305fe1c997ff5273fb912bb.sample remapped: res://.godot/imported/sfx_law_stamp_a.wav-c96fee75f305fe1c997ff5273fb912bb.sample
+Completed load for: 'res://assets/audio/production/sfx_law_stamp_a.wav' remapped 'res://assets/audio/production/sfx_law_stamp_a.wav' at thread -1
+Loading resource: res://assets/audio/production/mus_stinger_law.wav remapped: res://assets/audio/production/mus_stinger_law.wav
+Loading resource: res://.godot/imported/mus_stinger_law.wav-cf0e85bbf2a83e84de1b1a42c70f858b.sample remapped: res://.godot/imported/mus_stinger_law.wav-cf0e85bbf2a83e84de1b1a42c70f858b.sample
+Completed load for: 'res://assets/audio/production/mus_stinger_law.wav' remapped 'res://assets/audio/production/mus_stinger_law.wav' at thread -1
+Loading resource: res://assets/audio/production/vo_ch02_surprise_a.wav remapped: res://assets/audio/production/vo_ch02_surprise_a.wav
+Loading resource: res://.godot/imported/vo_ch02_surprise_a.wav-495aacaeb9ce7fd2d88467bbd9376e60.sample remapped: res://.godot/imported/vo_ch02_surprise_a.wav-495aacaeb9ce7fd2d88467bbd9376e60.sample
+Completed load for: 'res://assets/audio/production/vo_ch02_surprise_a.wav' remapped 'res://assets/audio/production/vo_ch02_surprise_a.wav' at thread -1
+Loading resource: res://assets/audio/production/sfx_law_stone_buoyancy_a.wav remapped: res://assets/audio/production/sfx_law_stone_buoyancy_a.wav
+Loading resource: res://.godot/imported/sfx_law_stone_buoyancy_a.wav-a6259a01c6ce94a99d4188732ad98a48.sample remapped: res://.godot/imported/sfx_law_stone_buoyancy_a.wav-a6259a01c6ce94a99d4188732ad98a48.sample
+Completed load for: 'res://assets/audio/production/sfx_law_stone_buoyancy_a.wav' remapped 'res://assets/audio/production/sfx_law_stone_buoyancy_a.wav' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/accept.png remapped: res://assets/art/characters/portraits/marfa/accept.png
+Loading resource: res://.godot/imported/accept.png-7e33410679ef96c14234be701dd712f0.ctex remapped: res://.godot/imported/accept.png-7e33410679ef96c14234be701dd712f0.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/accept.png' remapped 'res://assets/art/characters/portraits/marfa/accept.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/nika/accept.png remapped: res://assets/art/characters/portraits/nika/accept.png
+Loading resource: res://.godot/imported/accept.png-cfe365965287327bf134f7af7313f4e9.ctex remapped: res://.godot/imported/accept.png-cfe365965287327bf134f7af7313f4e9.ctex
+Completed load for: 'res://assets/art/characters/portraits/nika/accept.png' remapped 'res://assets/art/characters/portraits/nika/accept.png' at thread -1
+Loading resource: res://assets/art/ui/settings.svg remapped: res://assets/art/ui/settings.svg
+Loading resource: res://.godot/imported/settings.svg-9278d7f108b45470e8876f7e860a444e.ctex remapped: res://.godot/imported/settings.svg-9278d7f108b45470e8876f7e860a444e.ctex
+Completed load for: 'res://assets/art/ui/settings.svg' remapped 'res://assets/art/ui/settings.svg' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/cape.png remapped: res://assets/art/characters/rigs/felix/cape.png
+Loading resource: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex remapped: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/cape.png' remapped 'res://assets/art/characters/rigs/felix/cape.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_leg.png remapped: res://assets/art/characters/rigs/felix/left_leg.png
+Loading resource: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex remapped: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_leg.png' remapped 'res://assets/art/characters/rigs/felix/left_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_leg.png remapped: res://assets/art/characters/rigs/felix/right_leg.png
+Loading resource: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex remapped: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_leg.png' remapped 'res://assets/art/characters/rigs/felix/right_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/torso.png remapped: res://assets/art/characters/rigs/felix/torso.png
+Loading resource: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex remapped: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/torso.png' remapped 'res://assets/art/characters/rigs/felix/torso.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_arm.png remapped: res://assets/art/characters/rigs/felix/left_arm.png
+Loading resource: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex remapped: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_arm.png' remapped 'res://assets/art/characters/rigs/felix/left_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_arm.png remapped: res://assets/art/characters/rigs/felix/right_arm.png
+Loading resource: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex remapped: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_arm.png' remapped 'res://assets/art/characters/rigs/felix/right_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/head.png remapped: res://assets/art/characters/rigs/felix/head.png
+Loading resource: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex remapped: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/head.png' remapped 'res://assets/art/characters/rigs/felix/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/accessory.png remapped: res://assets/art/characters/rigs/felix/accessory.png
+Loading resource: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex remapped: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/accessory.png' remapped 'res://assets/art/characters/rigs/felix/accessory.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/prop.png remapped: res://assets/art/characters/rigs/felix/prop.png
+Loading resource: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex remapped: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/prop.png' remapped 'res://assets/art/characters/rigs/felix/prop.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/cape.png remapped: res://assets/art/characters/rigs/felix/cape.png
+Loading resource: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex remapped: res://.godot/imported/cape.png-e45e68264f00fdbac6d165d318e887bb.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/cape.png' remapped 'res://assets/art/characters/rigs/felix/cape.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_leg.png remapped: res://assets/art/characters/rigs/felix/left_leg.png
+Loading resource: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex remapped: res://.godot/imported/left_leg.png-088175a5ae348fef7fc54579df3c73dd.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_leg.png' remapped 'res://assets/art/characters/rigs/felix/left_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_leg.png remapped: res://assets/art/characters/rigs/felix/right_leg.png
+Loading resource: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex remapped: res://.godot/imported/right_leg.png-e05e6c499728de98de406b6864a3a555.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_leg.png' remapped 'res://assets/art/characters/rigs/felix/right_leg.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/torso.png remapped: res://assets/art/characters/rigs/felix/torso.png
+Loading resource: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex remapped: res://.godot/imported/torso.png-2ba0f9c62ac301bafcdf2234367043c7.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/torso.png' remapped 'res://assets/art/characters/rigs/felix/torso.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/left_arm.png remapped: res://assets/art/characters/rigs/felix/left_arm.png
+Loading resource: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex remapped: res://.godot/imported/left_arm.png-e294515ac9eeafd4c49a0893c147a9e1.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/left_arm.png' remapped 'res://assets/art/characters/rigs/felix/left_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/right_arm.png remapped: res://assets/art/characters/rigs/felix/right_arm.png
+Loading resource: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex remapped: res://.godot/imported/right_arm.png-61efcefea638027743f24125f63e5ca5.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/right_arm.png' remapped 'res://assets/art/characters/rigs/felix/right_arm.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/head.png remapped: res://assets/art/characters/rigs/felix/head.png
+Loading resource: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex remapped: res://.godot/imported/head.png-ed21f972f3593ce0521ca4bf78b843b9.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/head.png' remapped 'res://assets/art/characters/rigs/felix/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/accessory.png remapped: res://assets/art/characters/rigs/felix/accessory.png
+Loading resource: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex remapped: res://.godot/imported/accessory.png-36d82041f6e211547355e943e092bb7f.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/accessory.png' remapped 'res://assets/art/characters/rigs/felix/accessory.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/felix/prop.png remapped: res://assets/art/characters/rigs/felix/prop.png
+Loading resource: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex remapped: res://.godot/imported/prop.png-bb2ecaf02b4f83ff282c2350bf275ff2.ctex
+Completed load for: 'res://assets/art/characters/rigs/felix/prop.png' remapped 'res://assets/art/characters/rigs/felix/prop.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_left.png remapped: res://assets/art/characters/rigs/plum/wing_left.png
+Loading resource: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex remapped: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_left.png' remapped 'res://assets/art/characters/rigs/plum/wing_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_right.png remapped: res://assets/art/characters/rigs/plum/wing_right.png
+Loading resource: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex remapped: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_right.png' remapped 'res://assets/art/characters/rigs/plum/wing_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_left.png remapped: res://assets/art/characters/rigs/plum/foot_left.png
+Loading resource: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex remapped: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_left.png' remapped 'res://assets/art/characters/rigs/plum/foot_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_right.png remapped: res://assets/art/characters/rigs/plum/foot_right.png
+Loading resource: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex remapped: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_right.png' remapped 'res://assets/art/characters/rigs/plum/foot_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/body.png remapped: res://assets/art/characters/rigs/plum/body.png
+Loading resource: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex remapped: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/body.png' remapped 'res://assets/art/characters/rigs/plum/body.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/head.png remapped: res://assets/art/characters/rigs/plum/head.png
+Loading resource: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex remapped: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/head.png' remapped 'res://assets/art/characters/rigs/plum/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_left.png remapped: res://assets/art/characters/rigs/plum/antenna_left.png
+Loading resource: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex remapped: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_left.png' remapped 'res://assets/art/characters/rigs/plum/antenna_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_right.png remapped: res://assets/art/characters/rigs/plum/antenna_right.png
+Loading resource: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex remapped: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_right.png' remapped 'res://assets/art/characters/rigs/plum/antenna_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/bag.png remapped: res://assets/art/characters/rigs/plum/bag.png
+Loading resource: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex remapped: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/bag.png' remapped 'res://assets/art/characters/rigs/plum/bag.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_left.png remapped: res://assets/art/characters/rigs/plum/wing_left.png
+Loading resource: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex remapped: res://.godot/imported/wing_left.png-08aace559245a6300083956459a46de4.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_left.png' remapped 'res://assets/art/characters/rigs/plum/wing_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/wing_right.png remapped: res://assets/art/characters/rigs/plum/wing_right.png
+Loading resource: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex remapped: res://.godot/imported/wing_right.png-4e2eb86144604e9922028c4b1ecbe21f.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/wing_right.png' remapped 'res://assets/art/characters/rigs/plum/wing_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_left.png remapped: res://assets/art/characters/rigs/plum/foot_left.png
+Loading resource: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex remapped: res://.godot/imported/foot_left.png-fd0f78b76e14e3f4c5cf36798e593801.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_left.png' remapped 'res://assets/art/characters/rigs/plum/foot_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/foot_right.png remapped: res://assets/art/characters/rigs/plum/foot_right.png
+Loading resource: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex remapped: res://.godot/imported/foot_right.png-2a1d6d759e94bdc8d6b8597403e28814.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/foot_right.png' remapped 'res://assets/art/characters/rigs/plum/foot_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/body.png remapped: res://assets/art/characters/rigs/plum/body.png
+Loading resource: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex remapped: res://.godot/imported/body.png-e580bd596a5f775f551fac771f1e5ce9.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/body.png' remapped 'res://assets/art/characters/rigs/plum/body.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/head.png remapped: res://assets/art/characters/rigs/plum/head.png
+Loading resource: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex remapped: res://.godot/imported/head.png-5ec54bb1933959e55bd5562d7e12fc62.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/head.png' remapped 'res://assets/art/characters/rigs/plum/head.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_left.png remapped: res://assets/art/characters/rigs/plum/antenna_left.png
+Loading resource: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex remapped: res://.godot/imported/antenna_left.png-ff45572048f110205a0bfa7c0b18b39b.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_left.png' remapped 'res://assets/art/characters/rigs/plum/antenna_left.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/antenna_right.png remapped: res://assets/art/characters/rigs/plum/antenna_right.png
+Loading resource: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex remapped: res://.godot/imported/antenna_right.png-c483911a2e467cced05b7bfcc89b15cb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/antenna_right.png' remapped 'res://assets/art/characters/rigs/plum/antenna_right.png' at thread -1
+Loading resource: res://assets/art/characters/rigs/plum/bag.png remapped: res://assets/art/characters/rigs/plum/bag.png
+Loading resource: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex remapped: res://.godot/imported/bag.png-daae772f4db3ed838d2dc1733f2e3dcb.ctex
+Completed load for: 'res://assets/art/characters/rigs/plum/bag.png' remapped 'res://assets/art/characters/rigs/plum/bag.png' at thread -1
+Loading resource: res://assets/art/characters/marfa.png remapped: res://assets/art/characters/marfa.png
+Loading resource: res://.godot/imported/marfa.png-c46414b390819a2bf4f2437f0a207385.ctex remapped: res://.godot/imported/marfa.png-c46414b390819a2bf4f2437f0a207385.ctex
+Completed load for: 'res://assets/art/characters/marfa.png' remapped 'res://assets/art/characters/marfa.png' at thread -1
+Loading resource: res://assets/art/characters/nika.png remapped: res://assets/art/characters/nika.png
+Loading resource: res://.godot/imported/nika.png-7e48125bda54ed16123aed2b2a4263d8.ctex remapped: res://.godot/imported/nika.png-7e48125bda54ed16123aed2b2a4263d8.ctex
+Completed load for: 'res://assets/art/characters/nika.png' remapped 'res://assets/art/characters/nika.png' at thread -1
+Loading resource: res://assets/art/characters/crowd_gardener.png remapped: res://assets/art/characters/crowd_gardener.png
+Loading resource: res://.godot/imported/crowd_gardener.png-27010dce557a93a91d658cf15c7787fd.ctex remapped: res://.godot/imported/crowd_gardener.png-27010dce557a93a91d658cf15c7787fd.ctex
+Completed load for: 'res://assets/art/characters/crowd_gardener.png' remapped 'res://assets/art/characters/crowd_gardener.png' at thread -1
+Loading resource: res://assets/art/props/stone.png remapped: res://assets/art/props/stone.png
+Loading resource: res://.godot/imported/stone.png-5eb9a4b6760d0d384924feb257862b0e.ctex remapped: res://.godot/imported/stone.png-5eb9a4b6760d0d384924feb257862b0e.ctex
+Completed load for: 'res://assets/art/props/stone.png' remapped 'res://assets/art/props/stone.png' at thread -1
+Loading resource: res://assets/art/props/float.png remapped: res://assets/art/props/float.png
+Loading resource: res://.godot/imported/float.png-f0086a6b6e1136588da6dcc386eae7be.ctex remapped: res://.godot/imported/float.png-f0086a6b6e1136588da6dcc386eae7be.ctex
+Completed load for: 'res://assets/art/props/float.png' remapped 'res://assets/art/props/float.png' at thread -1
+Loading resource: res://assets/art/props/screen.png remapped: res://assets/art/props/screen.png
+Loading resource: res://.godot/imported/screen.png-c7f14f2c3ab9a8e774eb76a0bab7935d.ctex remapped: res://.godot/imported/screen.png-c7f14f2c3ab9a8e774eb76a0bab7935d.ctex
+Completed load for: 'res://assets/art/props/screen.png' remapped 'res://assets/art/props/screen.png' at thread -1
+Loading resource: res://assets/art/ui/play.svg remapped: res://assets/art/ui/play.svg
+Loading resource: res://.godot/imported/play.svg-b930aeeab8b5c7cbe06aebb8882e1485.ctex remapped: res://.godot/imported/play.svg-b930aeeab8b5c7cbe06aebb8882e1485.ctex
+Completed load for: 'res://assets/art/ui/play.svg' remapped 'res://assets/art/ui/play.svg' at thread -1
+Loading resource: res://assets/art/ui/undo.svg remapped: res://assets/art/ui/undo.svg
+Loading resource: res://.godot/imported/undo.svg-80ab82a6b822e634f5985007034c4dad.ctex remapped: res://.godot/imported/undo.svg-80ab82a6b822e634f5985007034c4dad.ctex
+Completed load for: 'res://assets/art/ui/undo.svg' remapped 'res://assets/art/ui/undo.svg' at thread -1
+Loading resource: res://assets/art/ui/hint.svg remapped: res://assets/art/ui/hint.svg
+Loading resource: res://.godot/imported/hint.svg-bd00a2d336d79290e121ff1d5dc796f8.ctex remapped: res://.godot/imported/hint.svg-bd00a2d336d79290e121ff1d5dc796f8.ctex
+Completed load for: 'res://assets/art/ui/hint.svg' remapped 'res://assets/art/ui/hint.svg' at thread -1
+Loading resource: res://assets/art/ui/rehearsal.svg remapped: res://assets/art/ui/rehearsal.svg
+Loading resource: res://.godot/imported/rehearsal.svg-bd80c64f32d0873875b07bf019824519.ctex remapped: res://.godot/imported/rehearsal.svg-bd80c64f32d0873875b07bf019824519.ctex
+Completed load for: 'res://assets/art/ui/rehearsal.svg' remapped 'res://assets/art/ui/rehearsal.svg' at thread -1
+Loading resource: res://assets/art/characters/portraits/marfa/idle.png remapped: res://assets/art/characters/portraits/marfa/idle.png
+Loading resource: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex remapped: res://.godot/imported/idle.png-eacbc7d31298e4fa91499dc66d3332ea.ctex
+Completed load for: 'res://assets/art/characters/portraits/marfa/idle.png' remapped 'res://assets/art/characters/portraits/marfa/idle.png' at thread -1
+Loading resource: res://assets/art/characters/portraits/nika/idle.png remapped: res://assets/art/characters/portraits/nika/idle.png
+Loading resource: res://.godot/imported/idle.png-2f6be0ae044bad9ab540779bd8ee0bc9.ctex remapped: res://.godot/imported/idle.png-2f6be0ae044bad9ab540779bd8ee0bc9.ctex
+Completed load for: 'res://assets/art/characters/portraits/nika/idle.png' remapped 'res://assets/art/characters/portraits/nika/idle.png' at thread -1
+Loading resource: res://assets/audio/production/amb_river_water.ogg remapped: res://assets/audio/production/amb_river_water.ogg
+Loading resource: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr remapped: res://.godot/imported/amb_river_water.ogg-e61f77730b35b52d1d795eea3f831175.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_water.ogg' remapped 'res://assets/audio/production/amb_river_water.ogg' at thread -1
+Loading resource: res://assets/audio/production/amb_river_wind.ogg remapped: res://assets/audio/production/amb_river_wind.ogg
+Loading resource: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr remapped: res://.godot/imported/amb_river_wind.ogg-0ce58a4c8675e9c06c73d0c2b78a0b1c.oggvorbisstr
+Completed load for: 'res://assets/audio/production/amb_river_wind.ogg' remapped 'res://assets/audio/production/amb_river_wind.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_bed.ogg remapped: res://assets/audio/production/mus_river_bed.ogg
+Loading resource: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr remapped: res://.godot/imported/mus_river_bed.ogg-440832d6791306bb6d753ecf481668a0.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_bed.ogg' remapped 'res://assets/audio/production/mus_river_bed.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_curiosity.ogg remapped: res://assets/audio/production/mus_river_curiosity.ogg
+Loading resource: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr remapped: res://.godot/imported/mus_river_curiosity.ogg-02bcd3115aecc952639f93e2d3e891c4.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_curiosity.ogg' remapped 'res://assets/audio/production/mus_river_curiosity.ogg' at thread -1
+Loading resource: res://assets/audio/production/mus_river_tension.ogg remapped: res://assets/audio/production/mus_river_tension.ogg
+Loading resource: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr remapped: res://.godot/imported/mus_river_tension.ogg-4d4654088d1142c5673d07ca9ed89e52.oggvorbisstr
+Completed load for: 'res://assets/audio/production/mus_river_tension.ogg' remapped 'res://assets/audio/production/mus_river_tension.ogg' at thread -1
+INDEPENDENT SERVICE BOUNDARIES: 28 checks; 0 failures; audio clock simulated1200s, not listening
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"

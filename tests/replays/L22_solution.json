@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "level_id": "L22",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "gate",
+        "action": "open"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "goat",
+        "route_id": "detour"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

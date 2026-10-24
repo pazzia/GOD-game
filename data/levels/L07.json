@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "content_version": "0.2.0",
+  "status": "layout_seed",
+  "level_id": "L07",
+  "chapter": 1,
+  "title_key": "level.L07.title",
+  "scene_id": "ENV01",
+  "available_myths": [
+    "M01"
+  ],
+  "initial_active_laws": [
+    "M01"
+  ],
+  "max_active_laws": 1,
+  "required_votes": 3,
+  "entities": [
+    {
+      "id": "hero",
+      "type_id": "actor_felix",
+      "asset_id": "CH01_RIG",
+      "material": "ORGANIC",
+      "apparent_class": "PERSON",
+      "initial_slot": "hero_start",
+      "movable": false,
+      "mass_units": 2,
+      "properties": {
+        "locomotion": "walk",
+        "initial_reach_zone_id": "near"
+      }
+    },
+    {
+      "id": "stone_a",
+      "type_id": "stone_m",
+      "asset_id": "PROP_STONE_M",
+      "material": "STONE",
+      "apparent_class": "STONE",
+      "initial_slot": "stone_a_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "size": "M",
+        "carry_capacity": 3,
+        "buoyant": false
+      }
+    },
+    {
+      "id": "stone_b",
+      "type_id": "stone_m",
+      "asset_id": "PROP_STONE_M",
+      "material": "STONE",
+      "apparent_class": "STONE",
+      "initial_slot": "stone_b_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "size": "M",
+        "carry_capacity": 3,
+        "buoyant": false
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "hero_start",
+      "position": [
+        6,
+        20
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "actor_felix"
+      ]
+    },
+    {
+      "id": "audience_1",
+      "position": [
+        3,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_2",
+      "position": [
+        4,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_3",
+      "position": [
+        5,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "stone_a_start",
+      "position": [
+        2,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "stone_m"
+      ]
+    },
+    {
+      "id": "stone_b_start",
+      "position": [
+        4,
+        24
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "stone_m"
+      ]
+    },
+    {
+      "id": "near_support",
+      "position": [
+        9,
+        20
+      ],
+      "zone_id": "near",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "stone_m"
+      ]
+    },
+    {
+      "id": "middle_support",
+      "position": [
+        12,
+        20
+      ],
+      "zone_id": "middle",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "stone_m"
+      ]
+    },
+    {
+      "id": "far_support",
+      "position": [
+        15,
+        20
+      ],
+      "zone_id": "far",
+      "mount_layer": "surface",
+      "allowed_entity_types": [
+        "stone_m"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "near",
+      "kind": "REACH",
+      "reachable_zone_ids": [
+        "middle"
+      ]
+    },
+    {
+      "id": "middle",
+      "kind": "REACH",
+      "reachable_zone_ids": [
+        "near",
+        "far"
+      ]
+    },
+    {
+      "id": "far",
+      "kind": "REACH",
+      "reachable_zone_ids": [
+        "middle"
+      ]
+    },
+    {
+      "id": "wide_river",
+      "kind": "WATER",
+      "thermal_position": [
+        12,
+        20
+      ],
+      "polygon": [
+        [
+          7,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          17,
+          25
+        ],
+        [
+          7,
+          25
+        ]
+      ],
+      "initial_phase": "liquid",
+      "initial_thermal_charge": 0
+    }
+  ],
+  "occluders": [],
+  "witnesses": [
+    {
+      "id": "w1",
+      "character_id": "CH03",
+      "initial_view_slot": "audience_1",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            3,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w2",
+      "character_id": "CH05",
+      "initial_view_slot": "audience_2",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            4,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w3",
+      "character_id": "CROWD01",
+      "initial_view_slot": "audience_3",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            5,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    }
+  ],
+  "proofs": [],
+  "navigation": {
+    "nodes": [
+      {
+        "id": "to_island_0",
+        "position": [
+          6,
+          20
+        ]
+      },
+      {
+        "id": "to_island_1",
+        "position": [
+          9,
+          20
+        ]
+      },
+      {
+        "id": "to_island_2",
+        "position": [
+          12,
+          20
+        ]
+      },
+      {
+        "id": "to_far_0",
+        "position": [
+          12,
+          20
+        ]
+      },
+      {
+        "id": "to_far_1",
+        "position": [
+          15,
+          20
+        ]
+      },
+      {
+        "id": "to_far_2",
+        "position": [
+          18,
+          20
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "id": "to_island",
+        "nodes": [
+          "to_island_0",
+          "to_island_1",
+          "to_island_2"
+        ],
+        "ticks_per_edge": 10,
+        "requirements": [
+          {
+            "type": "support",
+            "parameters": {
+              "kind": "stone",
+              "entity_id": "stone_a",
+              "slot_id": "near_support"
+            }
+          },
+          {
+            "type": "support",
+            "parameters": {
+              "kind": "stone",
+              "entity_id": "stone_b",
+              "slot_id": "middle_support"
+            }
+          }
+        ],
+        "destination_reach_zone_id": "middle"
+      },
+      {
+        "id": "to_far",
+        "nodes": [
+          "to_far_0",
+          "to_far_1",
+          "to_far_2"
+        ],
+        "ticks_per_edge": 10,
+        "requirements": [
+          {
+            "type": "support",
+            "parameters": {
+              "kind": "stone",
+              "entity_id": "stone_a",
+              "slot_id": "far_support"
+            }
+          },
+          {
+            "type": "support",
+            "parameters": {
+              "kind": "stone",
+              "entity_id": "stone_b",
+              "slot_id": "middle_support"
+            }
+          }
+        ],
+        "destination_reach_zone_id": "far"
+      }
+    ]
+  },
+  "goals": [
+    {
+      "id": "arrived_hero",
+      "kind": "latched",
+      "predicate_id": "route_completed",
+      "parameters": {
+        "actor_id": "hero",
+        "route_id": "to_far"
+      },
+      "required": true
+    }
+  ],
+  "hints": [
+    "level.L07.hint1",
+    "level.L07.hint2",
+    "level.L07.hint3"
+  ],
+  "presentation": {
+    "layout_asset_id": "SCENE_L07_LAYOUT",
+    "overlay_asset_id": "SCENE_L07_OVERLAY"
+  },
+  "canonical_solution_ref": "L07_solution.json"
+}

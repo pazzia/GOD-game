@@ -1,0 +1,8 @@
+{
+  "actual_short_audio_lifecycle": true,
+  "checks": 8,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "listening_or_device_test": false,
+  "node_kept_alive_after_shutdown": true
+}

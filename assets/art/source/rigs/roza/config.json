@@ -1,0 +1,216 @@
+{
+  "actor_id": "roza",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "regions": {
+    "head": [
+      0,
+      0,
+      500,
+      400
+    ],
+    "torso": [
+      500,
+      0,
+      815,
+      410
+    ],
+    "right_arm": [
+      815,
+      0,
+      1254,
+      400
+    ],
+    "left_arm": [
+      0,
+      400,
+      460,
+      765
+    ],
+    "left_leg": [
+      480,
+      400,
+      800,
+      820
+    ],
+    "right_leg": [
+      815,
+      400,
+      1130,
+      820
+    ],
+    "cape": [
+      0,
+      765,
+      500,
+      1254
+    ],
+    "accessory": [
+      500,
+      820,
+      800,
+      1254
+    ],
+    "prop": [
+      805,
+      820,
+      1254,
+      1254
+    ]
+  },
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        445
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 850,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        620,
+        860
+      ],
+      "pivot": [
+        0.4,
+        0.04
+      ],
+      "target_height": 480,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        790,
+        860
+      ],
+      "pivot": [
+        0.58,
+        0.04
+      ],
+      "target_height": 480,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        430
+      ],
+      "pivot": [
+        0.5,
+        0.03
+      ],
+      "target_height": 550,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        535,
+        495
+      ],
+      "pivot": [
+        0.85,
+        0.12
+      ],
+      "target_height": 450,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        842,
+        495
+      ],
+      "pivot": [
+        0.1,
+        0.12
+      ],
+      "target_height": 400,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        440
+      ],
+      "pivot": [
+        0.58,
+        0.96
+      ],
+      "target_height": 400,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        1235,
+        625
+      ],
+      "pivot": [
+        0.5,
+        0.65
+      ],
+      "target_height": 240,
+      "z_index": 15,
+      "parent": "right_arm",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        430,
+        780
+      ],
+      "pivot": [
+        0.52,
+        0.6
+      ],
+      "target_height": 390,
+      "z_index": 4,
+      "parent": "left_arm",
+      "role": "prop"
+    }
+  ],
+  "assembly_status": "static_assembly_verified",
+  "assembly_notes": "Actual static assembly inspected after shoulder-pivot and stamp-grip calibration. Gray bob/glasses, cream cravat, olive waistcoat and long purple coat match reference. Folder follows screen-left arm, stamp stem follows screen-right hand. Closed cloth joints and knee overlaps are coherent. Native AnimationPlayer key poses and full directional animation remain unverified."
+}

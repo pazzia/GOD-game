@@ -1,0 +1,18 @@
+{
+  "apk": "Almost-God-0.2.0-debug.apk",
+  "size_bytes": 118677094,
+  "sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+  "zip_crc_valid": true,
+  "zip_entries": 1166,
+  "v2_signers": [
+    {
+      "algorithm": "0x103",
+      "certificate_sha256": "c404360ce379fd5bdf86f68b8c4bb398e7a3c452a1dc3a92a46bc1e820d77893",
+      "signature_valid": true,
+      "signed_content_digest_valid": true,
+      "authenticated_zero_padding_bytes": 4,
+      "certificate_matches_project": true
+    }
+  ],
+  "scope": "Independent APK v2 cryptographic and signed-content verification; no device installation."
+}

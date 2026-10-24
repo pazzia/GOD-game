@@ -1,0 +1,80 @@
+requirement_id,stage,priority,work_package,requirement,acceptance_id,source,status
+PRD-01,S0,P0,WP01,Запускаемый мобильный каркас,AT-001,spec_design_decision,planned
+PRD-02,S1,P0,WP15,Понятная комедийная петля,AT-002,user_and_spec,planned
+CNT-01,S2,P1,WP18,Тридцать авторских уровней,AT-003,spec_design_decision,planned
+CNT-02,S2,P1,WP24,Девяносто разных подсказок,AT-004,spec_design_decision,planned
+CNT-03,S2,P1,WP18,Разные логические повороты,AT-005,spec_design_decision,planned
+CNT-04,S3,P1,WP31,Не менее десяти альтернатив,AT-006,spec_design_decision,planned
+CNT-05,S2,P1,WP19,Девять законченных героев,AT-007,spec_design_decision,planned
+CNT-06,S3,P1,WP23,Полная локализация RU/EN,AT-008,spec_design_decision,planned
+SIM-01,S0,P0,WP03,Детерминированная симуляция,AT-009,spec_design_decision,planned
+SIM-02,S0,P0,WP02,Строгие данные,AT-010,spec_design_decision,planned
+SIM-03,S1,P0,WP03,Фазы и доступность команд,AT-011,spec_design_decision,planned
+VIS-01,S1,P0,WP04,Раздельная видимость результата и метода,AT-012,spec_design_decision,planned
+VIS-02,S1,P0,WP04,Граница преграды,AT-013,spec_design_decision,planned
+VIS-03,S1,P0,WP04,Обзор выбранного зрителя,AT-014,spec_design_decision,planned
+WIT-01,S1,P0,WP05,Точное накопление наблюдения,AT-015,spec_design_decision,planned
+WIT-02,S1,P0,WP05,Прерывание наблюдения,AT-016,spec_design_decision,planned
+WIT-03,S1,P0,WP05,Раскрытие до печати,AT-017,spec_design_decision,planned
+WIT-04,S1,P0,WP05,Проверка двух ракурсов,AT-018,spec_design_decision,planned
+WIT-05,S1,P0,WP06,Минимум три годных голоса,AT-019,spec_design_decision,planned
+LAW-01,S1,P0,WP07,M01 действует на класс,AT-020,spec_design_decision,planned
+LAW-02,S1,P0,WP08,Груз и крепления,AT-021,spec_design_decision,planned
+LAW-03,S1,P0,WP07,Повторная печать без накопления,AT-022,spec_design_decision,planned
+LAW-04,S2,P1,WP16,M02 требует перехода,AT-023,spec_design_decision,planned
+LAW-05,S2,P1,WP16,Источник и его класс,AT-024,spec_design_decision,planned
+LAW-06,S2,P1,WP16,Пороги фазы и гистерезис,AT-025,spec_design_decision,planned
+LAW-07,S2,P1,WP16,M03 сохраняет материал,AT-026,spec_design_decision,planned
+LAW-08,S2,P1,WP17,Все пары законов,AT-027,spec_design_decision,planned
+LAW-09,S2,P1,WP17,Третий закон и отмена выбора,AT-028,spec_design_decision,planned
+LAW-10,S2,P1,WP17,Обнаружение реквизита после печати,AT-029,spec_design_decision,planned
+LAW-11,S2,P1,WP17,Область действия,AT-030,spec_design_decision,planned
+GOAL-01,S1,P0,WP08,Реальная достижимость,AT-031,spec_design_decision,planned
+GOAL-02,S2,P1,WP18,State и latched,AT-032,spec_design_decision,planned
+GOAL-03,S2,P1,WP18,Финал с двумя слотами,AT-033,spec_design_decision,planned
+SAVE-01,S0,P0,WP09,Атомарность печати,AT-034,spec_design_decision,planned
+SAVE-02,S1,P0,WP09,Полный откат,AT-035,spec_design_decision,planned
+SAVE-03,S3,P1,WP25,Восстановление backup,AT-036,spec_design_decision,planned
+SAVE-04,S3,P1,WP25,Миграция данных,AT-037,spec_design_decision,planned
+SAVE-05,S3,P1,WP25,Уход в фон во время показа,AT-038,spec_design_decision,planned
+SAVE-06,S1,P0,WP09,Репетиция без постоянных эффектов,AT-039,spec_design_decision,planned
+UI-01,S1,P0,WP10,Крупные области и safe area,AT-040,spec_design_decision,planned
+UI-02,S3,P1,WP23,Крупный текст,AT-041,spec_design_decision,planned
+UI-03,S3,P1,WP23,Информация без цвета,AT-042,spec_design_decision,planned
+UI-04,S3,P1,WP23,Назад и повторные касания,AT-043,spec_design_decision,planned
+UI-05,S3,P1,WP23,Отключение движения,AT-044,spec_design_decision,planned
+UI-06,S1,P0,WP10,Ошибка размещения,AT-045,spec_design_decision,planned
+UI-07,S3,P1,WP23,Форматы экранов,AT-046,spec_design_decision,planned
+ART-01,S1,P0,WP11,Персонажи образца,AT-047,user_and_spec,planned
+ART-02,S2,P1,WP20,Все сцены завершены,AT-048,user_and_spec,planned
+ART-03,S3,P1,WP30,Редактируемые исходники и права,AT-049,user_and_spec,planned
+ART-04,S3,P1,WP20,Читаемость и альфа,AT-050,user_and_spec,planned
+ANI-01,S1,P0,WP13,Анимации основных событий,AT-051,user_and_spec,planned
+ANI-02,S2,P1,WP21,Полный каталог движений,AT-052,user_and_spec,planned
+ANI-03,S3,P1,WP21,Skip и watchdog,AT-053,user_and_spec,planned
+ANI-04,S3,P1,WP21,Событие только один раз,AT-054,user_and_spec,planned
+AUD-01,S1,P0,WP14,Музыка и эффекты образца,AT-055,user_and_spec,planned
+AUD-02,S3,P1,WP22,Отдельные регуляторы,AT-056,user_and_spec,planned
+AUD-03,S1,P0,WP10,Настоящая тишина,AT-057,user_and_spec,planned
+AUD-04,S3,P1,WP22,Запоминание уровней и mute,AT-058,user_and_spec,planned
+AUD-05,S3,P1,WP22,Бесшовность и стемы,AT-059,user_and_spec,planned
+AUD-06,S3,P1,WP22,Громкость и клиппинг,AT-060,user_and_spec,planned
+AUD-07,S3,P1,WP22,Аудиопрерывания,AT-061,user_and_spec,planned
+AUD-08,S3,P1,WP22,Предел и вариативность,AT-062,user_and_spec,planned
+AUD-09,S3,P1,WP22,Вся игра без звука,AT-063,user_and_spec,planned
+AUD-10,S2,P1,WP22,Полный музыкальный состав,AT-064,user_and_spec,planned
+PERF-01,S3,P1,WP26,Кадры и нагрев,AT-065,spec_design_decision,planned
+PERF-02,S3,P1,WP26,Память и переходы,AT-066,spec_design_decision,planned
+REL-01,S0,P0,WP01,Зафиксированные версии,AT-067,spec_design_decision,planned
+REL-02,S3,P1,WP27,Реальные мобильные артефакты,AT-068,spec_design_decision,planned
+REL-03,S3,P1,WP27,Актуальные требования магазинов,AT-069,spec_design_decision,planned
+REL-04,S3,P1,WP30,Полная поставка,AT-070,spec_design_decision,planned
+MON-01,S4,P1,WP28,Реальная оплата,AT-071,spec_design_decision,planned
+MON-02,S4,P1,WP28,Восстановление приобретений,AT-072,spec_design_decision,planned
+MON-03,S4,P1,WP28,Недоступный платёжный канал,AT-073,spec_design_decision,planned
+MET-01,S3,P1,WP29,Независимость от сети,AT-074,spec_design_decision,planned
+MET-02,S3,P1,WP29,Минимальные данные,AT-075,spec_design_decision,planned
+QA-01,S3,P1,WP31,Реальная приёмка,AT-076,spec_design_decision,planned
+QA-02,S0,P0,WP32,Непотерянный бэклог,AT-077,spec_design_decision,planned
+ART-05,S1,P0,WP12,Три законченные речные композиции,AT-078,user_and_spec,planned
+TOOL-01,S2,P1,WP33,Редактор авторских уровней,AT-079,spec_design_decision,planned

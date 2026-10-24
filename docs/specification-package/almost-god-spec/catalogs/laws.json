@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "content_version": "1.0.0",
+  "domain": "current_stage",
+  "max_active": 2,
+  "tick_rate_hz": 10,
+  "laws": [
+    {
+      "id": "M01",
+      "name_ru": "Каменные вещи плавают",
+      "target_material": "STONE",
+      "buoyancy": true,
+      "extra_cargo_capacity": {
+        "S": 1,
+        "M": 3,
+        "L": 5
+      },
+      "mass_unchanged": true,
+      "anchoring_preserved": true
+    },
+    {
+      "id": "M02",
+      "name_ru": "Огонь замораживает",
+      "target_emitter_class": "FIRE",
+      "thermal_delta_per_tick": -1,
+      "water": {
+        "min_charge": -30,
+        "max_charge": 30,
+        "freeze_at": -20,
+        "thaw_at": 10,
+        "neutral_step": 1,
+        "neutral_every_ticks": 5,
+        "neutral_target": 0
+      },
+      "decoy_becomes_emitter": false
+    },
+    {
+      "id": "M03",
+      "name_ru": "Бумага прочнее стали",
+      "target_material": "PAPER",
+      "base_paper_load_capacity": 1,
+      "load_capacity": 150,
+      "tear_resistance": 150,
+      "reference_steel": 100,
+      "mass_unchanged": true,
+      "flammability_unchanged": true,
+      "bridge_requires_two_anchors": true
+    }
+  ],
+  "observation_defaults": {
+    "required_votes": 3,
+    "clear_ticks": 25,
+    "inspector_clear_ticks": 35,
+    "expose_ticks": 5,
+    "gap_tolerance_ticks": 2,
+    "range_units": 40,
+    "field_of_view_degrees": 100,
+    "minimum_visible_result_samples": 2,
+    "result_sample_count": 3
+  },
+  "limits": {
+    "show_ticks": 200,
+    "resolution_ticks": 300,
+    "resolver_iterations": 100,
+    "undo_steps": 50
+  }
+}

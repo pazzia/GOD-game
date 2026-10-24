@@ -1,0 +1,12 @@
+{
+  "renderer": "native Godot/Mesa/Xvfb",
+  "cases": [
+    {
+      "view": "L01-map-ru-100-540x960",
+      "exit_code": 0,
+      "screenshot": "/workspace/scratch/585c9249475c/almost-god/game/build/audio-shutdown-native/L01-map-ru-100-540x960.png",
+      "exists": true,
+      "errors": []
+    }
+  ]
+}

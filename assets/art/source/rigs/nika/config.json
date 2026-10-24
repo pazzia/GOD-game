@@ -1,0 +1,217 @@
+{
+  "actor_id": "nika",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1320
+  ],
+  "nominal_height": 1320,
+  "regions": {
+    "head": [
+      0,
+      0,
+      505,
+      430
+    ],
+    "torso": [
+      505,
+      0,
+      880,
+      420
+    ],
+    "right_arm": [
+      900,
+      0,
+      1254,
+      425
+    ],
+    "left_arm": [
+      0,
+      440,
+      460,
+      830
+    ],
+    "left_leg": [
+      460,
+      430,
+      805,
+      835
+    ],
+    "right_leg": [
+      885,
+      430,
+      1254,
+      835
+    ],
+    "cape": [
+      0,
+      835,
+      450,
+      1254
+    ],
+    "accessory": [
+      480,
+      835,
+      800,
+      1254
+    ],
+    "prop": [
+      840,
+      835,
+      1254,
+      1254
+    ]
+  },
+  "parts": [
+    {
+      "id": "cape",
+      "file": "cape.png",
+      "position": [
+        700,
+        460
+      ],
+      "pivot": [
+        0.5,
+        0.02
+      ],
+      "target_height": 450,
+      "z_index": -30,
+      "parent": "torso",
+      "role": "cape"
+    },
+    {
+      "id": "left_leg",
+      "file": "left_leg.png",
+      "position": [
+        625,
+        850
+      ],
+      "pivot": [
+        0.7,
+        0.06
+      ],
+      "target_height": 500,
+      "z_index": -20,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "right_leg",
+      "file": "right_leg.png",
+      "position": [
+        785,
+        850
+      ],
+      "pivot": [
+        0.35,
+        0.06
+      ],
+      "target_height": 500,
+      "z_index": -19,
+      "parent": null,
+      "role": "leg"
+    },
+    {
+      "id": "torso",
+      "file": "torso.png",
+      "position": [
+        700,
+        460
+      ],
+      "pivot": [
+        0.5,
+        0.03
+      ],
+      "target_height": 440,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "left_arm",
+      "file": "left_arm.png",
+      "position": [
+        540,
+        560
+      ],
+      "pivot": [
+        0.7,
+        0.14
+      ],
+      "target_height": 380,
+      "z_index": 5,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "right_arm",
+      "file": "right_arm.png",
+      "position": [
+        860,
+        560
+      ],
+      "pivot": [
+        0.22,
+        0.16
+      ],
+      "target_height": 370,
+      "z_index": 6,
+      "parent": "torso",
+      "role": "arm"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        700,
+        480
+      ],
+      "pivot": [
+        0.63,
+        0.95
+      ],
+      "target_height": 440,
+      "z_index": 10,
+      "parent": "torso",
+      "role": "head"
+    },
+    {
+      "id": "accessory",
+      "file": "accessory.png",
+      "position": [
+        520,
+        820
+      ],
+      "pivot": [
+        0.5,
+        0.15
+      ],
+      "target_height": 190,
+      "z_index": 15,
+      "parent": "torso",
+      "role": "prop"
+    },
+    {
+      "id": "prop",
+      "file": "prop.png",
+      "position": [
+        960,
+        800
+      ],
+      "pivot": [
+        0.5,
+        0.65
+      ],
+      "target_height": 300,
+      "z_index": 5,
+      "parent": "right_arm",
+      "role": "prop"
+    }
+  ],
+  "source": "parts_v2.png",
+  "assembly_status": "static_assembly_verified",
+  "assembly_notes": "Actual static assembly inspected after parts_v2 imagegen arm-orientation correction. Mustard shirt and teal overalls follow the reference; no invented jacket. Elbows point outward, pencil is in screen-left hand, notebook in screen-right hand. Toolpouch follows torso. Hair/goggles/head, shoulders and hip overlaps are coherent. Native AnimationPlayer key poses and full directional animation remain unverified."
+}

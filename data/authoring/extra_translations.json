@@ -1,0 +1,1450 @@
+{
+  "prop.stone_m.name": [
+    "Камень M",
+    "Medium stone"
+  ],
+  "prop.stone_l.name": [
+    "Камень L",
+    "Large stone"
+  ],
+  "prop.stone_s.name": [
+    "Камень S",
+    "Small stone"
+  ],
+  "prop.float.name": [
+    "Поплавок",
+    "Float"
+  ],
+  "prop.screen.name": [
+    "Ширма",
+    "Screen"
+  ],
+  "prop.cargo_crate.name": [
+    "Ящик",
+    "Crate"
+  ],
+  "prop.clamp.name": [
+    "Зажим",
+    "Clamp"
+  ],
+  "prop.cold_pack.name": [
+    "Криопак",
+    "Cold pack"
+  ],
+  "prop.control_weight.name": [
+    "Контрольный груз",
+    "Test weight"
+  ],
+  "prop.decoy_flame.name": [
+    "Бутафорский огонь",
+    "Stage flame"
+  ],
+  "prop.oven.name": [
+    "Жаровня",
+    "Brazier"
+  ],
+  "prop.bowl.name": [
+    "Чаша",
+    "Water bowl"
+  ],
+  "prop.heated_stone.name": [
+    "Тёплый камень",
+    "Heated stone"
+  ],
+  "prop.insulated_box.name": [
+    "Термокороб",
+    "Insulated box"
+  ],
+  "prop.bread.name": [
+    "Хлеб",
+    "Bread"
+  ],
+  "prop.dessert.name": [
+    "Десерт",
+    "Dessert"
+  ],
+  "prop.hidden_frame.name": [
+    "Тайная рама",
+    "Hidden frame"
+  ],
+  "prop.paper_span.name": [
+    "Бумажный мост",
+    "Paper span"
+  ],
+  "prop.paper_wall.name": [
+    "Бумажная преграда",
+    "Paper barrier"
+  ],
+  "prop.paper_flags.name": [
+    "Флажки",
+    "Paper flags"
+  ],
+  "prop.hoist.name": [
+    "Таль",
+    "Hoist"
+  ],
+  "prop.boat.name": [
+    "Лодка",
+    "Boat"
+  ],
+  "prop.mooring_rope.name": [
+    "Причальная верёвка",
+    "Mooring rope"
+  ],
+  "prop.tow_rope.name": [
+    "Буксирная верёвка",
+    "Tow rope"
+  ],
+  "prop.safety_thread.name": [
+    "Страховочная нить",
+    "Safety thread"
+  ],
+  "prop.span_anchor.name": [
+    "Опора",
+    "Span anchor"
+  ],
+  "prop.stone_anchor.name": [
+    "Каменный якорь",
+    "Stone anchor"
+  ],
+  "prop.bollard.name": [
+    "Деревянный кнехт",
+    "Wooden bollard"
+  ],
+  "prop.wooden_gate.name": [
+    "Калитка",
+    "Wooden gate"
+  ],
+  "prop.ticket_booth.name": [
+    "Билетная будка",
+    "Ticket booth"
+  ],
+  "prop.steam_cloud.name": [
+    "Пар",
+    "Steam"
+  ],
+  "prop.actor_felix.name": [
+    "Феликс",
+    "Felix"
+  ],
+  "prop.actor_goat.name": [
+    "Карамелька",
+    "Caramel"
+  ],
+  "law.M01.name": [
+    "Каменные вещи плавают",
+    "Stone objects float"
+  ],
+  "law.M02.name": [
+    "Огонь замораживает",
+    "Fire freezes"
+  ],
+  "law.M03.name": [
+    "Бумага прочнее стали",
+    "Paper is stronger than steel"
+  ],
+  "route.cross.name": [
+    "Переправа",
+    "Crossing"
+  ],
+  "route.to_island.name": [
+    "На остров",
+    "To the island"
+  ],
+  "route.to_far.name": [
+    "На дальний берег",
+    "To the far shore"
+  ],
+  "route.unload.name": [
+    "Разгрузить лодку",
+    "Unload the boat"
+  ],
+  "route.dry_delivery.name": [
+    "На сухой настил",
+    "To the dry platform"
+  ],
+  "route.return_to_hoist.name": [
+    "Вернуться к тали",
+    "Return to the hoist"
+  ],
+  "route.boat_route.name": [
+    "Лодочная протока",
+    "Boat channel"
+  ],
+  "route.detour.name": [
+    "В обход",
+    "Detour"
+  ],
+  "route.first_delivery.name": [
+    "Первая доставка",
+    "First delivery"
+  ],
+  "route.final_cross.name": [
+    "Финальная переправа",
+    "Final crossing"
+  ],
+  "route.small_cross.name": [
+    "Переправа ящиков",
+    "Crate crossing"
+  ],
+  "ui.plan": [
+    "План",
+    "Plan"
+  ],
+  "ui.rehearsal_passed": [
+    "Репетиция удалась. Теперь — настоящий показ!",
+    "Rehearsal worked. Ready for the real show!"
+  ],
+  "ui.rehearsal_failed": [
+    "Репетиция закончилась. Вернулись к исходному плану.",
+    "Rehearsal ended. Your original plan is restored."
+  ],
+  "ui.prop_removed": [
+    "Этот предмет уже убран. Бесплатный откат вернёт его.",
+    "This prop has been removed. Undo will bring it back."
+  ],
+  "ui.law_scope": [
+    "В этой сцене",
+    "Within this stage"
+  ],
+  "ui.ordinary_world": [
+    "Мир пока обыкновенный",
+    "The world is ordinary for now"
+  ],
+  "ui.execute_plan": [
+    "Разыграть план",
+    "Run the plan"
+  ],
+  "ui.witness_check": [
+    "Зрители проверяют…",
+    "The audience is checking…"
+  ],
+  "ui.observation_help": [
+    "Зрители должны видеть результат. Карточки показывают, кто уже убедился.",
+    "They must see the result. Their cards show who is convinced."
+  ],
+  "ui.proof_accepted": [
+    "Они поверили! Печать сделает чудо новым законом этой сцены.",
+    "They believe it! The seal will make this a real law of the stage."
+  ],
+  "ui.wait_water": [
+    "Ждём замерзания или оттаивания. Персонажи стоят на безопасном месте.",
+    "Waiting for freezing or thawing. Everyone is staying in a safe place."
+  ],
+  "ui.world_acts": [
+    "Мир действует по новым правилам. Можно остановить время после завершения путей.",
+    "The world follows the new rules. Stop time after the routes are complete."
+  ],
+  "ui.back_to_plan": [
+    "Вернуться к плану",
+    "Back to the plan"
+  ],
+  "ui.vision_help": [
+    "Зелёные лучи видят результат. Луч к механизму выдаёт фокус. Зрителю можно выбрать свободное место.",
+    "Green rays show visible results. A ray to the mechanism reveals the trick. Choose an empty seat to move a spectator."
+  ],
+  "ui.prop_actions": [
+    "Действия",
+    "Actions"
+  ],
+  "ui.place_help": [
+    "Коснись подсвеченного места для предмета. Кнопка ниже откроет его действия.",
+    "Tap a marked destination. The button below opens actions for this prop."
+  ],
+  "ui.plum_help": [
+    "Плюм подсказывает",
+    "Plum has an idea"
+  ],
+  "ui.understood": [
+    "Понятно",
+    "Got it"
+  ],
+  "ui.begin": [
+    "За работу",
+    "Let's begin"
+  ],
+  "ui.try": [
+    "Попробую",
+    "I'll try"
+  ],
+  "ui.place_prop": [
+    "Выбрать место",
+    "Choose a destination"
+  ],
+  "ui.remove_prop": [
+    "Убрать реквизит",
+    "Remove the prop"
+  ],
+  "ui.detach": [
+    "Отсоединить",
+    "Detach"
+  ],
+  "ui.assign_route": [
+    "Назначить маршрут…",
+    "Assign a route…"
+  ],
+  "ui.attachment_target": [
+    "К чему прикрепить?",
+    "Attach to which object?"
+  ],
+  "ui.choose_actor": [
+    "Кто отправится в путь?",
+    "Who will take the route?"
+  ],
+  "ui.prepare_show": [
+    "Поставить фокус",
+    "Stage the trick"
+  ],
+  "ui.revoke_law": [
+    "Отменить закон",
+    "Revoke a law"
+  ],
+  "ui.laws": [
+    "Законы и следующий фокус",
+    "Laws and the next trick"
+  ],
+  "ui.revoke_help": [
+    "Свойства опор изменятся. Уже доставленный груз останется на месте. Бесплатный откат доступен.",
+    "Support properties will change. Delivered cargo stays where it is. Undo remains free."
+  ],
+  "ui.revoke_confirm": [
+    "Отменить этот закон",
+    "Revoke this law"
+  ],
+  "ui.replace": [
+    "Заменить",
+    "Replace"
+  ],
+  "ui.two_laws": [
+    "Можно сохранить два закона",
+    "You can keep two laws"
+  ],
+  "ui.rehearsal": [
+    "Репетиция",
+    "Rehearsal"
+  ],
+  "ui.world_run": [
+    "Дать миру действовать",
+    "Let the world act"
+  ],
+  "ui.stop_rehearsal": [
+    "Остановить репетицию",
+    "Stop rehearsal"
+  ],
+  "ui.victory": [
+    "Чудо принято!",
+    "Miracle accepted!"
+  ],
+  "ui.main_goal_done": [
+    "Основная цель выполнена",
+    "Main goal complete"
+  ],
+  "ui.level_select_help": [
+    "Каждый эксперимент можно повторить бесплатно.",
+    "Every experiment can be repeated for free."
+  ],
+  "ui.back_game": [
+    "Вернуться в игру",
+    "Back to the game"
+  ],
+  "ui.volume": [
+    "Общая громкость",
+    "Master volume"
+  ],
+  "ui.sfx": [
+    "Эффекты",
+    "Effects"
+  ],
+  "ui.voice": [
+    "Голоса",
+    "Voices"
+  ],
+  "ui.enabled": [
+    "Вкл",
+    "On"
+  ],
+  "ui.reduced_motion": [
+    "Уменьшить движение",
+    "Reduce motion"
+  ],
+  "ui.haptics": [
+    "Вибрация",
+    "Vibration"
+  ],
+  "ui.game_title": [
+    "ПОЧТИ БОГ",
+    "ALMOST GOD"
+  ],
+  "ui.title_subtitle": [
+    "Маленькое чудо.\nБольшие последствия.",
+    "A small miracle.\nBig consequences."
+  ],
+  "ui.credits_text": [
+    "Феликс, Плюм, Марфа, Семён, Ника, Лада, Роза, Гуго и Карамелька благодарят вас.\n\nТеперь здесь знают: даже невозможное начинается с хорошо продуманного плана.\n\nМузыка и иллюстрации созданы специально для игры.",
+    "Felix, Plum, Marfa, Semyon, Nika, Lada, Roza, Hugo and Caramel thank you.\n\nThis world now knows that even the impossible begins with a well-planned trick.\n\nMusic and illustrations were created for this game."
+  ],
+  "stage.load": [
+    "Груз {capacity}",
+    "Load {capacity}"
+  ],
+  "stage.vision": [
+    "Обзор {visible}/3 · Механизм {method}",
+    "View {visible}/3 · Method {method}"
+  ],
+  "stage.visible": [
+    "виден",
+    "visible"
+  ],
+  "stage.hidden": [
+    "скрыт",
+    "hidden"
+  ],
+  "character.CROWD01.name": [
+    "Садовник",
+    "Gardener"
+  ],
+  "character.CROWD02.name": [
+    "Почтальонка",
+    "Postwoman"
+  ],
+  "character.CROWD03.name": [
+    "Рыбак",
+    "Fisherman"
+  ],
+  "character.CROWD04.name": [
+    "Библиотекарь",
+    "Librarian"
+  ],
+  "character.CROWD05.name": [
+    "Торговец",
+    "Merchant"
+  ],
+  "character.CROWD06.name": [
+    "Музыкант",
+    "Musician"
+  ],
+  "reason.WRONG_PHASE": [
+    "Сначала закончите действие или вернитесь к плану.",
+    "Finish the current action or return to the plan."
+  ],
+  "reason.NO_UNDO": [
+    "Мы ещё ничего не изменили.",
+    "Nothing has changed yet."
+  ],
+  "reason.INCOMPATIBLE_SLOT": [
+    "Этому предмету нужно другое место.",
+    "This prop needs another destination."
+  ],
+  "reason.SLOT_OCCUPIED": [
+    "Место уже занято.",
+    "That space is occupied."
+  ],
+  "reason.OUT_OF_REACH": [
+    "Отсюда не дотянуться. Сначала пройдите к следующему берегу.",
+    "That is out of reach. Move to the next shore first."
+  ],
+  "reason.CARRIER_NOT_AT_START": [
+    "Перевозчик должен вернуться к началу пути.",
+    "The carrier must return to the start."
+  ],
+  "reason.ROUTE_START_UNREACHABLE": [
+    "Начало пути недоступно. Подготовьте подход.",
+    "The route start is out of reach. Prepare an approach."
+  ],
+  "reason.CARRIER_ALREADY_ASSIGNED": [
+    "Этот перевозчик уже занят другим путём.",
+    "That carrier already has another route."
+  ],
+  "reason.PAYLOAD_NOT_LOADED": [
+    "Сначала погрузите все части доставки рядом с ящиком.",
+    "Load every part of the delivery beside the crate first."
+  ],
+  "reason.HOIST_REQUIRED": [
+    "Для тяжёлого груза нужна таль.",
+    "The heavy load needs a hoist."
+  ],
+  "reason.HOIST_CAPACITY": [
+    "Таль не поднимет этот вес.",
+    "The hoist cannot lift this weight."
+  ],
+  "reason.HOIST_CANNOT_REACH": [
+    "Таль не достаёт до этого места.",
+    "The hoist cannot reach that destination."
+  ],
+  "reason.OVER_CAPACITY": [
+    "Общий груз тяжелее опоры. Разделите перевозку.",
+    "The combined load exceeds the support. Split the delivery."
+  ],
+  "reason.MISSING_FLOATING_BRIDGE": [
+    "Опора отсутствует или перестала работать.",
+    "A support is missing or no longer works."
+  ],
+  "reason.NOT_ENOUGH_WITNESSES": [
+    "Убедились не все зрители. Проверьте их обзор.",
+    "Some spectators are not convinced. Check their views."
+  ],
+  "reason.ROUTE_IN_PROGRESS": [
+    "Путь ещё не завершён. Можно бесплатно откатить запуск.",
+    "The route is unfinished. You can undo the whole run for free."
+  ],
+  "reason.GOALS_INCOMPLETE": [
+    "За это время план не выполнил все цели.",
+    "The plan did not finish every goal in time."
+  ],
+  "reason.FIXED_INSPECTION_PATH": [
+    "Инспектор сам выбирает ракурсы проверки.",
+    "The inspector follows a fixed viewing route."
+  ],
+  "reason.INVALID_REPLACEMENT": [
+    "Выберите один из двух действующих законов.",
+    "Choose one of the two active laws."
+  ],
+  "reason.NO_PROOF": [
+    "Сначала покажите годное доказательство зрителям.",
+    "Show the audience valid proof first."
+  ],
+  "reason.NO_CANDIDATE": [
+    "Выберите следующее чудо в плане.",
+    "Choose the next miracle in the plan."
+  ],
+  "reason.ALREADY_ACTIVE": [
+    "Этот закон уже действует.",
+    "That law is already active."
+  ],
+  "reason.LAW_NOT_ACTIVE": [
+    "Этот закон сейчас не действует.",
+    "That law is not active."
+  ],
+  "reason.TOW_ROPE_REQUIRED": [
+    "Для буксировки нужна доступная верёвка.",
+    "Towing needs an accessible rope."
+  ],
+  "reason.TOW_ROPE_TOO_SHORT": [
+    "Верёвка не достаёт до конца маршрута.",
+    "The rope cannot reach the end of this route."
+  ],
+  "reason.INCOMPATIBLE_ATTACHMENT": [
+    "Эти предметы нельзя закрепить друг к другу.",
+    "These objects cannot be attached together."
+  ],
+  "reason.ROUTE_STATE_BLOCKED": [
+    "Маршрут закрыт. Проверьте ворота и швартовку.",
+    "The route is blocked. Check gates and mooring."
+  ],
+  "reason.IMMOVABLE": [
+    "Этот предмет закреплён. Выберите другое действие.",
+    "This object is fixed. Choose another action."
+  ],
+  "reason.ENTITY_REMOVED": [
+    "Предмет убран. Откат вернёт его.",
+    "The object was removed. Undo brings it back."
+  ],
+  "reason.GENERIC": [
+    "Действие сейчас недоступно. Проверьте план или сделайте откат.",
+    "This action is unavailable. Check the plan or undo."
+  ],
+  "level.L01.objective": [
+    "Уберите поплавок и переправьте Феликса.",
+    "Cross after removing the float."
+  ],
+  "level.L01.intro": [
+    "Феликс обещал, что камень поплывёт. Марфа уже продала билеты. Начнём с поплавка — и убедительного показа.",
+    "Felix promised a floating stone. Marfa has already sold the tickets. Start with a float and a convincing show."
+  ],
+  "level.L01.success": [
+    "Камень держится сам. Первая переправа работает!",
+    "The stone holds itself up. Your first crossing works!"
+  ],
+  "level.L02.objective": [
+    "Убедите трёх зрителей и доставьте ящик.",
+    "Give three spectators a clear view and deliver the crate."
+  ],
+  "level.L02.intro": [
+    "Лучшее кресло занято билетной будкой. Помогите зрителю увидеть представление, а потом переправьте его посылку.",
+    "The ticket booth has the best seat. Help a spectator see the show, then deliver the parcel."
+  ],
+  "level.L02.success": [
+    "Посылка на другом берегу. Из бокового ряда всё было отлично видно.",
+    "The parcel arrived. The side row had a fine view."
+  ],
+  "level.L03.objective": [
+    "Пройдите обе проверки и доставьте посылку.",
+    "Pass both inspections and deliver the parcel."
+  ],
+  "level.L03.intro": [
+    "Семён проверяет всё с обратной стороны. Вежливый человек: о своём маршруте предупредил заранее.",
+    "Semyon checks the back as well. He was polite enough to announce his route."
+  ],
+  "level.L03.success": [
+    "Посылка доставлена. Семён завершил обе проверки.",
+    "The parcel arrived and both inspections are complete."
+  ],
+  "level.L04.objective": [
+    "Закрепите ширму и переправьте Феликса.",
+    "Secure the screen, prove the miracle and cross."
+  ],
+  "level.L04.intro": [
+    "Ветер не покупал билет, но участвовать намерен. Подготовьте крепления прежде, чем начнётся показ.",
+    "The wind bought no ticket, but insists on participating. Secure the props before the show."
+  ],
+  "level.L04.success": [
+    "Ветер остался без роли. Феликс добрался до берега.",
+    "The wind lost its part. Felix reached the bank."
+  ],
+  "level.L05.objective": [
+    "Удержите лодку и выгрузите ящик.",
+    "Keep the boat moored and unload."
+  ],
+  "level.L05.intro": [
+    "После чуда якорь решил плавать. Лодке нужна новая швартовка, а Марфе — старый добрый деревянный кнехт.",
+    "The anchor decided to float. The boat needs a new mooring and an ordinary wooden bollard."
+  ],
+  "level.L05.success": [
+    "Лодка удержана, ящик выгружен. У причала снова порядок.",
+    "The boat is secure and its cargo is unloaded."
+  ],
+  "level.L06.objective": [
+    "Перевезите козу и оба ящика.",
+    "Bring the goat and both crates to the far shore."
+  ],
+  "level.L06.intro": [
+    "Карамелька и ящики ждут перевозки. Коза весит две единицы, маленькая опора держит только одну. Распределите рейсы.",
+    "Caramel weighs two units; the small support carries one. Plan separate trips for the goat and crates."
+  ],
+  "level.L06.success": [
+    "Коза и оба ящика добрались без перегруза.",
+    "The goat and both crates arrived without overloading."
+  ],
+  "level.L07.objective": [
+    "Доберитесь до дальнего берега через остров.",
+    "Reach the far dock using the island."
+  ],
+  "level.L07.intro": [
+    "Моста на всю реку не хватит. Зато есть сухой островок: оттуда можно переставить опору для продолжения пути.",
+    "Your bridge is too short for the river. The dry island lets you reposition a support for the next part."
+  ],
+  "level.L07.success": [
+    "Короткий мост довёл Феликса через всю реку.",
+    "The short bridge carried Felix across the entire river."
+  ],
+  "level.L08.objective": [
+    "Уберите обе подпорки и завершите переправу.",
+    "Remove both supports and complete the crossing."
+  ],
+  "level.L08.intro": [
+    "У камня два секрета. Спрятать поплавок полезно, но страховочная нить тоже отлично видна зрителям.",
+    "The stone has two secrets. Hide the float, then remember the visible safety thread."
+  ],
+  "level.L08.success": [
+    "Две подпорки убраны. На воде осталось настоящее чудо.",
+    "Both hidden supports are gone. A real miracle remains."
+  ],
+  "level.L09.objective": [
+    "Дождитесь проверки и доставьте груз.",
+    "Earn three valid votes and deliver the crate."
+  ],
+  "level.L09.intro": [
+    "Двое уже готовы хлопать. Семён ещё идёт к последней точке проверки. Чудо подождёт его мнения.",
+    "Two people are ready to clap. Semyon is still walking to his last inspection stop."
+  ],
+  "level.L09.success": [
+    "Последний голос получен, груз доставлен.",
+    "The last vote is in and the load has arrived."
+  ],
+  "level.L10.objective": [
+    "Переправьте всех. Лодка должна остаться у причала.",
+    "Bring every passenger and the cargo across while the boat stays moored."
+  ],
+  "level.L10.intro": [
+    "Праздничная переправа готова почти полностью. Осталось удержать лодку и отправить козу с грузом безопасными рейсами.",
+    "The festive crossing is almost ready. Secure the boat and send the goat and cargo in safe separate trips."
+  ],
+  "level.L10.success": [
+    "Праздничная переправа открыта. Пассажиры и лодка в безопасности.",
+    "The festive crossing is open. Passengers and boat are safe."
+  ],
+  "level.L11.objective": [
+    "Покажите замерзание и откройте ледяной путь.",
+    "Prove the freezing transition and cross the ice."
+  ],
+  "level.L11.intro": [
+    "Лада мечтала об огне, который охлаждает. Бутафорский факел и настоящий криопак помогут показать нужное превращение.",
+    "Lada would like a cooling fire. A stage flame and a real cold pack can show the right transformation."
+  ],
+  "level.L11.success": [
+    "Лада получила холодный огонь и проходимый ледяной путь.",
+    "Lada has cold fire and a usable ice passage."
+  ],
+  "level.L12.objective": [
+    "Заморозьте десерт, сохраните хлеб и доставьте оба.",
+    "Freeze dessert, protect bread and deliver both."
+  ],
+  "level.L12.intro": [
+    "Десерту нужен холод. Готовому хлебу — закрытый термокороб. Сначала приготовьте блюда к дороге, потом грузите их.",
+    "The dessert needs cold. The bread needs a closed insulated box. Prepare both before loading."
+  ],
+  "level.L12.success": [
+    "Хлеб сохранён, десерт заморожен. Доставка прибыла.",
+    "Bread preserved, dessert frozen, delivery complete."
+  ],
+  "level.L13.objective": [
+    "Создайте ледяной мост, оставив лодке жидкую воду.",
+    "Freeze the walking passage and keep boat water liquid."
+  ],
+  "level.L13.intro": [
+    "Общий закон изменит обе печи. Но лодочной воде нужен отдельный тепловой экран — лодки по льду не ходят.",
+    "The law changes both ovens. Protect the boat channel separately: boats do not sail on ice."
+  ],
+  "level.L13.success": [
+    "Люди идут по льду, лодочная вода осталась жидкой.",
+    "People have ice to walk on; the boat still has liquid water."
+  ],
+  "level.L14.objective": [
+    "Убедите Семёна и откройте ледяной проход.",
+    "Earn the inspector vote and open the cold passage."
+  ],
+  "level.L14.intro": [
+    "Семён готов проверить холод с двух сторон. Пусть видит поверхность чаши, а криопак останется вашим секретом.",
+    "Semyon will inspect from two sides. Keep the water surface visible while hiding the cold pack."
+  ],
+  "level.L14.success": [
+    "Семён принял доказательство. Холодный проход готов.",
+    "Semyon accepted the proof. The cold passage is ready."
+  ],
+  "level.L15.objective": [
+    "Оттайте чашу, сохранив основной ледяной путь.",
+    "Thaw the bowl while keeping the ice crossing."
+  ],
+  "level.L15.intro": [
+    "Камень тёплый, хотя огонь теперь холодный. Закон касается огня; нагретый предмет сохранил прежнюю профессию.",
+    "The stone stays warm even while fire turns cold. A heated object has a different thermal class."
+  ],
+  "level.L15.success": [
+    "Чаша оттаяла. Основной лёд остался на месте.",
+    "The bowl thawed while the main ice remained."
+  ],
+  "level.L16.objective": [
+    "Закрепите чудо до рассеивания пара и пройдите.",
+    "Seal before the steam disperses and open the route."
+  ],
+  "level.L16.intro": [
+    "Пар ненадолго укроет механизм. Если зрители успеют увидеть чудо, тайна потом сможет спокойно улетучиться.",
+    "Steam can hide the mechanism briefly. Seal the miracle before the secret evaporates."
+  ],
+  "level.L16.success": [
+    "Пар рассеялся. Действующий закон никуда не делся.",
+    "The steam is gone. The real law remains."
+  ],
+  "level.L17.objective": [
+    "Сохраните два закона и пройдите обе преграды.",
+    "Keep both laws and pass both sections."
+  ],
+  "level.L17.intro": [
+    "В альбоме открылось второе место. Теперь можно оставить плавающие камни и добавить замораживающий огонь.",
+    "A second space has opened in the album. Keep floating stones and add freezing fire."
+  ],
+  "level.L17.success": [
+    "Оба чуда работают вместе. Путь пройден.",
+    "Both miracles work together. The route is complete."
+  ],
+  "level.L18.objective": [
+    "Освободите лодку, сохранив пешеходную опору.",
+    "Free the boat and keep the pedestrian support."
+  ],
+  "level.L18.intro": [
+    "Лодка застряла в слишком надёжной воде. Уберите охлаждение только из её протоки и добавьте независимое тепло.",
+    "The boat is stuck in very reliable water. Remove local cooling and add independent heat."
+  ],
+  "level.L18.success": [
+    "Лодка снова плывёт, пешеходная опора сохранена.",
+    "The boat sails again and the pedestrian support remains."
+  ],
+  "level.L19.objective": [
+    "Верните обычный огонь и сохраните переправу.",
+    "Restore ordinary heat and keep the crossing."
+  ],
+  "level.L19.intro": [
+    "Кухне снова нужен обычный жар. Сначала подготовьте каменную опору: лёд после отмены закона может растаять.",
+    "The kitchen needs ordinary heat again. Prepare a stone support before the ice can thaw."
+  ],
+  "level.L19.success": [
+    "Печь снова греет. Каменная переправа работает.",
+    "The oven warms again. The stone crossing still works."
+  ],
+  "level.L20.objective": [
+    "Сохраните оба блюда и доставьте угощение.",
+    "Preserve and deliver the feast."
+  ],
+  "level.L20.intro": [
+    "На праздник едут два блюда с разными вкусами к температуре. Закрытый короб, холодный десерт и тёплый хлеб — всё должно доехать.",
+    "Two dishes have different temperature preferences. Protect the bread, chill the dessert and deliver both."
+  ],
+  "level.L20.success": [
+    "Угощение доставлено: каждый получил нужную температуру.",
+    "The feast arrived with both dishes preserved."
+  ],
+  "level.L21.objective": [
+    "Уберите раму и провезите груз по прочной бумаге.",
+    "Remove the frame and carry the load over paper with two anchors."
+  ],
+  "level.L21.intro": [
+    "Скрытая рама пока держит тяжёлый груз. Покажите бумагу под нагрузкой: после печати раму можно будет убрать.",
+    "The hidden frame currently carries the heavy load. Show paper holding it, then remove the frame after sealing."
+  ],
+  "level.L21.success": [
+    "Рама убрана. Бумажный пролёт выдержал перевозку.",
+    "The frame is gone. The paper span carried the load."
+  ],
+  "level.L22.objective": [
+    "Проведите козу к корму, сохранив документ.",
+    "Lead the goat to its food and preserve the paper."
+  ],
+  "level.L22.intro": [
+    "Карамелька привыкла решать бумажные вопросы зубами. Но рядом есть деревянная калитка с прекрасной обычной ручкой.",
+    "Caramel usually solves paper problems with her teeth. The wooden gate has an excellent ordinary handle."
+  ],
+  "level.L22.success": [
+    "Коза добралась до корма. Документ сохранился.",
+    "The goat reached its food and the document survived."
+  ],
+  "level.L23.objective": [
+    "Доставьте документ. Бумага не должна сгореть.",
+    "Deliver without burning the bridge."
+  ],
+  "level.L23.intro": [
+    "Бумага стала прочнее стали, но осталась горючей. Можно изменить огонь или закрыть его тепловой путь.",
+    "Paper is strong but still flammable. Change the fire or block its thermal path."
+  ],
+  "level.L23.success": [
+    "Документ доставлен, бумага не сгорела.",
+    "The document arrived without burning the paper."
+  ],
+  "level.L24.objective": [
+    "Доставьте груз, не перегружая плавающие опоры.",
+    "Deliver without overloading the floating supports."
+  ],
+  "level.L24.intro": [
+    "Лёгкий пролёт лежит на двух плавающих основаниях. Бумага выдержит многое; камни по-прежнему имеют предел нагрузки.",
+    "The light span rests on floating foundations. Paper strength does not remove the stones’ load limit."
+  ],
+  "level.L24.success": [
+    "Груз доставлен. Нагрузка распределена между двумя основаниями.",
+    "The load arrived, shared between both foundations."
+  ],
+  "level.L25.objective": [
+    "Убедите Розу и провезите груз по пролёту.",
+    "Earn Roza approval and move the load over the span."
+  ],
+  "level.L25.intro": [
+    "Роза принесла папку и два ракурса проверки. Контакт груза с бумагой должен остаться виден с каждого места.",
+    "Roza brought a folder and two viewing angles. Keep the paper and its load visible from both."
+  ],
+  "level.L25.success": [
+    "Роза одобрила конструкцию, груз прошёл по пролёту.",
+    "Roza approved the structure and the load crossed."
+  ],
+  "level.L26.objective": [
+    "Завершите путь, сохраняя только два закона.",
+    "Finish with at most two active laws."
+  ],
+  "level.L26.intro": [
+    "Для третьего чуда нужно освободить место. Сначала завершите доставку на сушу, затем подготовьте последствия замены.",
+    "A third miracle needs room. Finish the dry-land delivery before preparing the replacement."
+  ],
+  "level.L26.success": [
+    "Третье чудо заняло место вовремя. Все цели выполнены.",
+    "The third miracle found its place in time. Every goal is complete."
+  ],
+  "level.L27.objective": [
+    "Доставьте груз, сохранив навес и флажки.",
+    "Deliver while preserving the canopy and flags."
+  ],
+  "level.L27.intro": [
+    "Усиленная бумага всё ещё не любит жару. Здесь достаточно переставить печь или экранировать тепло.",
+    "Strong paper still dislikes heat. Move the oven or screen its thermal path."
+  ],
+  "level.L27.success": [
+    "Навес и флажки целы, доставка завершена.",
+    "Canopy and flags preserved; delivery complete."
+  ],
+  "level.L28.objective": [
+    "Докажите прочность бумаги и доставьте груз.",
+    "Prove paper strength independently and deliver the test load."
+  ],
+  "level.L28.intro": [
+    "Роза уже верит в плавающие камни. Сейчас ей нужно другое доказательство — груз, который действительно держит бумага.",
+    "Roza already accepts floating stones. This time she needs separate proof of paper holding a load."
+  ],
+  "level.L28.success": [
+    "Новое доказательство принято отдельно. Контрольный груз доставлен.",
+    "The separate proof was accepted and the test load arrived."
+  ],
+  "level.L29.objective": [
+    "Покажите превращение воды в лёд и завершите путь.",
+    "Show water freezing during the performance and finish together."
+  ],
+  "level.L29.intro": [
+    "Гуго приготовил красивую ледышку заранее. Помогите ему показать само превращение: зрители должны увидеть жидкую воду до льда.",
+    "Hugo prepared a beautiful lump of ice. Help him show the transformation itself, beginning with liquid water."
+  ],
+  "level.L29.success": [
+    "Зрители увидели настоящий переход из воды в лёд.",
+    "The audience saw liquid water actually become ice."
+  ],
+  "level.L30.objective": [
+    "Доставьте груз. Создайте три чуда, сохраняя два.",
+    "Deliver to dry land, keep the paper intact and reach the finale."
+  ],
+  "level.L30.intro": [
+    "На площади встретились все три чуда. Доставьте груз на сушу, откройте холодный проход и освободите место для прочной бумаги.",
+    "Three miracles meet in one square. Deliver to dry land, open the cold passage and make room for strong paper."
+  ],
+  "level.L30.success": [
+    "Груз на суше, бумажный путь пройден. Площадь снова живёт.",
+    "Cargo is on dry land and the paper crossing is complete. The square comes alive."
+  ],
+  "ui.undo_short": [
+    "Откат",
+    "Undo"
+  ],
+  "ui.master": [
+    "Весь звук",
+    "All audio"
+  ],
+  "slot.tray_stone.name": [
+    "Камень в реквизите",
+    "Stone in the tray"
+  ],
+  "slot.tray_float.name": [
+    "Поплавок в реквизите",
+    "Float in the tray"
+  ],
+  "slot.tray_screen_a.name": [
+    "Ширма в реквизите",
+    "Screen in the tray"
+  ],
+  "slot.stage_stone.name": [
+    "Камень на сцене",
+    "Stone on stage"
+  ],
+  "slot.stage_float.name": [
+    "Под камнем на сцене",
+    "Beneath the stage stone"
+  ],
+  "slot.screen_left.name": [
+    "Левый край сцены",
+    "Left side of the stage"
+  ],
+  "slot.bridge.name": [
+    "На переправе",
+    "At the crossing"
+  ],
+  "slot.hero_start.name": [
+    "Ближний причал",
+    "Near dock"
+  ],
+  "slot.audience_a.name": [
+    "Место зрителя слева",
+    "Left audience seat"
+  ],
+  "slot.audience_b.name": [
+    "Среднее место зрителя",
+    "Middle audience seat"
+  ],
+  "slot.audience_c.name": [
+    "Место зрителя справа",
+    "Right audience seat"
+  ],
+  "slot.audience_bad.name": [
+    "За билетной будкой",
+    "Behind the ticket booth"
+  ],
+  "slot.booth_slot.name": [
+    "Место билетной будки",
+    "Ticket booth position"
+  ],
+  "slot.cargo_start.name": [
+    "Площадка посылки",
+    "Parcel platform"
+  ],
+  "slot.tray_screen_b.name": [
+    "Вторая ширма в реквизите",
+    "Second screen in the tray"
+  ],
+  "slot.screen_right.name": [
+    "Правый край сцены",
+    "Right side of the stage"
+  ],
+  "slot.audience_1.name": [
+    "Место зрителя слева",
+    "Left audience seat"
+  ],
+  "slot.audience_2.name": [
+    "Среднее место зрителя",
+    "Middle audience seat"
+  ],
+  "slot.audience_3.name": [
+    "Место зрителя справа",
+    "Right audience seat"
+  ],
+  "slot.stone_start.name": [
+    "Камень в реквизите",
+    "Stone in the tray"
+  ],
+  "slot.float_start.name": [
+    "Поплавок в реквизите",
+    "Float in the tray"
+  ],
+  "slot.screen_a_start.name": [
+    "Ширма в реквизите",
+    "Screen in the tray"
+  ],
+  "slot.screen_blown.name": [
+    "Открытое ветру место",
+    "Wind-exposed position"
+  ],
+  "slot.clamp_1_start.name": [
+    "Первый зажим в реквизите",
+    "First clamp in the tray"
+  ],
+  "slot.clamp_2_start.name": [
+    "Второй зажим в реквизите",
+    "Second clamp in the tray"
+  ],
+  "slot.screen_left_alt.name": [
+    "Ширма ближе к сцене",
+    "Screen closer to the stage"
+  ],
+  "slot.boat_start.name": [
+    "Место лодки",
+    "Boat berth"
+  ],
+  "slot.anchor_start.name": [
+    "Каменный якорь у лодки",
+    "Stone anchor by the boat"
+  ],
+  "slot.bollard_start.name": [
+    "Деревянный кнехт",
+    "Wooden bollard"
+  ],
+  "slot.mooring_start.name": [
+    "Причальная верёвка",
+    "Mooring rope"
+  ],
+  "slot.goat_start.name": [
+    "Карамелька на берегу",
+    "Caramel on the bank"
+  ],
+  "slot.small_stone_start.name": [
+    "Маленький камень в реквизите",
+    "Small stone in the tray"
+  ],
+  "slot.small_bridge.name": [
+    "Малая переправа",
+    "Small crossing"
+  ],
+  "slot.tow_rope_start.name": [
+    "Буксирная верёвка",
+    "Tow rope"
+  ],
+  "slot.crate_1_start.name": [
+    "Первый ящик на берегу",
+    "First crate on the bank"
+  ],
+  "slot.crate_2_start.name": [
+    "Второй ящик на берегу",
+    "Second crate on the bank"
+  ],
+  "slot.stone_a_start.name": [
+    "Первый камень в реквизите",
+    "First stone in the tray"
+  ],
+  "slot.stone_b_start.name": [
+    "Второй камень в реквизите",
+    "Second stone in the tray"
+  ],
+  "slot.near_support.name": [
+    "Ближняя опора",
+    "Near support"
+  ],
+  "slot.middle_support.name": [
+    "Опора у острова",
+    "Island support"
+  ],
+  "slot.far_support.name": [
+    "Дальняя опора",
+    "Far support"
+  ],
+  "slot.thread_start.name": [
+    "Крепление страховочной нити",
+    "Safety thread attachment"
+  ],
+  "slot.thread_screen_start.name": [
+    "Ширма для нити в реквизите",
+    "Thread screen in the tray"
+  ],
+  "slot.thread_screen_slot.name": [
+    "Закрыть крепление нити",
+    "Hide the thread attachment"
+  ],
+  "slot.screen_b_start.name": [
+    "Вторая ширма в реквизите",
+    "Second screen in the tray"
+  ],
+  "slot.oven_start.name": [
+    "Жаровня у сцены",
+    "Brazier by the stage"
+  ],
+  "slot.oven_far.name": [
+    "Жаровня вдали от воды",
+    "Brazier away from water"
+  ],
+  "slot.bowl_start.name": [
+    "Чаша для показа",
+    "Demonstration bowl"
+  ],
+  "slot.flame_start.name": [
+    "Бутафорское пламя",
+    "Stage flame"
+  ],
+  "slot.cold_pack_start.name": [
+    "Криопак в реквизите",
+    "Cold pack in the tray"
+  ],
+  "slot.stage_cold.name": [
+    "Криопак под чашей",
+    "Cold pack beneath the bowl"
+  ],
+  "slot.bread_start.name": [
+    "Хлеб на прилавке",
+    "Bread on the counter"
+  ],
+  "slot.dessert_start.name": [
+    "Десерт на прилавке",
+    "Dessert on the counter"
+  ],
+  "slot.box_start.name": [
+    "Термокороб в реквизите",
+    "Insulated box in the tray"
+  ],
+  "slot.bread_box.name": [
+    "Хлеб в термокоробе",
+    "Bread in the insulated box"
+  ],
+  "slot.bread_delivery.name": [
+    "Хлеб для доставки",
+    "Bread for delivery"
+  ],
+  "slot.dessert_delivery.name": [
+    "Десерт для доставки",
+    "Dessert for delivery"
+  ],
+  "slot.box_delivery.name": [
+    "Короб для доставки",
+    "Box for delivery"
+  ],
+  "slot.food_oven_start.name": [
+    "Печь у блюд",
+    "Oven by the dishes"
+  ],
+  "slot.delivery_start.name": [
+    "Ящик доставки",
+    "Delivery crate"
+  ],
+  "slot.boat_oven_start.name": [
+    "Жаровня у протоки",
+    "Brazier by the channel"
+  ],
+  "slot.boat_oven_far.name": [
+    "Жаровня вдали от протоки",
+    "Brazier away from the channel"
+  ],
+  "slot.thermal_screen_start.name": [
+    "Тепловой экран в реквизите",
+    "Heat screen in the tray"
+  ],
+  "slot.thermal_block.name": [
+    "Перекрыть путь теплу",
+    "Block the thermal path"
+  ],
+  "slot.heated_stone_start.name": [
+    "Тёплый камень в реквизите",
+    "Heated stone in the tray"
+  ],
+  "slot.warm_bowl.name": [
+    "Тёплый камень у чаши",
+    "Heated stone by the bowl"
+  ],
+  "slot.permanent_screen_start.name": [
+    "Постоянная ширма в реквизите",
+    "Permanent screen in the tray"
+  ],
+  "slot.permanent_screen_slot.name": [
+    "Место постоянной ширмы",
+    "Permanent screen position"
+  ],
+  "slot.warm_boat.name": [
+    "Тёплый камень у протоки",
+    "Heated stone by the channel"
+  ],
+  "slot.feast_start.name": [
+    "Праздничная доставка",
+    "Feast delivery"
+  ],
+  "slot.anchor_a_start.name": [
+    "Левый узел крепления",
+    "Left anchoring point"
+  ],
+  "slot.anchor_b_start.name": [
+    "Правый узел крепления",
+    "Right anchoring point"
+  ],
+  "slot.paper_start.name": [
+    "Бумага в реквизите",
+    "Paper in the tray"
+  ],
+  "slot.stage_paper.name": [
+    "Бумажный пролёт",
+    "Paper span position"
+  ],
+  "slot.weight_start.name": [
+    "Груз у тали",
+    "Load by the hoist"
+  ],
+  "slot.stage_weight.name": [
+    "Груз на испытательном стенде",
+    "Load on the test stand"
+  ],
+  "slot.hoist_start.name": [
+    "Место тали",
+    "Hoist position"
+  ],
+  "slot.frame_start.name": [
+    "Тайная рама в реквизите",
+    "Hidden frame in the tray"
+  ],
+  "slot.stage_frame.name": [
+    "Рама под пролётом",
+    "Frame beneath the span"
+  ],
+  "slot.gate_start.name": [
+    "Деревянная калитка",
+    "Wooden gate"
+  ],
+  "slot.cold_screen_start.name": [
+    "Экран для криопака в реквизите",
+    "Cold-pack screen in the tray"
+  ],
+  "slot.cold_screen_slot.name": [
+    "Скрыть криопак",
+    "Hide the cold pack"
+  ],
+  "slot.test_weight_start.name": [
+    "Испытательный груз у тали",
+    "Test load by the hoist"
+  ],
+  "slot.test_weight_stage.name": [
+    "Испытательный груз на бумаге",
+    "Test load on the paper"
+  ],
+  "slot.first_cargo_start.name": [
+    "Посылка для первой доставки",
+    "Parcel for the first delivery"
+  ],
+  "slot.flags_start.name": [
+    "Место бумажных флажков",
+    "Paper flag position"
+  ],
+  "slot.anchor_a_water.name": [
+    "Левая опора в воде",
+    "Left support in water"
+  ],
+  "slot.warm_sample.name": [
+    "Тёплый камень у образца",
+    "Heated stone by the sample"
+  ],
+  "slot.stone_away.name": [
+    "Убрать тёплый камень от образца",
+    "Move the heated stone away"
+  ],
+  "slot.screen_cold_start.name": [
+    "Холодный экран в реквизите",
+    "Cold screen in the tray"
+  ],
+  "slot.screen_cold_slot.name": [
+    "Скрыть холодный механизм",
+    "Hide the cold mechanism"
+  ],
+  "slot.screen_paper_start.name": [
+    "Ширма для бумаги в реквизите",
+    "Paper screen in the tray"
+  ],
+  "slot.screen_paper_slot.name": [
+    "Скрыть раму под бумагой",
+    "Hide the frame beneath paper"
+  ],
+  "level.L01.plan_tip": [
+    "Камень — на поплавок. Секрет скройте ширмой.",
+    "Place the stone on a float. Screen the secret."
+  ],
+  "level.L02.plan_tip": [
+    "Дайте каждому зрителю увидеть весь фокус.",
+    "Give every spectator a clear view of the trick."
+  ],
+  "level.L03.plan_tip": [
+    "Скройте секрет спереди и со второй стороны.",
+    "Hide the secret from both inspection sides."
+  ],
+  "level.L11.plan_tip": [
+    "Спрячьте криопак. Покажите замерзание воды.",
+    "Hide the cold pack. Let them see water freeze."
+  ],
+  "level.L21.plan_tip": [
+    "Поставьте лист, раму и груз. Скройте раму.",
+    "Set up paper, frame and load. Hide the frame."
+  ],
+  "level.L01.hint3": [
+    "Поставьте камень на поплавок, а ширму — на левый край сцены. Начните показ. Убирайте поплавок после печати.",
+    "Set the stone on the float and the screen on the left. Perform, seal, then remove the float."
+  ],
+  "level.L02.hint3": [
+    "Пересадите зрителя из-за будки на свободное место справа. Затем повторите показ.",
+    "Move the spectator from behind the booth to the empty seat on the right, then perform again."
+  ],
+  "level.L03.hint3": [
+    "Поставьте вторую ширму на правый край сцены: она должна скрыть поплавок со второго ракурса.",
+    "Place the second screen on the right side of the stage to hide the float from the second view."
+  ],
+  "level.L21.hint3": [
+    "Поставьте бумагу на два узла, скройте раму и талью опустите испытательный груз на бумагу.",
+    "Mount the paper at both anchors, screen the frame and use the hoist to lower the test load onto the paper."
+  ],
+  "ui.all_sound": [
+    "Весь звук",
+    "All audio"
+  ],
+  "ui.choose_on_stage": [
+    "Выбрать место на сцене",
+    "Choose a position on stage"
+  ],
+  "ui.hint_short": [
+    "Совет",
+    "Hint"
+  ],
+  "ui.method": [
+    "Механизм",
+    "Method"
+  ],
+  "ui.no_audience": [
+    "Закон уже действует. Соберите план и проверьте последствия.",
+    "The law is already active. Plan and test its consequences."
+  ],
+  "ui.place": [
+    "Место",
+    "Position"
+  ],
+  "ui.level_load_error": [
+    "Эта сцена пока не открылась. Прогресс сохранён. Выберите другую сцену в альбоме.",
+    "This stage could not be opened. Your progress is safe. Choose another stage in the album."
+  ],
+  "subtitle.curious": [
+    "заинтересованно мычит",
+    "hums curiously"
+  ],
+  "subtitle.accept": [
+    "одобрительно хмыкает",
+    "hums in approval"
+  ],
+  "subtitle.surprise": [
+    "удивлённо ахает",
+    "gasps in surprise"
+  ],
+  "subtitle.joy": [
+    "радостно восклицает",
+    "cheers happily"
+  ],
+  "subtitle.exposed": [
+    "недовольно ахает",
+    "gasps disapprovingly"
+  ],
+  "entity.screen_a.name": [
+    "Первая ширма",
+    "First screen"
+  ],
+  "entity.screen_b.name": [
+    "Вторая ширма",
+    "Second screen"
+  ],
+  "entity.thread_screen.name": [
+    "Ширма крепления",
+    "Attachment screen"
+  ],
+  "entity.screen_cold.name": [
+    "Ширма для холода",
+    "Cooling screen"
+  ],
+  "entity.screen_paper.name": [
+    "Ширма для бумаги",
+    "Paper screen"
+  ],
+  "entity.thermal_screen.name": [
+    "Тепловой экран",
+    "Heat screen"
+  ],
+  "entity.cold_screen.name": [
+    "Экран криопака",
+    "Cold-pack screen"
+  ],
+  "entity.clamp_1.name": [
+    "Первый зажим",
+    "First clamp"
+  ],
+  "entity.clamp_2.name": [
+    "Второй зажим",
+    "Second clamp"
+  ],
+  "entity.crate_1.name": [
+    "Первый ящик",
+    "First crate"
+  ],
+  "entity.crate_2.name": [
+    "Второй ящик",
+    "Second crate"
+  ],
+  "entity.stone_a.name": [
+    "Первый камень M",
+    "First stone M"
+  ],
+  "entity.stone_b.name": [
+    "Второй камень M",
+    "Second stone M"
+  ],
+  "entity.oven.name": [
+    "Сценическая жаровня",
+    "Stage brazier"
+  ],
+  "entity.boat_oven.name": [
+    "Жаровня у протоки",
+    "Channel brazier"
+  ],
+  "entity.food_oven.name": [
+    "Жаровня у блюд",
+    "Food brazier"
+  ],
+  "entity.anchor_a.name": [
+    "Левая опора",
+    "Left anchor"
+  ],
+  "entity.anchor_b.name": [
+    "Правая опора",
+    "Right anchor"
+  ],
+  "entity.weight.name": [
+    "Груз у тали",
+    "Hoist load"
+  ],
+  "entity.test_weight.name": [
+    "Пробный груз",
+    "Test load"
+  ]
+}

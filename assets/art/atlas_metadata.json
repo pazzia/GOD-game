@@ -1,0 +1,3780 @@
+{
+  "environments/bg_river.png": {
+    "original": "exec-2b77a32e-2bfc-4440-aa11-f66a27778025.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      941,
+      1672
+    ],
+    "size": [
+      941,
+      1672
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/felix.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      0,
+      0,
+      570,
+      341
+    ],
+    "alpha_trim": [
+      201,
+      4,
+      550,
+      341
+    ],
+    "size": [
+      349,
+      337
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/plum.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      570,
+      0,
+      1024,
+      341
+    ],
+    "alpha_trim": [
+      56,
+      29,
+      365,
+      331
+    ],
+    "size": [
+      309,
+      302
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/marfa.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      341
+    ],
+    "alpha_trim": [
+      17,
+      3,
+      291,
+      341
+    ],
+    "size": [
+      274,
+      338
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/semyon.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      0,
+      341,
+      512,
+      682
+    ],
+    "alpha_trim": [
+      256,
+      0,
+      464,
+      340
+    ],
+    "size": [
+      208,
+      340
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/nika.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      512,
+      341,
+      1024,
+      682
+    ],
+    "alpha_trim": [
+      168,
+      6,
+      358,
+      337
+    ],
+    "size": [
+      190,
+      331
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/lada.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      1024,
+      341,
+      1536,
+      682
+    ],
+    "alpha_trim": [
+      19,
+      0,
+      317,
+      338
+    ],
+    "size": [
+      298,
+      338
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/roza.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      0,
+      682,
+      512,
+      1024
+    ],
+    "alpha_trim": [
+      239,
+      0,
+      456,
+      337
+    ],
+    "size": [
+      217,
+      337
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/hugo.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      512,
+      682,
+      1024,
+      1024
+    ],
+    "alpha_trim": [
+      85,
+      0,
+      446,
+      335
+    ],
+    "size": [
+      361,
+      335
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/caramelka.png": {
+    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "crop": [
+      1024,
+      682,
+      1536,
+      1024
+    ],
+    "alpha_trim": [
+      49,
+      14,
+      307,
+      323
+    ],
+    "size": [
+      258,
+      309
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "environments/bg_kitchen.png": {
+    "original": "exec-37afd372-07bb-496c-9d8e-2ad38e732731.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      941,
+      1672
+    ],
+    "size": [
+      941,
+      1672
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "environments/bg_archive.png": {
+    "original": "exec-a470db49-910a-4bec-a3b2-0399e1568188.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      941,
+      1672
+    ],
+    "size": [
+      941,
+      1672
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/stone.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      0,
+      0,
+      540,
+      341
+    ],
+    "alpha_trim": [
+      35,
+      85,
+      480,
+      318
+    ],
+    "size": [
+      445,
+      233
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/float.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      540,
+      0,
+      1024,
+      341
+    ],
+    "alpha_trim": [
+      112,
+      39,
+      358,
+      334
+    ],
+    "size": [
+      246,
+      295
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/screen.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      350
+    ],
+    "alpha_trim": [
+      48,
+      27,
+      444,
+      349
+    ],
+    "size": [
+      396,
+      322
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/crate.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      0,
+      341,
+      540,
+      674
+    ],
+    "alpha_trim": [
+      81,
+      21,
+      407,
+      320
+    ],
+    "size": [
+      326,
+      299
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/rope.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      540,
+      341,
+      1024,
+      674
+    ],
+    "alpha_trim": [
+      59,
+      50,
+      422,
+      286
+    ],
+    "size": [
+      363,
+      236
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/wooden_bollard.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      1024,
+      350,
+      1536,
+      680
+    ],
+    "alpha_trim": [
+      66,
+      15,
+      432,
+      310
+    ],
+    "size": [
+      366,
+      295
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/boat.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      0,
+      674,
+      570,
+      1024
+    ],
+    "alpha_trim": [
+      43,
+      48,
+      522,
+      288
+    ],
+    "size": [
+      479,
+      240
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/ticket_booth.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      570,
+      674,
+      980,
+      1024
+    ],
+    "alpha_trim": [
+      35,
+      0,
+      352,
+      320
+    ],
+    "size": [
+      317,
+      320
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/dock.png": {
+    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "crop": [
+      980,
+      680,
+      1536,
+      1024
+    ],
+    "alpha_trim": [
+      5,
+      40,
+      528,
+      311
+    ],
+    "size": [
+      523,
+      271
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/decoy_fire.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      0,
+      0,
+      520,
+      345
+    ],
+    "alpha_trim": [
+      103,
+      14,
+      463,
+      345
+    ],
+    "size": [
+      360,
+      331
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/cryopack.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      520,
+      0,
+      1024,
+      350
+    ],
+    "alpha_trim": [
+      40,
+      29,
+      458,
+      350
+    ],
+    "size": [
+      418,
+      321
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/water_bowl.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      340
+    ],
+    "alpha_trim": [
+      32,
+      54,
+      445,
+      323
+    ],
+    "size": [
+      413,
+      269
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/fire_source.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      0,
+      312,
+      520,
+      680
+    ],
+    "alpha_trim": [
+      67,
+      5,
+      491,
+      361
+    ],
+    "size": [
+      424,
+      356
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/hot_stone.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      520,
+      350,
+      1024,
+      680
+    ],
+    "alpha_trim": [
+      74,
+      42,
+      432,
+      300
+    ],
+    "size": [
+      358,
+      258
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/thermobox.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      1024,
+      340,
+      1536,
+      680
+    ],
+    "alpha_trim": [
+      58,
+      6,
+      437,
+      327
+    ],
+    "size": [
+      379,
+      321
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/bread.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      0,
+      680,
+      565,
+      1024
+    ],
+    "alpha_trim": [
+      38,
+      11,
+      529,
+      312
+    ],
+    "size": [
+      491,
+      301
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/dessert.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      565,
+      680,
+      1024,
+      1024
+    ],
+    "alpha_trim": [
+      2,
+      0,
+      429,
+      303
+    ],
+    "size": [
+      427,
+      303
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/steam.png": {
+    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "crop": [
+      1024,
+      660,
+      1536,
+      1024
+    ],
+    "alpha_trim": [
+      80,
+      0,
+      462,
+      332
+    ],
+    "size": [
+      382,
+      332
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/paper_bridge.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      0,
+      0,
+      565,
+      341
+    ],
+    "alpha_trim": [
+      30,
+      56,
+      536,
+      313
+    ],
+    "size": [
+      506,
+      257
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/paper_gate.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      565,
+      0,
+      1024,
+      341
+    ],
+    "alpha_trim": [
+      37,
+      14,
+      406,
+      336
+    ],
+    "size": [
+      369,
+      322
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/wood_gate.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      341
+    ],
+    "alpha_trim": [
+      66,
+      10,
+      449,
+      331
+    ],
+    "size": [
+      383,
+      321
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/control_weight.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      0,
+      341,
+      545,
+      680
+    ],
+    "alpha_trim": [
+      75,
+      21,
+      481,
+      332
+    ],
+    "size": [
+      406,
+      311
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/frame.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      545,
+      341,
+      1024,
+      680
+    ],
+    "alpha_trim": [
+      14,
+      5,
+      468,
+      329
+    ],
+    "size": [
+      454,
+      324
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/hoist.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      1024,
+      341,
+      1536,
+      680
+    ],
+    "alpha_trim": [
+      77,
+      0,
+      465,
+      339
+    ],
+    "size": [
+      388,
+      339
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/clamp.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      0,
+      680,
+      535,
+      1024
+    ],
+    "alpha_trim": [
+      62,
+      2,
+      513,
+      323
+    ],
+    "size": [
+      451,
+      321
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/thread.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      535,
+      680,
+      1024,
+      1024
+    ],
+    "alpha_trim": [
+      54,
+      5,
+      441,
+      307
+    ],
+    "size": [
+      387,
+      302
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/flags.png": {
+    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "crop": [
+      1024,
+      680,
+      1536,
+      1024
+    ],
+    "alpha_trim": [
+      28,
+      0,
+      488,
+      319
+    ],
+    "size": [
+      460,
+      319
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/stone_anchor.png": {
+    "original": "exec-eec26ff5-c968-4c5b-9707-f36177ee5d76.png",
+    "crop": null,
+    "alpha_trim": [
+      22,
+      10,
+      1192,
+      1305
+    ],
+    "size": [
+      1170,
+      1295
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/fire_source_cold.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      435,
+      0,
+      875,
+      445
+    ],
+    "alpha_trim": [
+      32,
+      4,
+      417,
+      438
+    ],
+    "size": [
+      385,
+      434
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/water_bowl_frozen.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      875,
+      0,
+      1312,
+      442
+    ],
+    "alpha_trim": [
+      29,
+      114,
+      426,
+      410
+    ],
+    "size": [
+      397,
+      296
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/paper_reinforced.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      0,
+      445,
+      435,
+      790
+    ],
+    "alpha_trim": [
+      20,
+      6,
+      432,
+      325
+    ],
+    "size": [
+      412,
+      319
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/miracle_stamp.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      435,
+      445,
+      875,
+      790
+    ],
+    "alpha_trim": [
+      37,
+      32,
+      425,
+      319
+    ],
+    "size": [
+      388,
+      287
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/paper_sheet.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      875,
+      442,
+      1312,
+      804
+    ],
+    "alpha_trim": [
+      29,
+      3,
+      419,
+      352
+    ],
+    "size": [
+      390,
+      349
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/kettle.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      0,
+      790,
+      435,
+      1199
+    ],
+    "alpha_trim": [
+      22,
+      0,
+      406,
+      383
+    ],
+    "size": [
+      384,
+      383
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/sandbag.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      435,
+      790,
+      875,
+      1199
+    ],
+    "alpha_trim": [
+      30,
+      3,
+      425,
+      383
+    ],
+    "size": [
+      395,
+      380
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/thermal_screen.png": {
+    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "crop": [
+      875,
+      780,
+      1312,
+      1199
+    ],
+    "alpha_trim": [
+      19,
+      0,
+      411,
+      406
+    ],
+    "size": [
+      392,
+      406
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "ui/app_icon_master.png": {
+    "original": "exec-67341689-c0be-415a-9774-e2fe28513252.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_gardener.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "alpha_trim": [
+      162,
+      5,
+      488,
+      498
+    ],
+    "size": [
+      326,
+      493
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_postwoman.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "alpha_trim": [
+      85,
+      3,
+      411,
+      497
+    ],
+    "size": [
+      326,
+      494
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_fisherman.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "alpha_trim": [
+      61,
+      0,
+      361,
+      500
+    ],
+    "size": [
+      300,
+      500
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_librarian.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "alpha_trim": [
+      121,
+      0,
+      435,
+      508
+    ],
+    "size": [
+      314,
+      508
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_merchant.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "alpha_trim": [
+      81,
+      0,
+      454,
+      509
+    ],
+    "size": [
+      373,
+      509
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/crowd_musician.png": {
+    "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
+    "crop": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "alpha_trim": [
+      58,
+      0,
+      416,
+      508
+    ],
+    "size": [
+      358,
+      508
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/water_surface.png": {
+    "original": "exec-0f4602ab-1784-4590-9f91-29f28a3e955f.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/ice_surface.png": {
+    "original": "exec-4932ec13-67f6-4d9d-a8c6-54427db74afe.png",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1254,
+      1254
+    ],
+    "size": [
+      1254,
+      1254
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "props/span_anchor.png": {
+    "original": "exec-1c8ed71b-ac79-4473-82df-f43415dc76c8.png",
+    "crop": null,
+    "alpha_trim": [
+      171,
+      61,
+      1056,
+      1267
+    ],
+    "size": [
+      885,
+      1206
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/idle.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      29,
+      24,
+      418,
+      406
+    ],
+    "size": [
+      389,
+      382
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/observe.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      27,
+      24,
+      401,
+      405
+    ],
+    "size": [
+      374,
+      381
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/suspect.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      17,
+      24,
+      398,
+      407
+    ],
+    "size": [
+      381,
+      383
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/accept.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      31,
+      11,
+      418,
+      394
+    ],
+    "size": [
+      387,
+      383
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/reveal_react.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      23,
+      10,
+      401,
+      394
+    ],
+    "size": [
+      378,
+      384
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/focused.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      10,
+      15,
+      396,
+      395
+    ],
+    "size": [
+      386,
+      380
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/embarrassed.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      34,
+      0,
+      418,
+      385
+    ],
+    "size": [
+      384,
+      385
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/celebrate.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      23,
+      0,
+      406,
+      384
+    ],
+    "size": [
+      383,
+      384
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/marfa/extra.png": {
+    "original": "marfa_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      9,
+      0,
+      394,
+      385
+    ],
+    "size": [
+      385,
+      385
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/idle.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      26,
+      13,
+      418,
+      414
+    ],
+    "size": [
+      392,
+      401
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/observe.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      7,
+      17,
+      402,
+      411
+    ],
+    "size": [
+      395,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/suspect.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      0,
+      18,
+      399,
+      413
+    ],
+    "size": [
+      399,
+      395
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/accept.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      16,
+      9,
+      417,
+      398
+    ],
+    "size": [
+      401,
+      389
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/reveal_react.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      13,
+      0,
+      408,
+      396
+    ],
+    "size": [
+      395,
+      396
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/focused.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      9,
+      3,
+      409,
+      399
+    ],
+    "size": [
+      400,
+      396
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/embarrassed.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      14,
+      0,
+      410,
+      383
+    ],
+    "size": [
+      396,
+      383
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/celebrate.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      9,
+      0,
+      413,
+      382
+    ],
+    "size": [
+      404,
+      382
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/nika/extra.png": {
+    "original": "nika_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      14,
+      0,
+      409,
+      386
+    ],
+    "size": [
+      395,
+      386
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/idle.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      34,
+      13,
+      395,
+      411
+    ],
+    "size": [
+      361,
+      398
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/observe.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      10,
+      12,
+      368,
+      412
+    ],
+    "size": [
+      358,
+      400
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/suspect.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      0,
+      13,
+      346,
+      412
+    ],
+    "size": [
+      346,
+      399
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/accept.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      20,
+      2,
+      393,
+      398
+    ],
+    "size": [
+      373,
+      396
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/reveal_react.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      9,
+      0,
+      378,
+      399
+    ],
+    "size": [
+      369,
+      399
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/focused.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      0,
+      7,
+      375,
+      398
+    ],
+    "size": [
+      375,
+      391
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/embarrassed.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      20,
+      0,
+      393,
+      394
+    ],
+    "size": [
+      373,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/celebrate.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      6,
+      0,
+      376,
+      394
+    ],
+    "size": [
+      370,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/semyon/extra.png": {
+    "original": "semyon_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      4,
+      0,
+      374,
+      394
+    ],
+    "size": [
+      370,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/idle.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      40,
+      16,
+      413,
+      413
+    ],
+    "size": [
+      373,
+      397
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/observe.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      41,
+      11,
+      409,
+      414
+    ],
+    "size": [
+      368,
+      403
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/suspect.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      50,
+      16,
+      400,
+      416
+    ],
+    "size": [
+      350,
+      400
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/accept.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      32,
+      7,
+      416,
+      404
+    ],
+    "size": [
+      384,
+      397
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/reveal_react.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      32,
+      1,
+      418,
+      404
+    ],
+    "size": [
+      386,
+      403
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/focused.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      32,
+      2,
+      400,
+      404
+    ],
+    "size": [
+      368,
+      402
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/embarrassed.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      49,
+      0,
+      417,
+      394
+    ],
+    "size": [
+      368,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/celebrate.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      55,
+      0,
+      418,
+      394
+    ],
+    "size": [
+      363,
+      394
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/felix/extra.png": {
+    "original": "felix_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      55,
+      0,
+      388,
+      396
+    ],
+    "size": [
+      333,
+      396
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/plum/idle.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      21,
+      3,
+      394,
+      404
+    ],
+    "size": [
+      373,
+      401
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/observe.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      23,
+      9,
+      386,
+      405
+    ],
+    "size": [
+      363,
+      396
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/suspect.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      16,
+      30,
+      409,
+      405
+    ],
+    "size": [
+      393,
+      375
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/accept.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      20,
+      8,
+      397,
+      396
+    ],
+    "size": [
+      377,
+      388
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/reveal_react.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      16,
+      0,
+      397,
+      395
+    ],
+    "size": [
+      381,
+      395
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/focused.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      23,
+      26,
+      397,
+      395
+    ],
+    "size": [
+      374,
+      369
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/embarrassed.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      19,
+      0,
+      397,
+      384
+    ],
+    "size": [
+      378,
+      384
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/celebrate.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      16,
+      0,
+      399,
+      384
+    ],
+    "size": [
+      383,
+      384
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/plum/extra.png": {
+    "original": "plum_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      19,
+      0,
+      394,
+      384
+    ],
+    "size": [
+      375,
+      384
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/portraits/roza/idle.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      36,
+      14,
+      409,
+      410
+    ],
+    "size": [
+      373,
+      396
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/observe.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      27,
+      15,
+      396,
+      410
+    ],
+    "size": [
+      369,
+      395
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/suspect.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      21,
+      15,
+      390,
+      410
+    ],
+    "size": [
+      369,
+      395
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/accept.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      39,
+      0,
+      415,
+      402
+    ],
+    "size": [
+      376,
+      402
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/reveal_react.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      28,
+      1,
+      399,
+      403
+    ],
+    "size": [
+      371,
+      402
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/focused.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      20,
+      0,
+      407,
+      402
+    ],
+    "size": [
+      387,
+      402
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/embarrassed.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      42,
+      0,
+      415,
+      397
+    ],
+    "size": [
+      373,
+      397
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/celebrate.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      28,
+      0,
+      407,
+      400
+    ],
+    "size": [
+      379,
+      400
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/roza/extra.png": {
+    "original": "roza_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      19,
+      0,
+      391,
+      398
+    ],
+    "size": [
+      372,
+      398
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/idle.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      12,
+      0,
+      418,
+      418
+    ],
+    "size": [
+      406,
+      418
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/observe.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      25,
+      0,
+      418,
+      414
+    ],
+    "size": [
+      393,
+      414
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/suspect.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      18,
+      2,
+      408,
+      418
+    ],
+    "size": [
+      390,
+      416
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/accept.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      18,
+      0,
+      418,
+      404
+    ],
+    "size": [
+      400,
+      404
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/reveal_react.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      23,
+      0,
+      418,
+      418
+    ],
+    "size": [
+      395,
+      418
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/focused.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      11,
+      0,
+      409,
+      405
+    ],
+    "size": [
+      398,
+      405
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/embarrassed.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      17,
+      0,
+      418,
+      405
+    ],
+    "size": [
+      401,
+      405
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/celebrate.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      9,
+      0,
+      418,
+      404
+    ],
+    "size": [
+      409,
+      404
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/lada/extra.png": {
+    "original": "lada_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      16,
+      0,
+      410,
+      404
+    ],
+    "size": [
+      394,
+      404
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/idle.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      14,
+      5,
+      418,
+      405
+    ],
+    "size": [
+      404,
+      400
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/observe.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      0,
+      6,
+      418,
+      404
+    ],
+    "size": [
+      418,
+      398
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/suspect.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      0,
+      4,
+      410,
+      404
+    ],
+    "size": [
+      410,
+      400
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/accept.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      6,
+      0,
+      418,
+      388
+    ],
+    "size": [
+      412,
+      388
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/reveal_react.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      1,
+      0,
+      418,
+      390
+    ],
+    "size": [
+      417,
+      390
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/focused.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      0,
+      5,
+      414,
+      386
+    ],
+    "size": [
+      414,
+      381
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/embarrassed.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      10,
+      0,
+      418,
+      373
+    ],
+    "size": [
+      408,
+      373
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/celebrate.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      0,
+      0,
+      418,
+      379
+    ],
+    "size": [
+      418,
+      379
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/hugo/extra.png": {
+    "original": "hugo_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      0,
+      0,
+      407,
+      372
+    ],
+    "size": [
+      407,
+      372
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/idle.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      0,
+      0,
+      418,
+      418
+    ],
+    "alpha_trim": [
+      61,
+      3,
+      416,
+      415
+    ],
+    "size": [
+      355,
+      412
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/observe.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      418,
+      0,
+      836,
+      418
+    ],
+    "alpha_trim": [
+      54,
+      2,
+      387,
+      412
+    ],
+    "size": [
+      333,
+      410
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/suspect.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      836,
+      0,
+      1254,
+      418
+    ],
+    "alpha_trim": [
+      53,
+      7,
+      382,
+      415
+    ],
+    "size": [
+      329,
+      408
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/accept.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      0,
+      418,
+      418,
+      836
+    ],
+    "alpha_trim": [
+      55,
+      0,
+      418,
+      412
+    ],
+    "size": [
+      363,
+      412
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/reveal_react.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      418,
+      418,
+      836,
+      836
+    ],
+    "alpha_trim": [
+      62,
+      0,
+      401,
+      414
+    ],
+    "size": [
+      339,
+      414
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/focused.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      836,
+      418,
+      1254,
+      836
+    ],
+    "alpha_trim": [
+      52,
+      4,
+      408,
+      416
+    ],
+    "size": [
+      356,
+      412
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/embarrassed.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      0,
+      836,
+      418,
+      1254
+    ],
+    "alpha_trim": [
+      56,
+      0,
+      418,
+      417
+    ],
+    "size": [
+      362,
+      417
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/celebrate.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      418,
+      836,
+      836,
+      1254
+    ],
+    "alpha_trim": [
+      34,
+      0,
+      418,
+      409
+    ],
+    "size": [
+      384,
+      409
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/portraits/caramelka/extra.png": {
+    "original": "caramelka_expressions.png",
+    "crop": [
+      836,
+      836,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      58,
+      0,
+      409,
+      412
+    ],
+    "size": [
+      351,
+      412
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/head.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      0,
+      0,
+      500,
+      420
+    ],
+    "alpha_trim": [
+      85,
+      23,
+      460,
+      403
+    ],
+    "size": [
+      375,
+      380
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/torso.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      500,
+      0,
+      890,
+      420
+    ],
+    "alpha_trim": [
+      30,
+      79,
+      325,
+      402
+    ],
+    "size": [
+      295,
+      323
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/right_arm.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      890,
+      0,
+      1254,
+      420
+    ],
+    "alpha_trim": [
+      26,
+      56,
+      337,
+      418
+    ],
+    "size": [
+      311,
+      362
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/left_arm.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      0,
+      420,
+      435,
+      835
+    ],
+    "alpha_trim": [
+      58,
+      11,
+      367,
+      388
+    ],
+    "size": [
+      309,
+      377
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/left_leg.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      435,
+      420,
+      835,
+      840
+    ],
+    "alpha_trim": [
+      88,
+      5,
+      269,
+      420
+    ],
+    "size": [
+      181,
+      415
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/right_leg.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      835,
+      420,
+      1254,
+      840
+    ],
+    "alpha_trim": [
+      132,
+      10,
+      337,
+      420
+    ],
+    "size": [
+      205,
+      410
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/cape.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      0,
+      835,
+      700,
+      1254
+    ],
+    "alpha_trim": [
+      16,
+      3,
+      674,
+      393
+    ],
+    "size": [
+      658,
+      390
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/accessory.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      700,
+      840,
+      940,
+      1254
+    ],
+    "alpha_trim": [
+      20,
+      91,
+      184,
+      320
+    ],
+    "size": [
+      164,
+      229
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/felix/prop.png": {
+    "original": "felix_parts_v2.png",
+    "crop": [
+      940,
+      840,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      56,
+      71,
+      280,
+      366
+    ],
+    "size": [
+      224,
+      295
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/plum/head.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      0,
+      0,
+      430,
+      445
+    ],
+    "alpha_trim": [
+      31,
+      90,
+      383,
+      433
+    ],
+    "size": [
+      352,
+      343
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/body.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      440,
+      0,
+      820,
+      495
+    ],
+    "alpha_trim": [
+      42,
+      62,
+      350,
+      483
+    ],
+    "size": [
+      308,
+      421
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/wing_left.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      820,
+      0,
+      1254,
+      485
+    ],
+    "alpha_trim": [
+      14,
+      6,
+      405,
+      462
+    ],
+    "size": [
+      391,
+      456
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/wing_right.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      0,
+      445,
+      440,
+      880
+    ],
+    "alpha_trim": [
+      34,
+      14,
+      404,
+      425
+    ],
+    "size": [
+      370,
+      411
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/antenna_left.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      445,
+      485,
+      820,
+      885
+    ],
+    "alpha_trim": [
+      36,
+      14,
+      306,
+      386
+    ],
+    "size": [
+      270,
+      372
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/antenna_right.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      840,
+      485,
+      1240,
+      885
+    ],
+    "alpha_trim": [
+      39,
+      12,
+      309,
+      385
+    ],
+    "size": [
+      270,
+      373
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/bag.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      0,
+      860,
+      460,
+      1254
+    ],
+    "alpha_trim": [
+      60,
+      2,
+      440,
+      353
+    ],
+    "size": [
+      380,
+      351
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/foot_left.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      500,
+      900,
+      760,
+      1254
+    ],
+    "alpha_trim": [
+      73,
+      14,
+      185,
+      306
+    ],
+    "size": [
+      112,
+      292
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/plum/foot_right.png": {
+    "original": "plum_parts.png",
+    "crop": [
+      890,
+      900,
+      1150,
+      1254
+    ],
+    "alpha_trim": [
+      61,
+      14,
+      175,
+      308
+    ],
+    "size": [
+      114,
+      294
+    ],
+    "pivot": [
+      0.5,
+      0.5
+    ]
+  },
+  "characters/rigs/caramelka/torso.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      0,
+      0,
+      515,
+      450
+    ],
+    "alpha_trim": [
+      44,
+      81,
+      515,
+      428
+    ],
+    "size": [
+      471,
+      347
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/head.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      510,
+      0,
+      875,
+      470
+    ],
+    "alpha_trim": [
+      1,
+      106,
+      362,
+      457
+    ],
+    "size": [
+      361,
+      351
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/horns.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      865,
+      0,
+      1254,
+      470
+    ],
+    "alpha_trim": [
+      0,
+      176,
+      353,
+      352
+    ],
+    "size": [
+      353,
+      176
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/front_left_leg.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      0,
+      450,
+      418,
+      840
+    ],
+    "alpha_trim": [
+      161,
+      26,
+      326,
+      371
+    ],
+    "size": [
+      165,
+      345
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/front_right_leg.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      418,
+      450,
+      836,
+      840
+    ],
+    "alpha_trim": [
+      134,
+      27,
+      285,
+      373
+    ],
+    "size": [
+      151,
+      346
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/hind_left_leg.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      836,
+      450,
+      1254,
+      840
+    ],
+    "alpha_trim": [
+      114,
+      24,
+      314,
+      368
+    ],
+    "size": [
+      200,
+      344
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/hind_right_leg.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      0,
+      840,
+      420,
+      1254
+    ],
+    "alpha_trim": [
+      133,
+      11,
+      318,
+      363
+    ],
+    "size": [
+      185,
+      352
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/tail.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      420,
+      840,
+      835,
+      1254
+    ],
+    "alpha_trim": [
+      84,
+      76,
+      334,
+      306
+    ],
+    "size": [
+      250,
+      230
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  },
+  "characters/rigs/caramelka/collar_bell.png": {
+    "original": "caramelka_parts.png",
+    "crop": [
+      835,
+      840,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      67,
+      67,
+      337,
+      349
+    ],
+    "size": [
+      270,
+      282
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ]
+  }
+}

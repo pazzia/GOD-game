@@ -1,0 +1,173 @@
+{
+  "head": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      0,
+      0,
+      505,
+      430
+    ],
+    "alpha_trim": [
+      18,
+      12,
+      482,
+      426
+    ],
+    "size": [
+      464,
+      414
+    ]
+  },
+  "torso": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      505,
+      0,
+      880,
+      420
+    ],
+    "alpha_trim": [
+      18,
+      54,
+      341,
+      408
+    ],
+    "size": [
+      323,
+      354
+    ]
+  },
+  "right_arm": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      900,
+      0,
+      1254,
+      425
+    ],
+    "alpha_trim": [
+      24,
+      78,
+      290,
+      404
+    ],
+    "size": [
+      266,
+      326
+    ]
+  },
+  "left_arm": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      0,
+      440,
+      460,
+      830
+    ],
+    "alpha_trim": [
+      169,
+      31,
+      434,
+      366
+    ],
+    "size": [
+      265,
+      335
+    ]
+  },
+  "left_leg": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      460,
+      430,
+      805,
+      835
+    ],
+    "alpha_trim": [
+      33,
+      11,
+      256,
+      405
+    ],
+    "size": [
+      223,
+      394
+    ]
+  },
+  "right_leg": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      885,
+      430,
+      1254,
+      835
+    ],
+    "alpha_trim": [
+      47,
+      7,
+      334,
+      401
+    ],
+    "size": [
+      287,
+      394
+    ]
+  },
+  "cape": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      0,
+      835,
+      450,
+      1254
+    ],
+    "alpha_trim": [
+      60,
+      3,
+      407,
+      393
+    ],
+    "size": [
+      347,
+      390
+    ]
+  },
+  "accessory": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      480,
+      835,
+      800,
+      1254
+    ],
+    "alpha_trim": [
+      65,
+      64,
+      260,
+      322
+    ],
+    "size": [
+      195,
+      258
+    ]
+  },
+  "prop": {
+    "source": "parts_v2.png",
+    "authored_crop": [
+      840,
+      835,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      27,
+      45,
+      362,
+      382
+    ],
+    "size": [
+      335,
+      337
+    ]
+  }
+}

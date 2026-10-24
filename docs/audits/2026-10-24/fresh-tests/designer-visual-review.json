@@ -1,0 +1,265 @@
+{
+  "decision": "accepted_for_native_test_build_with_P1",
+  "whole_S3_production_accepted": false,
+  "physical_device_tested": false,
+  "review_method": "Designer individually inspected all 31 actual native PNGs, including the extra RU140 settings capture. Catalog technical status is recorded separately from visual inspection.",
+  "original_P0": [
+    {
+      "id": "LAW_TEXT_WRAPPING",
+      "status": "closed",
+      "evidence": [
+        "build/ui-final/L01-plan-ru-140-360x640.png",
+        "build/ui-final/L01-plan-en-140-360x640.png"
+      ],
+      "finding": "Two-line law labels stay within the lavender panel; background and following scene do not overlap."
+    },
+    {
+      "id": "SHOW_INSTRUCTION_HEIGHT",
+      "status": "closed",
+      "evidence": [
+        "build/ui-final/L01-show-ru-100-540x960.png"
+      ],
+      "finding": "Three-line show instruction has a measured expanded cream panel, without entering stage or witness cards."
+    },
+    {
+      "id": "WITNESS_FULL_NAME",
+      "status": "closed",
+      "evidence": [
+        "build/ui-final/L01-plan-ru-140-360x640-audience_end.png"
+      ],
+      "finding": "Horizontal witness scroll reaches the complete RU name Садовник. Initial partially visible next cards are deliberate scroll overflow, not clipped identity text."
+    }
+  ],
+  "verified_integrations": [
+    "ENV01/ENV02/ENV03 independently painted five-layer stacks appear in actual native game renders with common undistorted 3:2 playfields.",
+    "ENV02/ENV03 selected floor revision2 gives visible ground under authored gameplay props.",
+    "L11 uses Lada, L21 Hugo, L30 Marfa/Lada/Roza, L02 Postwoman and L03 Semyon; cards display actual distinct face artwork.",
+    "L21 span supports visibly use wood; water/ice plane textures follow authored polygon locations.",
+    "Felix, Plum and Caramelka actual body-part rigs are present in L06 plan/moving; joints and parented props stay coherent in the reviewed poses.",
+    "RU/EN140 law/instruction/settings/replacement dialogs remain readable on 360x640 and 360x800 render targets.",
+    "Compact140 vertical inventory reach and horizontal full-name/full-item reach are demonstrated by end captures; main action/footer remain fixed.",
+    "L30 initial title and settings gear independently confirmed by exact full-file header inspection; no initial-scroll defect."
+  ],
+  "P1": [
+    {
+      "id": "WATER_EDGE_POLISH",
+      "evidence": [
+        "build/ui-final/L01-plan-ru-100-540x960.png",
+        "build/ui-final/L11-plan-ru-100-540x960.png"
+      ],
+      "finding": "Authored water reads as framed rectangular pools. The correct geometry is clear, but thin flat borders need inset/contact shadow and painterly edge polish.",
+      "next": "Improve edge shading without changing polygon geometry, visibility diagnostics or gameplay cover."
+    },
+    {
+      "id": "L06_STAGING_OVERLAP",
+      "evidence": [
+        "build/ui-final/L06-plan-ru-100-540x960.png",
+        "build/ui-final/L06-moving-ru-100-540x960.png"
+      ],
+      "finding": "Goat, crate and Felix overlap heavily at initial loading/staging, reducing quick readability.",
+      "next": "Improve depth/contact shadows and loaded-payload presentation while preserving authoritative anchors and hit regions."
+    },
+    {
+      "id": "DISABLED_TEXT_CONTRAST",
+      "evidence": [
+        "build/ui-final/L01-map-ru-100-540x960.png",
+        "build/ui-final/L01-map-en-140-360x800.png",
+        "build/ui-final/L01-show-ru-100-540x960.png"
+      ],
+      "finding": "Locked album numbers and the disabled checking-status CTA have weak foreground/background contrast.",
+      "next": "Keep disabled state explicit while darkening readable ordinal/status labels; do not make inactive buttons appear actionable."
+    },
+    {
+      "id": "CAPACITY_LABEL",
+      "evidence": [
+        "build/ui-final/L01-law-ru-100-540x960.png",
+        "build/ui-final/L06-plan-ru-100-540x960.png"
+      ],
+      "finding": "Badge wording Груз 3 can be mistaken for current load rather than maximum carrying capacity.",
+      "next": "Prefer a concise maximum-capacity label such as До 3, retaining the visible numeric capacity."
+    },
+    {
+      "id": "DEFAULT_MOBILE_TYPE_SCALE",
+      "evidence": [
+        "build/ui-final/L01-plan-ru-100-540x960.png"
+      ],
+      "finding": "Default body font42 at1080reference pixels corresponds to approximately14sp at360dp width. It is readable in these renders;16sp remains the production target and needs physical-phone validation.",
+      "next": "Evaluate16sp default body copy on real devices with the measured wrapping/scrolling layout. Preserve at least48dp action targets and the working140percent option."
+    }
+  ],
+  "production_gaps": [
+    "Genuine painted front/profile/back direction art and directional character animation are not complete.",
+    "Native nine-actor key-pose acceptance at35percent does not prove full-cycle, actor-specific acting or all event staging.",
+    "The six human body rigs are native review-room assets; campaign witnesses use portrait states at authoritative pins rather than their full bodies.",
+    "Focused/embarrassed/wink portraits are authored but not mapped to current witness events.",
+    "The environment layer stack is currently static; optional parallax in metadata is not wired.",
+    "Crowd cutouts are distinct, but complete shared segmented crowd rig/acting remains outstanding.",
+    "Dedicated level overlays, full authored VFX timings/masks and full thirty-scene production acceptance remain outstanding.",
+    "No Android/iOS physical-device visual, touch, performance or listening acceptance is implied by these Linux native captures."
+  ],
+  "kind": "independent_designer_native_visual_acceptance",
+  "date_utc": "2026-10-23T21:30:14.954755+00:00",
+  "renderer": "native Godot/Mesa/Xvfb",
+  "source_runtime_digest_sha256": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+  "matching_apk_sha256": "4cdd114c9afc50566226d49a7352918019dbee02c12ae9685cf4b929a9232451",
+  "technical_catalog": "build/ui-final/all-captures.json",
+  "technical_catalog_status": "passed",
+  "visually_reviewed_case_count": 31,
+  "cases": [
+    {
+      "image": "build/ui-final/L01-title-ru-100-540x960.png",
+      "sha256": "b3622907550ff0b22916c3cff5ad3f2b9c5dfd77dda3f6a65c39bfb6806e13c6",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-map-ru-100-540x960.png",
+      "sha256": "91a7a28448f8e51f7f4dfe0dfa727ba6b24f4309ee14faa2b35a7a26e41cdefe",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-ru-100-540x960.png",
+      "sha256": "e4139ab4ffcecb02790ba3a5d64f60edd839867d886c2f009ef52a8761ac523e",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-show-ru-100-540x960.png",
+      "sha256": "77546411f054c025b364ae466885ff393720eb5f0179dbd8c6bf5dff3d94313d",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-proof-ru-100-540x960.png",
+      "sha256": "b238ba02cb0602bce53cefd37a655501edf68500016887e8e69ec46fae2027d9",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-law-ru-100-540x960.png",
+      "sha256": "5a73022772e8d75b96abae267ee26f825a5f03365bb355688b8f4f209f687e91",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-resolution-ru-100-540x960.png",
+      "sha256": "dfa00952092d6a30eddb8b61c0f64397143cc4acb017d9b112e416f7383faddc",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-moving-ru-100-540x960.png",
+      "sha256": "2d5e5b090398addfba9b8fe3509e921399a1bf4b2af339f2051837b53a866ef6",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-success-ru-100-540x960.png",
+      "sha256": "255e1444a6806034a3b9a6cfd60f9f41b724bfd1c000061c5a2fce67eb8cf954",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-settings-ru-100-540x960.png",
+      "sha256": "20ebace41c7e8d40a018f1e07194f5ab919185d4b90f96d2e27503ea85e5f236",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L02-plan-ru-100-540x960.png",
+      "sha256": "20fb8553a9094cde5ef1af14b7162679868a25affe8a67457a432727743c0b0d",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L03-plan-ru-100-540x960.png",
+      "sha256": "91c2ba5154009175b1560a6833292093f732775ef240d1daed8c0f040ec58143",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L11-plan-ru-100-540x960.png",
+      "sha256": "130064ea192bcb6148071e15a3f74a4358469d56008e718c8d0352e8a832f0ed",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L21-plan-ru-100-540x960.png",
+      "sha256": "9f76530a196a2206e8bd9be6e842f3e61e9298bcb1662294d820f3671bd5642f",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L30-plan-ru-100-540x960.png",
+      "sha256": "730be4c7fb8cf5d687d9203685b313fb759314cfece66313e9d28f0e9234e033",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L30-selection-ru-100-540x960.png",
+      "sha256": "37289fe43cc333f231f79494ee31edc8ddd03b2949af02af60959cad34be07d3",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L06-plan-ru-100-540x960.png",
+      "sha256": "0e85433c508693faa5c45078b2e0fd14da59c1fc7fe51b33e080abb0fd6a500e",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L06-moving-ru-100-540x960.png",
+      "sha256": "e2f8152ddd666314cbecb36ff144a2b1ed426f112815f8f0813db7cc983e5ab5",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-ru-140-360x640.png",
+      "sha256": "44515d3429089ae7a7dfceaabc40593dee6f1544ff19a1f2542265e14acfe7b2",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-en-140-360x640.png",
+      "sha256": "dcddfcd0cd31b175ceae6e4041eaa397a1a611c903601fde00862663a22a4492",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-settings-en-140-360x640.png",
+      "sha256": "8c30c59ccffc72f898ded45899845e2a260595ff3fbcd20de279aa051dd5d995",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-map-en-140-360x800.png",
+      "sha256": "6361a3d29b43f49c64eb39905458b1496f38c46d8115a8cfedfd85273782499b",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L11-plan-en-140-360x800.png",
+      "sha256": "eb5162909f6ecda820f28d79033d8cf616113da288f0e8b3ae0f030933c48052",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L21-plan-en-140-360x640.png",
+      "sha256": "8e98221aec8517e598cb3a454c5acf6fc865cee81c377ea26b1a77d330235747",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L30-selection-en-140-360x800.png",
+      "sha256": "425e12b1a541b2e308bd0e17a78d86e7985c7273e436119e6aaa19969cc9e384",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-ru-140-360x640-audience.png",
+      "sha256": "3f031831d5a3d2bf073a23c8008dcf916d63eab3f0cc6401b2b75b29710c9e11",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-en-140-360x640-audience.png",
+      "sha256": "5a24af7f0b82fefbb3b790a5bfcf9c169e2292e358d58d8e0a192fd1ce253fa6",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L21-plan-ru-140-360x640-audience.png",
+      "sha256": "1262a225a6520f62595b51da0caa66ebce7cf55ca8abc2981fa20e6216a12201",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-ru-140-360x640-audience_end.png",
+      "sha256": "3045b369077c6984407645b360dabfa24a6bf745a0120b55ddb143f4b5c0dc61",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final/L01-plan-ru-140-360x640-inventory_end.png",
+      "sha256": "18f91c09996698da3e8753bc287692b7c0e1e7eb153a5dc641f8e7797b07bd62",
+      "individually_visually_inspected": true
+    },
+    {
+      "image": "build/ui-final-extra/L01-settings-ru-140-360x640.png",
+      "sha256": "778d8e038b79f76d4f9418e00a081cf6e3c71b369dfa775c744d83e5252a86f9",
+      "individually_visually_inspected": true
+    }
+  ]
+}

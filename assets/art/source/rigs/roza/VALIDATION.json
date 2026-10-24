@@ -1,0 +1,128 @@
+{
+  "actor_id": "roza",
+  "verified_at_utc": "2026-10-23T20:58:33.944018+00:00",
+  "status": "static_assembly_verified",
+  "runtime_animation_verified": false,
+  "source": "source/rigs/roza/parts.png",
+  "preview": "build/roza-rig-assembly.png",
+  "preview_sha256": "dbd8d20be3a24b41588543ff35ed2932f9999cb482061a461724a24b42003321",
+  "parts": [
+    {
+      "file": "accessory.png",
+      "size": [
+        202,
+        330
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "a8c8676c15f47c278f2a90d05b98f25c1601739741db224c95ce51cccf831757",
+      "png_load": "PASS"
+    },
+    {
+      "file": "cape.png",
+      "size": [
+        428,
+        460
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "7808bfb8b1aa41cbd9e9afa78044cc616167f2f3c7e69c1ba90176263c71712e",
+      "png_load": "PASS"
+    },
+    {
+      "file": "head.png",
+      "size": [
+        430,
+        355
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "dce59017e7a16426ca07ba001d3fefe8527087df27e45103369cb2a2513b8da7",
+      "png_load": "PASS"
+    },
+    {
+      "file": "left_arm.png",
+      "size": [
+        252,
+        323
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "98b2fa563089dd4c6b64083fe212b40223324168f0edc9cc6416d70ecbbb85eb",
+      "png_load": "PASS"
+    },
+    {
+      "file": "left_leg.png",
+      "size": [
+        209,
+        387
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "ef1a361905274e94a6db8d765354e3aec45c5a8fca71a24969612f3230baa50b",
+      "png_load": "PASS"
+    },
+    {
+      "file": "prop.png",
+      "size": [
+        400,
+        364
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "9ce709d43055c16f77546fcd2147d74d91d2f46ff8c193315434de8b154fe48a",
+      "png_load": "PASS"
+    },
+    {
+      "file": "right_arm.png",
+      "size": [
+        353,
+        297
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "db773ac80fbf72b696bed79dc025c7638563603938e4259f21b5d6ae9d718ea7",
+      "png_load": "PASS"
+    },
+    {
+      "file": "right_leg.png",
+      "size": [
+        185,
+        385
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "36227ee7c58ddbbe92d488df0735d9fc85ea2c5bd180926274baf62232698fba",
+      "png_load": "PASS"
+    },
+    {
+      "file": "torso.png",
+      "size": [
+        315,
+        371
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "sha256": "bf095eaf16a7f06bdb077bc5f276d9ed1bb8b601ae1ecad684563578b2e15639",
+      "png_load": "PASS"
+    }
+  ]
+}

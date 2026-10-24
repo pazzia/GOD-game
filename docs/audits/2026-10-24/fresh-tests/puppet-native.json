@@ -1,0 +1,8 @@
+{
+  "art_acceptance": false,
+  "checks": 5,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "fixture": "colored blocks, not finished character art",
+  "native_rendered_pixels": true
+}

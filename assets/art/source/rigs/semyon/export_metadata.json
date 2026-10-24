@@ -1,0 +1,173 @@
+{
+  "head": {
+    "source": "parts.png",
+    "crop": [
+      0,
+      0,
+      440,
+      415
+    ],
+    "alpha_trim": [
+      65,
+      16,
+      419,
+      384
+    ],
+    "size": [
+      354,
+      368
+    ]
+  },
+  "torso": {
+    "source": "parts.png",
+    "crop": [
+      450,
+      0,
+      810,
+      420
+    ],
+    "alpha_trim": [
+      21,
+      50,
+      346,
+      411
+    ],
+    "size": [
+      325,
+      361
+    ]
+  },
+  "right_arm": {
+    "source": "parts.png",
+    "crop": [
+      820,
+      0,
+      1254,
+      415
+    ],
+    "alpha_trim": [
+      13,
+      94,
+      422,
+      401
+    ],
+    "size": [
+      409,
+      307
+    ]
+  },
+  "left_arm": {
+    "source": "parts.png",
+    "crop": [
+      0,
+      420,
+      450,
+      795
+    ],
+    "alpha_trim": [
+      57,
+      11,
+      440,
+      340
+    ],
+    "size": [
+      383,
+      329
+    ]
+  },
+  "left_leg": {
+    "source": "parts.png",
+    "crop": [
+      500,
+      420,
+      805,
+      870
+    ],
+    "alpha_trim": [
+      27,
+      7,
+      209,
+      435
+    ],
+    "size": [
+      182,
+      428
+    ]
+  },
+  "right_leg": {
+    "source": "parts.png",
+    "crop": [
+      900,
+      420,
+      1254,
+      870
+    ],
+    "alpha_trim": [
+      46,
+      12,
+      313,
+      436
+    ],
+    "size": [
+      267,
+      424
+    ]
+  },
+  "cape": {
+    "source": "parts.png",
+    "crop": [
+      0,
+      820,
+      420,
+      1254
+    ],
+    "alpha_trim": [
+      50,
+      18,
+      359,
+      382
+    ],
+    "size": [
+      309,
+      364
+    ]
+  },
+  "accessory": {
+    "source": "parts.png",
+    "crop": [
+      420,
+      870,
+      820,
+      1254
+    ],
+    "alpha_trim": [
+      16,
+      35,
+      381,
+      333
+    ],
+    "size": [
+      365,
+      298
+    ]
+  },
+  "prop": {
+    "source": "parts.png",
+    "crop": [
+      830,
+      880,
+      1254,
+      1254
+    ],
+    "alpha_trim": [
+      25,
+      41,
+      408,
+      259
+    ],
+    "size": [
+      383,
+      218
+    ]
+  }
+}

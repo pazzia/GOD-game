@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "environment_id": "ENV02",
+  "canvas_size": [
+    1536,
+    1024
+  ],
+  "aspect_ratio": 1.5,
+  "status": "independently_painted_stack_pending_runtime_review",
+  "fit": "contain_preserve_aspect",
+  "source_directory": "res://assets/art/source/environments/ENV02",
+  "layers": [
+    {
+      "id": "backdrop",
+      "file": "backdrop.png",
+      "z_index": -50,
+      "opacity": 1,
+      "parallax_pixels": [
+        3,
+        1
+      ],
+      "reduced_motion": "static"
+    },
+    {
+      "id": "floor",
+      "file": "floor.png",
+      "z_index": -40,
+      "opacity": 1,
+      "parallax_pixels": [
+        0,
+        0
+      ],
+      "reduced_motion": "static"
+    },
+    {
+      "id": "midground",
+      "file": "midground.png",
+      "z_index": -30,
+      "opacity": 1,
+      "parallax_pixels": [
+        1,
+        0
+      ],
+      "reduced_motion": "static"
+    },
+    {
+      "id": "foreground",
+      "file": "foreground.png",
+      "z_index": -20,
+      "opacity": 1,
+      "parallax_pixels": [
+        1,
+        0
+      ],
+      "reduced_motion": "static"
+    },
+    {
+      "id": "atmosphere",
+      "file": "atmosphere.png",
+      "z_index": -10,
+      "opacity": 0.16,
+      "parallax_pixels": [
+        3,
+        1
+      ],
+      "reduced_motion": "static"
+    }
+  ],
+  "draw_stage_content_after_layers": true,
+  "water": {
+    "render": "exact_authoritative_polygon_above_floor",
+    "liquid": "res://assets/art/props/water_surface.png",
+    "frozen": "res://assets/art/props/ice_surface.png",
+    "applies_to_all_environments": true
+  },
+  "notes": [
+    "All five are independent imagegen paintings, not cropped strips of a fullplate.",
+    "Keep every image full-canvas; no alpha trim.",
+    "Use one common fit transform and playrect for layers, water, entities, eye pins and hit regions.",
+    "Near architecture and foreground are decoration; they must not claim to hide methods or block sight.",
+    "Atmosphere is visual light only and has no steam/occluder meaning."
+  ],
+  "floor_revision": 2,
+  "floor_horizon_fraction": 0.2
+}

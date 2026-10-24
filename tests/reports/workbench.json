@@ -1,0 +1,7 @@
+{
+  "checks": 72,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "human_usability_test": false,
+  "native_tool": true
+}

@@ -1,0 +1,8 @@
+{
+  "checks": 7,
+  "engine": "4.7.2-stable (official)",
+  "events": 9,
+  "failures": [],
+  "input": "native Input.parse_input_event, no signal shortcut",
+  "physical_device_test": false
+}

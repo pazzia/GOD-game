@@ -1,0 +1,7 @@
+{
+  "checks": 13,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "listening_performed": false,
+  "timing": "simulated conductor clock with real AudioStreamPlayer nodes"
+}

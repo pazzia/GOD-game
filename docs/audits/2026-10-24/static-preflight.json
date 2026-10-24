@@ -1,0 +1,81 @@
+{
+  "runtime_files": 1055,
+  "runtime_digest": "cb83d6eae698674b8f25768da86d10853c0a73128c5381af8534b9c88eaac66c",
+  "matches_previous_verification": true,
+  "changed_runtime_files": [],
+  "asset_rows": 571,
+  "unique_asset_ids": 571,
+  "planned_ids_match": true,
+  "asset_statuses": {
+    "partial_emotions_model_bible": 9,
+    "runtime_portraits_present": 9,
+    "part_rig_keyposes_reviewed_direction_pending": 9,
+    "controller_clip_assets_partial": 80,
+    "planned_not_produced": 78,
+    "produced_measured_mix_review_pending": 222,
+    "painted_layer_present_review_pending": 15,
+    "authored_logic_layout": 30,
+    "runtime_prop_present": 21,
+    "prop_art_present_not_runtime_mapped": 4,
+    "vector_source_present": 32,
+    "implemented_native_theme": 1,
+    "font_and_license_present": 1,
+    "baseline_crowd_only": 48,
+    "partial_runtime_effects": 11,
+    "partial_composed_title": 1
+  },
+  "actual_asset_references_checked": 526,
+  "missing_actual_asset_references": [],
+  "requirement_rows": 79,
+  "requirement_statuses": {
+    "partial_platform": 2,
+    "not_run_humans": 1,
+    "implemented_automated": 38,
+    "partial_production_art": 3,
+    "implemented_native_review_partial_platform": 4,
+    "implemented_automated_partial_platform": 4,
+    "partial_ui_review": 1,
+    "implemented_automated_partial_art": 1,
+    "implemented_sources_partial_catalog": 1,
+    "partial_art_review": 1,
+    "implemented_partial_production_acting": 1,
+    "in_progress_animation": 1,
+    "implemented_core_partial_staging": 1,
+    "implemented_core_partial_ui": 1,
+    "implemented_resources_partial_listening": 1,
+    "implemented_file_measurements": 1,
+    "not_run_devices": 3,
+    "partial_runtime": 1,
+    "implemented_automated_pending_humans": 1,
+    "implemented_resources": 1,
+    "implemented_reproducible_debug": 1,
+    "not_run_release": 1,
+    "implemented_debug_handoff_partial_release": 1,
+    "blocked_external": 3,
+    "implemented_code_review": 2,
+    "implemented_automated_pending_humans_devices": 1,
+    "implemented": 1,
+    "partial_production_composition": 1
+  },
+  "json_valid": 201,
+  "json_errors": [],
+  "literal_resource_references_checked": 613,
+  "dynamic_resource_strings_skipped": 0,
+  "missing_literal_resources": [
+    {
+      "file": "services/audio_service.gd",
+      "resource": "assets/audio/runtime_catalog.json"
+    }
+  ],
+  "godot_checksum_manifest_present": true,
+  "checksum_entries": 3,
+  "files_over_100MiB": [],
+  "optional_legacy_resources_absent": [
+    {
+      "file": "services/audio_service.gd",
+      "resource": "assets/audio/runtime_catalog.json"
+    }
+  ],
+  "missing_required_literal_resources": [],
+  "optional_resource_explanation": "audio_service.gd checks FileAccess.file_exists before reading each catalog; the production catalog exists; missing legacy compatibility path is not required."
+}

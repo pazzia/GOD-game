@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "process_exit_code": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "attempt": 2,
+      "process_exit_code": 0,
+      "errors": [
+        "WARNING: 22 ObjectDB instances were leaked at exit (run with `--verbose` for details).",
+        "ERROR: 5 resources still in use at exit (run with --verbose for details)."
+      ],
+      "passed": false
+    },
+    {
+      "attempt": 3,
+      "process_exit_code": 0,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "initial_aggregate_failed": true
+}

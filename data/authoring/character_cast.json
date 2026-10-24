@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scope": "Character identity only. Witness ids, slots, views, timing, proof rules and geometry are unchanged. Lada hosts the kitchen chapter; Hugo joins the archive chapter; all six crowd portraits appear.",
+  "overrides": {
+    "L11": {
+      "w1": "CH06"
+    },
+    "L12": {
+      "w1": "CH06",
+      "w3": "CROWD05"
+    },
+    "L13": {
+      "w1": "CH06"
+    },
+    "L14": {
+      "w1": "CH06"
+    },
+    "L15": {
+      "w1": "CH06"
+    },
+    "L16": {
+      "w1": "CH06"
+    },
+    "L17": {
+      "w1": "CH06"
+    },
+    "L18": {
+      "w1": "CH06"
+    },
+    "L19": {
+      "w1": "CH06"
+    },
+    "L20": {
+      "w1": "CH06"
+    },
+    "L21": {
+      "w1": "CH08"
+    },
+    "L22": {
+      "w1": "CH08"
+    },
+    "L23": {
+      "w1": "CH08"
+    },
+    "L24": {
+      "w1": "CH08",
+      "w3": "CROWD04"
+    },
+    "L25": {
+      "w1": "CH08"
+    },
+    "L26": {
+      "w1": "CH08"
+    },
+    "L27": {
+      "w1": "CH08"
+    },
+    "L28": {
+      "w1": "CH08"
+    },
+    "L29": {
+      "w1": "CH08"
+    },
+    "L30": {
+      "w2": "CH06"
+    },
+    "L02": {
+      "w3": "CROWD02"
+    },
+    "L05": {
+      "w3": "CROWD03"
+    },
+    "L10": {
+      "w3": "CROWD06"
+    }
+  }
+}

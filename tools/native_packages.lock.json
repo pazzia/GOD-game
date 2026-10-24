@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "platform": "Linux x86_64",
+  "purpose": "Optional reproducible AOSP signing and native rendering tools; not a complete Google Android SDK",
+  "source": "Ubuntu Noble snapshot 20260828T000000Z",
+  "packages": [
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libx/libxkbfile/libxkbfile1_1.1.0-1build4_amd64.deb",
+      "filename": "libxkbfile1_1%3a1.1.0-1build4_amd64.deb",
+      "size": 70010,
+      "algorithm": "sha512",
+      "digest": "f99f32ad2bd1dd817cd30e06f06f57bc22f53cd2a2aae95727a4b059a6b3b986afa9d4e5b289a0cb6ff57652701798fa4d728c82bcc6106e665e202d36e7c0a3"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/x/x11-xkb-utils/x11-xkb-utils_7.7%2b8build2_amd64.deb",
+      "filename": "x11-xkb-utils_7.7+8build2_amd64.deb",
+      "size": 170314,
+      "algorithm": "sha512",
+      "digest": "75de5f30d0ac4d51af9be05d3a9c6aac0173f20bff40b0a17d31c64e0830bfbe1c40a9db31479152f821cecf0e3a25a03cb768c97822dc266a58c9b734552b6a"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/adb_34.0.4-1build3_amd64.deb",
+      "filename": "adb_1%3a34.0.4-1build3_amd64.deb",
+      "size": 278004,
+      "algorithm": "sha512",
+      "digest": "31a623f7452a5a0a3ef9f0daab9d139b9e9a9eb48db22719da7c5de2ad4c37f7bc9c615511306980d8a11ce7b62c99acdc4a7d1fb78a7ee177be566eb36bb587"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-libbacktrace_34.0.4-1build3_amd64.deb",
+      "filename": "android-libbacktrace_1%3a34.0.4-1build3_amd64.deb",
+      "size": 227210,
+      "algorithm": "sha512",
+      "digest": "26b16de9c52dd7b34c13b3f6869bddef8e9e94fd6b17daa02a6dfd1ebaee75b260da29c20b85bb623c9b5c10e7b05a7adea55f5906d8aa21a5d54450242831d5"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-libbase_34.0.4-1build3_amd64.deb",
+      "filename": "android-libbase_1%3a34.0.4-1build3_amd64.deb",
+      "size": 98980,
+      "algorithm": "sha512",
+      "digest": "8d750bdd1722408e728dd74173d69ec50b1816662f73925f26d2ceb2353ed53d53d975a456957e66411a1d6f8933c9c83f0e35ac0cf5117cc82766dde45d6791"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-external-boringssl/android-libboringssl_14.0.0%2br11-4build1_amd64.deb",
+      "filename": "android-libboringssl_14.0.0+r11-4build1_amd64.deb",
+      "size": 728842,
+      "algorithm": "sha512",
+      "digest": "258781bb6365b3346819692015be04eedf2e836bb1c168269f15b10624f925b46649bbeb9e04b6b9a67cdc15098cf8eeff0a81916848c45e3cf37960277e1c36"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-libcutils_34.0.4-1build3_amd64.deb",
+      "filename": "android-libcutils_1%3a34.0.4-1build3_amd64.deb",
+      "size": 35722,
+      "algorithm": "sha512",
+      "digest": "fc509f1586e0e696bc92f336569e6bdecd2d23c59ab98d2f2376c2d50359584d9c2b4b862ea3d5bd5f0bec3e87c787a6ede19898f51545a1c553f60885ad98c6"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-liblog_34.0.4-1build3_amd64.deb",
+      "filename": "android-liblog_1%3a34.0.4-1build3_amd64.deb",
+      "size": 35790,
+      "algorithm": "sha512",
+      "digest": "049b4a71a886f18c76b0348ada8439eee62bc129466d04959a02f3e49a44df851bcbb163379e6751f3d9c6f9880908e573f54e6441fdb35a07da58f5bc097716"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-libutils_34.0.4-1build3_amd64.deb",
+      "filename": "android-libutils_1%3a34.0.4-1build3_amd64.deb",
+      "size": 51814,
+      "algorithm": "sha512",
+      "digest": "e13c1000e1e47bcd9a0731253bd1f13413a64e435832a409773f55adf8a5fcec21d6abf3f1c3f997affd232b3dd102d86a19faa522f18394b1eae6649d22b35e"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools/android-libziparchive_34.0.4-1build3_amd64.deb",
+      "filename": "android-libziparchive_1%3a34.0.4-1build3_amd64.deb",
+      "size": 40702,
+      "algorithm": "sha512",
+      "digest": "4f3dd091f19cbcabfe2035c1b7f3e45b062ac6be7d116263b0a94fcbee5d0ac275616806fe5ff8db2cc59b767d233ed4af790d4d2a7957fad70911045065b8ca"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools-apksig/apksigner_31.0.2-1ubuntu1_all.deb",
+      "filename": "apksigner_31.0.2-1ubuntu1_all.deb",
+      "size": 443686,
+      "algorithm": "sha512",
+      "digest": "36c6be78ee7ed72eefa02963e21411d69c48544e3baa3b39e63f83df92ce1289770a4dc29191c6ff7de2d824b4e93fdf4c3bfd42da8606d853ac18115c8032de"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-tools-apksig/libapksig-java_31.0.2-1ubuntu1_all.deb",
+      "filename": "libapksig-java_31.0.2-1ubuntu1_all.deb",
+      "size": 406398,
+      "algorithm": "sha512",
+      "digest": "aa63fcd49e0c26db415b8a7e3da6af111516de9780b2cb9fb6a717df1d6e4400b13da944a1d68099c160593c374296036cd4b7a8687d5f1944cd3230efe159b8"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/z/zopfli/libzopfli1_1.0.3-2_amd64.deb",
+      "filename": "libzopfli1_1.0.3-2_amd64.deb",
+      "size": 109624,
+      "algorithm": "sha512",
+      "digest": "0a4bfcce34256a659e46246cde84f0794f3a766b6433f0706539528363ec73859b77f8482f519bc90d54b4e9072004787af60913d39ce0f7e52fcc3cedce4bc3"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/a/android-platform-build/zipalign_10.0.0%2br36-1ubuntu2_amd64.deb",
+      "filename": "zipalign_1%3a10.0.0+r36-1ubuntu2_amd64.deb",
+      "size": 20036,
+      "algorithm": "sha512",
+      "digest": "cdceeebea3f0d01a65b8b70d2def9680789db93584ee73993069d62f37dfcd28de3d0571d92c0d2d5accdaa82b724a6c2e1c055e88a8586d48ce731660dd40a0"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/p/protobuf/libprotobuf32t64_3.21.12-8.2ubuntu0.3_amd64.deb",
+      "filename": "libprotobuf32t64_3.21.12-8.2ubuntu0.3_amd64.deb",
+      "size": 922638,
+      "algorithm": "sha512",
+      "digest": "f488c54c8c41ae1921cce921523bf59062e7fac04926541a6947a19329b483188354194bbf27475b733c3974c6c156832aaefb570a4192f7913f5cf1b188ed3c"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/libx/libxfont/libxfont2_2.0.6-1%2bdeb13u1build0.24.04.2_amd64.deb",
+      "filename": "libxfont2_1%3a2.0.6-1+deb13u1build0.24.04.2_amd64.deb",
+      "size": 93972,
+      "algorithm": "sha512",
+      "digest": "6dee1ed9943f533ff7000c385a0cd83bbdd71c44e81c02e583dc614aa4272fd108725261481c3ac4425bc1a025351f7f4b049f86569ad7ecc359aa644c17c95b"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/main/x/xorg-server/xserver-common_21.1.12-1ubuntu1.6_all.deb",
+      "filename": "xserver-common_2%3a21.1.12-1ubuntu1.6_all.deb",
+      "size": 34666,
+      "algorithm": "sha512",
+      "digest": "c269c6197fc1d0e10e1b6c60ab7bccaa7c021f493bda432ade8ce8a8299182d51bda5d357bd3e04a9348cbcf6f611982cfc813fe1080c76c47e917c4e722e613"
+    },
+    {
+      "url": "https://snapshot.ubuntu.com/ubuntu/20260828T000000Z/pool/universe/x/xorg-server/xvfb_21.1.12-1ubuntu1.6_amd64.deb",
+      "filename": "xvfb_2%3a21.1.12-1ubuntu1.6_amd64.deb",
+      "size": 876922,
+      "algorithm": "sha512",
+      "digest": "267813d95c3c8483f5d1203a1a1f95a93faee080477f5ec9cb971b92919180cadfd6b61c41ee6e0dcb04e89a5de9f920b808d878045d8836e324fa50a0c9ec42"
+    }
+  ]
+}

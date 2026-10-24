@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "actor_id": "plum",
+  "canvas_size": [
+    1400,
+    1400
+  ],
+  "feet_origin": [
+    700,
+    1200
+  ],
+  "nominal_height": 1050,
+  "status": "native_keyposes_verified",
+  "runtime_animation_verified": false,
+  "parts": [
+    {
+      "id": "wing_left",
+      "file": "wing_left.png",
+      "position": [
+        620,
+        750
+      ],
+      "pivot": [
+        0.95,
+        0.59
+      ],
+      "target_height": 650,
+      "z_index": -20,
+      "parent": "body",
+      "role": "wing"
+    },
+    {
+      "id": "wing_right",
+      "file": "wing_right.png",
+      "position": [
+        820,
+        750
+      ],
+      "pivot": [
+        0.05,
+        0.6
+      ],
+      "target_height": 480,
+      "z_index": -19,
+      "parent": "body",
+      "role": "wing"
+    },
+    {
+      "id": "foot_left",
+      "file": "foot_left.png",
+      "position": [
+        640,
+        1020
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 190,
+      "z_index": -10,
+      "parent": "body",
+      "role": "leg"
+    },
+    {
+      "id": "foot_right",
+      "file": "foot_right.png",
+      "position": [
+        745,
+        1010
+      ],
+      "pivot": [
+        0.5,
+        0.04
+      ],
+      "target_height": 190,
+      "z_index": -9,
+      "parent": "body",
+      "role": "leg"
+    },
+    {
+      "id": "body",
+      "file": "body.png",
+      "position": [
+        720,
+        815
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "target_height": 500,
+      "z_index": 0,
+      "parent": null,
+      "role": "torso"
+    },
+    {
+      "id": "head",
+      "file": "head.png",
+      "position": [
+        780,
+        670
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "target_height": 370,
+      "z_index": 10,
+      "parent": "body",
+      "role": "head"
+    },
+    {
+      "id": "antenna_left",
+      "file": "antenna_left.png",
+      "position": [
+        705,
+        390
+      ],
+      "pivot": [
+        0.72,
+        0.96
+      ],
+      "target_height": 220,
+      "z_index": 11,
+      "parent": "head",
+      "role": "antenna"
+    },
+    {
+      "id": "antenna_right",
+      "file": "antenna_right.png",
+      "position": [
+        850,
+        390
+      ],
+      "pivot": [
+        0.28,
+        0.96
+      ],
+      "target_height": 220,
+      "z_index": 12,
+      "parent": "head",
+      "role": "antenna"
+    },
+    {
+      "id": "bag",
+      "file": "bag.png",
+      "position": [
+        650,
+        860
+      ],
+      "pivot": [
+        0.5,
+        0.55
+      ],
+      "target_height": 400,
+      "z_index": 8,
+      "parent": "body",
+      "role": "prop"
+    }
+  ],
+  "portraits": {
+    "idle": "res://assets/art/characters/portraits/plum/idle.png",
+    "observe": "res://assets/art/characters/portraits/plum/observe.png",
+    "suspect": "res://assets/art/characters/portraits/plum/suspect.png",
+    "accept": "res://assets/art/characters/portraits/plum/accept.png",
+    "reveal_react": "res://assets/art/characters/portraits/plum/reveal_react.png",
+    "focused": "res://assets/art/characters/portraits/plum/focused.png",
+    "embarrassed": "res://assets/art/characters/portraits/plum/embarrassed.png",
+    "celebrate": "res://assets/art/characters/portraits/plum/celebrate.png"
+  },
+  "angles": {},
+  "assembly_notes": "Calibrated true moth anatomy: two articulated wing fans, head, body, two head-parented antennae, two hind legs and satchel. Head/body/feet overlaps inspected, strap root is covered by head fur. Native animation review pending.",
+  "native_keypose_review": {
+    "accepted_for_integration": true,
+    "date_utc": "2026-10-23T21:09:19.243801+00:00",
+    "evidence": "build/rig-review-final/plum-keyposes.png",
+    "sha256": "a36582f687eada4a93999f295ba4aa7edeefd856e155564dfe40e65f31b7e462",
+    "identical_to_individually_reviewed_previous_sheet": true,
+    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+  },
+  "directional_animation_complete": false
+}

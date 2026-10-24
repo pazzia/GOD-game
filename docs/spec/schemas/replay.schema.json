@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authoring replay seed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "level_id",
+    "verification",
+    "steps",
+    "expected_final_predicates"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "level_id": {
+      "type": "string"
+    },
+    "verification": {
+      "enum": [
+        "not_run",
+        "passed",
+        "failed"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "op"
+        ],
+        "properties": {
+          "op": {
+            "enum": [
+              "command",
+              "advance_ticks",
+              "assert"
+            ]
+          },
+          "type": {
+            "type": "string"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "predicate": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "expected_final_predicates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

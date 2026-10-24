@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "level_id": "L23",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "paper",
+        "slot_id": "paper_start"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "cold_pack",
+        "slot_id": "stage_cold"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "cold_screen",
+        "slot_id": "cold_screen_slot"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M02"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M02",
+        "replace_law_id": null
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "paper",
+        "slot_id": "stage_paper"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "weight",
+        "route_id": "cross"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

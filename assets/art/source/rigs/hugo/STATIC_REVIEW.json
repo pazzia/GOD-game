@@ -1,0 +1,83 @@
+{
+  "actor": "hugo",
+  "date_utc": "2026-10-23T20:57:00.464854+00:00",
+  "static_preview": "build/hugo-rig-assembly.png",
+  "static_preview_sha256": "eb006edd4b7652cefab4b87c3099b788b7e208dca325a09547a180f5730f264f",
+  "review": "Actual designer-helper image inspection after authored pivots and scales; static coherent anatomy. Parent Designer acceptance/native animation review are separate.",
+  "parts": [
+    {
+      "part": "cape",
+      "size": [
+        517,
+        420
+      ],
+      "sha256": "e1117bd42d3396f5e650ab217689dbe2e2224f5f7803bceb98f59066abac35b7"
+    },
+    {
+      "part": "accessory",
+      "size": [
+        390,
+        370
+      ],
+      "sha256": "2a8cc18aaeb022bc77bce494fb585f4440f30317addb03f03a9839db73950bff"
+    },
+    {
+      "part": "left_leg",
+      "size": [
+        273,
+        454
+      ],
+      "sha256": "de71cb28c329cea48509bfd27f63cc84fd8db1220a2acfbc62ef74abb466eb6a"
+    },
+    {
+      "part": "right_leg",
+      "size": [
+        254,
+        453
+      ],
+      "sha256": "f6d05a5190eb5b167df3409aa9e720e65609a39fca41ea54bd3ece4f6c6790ba"
+    },
+    {
+      "part": "torso",
+      "size": [
+        268,
+        359
+      ],
+      "sha256": "442dd3d10bcacc382f50bc5749f27cbee1e3f4f4bfd91393254530aac7f71f2d"
+    },
+    {
+      "part": "left_arm",
+      "size": [
+        249,
+        275
+      ],
+      "sha256": "aa39d009769324ee07e082cd13eca9b402f4222a6ce92515b04a8692aa1d04c3"
+    },
+    {
+      "part": "right_arm",
+      "size": [
+        416,
+        251
+      ],
+      "sha256": "9b8f52493ddf62595760bf6c9520e23f3254662670b61cca5c9814e0fc00d3bb"
+    },
+    {
+      "part": "head",
+      "size": [
+        441,
+        327
+      ],
+      "sha256": "d0e9f36c5813be2411064bb9a6d8d8390a58db6de14ffa8a4c861f2667c1e692"
+    },
+    {
+      "part": "prop",
+      "size": [
+        234,
+        220
+      ],
+      "sha256": "5ff8e2fef9b9744e0a70976d8b0452d1c5e928682371adf553e54ea67bb33673"
+    }
+  ],
+  "native_animation_verified": false,
+  "directional_views_complete": false
+}

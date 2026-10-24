@@ -1,0 +1,7 @@
+{
+  "checks": 5436,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "layouts": 776,
+  "scope": "real native Label shaping; authored campaign phase snapshots; RU/EN at 100/140%; no physical-device claim"
+}

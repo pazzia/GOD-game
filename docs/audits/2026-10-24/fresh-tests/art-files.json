@@ -1,0 +1,1440 @@
+{
+  "kind": "art_file_integrity",
+  "status": "passed",
+  "raster_exports": 238,
+  "svg_exports": 32,
+  "portrait_exports": 81,
+  "layer_stacks_with_metadata": 3,
+  "errors": [],
+  "images": [
+    {
+      "path": "assets/art/characters/caramelka.png",
+      "width": 258,
+      "height": 309,
+      "sha256": "099774786996444e9fc85e892920346cd7436545c82960dcfbe8eb57334e1ed8"
+    },
+    {
+      "path": "assets/art/characters/crowd_fisherman.png",
+      "width": 300,
+      "height": 500,
+      "sha256": "bf8789f995a93e842e32007a6dd03979f29a5fe1ef3218a53388f99124934e05"
+    },
+    {
+      "path": "assets/art/characters/crowd_gardener.png",
+      "width": 326,
+      "height": 493,
+      "sha256": "46058bac4cea7c84538727c9eb5a1f1a6cbb8cc94c4d6c3daa6e6f3373b6f3bc"
+    },
+    {
+      "path": "assets/art/characters/crowd_librarian.png",
+      "width": 314,
+      "height": 508,
+      "sha256": "9d723f5037c1d9b90fa3a6c3c43dcddc2e675e75184431f274f1d4c5dddac7c6"
+    },
+    {
+      "path": "assets/art/characters/crowd_merchant.png",
+      "width": 373,
+      "height": 509,
+      "sha256": "7a9ba425050f5f592075a802ecc1bce3bb37d2984eb6cb66e03104397b7c007a"
+    },
+    {
+      "path": "assets/art/characters/crowd_musician.png",
+      "width": 358,
+      "height": 508,
+      "sha256": "7256b03173e5dd37a1583d87f8e169ee9d780551c3f9d4a2a88a9754f78d865f"
+    },
+    {
+      "path": "assets/art/characters/crowd_postwoman.png",
+      "width": 326,
+      "height": 494,
+      "sha256": "176ebb9f1d1d45f6e3286b7ec1bf2e393b6f0dde71ff3426df99375b5fb5f4b9"
+    },
+    {
+      "path": "assets/art/characters/felix.png",
+      "width": 349,
+      "height": 337,
+      "sha256": "708aeb852a78693b70aa9bf887dfbf797271a3b504e59dc8cd2ac7f724b684c8"
+    },
+    {
+      "path": "assets/art/characters/hugo.png",
+      "width": 361,
+      "height": 335,
+      "sha256": "423ac2e0c7d80a5d9de6acfc96348331c0fcc8898e5b229e34d174ce6d40b66a"
+    },
+    {
+      "path": "assets/art/characters/lada.png",
+      "width": 298,
+      "height": 338,
+      "sha256": "fad4b5aa393a52db19e27b96ba215da83a1dccfd903a723e635f6b5158debdc8"
+    },
+    {
+      "path": "assets/art/characters/marfa.png",
+      "width": 274,
+      "height": 338,
+      "sha256": "addc952cd50faffd08bb68e2fefd4a71c6fdce0a99d9332cf3dd2851c98923fd"
+    },
+    {
+      "path": "assets/art/characters/nika.png",
+      "width": 190,
+      "height": 331,
+      "sha256": "c4abb50625f3e517fd5c7966a1c37ef2d3c9b36909ebe62e550c1a91e42acbb6"
+    },
+    {
+      "path": "assets/art/characters/plum.png",
+      "width": 309,
+      "height": 302,
+      "sha256": "34eaf490dd8d8b93a8cab809128a19935ec54d6b96f18ebd67ec938f44520914"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/accept.png",
+      "width": 363,
+      "height": 412,
+      "sha256": "b8fb22e9eb66bdaa83caf6c301735fb1b90e12092c43de7682e52bc2d29becf6"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/celebrate.png",
+      "width": 384,
+      "height": 409,
+      "sha256": "079d544626e4b585b9e49670bf66514c66d269a48f031e6ba79c86f3071e4d82"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/embarrassed.png",
+      "width": 362,
+      "height": 417,
+      "sha256": "03be2619dabd913e58660e1428d0e0e34383f23108f7d36a7f6f226f549db159"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/extra.png",
+      "width": 351,
+      "height": 412,
+      "sha256": "796e9fa178504515eb665c0a616b63a04ed0257d26d9ec58bf4697908245e16b"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/focused.png",
+      "width": 356,
+      "height": 412,
+      "sha256": "c265e0ad094b1d963cd17f7744952cee0e77af80a9ee8201903e75fbc6ebae6a"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/idle.png",
+      "width": 355,
+      "height": 412,
+      "sha256": "b633406610d65418ddab1d757c42f24db841f2432e869915803ad9ad4909c29e"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/observe.png",
+      "width": 333,
+      "height": 410,
+      "sha256": "780bb3661dd5cf520517050d2ce6d1f6b3d2401ca7776345ef1240fcbf2a8392"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/reveal_react.png",
+      "width": 339,
+      "height": 414,
+      "sha256": "b0c6e0fe86d472e38c4f2f51042adea2bf8f74cd9b2ff1c55089d819a9d08c7a"
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/suspect.png",
+      "width": 329,
+      "height": 408,
+      "sha256": "ec07303f12ba743f4671857d60e34129de7e2c549c857ad55d082fe5be4719c1"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/accept.png",
+      "width": 384,
+      "height": 397,
+      "sha256": "67f0858f3b51f33d0642424021b59a38ed0f190d2a062fec0ddbd1dc000171a0"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/celebrate.png",
+      "width": 363,
+      "height": 394,
+      "sha256": "276eafb81c4bb2688a242fc1af8c010025c67a4a93b06a6cd04c3631124909a3"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/embarrassed.png",
+      "width": 368,
+      "height": 394,
+      "sha256": "0b0fe0f97d570f5e86cb6bb9846a85c476065b858f8bde494f20042b5fe9883f"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/extra.png",
+      "width": 333,
+      "height": 396,
+      "sha256": "0e058a0fbb3da874754e47f3b796998612440ca66efe43397f519465a703daba"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/focused.png",
+      "width": 368,
+      "height": 402,
+      "sha256": "9deb4c23e428b8f8d45be5059314f13530e9871feb16faf6a82e645fe3f89e4b"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/idle.png",
+      "width": 373,
+      "height": 397,
+      "sha256": "485c1b1a350d539709c0866b8f7bc0d0f0698fb624a2dfbeff631e74854ecca8"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/observe.png",
+      "width": 368,
+      "height": 403,
+      "sha256": "cd0065ec139054ab351364907047943000220b4bc317fefccbdc2985e8fcc6cc"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/reveal_react.png",
+      "width": 386,
+      "height": 403,
+      "sha256": "31d044d7321ee57a339116c9a841344a4b0407e934c10617b4c1aec45248e316"
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/suspect.png",
+      "width": 350,
+      "height": 400,
+      "sha256": "7cd600ccf26fd5a774730c506c8709c94599d8e98d8953cc8a036b505cc0457b"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/accept.png",
+      "width": 412,
+      "height": 388,
+      "sha256": "92ad24f6a40b237741f8165ea11bba9a1c7264d51f0b269f1d744ab1df094608"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/celebrate.png",
+      "width": 418,
+      "height": 379,
+      "sha256": "10ce1c3859b0ee5bbd4d75b121bfabbd14f1afbb9f90510b91a0ec0c97c77fd2"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/embarrassed.png",
+      "width": 408,
+      "height": 373,
+      "sha256": "2f4467c450e7ffc0c2e6684cda01b6117aded5e8353d641dd5756cdc5c254e5c"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/extra.png",
+      "width": 407,
+      "height": 372,
+      "sha256": "c37df484169f69438e4904e1e8435887e4fee24fc9fbfd14afd5412843897241"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/focused.png",
+      "width": 414,
+      "height": 381,
+      "sha256": "6b2763fb75127bb0c37636b44c1f422c8ed512fb7ec03c3332e4391d76b89c43"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/idle.png",
+      "width": 404,
+      "height": 400,
+      "sha256": "d435f2f12f9bec8efbc3cde0d55ea57ee94a49c68df52ea2cccbe60540c72cc7"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/observe.png",
+      "width": 418,
+      "height": 398,
+      "sha256": "9a84e188eee55a77a847c648488d5e8909e7a11e99fb316bb7975c9637b2f3cb"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/reveal_react.png",
+      "width": 417,
+      "height": 390,
+      "sha256": "f0cae902a3b8e3d170dd30d0f2384c82f3053f2c3a6bd48bca340874f3e5207e"
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/suspect.png",
+      "width": 410,
+      "height": 400,
+      "sha256": "00bd7f2b5bc09e3cacc1f9cfdf6b52fd7cca5594ffbf17c11058f2f22db2b2e1"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/accept.png",
+      "width": 400,
+      "height": 404,
+      "sha256": "b4b28b0c4bc7c9212019c6c90613c5ecbaca62c9fc25ed5b65b11894db917be5"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/celebrate.png",
+      "width": 409,
+      "height": 404,
+      "sha256": "c0bc21e3272fb2854e75005c95f3548c0964cc82f3e4e27e964e7419ae9552a7"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/embarrassed.png",
+      "width": 401,
+      "height": 405,
+      "sha256": "f03849d5d849fa6b1ca79ae5360c0e40d26ba1ed43a2d8577d5e7f1068c54ef9"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/extra.png",
+      "width": 394,
+      "height": 404,
+      "sha256": "ee3794a261ee89095bf40df1ee658401665806e45eb02f95ad46261a4b818a01"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/focused.png",
+      "width": 398,
+      "height": 405,
+      "sha256": "7cd6c1d5a7430d63096e2f8f64359a4b35c9788ee5692427840cbaf29bbccd03"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/idle.png",
+      "width": 406,
+      "height": 418,
+      "sha256": "abc6f0928649f7397e4d21a224958e464edb9466d1c952c7d0b3f267c138a564"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/observe.png",
+      "width": 393,
+      "height": 414,
+      "sha256": "6457a11407531a393f373c50a3e9fbc7466f30507be79651a648ae02a9650aae"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/reveal_react.png",
+      "width": 395,
+      "height": 418,
+      "sha256": "cebf44bbc4552a5ee8f440bf32ea25a6414997fa7e8be521e78566b63f1b3cca"
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/suspect.png",
+      "width": 390,
+      "height": 416,
+      "sha256": "d24261b740adceb2a7cc54ba2b298315ad31caffd29a491d6ca7fcc6e96216e0"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/accept.png",
+      "width": 387,
+      "height": 383,
+      "sha256": "cd0708d36f25957438a9c8e6a9f4059c70d864af56ee989308bea049fb26d9d3"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/celebrate.png",
+      "width": 383,
+      "height": 384,
+      "sha256": "d80f1e2a36c4432cb869088c2c7983bb57324b38f528b7cebd2cbdb661cf8198"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/embarrassed.png",
+      "width": 384,
+      "height": 385,
+      "sha256": "7dcbc5d0e4bfd254af0f98427c99daaae663248acc1ce47f5f62ed1c470f43c5"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/extra.png",
+      "width": 385,
+      "height": 385,
+      "sha256": "2b22773d9322d8d658cca85d1367c4dff3cad47e20021f8f98cd60a9d5ddd474"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/focused.png",
+      "width": 386,
+      "height": 380,
+      "sha256": "da8f659ee9871ca4b947573c997948d050668b823d92dc6485145f55ba2ea20b"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/idle.png",
+      "width": 389,
+      "height": 382,
+      "sha256": "03d034117b8817297dcf5ae90ae2c450166b9e0c79ecc3e67262b21342135cbb"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/observe.png",
+      "width": 374,
+      "height": 381,
+      "sha256": "006b8ddf7100ca7ecfa43e23b16b6408a8ecf1770b38827cdb44da9c0f151d0c"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/reveal_react.png",
+      "width": 378,
+      "height": 384,
+      "sha256": "d6772ee43865608701a0f7131261ecd9c7ffb2d092d3eedc40b82ce22d2632e5"
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/suspect.png",
+      "width": 381,
+      "height": 383,
+      "sha256": "7f04f4c482781793154bb28075a2630bcba28fef15229dff1c2b55358c14e65c"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/accept.png",
+      "width": 401,
+      "height": 389,
+      "sha256": "7aa913badd69a4887c53d572adb5400ab55a84139d4c94122aaca3c7c2d9757e"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/celebrate.png",
+      "width": 404,
+      "height": 382,
+      "sha256": "09a6094be747da73c0ffed09072e5b6b60810609901f44e04420b2d1b668b25e"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/embarrassed.png",
+      "width": 396,
+      "height": 383,
+      "sha256": "1b88ff2bc05f6e5cba7826f531ade6c3a1feba6db74e3bb00179f3099193ac43"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/extra.png",
+      "width": 395,
+      "height": 386,
+      "sha256": "58b0c31296f6d0615c134489416e8e5944a5740b77f76095b186c102f057eceb"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/focused.png",
+      "width": 400,
+      "height": 396,
+      "sha256": "3627b5d384e19dc0b6b838744900de64d804c6cab311b21f0e7225ae645c077d"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/idle.png",
+      "width": 392,
+      "height": 401,
+      "sha256": "ea706620bbdddb7d686d5cf7bfe165593f3d3ddc978a9632fa799461ea75d8dd"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/observe.png",
+      "width": 395,
+      "height": 394,
+      "sha256": "e0c0c6eda12c1bb15befcdc3bc9edf41df99302e23d7a3a97c693648a10b91f6"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/reveal_react.png",
+      "width": 395,
+      "height": 396,
+      "sha256": "cab7d1a698a7f415b6c136aabc2c415d2b46b210dab3c84236a7f203cda6d622"
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/suspect.png",
+      "width": 399,
+      "height": 395,
+      "sha256": "f8c7a8a8cc8eeb217701e177ee2879aee983205ceb2aa7bf53f9aebb00e34820"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/accept.png",
+      "width": 377,
+      "height": 388,
+      "sha256": "27200b4468d51804954c16a42fc9030845d862f5be48dee2b13cee3bae30f8bf"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/celebrate.png",
+      "width": 383,
+      "height": 384,
+      "sha256": "64576fa918a847d6db37609c931df031fbf877df9577a502ad5c3e5f3cf756e5"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/embarrassed.png",
+      "width": 378,
+      "height": 384,
+      "sha256": "095567f3d6f96eb052c1050f37062542dbf2115ea7ed05443a3df916a756e165"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/extra.png",
+      "width": 375,
+      "height": 384,
+      "sha256": "6b8b975f5a847147290b5d16bfcd268b89c8aac6eaba9d06ce5e769f24b0c2b9"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/focused.png",
+      "width": 374,
+      "height": 369,
+      "sha256": "a434d38693b77706c26f0cc85f207483c7f282cb056a560b5cd3215c3e13160e"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/idle.png",
+      "width": 373,
+      "height": 401,
+      "sha256": "679e73fa72fe237f7a91dca026e82cea21034a2e49474985fad17477aff86809"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/observe.png",
+      "width": 363,
+      "height": 396,
+      "sha256": "360c6969c8f50a61ffb8f9b179fb06a64f8616812dcf2ac3102743c5f0428f9b"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/reveal_react.png",
+      "width": 381,
+      "height": 395,
+      "sha256": "a9a62d9795a51e8f4aebbfea7612b72a52c4694cbf0e8b4f4f43eeb3f870f32b"
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/suspect.png",
+      "width": 393,
+      "height": 375,
+      "sha256": "9ebe85ea35921010218f8f767e17bf0b23a778f5e4d19ea4b44604928b4f0971"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/accept.png",
+      "width": 376,
+      "height": 402,
+      "sha256": "9b8ce2ca21bafdbf381804484bd5413a37d9d559f1fa909ec4dce0f5b4bc75f7"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/celebrate.png",
+      "width": 379,
+      "height": 400,
+      "sha256": "5ef2ad826947e7b36bf3f50438766f5ee66f177fb2ef818ec208a60da093effc"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/embarrassed.png",
+      "width": 373,
+      "height": 397,
+      "sha256": "5977b01c64f2fdf945e2512c37bca62102160013a964056452fe399f4e1f345d"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/extra.png",
+      "width": 372,
+      "height": 398,
+      "sha256": "14384833b2e74d896eb774f15499954097298fc8b814d08d38dad496eff8de8e"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/focused.png",
+      "width": 387,
+      "height": 402,
+      "sha256": "e3e98d04a626f22907390917015cf8fb668cb628f6259e2e06eeb73589c5155b"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/idle.png",
+      "width": 373,
+      "height": 396,
+      "sha256": "6f446a2e5bc363da95ea20c7a84cb0e136cd2677f3381f12f4afdfe55e5529f1"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/observe.png",
+      "width": 369,
+      "height": 395,
+      "sha256": "d389cf832b3e6f8e80348b4c3919f7a59237f77cb0b4d70158bf6479a60a99a9"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/reveal_react.png",
+      "width": 371,
+      "height": 402,
+      "sha256": "6240a91e2745b27ec94e03dd17f65ff28391b0c63dc47c52ec58a216b62817a8"
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/suspect.png",
+      "width": 369,
+      "height": 395,
+      "sha256": "3b1c1dc303a08c2fea771bb6fddf8b38da8dce2bf7b025b2138ebe8d846fa5aa"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/accept.png",
+      "width": 373,
+      "height": 396,
+      "sha256": "75a8cf29482b44a7e4de447d6a5fde365e7db7cda90161012a20097bdb4ccfaf"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/celebrate.png",
+      "width": 370,
+      "height": 394,
+      "sha256": "aa6f8ed7567ffa26e3f9890c8a7829779fd8a2f9f1b0bcd69a5ebb8d5042a8e1"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/embarrassed.png",
+      "width": 373,
+      "height": 394,
+      "sha256": "b23a21ca60c54e152f29265ebff6707888f1a8bacdb53bfa7aadd27a43bbe977"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/extra.png",
+      "width": 370,
+      "height": 394,
+      "sha256": "37b4b0ff5a364f1f2b25155400a6be7cbf2778066eb6708c9f0d2e007532edf6"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/focused.png",
+      "width": 375,
+      "height": 391,
+      "sha256": "222e0f12166221d977e389fe1849532a69f66c315fc0ea01d74d68c513f40d97"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/idle.png",
+      "width": 361,
+      "height": 398,
+      "sha256": "fa3f78800ff32b567420d560b101d1b6667498d02da137cfebbfff65ffc52689"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/observe.png",
+      "width": 358,
+      "height": 400,
+      "sha256": "9afae1d6aba3eb1ef1d0ff8c0236d14a60083ca54ce42e175dbbc8783c1bce2a"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/reveal_react.png",
+      "width": 369,
+      "height": 399,
+      "sha256": "7b3e6e1f85583b27e8a207f64c707ebf0012a9aa8bad1bebb556d74c3ca8e20c"
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/suspect.png",
+      "width": 346,
+      "height": 399,
+      "sha256": "dc3bef6f679c8990a7613a74db79140b536cfe3913ec4f5ca35c05f494040688"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/collar_bell.png",
+      "width": 270,
+      "height": 282,
+      "sha256": "d70e265e4e449a7428a823eddb8926e5c6e185b300e40f9894708e47f2f9cbf7"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/front_left_leg.png",
+      "width": 165,
+      "height": 345,
+      "sha256": "f4a68c5188987c6424a9bd367c61e273d07b4dc0bbb6602e6020b1e842016607"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/front_right_leg.png",
+      "width": 151,
+      "height": 346,
+      "sha256": "bd447228ec978307fcc8df170651b1ed5a8e18f49708e173c46806657a0f0825"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/head.png",
+      "width": 361,
+      "height": 351,
+      "sha256": "8ddd373c77081f5ccf7684811f026bc26a423f4b69251882a1cf12e1ce41f9a6"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/hind_left_leg.png",
+      "width": 200,
+      "height": 344,
+      "sha256": "d5603687417477d479475844f1070fe45fc21f207a98e1a09d548ae93e54d81b"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/hind_right_leg.png",
+      "width": 185,
+      "height": 352,
+      "sha256": "881a0ebaaab03e9898e01dd45a285de1e333cbb1624476a349eaf83a181ea738"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/horns.png",
+      "width": 353,
+      "height": 176,
+      "sha256": "18b1cf274b7194cdeeaa10e8f7823651f9f5edeb38d356da104e5677cf70bc9b"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/tail.png",
+      "width": 250,
+      "height": 230,
+      "sha256": "05a6212743f701a2594873e28dc4a1c30150284dcb900714c0901682b3361eea"
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/torso.png",
+      "width": 471,
+      "height": 347,
+      "sha256": "9cc276739e647305095cb5140776acee7e4ddd7df2dda19e7e785f641ccac508"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/accessory.png",
+      "width": 164,
+      "height": 229,
+      "sha256": "7e0dbf5696cfd3658ada7345869daddd96cdabed4ce1c0b20bc9a726cdaace6d"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/cape.png",
+      "width": 658,
+      "height": 390,
+      "sha256": "f5fc169e99f21993efa3f7665ea85a8fb515f3fd75d291cc87304d80d816c16c"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/head.png",
+      "width": 375,
+      "height": 380,
+      "sha256": "5b2e480e57c32165d66a5f3f857dd634455388028478440a87cf73a75dd4bce3"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/left_arm.png",
+      "width": 309,
+      "height": 377,
+      "sha256": "89949eaa20fd48d59db1aedc92c2e23f93e30da648054a94bf47e7ddaf3818f3"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/left_leg.png",
+      "width": 181,
+      "height": 415,
+      "sha256": "0ae7822f6447cfb1d70f6f5a095f4614de6a84b2d9b311c229512349cd5184c3"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/prop.png",
+      "width": 224,
+      "height": 295,
+      "sha256": "497cbea382eb53a8fa9e96e4d9f44685170bc3503d567948bd72035ca451c695"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/right_arm.png",
+      "width": 311,
+      "height": 362,
+      "sha256": "91ac9a45e47231e05e1ae60aa694c5bdb96a59eaba6eb0a060a81e792d7f642f"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/right_leg.png",
+      "width": 205,
+      "height": 410,
+      "sha256": "77f6850f29c479b71c74d3f1a401bd17c5b5551ed63decf6e033f4b5f6e06b05"
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/torso.png",
+      "width": 295,
+      "height": 323,
+      "sha256": "ca90f9061e0da0fe63192f1cd2803ffc039f9fafe2ebecd89bdb14d6281091f8"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/accessory.png",
+      "width": 390,
+      "height": 370,
+      "sha256": "2a8cc18aaeb022bc77bce494fb585f4440f30317addb03f03a9839db73950bff"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/cape.png",
+      "width": 517,
+      "height": 420,
+      "sha256": "e1117bd42d3396f5e650ab217689dbe2e2224f5f7803bceb98f59066abac35b7"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/head.png",
+      "width": 441,
+      "height": 327,
+      "sha256": "d0e9f36c5813be2411064bb9a6d8d8390a58db6de14ffa8a4c861f2667c1e692"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/left_arm.png",
+      "width": 249,
+      "height": 275,
+      "sha256": "aa39d009769324ee07e082cd13eca9b402f4222a6ce92515b04a8692aa1d04c3"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/left_leg.png",
+      "width": 273,
+      "height": 454,
+      "sha256": "de71cb28c329cea48509bfd27f63cc84fd8db1220a2acfbc62ef74abb466eb6a"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/prop.png",
+      "width": 234,
+      "height": 220,
+      "sha256": "5ff8e2fef9b9744e0a70976d8b0452d1c5e928682371adf553e54ea67bb33673"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/right_arm.png",
+      "width": 416,
+      "height": 251,
+      "sha256": "9b8f52493ddf62595760bf6c9520e23f3254662670b61cca5c9814e0fc00d3bb"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/right_leg.png",
+      "width": 254,
+      "height": 453,
+      "sha256": "f6d05a5190eb5b167df3409aa9e720e65609a39fca41ea54bd3ece4f6c6790ba"
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/torso.png",
+      "width": 268,
+      "height": 359,
+      "sha256": "442dd3d10bcacc382f50bc5749f27cbee1e3f4f4bfd91393254530aac7f71f2d"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/accessory.png",
+      "width": 285,
+      "height": 224,
+      "sha256": "0922afd189a2c7d9c14de9d144a936d419d0747b7779e3f36d4727051de1bb37"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/cape.png",
+      "width": 645,
+      "height": 342,
+      "sha256": "2c7c35e19db182eadb049deaed287c911c81f596f33b7da4d61afd0cbaa4878c"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/head.png",
+      "width": 437,
+      "height": 451,
+      "sha256": "9c6d716e11043632acf9eb715efe95d62288d185929de5536bc041e063b95709"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/left_arm.png",
+      "width": 404,
+      "height": 242,
+      "sha256": "238ec855be8fdfdf4974be213756f128d3e19a35ca1a29b608118ecfe4d64104"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/left_leg.png",
+      "width": 199,
+      "height": 319,
+      "sha256": "0a165ae7998f950c36a1a2a370987a75d29ac2f1a405be210c9b9970a52e0c24"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/prop.png",
+      "width": 142,
+      "height": 345,
+      "sha256": "00017708432c6b0366a316a879b17c722d04ae4451c68c92a3918cc09f18bb26"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/right_arm.png",
+      "width": 275,
+      "height": 233,
+      "sha256": "dcb8123f4ef667efa251c9b96796d5bead07c0477cf6bd05f145f83241c7f1d0"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/right_leg.png",
+      "width": 236,
+      "height": 315,
+      "sha256": "84de0f038cdcaa8d1f87a568bb58a3c66a1d933a04a042c739214159cad8ab61"
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/torso.png",
+      "width": 509,
+      "height": 434,
+      "sha256": "721a1fc269c31c84218c7d0f7b426cb9d2f691d9cc290ad89bcc4c4ab38d37c8"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/accessory.png",
+      "width": 388,
+      "height": 302,
+      "sha256": "f9654bc8ceba2aebe2b1af4fd70eb9c6e54d8d65590d373e47fde4369ff62681"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/cape.png",
+      "width": 446,
+      "height": 416,
+      "sha256": "f4ed4ee50e9890a517eb0824f7f3c021076d65941c21beafdc09d27d8039299e"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/head.png",
+      "width": 367,
+      "height": 338,
+      "sha256": "48498ed5db689f94894ef3850bade09ae32217f8c0107d9c0c9cb12ca7b26c27"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/left_arm.png",
+      "width": 280,
+      "height": 326,
+      "sha256": "a205eeaee87c22b6790f1c8aea51c3555636ab97ee92ed61af69442937f8b2b3"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/left_leg.png",
+      "width": 266,
+      "height": 292,
+      "sha256": "4eb3643abf642e342f700fd82598c22a54dfbbbec63a3d94dbe42323a9683598"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/prop.png",
+      "width": 169,
+      "height": 428,
+      "sha256": "9732b816fe5e24cf60dcbc07d17ccaf634c3318645d8db57c12161cd25861972"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/right_arm.png",
+      "width": 290,
+      "height": 292,
+      "sha256": "949a2a6dd55ef895dc7bf6d96f8ae2e4173ea7098e93c74f49d2660f0950ba2e"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/right_leg.png",
+      "width": 296,
+      "height": 268,
+      "sha256": "b73f65b884f779fbe53f7f0ea67de9790728d21aa238c775401f08ad87bbfed2"
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/torso.png",
+      "width": 460,
+      "height": 455,
+      "sha256": "4c0d2915662035463ca52f1ed3f62395e3700c9df566c41f8c5659ef5b43304a"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/accessory.png",
+      "width": 195,
+      "height": 258,
+      "sha256": "a8019e6b3ceac801fd32cb918e190eecd4080aa00f6d7258419aec1b48f93db3"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/cape.png",
+      "width": 347,
+      "height": 390,
+      "sha256": "306f5734750f8323ba8581d5e4733382264471731ce4b0d90bed2370cd094fcf"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/head.png",
+      "width": 464,
+      "height": 414,
+      "sha256": "e9459166bb88e0165b7ca5b5dbb277ce3d35ad0cc34ef655a0fca1621f4d65b7"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/left_arm.png",
+      "width": 265,
+      "height": 335,
+      "sha256": "ccf8453e6e6dea042670142d5fee1dc5cf7f24145cd1f1bf54d4b7392e8cc853"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/left_leg.png",
+      "width": 223,
+      "height": 394,
+      "sha256": "c4ee491d1c8d449ddf3fe5fc65a6a771bb46d61d41bcd9aacf0321b111849330"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/prop.png",
+      "width": 335,
+      "height": 337,
+      "sha256": "68b880f85c19b43193a5b3c5cd8761ed4010f08bc094f1c510a22b7494bb7d84"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/right_arm.png",
+      "width": 266,
+      "height": 326,
+      "sha256": "c8d98622f743348395396302fbb9d86eb11836b2270bb26cbdba47bee9a1dbd2"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/right_leg.png",
+      "width": 287,
+      "height": 394,
+      "sha256": "8c83fae834c86a910a1d9b90023aac285194403ee9c35db8388ea7a92904bcce"
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/torso.png",
+      "width": 323,
+      "height": 354,
+      "sha256": "f0c8c2be0d8f5bab5dc786d513f394ce723655d421cf0cac96822f94d5205d6c"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/antenna_left.png",
+      "width": 270,
+      "height": 372,
+      "sha256": "2c603e503afef29b5402bdfda523897400c37ecd858be5aac1c1ca51322e2789"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/antenna_right.png",
+      "width": 270,
+      "height": 373,
+      "sha256": "66eacf787f8390e9e86ed67d81fd9c140887827d03fe3186f7d2bd1dc34a97ae"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/bag.png",
+      "width": 380,
+      "height": 351,
+      "sha256": "108b51374f49da0c05ebec265a1f712a85dc8b9354c2c641691cc8e8c1f6b38c"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/body.png",
+      "width": 308,
+      "height": 421,
+      "sha256": "8ff31aa8a16e46f1aa0dc3c9abb6c24cfdd7aa3d38ea2ea15e819d16ab673bea"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/foot_left.png",
+      "width": 112,
+      "height": 292,
+      "sha256": "90ec46510c2e3daac0beb3a518ee6045068c26cd81fde49c52ee876e33d881c8"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/foot_right.png",
+      "width": 114,
+      "height": 294,
+      "sha256": "24561f5a70b23281fed3c80496e55688be39950e033b1322f706c3033f7a676a"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/head.png",
+      "width": 352,
+      "height": 343,
+      "sha256": "55aa9a394a4943d9678f57ed02a02c76a4dbf2ec143f9ffd25858eece54e7fa3"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/wing_left.png",
+      "width": 391,
+      "height": 456,
+      "sha256": "5920690dd3905493c070fcb8c1d5823d48829025736577a0c6747905fc9fa47c"
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/wing_right.png",
+      "width": 370,
+      "height": 411,
+      "sha256": "4c44ae5df52b7cbb5728646c49862254884d6b56d375311a0c0357e30061e2c0"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/accessory.png",
+      "width": 202,
+      "height": 330,
+      "sha256": "a8c8676c15f47c278f2a90d05b98f25c1601739741db224c95ce51cccf831757"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/cape.png",
+      "width": 428,
+      "height": 460,
+      "sha256": "7808bfb8b1aa41cbd9e9afa78044cc616167f2f3c7e69c1ba90176263c71712e"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/head.png",
+      "width": 430,
+      "height": 355,
+      "sha256": "dce59017e7a16426ca07ba001d3fefe8527087df27e45103369cb2a2513b8da7"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/left_arm.png",
+      "width": 252,
+      "height": 323,
+      "sha256": "98b2fa563089dd4c6b64083fe212b40223324168f0edc9cc6416d70ecbbb85eb"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/left_leg.png",
+      "width": 209,
+      "height": 387,
+      "sha256": "ef1a361905274e94a6db8d765354e3aec45c5a8fca71a24969612f3230baa50b"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/prop.png",
+      "width": 400,
+      "height": 364,
+      "sha256": "9ce709d43055c16f77546fcd2147d74d91d2f46ff8c193315434de8b154fe48a"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/right_arm.png",
+      "width": 353,
+      "height": 297,
+      "sha256": "db773ac80fbf72b696bed79dc025c7638563603938e4259f21b5d6ae9d718ea7"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/right_leg.png",
+      "width": 185,
+      "height": 385,
+      "sha256": "36227ee7c58ddbbe92d488df0735d9fc85ea2c5bd180926274baf62232698fba"
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/torso.png",
+      "width": 315,
+      "height": 371,
+      "sha256": "bf095eaf16a7f06bdb077bc5f276d9ed1bb8b601ae1ecad684563578b2e15639"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/accessory.png",
+      "width": 365,
+      "height": 298,
+      "sha256": "0e164c6eb04eda62dab8bdc931a6c76cd964c8c46dd6d8aee4e22bf7867d1dff"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/cape.png",
+      "width": 309,
+      "height": 364,
+      "sha256": "d32c8dd249acf428b33dfaa129e89f9507cb3ab09678ff576575a5fd47a05af4"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/head.png",
+      "width": 354,
+      "height": 368,
+      "sha256": "456bb3b2d9a093877188033247b2e4d0eb36827f4039fc814ad5761ed6cbffd5"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_arm.png",
+      "width": 383,
+      "height": 329,
+      "sha256": "bb30a5beb8abd3db23e7782c55bad841ee93b7c8384e63194160e3864687b6dd"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_leg.png",
+      "width": 182,
+      "height": 428,
+      "sha256": "fd6d8cdf226d8103d2e796ec822040ab59163448dc793ae985959fbce9af0ad2"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/prop.png",
+      "width": 383,
+      "height": 218,
+      "sha256": "f79d1b0fe84dc06c79eba12a5100396c63b95f1c13a6671594d05c7f18431852"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_arm.png",
+      "width": 409,
+      "height": 307,
+      "sha256": "8690fd42c1cd6a69171c8b614dc363d21cd74b1af7ebcccb028cf4c083ea42a6"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_leg.png",
+      "width": 267,
+      "height": 424,
+      "sha256": "e72314ab30e5c2e5b710681b6f6710a0268ac7ec1ccb839ebd82c15feb18df1a"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/torso.png",
+      "width": 325,
+      "height": 361,
+      "sha256": "eb165a83cf43d11bfd383172d5bbb158df3601f089cef86ed25d0c8579e50b92"
+    },
+    {
+      "path": "assets/art/characters/roza.png",
+      "width": 217,
+      "height": 337,
+      "sha256": "8c9f61bba68c97d30a9bcda31c74bd5534c435418729b022f93c4a5b055512e6"
+    },
+    {
+      "path": "assets/art/characters/semyon.png",
+      "width": 208,
+      "height": 340,
+      "sha256": "d73de0b802e90c25adcf27fe7de741a9b14da84a4223e8cd3ab96acfc1c5a6f9"
+    },
+    {
+      "path": "assets/art/environments/ENV01/atmosphere.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "81c0e15da8c05202109576e32d9990ae74188b1c06d4329185f935c114c0f2e1"
+    },
+    {
+      "path": "assets/art/environments/ENV01/backdrop.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "982bfb538b13cbfcf545d726920686acec207ae01ebec5d6b140ca15835ce8e7"
+    },
+    {
+      "path": "assets/art/environments/ENV01/floor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a818937e1805333b44bb0ad44ca4771a13874aa28b24c0f7e9568385664c1f7f"
+    },
+    {
+      "path": "assets/art/environments/ENV01/foreground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "168ab86f76fac8550999cab2c6b8747d5e5518292ccf718ffa0f41c4fc26dcd0"
+    },
+    {
+      "path": "assets/art/environments/ENV01/midground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "076f1e3ba325f4dea2cb4e225babe861849cb4cdda7d35741467c7ebdbe6dc3b"
+    },
+    {
+      "path": "assets/art/environments/ENV02/atmosphere.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7cfabfccc9bd5fd7f0f3b72ebc307c5ecad8fbb061a857cd956dd845baa6d24e"
+    },
+    {
+      "path": "assets/art/environments/ENV02/backdrop.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9dfa0600645fefe0796dad4e881788c34a5b130f14ea3fa4a1b5124854aa5989"
+    },
+    {
+      "path": "assets/art/environments/ENV02/floor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "abef83bea3056275c3576b1eaff2fc20037175382471712582d2adb4aff24268"
+    },
+    {
+      "path": "assets/art/environments/ENV02/foreground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "199be604fae2159f587c3c0a31eda817cb6a0965e84e4721ded99805ae0b1626"
+    },
+    {
+      "path": "assets/art/environments/ENV02/midground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d2892f405299799ede7287151c1f18ebd8413ea995783d09e4e6db64433982e5"
+    },
+    {
+      "path": "assets/art/environments/ENV03/atmosphere.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "bffb14dda496cfdf72e4122eef13d56c6d620f49aa054019ea6a3bd0bd4d0119"
+    },
+    {
+      "path": "assets/art/environments/ENV03/backdrop.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6f7115cfe1c88b9b99b916c97deddf86f88feaeb70f0a5ae6e0b20770f843239"
+    },
+    {
+      "path": "assets/art/environments/ENV03/floor.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b9da91321e6affa59c18cd33fbc6af6caf3a1defc2bfdf2844e588e4ff785c95"
+    },
+    {
+      "path": "assets/art/environments/ENV03/foreground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b8954ddc1b8638a078ce257f8b8a724cb8824082bb9328e8bfe274215030a6d4"
+    },
+    {
+      "path": "assets/art/environments/ENV03/midground.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "fa02c58be420aa162a4df86b8148e25e9cc5e5e48730b416c4f3f303217e3f33"
+    },
+    {
+      "path": "assets/art/environments/bg_archive.png",
+      "width": 941,
+      "height": 1672,
+      "sha256": "83eb9bbc2ec8a2d0ce68e4d00c4c5daad4bc6808cb26504dcad5fd8309a56fb7"
+    },
+    {
+      "path": "assets/art/environments/bg_kitchen.png",
+      "width": 941,
+      "height": 1672,
+      "sha256": "097a6b62271a4d17525ee08e28eecfcec5bb15dff613d6d97dd1d6499440034c"
+    },
+    {
+      "path": "assets/art/environments/bg_river.png",
+      "width": 941,
+      "height": 1672,
+      "sha256": "70f21728c000a7c75fbedab8634ce01b0587c773b91481876eab83cd4d62c8e5"
+    },
+    {
+      "path": "assets/art/props/boat.png",
+      "width": 479,
+      "height": 240,
+      "sha256": "763726a591b45d990d23e9bc6bcf747355aca1d021bf4779f2668010e73cdfaa"
+    },
+    {
+      "path": "assets/art/props/bread.png",
+      "width": 491,
+      "height": 301,
+      "sha256": "66a2922ca0ccfb814b627f05f9943e67528552cb1e13c4062cf6646b35734210"
+    },
+    {
+      "path": "assets/art/props/clamp.png",
+      "width": 451,
+      "height": 321,
+      "sha256": "e5c8f5f950857c717fc01847aea67cc2d286814c4411656b6f212061945ac510"
+    },
+    {
+      "path": "assets/art/props/control_weight.png",
+      "width": 406,
+      "height": 311,
+      "sha256": "735144e97b1c32da603f81410c033f527f143dbeae55aab4ac8029432ba4e36c"
+    },
+    {
+      "path": "assets/art/props/crate.png",
+      "width": 326,
+      "height": 299,
+      "sha256": "b41266efa5364d4b3e6c0cf0ad81e57bbc5015b0a474131ecd3553e51a3954b8"
+    },
+    {
+      "path": "assets/art/props/cryopack.png",
+      "width": 418,
+      "height": 321,
+      "sha256": "52db43342ca1b60155a6f583ce9e1098fda4e0160388001316a0d6acb8ebfd87"
+    },
+    {
+      "path": "assets/art/props/decoy_fire.png",
+      "width": 360,
+      "height": 331,
+      "sha256": "62b2b84a07af444ab8d1ca7e423e0fa44232c865b068e192892ffc8577a06cc7"
+    },
+    {
+      "path": "assets/art/props/dessert.png",
+      "width": 427,
+      "height": 303,
+      "sha256": "3aa74406e0caec139e8db33f382f7555e1d6bc7d8868704c17e856a4da2746d3"
+    },
+    {
+      "path": "assets/art/props/dock.png",
+      "width": 523,
+      "height": 271,
+      "sha256": "93138b2eff129306e999c8f536ead40b2b1efd9a874e9b8b60c733d9b30b4f35"
+    },
+    {
+      "path": "assets/art/props/fire_source.png",
+      "width": 424,
+      "height": 356,
+      "sha256": "2468409b621f19f17b147f781ebb8f64f5ef466673b99df33f076a1ac78153d6"
+    },
+    {
+      "path": "assets/art/props/fire_source_cold.png",
+      "width": 385,
+      "height": 434,
+      "sha256": "b27391b42366c58ad4d0faa91911315d6e1c3a7b16db2f680d3181e5227325ab"
+    },
+    {
+      "path": "assets/art/props/flags.png",
+      "width": 460,
+      "height": 319,
+      "sha256": "e2e26b8ab2f5e61085c5f3744c991be3c0004b3507f85b8dbb8d37e4f4512e1c"
+    },
+    {
+      "path": "assets/art/props/float.png",
+      "width": 246,
+      "height": 295,
+      "sha256": "381d50f9839e2fd1949fa67f67290f97ca65d7b5d709e55de1a85d72c31d222a"
+    },
+    {
+      "path": "assets/art/props/frame.png",
+      "width": 454,
+      "height": 324,
+      "sha256": "9aa8942c60a6ab0ed271acbb934b725a1e2da0b099d111e37517ee2a280c93e4"
+    },
+    {
+      "path": "assets/art/props/hoist.png",
+      "width": 388,
+      "height": 339,
+      "sha256": "c6e9afafae3a51bb70c7357250a2280a4bae17176047c21db2b3ae504fa597fd"
+    },
+    {
+      "path": "assets/art/props/hot_stone.png",
+      "width": 358,
+      "height": 258,
+      "sha256": "461a055a87a8defc16483e4cf334a9f100ae0fe46a5e7ddf0b5fc988f0506fe3"
+    },
+    {
+      "path": "assets/art/props/ice_surface.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "34236b5947c89fadfc4904f2c81cbf4bb6feb00736217b355466e2f2e6130adf"
+    },
+    {
+      "path": "assets/art/props/kettle.png",
+      "width": 384,
+      "height": 383,
+      "sha256": "c294ad92bf4f41b92522bfba05dad8bd0fd4b51f9be1dce0f7b9477bb1b700d7"
+    },
+    {
+      "path": "assets/art/props/miracle_stamp.png",
+      "width": 388,
+      "height": 287,
+      "sha256": "03f99d301d6cb305b801363295387e1d124fd8f34cbe4236a2a369c2548cc2f5"
+    },
+    {
+      "path": "assets/art/props/paper_bridge.png",
+      "width": 506,
+      "height": 257,
+      "sha256": "fa2b7e8288cdcfa93830f6aafb30dd8e689238911c0e6229cce100999cc2340d"
+    },
+    {
+      "path": "assets/art/props/paper_gate.png",
+      "width": 369,
+      "height": 322,
+      "sha256": "a8bac65a54a7a5724329cf4fa67f5a0690a0591fdbefadf8d3b9e4c4384dfdd0"
+    },
+    {
+      "path": "assets/art/props/paper_reinforced.png",
+      "width": 412,
+      "height": 319,
+      "sha256": "a1d027660bb03890c02f1b7b7e83149f78c7151560887b06f6e75f3a8df1fe7b"
+    },
+    {
+      "path": "assets/art/props/paper_sheet.png",
+      "width": 390,
+      "height": 349,
+      "sha256": "304befef35f902cced79a89cdd048312ce271a0090fc3647fd05345ea85b8c81"
+    },
+    {
+      "path": "assets/art/props/rope.png",
+      "width": 363,
+      "height": 236,
+      "sha256": "1b5eb22917dca5a88d2dd23e63d549ca25e0771d72cdc77b3ae067851a990d2c"
+    },
+    {
+      "path": "assets/art/props/sandbag.png",
+      "width": 395,
+      "height": 380,
+      "sha256": "49d48ca51b1eaa084bfcee78f686e75c589d7f105cd1dd05fa3ae73976e3571c"
+    },
+    {
+      "path": "assets/art/props/screen.png",
+      "width": 396,
+      "height": 322,
+      "sha256": "4e0a90dace9f243312b7dca5c946101e7d832c96db2a3e6212d64526cf044d3e"
+    },
+    {
+      "path": "assets/art/props/span_anchor.png",
+      "width": 885,
+      "height": 1206,
+      "sha256": "7db9eb699af2133b520d297addfe6d4d8529f6c19602a54acbbd8706efe0dc72"
+    },
+    {
+      "path": "assets/art/props/steam.png",
+      "width": 382,
+      "height": 332,
+      "sha256": "0e137ebd5cc53385d71c84d3957e8627ec5ba8784ca1f6d8a0ea4e279d85200b"
+    },
+    {
+      "path": "assets/art/props/stone.png",
+      "width": 445,
+      "height": 233,
+      "sha256": "08f1f8b16d8d90c375c50f525555ad24d0806bc2e924760af81110206e4aa900"
+    },
+    {
+      "path": "assets/art/props/stone_anchor.png",
+      "width": 1170,
+      "height": 1295,
+      "sha256": "03e09065d2373f3fa9fdd9c5e218b3a8637b505a460a61701ad6fb614427b60e"
+    },
+    {
+      "path": "assets/art/props/thermal_screen.png",
+      "width": 392,
+      "height": 406,
+      "sha256": "3ac5b7dfc5a12f02b98b302ee9918b142ab68b2954a3b5558a7c04ee3335b2be"
+    },
+    {
+      "path": "assets/art/props/thermobox.png",
+      "width": 379,
+      "height": 321,
+      "sha256": "7bb631ccd2c56cc50bbacd09b8d3e8421d9f34cd796c91d4ec7bdcccece49910"
+    },
+    {
+      "path": "assets/art/props/thread.png",
+      "width": 387,
+      "height": 302,
+      "sha256": "5e2ec2bbe661efec290e520efaa016d63f6264aff9e784f8afd20ff5ebd8a0ec"
+    },
+    {
+      "path": "assets/art/props/ticket_booth.png",
+      "width": 317,
+      "height": 320,
+      "sha256": "e139b956b1aa3fcfadb56288a5d343db96bc16097b4d8bdd23941b8fec61bf61"
+    },
+    {
+      "path": "assets/art/props/water_bowl.png",
+      "width": 413,
+      "height": 269,
+      "sha256": "ec0155b1aae60f4ac7799b2d8253bcff5d7c230a7dcb2f865ad72dfde94dfd6a"
+    },
+    {
+      "path": "assets/art/props/water_bowl_frozen.png",
+      "width": 397,
+      "height": 296,
+      "sha256": "7fc553780354857fe3bbc50119debf34593e65c582ba1f14d1a659d744ccac54"
+    },
+    {
+      "path": "assets/art/props/water_surface.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e0874518f012a277966be5c0c627e27c5ed080d43d7b3b841bbf339417b32d29"
+    },
+    {
+      "path": "assets/art/props/wood_gate.png",
+      "width": 383,
+      "height": 321,
+      "sha256": "b830c535a753ef16ba7a31b16668b4a257241172194cca5846565e49d475cae7"
+    },
+    {
+      "path": "assets/art/props/wooden_bollard.png",
+      "width": 366,
+      "height": 295,
+      "sha256": "5f1a46c478d7f34fbe57ff8aeb58e007e2cb9026f5f86046ae8e9c2b5ee6c7d5"
+    },
+    {
+      "path": "assets/art/ui/app_icon_1024.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "fc065b6d18188333eaac09cda70976f5b5f4305b07da769ebb4918ebef3887ad"
+    },
+    {
+      "path": "assets/art/ui/app_icon_192.png",
+      "width": 192,
+      "height": 192,
+      "sha256": "2d53cf1f1e25f1ebcfd2c34d33fa5facce278821031a381f2e960c1f3458dcd9"
+    },
+    {
+      "path": "assets/art/ui/app_icon_512.png",
+      "width": 512,
+      "height": 512,
+      "sha256": "e11f8487553d729058a9c80f2c38f33d3ed97aacab75da0e7eb3483c6fc8e99b"
+    },
+    {
+      "path": "assets/art/ui/app_icon_master.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "85b049badf2342086d78542fbbc487e4d121c217b2579e55419b587e90af24e5"
+    }
+  ],
+  "limits": "Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability."
+}

@@ -1,0 +1,22 @@
+{
+  "renderer": "native Godot/Mesa/Xvfb",
+  "scope": "Eight base poses and stamp at one clip fraction; manual visual acceptance separate.",
+  "cases": [
+    {
+      "actor": "nika",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-v1/nika-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    },
+    {
+      "actor": "roza",
+      "exit_code": 0,
+      "image": "/workspace/scratch/585c9249475c/almost-god/game/build/rig-review-v1/roza-keyposes.png",
+      "exists": true,
+      "clip_fraction": 0.35,
+      "errors": []
+    }
+  ]
+}

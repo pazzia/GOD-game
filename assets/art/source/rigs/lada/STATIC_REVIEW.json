@@ -1,0 +1,83 @@
+{
+  "actor": "lada",
+  "date_utc": "2026-10-23T20:57:00.402015+00:00",
+  "static_preview": "build/lada-rig-assembly.png",
+  "static_preview_sha256": "f4c9fdd5bce887861a005c1f404b6fd805239d9b8be0ebbce53a0a136ab89224",
+  "review": "Actual designer-helper image inspection after authored pivots and scales; static coherent anatomy. Parent Designer acceptance/native animation review are separate.",
+  "parts": [
+    {
+      "part": "left_leg",
+      "size": [
+        199,
+        319
+      ],
+      "sha256": "0a165ae7998f950c36a1a2a370987a75d29ac2f1a405be210c9b9970a52e0c24"
+    },
+    {
+      "part": "right_leg",
+      "size": [
+        236,
+        315
+      ],
+      "sha256": "84de0f038cdcaa8d1f87a568bb58a3c66a1d933a04a042c739214159cad8ab61"
+    },
+    {
+      "part": "torso",
+      "size": [
+        509,
+        434
+      ],
+      "sha256": "721a1fc269c31c84218c7d0f7b426cb9d2f691d9cc290ad89bcc4c4ab38d37c8"
+    },
+    {
+      "part": "left_arm",
+      "size": [
+        404,
+        242
+      ],
+      "sha256": "238ec855be8fdfdf4974be213756f128d3e19a35ca1a29b608118ecfe4d64104"
+    },
+    {
+      "part": "cape",
+      "size": [
+        645,
+        342
+      ],
+      "sha256": "2c7c35e19db182eadb049deaed287c911c81f596f33b7da4d61afd0cbaa4878c"
+    },
+    {
+      "part": "right_arm",
+      "size": [
+        275,
+        233
+      ],
+      "sha256": "dcb8123f4ef667efa251c9b96796d5bead07c0477cf6bd05f145f83241c7f1d0"
+    },
+    {
+      "part": "head",
+      "size": [
+        437,
+        451
+      ],
+      "sha256": "9c6d716e11043632acf9eb715efe95d62288d185929de5536bc041e063b95709"
+    },
+    {
+      "part": "accessory",
+      "size": [
+        285,
+        224
+      ],
+      "sha256": "0922afd189a2c7d9c14de9d144a936d419d0747b7779e3f36d4727051de1bb37"
+    },
+    {
+      "part": "prop",
+      "size": [
+        142,
+        345
+      ],
+      "sha256": "00017708432c6b0366a316a879b17c722d04ae4451c68c92a3918cc09f18bb26"
+    }
+  ],
+  "native_animation_verified": false,
+  "directional_views_complete": false
+}

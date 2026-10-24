@@ -1,0 +1,150 @@
+key,ru,en,status
+level.L01.title,Камень очень старается,A Stone With Ambition,editorial_review_required
+level.L01.hint1,"Зрителям нужно увидеть камень, но не то, что держит его.","Spectators need to see the stone, not its support.",editorial_review_required
+level.L01.hint2,"Ширма должна закрыть нижнюю точку механизма, а не весь результат.","Hide the lower mechanism point, not the whole result.",editorial_review_required
+level.L01.hint3,"Поместите ширму в отмеченный боковой слот, пригласите зрителей и уберите поплавок после печати.","Place the screen in the side slot, invite the audience and remove the float after sealing.",editorial_review_required
+level.L02.title,Лучшее место — не первое,"Front Row, Wrong View",editorial_review_required
+level.L02.hint1,Один зритель видит только стойку.,One spectator can only see the ticket booth.,editorial_review_required
+level.L02.hint2,Сравните видимость результата с двух боковых мест.,Compare the result visibility from the two side seats.,editorial_review_required
+level.L02.hint3,Пересадите закрытого зрителя в правый боковой слот или перенесите показ левее.,"Move the obscured spectator to the right-side slot, or move the demonstration left.",editorial_review_required
+level.L03.title,А с обратной стороны?,How About the Back?,editorial_review_required
+level.L03.hint1,Семён не остаётся на первом месте.,Semyon will not stay at his first position.,editorial_review_required
+level.L03.hint2,Посмотрите его вторую остановку и луч к поплавку.,Check his second stop and the ray to the float.,editorial_review_required
+level.L03.hint3,Второй ширмой закройте задний луч или перенесите показ за ящик.,"Block the rear ray with the second screen, or move the demonstration behind the crate.",editorial_review_required
+level.L04.title,Ветер имеет мнение,Wind Has Opinions,editorial_review_required
+level.L04.hint1,Причину движения показывает флюгер.,,en_translation_required
+level.L04.hint2,Ширму нужно закрепить до начала показа.,,en_translation_required
+level.L04.hint3,Закрепите обе ножки или перенесите ширму в защищённый слот с мешком.,,en_translation_required
+level.L05.title,Якорь получил повышение,The Anchor Gets Promoted,editorial_review_required
+level.L05.hint1,M01 действует и на якорь.,,en_translation_required
+level.L05.hint2,Вещи из дерева не изменились.,,en_translation_required
+level.L05.hint3,Привяжите лодку к деревянному кнехту до запуска разгрузки.,,en_translation_required
+level.L06.title,Почти ковчег,Almost an Ark,editorial_review_required
+level.L06.hint1,Коза тяжелее одного ящика.,,en_translation_required
+level.L06.hint2,На маленьком камне только одна единица дополнительного груза.,,en_translation_required
+level.L06.hint3,"Отправьте козу на M отдельно или соберите общую опору, не превышая показанный предел.",,en_translation_required
+level.L07.title,Слишком широкая река,A River Too Wide,editorial_review_required
+level.L07.hint1,Середина реки — безопасное место.,,en_translation_required
+level.L07.hint2,Опора за спиной уже не нужна для следующего шага.,,en_translation_required
+level.L07.hint3,"Дойдите до островка, затем перенесите освобождённый камень в дальний разрешённый слот.",,en_translation_required
+level.L08.title,Секретов ровно два,Exactly Two Secrets,editorial_review_required
+level.L08.hint1,Иконка раскрытия относится к другому механизму.,,en_translation_required
+level.L08.hint2,У камня есть две поддержки.,,en_translation_required
+level.L08.hint3,Снимите страховочную нить до показа либо закройте её отдельной ширмой.,,en_translation_required
+level.L09.title,Проверка после аплодисментов,After the Applause,editorial_review_required
+level.L09.hint1,Не хватает последнего голоса.,,en_translation_required
+level.L09.hint2,Последний зритель ещё идёт к своему месту.,,en_translation_required
+level.L09.hint3,Прикройте боковую точку метода и дождитесь полного наблюдения проверяющего.,,en_translation_required
+level.L10.title,Переправа на честном слове,A Ferry on Good Faith,editorial_review_required
+level.L10.hint1,Плавающий якорь нельзя оставлять единственной страховкой.,,en_translation_required
+level.L10.hint2,Постройте маршрут и удержите лодку ещё до печати.,,en_translation_required
+level.L10.hint3,"Закрепите деревянный канат, покажите фокус и перевезите тяжёлые грузы раздельно.",,en_translation_required
+level.L11.title,Пламя берёт отпуск,The Flame Takes a Break,editorial_review_required
+level.L11.hint1,Вода должна измениться во время показа.,,en_translation_required
+level.L11.hint2,"Зрители видят пламя, но не криопак.",,en_translation_required
+level.L11.hint3,Установите скрытый источник под чашей и начните с жидкой воды.,,en_translation_required
+level.L12.title,Пирожки с характером,Pastries With Personality,editorial_review_required
+level.L12.hint1,Двум блюдам нужны разные условия.,,en_translation_required
+level.L12.hint2,Термокороб закрывает тепловое воздействие.,,en_translation_required
+level.L12.hint3,"Уберите готовый хлеб в короб, а десерт оставьте у холодного источника.",,en_translation_required
+level.L13.title,"Два очага, одна лодка","Two Stoves, One Boat",editorial_review_required
+level.L13.hint1,Замерзают обе зоны по одной причине.,,en_translation_required
+level.L13.hint2,Сам закон не выбирает любимую печь.,,en_translation_required
+level.L13.hint3,Закройте Thermal-линию к лодке или отодвиньте доступный источник.,,en_translation_required
+level.L14.title,Холод под присмотром,Cold Under Scrutiny,editorial_review_required
+level.L14.hint1,Чашу нельзя закрыть вместе с механизмом.,,en_translation_required
+level.L14.hint2,Отдельно проверьте поверхность воды и точку криопака.,,en_translation_required
+level.L14.hint3,"Прикройте источник стойкой с одной стороны, ширмой с другой.",,en_translation_required
+level.L15.title,Не каждый жар — огонь,Not All Heat Is Fire,editorial_review_required
+level.L15.hint1,Закон относится к источникам огня.,,en_translation_required
+level.L15.hint2,Нагретый камень сохраняет свой тепловой класс.,,en_translation_required
+level.L15.hint3,Прикройте холодный источник и согрейте чашу нагретым камнем.,,en_translation_required
+level.L16.title,Парообразная тайна,A Steamy Secret,editorial_review_required
+level.L16.hint1,Пар нужен до печати.,,en_translation_required
+level.L16.hint2,Должно хватить полного непрерывного интервала наблюдения.,,en_translation_required
+level.L16.hint3,Закройте только луч к методу плотным паром либо используйте устойчивую ширму.,,en_translation_required
+level.L17.title,Вторая печать,A Second Seal,editorial_review_required
+level.L17.hint1,Новый закон помещается во второе место.,,en_translation_required
+level.L17.hint2,Не отменяйте работающую переправу.,,en_translation_required
+level.L17.hint3,"Закрепите M02 в свободном слоте, затем разыграйте маршрут.",,en_translation_required
+level.L18.title,Лодке нужен жидкий путь,Boats Prefer Liquid,editorial_review_required
+level.L18.hint1,Лодке нужен переход фазы именно в её зоне.,,en_translation_required
+level.L18.hint2,Уберите охлаждение и добавьте независимый нагрев.,,en_translation_required
+level.L18.hint3,"Поставьте экран между печью и водой, а нагретый камень рядом с лодочной зоной.",,en_translation_required
+level.L19.title,Верните печи работу,Give Fire Its Job Back,editorial_review_required
+level.L19.hint1,После отмены M02 лёд не останется надёжной дорогой.,,en_translation_required
+level.L19.hint2,Подготовьте независимую опору.,,en_translation_required
+level.L19.hint3,Создайте каменную переправу с M01 и только потом верните обычный огонь.,,en_translation_required
+level.L20.title,Праздник наоборот,The Backwards Feast,editorial_review_required
+level.L20.hint1,Празднику нужны сразу два температурных результата.,,en_translation_required
+level.L20.hint2,"Законы общие, положение источников и защита выбираются отдельно.",,en_translation_required
+level.L20.hint3,"Защитите тёплое блюдо, охладите десерт и доставьте оба по каменной опоре.",,en_translation_required
+level.L21.title,Лист с характером,A Sheet With Backbone,editorial_review_required
+level.L21.hint1,"Лист должен держать груз, а не просто лежать рядом.",,en_translation_required
+level.L21.hint2,"Рама — механизм, контакт груза — результат.",,en_translation_required
+level.L21.hint3,"Установите лист на два узла, скройте раму и положите контрольный груз на бумагу.",,en_translation_required
+level.L22.title,Козе не по зубам,Not for Goats,editorial_review_required
+level.L22.hint1,Бумага тоже стала преградой прочнее стали.,,en_translation_required
+level.L22.hint2,Рядом есть другой материал и обычный механизм.,,en_translation_required
+level.L22.hint3,Откройте деревянную калитку и назначьте обход.,,en_translation_required
+level.L23.title,Огневой архив,The Fiery Archive,editorial_review_required
+level.L23.hint1,M03 не меняет горючесть.,,en_translation_required
+level.L23.hint2,Можно изменить огонь или закрыть его воздействие.,,en_translation_required
+level.L23.hint3,Добавьте M02 во второй слот либо поставьте тепловой экран между огнём и мостом.,,en_translation_required
+level.L24.title,Лёгкое решение,A Lightweight Solution,editorial_review_required
+level.L24.hint1,Прочность листа и вместимость опор — разные свойства.,,en_translation_required
+level.L24.hint2,Нагрузку несут оба камня.,,en_translation_required
+level.L24.hint3,Закрепите пролёт к двум камням M и проверьте распределение массы перед запуском.,,en_translation_required
+level.L25.title,Обратная сторона сертификата,The Other Side of Approval,editorial_review_required
+level.L25.hint1,Афиша закрывает лишнюю часть результата.,,en_translation_required
+level.L25.hint2,Разведите луч к раме и луч к грузу.,,en_translation_required
+level.L25.hint3,"Разверните афишу боком или переставьте пролёт так, чтобы рама была скрыта отдельно.",,en_translation_required
+level.L26.title,Два места на три чуда,"Two Slots, Three Miracles",editorial_review_required
+level.L26.hint1,Новый закон ещё не вытеснил старые.,,en_translation_required
+level.L26.hint2,"Подготовьте мир к тому закону, который исчезнет.",,en_translation_required
+level.L26.hint3,"Либо освободите водный маршрут и замените M01, либо экранируйте огонь и замените M02.",,en_translation_required
+level.L27.title,Всё ещё бумага,Still Paper,editorial_review_required
+level.L27.hint1,Не всякую проблему нужно решать новым чудом.,,en_translation_required
+level.L27.hint2,Положение источника меняет зону воздействия.,,en_translation_required
+level.L27.hint3,Отодвиньте печь в дальний слот или закройте её тепловым экраном.,,en_translation_required
+level.L28.title,Сертификат на невозможность,A Certificate of Impossibility,editorial_review_required
+level.L28.hint1,"M01 уже действует, повторные аплодисменты не откроют M03.",,en_translation_required
+level.L28.hint2,Новое доказательство — контакт груза с бумагой.,,en_translation_required
+level.L28.hint3,"Подготовьте отдельный бумажный показ, используя воду только как средство доставки опоры.",,en_translation_required
+level.L29.title,Чудо соперника,The Rival's Miracle,editorial_review_required
+level.L29.hint1,"Зрители не видели, как появилась эта ледышка.",,en_translation_required
+level.L29.hint2,Начальный образец должен быть жидким.,,en_translation_required
+level.L29.hint3,"Возьмите жидкую чашу или сначала оттайте старую независимым источником, затем проведите показ.",,en_translation_required
+level.L30.title,Площадь всех возможностей,The Square of Possibilities,editorial_review_required
+level.L30.hint1,Вам не нужны все три закона одновременно.,,en_translation_required
+level.L30.hint2,Уже доставленный на сушу груз не обязан продолжать плавать.,,en_translation_required
+level.L30.hint3,"Сначала завершите перевозку, затем замените M01 на M03 и сохраните нужный холодный проход.",,en_translation_required
+ui.play,Начать,Start,editorial_review_required
+ui.continue,Продолжить,Continue,editorial_review_required
+ui.settings,Настройки,Settings,editorial_review_required
+ui.music,Музыка,Music,editorial_review_required
+ui.sound,Звук,Sound,editorial_review_required
+ui.master,Общая громкость,Master volume,editorial_review_required
+ui.effects,Эффекты,Effects,editorial_review_required
+ui.ambience,Окружение,Ambience,editorial_review_required
+ui.voices,Голоса,Voices,editorial_review_required
+ui.interface,Интерфейс,Interface,editorial_review_required
+ui.mute_all,Выключить всё,Mute all,editorial_review_required
+ui.subtitles,Субтитры,Subtitles,editorial_review_required
+ui.motion,Уменьшить движение,Reduce motion,editorial_review_required
+ui.rehearse,Проверить,Rehearse,editorial_review_required
+ui.perform,Показать чудо,Perform,editorial_review_required
+ui.seal,Закрепить чудо,Seal the miracle,editorial_review_required
+ui.run_plan,Разыграть план,Run the plan,editorial_review_required
+ui.undo,Отменить ход,Undo,editorial_review_required
+ui.hint,Подсказка,Hint,editorial_review_required
+ui.restart,Начать заново,Restart,editorial_review_required
+ui.restore,Восстановить покупки,Restore purchases,editorial_review_required
+ui.cancel,Отмена,Cancel,editorial_review_required
+ui.apply,Применить,Apply,editorial_review_required
+ui.back,Назад,Back,editorial_review_required
+ui.proof_float_visible,Виден поплавок,The float is visible,editorial_review_required
+ui.proof_result_hidden,Не видно результат,The result is hidden,editorial_review_required
+ui.law_m01,Каменные вещи плавают,Stone objects float,editorial_review_required
+ui.law_m02,Огонь замораживает,Fire freezes,editorial_review_required
+ui.law_m03,Бумага прочнее стали,Paper is stronger than steel,editorial_review_required

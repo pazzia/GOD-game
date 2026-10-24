@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "level_id": "L30",
+  "verification": "not_run",
+  "steps": [
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "float",
+        "slot_id": "stage_float"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone",
+        "slot_id": "stage_stone"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "screen_a",
+        "slot_id": "screen_left"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M01"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M01",
+        "replace_law_id": null
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "float",
+        "action": "remove"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "stone",
+        "slot_id": "bridge"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "first_cargo",
+        "route_id": "cross"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "screen_a",
+        "action": "remove"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "cold_pack",
+        "slot_id": "stage_cold"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "screen_cold",
+        "slot_id": "screen_cold_slot"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M02"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M02",
+        "replace_law_id": null
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 60
+    },
+    {
+      "op": "command",
+      "type": "StopResolution",
+      "payload": {}
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "paper",
+        "slot_id": "stage_paper"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "frame",
+        "slot_id": "stage_frame"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "weight",
+        "slot_id": "stage_weight"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "screen_paper",
+        "slot_id": "screen_paper_slot"
+      }
+    },
+    {
+      "op": "command",
+      "type": "SetLawCandidate",
+      "payload": {
+        "myth_id": "M03"
+      }
+    },
+    {
+      "op": "command",
+      "type": "BeginPerformance",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 180
+    },
+    {
+      "op": "command",
+      "type": "ActivateLaw",
+      "payload": {
+        "myth_id": "M03",
+        "replace_law_id": "M01"
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "frame",
+        "action": "remove"
+      }
+    },
+    {
+      "op": "command",
+      "type": "PlaceProp",
+      "payload": {
+        "entity_id": "weight",
+        "slot_id": "weight_start"
+      }
+    },
+    {
+      "op": "command",
+      "type": "AssignRoute",
+      "payload": {
+        "actor_id": "weight",
+        "route_id": "final_cross"
+      }
+    },
+    {
+      "op": "command",
+      "type": "RunResolution",
+      "payload": {}
+    },
+    {
+      "op": "advance_ticks",
+      "count": 150
+    },
+    {
+      "op": "assert",
+      "predicate": "level_success"
+    }
+  ],
+  "expected_final_predicates": [
+    "level_success"
+  ]
+}

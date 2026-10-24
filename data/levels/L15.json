@@ -1,0 +1,485 @@
+{
+  "schema_version": 1,
+  "content_version": "0.2.0",
+  "status": "layout_seed",
+  "level_id": "L15",
+  "chapter": 2,
+  "title_key": "level.L15.title",
+  "scene_id": "ENV02",
+  "available_myths": [
+    "M02"
+  ],
+  "initial_active_laws": [
+    "M02"
+  ],
+  "max_active_laws": 1,
+  "required_votes": 3,
+  "entities": [
+    {
+      "id": "hero",
+      "type_id": "actor_felix",
+      "asset_id": "CH01_RIG",
+      "material": "ORGANIC",
+      "apparent_class": "PERSON",
+      "initial_slot": "hero_start",
+      "movable": false,
+      "mass_units": 2,
+      "properties": {
+        "locomotion": "walk",
+        "initial_reach_zone_id": "near"
+      }
+    },
+    {
+      "id": "oven",
+      "type_id": "oven",
+      "asset_id": "PROP_FIRE",
+      "material": "FIRE",
+      "apparent_class": "FIRE",
+      "initial_slot": "oven_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "emitter_class": "FIRE",
+        "thermal_delta_per_tick": 1,
+        "thermal_radius_units": 5,
+        "enabled": true
+      }
+    },
+    {
+      "id": "boat_oven",
+      "type_id": "oven",
+      "asset_id": "PROP_FIRE",
+      "material": "FIRE",
+      "apparent_class": "FIRE",
+      "initial_slot": "boat_oven_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "emitter_class": "FIRE",
+        "thermal_delta_per_tick": 1,
+        "thermal_radius_units": 5,
+        "enabled": true
+      }
+    },
+    {
+      "id": "thermal_screen",
+      "type_id": "screen",
+      "asset_id": "PROP_SCREEN",
+      "material": "CLOTH",
+      "apparent_class": "SCREEN",
+      "initial_slot": "thermal_screen_start",
+      "movable": true,
+      "mass_units": 1,
+      "properties": {}
+    },
+    {
+      "id": "heated_stone",
+      "type_id": "heated_stone",
+      "asset_id": "PROP_HEATED_STONE",
+      "material": "STONE",
+      "apparent_class": "HEATED_OBJECT",
+      "initial_slot": "heated_stone_start",
+      "movable": true,
+      "mass_units": 3,
+      "properties": {
+        "emitter_class": "HEATED_OBJECT",
+        "thermal_delta_per_tick": 1,
+        "thermal_radius_units": 3,
+        "enabled": true
+      }
+    }
+  ],
+  "slots": [
+    {
+      "id": "hero_start",
+      "position": [
+        6,
+        20
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "actor_felix"
+      ]
+    },
+    {
+      "id": "audience_1",
+      "position": [
+        3,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_2",
+      "position": [
+        4,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "audience_3",
+      "position": [
+        5,
+        3
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "witness"
+      ]
+    },
+    {
+      "id": "oven_start",
+      "position": [
+        12,
+        17
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "oven"
+      ]
+    },
+    {
+      "id": "oven_far",
+      "position": [
+        3,
+        22
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "oven"
+      ]
+    },
+    {
+      "id": "boat_oven_start",
+      "position": [
+        20,
+        16
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "oven"
+      ]
+    },
+    {
+      "id": "boat_oven_far",
+      "position": [
+        3,
+        22
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "oven"
+      ]
+    },
+    {
+      "id": "thermal_screen_start",
+      "position": [
+        5,
+        25
+      ],
+      "zone_id": "near",
+      "mount_layer": "tray",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "thermal_block",
+      "position": [
+        20,
+        18
+      ],
+      "zone_id": "near",
+      "mount_layer": "screen",
+      "allowed_entity_types": [
+        "screen"
+      ]
+    },
+    {
+      "id": "heated_stone_start",
+      "position": [
+        2,
+        25
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "heated_stone"
+      ]
+    },
+    {
+      "id": "warm_bowl",
+      "position": [
+        20,
+        19
+      ],
+      "zone_id": "near",
+      "mount_layer": "ground",
+      "allowed_entity_types": [
+        "heated_stone"
+      ]
+    }
+  ],
+  "zones": [
+    {
+      "id": "near",
+      "kind": "REACH"
+    },
+    {
+      "id": "crossing_water",
+      "kind": "WATER",
+      "thermal_position": [
+        12,
+        20
+      ],
+      "polygon": [
+        [
+          10,
+          18
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          22
+        ],
+        [
+          10,
+          22
+        ]
+      ],
+      "initial_phase": "frozen",
+      "initial_thermal_charge": -20
+    },
+    {
+      "id": "bowl_water",
+      "kind": "WATER",
+      "thermal_position": [
+        20,
+        20
+      ],
+      "polygon": [
+        [
+          18,
+          18
+        ],
+        [
+          22,
+          18
+        ],
+        [
+          22,
+          22
+        ],
+        [
+          18,
+          22
+        ]
+      ],
+      "initial_phase": "frozen",
+      "initial_thermal_charge": -20
+    }
+  ],
+  "occluders": [
+    {
+      "id": "thermal_screen_occluder",
+      "owner_entity": "thermal_screen",
+      "active_slot": "thermal_block",
+      "segment": [
+        [
+          18,
+          18
+        ],
+        [
+          22,
+          18
+        ]
+      ],
+      "channels": [
+        "Thermal"
+      ]
+    }
+  ],
+  "witnesses": [
+    {
+      "id": "w1",
+      "character_id": "CH06",
+      "initial_view_slot": "audience_1",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            3,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w2",
+      "character_id": "CH05",
+      "initial_view_slot": "audience_2",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            4,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    },
+    {
+      "id": "w3",
+      "character_id": "CROWD01",
+      "initial_view_slot": "audience_3",
+      "views": [
+        {
+          "id": "front",
+          "eye_position": [
+            5,
+            3
+          ],
+          "from_tick": 0,
+          "duration_ticks": 180,
+          "clear_ticks": 25,
+          "look_at": [
+            14,
+            14
+          ]
+        }
+      ],
+      "expose_ticks": 5,
+      "gap_tolerance_ticks": 2
+    }
+  ],
+  "proofs": [],
+  "navigation": {
+    "nodes": [
+      {
+        "id": "cross_0",
+        "position": [
+          6,
+          20
+        ]
+      },
+      {
+        "id": "cross_1",
+        "position": [
+          9,
+          20
+        ]
+      },
+      {
+        "id": "cross_2",
+        "position": [
+          12,
+          20
+        ]
+      },
+      {
+        "id": "cross_3",
+        "position": [
+          15,
+          20
+        ]
+      },
+      {
+        "id": "cross_4",
+        "position": [
+          18,
+          20
+        ]
+      }
+    ],
+    "routes": [
+      {
+        "id": "cross",
+        "nodes": [
+          "cross_0",
+          "cross_1",
+          "cross_2",
+          "cross_3",
+          "cross_4"
+        ],
+        "ticks_per_edge": 10,
+        "requirements": [
+          {
+            "type": "water_phase",
+            "parameters": {
+              "zone_id": "crossing_water",
+              "phase": "frozen"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "goals": [
+    {
+      "id": "bowl_thawed",
+      "kind": "state",
+      "predicate_id": "water_phase",
+      "parameters": {
+        "zone_id": "bowl_water",
+        "phase": "liquid"
+      },
+      "required": true
+    },
+    {
+      "id": "crossing_kept",
+      "kind": "state",
+      "predicate_id": "water_phase",
+      "parameters": {
+        "zone_id": "crossing_water",
+        "phase": "frozen"
+      },
+      "required": true
+    }
+  ],
+  "hints": [
+    "level.L15.hint1",
+    "level.L15.hint2",
+    "level.L15.hint3"
+  ],
+  "presentation": {
+    "layout_asset_id": "SCENE_L15_LAYOUT",
+    "overlay_asset_id": "SCENE_L15_OVERLAY"
+  },
+  "canonical_solution_ref": "L15_solution.json"
+}

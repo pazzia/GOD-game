@@ -1,0 +1,391 @@
+{
+  "checks": 59,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "human_usability_or_device_test": false,
+  "initial_fixture": "unlocked profile30, authored load from tick0; no progressed snapshots",
+  "input": "Input.parse_input_event mouse press/release; no pressed-signal shortcut",
+  "journeys": [
+    {
+      "commands": [
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "cold_pack",
+            "slot_id": "stage_cold"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "screen_a",
+            "slot_id": "screen_left"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M02"
+          },
+          "type": "SetLawCandidate"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "BeginPerformance"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M02",
+            "replace_law_id": null
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "actor_id": "hero",
+            "route_id": "cross"
+          },
+          "type": "AssignRoute"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "RunResolution"
+        }
+      ],
+      "level": "L11",
+      "state_hash": "056b729aa4d960a022297e611ee128e14012bd755ae422a1efe4e1984a82b7d0",
+      "success": true,
+      "tick": 133
+    },
+    {
+      "commands": [
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "paper",
+            "slot_id": "stage_paper"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "frame",
+            "slot_id": "stage_frame"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "weight",
+            "hoist_entity_id": "hoist",
+            "move_mode": "hoist",
+            "slot_id": "stage_weight"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "screen_a",
+            "slot_id": "screen_left"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M03"
+          },
+          "type": "SetLawCandidate"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "BeginPerformance"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M03",
+            "replace_law_id": null
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "action": "remove",
+            "entity_id": "frame"
+          },
+          "type": "Interact"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "weight",
+            "hoist_entity_id": "hoist",
+            "move_mode": "hoist",
+            "slot_id": "weight_start"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "actor_id": "weight",
+            "route_id": "cross"
+          },
+          "type": "AssignRoute"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "RunResolution"
+        }
+      ],
+      "level": "L21",
+      "state_hash": "b8b506ad8111e3dc5ed0ff2104ecd6e802757e7d653d973d33c4b57e8dce7a66",
+      "success": true,
+      "tick": 65
+    },
+    {
+      "commands": [
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "float",
+            "slot_id": "stage_float"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "stone",
+            "slot_id": "stage_stone"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "screen_a",
+            "slot_id": "screen_left"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M01"
+          },
+          "type": "SetLawCandidate"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "BeginPerformance"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M01",
+            "replace_law_id": null
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "action": "remove",
+            "entity_id": "float"
+          },
+          "type": "Interact"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "stone",
+            "slot_id": "bridge"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "actor_id": "first_cargo",
+            "route_id": "cross"
+          },
+          "type": "AssignRoute"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "RunResolution"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "action": "remove",
+            "entity_id": "screen_a"
+          },
+          "type": "Interact"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "cold_pack",
+            "slot_id": "stage_cold"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "screen_cold",
+            "slot_id": "screen_cold_slot"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M02"
+          },
+          "type": "SetLawCandidate"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "BeginPerformance"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M02",
+            "replace_law_id": null
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "RunResolution"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "StopResolution"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "paper",
+            "slot_id": "stage_paper"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "frame",
+            "slot_id": "stage_frame"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "weight",
+            "hoist_entity_id": "hoist",
+            "move_mode": "hoist",
+            "slot_id": "stage_weight"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "screen_paper",
+            "slot_id": "screen_paper_slot"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M03"
+          },
+          "type": "SetLawCandidate"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "BeginPerformance"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M03",
+            "replace_law_id": null
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "myth_id": "M03",
+            "replace_law_id": "M01"
+          },
+          "type": "ActivateLaw"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "action": "remove",
+            "entity_id": "frame"
+          },
+          "type": "Interact"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "entity_id": "weight",
+            "hoist_entity_id": "hoist",
+            "move_mode": "hoist",
+            "slot_id": "weight_start"
+          },
+          "type": "PlaceProp"
+        },
+        {
+          "accepted": true,
+          "payload": {
+            "actor_id": "weight",
+            "route_id": "final_cross"
+          },
+          "type": "AssignRoute"
+        },
+        {
+          "accepted": true,
+          "payload": {},
+          "type": "RunResolution"
+        }
+      ],
+      "level": "L30",
+      "state_hash": "040e36ff7636984ec5e45157e45ba1d30135d613d015719c773f5e837f0fa265",
+      "success": true,
+      "tick": 249
+    }
+  ],
+  "pointer_events": 290,
+  "scroll_navigation": "native ensure_control_visible; separate touch gesture suite validates physical pan",
+  "simulation_time_scale": 8
+}

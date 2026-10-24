@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "unlocks_by_completion": true,
+  "chapters": [
+    {
+      "id": 1,
+      "title_key": "ui.chapter1",
+      "scene_id": "ENV01",
+      "levels": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10"
+      ]
+    },
+    {
+      "id": 2,
+      "title_key": "ui.chapter2",
+      "scene_id": "ENV02",
+      "levels": [
+        "L11",
+        "L12",
+        "L13",
+        "L14",
+        "L15",
+        "L16",
+        "L17",
+        "L18",
+        "L19",
+        "L20"
+      ]
+    },
+    {
+      "id": 3,
+      "title_key": "ui.chapter3",
+      "scene_id": "ENV03",
+      "levels": [
+        "L21",
+        "L22",
+        "L23",
+        "L24",
+        "L25",
+        "L26",
+        "L27",
+        "L28",
+        "L29",
+        "L30"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "id": "L01",
+      "path": "res://data/levels/L01.json",
+      "title_key": "level.L01.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": null
+    },
+    {
+      "id": "L02",
+      "path": "res://data/levels/L02.json",
+      "title_key": "level.L02.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L01"
+    },
+    {
+      "id": "L03",
+      "path": "res://data/levels/L03.json",
+      "title_key": "level.L03.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L02"
+    },
+    {
+      "id": "L04",
+      "path": "res://data/levels/L04.json",
+      "title_key": "level.L04.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L03"
+    },
+    {
+      "id": "L05",
+      "path": "res://data/levels/L05.json",
+      "title_key": "level.L05.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L04"
+    },
+    {
+      "id": "L06",
+      "path": "res://data/levels/L06.json",
+      "title_key": "level.L06.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L05"
+    },
+    {
+      "id": "L07",
+      "path": "res://data/levels/L07.json",
+      "title_key": "level.L07.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L06"
+    },
+    {
+      "id": "L08",
+      "path": "res://data/levels/L08.json",
+      "title_key": "level.L08.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L07"
+    },
+    {
+      "id": "L09",
+      "path": "res://data/levels/L09.json",
+      "title_key": "level.L09.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L08"
+    },
+    {
+      "id": "L10",
+      "path": "res://data/levels/L10.json",
+      "title_key": "level.L10.title",
+      "scene_id": "ENV01",
+      "chapter": 1,
+      "prerequisite": "L09"
+    },
+    {
+      "id": "L11",
+      "path": "res://data/levels/L11.json",
+      "title_key": "level.L11.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L10"
+    },
+    {
+      "id": "L12",
+      "path": "res://data/levels/L12.json",
+      "title_key": "level.L12.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L11"
+    },
+    {
+      "id": "L13",
+      "path": "res://data/levels/L13.json",
+      "title_key": "level.L13.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L12"
+    },
+    {
+      "id": "L14",
+      "path": "res://data/levels/L14.json",
+      "title_key": "level.L14.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L13"
+    },
+    {
+      "id": "L15",
+      "path": "res://data/levels/L15.json",
+      "title_key": "level.L15.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L14"
+    },
+    {
+      "id": "L16",
+      "path": "res://data/levels/L16.json",
+      "title_key": "level.L16.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L15"
+    },
+    {
+      "id": "L17",
+      "path": "res://data/levels/L17.json",
+      "title_key": "level.L17.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L16"
+    },
+    {
+      "id": "L18",
+      "path": "res://data/levels/L18.json",
+      "title_key": "level.L18.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L17"
+    },
+    {
+      "id": "L19",
+      "path": "res://data/levels/L19.json",
+      "title_key": "level.L19.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L18"
+    },
+    {
+      "id": "L20",
+      "path": "res://data/levels/L20.json",
+      "title_key": "level.L20.title",
+      "scene_id": "ENV02",
+      "chapter": 2,
+      "prerequisite": "L19"
+    },
+    {
+      "id": "L21",
+      "path": "res://data/levels/L21.json",
+      "title_key": "level.L21.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L20"
+    },
+    {
+      "id": "L22",
+      "path": "res://data/levels/L22.json",
+      "title_key": "level.L22.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L21"
+    },
+    {
+      "id": "L23",
+      "path": "res://data/levels/L23.json",
+      "title_key": "level.L23.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L22"
+    },
+    {
+      "id": "L24",
+      "path": "res://data/levels/L24.json",
+      "title_key": "level.L24.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L23"
+    },
+    {
+      "id": "L25",
+      "path": "res://data/levels/L25.json",
+      "title_key": "level.L25.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L24"
+    },
+    {
+      "id": "L26",
+      "path": "res://data/levels/L26.json",
+      "title_key": "level.L26.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L25"
+    },
+    {
+      "id": "L27",
+      "path": "res://data/levels/L27.json",
+      "title_key": "level.L27.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L26"
+    },
+    {
+      "id": "L28",
+      "path": "res://data/levels/L28.json",
+      "title_key": "level.L28.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L27"
+    },
+    {
+      "id": "L29",
+      "path": "res://data/levels/L29.json",
+      "title_key": "level.L29.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L28"
+    },
+    {
+      "id": "L30",
+      "path": "res://data/levels/L30.json",
+      "title_key": "level.L30.title",
+      "scene_id": "ENV03",
+      "chapter": 3,
+      "prerequisite": "L29"
+    }
+  ]
+}
