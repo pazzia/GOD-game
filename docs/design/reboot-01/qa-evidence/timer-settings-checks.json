@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-25T19:28:54.682321+00:00",
+  "checks": [
+    {
+      "name": "crossing_does_not_complete_while_paused",
+      "passed": true
+    },
+    {
+      "name": "crossing_resumes_to_arrival",
+      "passed": true
+    },
+    {
+      "name": "replay_returns_initial_fixture",
+      "passed": true
+    },
+    {
+      "name": "settings_reduced_motion_toggle",
+      "passed": true
+    },
+    {
+      "name": "settings_close_preserves_menu",
+      "passed": true
+    }
+  ]
+}

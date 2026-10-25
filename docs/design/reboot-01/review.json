@@ -1,0 +1,593 @@
+{
+  "checked_at": "2026-10-25T19:32:13.055865+00:00",
+  "reviewer": "Independent review_finish agent",
+  "verdict": "accepted_for_owner_design_review",
+  "scope": "Local illustrated HTML design prototype, menu through first level and next-puzzle teaser; not Godot runtime or APK acceptance.",
+  "url": "http://127.0.0.1:8765/mocks/index.html",
+  "viewport_sizes": [
+    [
+      1560,
+      720
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "checks_total": 63,
+  "checks_passed": 63,
+  "blockers_remaining": 0,
+  "majors_remaining": 0,
+  "functional_walkthrough": {
+    "checks": [
+      {
+        "name": "boot_menu",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "start_intro",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "intro_setup",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "wrong_side_recoverable",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "tall_screen_hides_stone",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "fold_keeps_front_position",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "eye_preview_open",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "eye_preview_preserves_setup",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "valid_trick_proof",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "manual_law_transition",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "crossing_not_premature_victory",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "automatic_arrival_success",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "next_consequence_visible",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "next_detail_open",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "restart_menu",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "undo_control_present",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "undo_restores_previous_fold_state",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "pause_open",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "pause_resume_keeps_placement",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "timing_note": "Completed before final geometry-only and touch-target styling corrections; those corrections were reviewed with targeted visual checks rather than repeating the full route."
+  },
+  "final_visual_and_resources": {
+    "checked_at": "2026-10-25T19:28:30.174933+00:00",
+    "checks": [
+      {
+        "name": "menu_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "menu_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "intro_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "intro_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "setup_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "setup_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "proof_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "proof_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "law_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "law_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "crossing_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "crossing_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "success_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "success_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "next_1560_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "next_1560_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "menu_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "menu_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "intro_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "intro_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "setup_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "setup_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "proof_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "proof_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "law_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "law_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "crossing_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "crossing_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "success_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "success_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "next_844_assets",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "next_844_text_bounds",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "eye_side_False",
+        "passed": true,
+        "detail": {
+          "stone": true,
+          "float": true
+        }
+      },
+      {
+        "name": "eye_side_True",
+        "passed": true,
+        "detail": {
+          "stone": true,
+          "float": true
+        }
+      },
+      {
+        "name": "eye_front_False",
+        "passed": true,
+        "detail": {
+          "stone": false,
+          "float": false
+        }
+      },
+      {
+        "name": "eye_front_True",
+        "passed": true,
+        "detail": {
+          "stone": true,
+          "float": false
+        }
+      },
+      {
+        "name": "touch_targets_844_min44",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "no_console_errors_after_favicon_fix",
+        "passed": true,
+        "detail": []
+      },
+      {
+        "name": "no_http_errors",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "eye_truths": [
+      {
+        "placement": "side",
+        "folded": false,
+        "stone_visible": true,
+        "float_visible": true
+      },
+      {
+        "placement": "side",
+        "folded": true,
+        "stone_visible": true,
+        "float_visible": true
+      },
+      {
+        "placement": "front",
+        "folded": false,
+        "stone_visible": false,
+        "float_visible": false
+      },
+      {
+        "placement": "front",
+        "folded": true,
+        "stone_visible": true,
+        "float_visible": false
+      }
+    ],
+    "small_targets": [],
+    "console_errors": [],
+    "http_errors": []
+  },
+  "pause_timer_settings_edge_checks": {
+    "checked_at": "2026-10-25T19:28:54.682321+00:00",
+    "checks": [
+      {
+        "name": "crossing_does_not_complete_while_paused",
+        "passed": true
+      },
+      {
+        "name": "crossing_resumes_to_arrival",
+        "passed": true
+      },
+      {
+        "name": "replay_returns_initial_fixture",
+        "passed": true
+      },
+      {
+        "name": "settings_reduced_motion_toggle",
+        "passed": true
+      },
+      {
+        "name": "settings_close_preserves_menu",
+        "passed": true
+      }
+    ]
+  },
+  "manual_review": [
+    "New cast, environment and props use a coherent palette, material and light language; characters and scene remain recognizably the same across the eight frames.",
+    "After the targeted resize, the stone body is visibly separated from wooden pier ends; solid clamp-like guide bars are removed and thin slack lateral guides remain. This clears the causal readability defect at concept level.",
+    "Crossing frame places Marfa feet on the stone; arrival frame places her at the bakery. The victory copy claims arrival rather than an already animated door opening.",
+    "All four schematic observer views match the documented truth table: side variants show support, front-tall hides the stone, front-folded shows stone while hiding support.",
+    "Proof, law and arrival remain distinct. The Atlas records the visible stage image without requiring belief erasure, and load support is stated before crossing.",
+    "Phone-size frames retain uncut essential text and clear primary controls. Main-frame enabled button targets meet the tested 44 CSS pixel minimum at 844x390."
+  ],
+  "resolved_findings": [
+    {
+      "id": "R01",
+      "severity": "major",
+      "issue": "Stone rings and thick vertical guide bars visually merged with piers, making an ordinary supported bridge plausible.",
+      "resolution": "Stone and float reduced/recentered; thick bars removed; final water gaps and slack lateral guides inspected."
+    },
+    {
+      "id": "R02",
+      "severity": "major",
+      "issue": "Success replay hit area was only about 19.5 CSS px high at 844x390.",
+      "resolution": "Replay receives a 90 logical pixel minimum height, about 48.7 CSS px after scaling; remains inside the frame."
+    },
+    {
+      "id": "R03",
+      "severity": "major",
+      "issue": "Undo reset the initial fixture although the spec promised previous-step undo.",
+      "resolution": "True one-step placement/form history is implemented and tested."
+    },
+    {
+      "id": "R04",
+      "severity": "major",
+      "issue": "An in-frame arrival button added an unnecessary second mandatory click after ordering the crossing.",
+      "resolution": "Live crossing automatically completes; pause holds it, resume completes it; capture mode keeps a storyboard frame through external review navigation."
+    },
+    {
+      "id": "R05",
+      "severity": "minor",
+      "issue": "A floating law label obscured Plum face.",
+      "resolution": "Law-only Plum position moved; final large and phone frames inspected."
+    },
+    {
+      "id": "R06",
+      "severity": "minor",
+      "issue": "Browser requested a missing favicon.",
+      "resolution": "Embedded icon added; final pass records zero console and HTTP errors."
+    }
+  ],
+  "measurement_corrections": "Initial scrollHeight overflow flags were caused by decorative speech tails. Actual text Range bounds and screenshot inspection confirm text is contained; these were test false positives, not hidden product errors.",
+  "limitations": [
+    "This is an owner-review design proposal, not user approval, a physical-device test, or evidence of fun or unaided comprehension by fresh players.",
+    "Observer views are illustrated discrete presets. General geometric raycasting, collision, fluid/load simulation and Godot integration are not implemented or validated here.",
+    "Thin guides are documented as lateral restraints that do not bear weight; the final concept drawing is not a physical engineering proof.",
+    "Character cutouts provide a concept pose rather than a complete animation or direction set; movement and object contact need production assets later.",
+    "The second puzzle is a narrative teaser, not a completed playable level. The package does not validate later monetization, retention or graphics integrations."
+  ],
+  "source_hashes": [
+    {
+      "path": "mocks/index.html",
+      "sha256": "afe956a4074ced35ed2b0574b77982fc4854df915a36a2ae27d262fb8989e112"
+    },
+    {
+      "path": "mocks/style.css",
+      "sha256": "4b78b7814031889ea9b3c032b74cbe95a361c42ceaaa2535ddf142ea4ab77cf6"
+    },
+    {
+      "path": "mocks/app.js",
+      "sha256": "165692bc856b19b8c7496a68238f205f0255528a131379daedefaba1a96d7e23"
+    },
+    {
+      "path": "gameplay-story.md",
+      "sha256": "530b3478372d338c5be3b42e69f0f902d7dd47d1022ebca32e1b8a83158ab50e"
+    },
+    {
+      "path": "flow.json",
+      "sha256": "8b3eb2d2c4c6aae72147073322a86af6502c219fd559a5148d7fc1ffb93a1383"
+    },
+    {
+      "path": "art-direction.md",
+      "sha256": "bb321488f267ba3f6abe23b28c859167676f86bda095108aeaa40fc0fef55f73"
+    },
+    {
+      "path": "ui-spec.md",
+      "sha256": "3d5e4b9fb5a86ccc8f9f8d66942f41f16ef4d55303f7a225b64569cc9727dae9"
+    },
+    {
+      "path": "mocks/exports/manifest.json",
+      "sha256": "b818c2e3f49245bea1f2c759c099ef44954e2475a9df241d3f39a0f8389f2046"
+    }
+  ],
+  "evidence_root": "/workspace/design-review",
+  "final_evidence": [
+    {
+      "file": "menu-1560.png",
+      "sha256": "2541f48b7a8714f81b9023616d84607833ecdc6ae8dcb08969deb1d4e46d53cc"
+    },
+    {
+      "file": "intro-1560.png",
+      "sha256": "7fa62236b408b4a705ca34d282c61efa89fdac355e392b9ad6fd96584626effb"
+    },
+    {
+      "file": "setup-1560.png",
+      "sha256": "9026e0667349bb92e69797dc8e105f7857fe85d11e880be0163d8c14f01de2aa"
+    },
+    {
+      "file": "proof-1560.png",
+      "sha256": "29e525fa16a67665c25a3ecae209363bca4a0d2943faee1a7911708e4d19f77d"
+    },
+    {
+      "file": "law-1560.png",
+      "sha256": "5cf5a503eda093bfbd59428b9b970236b48a90fa65154605a87e0bc1defe6fc2"
+    },
+    {
+      "file": "crossing-1560.png",
+      "sha256": "62b11f9884ce0f8a04284dab9fe8564c17f9bab03b77172edad4ddbb53269f80"
+    },
+    {
+      "file": "success-1560.png",
+      "sha256": "ce2bd165a31545d3ec04e990858dd9d8753b14e7334ac82ff0de17c9fcd45615"
+    },
+    {
+      "file": "next-1560.png",
+      "sha256": "2794efc7472a8c3008ee93483d8e99188c385e833983d8eb15890a50ccfc9ecf"
+    },
+    {
+      "file": "menu-844.png",
+      "sha256": "b7792ab90ec4b061c5bcb7ccf3536821b29713fec613a3fbe9da58d7219983b7"
+    },
+    {
+      "file": "intro-844.png",
+      "sha256": "50049cf4d607c1cbd8c59ace62c8d3bb2001176ed5e8a05a3a4621393d66a7f1"
+    },
+    {
+      "file": "setup-844.png",
+      "sha256": "4e87e228352193d4cfd8d1e742a817df2b0647746870a7613c3bd43f977e1ca8"
+    },
+    {
+      "file": "proof-844.png",
+      "sha256": "e9f9d86512c56ba93f004d7c6cc79ad19eade957d96e84146c1d52221faea9aa"
+    },
+    {
+      "file": "law-844.png",
+      "sha256": "b64d28886b9e215992666c6b265342f97f7dce61b677faa3646ad041e9457c90"
+    },
+    {
+      "file": "crossing-844.png",
+      "sha256": "a9ba7b6d1f35be6c8c69622d52ec0fc9a16502eabe73822cf2fb95447d7d1555"
+    },
+    {
+      "file": "success-844.png",
+      "sha256": "9a5c9d34db5ecd88a32c827a82ca98d7f4a9ae1700854baec23670d3e74e6715"
+    },
+    {
+      "file": "next-844.png",
+      "sha256": "9c5db17b910b4d46a094e95b9648e030e6a15d84dfd796d7aeeed917fdc6cb57"
+    },
+    {
+      "file": "eye-side-false.png",
+      "sha256": "28e6ada650e7e78d043ff03bb8e41fa82f99438121ad932fb4fb37afe848f2c3"
+    },
+    {
+      "file": "eye-side-true.png",
+      "sha256": "70cb8b44a3052dab09419e882858550cf626da54bc4f738b491ce168f50d53aa"
+    },
+    {
+      "file": "eye-front-false.png",
+      "sha256": "5578f09b02ea3c449d8b4901532d1604157c8551547e656e5217c82d2535131d"
+    },
+    {
+      "file": "eye-front-true.png",
+      "sha256": "64ded0aa8024b9d9257c8685f40bd7d78d9c5b2549bd6acdc860884c20b3a939"
+    },
+    {
+      "file": "stone-gap-final.png",
+      "sha256": "b00b537dccce4edeba7a6b6a9dd7de51e606511dd4b6eb97a8320f3481ad4f6d"
+    }
+  ],
+  "portable_evidence": [
+    {
+      "path": "qa-evidence/stone-gap-final.png",
+      "sha256": "b00b537dccce4edeba7a6b6a9dd7de51e606511dd4b6eb97a8320f3481ad4f6d"
+    },
+    {
+      "path": "qa-evidence/success-844.png",
+      "sha256": "9a5c9d34db5ecd88a32c827a82ca98d7f4a9ae1700854baec23670d3e74e6715"
+    },
+    {
+      "path": "qa-evidence/browser-results.json",
+      "sha256": "f86ed2c5755e2942ae68cc031661cb31db104ef7eb47440688d65c088f7cdbd3"
+    },
+    {
+      "path": "qa-evidence/visual-recheck.json",
+      "sha256": "212d788cddd9c5e19ad75579bfde940978903209044e9fea51c0501d071a376e"
+    },
+    {
+      "path": "qa-evidence/timer-settings-checks.json",
+      "sha256": "732d3756dcb3600757115be6fa2ca8fa4025a36c6f7d3d902cd5718fe28c766a"
+    },
+    {
+      "path": "qa-evidence/review_browser.py",
+      "sha256": "bd8da05dd5d0480dca73fc6fb821943daefffe0011addfe3b0c95b2104218883"
+    },
+    {
+      "path": "qa-evidence/recheck_visual.py",
+      "sha256": "701eb1357fa4fa5b737889cb0611f2304f33568bdabbd753c07ceec09b570654"
+    }
+  ],
+  "portable_evidence_note": "Selected exact-byte copies are included by the package owner. browser-results.json preserves the initial diagnostic run; resolved tail-overflow false positives and favicon are superseded by visual-recheck.json. The 19 functional checks from that initial run remain passed."
+}

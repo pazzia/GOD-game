@@ -1,0 +1,150 @@
+{
+  "kind": "Browser-rendered design mockups; not the shipped Godot application",
+  "screenshots": [
+    {
+      "file": "exports/01-menu-1560x720.png",
+      "screen": "menu",
+      "width": 1560,
+      "height": 720,
+      "sha256": "2541f48b7a8714f81b9023616d84607833ecdc6ae8dcb08969deb1d4e46d53cc"
+    },
+    {
+      "file": "exports/02-intro-1560x720.png",
+      "screen": "intro",
+      "width": 1560,
+      "height": 720,
+      "sha256": "7fa62236b408b4a705ca34d282c61efa89fdac355e392b9ad6fd96584626effb"
+    },
+    {
+      "file": "exports/03-setup-1560x720.png",
+      "screen": "setup",
+      "width": 1560,
+      "height": 720,
+      "sha256": "9026e0667349bb92e69797dc8e105f7857fe85d11e880be0163d8c14f01de2aa"
+    },
+    {
+      "file": "exports/04-proof-1560x720.png",
+      "screen": "proof",
+      "width": 1560,
+      "height": 720,
+      "sha256": "29e525fa16a67665c25a3ecae209363bca4a0d2943faee1a7911708e4d19f77d"
+    },
+    {
+      "file": "exports/05-law-1560x720.png",
+      "screen": "law",
+      "width": 1560,
+      "height": 720,
+      "sha256": "5cf5a503eda093bfbd59428b9b970236b48a90fa65154605a87e0bc1defe6fc2"
+    },
+    {
+      "file": "exports/06-crossing-1560x720.png",
+      "screen": "crossing",
+      "width": 1560,
+      "height": 720,
+      "sha256": "62b11f9884ce0f8a04284dab9fe8564c17f9bab03b77172edad4ddbb53269f80"
+    },
+    {
+      "file": "exports/07-success-1560x720.png",
+      "screen": "success",
+      "width": 1560,
+      "height": 720,
+      "sha256": "ce2bd165a31545d3ec04e990858dd9d8753b14e7334ac82ff0de17c9fcd45615"
+    },
+    {
+      "file": "exports/08-next-1560x720.png",
+      "screen": "next",
+      "width": 1560,
+      "height": 720,
+      "sha256": "2794efc7472a8c3008ee93483d8e99188c385e833983d8eb15890a50ccfc9ecf"
+    },
+    {
+      "file": "exports/setup-correct-1560x720.png",
+      "screen": "setup-correct",
+      "width": 1560,
+      "height": 720,
+      "sha256": "263eb653aea4b3ea4285ac1e78e35a9ec6e8a2e98c7d058c35a88d7fb479f2be"
+    },
+    {
+      "file": "exports/eye-correct-1560x720.png",
+      "screen": "eye-correct",
+      "width": 1560,
+      "height": 720,
+      "sha256": "64ded0aa8024b9d9257c8685f40bd7d78d9c5b2549bd6acdc860884c20b3a939"
+    },
+    {
+      "file": "exports/01-menu-844x390.png",
+      "screen": "menu",
+      "width": 844,
+      "height": 390,
+      "sha256": "b7792ab90ec4b061c5bcb7ccf3536821b29713fec613a3fbe9da58d7219983b7"
+    },
+    {
+      "file": "exports/02-intro-844x390.png",
+      "screen": "intro",
+      "width": 844,
+      "height": 390,
+      "sha256": "50049cf4d607c1cbd8c59ace62c8d3bb2001176ed5e8a05a3a4621393d66a7f1"
+    },
+    {
+      "file": "exports/03-setup-844x390.png",
+      "screen": "setup",
+      "width": 844,
+      "height": 390,
+      "sha256": "4e87e228352193d4cfd8d1e742a817df2b0647746870a7613c3bd43f977e1ca8"
+    },
+    {
+      "file": "exports/04-proof-844x390.png",
+      "screen": "proof",
+      "width": 844,
+      "height": 390,
+      "sha256": "e9f9d86512c56ba93f004d7c6cc79ad19eade957d96e84146c1d52221faea9aa"
+    },
+    {
+      "file": "exports/05-law-844x390.png",
+      "screen": "law",
+      "width": 844,
+      "height": 390,
+      "sha256": "b64d28886b9e215992666c6b265342f97f7dce61b677faa3646ad041e9457c90"
+    },
+    {
+      "file": "exports/06-crossing-844x390.png",
+      "screen": "crossing",
+      "width": 844,
+      "height": 390,
+      "sha256": "a9ba7b6d1f35be6c8c69622d52ec0fc9a16502eabe73822cf2fb95447d7d1555"
+    },
+    {
+      "file": "exports/07-success-844x390.png",
+      "screen": "success",
+      "width": 844,
+      "height": 390,
+      "sha256": "9a5c9d34db5ecd88a32c827a82ca98d7f4a9ae1700854baec23670d3e74e6715"
+    },
+    {
+      "file": "exports/08-next-844x390.png",
+      "screen": "next",
+      "width": 844,
+      "height": 390,
+      "sha256": "9c5db17b910b4d46a094e95b9648e030e6a15d84dfd796d7aeeed917fdc6cb57"
+    },
+    {
+      "file": "exports/setup-correct-844x390.png",
+      "screen": "setup-correct",
+      "width": 844,
+      "height": 390,
+      "sha256": "433d43b539178a071804cb805887084b253754a19b4efa482417dc09601c2b0a"
+    },
+    {
+      "file": "exports/eye-correct-844x390.png",
+      "screen": "eye-correct",
+      "width": 844,
+      "height": 390,
+      "sha256": "5e0e72c70438f9da951903b207f133ca3d74e2acd6d92b7565fb25a5cbc9b3f5"
+    }
+  ],
+  "source_sha256": {
+    "index.html": "afe956a4074ced35ed2b0574b77982fc4854df915a36a2ae27d262fb8989e112",
+    "app.js": "165692bc856b19b8c7496a68238f205f0255528a131379daedefaba1a96d7e23",
+    "style.css": "4b78b7814031889ea9b3c032b74cbe95a361c42ceaaa2535ddf142ea4ab77cf6"
+  }
+}

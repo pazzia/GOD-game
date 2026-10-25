@@ -1,0 +1,395 @@
+{
+  "version": "reboot-01-proposal-1",
+  "status": "design_proposal_for_owner_approval",
+  "date": "2026-10-25",
+  "source_of_truth": "gameplay-story.md",
+  "implementation_scope": "Local design mockup; existing Godot game and APK are not changed by this document.",
+  "duration_budget_seconds": [
+    120,
+    300
+  ],
+  "duration_status": "untested hypothesis for first-time player study",
+  "player_loop": [
+    "stage_observable_impossibility",
+    "record_valid_view",
+    "seal_with_atlas",
+    "apply_real_world_rule",
+    "observe_consequence_and_next_problem"
+  ],
+  "world_contract": {
+    "atlas_rule": "Покажи невозможное со стороны — Атлас сделает его настоящим",
+    "records": "External observed appearance of real objects, not a private belief or erased memory.",
+    "observer_memory_reset_required": false,
+    "law_name": "Каменные вещи не тонут",
+    "district": "Солнечный квартал",
+    "law_scope": "Separate independently movable stone items contacting water within the same district; includes the vertically movable L01 step and L02 anchor. Fixed masonry, foundations, embankments and bedrock do not become floating props.",
+    "load_support": "Water magically holds an intact stone object and load placed on it at the surface. This is not inferred from ordinary buoyancy or an unspecified density change.",
+    "L01_supported_load": "Marfa and her one basket on a sufficiently broad and sound stone step.",
+    "lateral_guides": "Prevent sideways displacement; permit vertical motion; do not bear the stone weight.",
+    "other_laws_or_capacity_models": "Not established by this first-level mockup.",
+    "eligible_examples": [
+      "guided_stone_step_with_free_vertical_motion",
+      "stone_anchor_not_fixed_to_seabed"
+    ],
+    "excluded_examples": [
+      "fixed_masonry",
+      "foundations",
+      "embankments",
+      "bedrock"
+    ]
+  },
+  "initial_state": {
+    "screen": "menu",
+    "placement": "side",
+    "folded": false,
+    "law_active": false,
+    "float_present": true,
+    "marfa_on_right_bank": false,
+    "victory": false
+  },
+  "actors": [
+    {
+      "id": "felix",
+      "role": "Player-controlled trickster and Atlas bearer",
+      "ability_in_L01": "Stage the screen; present; seal the recorded view."
+    },
+    {
+      "id": "plum",
+      "role": "Moth assistant",
+      "ability_in_L01": "Naturally flies; physically removes the float after the law, without becoming its cause."
+    },
+    {
+      "id": "marfa",
+      "role": "Bakery owner, honest observer and beneficiary",
+      "ability_in_L01": "Reports visible facts, keeps knowledge across attempts, crosses with basket after magic."
+    }
+  ],
+  "props": [
+    {
+      "id": "stone",
+      "material": "stone",
+      "movable_by_player_in_L01": false,
+      "initial_support": "orange_float",
+      "after_law_support": "magic_water_with_load"
+    },
+    {
+      "id": "float",
+      "material": "buoyant_canvas_cork",
+      "movable_by_player_in_L01": false,
+      "supports": "stone_only_before_law",
+      "removed_by": "plum_after_law"
+    },
+    {
+      "id": "screen",
+      "material": "cloth_wood",
+      "movable_by_player_in_L01": true,
+      "placements": [
+        "side",
+        "front"
+      ],
+      "forms": [
+        "tall",
+        "folded"
+      ]
+    },
+    {
+      "id": "atlas",
+      "role": "Records valid external view and seals regional law only on explicit command"
+    },
+    {
+      "id": "bakery_door",
+      "initial_visual": "closed",
+      "goal_in_current_mockup": "Marfa reaches this door; opening not yet depicted"
+    },
+    {
+      "id": "stone_anchor",
+      "role": "L02 consequence of same active law"
+    },
+    {
+      "id": "rope_wooden_bollard",
+      "role": "Unchanged materials suggest a different mooring solution in L02"
+    }
+  ],
+  "states": [
+    {
+      "id": "menu",
+      "frame": 1,
+      "title": "Главное меню",
+      "objective": "Начать первое приключение",
+      "primary": {
+        "action": "start",
+        "label": "Начать историю",
+        "next": "intro"
+      },
+      "copy": {
+        "tagline": "Сначала — маленький фокус. Потом — совсем другой мир."
+      }
+    },
+    {
+      "id": "intro",
+      "frame": 2,
+      "title": "Первый переход",
+      "objective": "Помогите Марфе перейти канал",
+      "primary": {
+        "action": "help-marfa",
+        "label": "Помочь Марфе",
+        "next": "setup"
+      },
+      "copy": {
+        "marfa": "Мост сломан. А ключ от пекарни — у меня.",
+        "felix": "Покажем невозможное — Атлас сделает его настоящим."
+      }
+    },
+    {
+      "id": "setup",
+      "frame": 3,
+      "title": "Ваша постановка",
+      "objective": "Помогите Марфе перейти канал",
+      "primary": {
+        "action": "perform",
+        "label": "Показать фокус",
+        "next_on_valid_view": "proof",
+        "next_on_invalid_view": "setup"
+      },
+      "available_actions": [
+        "select-screen",
+        "place",
+        "place-side",
+        "place-front",
+        "fold",
+        "view",
+        "hint",
+        "undo",
+        "pause"
+      ],
+      "copy": {
+        "instruction": "Нажмите на ширму",
+        "float_visible": "Я вижу поплавок. Он и держит камень.",
+        "stone_hidden": "Ширма закрыла всё. Самого камня не видно."
+      }
+    },
+    {
+      "id": "proof",
+      "frame": 4,
+      "title": "Фокус получился",
+      "objective": "Зафиксируйте показанный образ",
+      "primary": {
+        "action": "make-law",
+        "label": "Сделать законом",
+        "next": "law"
+      },
+      "copy": {
+        "marfa": "Камень вижу. Что его держит — не вижу.",
+        "status": "Пока это только фокус",
+        "atlas": "Атлас запомнил невозможное"
+      },
+      "invariants": {
+        "law_active": false,
+        "float_present": true,
+        "stone_visible_to_marfa": true,
+        "float_visible_to_marfa": false
+      }
+    },
+    {
+      "id": "law",
+      "frame": 5,
+      "title": "Новый закон",
+      "objective": "Каменные вещи не тонут",
+      "primary": {
+        "action": "cross",
+        "label": "Переправить Марфу",
+        "next": "crossing"
+      },
+      "copy": {
+        "load_support": "Вода держит камень вместе с грузом",
+        "plum": "Поплавок убрал. Камень держится!"
+      },
+      "ordered_events": [
+        "stamp_touches_atlas",
+        "page_symbol_activates",
+        "visible_wave_reaches_water_and_stone",
+        "law_becomes_active",
+        "plum_removes_float",
+        "stone_remains_at_surface",
+        "cross_action_available"
+      ],
+      "invariants": {
+        "law_active": true,
+        "float_under_stone": false,
+        "marfa_on_right_bank": false,
+        "victory": false
+      }
+    },
+    {
+      "id": "crossing",
+      "frame": 6,
+      "title": "Настоящее чудо",
+      "objective": "Марфа идёт к пекарне",
+      "primary": null,
+      "automatic_next": "success",
+      "completion_guard": "marfa_reaches_right_landing",
+      "copy": {
+        "marfa": "И меня держит. И целую корзину!"
+      },
+      "review_note": "Storyboard controls may hold this frame for inspection. The intended game needs no extra mandatory arrival button."
+    },
+    {
+      "id": "success",
+      "frame": 7,
+      "title": "Марфа у пекарни!",
+      "objective": "Переправа завершена",
+      "primary": {
+        "action": "next-chapter",
+        "label": "К якорю",
+        "next": "next"
+      },
+      "secondary": {
+        "action": "replay",
+        "label": "Вернуться к первому фокусу",
+        "next": "setup",
+        "resets_to_initial_fixture": true
+      },
+      "copy": {
+        "body": "Марфа добралась до своей двери. Теперь можно открывать.",
+        "record": "В Атласе: каменные вещи не тонут"
+      },
+      "invariants": {
+        "marfa_on_right_bank": true,
+        "victory": true,
+        "door_open_animation_claimed": false
+      }
+    },
+    {
+      "id": "next",
+      "frame": 8,
+      "title": "Всплыл даже якорь.",
+      "eyebrow": "СЛЕДУЮЩИЙ ФОКУС",
+      "objective": "Как удержать лодку у причала?",
+      "primary": {
+        "action": "next-detail",
+        "label": "Осмотреть причал",
+        "overlay": "next-detail"
+      },
+      "copy": {
+        "body": "Камень больше не тонет. Теперь лодку уносит течением.",
+        "clue": "Рядом верёвка и деревянный кнехт."
+      },
+      "invariants": {
+        "same_district_as_L01": true,
+        "same_law_active": true,
+        "new_campaign_chapter_claimed": false
+      },
+      "scope_end": "L02 is introduced, not represented as a completed playable second level."
+    }
+  ],
+  "view_truth_table": [
+    {
+      "placement": "side",
+      "folded": false,
+      "stone_visible": true,
+      "float_visible": true,
+      "valid_trick": false,
+      "error": "float_visible"
+    },
+    {
+      "placement": "side",
+      "folded": true,
+      "stone_visible": true,
+      "float_visible": true,
+      "valid_trick": false,
+      "error": "float_visible"
+    },
+    {
+      "placement": "front",
+      "folded": false,
+      "stone_visible": false,
+      "float_visible": false,
+      "valid_trick": false,
+      "error": "stone_hidden"
+    },
+    {
+      "placement": "front",
+      "folded": true,
+      "stone_visible": true,
+      "float_visible": false,
+      "valid_trick": true,
+      "error": null
+    }
+  ],
+  "invalid_attempts": {
+    "stay_in": "setup",
+    "preserve": [
+      "placement",
+      "folded",
+      "observer_memory"
+    ],
+    "change": [
+      "specific_error_feedback"
+    ],
+    "cost": "no life, currency or forced restart"
+  },
+  "overlays": [
+    {
+      "id": "view",
+      "enter_action": "view",
+      "preserve_scene_state": true,
+      "content": "Current Marfa-perspective visibility; no automatic prop placement."
+    },
+    {
+      "id": "pause",
+      "enter_action": "pause",
+      "preserve_scene_state": true,
+      "actions": [
+        "resume",
+        "reduce-motion",
+        "return-to-menu"
+      ]
+    },
+    {
+      "id": "settings",
+      "enter_action": "settings",
+      "preserve_scene_state": true,
+      "content": "Presentation preferences supported by this mockup."
+    },
+    {
+      "id": "hint",
+      "enter_action": "hint",
+      "preserve_scene_state": true,
+      "content": "One contextual question about seeing stone while hiding support; no instant solve."
+    },
+    {
+      "id": "next-detail",
+      "enter_action": "next-detail",
+      "preserve_scene_state": true,
+      "content": "L02 premise and unchanged rope/wood; explicit end of this first-level design preview."
+    }
+  ],
+  "recovery_contract": {
+    "undo": "Revert the last screen modification; clearly unavailable if there is none. If implementation provides a reset instead, label it Сбросить постановку and disclose the starting fixture.",
+    "proof_invalidated_by_stage_edit": true,
+    "retry_requires_observer_amnesia": false,
+    "pause_changes_rules": false,
+    "reduced_motion_changes_rules": false
+  },
+  "review_navigation": {
+    "outside_game_frame": true,
+    "may_show_any_design_frame": true,
+    "meaning": "A review convenience, not an in-game bypass or proof of a valid player route."
+  },
+  "verification_status": {
+    "design_truth_table_enumerated": true,
+    "human_comprehension_playtest": false,
+    "physics_engine_implementation_verified": false,
+    "mobile_device_performance_measured": false
+  },
+  "acceptance_checks": [
+    "Every truth-table placement matches the actual Marfa-view drawing.",
+    "Guides do not visually replace the removed float as vertical support.",
+    "Law effect and load support are observable before asking Marfa to cross.",
+    "Victory follows arrival, not valid trick or sealing alone.",
+    "Closed bakery art is not presented as an already opened door.",
+    "L02 consequence uses same district/law and does not falsely start chapter two.",
+    "False attempts can be corrected without losing scene state or inventing memory reset.",
+    "Dialogs, objective, controls and visual state agree on every exported frame."
+  ]
+}

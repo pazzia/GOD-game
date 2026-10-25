@@ -1,0 +1,485 @@
+{
+  "checked_at": "2026-10-25T19:20:49.532508+00:00",
+  "url": "http://127.0.0.1:8765/mocks/index.html",
+  "results": [
+    {
+      "name": "boot_menu",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "start_intro",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "intro_setup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong_side_recoverable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tall_screen_hides_stone",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fold_keeps_front_position",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "eye_preview_open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "eye_preview_preserves_setup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "valid_trick_proof",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual_law_transition",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "crossing_not_premature_victory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "automatic_arrival_success",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "next_consequence_visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "next_detail_open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "restart_menu",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "undo_control_present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "undo_restores_previous_fold_state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause_open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause_resume_keeps_placement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "menu_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_1560_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_1560_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_1560_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_1560_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech",
+          "text": "МАРФА\n«Камень вижу.\nЧто его держит — не вижу».",
+          "scroll": [
+            570,
+            178
+          ],
+          "client": [
+            570,
+            155
+          ]
+        }
+      ]
+    },
+    {
+      "name": "law_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_1560_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech small",
+          "text": "ПЛЮМ\n«Поплавок убрал.\nКамень держится!»",
+          "scroll": [
+            410,
+            161
+          ],
+          "client": [
+            410,
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crossing_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_1560_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech",
+          "text": "МАРФА\n«И меня держит.\nИ целую корзину!»",
+          "scroll": [
+            485,
+            178
+          ],
+          "client": [
+            485,
+            155
+          ]
+        }
+      ]
+    },
+    {
+      "name": "success_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_1560_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_1560_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_844_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_844_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_844_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_844_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech",
+          "text": "МАРФА\n«Камень вижу.\nЧто его держит — не вижу».",
+          "scroll": [
+            570,
+            178
+          ],
+          "client": [
+            570,
+            155
+          ]
+        }
+      ]
+    },
+    {
+      "name": "law_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_844_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech small",
+          "text": "ПЛЮМ\n«Поплавок убрал.\nКамень держится!»",
+          "scroll": [
+            410,
+            161
+          ],
+          "client": [
+            410,
+            138
+          ]
+        }
+      ]
+    },
+    {
+      "name": "crossing_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_844_text_boxes",
+      "passed": false,
+      "detail": [
+        {
+          "class": "speech",
+          "text": "МАРФА\n«И меня держит.\nИ целую корзину!»",
+          "scroll": [
+            485,
+            178
+          ],
+          "client": [
+            485,
+            155
+          ]
+        }
+      ]
+    },
+    {
+      "name": "success_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_844_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_844_text_boxes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no_browser_errors",
+      "passed": false,
+      "detail": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    },
+    {
+      "name": "no_failed_requests",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "browser_errors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "resource_errors": [],
+  "captures": [
+    {
+      "screen": "menu",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "menu-1560.png"
+    },
+    {
+      "screen": "intro",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "intro-1560.png"
+    },
+    {
+      "screen": "setup",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "setup-1560.png"
+    },
+    {
+      "screen": "proof",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "proof-1560.png"
+    },
+    {
+      "screen": "law",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "law-1560.png"
+    },
+    {
+      "screen": "crossing",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "crossing-1560.png"
+    },
+    {
+      "screen": "success",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "success-1560.png"
+    },
+    {
+      "screen": "next",
+      "viewport": [
+        1560,
+        720
+      ],
+      "image": "next-1560.png"
+    },
+    {
+      "screen": "menu",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "menu-844.png"
+    },
+    {
+      "screen": "intro",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "intro-844.png"
+    },
+    {
+      "screen": "setup",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "setup-844.png"
+    },
+    {
+      "screen": "proof",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "proof-844.png"
+    },
+    {
+      "screen": "law",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "law-844.png"
+    },
+    {
+      "screen": "crossing",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "crossing-844.png"
+    },
+    {
+      "screen": "success",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "success-844.png"
+    },
+    {
+      "screen": "next",
+      "viewport": [
+        844,
+        390
+      ],
+      "image": "next-844.png"
+    }
+  ]
+}

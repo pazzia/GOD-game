@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "package": "reboot-01",
+  "status": "design_concept_for_user_review",
+  "asset": "cast-board.png",
+  "original_generated_path": "/workspace/generated_images/exec-22e1ca9d-94eb-43db-b06f-9d62448372e8.png",
+  "tool": "image_gen.imagegen",
+  "generated_on": "2026-10-25",
+  "prompt": "Original premium 2D game character concept sheet for an original contemporary magical comedy called The Sunny Theater of the Impossible. Sculpted painted light and crisp controlled shapes, warm contemporary cartoon, beautifully art-directed, lively original faces, refined color design, subtle dimensional shading without toy-plastic gloss. Wide landscape cream studio background. Three separate large full-body figures with generous breathing room and complete unclipped bodies; no text, no headings, no labels, no UI, no logos, no pixel art, no medieval fantasy. FELIX on the left: warm young-adult trickster age 25–30, springy dark curly hair with one cream forelock, expressive eyebrows and large warm eyes, coral cropped performer jacket, asymmetrical indigo capelet over ONE shoulder, cream shirt with two large brass buttons, indigo tapered trousers, cream ankle boots, round brass miracle stamp in an indigo belt pouch. Slender elastic silhouette, confident showman hiding gentle nerves, open welcoming anatomically clear five-finger hands. No top hat and no wand. PLUM hovering toward upper right in the open space between the two people: small honey-cream fluffy moth helper, two pairs of rounded translucent cream wings, indigo eyes, tiny turquoise satchel, delighted curious pose, natural moth flight. MARFA on the right: sturdy middle-aged bakery owner who works by a canal, warm brown skin, silver-blue short curls, teal rolled-sleeve work overalls with a short cream apron, cream undershirt, ochre waist scarf, broad sculptural silhouette. She holds one small woven breadbasket covered by a cream cloth, amused skeptical raised eyebrow, kind intelligent expression. One exact shape, material and light language across all three characters. Palette: deep ink #252647, coral #F16C65, cream #FFF2D8, turquoise #40B8B3, lemon #F7D760. Broad soft shadows, restrained clean texture, matte fabric and subtle skin shading. Height ratio Felix 1.0, Marfa 0.92, Plum 0.24. Felix and Marfa stand on the same implied baseline. Prioritize readable silhouettes, expressive faces and full-body character designs with theatrical personality. Cast lineup fills most of the canvas. The companion moth stays small in correct scale but all its features are legible. Produce one polished original character sheet for design review, with no extra head studies, no props outside the characters, no scenery, no old-game assets. Background solid warm pale cream, no vignette, no borders.",
+  "referenced_images": [],
+  "transparent_background": false,
+  "output": {
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "sha256": "79faccf60cf60fee22f57a6db391050e791560fc69f0174c706bade8ae4a2e52"
+  },
+  "source_identity": "New original generated character concept; no runtime artwork or existing external character references reused.",
+  "adaptation": "Marfa uses apron and a covered breadbasket to match the reboot gameplay brief: bakery owner crossing the canal.",
+  "inspection": {
+    "reviewer": "scene_art",
+    "observed": [
+      "Three complete, separate, visually coherent original character designs.",
+      "Felix coral jacket, one-shoulder indigo capelet, cream forelock and cream ankle boots are visible.",
+      "Plum has four cream wings and a turquoise satchel.",
+      "Marfa has teal overalls, a cream apron and covered breadbasket.",
+      "Expressive faces, clean silhouette and soft painted dimensional shading."
+    ],
+    "remaining": [
+      "Creative director review pending.",
+      "User art-direction approval pending.",
+      "This is a concept board, not production rigged art, animation, a model turnaround or an in-game screenshot.",
+      "Exact small-screen scale and touch-target readability must be evaluated in the planned screen mockups."
+    ]
+  },
+  "license_and_rights_note": "Generated in this session from an original textual brief. No third-party artwork was used as a reference. This provenance record is not a legal clearance or a claim of copyright exclusivity.",
+  "runtime_changes": false
+}

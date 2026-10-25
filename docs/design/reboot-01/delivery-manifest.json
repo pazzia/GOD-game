@@ -1,0 +1,292 @@
+{
+  "created_at": "2026-10-25T19:33:52.839970+00:00",
+  "status": "awaiting_owner_design_approval",
+  "branch": "design/reboot-01",
+  "mockup_states": 8,
+  "png_exports": 20,
+  "pdf_pages": 10,
+  "new_character_concepts": 3,
+  "prototype_archive_crc_verified": true,
+  "prototype_archive_current_sources_verified": true,
+  "png_and_source_hashes_verified": true,
+  "production_runtime_unchanged": true,
+  "production_runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "deployment_performed": false,
+  "files": [
+    {
+      "file": "Almost-God-Reboot-01-Prototype.zip",
+      "size_bytes": 11823569,
+      "sha256": "b612d2d1334cbd6acb329ab197686a5eda8fd55ce0659b7bf23549640504aee5"
+    },
+    {
+      "file": "Almost-God-Reboot-01.pdf",
+      "size_bytes": 19932702,
+      "sha256": "6d33bfe4fca69da55267f244b6a1fc9dfb179a1b650e406986195858fe13ca17"
+    },
+    {
+      "file": "README.md",
+      "size_bytes": 4321,
+      "sha256": "1d61a503c958ef69ce0804f5d36e3d19991323054cbb3642985839599557a6b1"
+    },
+    {
+      "file": "approval.html",
+      "size_bytes": 8705,
+      "sha256": "775da5b77c5257320d6e3517dd9a57dd91503a8415e579d724453eadca029e5d"
+    },
+    {
+      "file": "art-direction.md",
+      "size_bytes": 31830,
+      "sha256": "bb321488f267ba3f6abe23b28c859167676f86bda095108aeaa40fc0fef55f73"
+    },
+    {
+      "file": "assets/characters/cast-board.png",
+      "size_bytes": 1659809,
+      "sha256": "79faccf60cf60fee22f57a6db391050e791560fc69f0174c706bade8ae4a2e52"
+    },
+    {
+      "file": "assets/characters/cast-board.provenance.json",
+      "size_bytes": 4350,
+      "sha256": "967876e55429aed3b82be29253769db29248e448636fe70e230f08187e1561ce"
+    },
+    {
+      "file": "assets/characters/felix-cutout.png",
+      "size_bytes": 1733043,
+      "sha256": "38ef1e3c3698817470ac4a343726137e218389f420ce6cfed6cb7c220b154db0"
+    },
+    {
+      "file": "assets/characters/marfa-cutout.png",
+      "size_bytes": 1880672,
+      "sha256": "67e3bff182831fd7f89ef396d5fe4c9055f1f90fc26589144abadc56c97e6802"
+    },
+    {
+      "file": "assets/characters/plum-cutout.png",
+      "size_bytes": 1875708,
+      "sha256": "c2d03b8967b3449c85af996d216e3c43accad5580c4eb7e8036cb12c3361506d"
+    },
+    {
+      "file": "assets/generation-manifest.json",
+      "size_bytes": 2087,
+      "sha256": "5aa2072d3de02a9c5e415cfc86d5dacd2298ef2683eafb4302f5bdf9fc367423"
+    },
+    {
+      "file": "assets/props/prop-sheet.png",
+      "size_bytes": 2263840,
+      "sha256": "95deafa75ef5b42737912b6f9b11fd2c1801e361088a3f86f5695234f302ff35"
+    },
+    {
+      "file": "assets/props/prop-sheet.provenance.json",
+      "size_bytes": 4451,
+      "sha256": "2c70c8f4b39f5ca02487e2ac3f8908c96fe66fe18acfdb946adb691b3fd70425"
+    },
+    {
+      "file": "assets/scene/canal.png",
+      "size_bytes": 2464626,
+      "sha256": "897fbcab41c1dacc0eb99afb995bc4687a65c53cbe5d716738a56c55ff3a8029"
+    },
+    {
+      "file": "assets/scene/prompt.txt",
+      "size_bytes": 2398,
+      "sha256": "e13c29388394e86af540a24a3bcc5ce239ad7930418da5d969e8138373a4c14f"
+    },
+    {
+      "file": "flow.json",
+      "size_bytes": 13005,
+      "sha256": "8b3eb2d2c4c6aae72147073322a86af6502c219fd559a5148d7fc1ffb93a1383"
+    },
+    {
+      "file": "gameplay-story.md",
+      "size_bytes": 18914,
+      "sha256": "530b3478372d338c5be3b42e69f0f902d7dd47d1022ebca32e1b8a83158ab50e"
+    },
+    {
+      "file": "mocks/app.js",
+      "size_bytes": 25351,
+      "sha256": "165692bc856b19b8c7496a68238f205f0255528a131379daedefaba1a96d7e23"
+    },
+    {
+      "file": "mocks/assets/Onest-OFL.txt",
+      "size_bytes": 4384,
+      "sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc"
+    },
+    {
+      "file": "mocks/assets/Onest-Variable.ttf",
+      "size_bytes": 193056,
+      "sha256": "966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31"
+    },
+    {
+      "file": "mocks/assets/Onest-provenance.json",
+      "size_bytes": 804,
+      "sha256": "18f5a72324595fa4fff71a21c272aebe5ff3610838be4ce3a9a46a1bb6beb88c"
+    },
+    {
+      "file": "mocks/export.py",
+      "size_bytes": 1994,
+      "sha256": "5ee8176452c107a429e6358a9390ada90aa2ef1a983096ae4015a9c40cc04e09"
+    },
+    {
+      "file": "mocks/exports/01-menu-1560x720.png",
+      "size_bytes": 1411543,
+      "sha256": "2541f48b7a8714f81b9023616d84607833ecdc6ae8dcb08969deb1d4e46d53cc"
+    },
+    {
+      "file": "mocks/exports/01-menu-844x390.png",
+      "size_bytes": 464649,
+      "sha256": "b7792ab90ec4b061c5bcb7ccf3536821b29713fec613a3fbe9da58d7219983b7"
+    },
+    {
+      "file": "mocks/exports/02-intro-1560x720.png",
+      "size_bytes": 1391349,
+      "sha256": "7fa62236b408b4a705ca34d282c61efa89fdac355e392b9ad6fd96584626effb"
+    },
+    {
+      "file": "mocks/exports/02-intro-844x390.png",
+      "size_bytes": 462748,
+      "sha256": "50049cf4d607c1cbd8c59ace62c8d3bb2001176ed5e8a05a3a4621393d66a7f1"
+    },
+    {
+      "file": "mocks/exports/03-setup-1560x720.png",
+      "size_bytes": 1639198,
+      "sha256": "9026e0667349bb92e69797dc8e105f7857fe85d11e880be0163d8c14f01de2aa"
+    },
+    {
+      "file": "mocks/exports/03-setup-844x390.png",
+      "size_bytes": 533441,
+      "sha256": "4e87e228352193d4cfd8d1e742a817df2b0647746870a7613c3bd43f977e1ca8"
+    },
+    {
+      "file": "mocks/exports/04-proof-1560x720.png",
+      "size_bytes": 1519544,
+      "sha256": "29e525fa16a67665c25a3ecae209363bca4a0d2943faee1a7911708e4d19f77d"
+    },
+    {
+      "file": "mocks/exports/04-proof-844x390.png",
+      "size_bytes": 497072,
+      "sha256": "e9f9d86512c56ba93f004d7c6cc79ad19eade957d96e84146c1d52221faea9aa"
+    },
+    {
+      "file": "mocks/exports/05-law-1560x720.png",
+      "size_bytes": 1510642,
+      "sha256": "5cf5a503eda093bfbd59428b9b970236b48a90fa65154605a87e0bc1defe6fc2"
+    },
+    {
+      "file": "mocks/exports/05-law-844x390.png",
+      "size_bytes": 497316,
+      "sha256": "b64d28886b9e215992666c6b265342f97f7dce61b677faa3646ad041e9457c90"
+    },
+    {
+      "file": "mocks/exports/06-crossing-1560x720.png",
+      "size_bytes": 1561288,
+      "sha256": "62b11f9884ce0f8a04284dab9fe8564c17f9bab03b77172edad4ddbb53269f80"
+    },
+    {
+      "file": "mocks/exports/06-crossing-844x390.png",
+      "size_bytes": 509474,
+      "sha256": "a9ba7b6d1f35be6c8c69622d52ec0fc9a16502eabe73822cf2fb95447d7d1555"
+    },
+    {
+      "file": "mocks/exports/07-success-1560x720.png",
+      "size_bytes": 1453073,
+      "sha256": "ce2bd165a31545d3ec04e990858dd9d8753b14e7334ac82ff0de17c9fcd45615"
+    },
+    {
+      "file": "mocks/exports/07-success-844x390.png",
+      "size_bytes": 477377,
+      "sha256": "9a5c9d34db5ecd88a32c827a82ca98d7f4a9ae1700854baec23670d3e74e6715"
+    },
+    {
+      "file": "mocks/exports/08-next-1560x720.png",
+      "size_bytes": 1364388,
+      "sha256": "2794efc7472a8c3008ee93483d8e99188c385e833983d8eb15890a50ccfc9ecf"
+    },
+    {
+      "file": "mocks/exports/08-next-844x390.png",
+      "size_bytes": 454196,
+      "sha256": "9c5db17b910b4d46a094e95b9648e030e6a15d84dfd796d7aeeed917fdc6cb57"
+    },
+    {
+      "file": "mocks/exports/eye-correct-1560x720.png",
+      "size_bytes": 371361,
+      "sha256": "64ded0aa8024b9d9257c8685f40bd7d78d9c5b2549bd6acdc860884c20b3a939"
+    },
+    {
+      "file": "mocks/exports/eye-correct-844x390.png",
+      "size_bytes": 155478,
+      "sha256": "5e0e72c70438f9da951903b207f133ca3d74e2acd6d92b7565fb25a5cbc9b3f5"
+    },
+    {
+      "file": "mocks/exports/manifest.json",
+      "size_bytes": 4612,
+      "sha256": "b818c2e3f49245bea1f2c759c099ef44954e2475a9df241d3f39a0f8389f2046"
+    },
+    {
+      "file": "mocks/exports/setup-correct-1560x720.png",
+      "size_bytes": 1635000,
+      "sha256": "263eb653aea4b3ea4285ac1e78e35a9ec6e8a2e98c7d058c35a88d7fb479f2be"
+    },
+    {
+      "file": "mocks/exports/setup-correct-844x390.png",
+      "size_bytes": 532147,
+      "sha256": "433d43b539178a071804cb805887084b253754a19b4efa482417dc09601c2b0a"
+    },
+    {
+      "file": "mocks/index.html",
+      "size_bytes": 2129,
+      "sha256": "afe956a4074ced35ed2b0574b77982fc4854df915a36a2ae27d262fb8989e112"
+    },
+    {
+      "file": "mocks/style.css",
+      "size_bytes": 19017,
+      "sha256": "4b78b7814031889ea9b3c032b74cbe95a361c42ceaaa2535ddf142ea4ab77cf6"
+    },
+    {
+      "file": "qa-evidence/browser-results.json",
+      "size_bytes": 9000,
+      "sha256": "f86ed2c5755e2942ae68cc031661cb31db104ef7eb47440688d65c088f7cdbd3"
+    },
+    {
+      "file": "qa-evidence/recheck_visual.py",
+      "size_bytes": 4090,
+      "sha256": "701eb1357fa4fa5b737889cb0611f2304f33568bdabbd753c07ceec09b570654"
+    },
+    {
+      "file": "qa-evidence/review_browser.py",
+      "size_bytes": 5631,
+      "sha256": "bd8da05dd5d0480dca73fc6fb821943daefffe0011addfe3b0c95b2104218883"
+    },
+    {
+      "file": "qa-evidence/stone-gap-final.png",
+      "size_bytes": 432429,
+      "sha256": "b00b537dccce4edeba7a6b6a9dd7de51e606511dd4b6eb97a8320f3481ad4f6d"
+    },
+    {
+      "file": "qa-evidence/success-844.png",
+      "size_bytes": 477377,
+      "sha256": "9a5c9d34db5ecd88a32c827a82ca98d7f4a9ae1700854baec23670d3e74e6715"
+    },
+    {
+      "file": "qa-evidence/timer-settings-checks.json",
+      "size_bytes": 488,
+      "sha256": "732d3756dcb3600757115be6fa2ca8fa4025a36c6f7d3d902cd5718fe28c766a"
+    },
+    {
+      "file": "qa-evidence/visual-recheck.json",
+      "size_bytes": 4405,
+      "sha256": "212d788cddd9c5e19ad75579bfde940978903209044e9fea51c0501d071a376e"
+    },
+    {
+      "file": "review.json",
+      "size_bytes": 17250,
+      "sha256": "240efe7d940f70105d5a2f129e791810795732b2c2afc762bb36ff0699fb6dc5"
+    },
+    {
+      "file": "review.md",
+      "size_bytes": 8251,
+      "sha256": "58fe2c5a578878b58d706724321338716ae815bfba4fa12cdf19f6c1c64d6809"
+    },
+    {
+      "file": "ui-spec.md",
+      "size_bytes": 12462,
+      "sha256": "3d5e4b9fb5a86ccc8f9f8d66942f41f16ef4d55303f7a225b64569cc9727dae9"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-25",
+  "tool": "image_gen.imagegen",
+  "status": "generated_concept_for_review",
+  "original_file": "/workspace/generated_images/exec-5a1dbd2b-b408-4fef-abcc-dd9ebc066e16.png",
+  "destination": "docs/design/reboot-01/assets/props/prop-sheet.png",
+  "transparent_background": true,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "prompt": "Create an original premium contemporary 2D painted puzzle-game PROP SPRITE ATLAS. Output 1536 by 1024 pixels, exactly THREE equal columns and TWO equal rows, six 512x512 cells, TRANSPARENT background. No gridlines, no labels, no words, no letters, no UI, no characters. Each object is centered in its own cell, at least 60px clear transparent margin from every cell boundary. Objects do not overlap cells. Same fixed elevated three-quarter orthographic-feeling view and warm sunlight from upper left for all objects. Beautiful sculpted painted light, crisp controlled shapes, warm indigo shadows, refined painterly texture, soft contact shadows. Cohesive world palette deep indigo #252647, coral #F16C65, warm cream #FFF2D8, turquoise #40B8B3, brass #BD8743. This is sophisticated animation concept art for a modern premium game, not pixel art, not photoreal 3D, not glossy toy plastic.\n\nTOP LEFT CELL: a broad low flat warm-gray stone stepping platform, oval/irregular softened rectangle, thick enough to stand on, very broad clear top surface with 2 tiny brass attachment rings at opposite left/right edges for guide cables. No cables, no support, no water, no people. Stone alone, centered.\nTOP MIDDLE CELL: a separate horizontal orange cork-and-canvas flotation cushion/cylinder with rounded ends, cream canvas bands and a small simple valve; broad enough to hold the stone but visually lightweight, no stone on it, centered. Friendly readable orange silhouette.\nTOP RIGHT CELL: a tall TWO-TIER folding theatre screen, TWO hinged side-by-side wooden frames with lower and upper fabric sections, indigo cloth, coral hinges and trim, light warm wooden structural frame, small stable feet. Upper panels clearly unfold upward so this is tall. Slight three-quarter perspective, centered. Height about390px, width280px. No decorative symbols or letters.\nBOTTOM LEFT CELL: the EXACT SAME two-tier theatre screen with the SAME width, construction, indigo cloth, coral hinges, light wood and feet, but its upper panels are genuinely FOLDED DOWN onto the lower panels, visibly half the height. Show hinge relation and doubled panel edge clearly, not just a shrunken tall screen. Width280px, height200px, centered in cell with ample transparent margins. The two states must be recognizably the same physical object.\nBOTTOM MIDDLE CELL: a magical open Atlas: indigo-bound book, generous cream pages, simple subtle turquoise circular-wave glow without letters/runes, on a low sculptural brass bookstand. The open pages and cover are clearly separated and readable. A compact single complete object, centered.\nBOTTOM RIGHT CELL: a round brass miracle hand stamp with a short indigo handle, sculpted circular-wave seal face visible at three-quarter angle, tiny coral grip accent. A single complete object, centered.\n\nNo environmental backdrop whatsoever: alpha transparency around each separate asset and between all six cells. Preserve practical, consistent object scale and orientation. Source-resolution sharp silhouettes suitable for scaling into a landscape mobile game.",
+  "editing": "Exact generated PNG copied without image processing. Atlas rectangles are presentation crops in CSS, not modified PNGs.",
+  "notes": [
+    "The generator used the requested six-object arrangement but some objects exceed nominal512px cells. Use the measured presentation rectangles below rather than assuming strict equal-cell UVs.",
+    "Folded screen keeps width and has visibly folded top fabric. These concept states require final production geometry review."
+  ],
+  "rectangles": {
+    "stone": [
+      10,
+      170,
+      540,
+      300
+    ],
+    "float": [
+      550,
+      180,
+      550,
+      310
+    ],
+    "screen_tall": [
+      1108,
+      0,
+      428,
+      535
+    ],
+    "screen_folded": [
+      25,
+      610,
+      465,
+      355
+    ],
+    "atlas": [
+      530,
+      530,
+      570,
+      445
+    ],
+    "stamp": [
+      1110,
+      570,
+      426,
+      400
+    ]
+  },
+  "sha256": "95deafa75ef5b42737912b6f9b11fd2c1801e361088a3f86f5695234f302ff35",
+  "size_bytes": 2263840
+}

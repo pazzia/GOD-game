@@ -1,0 +1,241 @@
+{
+  "checked_at": "2026-10-25T19:28:30.174933+00:00",
+  "checks": [
+    {
+      "name": "menu_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_1560_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_1560_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "menu_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "intro_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "setup_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "proof_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "law_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "crossing_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "success_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_844_assets",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "next_844_text_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "eye_side_False",
+      "passed": true,
+      "detail": {
+        "stone": true,
+        "float": true
+      }
+    },
+    {
+      "name": "eye_side_True",
+      "passed": true,
+      "detail": {
+        "stone": true,
+        "float": true
+      }
+    },
+    {
+      "name": "eye_front_False",
+      "passed": true,
+      "detail": {
+        "stone": false,
+        "float": false
+      }
+    },
+    {
+      "name": "eye_front_True",
+      "passed": true,
+      "detail": {
+        "stone": true,
+        "float": false
+      }
+    },
+    {
+      "name": "touch_targets_844_min44",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no_console_errors_after_favicon_fix",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "no_http_errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "eye_truths": [
+    {
+      "placement": "side",
+      "folded": false,
+      "stone_visible": true,
+      "float_visible": true
+    },
+    {
+      "placement": "side",
+      "folded": true,
+      "stone_visible": true,
+      "float_visible": true
+    },
+    {
+      "placement": "front",
+      "folded": false,
+      "stone_visible": false,
+      "float_visible": false
+    },
+    {
+      "placement": "front",
+      "folded": true,
+      "stone_visible": true,
+      "float_visible": false
+    }
+  ],
+  "small_targets": [],
+  "console_errors": [],
+  "http_errors": []
+}
