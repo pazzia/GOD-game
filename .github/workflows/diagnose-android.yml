@@ -23,23 +23,26 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Download the failed run logs
-        id: download
+      - name: Read the failed Actions step and job metadata
+        id: action_logs
         shell: bash
         run: |
           mkdir -p "$RUNNER_TEMP/android-diagnostic/logs"
           set +e
-          gh run download 40204756671 \
-            --name android-build-logs-40204756671-1 \
-            --dir "$RUNNER_TEMP/android-diagnostic/logs" \
-            > "$RUNNER_TEMP/android-diagnostic/download.log" 2>&1
-          download_status=$?
+          gh run view 40204756671 --log-failed \
+            > "$RUNNER_TEMP/android-diagnostic/logs/actions-failed.log" 2>&1
+          log_status=$?
+          gh run view 40204756671 --json conclusion,jobs,status \
+            > "$RUNNER_TEMP/android-diagnostic/run-summary.json" \
+            2> "$RUNNER_TEMP/android-diagnostic/metadata-error.log"
+          metadata_status=$?
           set -e
-          printf 'status=%s\n' "$download_status" >> "$GITHUB_OUTPUT"
+          printf 'log_status=%s\nmetadata_status=%s\n' "$log_status" "$metadata_status" >> "$GITHUB_OUTPUT"
 
       - name: Save bounded diagnostics to the diagnostic Git branch
         env:
-          DOWNLOAD_STATUS: ${{ steps.download.outputs.status }}
+          ACTION_LOG_STATUS: ${{ steps.action_logs.outputs.log_status }}
+          METADATA_STATUS: ${{ steps.action_logs.outputs.metadata_status }}
         shell: bash
         run: |
           python3 - <<'PY'
@@ -78,9 +81,12 @@ jobs:
           report = {
               'failed_run_id': 40204756671,
               'failed_run_url': 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/40204756671',
-              'artifact': 'android-build-logs-40204756671-1',
-              'download_exit_code': int(os.environ['DOWNLOAD_STATUS']),
-              'download_output': redact((folder / 'download.log').read_text(errors='replace'))[-2000:],
+              'source': 'GitHub Actions failed step console log; not the nested build log artifact',
+              'actions_log_exit_code': int(os.environ['ACTION_LOG_STATUS']),
+              'metadata_exit_code': int(os.environ['METADATA_STATUS']),
+              'metadata_error_output': redact((folder / 'metadata-error.log').read_text(errors='replace'))[-2000:],
+              'run_summary': json.loads(redact((folder / 'run-summary.json').read_text())) if os.environ['METADATA_STATUS'] == '0' else None,
+              'build_report_json': {'available': False, 'reason': 'The failed run archived only *.log; its *.build.json was not uploaded and the original runner has ended.'},
               'collected_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
               'diagnostic_run_id': os.environ['GITHUB_RUN_ID'],
               'filenames': [record['file'] for record in records],
@@ -89,7 +95,7 @@ jobs:
           }
           serialized = json.dumps(report, ensure_ascii=False, indent=2) + '\n'
           while len(serialized) > 20000:
-              fields = [(report, 'download_output')] + [(row, field) for row in records for field in ('error_lines', 'tail_last_80_lines')]
+              fields = [(report, 'metadata_error_output')] + [(row, field) for row in records for field in ('error_lines', 'tail_last_80_lines')]
               owner, field = max(fields, key=lambda pair: len(pair[0][pair[1]]))
               if not owner[field]:
                   raise SystemExit('Log filename metadata alone exceeds the diagnostic size limit.')
