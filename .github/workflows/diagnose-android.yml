@@ -1,0 +1,114 @@
+name: Diagnose Android preview failure
+
+on:
+  push:
+    branches: [codex/diagnose-android-0.4]
+    paths: [.github/workflows/diagnose-android.yml]
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  collect-failure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Check out diagnostic workflow
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Download the failed run logs
+        id: download
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/android-diagnostic/logs"
+          set +e
+          gh run download 40204756671 \
+            --name android-build-logs-40204756671-1 \
+            --dir "$RUNNER_TEMP/android-diagnostic/logs" \
+            > "$RUNNER_TEMP/android-diagnostic/download.log" 2>&1
+          download_status=$?
+          set -e
+          printf 'status=%s\n' "$download_status" >> "$GITHUB_OUTPUT"
+
+      - name: Save bounded diagnostics to the diagnostic Git branch
+        env:
+          DOWNLOAD_STATUS: ${{ steps.download.outputs.status }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64
+          import datetime
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import subprocess
+
+          folder = Path(os.environ['RUNNER_TEMP']) / 'android-diagnostic'
+          token = os.environ.get('GH_TOKEN', '')
+          def redact(value):
+              if token:
+                  value = value.replace(token, '[REDACTED]')
+              value = re.sub(r'github_pat_[A-Za-z0-9_]+|gh[pousr]_[A-Za-z0-9_]+', '[REDACTED]', value)
+              value = re.sub(r'(?im)(authorization\s*:\s*)(?:bearer|basic|token)?\s*\S+', r'\1[REDACTED]', value)
+              value = re.sub(r'(?i)((?:token|password|secret|storepass|keypass)\s*[=:]\s*)[^\s,;]+', r'\1[REDACTED]', value)
+              value = re.sub(r'(?i)(--?(?:token|password|storepass|keypass)\s+)\S+', r'\1[REDACTED]', value)
+              value = re.sub(r'(https?://)[^\s/@]+:[^\s/@]+@', r'\1[REDACTED]@', value)
+              return value
+
+          paths = sorted((folder / 'logs').rglob('*.log'))
+          per_file = 18000 // max(1, len(paths))
+          records = []
+          for path in paths:
+              lines = redact(path.read_text(errors='replace')).splitlines()
+              errors = [line for line in lines if re.search(r'(?i)\b(error|failed|failure|traceback|exception|fatal)\b', line)]
+              error_excerpt = '\n'.join(errors[-15:])[-min(4000, per_file // 3):]
+              tail = '\n'.join(lines[-80:])[-max(0, per_file - len(error_excerpt)):]
+              records.append({'file': redact(path.relative_to(folder / 'logs').as_posix()),
+                              'size_bytes': path.stat().st_size, 'line_count': len(lines),
+                              'error_lines': error_excerpt, 'tail_last_80_lines': tail,
+                              'excerpt_truncated': len('\n'.join(lines[-80:])) > len(tail)})
+          report = {
+              'failed_run_id': 40204756671,
+              'failed_run_url': 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/40204756671',
+              'artifact': 'android-build-logs-40204756671-1',
+              'download_exit_code': int(os.environ['DOWNLOAD_STATUS']),
+              'download_output': redact((folder / 'download.log').read_text(errors='replace'))[-2000:],
+              'collected_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'diagnostic_run_id': os.environ['GITHUB_RUN_ID'],
+              'filenames': [record['file'] for record in records],
+              'json_character_limit': 20000,
+              'files': records,
+          }
+          serialized = json.dumps(report, ensure_ascii=False, indent=2) + '\n'
+          while len(serialized) > 20000:
+              fields = [(report, 'download_output')] + [(row, field) for row in records for field in ('error_lines', 'tail_last_80_lines')]
+              owner, field = max(fields, key=lambda pair: len(pair[0][pair[1]]))
+              if not owner[field]:
+                  raise SystemExit('Log filename metadata alone exceeds the diagnostic size limit.')
+              owner[field] = owner[field][len(serialized) - 20000 + 128:]
+              owner['excerpt_truncated'] = True
+              serialized = json.dumps(report, ensure_ascii=False, indent=2) + '\n'
+          body = serialized.encode()
+          branch = 'codex/diagnose-android-0.4'
+          endpoint = 'repos/' + os.environ['GITHUB_REPOSITORY'] + '/contents/docs/reviews/0.4.0/ci-failure.json'
+          current = subprocess.run(['gh', 'api', endpoint + '?ref=' + branch], capture_output=True, text=True)
+          payload = {'message': 'Record Android preview CI failure diagnostics',
+                     'branch': branch, 'content': base64.b64encode(body).decode()}
+          if current.returncode == 0:
+              payload['sha'] = json.loads(current.stdout)['sha']
+          elif '404' not in current.stderr:
+              raise SystemExit('Cannot read diagnostic report path; GitHub API request failed.')
+          published = subprocess.run(['gh', 'api', '--method', 'PUT', endpoint, '--input', '-'],
+                                     input=json.dumps(payload), capture_output=True, text=True)
+          if published.returncode:
+              raise SystemExit('Cannot save diagnostic report to Git: ' + redact(published.stderr)[-1000:])
+          print('Saved bounded diagnostics for', len(records), 'log files on', branch)
+          PY
