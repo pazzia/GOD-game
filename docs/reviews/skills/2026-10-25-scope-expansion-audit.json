@@ -1,0 +1,238 @@
+{
+  "checked_at": "2026-10-25T18:09:44.014767+00:00",
+  "reviewer": "skill_security_audit",
+  "verdict": "accepted_for_manual_project_local_installation",
+  "status": "scope_expansion_audit_complete_before_technical_art_installation",
+  "authorization": {
+    "quote": "Эти ограничения снимаю. Нам все это тоже надо",
+    "record": "docs/decisions/2026-10-25-commercial-and-technical-scope.md",
+    "active_scope": [
+      "monetization",
+      "economy",
+      "player_segments",
+      "retention",
+      "daily_streaks",
+      "seasonal_content",
+      "variable_rewards",
+      "offers_and_store_design",
+      "measurement",
+      "DLSS_FSR_XeSS",
+      "LOD",
+      "advanced_rendering_and_asset_pipeline"
+    ]
+  },
+  "supersedes": {
+    "selection": "The prior decision not to install Technical Artist is superseded by the new user authorization and this reviewed adapter.",
+    "scope_restrictions": "Prior wrappers/audit recommendations excluding monetization, retention or advanced graphics no longer define current scope.",
+    "historical_reports_preserved": [
+      "2026-10-25-security-audit.md",
+      "2026-10-25-security-audit.json",
+      "2026-10-25-integration-audit.md",
+      "2026-10-25-integration-audit.json"
+    ]
+  },
+  "files_reviewed": 9,
+  "unchanged_dependencies_checked": 7,
+  "malicious_findings_observed": 0,
+  "source_and_example_code_executed": false,
+  "install_performed_by_auditor": false,
+  "runtime_changes_by_auditor": false,
+  "checks": [
+    "Full static reading of modified/new entrypoints, charter, authorization record and unchanged art-direction adapter",
+    "Frontmatter names/descriptions and relative dependency resolution",
+    "Original source-audit hash equality for Technical Artist and license plus existing source copies",
+    "Expected staged file inventory, regular-file and Unicode-control checks",
+    "No instruction override, exfiltration, secret access, concealed execution or automatic dependency installation",
+    "Expanded commercial and graphics scope remains active; forecasts, technology support and benchmarks require actual evidence"
+  ],
+  "notes": [
+    "Technical Artist source remains the exact previously audited commit; former compatibility rejection was not a malicious-instruction finding.",
+    "New wrapper retains DLSS/FSR/XeSS, LOD and advanced techniques as active work and distinguishes support variants, implementation states and measured results.",
+    "Design roles now cover commercial/retention systems without renewed permission; text setup does not pretend SDKs/payments or graphics features are implemented.",
+    "Required source licenses are retained. No upstream installer, plugin, hook or unrelated role is included."
+  ],
+  "limitations": [
+    "Static review is not an absolute safety guarantee.",
+    "Verdict covers listed exact byte hashes; later edits or added dependencies require review.",
+    "Existing upstream source files and libraries beyond the stated audited paths are not covered."
+  ],
+  "files": [
+    {
+      "reviewed_path": "/workspace/GOD-game/.agents/skills/game-design-systems/SKILL.md",
+      "installed_path": ".agents/skills/game-design-systems/SKILL.md",
+      "sha256": "2a4b1f7e6475dd33010f4637d8557c3b89c31f915e32ca476c8b84e776a2b2b6",
+      "size_bytes": 7664,
+      "line_count": 43,
+      "kind": "modified_local_entrypoint",
+      "hidden_format_controls": [],
+      "name": "game-design-systems",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/.agents/skills/game-level-design/SKILL.md",
+      "installed_path": ".agents/skills/game-level-design/SKILL.md",
+      "sha256": "d5a4d1a060ad1416e728ca98c0caa0594b79d60458915ab92eb1939577142633",
+      "size_bytes": 5825,
+      "line_count": 38,
+      "kind": "modified_local_entrypoint",
+      "hidden_format_controls": [],
+      "name": "game-level-design",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/.agents/skills/team-game-designer/SKILL.md",
+      "installed_path": ".agents/skills/team-game-designer/SKILL.md",
+      "sha256": "f7431d3ef29c02c60258b4677a1f1865e86a66c53de17e2ba367e39c073bb6ed",
+      "size_bytes": 5382,
+      "line_count": 39,
+      "kind": "modified_local_entrypoint",
+      "hidden_format_controls": [],
+      "name": "team-game-designer",
+      "description_present": true,
+      "relative_links": [
+        "../game-design-systems/SKILL.md",
+        "../game-level-design/SKILL.md"
+      ],
+      "relative_links_resolve": true
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/.agents/skills/team-creative-director/SKILL.md",
+      "installed_path": ".agents/skills/team-creative-director/SKILL.md",
+      "sha256": "3650a9df8e6f3957ea03581abdb8fca092ef60afc90c431d02b86e2e7be3abf3",
+      "size_bytes": 10350,
+      "line_count": 151,
+      "kind": "modified_local_entrypoint",
+      "hidden_format_controls": [],
+      "name": "team-creative-director",
+      "description_present": true,
+      "relative_links": [],
+      "relative_links_resolve": true
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/docs/team/creative-direction-charter.md",
+      "installed_path": "docs/team/creative-direction-charter.md",
+      "sha256": "a50c4915a5f466d1722bfe4d2c3b7bc97f9decff8e34d1a921d39799d3243391",
+      "size_bytes": 21215,
+      "line_count": 175,
+      "kind": "modified_local_role_dependency",
+      "hidden_format_controls": []
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/technical-art-install-ready/SKILL.md",
+      "installed_path": ".agents/skills/game-technical-art/SKILL.md",
+      "sha256": "ad020ebdec877e9594916852b764a8fd4be014ae875c6db54c5812c12c637917",
+      "size_bytes": 8160,
+      "line_count": 120,
+      "kind": "new_staged_entrypoint",
+      "hidden_format_controls": [],
+      "name": "game-technical-art",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/technical-art-install-ready/references/upstream.md",
+      "installed_path": ".agents/skills/game-technical-art/references/upstream.md",
+      "sha256": "9b7e75b629b7b1c87a0bc37e6abaec91e0ad7ae02e8a091c5a876e2bea817742",
+      "size_bytes": 11390,
+      "line_count": 233,
+      "kind": "new_staged_upstream_reference",
+      "hidden_format_controls": [],
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/technical-artist.md",
+      "matches_original_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/technical-art-install-ready/LICENSE",
+      "installed_path": ".agents/skills/game-technical-art/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "line_count": 21,
+      "kind": "new_staged_license",
+      "hidden_format_controls": [],
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "matches_original_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/docs/decisions/2026-10-25-commercial-and-technical-scope.md",
+      "installed_path": "docs/decisions/2026-10-25-commercial-and-technical-scope.md",
+      "sha256": "280fec706bbbe7006e833e4d032910f290c770ebf5071bdfe23691b0bc0ea2c0",
+      "size_bytes": 4034,
+      "line_count": 39,
+      "kind": "user_authorization_record",
+      "hidden_format_controls": []
+    }
+  ],
+  "unchanged_dependencies": [
+    {
+      "path": ".agents/skills/game-design-systems/references/upstream.md",
+      "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/game-designer.md",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-design-systems/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-level-design/references/upstream.md",
+      "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/level-designer.md",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-level-design/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-art-direction/references/upstream.md",
+      "sha256": "dd819f941e09495be03dd2efd310397e7e5b359e29e269e69de0a702a561c585",
+      "source_repository": "sickn33/agentic-awesome-skills",
+      "source_commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "skills/game-development/game-art/SKILL.md",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-art-direction/LICENSE",
+      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d",
+      "source_repository": "sickn33/agentic-awesome-skills",
+      "source_commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "LICENSE",
+      "matches_original_source_audit": true
+    },
+    {
+      "path": ".agents/skills/game-art-direction/SKILL.md",
+      "sha256": "611c10f9936c9b2b33ff137ebaabac2ee9f49a6b8527b9f9838daab7632f4f6e",
+      "matches_initial_integration_audit": true,
+      "review_result": "No blanket exclusion of newly authorized features; no change required."
+    }
+  ]
+}

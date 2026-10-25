@@ -1,7 +1,7 @@
 {
-  "recorded_at": "2026-10-25T17:35:49.320212+00:00",
-  "status": "team_ready",
-  "task_scope": "Team and reviewed-skill setup; no game redesign in this assignment.",
+  "recorded_at": "2026-10-25T18:11:13.747009+00:00",
+  "status": "team_ready_with_expanded_scope",
+  "task_scope": "User-authorized monetization, economy, player segments, retention and advanced graphics are included in team skills and planning.",
   "active_roles": [
     {
       "role": "creative_director",
@@ -25,17 +25,19 @@
   "external_skills": [
     "game-design-systems",
     "game-level-design",
-    "game-art-direction"
+    "game-art-direction",
+    "game-technical-art"
   ],
   "source_repositories": [
     "msitarzewski/agency-agents",
     "sickn33/agentic-awesome-skills"
   ],
   "source_and_wrapper_review_completed_before_install": true,
-  "audit_files_hash_verified": 12,
+  "audit_files_hash_verified": 16,
   "skill_metadata_and_relative_links_verified": true,
   "upstream_installers_executed": false,
   "runtime_changed": false,
   "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
-  "first_joint_deliverable": "Core loop and causal action/state/feedback/goal matrix, including failure, undo and next objective; then coherent visual directions."
+  "first_joint_deliverable": "Core loop and causal matrix, business-model/economy/segment comparison, offers and retention/content/measurement plan, coherent visual directions and graphics support/quality comparison.",
+  "scope_decision": "../decisions/2026-10-25-commercial-and-technical-scope.md"
 }

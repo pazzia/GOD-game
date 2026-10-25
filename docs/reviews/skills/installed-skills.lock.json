@@ -1,10 +1,11 @@
 {
   "installed_at": "2026-10-25T17:32:25.956808+00:00",
-  "status": "installed_and_hash_verified",
+  "status": "scope_expanded_installed_and_hash_verified",
   "external_adaptations": [
     "game-design-systems",
     "game-level-design",
-    "game-art-direction"
+    "game-art-direction",
+    "game-technical-art"
   ],
   "new_project_roles": [
     "team-creative-director",
@@ -12,83 +13,111 @@
   ],
   "installation_method": "Manual copy of reviewed Markdown and MIT licenses. No upstream installer, hooks, executables or auto-update.",
   "source_audit": "2026-10-25-security-audit.json",
-  "integration_audit": "2026-10-25-integration-audit.json",
+  "integration_audit": "2026-10-25-scope-expansion-audit.json",
   "source_audit_sha256": "a3529be3878b165e89ccdc94ddd40a5a4286bcd5a8e7e738509615c2ec29d594",
-  "integration_audit_sha256": "46d07d2b32876c51a31a12fecb9d64237b72579a3e46c7649b9b641fa42bee91",
+  "integration_audit_sha256": "3150f49d5f6dc6e763ee1cd13b86ef563aee34db5e04ef59a0f7117ff081d60f",
   "runtime_unchanged": true,
   "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
   "files": [
     {
-      "path": ".agents/skills/game-design-systems/LICENSE",
-      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
-      "size_bytes": 1079,
-      "kind": "upstream_license"
+      "path": ".agents/skills/game-design-systems/SKILL.md",
+      "sha256": "2a4b1f7e6475dd33010f4637d8557c3b89c31f915e32ca476c8b84e776a2b2b6",
+      "size_bytes": 7664,
+      "kind": "modified_local_entrypoint"
     },
     {
-      "path": ".agents/skills/game-design-systems/SKILL.md",
-      "sha256": "a3292fb57bd8a290716318677c7d29bc3625e1e189033db9ac488b20046a9cf4",
-      "size_bytes": 4065,
-      "kind": "local_entrypoint"
+      "path": ".agents/skills/game-level-design/SKILL.md",
+      "sha256": "d5a4d1a060ad1416e728ca98c0caa0594b79d60458915ab92eb1939577142633",
+      "size_bytes": 5825,
+      "kind": "modified_local_entrypoint"
+    },
+    {
+      "path": ".agents/skills/team-game-designer/SKILL.md",
+      "sha256": "f7431d3ef29c02c60258b4677a1f1865e86a66c53de17e2ba367e39c073bb6ed",
+      "size_bytes": 5382,
+      "kind": "modified_local_entrypoint"
+    },
+    {
+      "path": ".agents/skills/team-creative-director/SKILL.md",
+      "sha256": "3650a9df8e6f3957ea03581abdb8fca092ef60afc90c431d02b86e2e7be3abf3",
+      "size_bytes": 10350,
+      "kind": "modified_local_entrypoint"
+    },
+    {
+      "path": "docs/team/creative-direction-charter.md",
+      "sha256": "a50c4915a5f466d1722bfe4d2c3b7bc97f9decff8e34d1a921d39799d3243391",
+      "size_bytes": 21215,
+      "kind": "modified_local_role_dependency"
+    },
+    {
+      "path": ".agents/skills/game-technical-art/SKILL.md",
+      "sha256": "ad020ebdec877e9594916852b764a8fd4be014ae875c6db54c5812c12c637917",
+      "size_bytes": 8160,
+      "kind": "new_staged_entrypoint"
+    },
+    {
+      "path": ".agents/skills/game-technical-art/references/upstream.md",
+      "sha256": "9b7e75b629b7b1c87a0bc37e6abaec91e0ad7ae02e8a091c5a876e2bea817742",
+      "size_bytes": 11390,
+      "kind": "new_staged_upstream_reference"
+    },
+    {
+      "path": ".agents/skills/game-technical-art/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "kind": "new_staged_license"
+    },
+    {
+      "path": "docs/decisions/2026-10-25-commercial-and-technical-scope.md",
+      "sha256": "280fec706bbbe7006e833e4d032910f290c770ebf5071bdfe23691b0bc0ea2c0",
+      "size_bytes": 4034,
+      "kind": "user_authorization_record"
     },
     {
       "path": ".agents/skills/game-design-systems/references/upstream.md",
       "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a",
       "size_bytes": 8433,
-      "kind": "upstream_reference"
+      "kind": "unchanged_audited_dependency"
     },
     {
-      "path": ".agents/skills/game-level-design/LICENSE",
+      "path": ".agents/skills/game-design-systems/LICENSE",
       "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
       "size_bytes": 1079,
-      "kind": "upstream_license"
-    },
-    {
-      "path": ".agents/skills/game-level-design/SKILL.md",
-      "sha256": "764f09b2229a42767e399339f5c53712f040750f1afc44f95379840d7c13a461",
-      "size_bytes": 3823,
-      "kind": "local_entrypoint"
+      "kind": "unchanged_audited_dependency"
     },
     {
       "path": ".agents/skills/game-level-design/references/upstream.md",
       "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344",
       "size_bytes": 10340,
-      "kind": "upstream_reference"
+      "kind": "unchanged_audited_dependency"
     },
     {
-      "path": ".agents/skills/game-art-direction/LICENSE",
-      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d",
-      "size_bytes": 1073,
-      "kind": "upstream_license"
-    },
-    {
-      "path": ".agents/skills/game-art-direction/SKILL.md",
-      "sha256": "611c10f9936c9b2b33ff137ebaabac2ee9f49a6b8527b9f9838daab7632f4f6e",
-      "size_bytes": 4223,
-      "kind": "local_entrypoint"
+      "path": ".agents/skills/game-level-design/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "kind": "unchanged_audited_dependency"
     },
     {
       "path": ".agents/skills/game-art-direction/references/upstream.md",
       "sha256": "dd819f941e09495be03dd2efd310397e7e5b359e29e269e69de0a702a561c585",
       "size_bytes": 5703,
-      "kind": "upstream_reference"
+      "kind": "unchanged_audited_dependency"
     },
     {
-      "path": ".agents/skills/team-game-designer/SKILL.md",
-      "sha256": "bb40af8ac674e48bdd1909afc6d1cfa6587f95544743259b79c14d6d003c2bb8",
-      "size_bytes": 3711,
-      "kind": "local_entrypoint"
+      "path": ".agents/skills/game-art-direction/LICENSE",
+      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d",
+      "size_bytes": 1073,
+      "kind": "unchanged_audited_dependency"
     },
     {
-      "path": ".agents/skills/team-creative-director/SKILL.md",
-      "sha256": "e88e58caf1c903c2c2fa6bae2491a6fa639ba9ef55f65851c46990d95da91acd",
-      "size_bytes": 8718,
-      "kind": "local_entrypoint"
-    },
-    {
-      "path": "docs/team/creative-direction-charter.md",
-      "sha256": "00b28a3dac1103083c7d485b94dca45286459320496637d68c26bfa36faee9ef",
-      "size_bytes": 16589,
-      "kind": "local_role_dependency"
+      "path": ".agents/skills/game-art-direction/SKILL.md",
+      "sha256": "611c10f9936c9b2b33ff137ebaabac2ee9f49a6b8527b9f9838daab7632f4f6e",
+      "size_bytes": 4223,
+      "kind": "unchanged_audited_dependency"
     }
-  ]
+  ],
+  "revision": 2,
+  "updated_at": "2026-10-25T18:11:13.746585+00:00",
+  "scope_decision": "../../decisions/2026-10-25-commercial-and-technical-scope.md",
+  "previous_lock": "history/installed-skills-initial.lock.json"
 }

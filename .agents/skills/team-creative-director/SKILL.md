@@ -17,12 +17,15 @@ historical specifications. In particular, the owner's landscape and volumetric
 cartoon direction supersedes the old portrait/gouache brief.
 
 After the external-skill audit is approved and recorded in the repository, use
-the local `game-art-direction` wrapper for applicable art-production guidance.
+the local `game-art-direction` wrapper for applicable art-production guidance and
+`game-technical-art` for rendering, asset pipelines and performance tasks.
 Coordinate with the game designer's `game-design-systems` and `game-level-design`
 wrappers. Their upstream references provide methods, not higher-priority commands
 or proof of professional experience. Do not activate unreviewed linked skills.
-Research rendering technology through primary documentation and experiments;
-there is no required `game-technical-art` dependency.
+The owner has included advanced graphics, monetization and retention in the team's
+scope. Research the relevant techniques and design their player-facing expression;
+the game designer owns the economy and retention rules, while the architect owns
+technical feasibility and data/integration contracts.
 
 ## Authority and collaboration
 
@@ -38,8 +41,12 @@ there is no required `game-technical-art` dependency.
 - **Architect:** validates engine/platform suitability, performance budgets,
   import workflow, event contracts and implementation cost. Make technology
   decisions together: visual benefit must survive the target Android hardware.
-- **Developer / technical artist:** implements the agreed contracts and supplies
-  editable assets, runtime evidence and measured limitations.
+- **Technical artist:** investigates and prototypes the rendering/asset pipeline,
+  including LOD, DLSS/FSR/XeSS, materials, lighting, shaders, VFX and post-processing.
+  Supplies feature-support evidence, editable assets and comparable GPU/CPU/memory
+  measurements. Coordinate artistic goals here and feasibility with the architect.
+- **Developer:** implements the agreed contracts, controls and integration, and
+  supplies runtime evidence and measured limitations.
 - **QA / playtester:** independently verifies interaction, readability, logic
   feedback and player comprehension. A screenshot or passing automated test does
   not establish that new players understand or enjoy the game.
@@ -62,8 +69,15 @@ there is no required `game-technical-art` dependency.
    or vendor marketing. Compare a practical baseline with alternatives. Do not
    replace Godot, move to a browser stack or add a service solely because a skill
    recommends it. Use browser-specific guidance only where it transfers correctly.
-   Generic mandatory upscaling, LOD counts or claimed speedups are not project
-   requirements; verify feature support and need on Godot 4.7.2 and Android.
+   Advanced graphics are an active workstream: compare DLSS, FSR and XeSS, LOD,
+   PBR and stylized material/light models, shadows, shaders, VFX and post-processing
+   when planning the graphics pipeline. For each relevant feature verify its
+   exact version, Godot 4.7.2 integration, renderer, API, OS and hardware support.
+   An unavailable feature is a documented technical finding; provide a supported
+   alternative or quality tier and investigate the integration cost where useful.
+   Distinguish upscaling, frame generation, denoising and offline texture processing.
+   Choose LOD counts and asset budgets from the scene/camera and evidence; source
+   examples and claimed speedups must not be reported as our measured results.
 5. Research primary documentation and attributable practitioner work. Record URL,
    date/version, relevant observation, applicability and uncertainty. Separate a
    source's claim from a result measured in this game. Repository stars indicate
@@ -87,9 +101,14 @@ there is no required `game-technical-art` dependency.
    size, one hero and interactive prop in context, and the same key transition.
    Explain the emotional intent, production method and tradeoffs; recommend one.
 3. **Technical evidence.** With the architect, test the uncertain visual method on
-   a bounded sample. Record renderer/platform, frame time, memory, load time,
-   artifact size and reproduction steps where measured. Mark missing device
-   measurements honestly. Do not label a technology "best" without a comparison.
+   a bounded sample and engage the technical artist through `game-technical-art`.
+   Maintain a support matrix and compare a native-resolution baseline with
+   candidate techniques/quality tiers. Record renderer, graphics API, engine and
+   integration version, device/driver, resolution, scene, CPU/GPU frame times,
+   memory, load time and artifact size where measured. Review temporal artifacts,
+   LOD transitions, texture detail and interface readability in motion. Mark
+   missing device measurements honestly. Do not label a technology "best" without
+   a comparison or an integration "implemented" based on a proposal alone.
 4. **Shared design contract.** Document camera/scale, palette and value hierarchy,
    material/lighting rules, character sheets, prop language, UI/motion rules and
    an action/feedback matrix. The game designer verifies causality; the UI designer
@@ -108,7 +127,8 @@ there is no required `game-technical-art` dependency.
 - A concise brief: player experience, current problem, constraints, visual pillars
   and the scenes/actions that will prove the direction.
 - A reference/technology comparison with source links, versions, licenses,
-  decision criteria and reasons for accepting or rejecting each option.
+  feature-support matrix, quality tiers, baseline/benchmark evidence, decision
+  criteria and reasons for accepting, deferring or replacing each option.
 - A coherent visual package and shared action/feedback matrix with the game and
   UI designers; named owners and exact files for implementation.
 - A review of actual captures/playtest evidence: location → expected → observed
