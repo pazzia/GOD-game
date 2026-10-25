@@ -1,0 +1,646 @@
+{
+  "kind": "Actual native Godot screenshots, not browser-game mockups",
+  "renderer": "Godot4.7.2 Compatibility/Mesa llvmpipe/Xvfb",
+  "process_runs": {
+    "full_gallery": 60,
+    "targeted_refresh": 22
+  },
+  "unique_views": 60,
+  "levels": 30,
+  "states": [
+    "authored initial state",
+    "success after authored solution"
+  ],
+  "captures": [
+    {
+      "view": "L01-plan-ru-100-844x390",
+      "file": "native/L01-plan-ru-100-844x390.png",
+      "sha256": "57e46ee523d8440b672e3448a1543688b99b3d0ae0896c775dcdb77e2585d2f3",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L01-success-ru-100-844x390",
+      "file": "native/L01-success-ru-100-844x390.png",
+      "sha256": "9de5a675d635b5d257a93492be122f44e4ffd6ad184d303ac72eb198d299b793",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L02-plan-ru-100-844x390",
+      "file": "native/L02-plan-ru-100-844x390.png",
+      "sha256": "079bc6feb8cf538dacdd703ae664850f11d7939889c042619a074ca8ad55c14a",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L02-success-ru-100-844x390",
+      "file": "native/L02-success-ru-100-844x390.png",
+      "sha256": "27763bcaa38c7a2059becc13b61bb1799897ec168b93f7bed5be68844a914991",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L03-plan-ru-100-844x390",
+      "file": "native/L03-plan-ru-100-844x390.png",
+      "sha256": "28b3e6c5c4d890df531e3b02ce78d85fe5fad9f738e9ba000f856f7e10c33704",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L03-success-ru-100-844x390",
+      "file": "native/L03-success-ru-100-844x390.png",
+      "sha256": "74991c61cefb729d82dc7a282bccd7ce3f25fbae36db3136af3441247c27688c",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L04-plan-ru-100-844x390",
+      "file": "native/L04-plan-ru-100-844x390.png",
+      "sha256": "0bdcb644885d57e04a6ef4440d2a69b4346ed93babd6887daa7158dfe6982443",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L04-success-ru-100-844x390",
+      "file": "native/L04-success-ru-100-844x390.png",
+      "sha256": "206f20dc1fa0f37bac19ceafb8de11d4fa508e30c03cb06d12a05caa26ca1cf1",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L05-plan-ru-100-844x390",
+      "file": "native/L05-plan-ru-100-844x390.png",
+      "sha256": "b9468223abac40818bda5d003267d3786311c93980f9f827a64fa93df0728632",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L05-success-ru-100-844x390",
+      "file": "native/L05-success-ru-100-844x390.png",
+      "sha256": "282fc9b6063a16848e75bbe9e91a3579de05c22700e01ccef3f9da629e9521da",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L06-plan-ru-100-844x390",
+      "file": "native/L06-plan-ru-100-844x390.png",
+      "sha256": "9dfdaebddb1e495f75c8bb09627fed63cb503e8d55dee4a58784dbd3678c5347",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L06-success-ru-100-844x390",
+      "file": "native/L06-success-ru-100-844x390.png",
+      "sha256": "c5732589b1016886df56ea467403c2f969d14ac50181eaeaac3125d2cebb3c4e",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L07-plan-ru-100-844x390",
+      "file": "native/L07-plan-ru-100-844x390.png",
+      "sha256": "cd4637033c712c6977f88e2b39b1943766b4960c4d93b09c4bb931887ca6d626",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L07-success-ru-100-844x390",
+      "file": "native/L07-success-ru-100-844x390.png",
+      "sha256": "b0e931cf412393d19c7e6d6467f66eeb35e9cf2084b149c55102c7241ecd5008",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L08-plan-ru-100-844x390",
+      "file": "native/L08-plan-ru-100-844x390.png",
+      "sha256": "8379000c821550db7f44322999bedd3102e8a7b5a3b43c48b462a4c7cf127844",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L08-success-ru-100-844x390",
+      "file": "native/L08-success-ru-100-844x390.png",
+      "sha256": "96e29c4d0727fae7961611d0481dc8a61d23201ef46c2aa56dd8c75c8df94a43",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L09-plan-ru-100-844x390",
+      "file": "native/L09-plan-ru-100-844x390.png",
+      "sha256": "bc6b3139561e531bcba9c56cd796414fafa51897f035efd99f86893082ddeb91",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L09-success-ru-100-844x390",
+      "file": "native/L09-success-ru-100-844x390.png",
+      "sha256": "e5df62fd87964ce4d6091861b3569ca1db15f4b4b53bc5d6f3039c9a7607e2bb",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L10-plan-ru-100-844x390",
+      "file": "native/L10-plan-ru-100-844x390.png",
+      "sha256": "2d5b2a7474fab8f85f4ef2b79f48e0d45f2f6f5a9b2111622ac2bd7082ae5595",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L10-success-ru-100-844x390",
+      "file": "native/L10-success-ru-100-844x390.png",
+      "sha256": "86e6578eb8c01ff73159efe1c1b2025e705497a7ec97288915c6f70bf9da52dc",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L11-plan-ru-100-844x390",
+      "file": "native/L11-plan-ru-100-844x390.png",
+      "sha256": "18ec5fd325b1f7f9f412c23b143f8cdb2e38c8dd2ccff5e3ac61846d1cebc46c",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L11-success-ru-100-844x390",
+      "file": "native/L11-success-ru-100-844x390.png",
+      "sha256": "d21754ac40eef687ddd17fb0295016173ea39590cfc42ecb9aeabe9b4c3dcb74",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L12-plan-ru-100-844x390",
+      "file": "native/L12-plan-ru-100-844x390.png",
+      "sha256": "7c742bf96f9463bc99457526c681eca930d340a053221c2eadc704de77f9bc4d",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L12-success-ru-100-844x390",
+      "file": "native/L12-success-ru-100-844x390.png",
+      "sha256": "d29fff3abc16d817413e7b659328ed3b9135ad1882626d68d49f41169d128be8",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L13-plan-ru-100-844x390",
+      "file": "native/L13-plan-ru-100-844x390.png",
+      "sha256": "a828e22352b3b12411c575124508e100926c148863ccf8dbfa05e7a9e3d21608",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L13-success-ru-100-844x390",
+      "file": "native/L13-success-ru-100-844x390.png",
+      "sha256": "0a06c80436ceba6c651fb9e65c4c7126ec0addbc35b5bb4567631cb32a7797e1",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L14-plan-ru-100-844x390",
+      "file": "native/L14-plan-ru-100-844x390.png",
+      "sha256": "c11d44fa6adc9bd329fc8b8325784e18257bddb3428e4e368d9d19a16e6b8ff4",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L14-success-ru-100-844x390",
+      "file": "native/L14-success-ru-100-844x390.png",
+      "sha256": "e72362e0a2768257e5eaa6d411ddab1f4c744309d09e45e054cd05c5c846eb93",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L15-plan-ru-100-844x390",
+      "file": "native/L15-plan-ru-100-844x390.png",
+      "sha256": "0fa914f4a6d817d759b9fcafcba6feb519ed02f29a3d9a0059ff51b182ca7730",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L15-success-ru-100-844x390",
+      "file": "native/L15-success-ru-100-844x390.png",
+      "sha256": "d92cd43957d0eee17e3002bb708072ded6e02067a1777fafe8c5e1a9b8079a23",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L16-plan-ru-100-844x390",
+      "file": "native/L16-plan-ru-100-844x390.png",
+      "sha256": "fb5e6486c69ca15b815d30c7dc1ad310cef25bb637bb4b37f0c88b41b879b0d0",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L16-success-ru-100-844x390",
+      "file": "native/L16-success-ru-100-844x390.png",
+      "sha256": "98cb8fa2399249e71226c2ba887af60573effb3601c0e2c072e2621dceaa2d7c",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L17-plan-ru-100-844x390",
+      "file": "native/L17-plan-ru-100-844x390.png",
+      "sha256": "8a25ab5f412090564f50db772f5e305a0739992d0bde70b62fd63d2467fd973d",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L17-success-ru-100-844x390",
+      "file": "native/L17-success-ru-100-844x390.png",
+      "sha256": "8d64b3d89836c8b0e08ed97306314321f4f0d44b6b2a95a80dfed61c651501a1",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L18-plan-ru-100-844x390",
+      "file": "native/L18-plan-ru-100-844x390.png",
+      "sha256": "bb4c057114040bb49c7b13c5e59cca35c06f486c46fe271f30d492a24c7b3ffd",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L18-success-ru-100-844x390",
+      "file": "native/L18-success-ru-100-844x390.png",
+      "sha256": "bf409ebd996285b3238eb94683d52f9215a95e30253a0bf69f15527b74cd8a87",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L19-plan-ru-100-844x390",
+      "file": "native/L19-plan-ru-100-844x390.png",
+      "sha256": "d4990529284695908618a3680f93fdfa48f1395bb950f8f5d8705d8ec8b96f54",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L19-success-ru-100-844x390",
+      "file": "native/L19-success-ru-100-844x390.png",
+      "sha256": "60ec18664139641d7d9571b4a8ee5b72292f1b7c7edd81ec492a124ea4c25c88",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L20-plan-ru-100-844x390",
+      "file": "native/L20-plan-ru-100-844x390.png",
+      "sha256": "a97dca2259eed97fb58cb5aece9590aff5c9db4cb52cd890d5755d34f8280c30",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L20-success-ru-100-844x390",
+      "file": "native/L20-success-ru-100-844x390.png",
+      "sha256": "29b63c9f21b81f3b488181bd6aed33eb86251e87d2ca121146a99a86220f70e0",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L21-plan-ru-100-844x390",
+      "file": "native/L21-plan-ru-100-844x390.png",
+      "sha256": "a52a95c9eb7bba4cd8e71a9de0ec59262d9ef49c753078bfc4e29a4d43743d8f",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L21-success-ru-100-844x390",
+      "file": "native/L21-success-ru-100-844x390.png",
+      "sha256": "73624edded242d266e39425107a766162e0c91b6b53f1f9dea7e58b717284b07",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L22-plan-ru-100-844x390",
+      "file": "native/L22-plan-ru-100-844x390.png",
+      "sha256": "5aefb8766ac06203e7fc8ee1f7b98b300ec8f6ab4bc1c6d3c6c01adab9765158",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L22-success-ru-100-844x390",
+      "file": "native/L22-success-ru-100-844x390.png",
+      "sha256": "3c919e8a3d70aca457e962bb9c2a665d5dcb9f7a9d8d7d90c1db3ee826ecd73b",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L23-plan-ru-100-844x390",
+      "file": "native/L23-plan-ru-100-844x390.png",
+      "sha256": "0f5c4b84d20d68be0a289724bdd54b10913a113cf7b9be29bb55932965bdebb9",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L23-success-ru-100-844x390",
+      "file": "native/L23-success-ru-100-844x390.png",
+      "sha256": "39eca0775840daa563c058846b81c18fd230497a35edc6c5de1e1a795e638ab3",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L24-plan-ru-100-844x390",
+      "file": "native/L24-plan-ru-100-844x390.png",
+      "sha256": "2d54f9b65b6b87ac187eba4bfcbfccc2e66add7c3c98d2fcd797c2d2ac704989",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L24-success-ru-100-844x390",
+      "file": "native/L24-success-ru-100-844x390.png",
+      "sha256": "a0a17e382a038a208873729c9c4ef591d5afc37aec7b8b75fce346e91da0e7a7",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L25-plan-ru-100-844x390",
+      "file": "native/L25-plan-ru-100-844x390.png",
+      "sha256": "a0d691b41bdbcadfe1a15ee948daaa829d395eb17a5776e287d9ec3d612e06f7",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L25-success-ru-100-844x390",
+      "file": "native/L25-success-ru-100-844x390.png",
+      "sha256": "7fa1b75824de806897c64455c7a7d1421b54df66025a3f9e64faa44717a2c4b7",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L26-plan-ru-100-844x390",
+      "file": "native/L26-plan-ru-100-844x390.png",
+      "sha256": "b68319211acbebb599d57b91c340996ee9fc09416fb1743ff2b67ccb0152e421",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L26-success-ru-100-844x390",
+      "file": "native/L26-success-ru-100-844x390.png",
+      "sha256": "051715e4547ed9d54763b24cee0ae14eb33da7a10d18155871b31a7ae5f0c06c",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L27-plan-ru-100-844x390",
+      "file": "native/L27-plan-ru-100-844x390.png",
+      "sha256": "afb6f38fc4ebddd9814a6179c0df444ec1d0155853488ea1597327ca3faede3d",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L27-success-ru-100-844x390",
+      "file": "native/L27-success-ru-100-844x390.png",
+      "sha256": "c8d1a87d1416107f0125aa9b18d7d79a8f030482f328761f68ccb60af09ac01d",
+      "width": 844,
+      "height": 390,
+      "source_run": "refresh22",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L28-plan-ru-100-844x390",
+      "file": "native/L28-plan-ru-100-844x390.png",
+      "sha256": "a3935dd41c6ebd8192c6353caf5876fb8c0502ee0b17780232ec235eadaf60b2",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L28-success-ru-100-844x390",
+      "file": "native/L28-success-ru-100-844x390.png",
+      "sha256": "0b85c927e62602860a428231b551c0187fd11946a40a2e402a5d8fa98d68b97f",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L29-plan-ru-100-844x390",
+      "file": "native/L29-plan-ru-100-844x390.png",
+      "sha256": "855ce0cdaeb50cbd6b70a4bc16b53bb309c806eb8f017fdec95e8a6435ac5a78",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L29-success-ru-100-844x390",
+      "file": "native/L29-success-ru-100-844x390.png",
+      "sha256": "4bb69b1c8052421f7af771059bebcc3b1700040fa883af9c093c62b83949fbc3",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L30-plan-ru-100-844x390",
+      "file": "native/L30-plan-ru-100-844x390.png",
+      "sha256": "32a148d4c906234d299a0c10aa17a35fd37a71210ccf685856272e76ec3def8c",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "view": "L30-success-ru-100-844x390",
+      "file": "native/L30-success-ru-100-844x390.png",
+      "sha256": "f4fce73f434820cbb1c50c0b1ddf5c816f3da907fd16382478a23b82c725eee7",
+      "width": 844,
+      "height": 390,
+      "source_run": "original60",
+      "process_exit_code": 0,
+      "engine_errors": []
+    }
+  ],
+  "selected_state_images": [
+    {
+      "file": "states/menu.png",
+      "sha256": "252e31b95f6ce8ff35bc98c8c41f945c67597dbfd86a55334adcd6f1d4c9b444"
+    },
+    {
+      "file": "states/marfa-on-stone.png",
+      "sha256": "99e6c5d4233c44f9f1f43eb8d19dda4268cc244adbbd921b7ad707f5e2002e09"
+    },
+    {
+      "file": "states/paper-proof.png",
+      "sha256": "a44d8036a47884ed6f2c9dff676c075d00e78d9dc90865c45de3a2c4ea4dfa26"
+    },
+    {
+      "file": "states/paper-frame-removed.png",
+      "sha256": "8967dd51031b7cbc96debfcd32b6b898c203f0c3a3c812a4dcff67d60ae5dde4"
+    },
+    {
+      "file": "states/boat-sailing.png",
+      "sha256": "0e83171335ed71043627a1a7380d58579407d5b8f198519e0ea61bd5a9af0119"
+    },
+    {
+      "file": "states/M02-oven-on.png",
+      "sha256": "c035939ab41aa4e753cd3d253c9ee7274281dfdf5a03182eb32f4c272cd91095"
+    },
+    {
+      "file": "states/M02-oven-off.png",
+      "sha256": "26d15de9cd3bba3e9334ade3522def51858a5338cd86fde2fbcb6cd5ce51883d"
+    }
+  ]
+}

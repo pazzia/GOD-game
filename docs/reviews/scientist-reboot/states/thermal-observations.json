@@ -1,0 +1,36 @@
+[
+  {
+    "bowl_variant": "frozen",
+    "crossing_water": "liquid",
+    "decoy_asset_id": "PROP_DECOY_FLAME",
+    "decoy_enabled": true,
+    "demo_water": "frozen",
+    "label": "L11-M02-oven-on",
+    "laws": [
+      "M02"
+    ],
+    "oven_asset_id": "PROP_FIRE",
+    "oven_enabled": true,
+    "oven_variant": "cold",
+    "phase": "PLAN_RESOLUTION",
+    "save_error": 0,
+    "screenshot": "res://build/scientist-qa-thermal/L11-M02-oven-on.png"
+  },
+  {
+    "bowl_variant": "frozen",
+    "crossing_water": "liquid",
+    "decoy_asset_id": "PROP_DECOY_FLAME",
+    "decoy_enabled": true,
+    "demo_water": "frozen",
+    "label": "L11-M02-oven-off",
+    "laws": [
+      "M02"
+    ],
+    "oven_asset_id": "PROP_FIRE",
+    "oven_enabled": false,
+    "oven_variant": "off",
+    "phase": "PLAN_RESOLUTION",
+    "save_error": 0,
+    "screenshot": "res://build/scientist-qa-thermal/L11-M02-oven-off.png"
+  }
+]

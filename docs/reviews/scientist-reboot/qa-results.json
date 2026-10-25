@@ -1,107 +1,219 @@
 {
-  "status": "native_automated_pass_visual_fixes_pending",
-  "scope": "Independent native UI/input/guide/layout checks, plus actual Godot screenshot review. Not device or human comprehension acceptance.",
-  "suites": [
+  "status": "accepted_for_owner_game_review",
+  "scope": "Native implementation quality and automated behavior for owner testing; not physical-device, fun, or human-comprehension acceptance.",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "verification": {
+    "required_suites": 32,
+    "passed_suites": 32,
+    "failed_suites": [],
+    "engine_errors": [],
+    "runtime_changes_during_final_gate": [],
+    "current_runtime_matches_final_gate": true,
+    "full_report": "final-project-verification.json"
+  },
+  "qa_owned_suites": [
     {
       "name": "test_ui.gd",
-      "checks": 58,
-      "failures": 0,
-      "pointer_events": 90
-    },
-    {
-      "name": "test_quest_journey.gd",
-      "checks": 4391,
-      "states": 408,
-      "failures": 0
-    },
-    {
-      "name": "test_complex_ui_journeys.gd",
-      "checks": 59,
-      "failures": 0,
-      "pointer_events": 334,
-      "levels": [
-        "L11",
-        "L21",
-        "L30"
-      ]
+      "checks": 87,
+      "exit_code": 0,
+      "engine_errors": []
     },
     {
       "name": "test_touch_capability.gd",
       "checks": 14,
-      "failures": 0,
-      "touch_events": 30
+      "exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "name": "test_complex_ui_journeys.gd",
+      "checks": 59,
+      "exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "name": "test_quest_journey.gd",
+      "checks": 4391,
+      "exit_code": 0,
+      "engine_errors": []
     },
     {
       "name": "test_layout.gd",
-      "checks": 9928,
-      "layouts": 824,
-      "failures": 0
+      "checks": 11672,
+      "exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "name": "test_service_boundaries.gd",
+      "checks": 36,
+      "exit_code": 0,
+      "engine_errors": []
+    },
+    {
+      "name": "test_client_loading.gd",
+      "checks": 13,
+      "exit_code": 0,
+      "engine_errors": []
     }
   ],
-  "engine_errors": [],
-  "native_accessibility_captures": {
-    "directory": "build/scientist-qa-accessibility",
-    "locale": "en",
-    "text_scale": 1.4,
+  "qa_owned_check_total": 16272,
+  "native_visual_review": {
+    "unique_gallery_views": 60,
+    "initial_states_reviewed": 30,
+    "success_states_reviewed": 30,
+    "clean_process_runs": {
+      "first_gallery": 60,
+      "affected_level_refresh": 22
+    },
+    "refreshed_levels": [
+      "L08",
+      "L09",
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L18",
+      "L22",
+      "L23",
+      "L24",
+      "L27"
+    ],
     "resolution": [
-      720,
-      360
+      844,
+      390
     ],
-    "states": [
-      "title",
-      "settings",
-      "map"
+    "evidence": "native-captures.json",
+    "contact_sheet_method": "HTML composition of unchanged actual native PNGs; source screenshots are preserved byte-for-byte.",
+    "capture_interval_note": "The first gallery was reviewed during final corrections. Copy/geometry-affected levels were refreshed after their final freeze; invisible menu-state guards are verified by the final32suite runtime snapshot. No claim is made that all82capture processes occurred during one unchanged-source interval."
+  },
+  "state_reviews": {
+    "marfa_route_ticks": 12,
+    "marfa_support_contact": "accepted",
+    "paper_load_and_frame_removal": "accepted",
+    "sailing_water_domain": "accepted",
+    "M02_frozen_bowl_cold_source": "accepted",
+    "disabled_PROP_FIRE": "accepted through actual typed Interact; separate decoy flame remains",
+    "evidence": "states/thermal-observations.json"
+  },
+  "accessibility_review": {
+    "native_profiles": [
+      [
+        720,
+        360
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        960,
+        540
+      ]
     ],
-    "process_passed": 3,
-    "visual_review": "No clipping of menu promise, CTA, subtitle or sheet titles; actual scrolling and fixed sheet actions visible."
+    "locales": [
+      "ru",
+      "en"
+    ],
+    "text_scales": [
+      1.0,
+      1.4
+    ],
+    "layout_states": 824,
+    "source_targets_minimum": 144,
+    "equivalent_minimum_on360px_height": 48,
+    "selected_witness_context_cases": 48,
+    "scope": "Native label/button shaping, actual pointers/touch gestures and selected screenshot review; no physical phone was tested."
   },
   "findings": [
     {
       "id": "QA-V01",
-      "severity": "major",
-      "location": "L01 plan/proof",
-      "issue": "Marfa actor overlaps the professor and reads as a partial figure behind him.",
-      "status": "fix_reported_awaiting_recapture"
+      "status": "resolved_verified",
+      "result": "Separate Marfa/professor silhouettes",
+      "evidence": "native/L01-plan-ru-100-844x390.png"
     },
     {
       "id": "QA-V02",
-      "severity": "major",
-      "location": "L11/L21/L30 plan",
-      "issue": "Observer feet and several heavy props float in front of the backdrop walls without appropriate visible ground/support.",
-      "status": "open_production_fix_in_progress"
+      "status": "resolved_verified",
+      "result": "All chapter figures and props aligned to visible ground",
+      "evidence": "gallery/chapter-2-plan.png"
     },
     {
       "id": "QA-V03",
-      "severity": "moderate",
-      "location": "L01 stone",
-      "issue": "Permanent capacity0 debug-like badge competes with the task without explaining units or the supporting law.",
-      "status": "fix_reported_awaiting_recapture"
+      "status": "resolved_verified",
+      "result": "Capacity details require selection instead of a permanent debug badge",
+      "evidence": "native/L01-plan-ru-100-844x390.png"
     },
     {
       "id": "QA-V04",
-      "severity": "major",
-      "location": "native main menu",
-      "issue": "Natural-size TextureRect minima initially enlarged the moth and cropped the professor.",
-      "status": "resolved_verified_build_scientist_ui_review2"
+      "status": "resolved_verified",
+      "result": "Native menu portrait/moth minima and scale match the intended composition",
+      "evidence": "states/menu.png"
+    },
+    {
+      "id": "QA-V05",
+      "status": "resolved_verified",
+      "result": "Frame, paper and load form a readable physical stack; load touches sheet",
+      "evidence": "states/paper-proof.png"
+    },
+    {
+      "id": "QA-V06",
+      "status": "resolved_verified",
+      "result": "Marfa feet meet the stone upper plane at routeprogress12",
+      "evidence": "states/marfa-on-stone.png"
+    },
+    {
+      "id": "QA-V07",
+      "status": "resolved_verified",
+      "result": "L08 anchored thread reel is mounted on a dry visible footing",
+      "evidence": "native/L08-plan-ru-100-844x390.png"
+    },
+    {
+      "id": "QA-V08",
+      "status": "resolved_verified",
+      "result": "L18 sailing route is wholly inside its water domain",
+      "evidence": "states/boat-sailing.png"
+    },
+    {
+      "id": "QA-U01",
+      "status": "resolved_verified",
+      "result": "RU/EN140toolbar labels fit their native font/icon/style padding",
+      "evidence": "final-project-verification.json"
+    },
+    {
+      "id": "QA-U02",
+      "status": "resolved_verified",
+      "result": "Wrapped witness context cannot overlap footer touch targets",
+      "evidence": "final-project-verification.json"
     },
     {
       "id": "QA-S01",
-      "severity": "moderate",
-      "location": "SaveService.sanitize_progress",
-      "issue": "story_started was discarded and a resumed first-task plan could show Start Story instead of Continue.",
-      "status": "fix_reported_regression_assigned_to_core"
+      "status": "resolved_verified",
+      "result": "story_started and prior unlocked/completed progress survive resume and checkpoint revision",
+      "evidence": "final-project-verification.json"
     },
     {
-      "id": "QA-T01",
-      "severity": "quality_improvement",
-      "location": "character/prop texture minification",
-      "issue": "Native downsampled illustrations show stronger aliasing than approved browser reference; review mipmaps/filtering.",
-      "status": "reported_to_manager"
+      "id": "QA-C01",
+      "status": "resolved_verified",
+      "result": "Advertised source toggle uses explicit switchable capability and a real typed command",
+      "evidence": "states/thermal-observations.json"
+    },
+    {
+      "id": "QA-C02",
+      "status": "resolved_verified",
+      "result": "Phase/view/type menu guards match the kernel, including pending-run Undo",
+      "evidence": "final-project-verification.json"
+    },
+    {
+      "id": "QA-N01",
+      "status": "resolved_verified",
+      "result": "Cast, goal nouns and next task refer to actual level data",
+      "evidence": "native/L13-success-ru-100-844x390.png"
     }
   ],
+  "open_blockers": [],
   "limits": [
-    "Screenshots from desktop Godot/Mesa are not physical phone tests.",
-    "Automated solutions and readable labels do not prove first-time player understanding or enjoyment.",
-    "A full-canvas Stage rectangle does not prove80percent unobscured playfield."
+    "No physical Android/iOS device, GPU budget or acoustic listening panel was tested.",
+    "Automated success and readable controls do not prove new-player comprehension or enjoyment.",
+    "Whole illustrated cutouts with cosmetic animation are not claimed to be rigged3Dmodels.",
+    "A full-canvas stage rectangle is not used as proof of80percent unobscured playfield."
   ]
 }

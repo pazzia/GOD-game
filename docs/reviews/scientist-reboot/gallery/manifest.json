@@ -1,0 +1,41 @@
+{
+  "kind": "Read-only QA contact sheets; originals are native Godot screenshots",
+  "sheets": [
+    {
+      "name": "chapter-1-plan",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "a967dd626fd0b6e4ab9ba81e17689a9107a87b54dad826750d022f83531b4e0c"
+    },
+    {
+      "name": "chapter-1-success",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "c6266f506c246f10f85596b678090584421b9cd35f87f4835e73ac7f3913e448"
+    },
+    {
+      "name": "chapter-2-plan",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "b2212100fe207efbfe5f0c45c260d91f9e6e9dcc77cccd1e71ed00fb0d80c3ba"
+    },
+    {
+      "name": "chapter-2-success",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "0b7c5cbfc904552e545735cfd8f08b73880229a683b685c57d29869f90ba7245"
+    },
+    {
+      "name": "chapter-3-plan",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "2b70b5e3fbe8ef95ddff0cd213d6487e39f9c42f4f1e3989c1fac6916be99c5e"
+    },
+    {
+      "name": "chapter-3-success",
+      "source_kind": "HTML composition of actual Godot captures; no source-art changes",
+      "native_views": 10,
+      "sha256": "388a8c95c07bc2431a0c3ce0903358b97a8e878623ad787faf1c2df117804820"
+    }
+  ]
+}

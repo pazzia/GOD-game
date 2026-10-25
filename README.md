@@ -14,6 +14,13 @@
 
 ## Тестовый APK из GitHub Actions
 
+**[Открыть успешную сборку APK 0.5.0-preview](https://github.com/pazzia/GOD-game/actions/runs/40243718420#artifacts).**
+Войдите в GitHub и скачайте артефакт `AlmostGod-scientist-review-40243718420-1`.
+Внутри ZIP находится `build/scientist-review/AlmostGod-0.5.0-preview.apk` и отчёты.
+GitHub повторил все проверки, проверил подпись и состав APK. Точный исходный
+коммит — `fe678a898f752b8dcef4d458b4998bf7a1f4ad0f`; сведения о поставке —
+[github-build.json](docs/production/scientist-reboot/github-build.json).
+
 [Review workflow](.github/workflows/android-review.yml) запускается при push ветки `feat/scientist-game-reboot`: импортирует ресурсы, выполняет полный прогон и собирает проверенный APK. APK и отчёты хранятся как GitHub Actions artifact 30 дней. Этот процесс не создаёт GitHub Release и не публикует игру в магазин.
 
 Исторический [APK 0.4.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-0.4.0-ci2/AlmostGod-0.4.0-preview.apk) не содержит нового профессора и дизайна. Его результаты не подтверждают переработку 0.5.

@@ -1,0 +1,425 @@
+{
+  "renderer": "native Godot/Mesa/Xvfb",
+  "cases": [
+    {
+      "view": "L01-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L01-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L01-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L01-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L02-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L02-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L02-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L02-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L03-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L03-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L03-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L03-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L04-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L04-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L04-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L04-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L05-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L05-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L05-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L05-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L06-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L06-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L06-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L06-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L07-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L07-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L07-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L07-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L08-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L08-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L08-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L08-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L09-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L09-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L09-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L09-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L10-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L10-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L10-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L10-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L11-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L11-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L11-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L11-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L12-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L12-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L12-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L12-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L13-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L13-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L13-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L13-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L14-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L14-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L14-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L14-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L15-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L15-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L15-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L15-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L16-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L16-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L16-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L16-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L17-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L17-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L17-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L17-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L18-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L18-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L18-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L18-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L19-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L19-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L19-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L19-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L20-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L20-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L20-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L20-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L21-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L21-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L21-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L21-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L22-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L22-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L22-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L22-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L23-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L23-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L23-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L23-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L24-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L24-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L24-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L24-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L25-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L25-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L25-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L25-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L26-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L26-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L26-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L26-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L27-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L27-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L27-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L27-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L28-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L28-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L28-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L28-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L29-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L29-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L29-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L29-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L30-plan-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L30-plan-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    },
+    {
+      "view": "L30-success-ru-100-844x390",
+      "exit_code": 0,
+      "screenshot": "/workspace/GOD-game/build/scientist-final-gallery/L30-success-ru-100-844x390.png",
+      "exists": true,
+      "errors": []
+    }
+  ]
+}
