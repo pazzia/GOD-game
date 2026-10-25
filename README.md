@@ -12,6 +12,8 @@
 
 ## Тестовый APK из GitHub Actions
 
+[Скачать проверенный APK 0.3.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-0.3.0-ci2/AlmostGod-0.3.0-preview.apk) · [Успешная сборка](https://github.com/pazzia/GOD-game/actions/runs/40198967962) · [Контрольные суммы и отчёты](https://github.com/pazzia/GOD-game/releases/tag/android-preview-0.3.0-ci2). Опубликованный APK скачан и повторно проверен по SHA-256 и CRC ZIP; сведения о поставке сохранены в [.release/android-preview.json](.release/android-preview.json).
+
 Workflow [Android preview APK](.github/workflows/android-preview.yml) собирает APK на GitHub из точного коммита тега `android-preview-*`. Для нового теста создайте и отправьте новый тег на нужном коммите; также доступен ручной запуск workflow после его включения в основную ветку.
 
 Сборка устанавливает закреплённый Godot 4.7.2, выполняет полный прогон с UI и аудио, проверяет подпись APK, состав ресурсов и совпадение отпечатков исходников. Только успешный результат публикуется в [GitHub Releases](https://github.com/pazzia/GOD-game/releases): APK, отчёт сборки, результаты проверок, сведения об исходном коммите и SHA-256. Журналы доступны в Actions. Исходники и настройки сборки хранятся в Git; APK хранится в Releases.
