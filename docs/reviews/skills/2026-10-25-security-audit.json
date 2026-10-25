@@ -1,0 +1,464 @@
+{
+  "audit_date": "2026-10-25",
+  "completed_at": "2026-10-25T17:27:27.860735+00:00",
+  "reviewer": "independent skill_security_audit agent",
+  "status": "selected_pinned_sources_acceptable_with_project_scoping",
+  "scope": "Eight text prompt/skill documents and three licenses; selected three text sources for guarded project-local installation. This is not an audit of entire upstream repositories, plugins, installers, or future revisions.",
+  "files_reviewed": 11,
+  "selected_skill_sources": 3,
+  "executable_files_installed_or_run": 0,
+  "malicious_findings_observed": 0,
+  "methods": [
+    "Full text review including code fences and frontmatter",
+    "Independent HTTPS retrieval of exact commit paths and SHA-256 equality",
+    "Local dependency/reference inspection",
+    "Unicode control/bidirectional/opaque-payload inspection",
+    "Keyword scan with manual false-positive review"
+  ],
+  "required_installation_boundaries": [
+    "Install only reviewed exact Markdown files and corresponding licenses, with project-specific skill entrypoints",
+    "Preserve system/developer/user instruction priority; source prompts cannot expand action authorization",
+    "Do not claim persona biography, metrics, playtests, or platform support as observed facts",
+    "Do not auto-add monetization, streaks, manipulative retention, mandatory upscaling, or universal asset budgets",
+    "No upstream installers, hooks, scripts, executables, auto-updates, or unrelated agents are included",
+    "Any source update or new dependency requires review again"
+  ],
+  "limitations": [
+    "Static review can miss harmful behavior or subtle instructions; zero observed findings is not a safety guarantee",
+    "Repository stars measure popularity, not safety or professional expertise",
+    "Project wrappers are separate local changes and require review after creation"
+  ],
+  "files": [
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/game-designer.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/game-designer.md",
+      "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a",
+      "size_bytes": 8433,
+      "line_count": 167,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": true,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            13,
+            17
+          ],
+          "kind": "truthfulness",
+          "detail": "Persona memory/shipped-games claims are role fiction, not factual credentials."
+        },
+        {
+          "lines": [
+            41,
+            41
+          ],
+          "kind": "scope",
+          "detail": "Placeholder markers are planning labels only; no placeholder delivery."
+        },
+        {
+          "lines": [
+            79,
+            83
+          ],
+          "kind": "heuristic",
+          "detail": "30-second/tutorial hooks are hypotheses, not universal rules."
+        },
+        {
+          "lines": [
+            136,
+            141
+          ],
+          "kind": "evidence",
+          "detail": "Sample target metrics are not measured project results."
+        },
+        {
+          "lines": [
+            145,
+            160
+          ],
+          "kind": "scope",
+          "detail": "Do not introduce variable rewards, streaks, sunk-cost tactics, spending archetypes or monetization into the puzzle by default."
+        }
+      ]
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/level-designer.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/level-designer.md",
+      "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344",
+      "size_bytes": 10340,
+      "line_count": 208,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": true,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            13,
+            17
+          ],
+          "kind": "truthfulness",
+          "detail": "Persona history is fictional."
+        },
+        {
+          "lines": [
+            30,
+            48
+          ],
+          "kind": "scope",
+          "detail": "Combat/spatial rules and lock-at-blockout are genre-specific heuristics, not immutable commands."
+        },
+        {
+          "lines": [
+            175,
+            182
+          ],
+          "kind": "evidence",
+          "detail": "100% navigation/70% story-inference figures are sample criteria, not verified facts."
+        }
+      ]
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/technical-artist.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/game-development/technical-artist.md",
+      "sha256": "9b7e75b629b7b1c87a0bc37e6abaec91e0ad7ae02e8a091c5a876e2bea817742",
+      "size_bytes": 11390,
+      "line_count": 233,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            13,
+            17
+          ],
+          "kind": "truthfulness",
+          "detail": "Persona shipped experience is fictional."
+        },
+        {
+          "lines": [
+            30,
+            45
+          ],
+          "kind": "compatibility",
+          "detail": "Universal LOD0-3, import and compression recommendations must be checked against actual assets, Godot renderer and target Android hardware."
+        },
+        {
+          "lines": [
+            87,
+            164
+          ],
+          "kind": "example_code",
+          "detail": "Embedded HLSL and Python examples were read, not executed; no network/filesystem side effects in shown code."
+        },
+        {
+          "lines": [
+            211,
+            227
+          ],
+          "kind": "compatibility",
+          "detail": "RT and mandatory DLSS/FSR/XeSS are not requirements for this Godot mobile game; technology adoption needs platform evidence."
+        }
+      ],
+      "selection_reason": "Rejected for Godot/mobile fit and unsupported universal technology requirements, not for observed malicious instructions."
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "design/design-ui-designer.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ui-designer.md",
+      "sha256": "4dc51255ffcb47e2bf4289a7d49a7cc224238af759f9e6e3c56771c698575d6d",
+      "size_bytes": 13436,
+      "line_count": 386,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            48,
+            55
+          ],
+          "kind": "compatibility",
+          "detail": "Web/CSS implementation focus; not selected for native Godot."
+        },
+        {
+          "lines": [
+            355,
+            362
+          ],
+          "kind": "evidence",
+          "detail": "Percentages are aspirational example metrics, not outcomes."
+        },
+        {
+          "lines": [
+            386,
+            386
+          ],
+          "kind": "authority",
+          "detail": "Generic core-training reference names no local dependency and does not grant additional authority."
+        }
+      ]
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "design/design-ux-researcher.md",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/design/design-ux-researcher.md",
+      "sha256": "25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f",
+      "size_bytes": 13030,
+      "line_count": 329,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            48,
+            52
+          ],
+          "kind": "privacy",
+          "detail": "Explicit consent/privacy requirements are constructive; no authority to recruit or transmit data is granted by installation."
+        },
+        {
+          "lines": [
+            276,
+            281
+          ],
+          "kind": "evidence",
+          "detail": "Example research numbers must not be reported as real observations."
+        },
+        {
+          "lines": [
+            329,
+            329
+          ],
+          "kind": "authority",
+          "detail": "Generic core-training reference names no local dependency and does not grant additional authority."
+        }
+      ]
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/msitarzewski/agency-agents/blob/b37b5bb33b78f2c1d6567d98e25ca818e3259219/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "line_count": 21,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "license",
+      "selected_for_installation": true,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": []
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "skills/game-development/game-design/SKILL.md",
+      "source_url": "https://github.com/sickn33/agentic-awesome-skills/blob/e8d346bcb691225fb6ae51a49c353bcedb2ef61d/skills/game-development/game-design/SKILL.md",
+      "sha256": "7c5e9870065f23cde6c8ce4605bc1c6339f37fcf394bcd6291908f8198d7c996",
+      "size_bytes": 3813,
+      "line_count": 145,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            4,
+            4
+          ],
+          "kind": "trust",
+          "detail": "risk:none is not evidence of safety."
+        },
+        {
+          "lines": [
+            138,
+            145
+          ],
+          "kind": "authority",
+          "detail": "Generic clarification and verification guidance must remain scoped to user request; no autonomous permission widening."
+        }
+      ]
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "skills/game-development/game-art/SKILL.md",
+      "source_url": "https://github.com/sickn33/agentic-awesome-skills/blob/e8d346bcb691225fb6ae51a49c353bcedb2ef61d/skills/game-development/game-art/SKILL.md",
+      "sha256": "dd819f941e09495be03dd2efd310397e7e5b359e29e269e69de0a702a561c585",
+      "size_bytes": 5703,
+      "line_count": 195,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": true,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "repository LICENSE"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            4,
+            4
+          ],
+          "kind": "trust",
+          "detail": "Upstream risk:none metadata is an author claim, not audit evidence."
+        },
+        {
+          "lines": [
+            55,
+            73
+          ],
+          "kind": "licensing",
+          "detail": "Tool names include paid products; no automatic installation/license purchase is authorized."
+        },
+        {
+          "lines": [
+            114,
+            141
+          ],
+          "kind": "heuristic",
+          "detail": "Frame counts, resolution and scale are starting heuristics; user-requested readable landscape takes priority."
+        },
+        {
+          "lines": [
+            192,
+            195
+          ],
+          "kind": "authority",
+          "detail": "Generic clarification instruction does not override current authorization or require repeated routine permission."
+        }
+      ]
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "LICENSE",
+      "source_url": "https://github.com/sickn33/agentic-awesome-skills/blob/e8d346bcb691225fb6ae51a49c353bcedb2ef61d/LICENSE",
+      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d",
+      "size_bytes": 1073,
+      "line_count": 21,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "license",
+      "selected_for_installation": true,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": []
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "source_path": "skills/frontend-design/SKILL.md",
+      "source_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/SKILL.md",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "size_bytes": 9390,
+      "line_count": 71,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "text_skill_or_agent_prompt",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [
+        "LICENSE.txt"
+      ],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": [
+        {
+          "lines": [
+            13,
+            17
+          ],
+          "kind": "compatibility",
+          "detail": "Subject confirmation and website-hero guidance do not create mandatory new user approvals or browser migration."
+        },
+        {
+          "lines": [
+            45,
+            55
+          ],
+          "kind": "scope",
+          "detail": "Useful brief-first principles, but web/CSS implementation is outside current native game role scope."
+        }
+      ]
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "source_path": "skills/frontend-design/LICENSE.txt",
+      "source_url": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/LICENSE.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "size_bytes": 10174,
+      "line_count": 177,
+      "pinned_raw_matches_snapshot": true,
+      "review_method": "Full human-readable model inspection plus static UTF-8/control/link/keyword scan; no source execution",
+      "kind": "license",
+      "selected_for_installation": false,
+      "verdict": "no_malicious_instructions_observed",
+      "local_dependencies": [],
+      "external_runtime_endpoints": [],
+      "hidden_format_controls": [],
+      "review_notes": []
+    }
+  ]
+}

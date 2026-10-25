@@ -1,0 +1,71 @@
+{
+  "star_scope": "Whole repository, not individual skill. Counts are a dated snapshot, not a safety or quality certificate.",
+  "sources": [
+    {
+      "repository": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "stars": 183701,
+      "checked_at": "2026-10-25T17:25:35.138324+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":183701,\"watcherCount\":1120,\"forksCount\":21744,",
+      "repository_html_sha256": "b2c3c47c244526404541b15dadcbc1f38702b16f6717e5220cc4764c1e34b57c",
+      "source_type": "official Anthropic repository"
+    },
+    {
+      "repository": "sickn33/agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills",
+      "commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "stars": 48497,
+      "checked_at": "2026-10-25T17:25:35.138324+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":48497,\"watcherCount\":304,\"forksCount\":7050,\"s",
+      "repository_html_sha256": "2e06d764d378b9ccc2309423dd470afc76c0510f72fa7e034a0760bd483d2022",
+      "source_type": "public community repository"
+    },
+    {
+      "repository": "Jeffallan/claude-skills",
+      "url": "https://github.com/Jeffallan/claude-skills",
+      "commit": "9e7dbd688015cbd1f440374f8671028bb67c608f",
+      "stars": 12057,
+      "checked_at": "2026-10-25T17:25:35.138324+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":12057,\"watcherCount\":90,\"forksCount\":1153,\"st",
+      "repository_html_sha256": "b49120cc3624a39551d78de8f8799cca166aecea0babb4bb2361de3e585b7ecc",
+      "source_type": "public community repository"
+    },
+    {
+      "repository": "wshobson/agents",
+      "url": "https://github.com/wshobson/agents",
+      "commit": "0874a27b17a22e2b7c2e2bcd725768e0803cad06",
+      "stars": 41687,
+      "checked_at": "2026-10-25T17:25:35.138324+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":41687,\"watcherCount\":314,\"forksCount\":4421,\"s",
+      "repository_html_sha256": "da16b67e8c0df497172b63be1b2a839e7cd77d001057aa651b2d647060dbc7b2",
+      "source_type": "public community repository"
+    },
+    {
+      "repository": "davila7/claude-code-templates",
+      "url": "https://github.com/davila7/claude-code-templates",
+      "commit": "9416faad8aa9111a467069e4b5f29766c1d2a388",
+      "stars": 32890,
+      "checked_at": "2026-10-25T17:25:35.138324+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":32890,\"watcherCount\":192,\"forksCount\":3792,\"s",
+      "repository_html_sha256": "5d5df2857ca09d7320b28bb031ae559562a2c9a77506aeb5c7162bc50fc49153",
+      "source_type": "public community repository"
+    },
+    {
+      "repository": "msitarzewski/agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "stars": 163938,
+      "checked_at": "2026-10-25T17:23:54.486508+00:00",
+      "evidence": "GitHub repository page embedded stargazerCount",
+      "evidence_excerpt": "ue,\"canOpenStargazersAndWatchers\":false,\"stargazerCount\":163938,\"watcherCount\":1151,\"forksCount\":26459,",
+      "repository_html_sha256": "5f335f005de013033ed7c8959a919724d04299ce02e849cd035ea8e87ffc72f3",
+      "source_type": "public community repository"
+    }
+  ]
+}

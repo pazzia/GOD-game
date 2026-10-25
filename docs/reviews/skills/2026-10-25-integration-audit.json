@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-10-25T17:31:09.174721+00:00",
+  "reviewer": "skill_security_audit",
+  "verdict": "accepted_for_manual_project_local_installation",
+  "status": "preinstallation_integration_review_complete",
+  "source_audit": "2026-10-25-security-audit.json",
+  "staged_new_skill_entrypoints": 4,
+  "local_creative_director_entrypoints": 1,
+  "files_reviewed": 12,
+  "source_reference_copies_verified": 3,
+  "license_copies_verified": 3,
+  "malicious_findings_observed": 0,
+  "install_performed_by_auditor": false,
+  "runtime_changes_by_auditor": false,
+  "checks": [
+    "Complete static reading of all5entrypoints and creative-direction charter",
+    "Frontmatter names/descriptions and relative link resolution",
+    "Exact upstream and license SHA-256 equality to completed source audit",
+    "Expected file inventory; no symlinks, executable payloads, installers or hooks",
+    "Instruction priority, scope, evidence and role-ownership review"
+  ],
+  "limitations": [
+    "Static review is not an absolute guarantee of safety",
+    "Only listed byte hashes are accepted; changed or added files require review",
+    "Source references remain untrusted advisory material under higher-priority instructions",
+    "Existing project AGENTS/state/specification context is not re-audited as external skill content"
+  ],
+  "files": [
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-design-systems/LICENSE",
+      "installed_path": ".agents/skills/game-design-systems/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "kind": "upstream_license",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-design-systems/SKILL.md",
+      "installed_path": ".agents/skills/game-design-systems/SKILL.md",
+      "sha256": "a3292fb57bd8a290716318677c7d29bc3625e1e189033db9ac488b20046a9cf4",
+      "size_bytes": 4065,
+      "kind": "local_entrypoint",
+      "name": "game-design-systems",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true,
+      "hidden_format_controls": []
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-design-systems/references/upstream.md",
+      "installed_path": ".agents/skills/game-design-systems/references/upstream.md",
+      "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a",
+      "size_bytes": 8433,
+      "kind": "upstream_reference",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/game-designer.md",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-level-design/LICENSE",
+      "installed_path": ".agents/skills/game-level-design/LICENSE",
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f",
+      "size_bytes": 1079,
+      "kind": "upstream_license",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "LICENSE",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-level-design/SKILL.md",
+      "installed_path": ".agents/skills/game-level-design/SKILL.md",
+      "sha256": "764f09b2229a42767e399339f5c53712f040750f1afc44f95379840d7c13a461",
+      "size_bytes": 3823,
+      "kind": "local_entrypoint",
+      "name": "game-level-design",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true,
+      "hidden_format_controls": []
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-level-design/references/upstream.md",
+      "installed_path": ".agents/skills/game-level-design/references/upstream.md",
+      "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344",
+      "size_bytes": 10340,
+      "kind": "upstream_reference",
+      "source_repository": "msitarzewski/agency-agents",
+      "source_commit": "b37b5bb33b78f2c1d6567d98e25ca818e3259219",
+      "source_path": "game-development/level-designer.md",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-art-direction/LICENSE",
+      "installed_path": ".agents/skills/game-art-direction/LICENSE",
+      "sha256": "af98370a7edc0f00ec46979d049517833c9a7fa2ba74e3cf8cc42f7db557299d",
+      "size_bytes": 1073,
+      "kind": "upstream_license",
+      "source_repository": "sickn33/agentic-awesome-skills",
+      "source_commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "LICENSE",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-art-direction/SKILL.md",
+      "installed_path": ".agents/skills/game-art-direction/SKILL.md",
+      "sha256": "611c10f9936c9b2b33ff137ebaabac2ee9f49a6b8527b9f9838daab7632f4f6e",
+      "size_bytes": 4223,
+      "kind": "local_entrypoint",
+      "name": "game-art-direction",
+      "description_present": true,
+      "relative_links": [
+        "references/upstream.md",
+        "LICENSE"
+      ],
+      "relative_links_resolve": true,
+      "hidden_format_controls": []
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/game-art-direction/references/upstream.md",
+      "installed_path": ".agents/skills/game-art-direction/references/upstream.md",
+      "sha256": "dd819f941e09495be03dd2efd310397e7e5b359e29e269e69de0a702a561c585",
+      "size_bytes": 5703,
+      "kind": "upstream_reference",
+      "source_repository": "sickn33/agentic-awesome-skills",
+      "source_commit": "e8d346bcb691225fb6ae51a49c353bcedb2ef61d",
+      "source_path": "skills/game-development/game-art/SKILL.md",
+      "matches_preinstall_source_audit": true
+    },
+    {
+      "reviewed_path": "/workspace/skill-research/install-ready/team-game-designer/SKILL.md",
+      "installed_path": ".agents/skills/team-game-designer/SKILL.md",
+      "sha256": "bb40af8ac674e48bdd1909afc6d1cfa6587f95544743259b79c14d6d003c2bb8",
+      "size_bytes": 3711,
+      "kind": "local_entrypoint",
+      "name": "team-game-designer",
+      "description_present": true,
+      "relative_links": [
+        "../game-design-systems/SKILL.md",
+        "../game-level-design/SKILL.md"
+      ],
+      "relative_links_resolve": true,
+      "hidden_format_controls": []
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/.agents/skills/team-creative-director/SKILL.md",
+      "installed_path": ".agents/skills/team-creative-director/SKILL.md",
+      "sha256": "e88e58caf1c903c2c2fa6bae2491a6fa639ba9ef55f65851c46990d95da91acd",
+      "size_bytes": 8718,
+      "kind": "local_entrypoint",
+      "name": "team-creative-director",
+      "description_present": true,
+      "local_dependencies": [
+        "AGENTS.md",
+        "docs/PROJECT_STATE.md",
+        "docs/team/creative-direction-charter.md",
+        ".agents/skills/game-art-direction/SKILL.md",
+        ".agents/skills/game-design-systems/SKILL.md",
+        ".agents/skills/game-level-design/SKILL.md"
+      ]
+    },
+    {
+      "reviewed_path": "/workspace/GOD-game/docs/team/creative-direction-charter.md",
+      "installed_path": "docs/team/creative-direction-charter.md",
+      "sha256": "00b28a3dac1103083c7d485b94dca45286459320496637d68c26bfa36faee9ef",
+      "size_bytes": 16589,
+      "kind": "local_role_dependency"
+    }
+  ]
+}
