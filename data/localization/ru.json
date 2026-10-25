@@ -614,5 +614,7 @@
   "entity.anchor_a.name": "Левая опора",
   "entity.anchor_b.name": "Правая опора",
   "entity.weight.name": "Груз у тали",
-  "entity.test_weight.name": "Пробный груз"
+  "entity.test_weight.name": "Пробный груз",
+  "ui.objective": "Цель",
+  "ui.no_audience_short": "Закон действует"
 }

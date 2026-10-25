@@ -1,0 +1,367 @@
+{
+  "reviewed_at": "2026-10-25T14:57:54.657948+00:00",
+  "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "renderer": "Godot4.7.2 native Mesa/Xvfb viewport",
+  "captured_views": 80,
+  "checked_resolutions": [
+    [
+      720,
+      360
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      960,
+      540
+    ]
+  ],
+  "stored_png_count": 80,
+  "stored_png_bytes": 22958934,
+  "verification_suites": 31,
+  "layout_checks": 10752,
+  "layout_states": 824,
+  "text_scales": [
+    1.0,
+    1.4
+  ],
+  "locales": [
+    "ru",
+    "en"
+  ],
+  "automated_result": "passed",
+  "observations": [
+    "Landscape game world and fixed primary action remain visible; long detail panels scroll independently.",
+    "The current goal is visible before scrolling in all tested campaign states, both languages and text sizes.",
+    "All three witnesses have visible touch targets; tapping shows the chosen witness diagnostic first.",
+    "Inventory text fits its button together with icon and padding; authored PNG colors are retained.",
+    "L01 proof clearly says the trick is not victory; sealing and actual goal completion lead to a distinct level2 action.",
+    "Native pointer journey verifies L01 win, level2 transition and persistent progress.",
+    "Three scenic environments have visible distant landmarks and grounded actors."
+  ],
+  "representative_images": [
+    "screenshots/L01-law-ru-100-720x360.png",
+    "screenshots/L01-plan-ru-140-720x360.png",
+    "screenshots/L01-proof-ru-100-720x360.png",
+    "screenshots/L01-settings-ru-140-720x360.png",
+    "screenshots/L01-success-ru-100-720x360.png",
+    "screenshots/L01-plan-ru-100-844x390.png",
+    "screenshots/L07-plan-ru-100-844x390.png",
+    "screenshots/L11-plan-ru-100-844x390.png",
+    "screenshots/L17-plan-ru-100-844x390.png",
+    "screenshots/L21-plan-ru-100-844x390.png",
+    "screenshots/L24-plan-ru-100-844x390.png",
+    "screenshots/L30-plan-ru-100-844x390.png"
+  ],
+  "focused_cases": [
+    {
+      "view": "L01-briefing-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "dfdb7425104cbefc370289d3e9b608fd3d48eb9fbeba05136ea8ff349d898a3e",
+      "size_bytes": 130598,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:29.038835+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-briefing-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-law-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "15c9592f56f5aea7b7b7f0a00df4d25c97f55cc6520fd703bf120eaca2362d8e",
+      "size_bytes": 326446,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:38.107905+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-law-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-map-en-140-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "c89428d45d0ccc3ad8f0b1dde0e0d63f758c1c5a06895b49326c52c53db3dc5c",
+      "size_bytes": 116567,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:50.423949+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-map-en-140-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-map-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "2dd6b6a3948e0ab4debc2d4b5d2fa4a618ced87d281ae6e0b6123d3cb1230900",
+      "size_bytes": 107086,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:30.861638+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-map-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-moving-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "377096480a0c93c7dea4dc2b3caa9113445396fd0bf7bf5d7e64ad9e741a9a8a",
+      "size_bytes": 325604,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:43.386304+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-moving-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-en-140-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "40d37a1b0637f53c8fccc3f1833dc900740ae58f5eb7a8581823f350cf623db6",
+      "size_bytes": 316535,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:47.112049+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-en-140-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-en-140-720x360-audience",
+      "capture_group": "L01-final-720",
+      "image_sha256": "8214a3011293f5c1b7fb36bb6dc9cef5acdc969cf029abaf0b83de6c619db109",
+      "size_bytes": 316505,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:53.776467+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-en-140-720x360-audience.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "e0e124cf9d95631f150eb0fa97cb4110c91b3fa57d49b4185d2ceb679e1f7e6b",
+      "size_bytes": 324560,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:32.612165+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-ru-140-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "68b6a4f0464e8089f27771c66d1c12ebae1a09a5c9d93e6660fb87dfe51a477d",
+      "size_bytes": 316410,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:45.071468+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-140-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-ru-140-720x360-audience",
+      "capture_group": "L01-final-720",
+      "image_sha256": "f89a54d47d5883ddda8e596192f29eea3c09d9d5d227777a581ade65a2d4b71e",
+      "size_bytes": 316409,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:52.199524+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-140-720x360-audience.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-ru-140-720x360-audience_end",
+      "capture_group": "L01-final-720",
+      "image_sha256": "23723b49c87b2fc59046e4761dd75e451646c4516f477042a6c5de02c993c327",
+      "size_bytes": 316395,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:55.328434+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-140-720x360-audience_end.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-plan-ru-140-720x360-inventory_end",
+      "capture_group": "L01-final-720",
+      "image_sha256": "c5c3fa3d043ca7da71b135fdfd56bc17b710b64d8a5ddacd0e944022202cedc9",
+      "size_bytes": 316401,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:56.963440+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-140-720x360-inventory_end.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-proof-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "0d18f4ca9194513abb0aae00b46554a64e1df4f8d1baa301b5b91a7b1c552e3c",
+      "size_bytes": 325862,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:36.273453+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-proof-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-resolution-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "af40070a3725fffcb6174b240e08d5da93d85c0e9b3fd89a8951e49df60acf4b",
+      "size_bytes": 327190,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:39.803773+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-resolution-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-settings-en-140-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "9bf186dc37fb372491015ec54cf3e3cf30acb3673311e3f86c0426ddbe26dac7",
+      "size_bytes": 102021,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:48.741918+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-settings-en-140-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-settings-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "cbb774b3e1689303e14e32cc0e9bbbb89e69369901a4ece21cf797af0140ccff",
+      "size_bytes": 95076,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:46.522542+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-settings-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-settings-ru-140-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "525d3a4998114f5603a7028b42ed1154d7fed3535fac02a0ae2c826465111864",
+      "size_bytes": 101466,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:58.669840+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-settings-ru-140-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-show-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "a1c8086c2da89fa4e43e617f751278cbeec848480eeade157aba89ecfeec90f5",
+      "size_bytes": 325328,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:34.394060+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-show-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-success-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "9232bef6775977aa964264c065d74e9f5204f7289c3708b1c84b520e84348f8d",
+      "size_bytes": 117414,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:41.480202+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-success-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-title-ru-100-720x360",
+      "capture_group": "L01-final-720",
+      "image_sha256": "9e1f84d23ff8bd8e6afce14d4978a6b77d84e430f15cde2ef279e4708200f3d6",
+      "size_bytes": 375370,
+      "dimensions": [
+        720,
+        360
+      ],
+      "mtime_utc": "2026-10-25T14:50:37.769508+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-title-ru-100-720x360.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    }
+  ],
+  "campaign_report": "campaign-captures.json",
+  "scene_art_review": "scene-art/",
+  "limits": [
+    "Native desktop renderer at phone resolutions; no physical Android device claim.",
+    "Render completion and geometry checks do not establish subjective art acceptance.",
+    "Subjective art review covers representative frames, not a manual acceptance of every screenshot.",
+    "The APK still requires installation and interaction on a physical Android phone."
+  ]
+}

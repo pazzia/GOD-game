@@ -82,5 +82,13 @@
   ],
   "floor_revision": 2,
   "floor_horizon_fraction": 0.2,
-  "source_generation": "res://assets/art/source/environments/generation-2026-10-25.json"
+  "source_generation": "res://assets/art/source/environments/generation-2026-10-25.json",
+  "landscape_background": {
+    "file": "landscape.png",
+    "fit": "cover_preserve_scenic_horizon",
+    "style": "dimensional_cartoon_diorama",
+    "interactive": false,
+    "ground_source_y": 430,
+    "ground_max_screen_fraction": 0.56
+  }
 }

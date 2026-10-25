@@ -1,0 +1,10 @@
+{
+  "url": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-5.3_all.deb",
+  "package_sha256": "6f531493ac4e4d9772fd96b2488ea1790af81c196135fbdd25997da0781fc60e",
+  "soundfont": "FluidR3_GM.sf2",
+  "soundfont_sha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
+  "instrument_license": "MIT",
+  "runtime_soundfont_included": false,
+  "renderer": "libfluidsynth.so.3",
+  "composer": "tools/compose_background_music.py"
+}

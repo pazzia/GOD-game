@@ -47,7 +47,8 @@ with zipfile.ZipFile(p) as z:
   portraits=list((root/'assets/art/characters/portraits').glob('*/*.png'))
   textures=[p for p in (root/'assets/art').rglob('*.png') if 'source' not in p.relative_to(root).parts]
   audio=[p for p in (root/'assets/audio').rglob('*') if p.suffix in ('.ogg','.wav') and 'source' not in p.relative_to(root).parts]
-  for source in metadata:
+  font_licenses=list((root/'assets/fonts').glob('*.txt'))
+  for source in metadata+font_licenses:
    packed='assets/'+source.relative_to(root).as_posix()
    if packed not in z.namelist():missing.append(packed)
    elif z.read(packed)!=source.read_bytes():mismatched.append(packed)
@@ -60,7 +61,7 @@ with zipfile.ZipFile(p) as z:
    if imported is None:missing.append(packed);continue
    destinations=re.findall(r'path="res://([^"]+)"',z.read(imported).decode('utf8',errors='replace'))
    if not destinations or any('assets/'+target not in z.namelist() for target in destinations):missing.append(packed+' (missing imported resource)')
-  report['source_verification']={'metadata_expected':len(metadata),'portraits_expected':len(portraits),'textures_expected':len(textures),'audio_resources_expected':len(audio),'environment_layers_expected':len(list((root/'assets/art/environments').glob('*/*.png'))),'missing':missing,'mismatched':mismatched}
+  report['source_verification']={'metadata_expected':len(metadata),'font_licenses_expected':len(font_licenses),'portraits_expected':len(portraits),'textures_expected':len(textures),'audio_resources_expected':len(audio),'environment_layers_expected':len(list((root/'assets/art/environments').glob('*/*.png'))),'missing':missing,'mismatched':mismatched}
  report['extract_native_libraries']=next((e['attributes'].get('extractNativeLibs',True) for e in report['manifest'] if e['element']=='application'),True)
  report['native_libraries']=[]
  raw=p.read_bytes()

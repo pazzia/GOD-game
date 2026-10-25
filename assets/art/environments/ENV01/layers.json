@@ -80,5 +80,13 @@
     "Near architecture and foreground are decoration; they must not claim to hide methods or block sight.",
     "Atmosphere is visual light only and has no steam/occluder meaning."
   ],
-  "source_generation": "res://assets/art/source/environments/generation-2026-10-25.json"
+  "source_generation": "res://assets/art/source/environments/generation-2026-10-25.json",
+  "landscape_background": {
+    "file": "landscape.png",
+    "fit": "cover_preserve_scenic_horizon",
+    "style": "dimensional_cartoon_diorama",
+    "interactive": false,
+    "ground_source_y": 330,
+    "ground_max_screen_fraction": 0.56
+  }
 }

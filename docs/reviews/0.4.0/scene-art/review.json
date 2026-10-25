@@ -1,0 +1,26 @@
+{
+  "status": "accepted_for_preview",
+  "direction": "User requested colorful dimensional cartoon / stylized 3D",
+  "capture_files": [
+    "L01-show-ru-100-960x540.png",
+    "L11-show-ru-100-960x540.png",
+    "L21-show-ru-100-960x540.png",
+    "L01-show-ru-100-844x390.png",
+    "L11-show-ru-100-844x390.png",
+    "L21-show-ru-100-844x390.png"
+  ],
+  "checks": [
+    "Three chapter scenes reviewed at 960x540 and 844x390.",
+    "Scenic architecture remains visible; mapped floor supports actor feet.",
+    "All three witnesses visible; marker numbers above heads.",
+    "Decorative noninteractive docks removed; water/props drawn from authoritative state.",
+    "Hero and interactable objects visible, contact shadows separate silhouettes.",
+    "World projection and workbench inverse share same floor-aware transform."
+  ],
+  "automated": "test_stage_boundaries.gd:59 checks, 0 failures; broader tests managed by root.",
+  "limits": [
+    "Runtime uses 2D sprites and pre-rendered dimensional environments; not real-time 3D models.",
+    "Existing character rig art retained to preserve identity; full 3D character reauthoring not claimed.",
+    "Physical device subjective visual acceptance remains with user."
+  ]
+}

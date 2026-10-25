@@ -3,6 +3,7 @@ import base64
 import hashlib
 import json
 import struct
+import subprocess
 import zipfile
 import zlib
 from pathlib import Path
@@ -16,9 +17,40 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 import verify_audio
 import verify_project
 import build_android
+import ci_android
 
 
 class VerificationDiagnostics(unittest.TestCase):
+    def test_ci_rejects_missing_or_duplicate_required_suites(self):
+        required = verify_project.expected_check_names(ui=True, audio=True)
+        with tempfile.TemporaryDirectory() as folder:
+            apk = Path(folder) / 'fixture.apk'
+            apk.write_bytes(b'fixture for the report-integrity gate, not an Android package')
+            checksum = hashlib.sha256(apk.read_bytes()).hexdigest()
+            verification = {'status': 'passed', 'checks': [
+                {'name': name, 'exit_code': 0, 'engine_errors': []} for name in required
+            ], 'files_changed_during_verification': [], 'runtime_digest_sha256': 'source-fixture'}
+            build = {'source_runtime_digest_sha256': 'source-fixture', 'signature_verified': True,
+                     'new_debug_identity': True, 'sha256': checksum, 'size_bytes': apk.stat().st_size,
+                     'manifest': [{'element': 'activity', 'attributes':
+                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 6}}],
+                     'source_verification': {'missing': [], 'mismatched': []}}
+            ci_android.validate_reports(verification, build, 'source-fixture', apk)
+            for mode in ('missing', 'duplicate', 'zero'):
+                broken = json.loads(json.dumps(verification))
+                if mode == 'missing':
+                    broken['checks'] = [row for row in broken['checks'] if row['name'] != 'test_quest_journey.gd']
+                elif mode == 'duplicate':
+                    broken['checks'][-1] = broken['checks'][0]
+                else:
+                    broken['checks'] = []
+                with self.subTest(mode=mode), self.assertRaises(RuntimeError):
+                    ci_android.validate_reports(broken, build, 'source-fixture', apk)
+            portrait = json.loads(json.dumps(build))
+            portrait['manifest'][0]['attributes']['screenOrientation'] = 1
+            with self.assertRaisesRegex(RuntimeError, 'sensorLandscape'):
+                ci_android.validate_reports(verification, portrait, 'source-fixture', apk)
+
     def test_zero_exit_leak_warnings_are_errors(self):
         for warning in (
             'WARNING: ObjectDB instances were leaked at exit (run with --verbose for details).',
@@ -136,6 +168,43 @@ OFFICIAL_TEMPLATE_MANIFEST = zlib.decompress(base64.b64decode(
 
 
 class AndroidTemplateMinimumSdk(unittest.TestCase):
+    def test_apk_inspector_requires_exact_font_license_contents(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            license_file = root / 'assets/fonts/NunitoSans-OFL.txt'
+            license_file.parent.mkdir(parents=True)
+            license_file.write_text('SIL Open Font License fixture\n')
+            packed_license = 'assets/assets/fonts/NunitoSans-OFL.txt'
+            with patch.object(verify_project, 'ROOT', root):
+                self.assertIn('assets/fonts/NunitoSans-OFL.txt', verify_project.runtime_manifest())
+            # A minimally shaped ELF64 has one compatible LOAD segment. No code runs.
+            native = bytearray(120)
+            native[:5] = b'\x7fELF\x02'
+            struct.pack_into('<Q', native, 32, 64)
+            struct.pack_into('<HH', native, 54, 56, 1)
+            struct.pack_into('<I', native, 64, 1)
+            struct.pack_into('<Q', native, 112, 16384)
+            for mode in ('present', 'missing', 'changed'):
+                apk = root / (mode + '.apk')
+                with zipfile.ZipFile(apk, 'w') as archive:
+                    archive.writestr('AndroidManifest.xml', OFFICIAL_TEMPLATE_MANIFEST)
+                    for number in range(1, 31):
+                        archive.writestr(f'assets/data/levels/L{number:02d}.json', '{}')
+                    if mode != 'missing':
+                        archive.writestr(packed_license, license_file.read_bytes() if mode == 'present' else b'altered license')
+                    entry = zipfile.ZipInfo('lib/arm64-v8a/libfixture.so')
+                    padding = (-archive.fp.tell() - 30 - len(entry.filename) - 4) % 16384
+                    entry.extra = struct.pack('<HH', 0xffff, padding) + bytes(padding)
+                    archive.writestr(entry, native)
+                result = subprocess.run([sys.executable, str(Path(build_android.__file__).with_name('inspect_apk.py')), str(apk), '--source-root', str(root)], capture_output=True, text=True)
+                report = json.loads(result.stdout)
+                verification = report['source_verification']
+                self.assertEqual(verification['font_licenses_expected'], 1)
+                with self.subTest(mode=mode):
+                    self.assertEqual(result.returncode, 0 if mode == 'present' else 1, result.stderr)
+                    self.assertEqual(verification['missing'], [packed_license] if mode == 'missing' else [])
+                    self.assertEqual(verification['mismatched'], [packed_license] if mode == 'changed' else [])
+
     def test_real_official_manifest_changes_only_the_minimum_integer(self):
         before = OFFICIAL_TEMPLATE_MANIFEST
         self.assertEqual(hashlib.sha256(before).hexdigest(), '0c23a84cc3ad46240dac623c012eb7773ea39d6092ca9de34111e4187702622d')

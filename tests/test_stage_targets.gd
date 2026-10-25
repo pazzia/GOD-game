@@ -11,7 +11,7 @@ func check(ok: bool,label: String) -> void:
  checks+=1
  if not ok:failures.append(label)
 func run() -> void:
- root.size=Vector2i(1080,1920);root.content_scale_size=Vector2i(1080,1920)
+ root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
  var kernel=Kernel.new();check(kernel.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L01.json")),48121),"authored small prop fixture loads")
  check(kernel.dispatch({"type":"PlaceProp","payload":{"entity_id":"float","slot_id":"stage_float"}}).accepted,"float placed on its genuine method slot")
  check(kernel.dispatch({"type":"PlaceProp","payload":{"entity_id":"stone","slot_id":"stage_stone"}}).accepted,"stone and float overlap at the authored proof position")
@@ -33,7 +33,9 @@ func run() -> void:
  check(targets.size()==4 and targets[-1]=={"kind":"slot","id":"stage_stone"},"selected valid placement slot keeps priority over intersecting prop targets")
  check(kernel.state_hash()==hash,"hit expansion and every pointer event preserve all authored simulation geometry and state")
  for target in stage._hits:
-  if target.kind=="witness":check(target.rect.size==Vector2(64,64),"true witness pins keep their original geometry and card alternatives")
+  if target.kind=="witness":
+   var eye: Vector2=kernel.witness_eye(target.id)
+   check(target.rect.size.x>=144 and target.rect.size.y>=144 and target.anchor.is_equal_approx(stage.world([eye.x,eye.y])),"witness touch targets meet 48dp while their anchors stay at actual viewing points")
  stage.free();await process_frame
  var file=FileAccess.open("res://tests/reports/stage-targets.json",FileAccess.WRITE);file.store_string(JSON.stringify({"checks":checks,"failures":failures,"engine":Engine.get_version_info().string,"native_mouse_clicks":4},"  "));file.close()
  print("STAGE TARGETS: %d checks; %d failures"%[checks,failures.size()])

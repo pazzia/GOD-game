@@ -1,0 +1,919 @@
+{
+  "renderer": "Godot4.7.2 native Mesa/Xvfb viewport",
+  "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "resolution": [
+    844,
+    390
+  ],
+  "state_count": 60,
+  "levels": 30,
+  "states": [
+    "initial authored state (plan)",
+    "successful canonical solution"
+  ],
+  "all_expected_views_present": true,
+  "engine_errors": [],
+  "source_modified_before_first_capture": true,
+  "cases": [
+    {
+      "view": "L01-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "de957d09cfc95c55cb43157afac34abf1b48505b37d5e7bf67187396797a801e",
+      "size_bytes": 410786,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:26.538449+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L01-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "ab1a32582ff100ab257af1f103f6561cfd3d8ff01bbf7e3aa2e788eb28d95ece",
+      "size_bytes": 168001,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:26.591222+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L01-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L02-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "008228ffcd096d99aeeca97909d2f91179a6535040292fc22248c4809de021a0",
+      "size_bytes": 416238,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:35.986512+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L02-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L02-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "b27574c41f6abd0a073e10bbd3e2a56be405723bb0f750264d0bcfe19b8241ba",
+      "size_bytes": 158912,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:29.284456+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L02-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L03-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "89a061616f8ed3e1c940c16bf30dc2956df255ea116fdb78736bb624367b0bfe",
+      "size_bytes": 419888,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:29.272021+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L03-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L03-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "05e0b88bc7b702e0332393790a5bc4573972c79b7a749cc3d80cd25dd5f83e72",
+      "size_bytes": 167201,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:32.253125+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L03-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L04-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "4e51c4aa3d323e88911d9d9bd12afadd21107a4e9a97548b60e7cd44ac8c29a8",
+      "size_bytes": 421056,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:33.527111+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L04-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L04-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "961384b1e74487eccf2969ec29a59a2d7578b05bc56a42d65ed7a4ef6baea8b8",
+      "size_bytes": 163918,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:35.002341+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L04-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L05-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "21448f84e962979299959be069de95d4e95a5448c2153cc15cc3deb9bfdfd6dc",
+      "size_bytes": 414966,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:35.883146+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L05-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L05-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "f4fe9a39706503b12387412cf41bd5b348598c548d6df628aec63da68bb4e018",
+      "size_bytes": 159686,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:37.120212+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L05-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L06-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "94f413714b5093750f06e5940b52ca5afa74d79ffdb84722f8eb950d0060112d",
+      "size_bytes": 424757,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:38.199293+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L06-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L06-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "002e76ac9debe0fc0bf0d4fad762233d0e629684b745b45fb88ae3d2ae46fab7",
+      "size_bytes": 171074,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:43.245987+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L06-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L07-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "aa322b759bafa7a1530abf5fa0c5c3d5b81a404bd1dc597c40ccd29fd08df1d8",
+      "size_bytes": 409623,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:38.929400+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L07-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L07-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "87d8bc148d7e8abc65805d05464022065e658cb23d5963f8a7252b3b8d6ae462",
+      "size_bytes": 167796,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:40.128119+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L07-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L08-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "20d33fce9305085d615ccfaa75a25fd8808529bbaacb99d5427a7ed634d20d60",
+      "size_bytes": 420835,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:40.799864+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L08-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L08-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "7b26a7eec5ad45286fa685d313d182887eaafc15d2a97c492152fb198259f163",
+      "size_bytes": 154062,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:46.045812+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L08-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L09-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "905395e179ef28bd5969aab6acae08053d2b859b969065f5191695a2e4462054",
+      "size_bytes": 421243,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:43.637006+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L09-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L09-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "71ed1ba9cace1bccc2d35c4bc15bcedd2a7526aea57efb91227e5722bd26a631",
+      "size_bytes": 166607,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:55.527204+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L09-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L10-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "92e3cb8ade5f99f9f23e5346c5a63e9ff8cdae73fe861a693dcadcd9c806ffea",
+      "size_bytes": 423705,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:45.688022+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L10-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L10-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "5b23a213cadce8db99cda78f9d7f1b434c978a93a7534169b12d69f163a630c1",
+      "size_bytes": 159334,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:48.064240+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L10-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L11-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "2919545f630a8e1094987ced35c81ff1878f390156ad2d5129755696e7d8eb94",
+      "size_bytes": 424571,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:48.323250+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L11-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L11-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "fae1a197e317b2b94327ce583712762935db47ed1a7fa5e47e4440fbc18fd905",
+      "size_bytes": 171889,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:50.333933+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L11-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L12-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "9bbbf86109b4db419f11c6fdfc6457c2a1da74307b98fc21ecae6d402a04e99d",
+      "size_bytes": 434286,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:50.244764+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L12-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L12-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "d1c1595ff68318bf7cb688218f708ddae24d48e0bc961af8f18d6c963334ce67",
+      "size_bytes": 164485,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:52.254526+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L12-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L13-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "93e1bd70567d696f7c96473a8fc475e805e7cc2e2b8a71493dc12b39867f8de1",
+      "size_bytes": 436684,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:52.401812+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L13-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L13-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "201eb27652364138e7034384d27eef371167315c31bf3eea7ee892dbd6404d40",
+      "size_bytes": 175561,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:55.486290+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L13-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L14-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "9aef2cd58e233f5e792c9ccceb40f0f82f45ae87920efab42251a0e5e8a8a9fb",
+      "size_bytes": 429956,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:55.210263+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L14-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L14-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "b8022f0a06a4f197297202d380ed67af5248ec55f47891cb8526fb14dbde4c63",
+      "size_bytes": 169192,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:57.927227+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L14-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L15-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "88657912765f1a5883ac3f2b4d553928cdbe2f50b42af0ed492516941f841cc2",
+      "size_bytes": 439212,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:03.845509+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L15-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L15-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "467454fd8d43db7d1e7202386e54752be2a30bfe0a9fdb9fdac0da5433586d5c",
+      "size_bytes": 175508,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:51:58.367828+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L15-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L16-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "0ab84f3ca460b39600cecdfd4c1eac2b149f8d80ed79094d024e6b9d01622393",
+      "size_bytes": 428311,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:00.405467+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L16-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L16-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "0101fce45b4f3b9d588179cd249cf8acf1fa18c471b00fc127b00067b5005d10",
+      "size_bytes": 168734,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:00.694917+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L16-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L17-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "748e2c8c464fb1c6135f457257fde8115ab5211d2660f06951b2104fc155a9c2",
+      "size_bytes": 429248,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:02.290902+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L17-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L17-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "027cbb4e6e5951844fb39664a9fb7ad2aabf7fc948b270af97a2fac26280f77c",
+      "size_bytes": 173161,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:02.901122+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L17-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L18-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "8b14ed2eccb7bcfc324736356114c28422b3d6092756abbcd8fa2ad28931a156",
+      "size_bytes": 438635,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:04.693208+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L18-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L18-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "d6d675f4b88e47199087758847822a51b359df8b144acebd10d0aa1a578610a9",
+      "size_bytes": 175080,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:05.244879+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L18-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L19-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "3f14b9fa0d475f558d2ed84f6afadbd703be3d96356bd9d6a50b27f08bbc64ca",
+      "size_bytes": 427765,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:08.168902+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L19-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L19-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "64d94eec36d28ce35678d435b75a1633e28e8d0152bda58452647d2f6c0cdb3f",
+      "size_bytes": 170750,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:10.506256+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L19-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L20-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "1072856e002b8476588ab0f593a1157a580d0f97641e02c9e394e43857137a5f",
+      "size_bytes": 440762,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:08.242349+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L20-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L20-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "33fcd1c3af588fcb90e9b74827880014f032c34ec88566a3aba8c1f2bd372f0a",
+      "size_bytes": 158244,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:20.614224+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L20-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L21-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "ee9d53c82ef2f7084a5b8b98f87e4d63492e888c4dd76b8706a6bed98d864cb6",
+      "size_bytes": 435819,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:10.670819+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L21-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L21-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "2b6ba4f531cc9f82efd1f138ba9c12479ba2f8b73d49ce5aeeccd560d27f1e0c",
+      "size_bytes": 174257,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:12.594543+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L21-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L22-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "f417a5437db8c904bf9a9eab0f02e8065f43f04250c4af83c0bfa4d70771f37f",
+      "size_bytes": 414270,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:12.608102+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L22-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L22-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "f72600caa1f36734268e7a50033d8087240eedd8136252e83beb37782fa00661",
+      "size_bytes": 173345,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:14.446558+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L22-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L23-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "221d6173a9ff5bce3baa9e6f0b6dc9c43407ad08676d0db655f924597858f37c",
+      "size_bytes": 444902,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:15.018119+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L23-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L23-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "4b870cc30d402110129bb710901c52dc592e4351959033940056733906ce9e7d",
+      "size_bytes": 176679,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:16.521900+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L23-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L24-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "62cf8ca2a69880f81dfb3857eb20ba21e6f386c70ca1f7dac4309935c2a19d6b",
+      "size_bytes": 436786,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:17.342059+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L24-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L24-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "a8db9a84661dd22e703fe12bd0956226f5c2de193115a53ab31fc340343686fd",
+      "size_bytes": 171327,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:19.709053+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L24-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L25-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "2a9056dd5912975bb2eeefbc2331c2f599103073cb0e60482f9bba4344f561a2",
+      "size_bytes": 442035,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:25.942250+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L25-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L25-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "7d7b998b93cfa3e33bc80857e4fed5966bd011b634728f77ba1d9ef1c916901e",
+      "size_bytes": 174899,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:22.466619+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L25-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L26-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "4a5c1c6b59c2ee545c51e42d8530c92be77520ecd4988e5c17bf6b38af971174",
+      "size_bytes": 442816,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:22.918447+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L26-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L26-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "624c543668ed94f20982739bdd290feca56d21ca56a4ccc2c9c7ccfcf615a5fc",
+      "size_bytes": 163606,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:24.990609+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L26-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L27-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "beb52a37a6f5ed32baae0a9ed3d786578b037ef55f7e7e5f20eb86c5d06e5193",
+      "size_bytes": 439583,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:25.261002+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L27-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L27-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "8e1494523f1010115faf964647d74ac47cd8d9cf841524af15b51305dbe8037a",
+      "size_bytes": 175604,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:27.920928+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L27-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L28-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "8d8fa63d974fb7ebdf913a80f4382a2a9b761bdfd2157e994a049eddeea6ba8d",
+      "size_bytes": 444234,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:28.295122+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L28-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L28-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "6c011a041521561abfc04f78ce1365e03d4651b8ba32389a4144a9cc22a32d3c",
+      "size_bytes": 164959,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:38.785855+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L28-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L29-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "1e694b859fb95649ef8d7b84907e9c9876fa88dfc1dcdcf7eafa242d8168ef28",
+      "size_bytes": 442073,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:32.729719+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L29-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L29-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "eb657fa40cdf2434c0a4331c5580327044e2e93b9d4b52e6774f929f0e1f6485",
+      "size_bytes": 177607,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:31.581850+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L29-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L30-plan-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "685e23b6221a0c665ce68df8b6137963040db114eb3a4f70183aa7cfedee336b",
+      "size_bytes": 447967,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:34.875896+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L30-plan-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    },
+    {
+      "view": "L30-success-ru-100-844x390",
+      "capture_group": "campaign-final-844",
+      "image_sha256": "c861028834074d2be3eec27d285140f7a5c262be7032f14b95792ad5d6b0ec1e",
+      "size_bytes": 165201,
+      "dimensions": [
+        844,
+        390
+      ],
+      "mtime_utc": "2026-10-25T14:52:35.871972+00:00",
+      "exit_code": 0,
+      "engine_errors": [],
+      "image": "screenshots/L30-success-ru-100-844x390.png",
+      "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f"
+    }
+  ]
+}

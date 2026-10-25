@@ -12,16 +12,16 @@ func _initialize() -> void:call_deferred("run")
 func fixture():
 	var game=App.new()
 	game.settings=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"))
-	var game_theme=Theme.new();game_theme.default_font=load("res://assets/fonts/DejaVuSans.ttf");game.theme=game_theme
+	game.theme=preload("res://presentation/theme.gd").make_theme()
 	var player=Audio.new();root.add_child(player);player.configure(game.settings.audio);game.audio=player
 	game.progress={"schema_version":1,"unlocked":1,"completed":{},"current_level":1}
 	game._capture_stage="fixture"
 	for n in range(1,31):game.level_ids.append("L%02d"%n)
 	game.catalog=JSON.parse_string(FileAccess.get_file_as_string("res://data/localization/ru.json"))
-	game.size=Vector2(1080,1920);root.add_child(game)
+	game.size=Vector2(1920,1080);root.add_child(game)
 	return game
 func run() -> void:
-	root.size=Vector2i(1080,1920);root.content_scale_size=Vector2i(1080,1920)
+	root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
 	app=fixture();app.start_level(1,false);app._close_overlay();app._capture_stage=""
 	await process_frame;await process_frame
 	var steps: Array=[
@@ -37,8 +37,10 @@ func run() -> void:
 	check(app.kernel.state.entities.float.slot=="stage_float" and app.kernel.state.entities.stone.slot=="stage_stone" and app.kernel.state.entities.screen_a.slot=="screen_left","L01 pointer placement uses the three selected stage slots")
 	if not await wait_phase("PROOF_ACCEPTED",6):await finish();return
 	check(app.kernel.state.proofs.M01.votes==3,"L01 live show gathers three genuine witness votes")
+	check(app.primary.text=="Закрепить чудо" and (app.instruction.text.contains("не закончено") or app.instruction.text.contains("ещё не победа")),"after the first trick the player sees that the quest still needs sealing and a real goal")
 	await click_control(app.primary)
 	check(app.kernel.state.active_laws==["M01"] and app.kernel.state.phase=="PLAN_RESOLUTION","pointer seal commits M01 before cosmetic transformation")
+	check(app.instruction.text.contains("Маршруты") and app.instruction.text.contains("Феликс"),"after sealing the guide identifies the route menu and the actor who must cross")
 	if not await click_text(app._name("float")):await finish();return
 	await click_control(app.primary)
 	if not await click_text(app.tx("ui.remove_prop","Убрать реквизит")):await finish();return
@@ -46,7 +48,7 @@ func run() -> void:
 	if not await click_text(app._name("stone")):await finish();return
 	await tap_slot("bridge")
 	if not await click_text(app.tx("ui.plan","План")):await finish();return
-	if not await click_text(app.tx("ui.assign_route","Назначить маршрут…")):await finish();return
+	if not await click_text(("Routes" if app.settings.locale=="en" else "Маршруты")):await finish();return
 	if not await click_text(app._name("hero")):await finish();return
 	if not await click_text(app._route_name("cross")):await finish();return
 	check(app.kernel.state.routes.has("hero"),"actor and route menus bind the requested route")
@@ -56,6 +58,12 @@ func run() -> void:
 	check(app.progress.completed.has("L01") and app.progress.unlocked==2,"successful pointer journey unlocks the next level")
 	check(is_instance_valid(app.overlay),"victory panel is visible after the completed journey")
 	_commands_l01=app.ui_commands.duplicate(true)
+	if not await click_text("Начать уровень 2"):await finish();return
+	check(app.level_number==2 and app.kernel.state.level_id=="L02" and app.kernel.state.phase=="PLAN_SHOW","victory next-level button starts a fresh L02 quest")
+	var saved_progress: Dictionary=app.saver.read_slot("progress")
+	check(saved_progress.current_level==2 and saved_progress.completed.has("L01") and int(saved_progress.unlocked)>=2,"L01 completion and L02 transition survive a save reload")
+	check(is_instance_valid(app.overlay),"next scene opens its own understandable briefing")
+
 	# L30 cancellation fixture reaches its real third proof through authored commands.
 	app._capture_stage="fixture";app.start_level(30,false);app._close_overlay()
 	var replay: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://tests/replays/L30_solution.json"))
@@ -99,21 +107,23 @@ func run() -> void:
 	# the buttons under the finger. The sticky controls never join that scroll.
 	Input.emulate_touch_from_mouse=true;Input.emulate_mouse_from_touch=true
 	check(DisplayServer.is_touchscreen_available(),"headless fixture enables the engine touchscreen capability before genuine touch events")
-	app.settings.accessibility.text_scale=1.4;app.start_level(1,false);app._close_overlay();await process_frame;await process_frame
+	app.settings.accessibility.text_scale=1.4;app.start_level(30,false);app._close_overlay();await process_frame;await process_frame
 	var primary_rect: Rect2=app.primary.get_global_rect()
+	var stage_rect: Rect2=app.stage.get_global_rect()
+	var dock_rect: Rect2=app._upper_scroll.get_global_rect()
 	var initial_scroll: int=app._upper_scroll.scroll_vertical
-	await touch_drag(app.stage.get_global_rect().get_center()+Vector2(350,0),app.stage.get_global_rect().get_center()+Vector2(350,-400))
-	check(app._upper_scroll.scroll_vertical>initial_scroll,"real mobile vertical drag scrolls upper content")
-	check(app.primary.get_global_rect()==primary_rect,"primary and footer remain sticky during vertical touch scrolling")
-	app._upper_scroll.ensure_control_visible(app._audience_scroll);await process_frame;await process_frame
+	await touch_drag(dock_rect.get_center()+Vector2(0,80),dock_rect.get_center()-Vector2(0,200))
+	var dock_bar: VScrollBar=app._upper_scroll.get_v_scroll_bar()
+	if dock_bar.max_value>dock_bar.page:
+		check(app._upper_scroll.scroll_vertical>initial_scroll,"real mobile vertical drag reveals overflowing quest details")
+	check(app.primary.get_global_rect()==primary_rect and app.stage.get_global_rect()==stage_rect,"stage and primary remain fixed while quest details scroll")
 	var audience_rect: Rect2=app._audience_scroll.get_global_rect()
-	await touch_drag(Vector2(audience_rect.end.x-80,audience_rect.get_center().y),Vector2(audience_rect.position.x+80,audience_rect.get_center().y))
-	check(app._audience_scroll.scroll_horizontal>0,"real horizontal touch drag reveals the compact third witness")
-	var last_name: Label=app.witness_labels.values()[-1].name
-	check(last_name.get_global_rect().end.x<=audience_rect.end.x+1,"last witness full name is reachable at the horizontal end")
-	app._upper_scroll.ensure_control_visible(app._inventory_scroll);await process_frame;await process_frame
+	var witnesses_visible: bool=true
+	for card in app.witness_labels.values():witnesses_visible=witnesses_visible and audience_rect.encloses(card.name.get_parent().get_global_rect())
+	check(witnesses_visible and app._audience_scroll.scroll_horizontal==0,"all three witnesses and their status badges are visible together without panning")
+	await process_frame;await process_frame
 	var tray_rect: Rect2=app._inventory_scroll.get_global_rect()
-	check(tray_rect.position.y>=0 and tray_rect.end.y<=app._upper_scroll.get_global_rect().end.y+1,"compact inventory is reachable below the playfield")
+	check(tray_rect.position.y>=0 and tray_rect.end.y<=app.get_viewport_rect().size.y+1,"landscape inventory is visible without moving the stage")
 	await touch_drag(Vector2(tray_rect.end.x-80,tray_rect.get_center().y),Vector2(tray_rect.position.x+80,tray_rect.get_center().y))
 	check(app._inventory_scroll.scroll_horizontal>0 and app.selected.is_empty(),"mobile inventory pan scrolls without accidentally selecting a prop")
 	# Settings wrappers pass vertical touch scroll too; a drag over an option must
@@ -131,7 +141,7 @@ func run() -> void:
 			if sibling is Label and sibling.position.y==0:bounds_ok=bounds_ok and sibling.position.y+sibling.size.y<=slider.position.y
 	check(bounds_ok,"settings 140% category labels/toggles never overlap slider touch targets")
 	var panel_rect: Rect2=settings_scroll.get_global_rect()
-	await touch_drag(Vector2(panel_rect.end.x-20,panel_rect.position.y+800),Vector2(panel_rect.end.x-20,panel_rect.position.y+200))
+	await touch_drag(Vector2(panel_rect.end.x-20,panel_rect.position.y+panel_rect.size.y*.8),Vector2(panel_rect.end.x-20,panel_rect.position.y+panel_rect.size.y*.2))
 	check(settings_scroll.scroll_vertical>0,"real vertical touch drag scrolls the settings sheet")
 	check(app.settings.audio==previous_audio,"scrolling settings on its right margin does not accidentally change audio values")
 	await finish()

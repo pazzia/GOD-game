@@ -9,10 +9,10 @@ import shutil
 import subprocess
 import sys
 
-from verify_project import engine_errors, runtime_manifest
+from verify_project import engine_errors, runtime_manifest, expected_check_names
 
 ROOT = Path(__file__).resolve().parents[1]
-APK_NAME = "AlmostGod-0.3.0-preview.apk"
+APK_NAME = "AlmostGod-0.4.0-preview.apk"
 
 
 def digest_manifest(manifest):
@@ -21,19 +21,24 @@ def digest_manifest(manifest):
 
 def validate_reports(verification, build, expected_digest, apk):
     checks = verification.get("checks", [])
-    required = {"verification-tools", "content", "art-files", "audio-files",
-                "test_ui.gd", "test_touch_capability.gd", "test_complex_ui_journeys.gd"}
-    if (verification.get("status") != "passed" or len(checks) != 30
-            or not required.issubset({check.get("name") for check in checks})
+    required = expected_check_names(ui=True, audio=True)
+    actual = [check.get("name") for check in checks]
+    if (verification.get("status") != "passed" or len(actual) != len(set(actual))
+            or set(actual) != set(required)
             or any(check.get("exit_code") != 0 or check.get("engine_errors") for check in checks)
             or verification.get("files_changed_during_verification") != []):
-        raise RuntimeError("The complete 30-suite verification must pass without engine errors or source changes.")
+        raise RuntimeError("Every required verification suite must run exactly once and pass without engine errors or source changes.")
     if verification.get("runtime_digest_sha256") != expected_digest:
         raise RuntimeError("Verification does not describe the checked-out runtime sources.")
     if build.get("source_runtime_digest_sha256") != expected_digest:
         raise RuntimeError("APK and verification source digests differ.")
     if not build.get("signature_verified") or not build.get("new_debug_identity"):
         raise RuntimeError("Expected a verified signature for the separate preview application.")
+    game_activities = [entry.get("attributes", {}) for entry in build.get("manifest", [])
+                       if entry.get("element") == "activity"
+                       and entry.get("attributes", {}).get("name") == "com.godot.game.GodotApp"]
+    if len(game_activities) != 1 or game_activities[0].get("screenOrientation") != 6:
+        raise RuntimeError("The exported Android activity must use sensorLandscape orientation.")
     if build.get("sha256") != hashlib.sha256(apk.read_bytes()).hexdigest():
         raise RuntimeError("APK bytes do not match the build report.")
     if build.get("size_bytes") != apk.stat().st_size:
@@ -107,12 +112,12 @@ def main():
     (output / "SHA256SUMS.txt").write_text("".join(
         f"{hashlib.sha256((output / name).read_bytes()).hexdigest()}  {name}\n" for name in filenames))
     (output / "release-notes.md").write_text(
-        "Тестовая сборка «Почти бог» 0.3.0-preview для Android 10+ / ARM64.\n\n"
-        "Скачайте `AlmostGod-0.3.0-preview.apk` ниже и разрешите установку из выбранного источника.\n\n"
+        "Тестовая сборка «Почти бог» 0.4.0-preview для Android 10+ / ARM64.\n\n"
+        "Скачайте `AlmostGod-0.4.0-preview.apk` ниже и разрешите установку из выбранного источника.\n\n"
         "Каждый запуск CI использует новый временный тестовый сертификат. Если уже установлена другая "
         "сборка `com.almostgod.game.preview`, для установки потребуется удалить её; это удаляет её локальные сохранения. "
         "Старое приложение `com.almostgod.game` устанавливается отдельно.\n\n"
-        f"Исходники: `{current}`. Проверки: 30 наборов, без ошибок движка.\n\n"
+        f"Исходники: `{current}`. Проверки: {len(verification['checks'])} наборов, без ошибок движка.\n\n"
         f"SHA-256 APK: `{build['sha256']}`.\n\n"
         f"[Сборка и полный журнал]({run_url})\n\n"
         "Подпись, состав APK и соответствие исходникам проверены автоматически. "

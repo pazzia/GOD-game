@@ -614,5 +614,7 @@
   "entity.anchor_a.name": "Left anchor",
   "entity.anchor_b.name": "Right anchor",
   "entity.weight.name": "Hoist load",
-  "entity.test_weight.name": "Test load"
+  "entity.test_weight.name": "Test load",
+  "ui.objective": "Goal",
+  "ui.no_audience_short": "Law in effect"
 }

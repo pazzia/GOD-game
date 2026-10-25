@@ -68,9 +68,9 @@
     }
   ],
   "L30_scope": "actual pointer cancel/close after authored third-proof fixture; not a full L30 pointer journey",
-  "checks": 31,
+  "checks": 35,
   "engine": "4.7.2-stable (official)",
   "failures": [],
-  "pointer_events": 44,
-  "touch_events": 40
+  "pointer_events": 46,
+  "touch_events": 30
 }

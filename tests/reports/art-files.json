@@ -1,7 +1,7 @@
 {
   "kind": "art_file_integrity",
   "status": "passed",
-  "raster_exports": 269,
+  "raster_exports": 272,
   "svg_exports": 32,
   "portrait_exports": 81,
   "layer_stacks_with_metadata": 3,
@@ -1094,6 +1094,12 @@
       "sha256": "c9412eb5c6dd4c2e3e8b536fb90b8b32816231af09d43541bae89067455d98da"
     },
     {
+      "path": "assets/art/environments/ENV01/landscape.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "781238ead697dfa451172276e92b3639206006d364eb8ebab1430c51b9bd214d"
+    },
+    {
       "path": "assets/art/environments/ENV01/midground.png",
       "width": 1536,
       "height": 1024,
@@ -1124,6 +1130,12 @@
       "sha256": "f1bfc790f90cba27bf0edb660e5fdca724520452e3190bffa0e938d8d8e732ee"
     },
     {
+      "path": "assets/art/environments/ENV02/landscape.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d3e4d0c7f2370a9bead846eb4b5ec659e3a390e6a92b6d4644f25ff10f4a8ce3"
+    },
+    {
       "path": "assets/art/environments/ENV02/midground.png",
       "width": 1536,
       "height": 1024,
@@ -1152,6 +1164,12 @@
       "width": 1536,
       "height": 1024,
       "sha256": "cfc3a0c5c5eb38aaf2c3ebb6d873b6530edc8ed38ff6193e3a0b1058f1868b64"
+    },
+    {
+      "path": "assets/art/environments/ENV03/landscape.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f082930002faf4a6873b6b437e682fb921eb28809b5b5f161a998f34ddadd2d8"
     },
     {
       "path": "assets/art/environments/ENV03/midground.png",

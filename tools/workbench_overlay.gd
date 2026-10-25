@@ -8,7 +8,8 @@ func _ready() -> void:mouse_filter=MOUSE_FILTER_STOP;clip_contents=true
 func _process(_delta: float) -> void:queue_redraw()
 func pixel(point: Array) -> Vector2:return workbench.stage.world(point)
 func grid(point: Vector2) -> Array:
-	return [clampi(roundi((point.x-20)/38.0),0,24),clampi(roundi((point.y-36)*28.0/maxf(1,size.y-100)),0,28)]
+	var position_in_grid: Vector2=workbench.stage.unworld(point)
+	return [clampi(roundi(position_in_grid.x),0,24),clampi(roundi(position_in_grid.y),0,28)]
 func _draw() -> void:
 	if workbench==null or workbench.model.definition.is_empty():return
 	for x in range(25):draw_line(pixel([x,0]),pixel([x,28]),Color(.12,.15,.22,.13),1)

@@ -10,12 +10,12 @@ var pointer_events: int=0
 var journeys: Array=[]
 func _initialize() -> void:call_deferred("run")
 func run() -> void:
-	root.size=Vector2i(1080,1920);root.content_scale_size=Vector2i(1080,1920)
+	root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
 	Engine.time_scale=8;Engine.max_fps=120
 	var defaults: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"));defaults.audio.master_muted=true
 	var sound=Audio.new();root.add_child(sound);sound.configure(defaults.audio)
 	app=App.new();app.audio=sound;app.settings=defaults.duplicate(true)
-	var theme=Theme.new();theme.default_font=load("res://assets/fonts/DejaVuSans.ttf");theme.default_font_size=40;app.theme=theme
+	app.theme=preload("res://presentation/theme.gd").make_theme()
 	app.progress={"schema_version":1,"unlocked":30,"completed":{},"current_level":1};app._front_menu=false;app._capture_stage=""
 	for n in range(1,31):app.level_ids.append("L%02d"%n)
 	app._load_catalog();root.add_child(app)
@@ -97,7 +97,7 @@ func command_through_ui(step: Dictionary) -> bool:
 			return true
 		"AssignRoute":
 			if not await open_plan():return false
-			if not await click_text(app.tx("ui.assign_route","Назначить маршрут…")):return false
+			if not await click_text(("Routes" if app.settings.locale=="en" else "Маршруты")):return false
 			if not await click_text(app._name(payload.actor_id)):return false
 			return await click_text(app._route_name(payload.route_id))
 		"RunResolution":

@@ -14,7 +14,7 @@ def engine_errors(output):
     return [line for line in output.splitlines() if ENGINE_ERROR_PATTERN.search(line)]
 
 def runtime_manifest():
-    suffixes = {'.gd', '.json', '.tscn', '.tres', '.ttf', '.png', '.svg', '.ogg', '.wav', '.import'}
+    suffixes = {'.gd', '.json', '.tscn', '.tres', '.ttf', '.txt', '.png', '.svg', '.ogg', '.wav', '.import'}
     records = {}
     for p in sorted(ROOT.rglob('*')):
         rel = p.relative_to(ROOT)
@@ -23,6 +23,23 @@ def runtime_manifest():
         if p.is_file() and (p.suffix in suffixes or p.name in {'project.godot','export_presets.cfg'}):
             records[str(rel)] = hashlib.sha256(p.read_bytes()).hexdigest()
     return records
+
+BASE_SUITES = ['test_kernel.gd','test_validation.gd','test_s2_regressions.gd','test_campaign.gd',
+              'test_services.gd','test_service_boundaries.gd','test_client_loading.gd',
+              'test_save_recovery_edges.gd','test_audio_conductor.gd','test_audio_transport_edges.gd',
+              'test_audio_shutdown.gd','test_audio_shutdown_edges.gd','test_audio_shutdown_drain.gd',
+              'test_workbench.gd','test_puppet.gd','test_puppet_edges.gd',
+              'test_character_acting.gd','test_character_animation_contract.gd',
+              'test_layout.gd','test_stage_boundaries.gd','test_presentation.gd','test_stage_targets.gd','test_stage_input_edges.gd']
+UI_SUITES = ['test_ui.gd','test_touch_capability.gd','test_complex_ui_journeys.gd','test_quest_journey.gd']
+
+def expected_check_names(ui=False, audio=False):
+    names = ['verification-tools', 'content', 'art-files'] + BASE_SUITES
+    if ui:
+        names += UI_SUITES
+    if audio:
+        names += ['audio-files']
+    return names
 
 def main():
     ap = argparse.ArgumentParser()
@@ -36,17 +53,9 @@ def main():
     commands = [('verification-tools', [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_verification_tools.py']),
                 ('content', [sys.executable, str(ROOT/'tools/validate_content.py')]),
                 ('art-files', [sys.executable, str(ROOT/'tools/verify_art.py')])]
-    suites = ['test_kernel.gd','test_validation.gd','test_s2_regressions.gd','test_campaign.gd',
-              'test_services.gd','test_service_boundaries.gd','test_client_loading.gd',
-              'test_save_recovery_edges.gd','test_audio_conductor.gd','test_audio_transport_edges.gd',
-              'test_audio_shutdown.gd','test_audio_shutdown_edges.gd','test_audio_shutdown_drain.gd',
-              'test_workbench.gd','test_puppet.gd','test_puppet_edges.gd',
-              'test_character_acting.gd','test_character_animation_contract.gd',
-              'test_layout.gd','test_stage_boundaries.gd','test_presentation.gd','test_stage_targets.gd','test_stage_input_edges.gd']
-    if opts.ui:
-        suites.extend(['test_ui.gd','test_touch_capability.gd','test_complex_ui_journeys.gd'])
+    suites = BASE_SUITES + (UI_SUITES if opts.ui else [])
     for name in suites:
-        commands.append((name, [opts.godot, '--headless', '--path', str(ROOT), '--resolution', '1080x1920', '--script', 'tests/'+name]))
+        commands.append((name, [opts.godot, '--headless', '--path', str(ROOT), '--resolution', '1920x1080', '--script', 'tests/'+name]))
     if opts.audio:
         commands.append(('audio-files', [sys.executable, str(ROOT/'tools/verify_audio.py')]))
     outcomes=[]

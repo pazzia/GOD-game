@@ -1,13 +1,11 @@
 {
+  "revision": "0.4.0-quiet-chamber",
   "files": 222,
-  "buses": {
-    "Music": 20,
-    "Voice": 90,
-    "UI": 24,
-    "SFX": 82,
-    "Ambience": 6
-  },
-  "max_peak": 0.712174,
-  "source": "tools/expand_audio.py + SCORE.json + 7 MIDI files",
-  "review": "Produced files/peak checks; listening, mastering and mobile interruptions remain separate acceptance."
+  "music_runtime_files": 15,
+  "stingers": 5,
+  "unchanged_non_music_files": 202,
+  "music_source": "tools/compose_background_music.py + SCORE.json + seven MIDI files",
+  "non_music_source": "tools/expand_audio.py (existing effects, ambience and voices preserved)",
+  "instruments": "FluidR3 GM sampled instruments, MIT",
+  "review": "Run tools/verify_audio.py after rendering; subjective listening and phone review remain separate."
 }

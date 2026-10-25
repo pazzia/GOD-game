@@ -9,11 +9,12 @@ var checks: int=0
 var failures: Array[String]=[]
 func _initialize() -> void:call_deferred("run")
 func run() -> void:
+	root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
 	var defaults: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"))
 	defaults.audio.master_muted=true
 	var a=Audio.new();root.add_child(a);a.configure(defaults.audio)
 	var app=App.new();app.settings=defaults.duplicate(true);app.audio=a
-	var t=Theme.new();t.default_font=load("res://assets/fonts/DejaVuSans.ttf");t.default_font_size=40;app.theme=t
+	app.theme=preload("res://presentation/theme.gd").make_theme()
 	for n in range(1,31):app.level_ids.append("L%02d"%n)
 	app.progress={"schema_version":1,"completed":{},"unlocked":1,"current_level":1};app._capture_stage="plan";root.add_child(app);app.set_process(false)
 	app.start_level(1,false);await process_frame;await process_frame
@@ -38,7 +39,8 @@ func run() -> void:
 	await process_frame;await process_frame
 	check(count_script(app,Stage)==1 and count_script(app,Puppet)==initial_actor_ids.size() and stage.target_tapped.get_connections().size()==1,"repeated reflow leaves one Stage, one rig per actor and one target callback")
 	check(app.kernel.state_hash()==original_hash and app.kernel._canonical(app.kernel.definition)==original_definition,"text scale and locale reflow do not mutate gameplay or authored geometry")
-	check(stage.size==Vector2(984,656) and stage.world([0,0])==Vector2(20,36) and stage.world([24,28])==Vector2(932,592),"measured HUD retains original grid transform and3:2 stage rectangle")
+	check(stage.size.x>stage.size.y and Rect2(Vector2.ZERO,stage.size).has_point(stage.world([0,0])) and Rect2(Vector2.ZERO,stage.size).has_point(stage.world([24,28])) and stage.world([24,28]).x>stage.size.x*.85,"landscape projection fills the stage while keeping authored grid endpoints inside")
+	check(stage.unworld(stage.world([0,0])).is_equal_approx(Vector2.ZERO) and stage.unworld(stage.world([24,28])).is_equal_approx(Vector2(24,28)),"landscape picking inverts the same authoritative projection at both grid bounds")
 	var layers: Dictionary=stage._environment("ENV01")
 	var authored_layers: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/art/environments/ENV01/layers.json"))
 	check(layers==authored_layers and layers.get("layers",[]).size()==5,"runtime preserves complete authored layer metadata")

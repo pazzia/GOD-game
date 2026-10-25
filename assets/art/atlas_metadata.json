@@ -3844,5 +3844,62 @@
       1.0
     ],
     "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "environments/ENV01/landscape.png": {
+    "original": "2026-10-25 imagegen dimensional-cartoon scenic plate",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "size": [
+      1536,
+      1024
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/landscape-3d/provenance.json"
+  },
+  "environments/ENV02/landscape.png": {
+    "original": "2026-10-25 imagegen dimensional-cartoon scenic plate",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "size": [
+      1536,
+      1024
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/landscape-3d/provenance.json"
+  },
+  "environments/ENV03/landscape.png": {
+    "original": "2026-10-25 imagegen dimensional-cartoon scenic plate",
+    "crop": null,
+    "alpha_trim": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "size": [
+      1536,
+      1024
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/landscape-3d/provenance.json"
   }
 }

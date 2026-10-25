@@ -49,10 +49,11 @@ def main():
                 raise RuntimeError('Xvfb did not become ready.')
             for actor in actors:
                 image = out/(actor+'-keyposes.png')
+                image.unlink(missing_ok=True)
                 with tempfile.TemporaryDirectory(prefix='almost-god-rig-review-') as profile:
                     local = env.copy()
                     local['XDG_DATA_HOME'] = profile
-                    result = subprocess.run([godot, '--path', str(ROOT), '--audio-driver', 'Dummy',
+                    result = subprocess.run([godot, '--windowed', '--path', str(ROOT), '--audio-driver', 'Dummy',
                         'res://tools/puppet_viewer.tscn', '--', '--sheet-actor='+actor,
                         '--sheet-phase='+str(args.phase), '--capture='+str(image)],
                         env=local, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=60)

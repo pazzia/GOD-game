@@ -81,15 +81,15 @@ jobs:
             release_tag="android-preview-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           fi
           gh release create "$release_tag" \
-            "$APK_OUTPUT_DIR/AlmostGod-0.3.0-preview.apk" \
-            "$APK_OUTPUT_DIR/AlmostGod-0.3.0-preview.build.json" \
+            "$APK_OUTPUT_DIR/AlmostGod-0.4.0-preview.apk" \
+            "$APK_OUTPUT_DIR/AlmostGod-0.4.0-preview.build.json" \
             "$APK_OUTPUT_DIR/project-verification.json" \
             "$APK_OUTPUT_DIR/provenance.json" \
             "$APK_OUTPUT_DIR/SHA256SUMS.txt" \
             --target "$GITHUB_SHA" --prerelease \
             --title "Почти бог — Android preview ${GITHUB_RUN_NUMBER}.${GITHUB_RUN_ATTEMPT}" \
             --notes-file "$APK_OUTPUT_DIR/release-notes.md"
-          echo "[Download test APK](https://github.com/${GITHUB_REPOSITORY}/releases/download/${release_tag}/AlmostGod-0.3.0-preview.apk)" >> "$GITHUB_STEP_SUMMARY"
+          echo "[Download test APK](https://github.com/${GITHUB_REPOSITORY}/releases/download/${release_tag}/AlmostGod-0.4.0-preview.apk)" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Remove ephemeral test signing key
         if: always()

@@ -17,11 +17,16 @@ func run() -> void:
 	check(is_equal_approx(a.conductor_state().next_bar_mix_at,boundary),"last new phase before same boundary does not defer to a later bar")
 	a._process(boundary-a._transport_seconds);a._process(.45)
 	check(a.conductor_state().mix==a._phase_mix("LAW_SELECTION") and a._pending_mix.is_empty() and a.music.stream.get_instance_id()==identity,"last pre-bar phase wins on same synchronized timeline")
-	var exact_bar: float=2*4*60.0/96
+	var catalog: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_catalog.json"))
+	var bar_seconds: float=0
+	for track in catalog.files:
+		if track.id=="MUS_RIVER_BED":bar_seconds=float(track.meter[0])*60.0/float(track.tempo_bpm)
+	check(bar_seconds>0,"river theme declares valid meter and tempo")
+	var exact_bar: float=2*bar_seconds
 	a._process(exact_bar-a._transport_seconds);a.set_phase("PERFORMANCE")
-	check(a.conductor_state().next_bar_mix_at>exact_bar and is_equal_approx(a.conductor_state().next_bar_mix_at,exact_bar+2.5),"phase requested exactly on already reached bar schedules following bar")
+	check(a.conductor_state().next_bar_mix_at>exact_bar and is_equal_approx(a.conductor_state().next_bar_mix_at,exact_bar+bar_seconds),"phase requested exactly on already reached bar schedules following bar")
 	a._process(.2);a.set_phase("PLAN_SHOW");a.set_phase("PERFORMANCE")
-	check(a._pending_mix==a._phase_mix("PERFORMANCE") and is_equal_approx(a.conductor_state().next_bar_mix_at,exact_bar+2.5),"multiple same-clock requests retain final phase for one future boundary")
+	check(a._pending_mix==a._phase_mix("PERFORMANCE") and is_equal_approx(a.conductor_state().next_bar_mix_at,exact_bar+bar_seconds),"multiple same-clock requests retain final phase for one future boundary")
 	a.set_chapter_theme("ENV02");var incoming: int=a.music.stream.get_instance_id()
 	a.set_chapter_theme("ENV03");a.set_chapter_theme("ENV02")
 	a._process(1.2)

@@ -1,0 +1,19 @@
+{
+  "version": "0.4.0-preview",
+  "android_version_code": 5,
+  "status": "local_validation_passed",
+  "suites": 31,
+  "gdscript_suites": 27,
+  "gdscript_assertions": 17661,
+  "python_tests": 13,
+  "engine_errors": 0,
+  "runtime_digest": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "changed": [],
+  "physical_device_tested": false,
+  "design_review": "Accepted for test delivery; see docs/design/landscape-ux.md",
+  "release_status": "pending_github_actions",
+  "native_campaign_captures": 60,
+  "focused_ui_captures": 20,
+  "native_capture_engine_errors": 0,
+  "runtime_source_unchanged": true
+}

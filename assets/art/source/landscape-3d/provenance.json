@@ -1,0 +1,51 @@
+{
+  "version": "0.4.0-preview",
+  "generator": "OpenAI image_gen",
+  "user_direction": "Объёмный мультфильм, стилизация под 3D",
+  "method": "Original environment compositions generated, then restyled with imagegen using their local PNG as reference; no raster editing scripts. New files, originals retained.",
+  "rendering": "Static scenic plate under independently rendered authoritative water, object/actor layers, contact shadows and interaction targets. Legacy five environment layer sources retained for editing/reference.",
+  "limits": [
+    "Scenery has dimensional shading but runtime remains Godot2D; not a realtime3D world.",
+    "Existing character rig textures retain their authored identities and are not full3D models."
+  ],
+  "images": [
+    {
+      "scene": "ENV01",
+      "file": "assets/art/environments/ENV01/landscape.png",
+      "source": "assets/art/source/landscape-3d/ENV01.png",
+      "sha256": "781238ead697dfa451172276e92b3639206006d364eb8ebab1430c51b9bd214d",
+      "size": [
+        1536,
+        1024
+      ],
+      "composition_reference": "assets/art/source/landscape-3d/composition-drafts/ENV01.png",
+      "composition_reference_sha256": "2412ef0f0d72f18731e13d071ae946e8b2a7a96bdcc02dc0fe5d658fcc64df10"
+    },
+    {
+      "scene": "ENV02",
+      "file": "assets/art/environments/ENV02/landscape.png",
+      "source": "assets/art/source/landscape-3d/ENV02.png",
+      "sha256": "d3e4d0c7f2370a9bead846eb4b5ec659e3a390e6a92b6d4644f25ff10f4a8ce3",
+      "size": [
+        1536,
+        1024
+      ],
+      "composition_reference": "assets/art/source/landscape-3d/composition-drafts/ENV02.png",
+      "composition_reference_sha256": "014ac391fe33ad812b47c5ebd5f6add2d579bfe016a24452b2104ebec1857746"
+    },
+    {
+      "scene": "ENV03",
+      "file": "assets/art/environments/ENV03/landscape.png",
+      "source": "assets/art/source/landscape-3d/ENV03.png",
+      "sha256": "f082930002faf4a6873b6b437e682fb921eb28809b5b5f161a998f34ddadd2d8",
+      "size": [
+        1536,
+        1024
+      ],
+      "composition_reference": "assets/art/source/landscape-3d/composition-drafts/ENV03.png",
+      "composition_reference_sha256": "dfcd502f1d6c1f36b909f404c08dae699659856d0f348a7ce1bbf4b0cfc452d1"
+    }
+  ],
+  "prompt_summary": "Polished colorful 3D cartoon diorama, rounded chunky architecture, clean matte materials, soft global illumination, teal/coral/gold palette; wide empty central70% game floor; scenery upper25% and outer10%; no characters, UI, text, interactive route geometry. ENV01 sunny Mediterranean canal theatre; ENV02 warm magical patisserie; ENV03 inviting twilight archive.",
+  "final_edit_direction": "Restyle each composition into polished COLORFUL 3D CARTOON DIORAMA. Preserve broad empty central play floor and architecture far sides/top; rounded chunky toy-like forms, softly beveled surfaces, clean matte materials, subtle brass/copper sheen, soft global illumination, warm cinematic lighting, teal/coral/gold colors. No painterly strokes or paper texture, no noisy realism, no people/animals/UI/text/grid or functional route geometry. Opaque 1536x1024 background."
+}

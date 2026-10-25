@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "runtime_digest_sha256": "599c7267754b08ab50968a91af60bf5edf377c1676e262f5fc00af47d3385c79",
+  "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
   "runtime_files": {
-    "assets/art/atlas_metadata.json": "c142313f4d25dd725b1c2510ae7d951da8d50b1fb75b8a380b6c609a66b1936d",
+    "assets/art/atlas_metadata.json": "781be03c4606466d1f5ab56500a38dac2c195241312c6087bdfe2c8557de7372",
     "assets/art/characters/caramelka.png": "099774786996444e9fc85e892920346cd7436545c82960dcfbe8eb57334e1ed8",
     "assets/art/characters/caramelka.png.import": "e8e9ef724f7123fbd29cc7072434065340bd8286c78b7f44ea489d269902ef8b",
     "assets/art/characters/crowd_fisherman.png": "bf8789f995a93e842e32007a6dd03979f29a5fe1ef3218a53388f99124934e05",
@@ -374,7 +374,9 @@
     "assets/art/environments/ENV01/floor.png.import": "661d60298398eac366ec2cd4fc6c7be064440e560ed9fe70dbe2d29208d2cc00",
     "assets/art/environments/ENV01/foreground.png": "c9412eb5c6dd4c2e3e8b536fb90b8b32816231af09d43541bae89067455d98da",
     "assets/art/environments/ENV01/foreground.png.import": "f17acd5a9e2eb2beb7c33c82371d28ed8fb5dfb1ec7ea1296d1d9046d21155f4",
-    "assets/art/environments/ENV01/layers.json": "d05baed2d9f20abd539832d666258ecfab3cf3e7ff68ec70062d74627ffb9f26",
+    "assets/art/environments/ENV01/landscape.png": "781238ead697dfa451172276e92b3639206006d364eb8ebab1430c51b9bd214d",
+    "assets/art/environments/ENV01/landscape.png.import": "b3d4be9f3db3dc4c99275d297a841e3d50be7c33f378048890e8db5b9a61d157",
+    "assets/art/environments/ENV01/layers.json": "9a4810915631317e73a01f9d22c1def1cf07d690b3b0663c89f445dacc14b823",
     "assets/art/environments/ENV01/midground.png": "d8ed2212b555da5ffda94c880f381b71cb24c776ae32ab8eb1c06b4b80837793",
     "assets/art/environments/ENV01/midground.png.import": "fd2212e9502f413631eefd77c496e86aa12f4c4f7ab33267da3a125ad2a7c9a3",
     "assets/art/environments/ENV02/atmosphere.png": "a0e489990872af030e29cdad175933684ac9a7b5b6011a7a5776b261131fa7a3",
@@ -385,7 +387,9 @@
     "assets/art/environments/ENV02/floor.png.import": "e5202aa3e436f8e63831b2b5f787f9c39689d29ee343c1c4784753a7dae32c99",
     "assets/art/environments/ENV02/foreground.png": "f1bfc790f90cba27bf0edb660e5fdca724520452e3190bffa0e938d8d8e732ee",
     "assets/art/environments/ENV02/foreground.png.import": "84bdb0b97dc255d7664a9a51076184dcd0fd1c7eeeed37ddfbaf59625877c7a8",
-    "assets/art/environments/ENV02/layers.json": "a9f99c3f4ba67c37bf9ed9f3be5a47250504b22884dd545a49fd042fbc660963",
+    "assets/art/environments/ENV02/landscape.png": "d3e4d0c7f2370a9bead846eb4b5ec659e3a390e6a92b6d4644f25ff10f4a8ce3",
+    "assets/art/environments/ENV02/landscape.png.import": "7d319b9932aaaf07d5150da040ce1a14936823bbe88145703a9533a72cc67c2e",
+    "assets/art/environments/ENV02/layers.json": "e008bdc18ec392cce1d850805b6989671b71f180b8cdb632ff19f3dfec188873",
     "assets/art/environments/ENV02/midground.png": "0a4f3b96be9c63802f35397884a03e12c063d9e1dcc0e2cb60caaf8b78ae631a",
     "assets/art/environments/ENV02/midground.png.import": "fdba8bda3e6c2ae5e64ac29b8f86b0b06dbbf935d8a38e177399ee62392d222e",
     "assets/art/environments/ENV03/atmosphere.png": "c372a1bfbab3a192ed704c005fc78ca836ab93e3f28d35358ea7c072a77b195b",
@@ -396,7 +400,9 @@
     "assets/art/environments/ENV03/floor.png.import": "4d73d2fe0a3aad1102c71985ef1d1860577dca433cf0082f52f271fc918dfd88",
     "assets/art/environments/ENV03/foreground.png": "cfc3a0c5c5eb38aaf2c3ebb6d873b6530edc8ed38ff6193e3a0b1058f1868b64",
     "assets/art/environments/ENV03/foreground.png.import": "9ed51dc98eb519644cdacc45f190e8ee53224c41d09c3708ff71a44184cc903f",
-    "assets/art/environments/ENV03/layers.json": "1a7f59f4f705ebbae86c3f274944f12a1a290a3dfe9a66e0cd0109f397a3d5b9",
+    "assets/art/environments/ENV03/landscape.png": "f082930002faf4a6873b6b437e682fb921eb28809b5b5f161a998f34ddadd2d8",
+    "assets/art/environments/ENV03/landscape.png.import": "c137ab93349cb927901b23a96e14288db7999f0d37948d463840aa5cdb717d6d",
+    "assets/art/environments/ENV03/layers.json": "36d4f35c8b20faae8c8593b9ee660e64c8148dd330991cd470882ba5d5db0c1b",
     "assets/art/environments/ENV03/midground.png": "0c388a72be87613bbf364fc3733091a052486259b624ba33dce407bb0a03bede",
     "assets/art/environments/ENV03/midground.png.import": "9942eff572ee83388b913bf1d14f0e962d41914d06c619578479b61ed931d679",
     "assets/art/environments/bg_archive.png": "91e9c249e47ec82b8364e27b2d39439a64371a79a76fbfd00fdd45e0029f5797",
@@ -630,45 +636,45 @@
     "assets/audio/production/amb_river_water.ogg.import": "921aa6fc5351b362bdd5ff8d76fdd8a7497a61bee730e10fa64b365558faeed3",
     "assets/audio/production/amb_river_wind.ogg": "641340689fcfc0421d34b4e9d2b5a9ed8afff4485d4d154a439c7c8cbeee071a",
     "assets/audio/production/amb_river_wind.ogg.import": "a6c713beb41e6d70cad1eb75d08388a0cdfbec42f0d9bb26fc5ef7c2c14d2672",
-    "assets/audio/production/mus_album_full.ogg": "3280985b4b7967df9817781571d3f0f7f8103ab89b580059e5383b5cd2973ecf",
+    "assets/audio/production/mus_album_full.ogg": "82e87d716b6f7bd03a23c79dbad1fe478e6db1e060af7267432ce6f4a36d8ec2",
     "assets/audio/production/mus_album_full.ogg.import": "8bfa12d8b128877e4d036cc337266c43ffcddabce1c296b346a5532d9f0b5a86",
-    "assets/audio/production/mus_archive_bed.ogg": "23bff6a387e386bcffd5a569518dfbfd2fc34eb63d375d332936e93fadee2ec6",
+    "assets/audio/production/mus_archive_bed.ogg": "44cc62cfdb6a0629dffb64b2fad9551ba2789eb39b3956101ffea25d6de40759",
     "assets/audio/production/mus_archive_bed.ogg.import": "567688fdc27c613ba95eb79606f30c7996b691663b96866462d629f3aa119288",
-    "assets/audio/production/mus_archive_curiosity.ogg": "3b09e1b38c26a359d7be556c8457d7db5ae9a0777213bc1183d0961c48bccb13",
+    "assets/audio/production/mus_archive_curiosity.ogg": "94a133da332de2e1e3ffb8f39992907ff57e91f161c843cd3c6cfb76a40ef236",
     "assets/audio/production/mus_archive_curiosity.ogg.import": "a48398ef534b5664997f51717d5409e6e27a582ed8576431cd56371a9d341647",
-    "assets/audio/production/mus_archive_tension.ogg": "9f682658210eeeae3afebedb3cd56c21744392a7f8f64b2266a5f267e25a835d",
+    "assets/audio/production/mus_archive_tension.ogg": "e5bd7d1664c88965ab734ab738c525c0d131ae42c65c541b3a763cbcd6091e2c",
     "assets/audio/production/mus_archive_tension.ogg.import": "998469e59e696c5df463a807e579be02d8f74524f551749c518fd567f08f802a",
-    "assets/audio/production/mus_credits_full.ogg": "674724ddded011ec015302142e6523caf46375c928d8dfc46145ebf5b606af66",
+    "assets/audio/production/mus_credits_full.ogg": "6a64bb26ae4b1f1ed24d7bc5f67d290b472ab45fcf4077b61e3915f5422c2cf8",
     "assets/audio/production/mus_credits_full.ogg.import": "37e092ceb1ac9c8a3a402839ed36e7a300c20a1bbb67133209214d16f32d4fe0",
-    "assets/audio/production/mus_finale_bed.ogg": "e594beb8c4f2b5ee7d9d3dfd3833c29e4413f29d96dcff67dcd4f2eaf40047a8",
+    "assets/audio/production/mus_finale_bed.ogg": "c3133215f5178927a0c99b2cb4a95d0133295aaef8ab04671a56517e9dbac22a",
     "assets/audio/production/mus_finale_bed.ogg.import": "2a9fe0a6ff1897f4d2a2863bbe106fdc93b24bdb59e01718f7cc91a9415cc3af",
-    "assets/audio/production/mus_finale_curiosity.ogg": "decf1d61d5639a21a2f59f87c3f1b53c128c022192b5f4d486278408ad60f702",
+    "assets/audio/production/mus_finale_curiosity.ogg": "1adcad7b1a8767e6a73c7eff9a8baad3a2edc5e4c9b7d62efc9cd654f06775ca",
     "assets/audio/production/mus_finale_curiosity.ogg.import": "c95428f5828bd3f868f1b48c6cb10390b5385adfa69bd5ff703ffc9b6c46a345",
-    "assets/audio/production/mus_finale_tension.ogg": "36a025e2c3f5a92ced0d63bc26757ebb017b4451e3c4ee0823585a457a4b41f6",
+    "assets/audio/production/mus_finale_tension.ogg": "fd2fadcc1bfe39d1b2775e2d474389cf6c4f18afe0d7d0faa9727f5bfbebd312",
     "assets/audio/production/mus_finale_tension.ogg.import": "00dfdb9d9595d3f90809693c7bd288ac7446bbd6db3d501e03f6bc2134c9c63c",
-    "assets/audio/production/mus_kitchen_bed.ogg": "5d67bf4715f3eb19a7c341e1c98bae2f3cd26f8c4ab66483eb98d746554103ff",
+    "assets/audio/production/mus_kitchen_bed.ogg": "cc3f7e2fce7808ce57dfea3914f309d21d5fe929a3f168f3ed55db17f2a670bb",
     "assets/audio/production/mus_kitchen_bed.ogg.import": "641e8c903ce1c289715d7b77e5e103490454cb41a64548bc3643ba0791025b47",
-    "assets/audio/production/mus_kitchen_curiosity.ogg": "80693d2b2b40bd55b8b11b7045e25e1772cab58af80c345e509d83366d9e4b41",
+    "assets/audio/production/mus_kitchen_curiosity.ogg": "92f15897308177e143a89989fd5b94eaf43afbbcc9958398d15bbc9c06a91f97",
     "assets/audio/production/mus_kitchen_curiosity.ogg.import": "131aef2dc2e2d207fb78ed477fea4ebf9a62ee83a9e684c7a3c5f3456065afe8",
-    "assets/audio/production/mus_kitchen_tension.ogg": "c04bf3fb7eb3ff9f20c633692a6f64ba3081c7be8dfae8cf7df11f3a86ac362c",
+    "assets/audio/production/mus_kitchen_tension.ogg": "b381535d2ebaa7872ab18a68f25025d249008680274df21affb3e7951451c335",
     "assets/audio/production/mus_kitchen_tension.ogg.import": "25489900445a67eb8e6b08acc7a4b9f22917b67bbe4c435e9556c16a78ca7f4d",
-    "assets/audio/production/mus_main_full.ogg": "57bcdaf52819ab52766ef19d9f04c3d36d327513267f7f6fc4196f2dac79bca6",
+    "assets/audio/production/mus_main_full.ogg": "50d903eee6503f0cd525c3d9439cdf95bb01479508f31a6ca053b1ff277f4107",
     "assets/audio/production/mus_main_full.ogg.import": "6d2c5b381baa551d05adb2f351f24a3cd2affd42f59571db8b7103a63b7ff74e",
-    "assets/audio/production/mus_river_bed.ogg": "c0f329bf88975334f59ae53c46ccc4ccbf3dcf46b792dc55a9c3903da9d4cdb1",
+    "assets/audio/production/mus_river_bed.ogg": "531f8ad2238debea7f0e0baeb07b9334666df5038f3649aab7fe45940f12f203",
     "assets/audio/production/mus_river_bed.ogg.import": "36725f0c154bf17bedd7b94e81a0625ed5cd250b99f251f5666773ea3f3e1c06",
-    "assets/audio/production/mus_river_curiosity.ogg": "159f7826e9a3718f4a69cd359054dc60749ab666a5974fbf75db8245dc923e9c",
+    "assets/audio/production/mus_river_curiosity.ogg": "9ae93eee3ad9494d9091596adc0c3bc660eb29f6c5a2c18cad065b00da77c33b",
     "assets/audio/production/mus_river_curiosity.ogg.import": "f0e68c44f0fac09819c568e9f12d8af08fd66f5d43850c64654fe4a05d7e4176",
-    "assets/audio/production/mus_river_tension.ogg": "f9671e82599c7bcaa2fbd3ab182725143645200f7bbf83e9d47aeb1301713ef2",
+    "assets/audio/production/mus_river_tension.ogg": "663a5c3d703325295a021056309404d24ce332c821146d75cd3a2772bebd464a",
     "assets/audio/production/mus_river_tension.ogg.import": "4551c83807e1f38dc07fc1a4ce0acca748bd33fcf342ba9c9d5711ce68d67111",
-    "assets/audio/production/mus_stinger_chapter.wav": "58174590d706f53725f7ad3f6cb30ad828c41afe939cfc7b18802864901d08ee",
+    "assets/audio/production/mus_stinger_chapter.wav": "536c89b7d131b15efb5fd4d6922e1bc30c87b12f3435f4e4fb0efed1279bf541",
     "assets/audio/production/mus_stinger_chapter.wav.import": "6b89d70ebdf388854325528af2bf244da40b0b97f3fbeec3791b4dd4742bf39a",
-    "assets/audio/production/mus_stinger_final.wav": "783fc89bfebddb2c70a6811aec78c2e1ef9cf1f1212221301c290fd1171d68b7",
+    "assets/audio/production/mus_stinger_final.wav": "c71d9ef29f3bfe1f64a029ab77cee9d22e70801bd0742de3bf0e7c24d329aeee",
     "assets/audio/production/mus_stinger_final.wav.import": "aeffdad22280ca6919a71457525ab30d7128ada51a2c87935cf963361bff288b",
-    "assets/audio/production/mus_stinger_law.wav": "8c101b2a0485f6500f835e4ffca72e77dda6d8ee79a903801000f567bfeecb13",
+    "assets/audio/production/mus_stinger_law.wav": "e560698f789b65859ce546b948b46bbe87ac6500cefde7b3971cab2ecfe2e869",
     "assets/audio/production/mus_stinger_law.wav.import": "59e05964e7656c5c1dddb07ea569498ffdab433e6395f16c4c3fc71ea8d0ff96",
-    "assets/audio/production/mus_stinger_proof.wav": "ceb7a6011e23519ecb46810c62bb9ee2b5d36749cd6386e1a7a6d38e2fbc7448",
+    "assets/audio/production/mus_stinger_proof.wav": "3cb19594ecd198d777a2a97819a05bee3824d3b91f7a8a79f8b5884510087775",
     "assets/audio/production/mus_stinger_proof.wav.import": "3a8144c10d8cff65cdce67ef2e158d007b6cf61063c8eed2bd7b74afe1b2e8c8",
-    "assets/audio/production/mus_stinger_reveal.wav": "a0ccd636a9d29c7facf6ea608fc2780c7afc21080de3896a0facc059843b8fb6",
+    "assets/audio/production/mus_stinger_reveal.wav": "058a94b2711f05cc91aeac489ae186abe7de39ee4097bf5b39e75105d7655cf6",
     "assets/audio/production/mus_stinger_reveal.wav.import": "45e0bc3a526eba2d901978f5eb419aa53f7106d5d16f3a1cb02ca86d36af640a",
     "assets/audio/production/runtime_catalog.json": "e370a2f045ed9e5ad86ec5db80d7da865a879297b9590a911a9a3157cb6e7d02",
     "assets/audio/production/sfx_actor_cloth_a.wav": "77215db1d0ea2793ecbcc2835386324da991052d016588deea0da6701a297cf3",
@@ -1067,9 +1073,15 @@
     "assets/fonts/DejaVuSans-Bold.ttf.import": "a93b264b5aac528e1de701322bea4cebc77e4930e65dfd820f77925c9836fda3",
     "assets/fonts/DejaVuSans.ttf": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
     "assets/fonts/DejaVuSans.ttf.import": "c83845ad0040bcc8baace423ad68332ea99d773eec0f798ba46d8b56cc7df289",
+    "assets/fonts/LICENSE.txt": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+    "assets/fonts/NunitoSans-OFL.txt": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b",
+    "assets/fonts/NunitoSans-Variable.ttf": "f934d7142fb4784bf828da485b7dcbd90c0c80d514e9d49a5da0ed3a1ae2491d",
+    "assets/fonts/NunitoSans-Variable.ttf.import": "8d5fe08007de02654af8ea832bfa137367307e77af532315a5acd660a52d38cd",
+    "assets/fonts/NunitoSans-provenance.json": "5ea6347427c37b58d1398866dc3fe8072e07145148ca894d73b1555d73b9e93c",
     "core/content_validator.gd": "edab11b408defa8eaf51e84e2fe81ce560846860a176faf2f01ffef0153fa897",
     "core/simulation_kernel.gd": "38bf86532ae28c6838e7892d678df5397e6176e397c52412f9282ed6b8d67c1d",
-    "data/audio_catalog.json": "9f089eb13a6c4fd92312cff13b873550fddacd781c52ad239417d2395f9fb39c",
+    "data/audio_catalog.json": "ea0f6e5d16f371fe589d23c55f149811c0876b894fc6f321e7a6af442f6e1b26",
+    "data/audio_licenses.json": "8aef00d51ee01c2647ffeee492c50886fa6c2ef26605e574d5bf5be115ea0b58",
     "data/campaign.json": "21a81c55e71e0362f70fd84b8d8b3abd1d489af32b4065d04a7e5d91731ed5d6",
     "data/character_animations.json": "3890cddf86095e0a1f6549057a6034c1df52fc1901910ec689c4c0ab89374e76",
     "data/levels/L01.json": "0db609cf8661eb93ae4b2611513290e35f7d98a78288b76da10d8ce0112bef17",
@@ -1102,24 +1114,26 @@
     "data/levels/L28.json": "b6a33e2283c5a3a1f92f0070b4fe5880fa68b6e9b0bd261ff5ef618333f7dbb9",
     "data/levels/L29.json": "e5f7292122992b6c6193a63c9de8d9803f339a5cfee0267323d11823f4bb6c0c",
     "data/levels/L30.json": "0dccfcfd9d2121088a43ba499293f947f35f4aa76a2ca7af1f92435757b6f087",
-    "data/localization/en.json": "67e97ef59082af42b7d5530e32c8390034654f71d0051bb964e628b184e044a7",
-    "data/localization/ru.json": "6e0768c179fde3e61aadee671aece2d8a72e1b9a6c679566255f046f47a05a44",
+    "data/localization/en.json": "d3660b3c5a4d3e60c0a3a4b2c3a244afbf31d3c44b9e20f8b4589405d9d985b0",
+    "data/localization/ru.json": "8bccfe33b306a05d6e08960cec01b1a2f2cf94d4d588c06ae027cd0aec3bf5bd",
     "data/music_composition_seed.json": "e1fa5ca7e58ce480b60b8617aca80f10115bfb3b439261216acb9c4d314c8917",
-    "data/settings_default.json": "a0d14259251b7d865e59bd417f195c65e64f1c109b3b7bd7e3f831a579ccd4cc",
+    "data/settings_default.json": "f548b0dccf2643e52ed95ddea7092f720044472bc630d9a8da5cd628fbc1f86e",
     "default_bus_layout.tres": "f3ae64871fd45fdf27300f6ccaab0cd958758e0be4332aa73100d3d6a05a3ad5",
-    "export_presets.cfg": "6de4dcab481062022a6db51a4740ce94b04d0e7c18a81b9f10bb5a3a2e04cc74",
+    "export_presets.cfg": "88118675d402607d716b1f44d4d947a8a730565868f3fdbfe69cd7b0f0d2befb",
     "main.tscn": "3408e191e6c364b3d1b6cbd4b922157e1376676f7588ef6cb287fb6dbb55a925",
     "presentation/character_acting.gd": "653d570561f53ad83174c17ed11767d91c58133dc64ab7a0377b7e4b29e7c065",
     "presentation/character_puppet.gd": "8f0b982da9048d43872ed37469c8287d940606d666bfb299a7a6cba9e70287ef",
-    "presentation/game.gd": "3fbc0b1757162adf3b817a0772a514e9660a36cff4f864d3cf3754d390299783",
+    "presentation/game.gd": "44d2af346c574f981dd19ac178c17d7c6361c6895d6b974badc3c07c13521135",
+    "presentation/quest_guide.gd": "313cf20c2811ef3b869e4f954d8c469a1457c9228ad8d962f720f82f6ec28c0d",
     "presentation/resources/slider_knob.svg": "953321811b645ae9db5a6f912db46bc974d3840a5725db238f7981e6a15808ed",
     "presentation/resources/slider_knob.svg.import": "f750e7e48646cfa10608ffb2275e8f9bbebc008ce0953c0651bd7f9dc8fd22bc",
     "presentation/resources/toggle_off.svg": "cde23fd7d0bbd8dbc0ca3ae33354fd0a279c871110aaf0acfe15db20fa60c973",
     "presentation/resources/toggle_off.svg.import": "82f2c2962c0f45898063259885eb2655d7b151df0da3bf8f8f7588b2210e37e3",
     "presentation/resources/toggle_on.svg": "f4997facced662965390da3f1b72d1d9c9f0ebc296be8cf2a5dbff1dd156d7ad",
     "presentation/resources/toggle_on.svg.import": "97de9473ec2f7c2dc823dad00841ba0e29f3590189b5e7141388b3b65f476fe1",
-    "presentation/stage_view.gd": "3b3e905c01258787dbdeca9ef1d6e83410eca6d0fb47aaf7a08f7c5719f27658",
-    "project.godot": "b428f1d3960aba92904f04afe396e8dc17a22cf253d1be1fda9a08a6b505c8bf",
+    "presentation/stage_view.gd": "596a7c690b8a986fcc513ef59e674a0260bf33b63c6101545c6250d56ce16ff0",
+    "presentation/theme.gd": "734d588866f1fe813d479c2bd3b7b00198c910783abfecca0370eea491538697",
+    "project.godot": "cbe289d02a41a9a1ba44ac39cb3007a8708a70b21842589dc69675711fc73cb7",
     "services/audio_service.gd": "4b7a5a5416a6e6a28bec7be9a725eb61b2f13076964480b8d3eef6ed4ebb8dc4",
     "services/save_service.gd": "d54668933f01a0a64cb0e1017dc8f22586def58dc3f8a7dd9dcec44b156800d7"
   },
@@ -1130,31 +1144,31 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.13,
-      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.006s\n\nOK\n"
+      "elapsed_seconds": 0.76,
+      "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.358s\n\nOK\n"
     },
     {
       "name": "content",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.02,
-      "output": "{\n  \"kind\": \"content_cross_file_validation\",\n  \"status\": \"passed\",\n  \"levels\": 30,\n  \"replays\": 46,\n  \"alternatives\": 16,\n  \"localization_keys_per_language\": 616,\n  \"referenced_entity_asset_ids\": 32,\n  \"errors\": [],\n  \"scope\": \"References, text and authoring contracts; no gameplay or visual acceptance\"\n}\n"
+      "elapsed_seconds": 0.11,
+      "output": "{\n  \"kind\": \"content_cross_file_validation\",\n  \"status\": \"passed\",\n  \"levels\": 30,\n  \"replays\": 46,\n  \"alternatives\": 16,\n  \"localization_keys_per_language\": 618,\n  \"referenced_entity_asset_ids\": 32,\n  \"errors\": [],\n  \"scope\": \"References, text and authoring contracts; no gameplay or visual acceptance\"\n}\n"
     },
     {
       "name": "art-files",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.8,
-      "output": "{\n  \"kind\": \"art_file_integrity\",\n  \"status\": \"passed\",\n  \"raster_exports\": 269,\n  \"svg_exports\": 32,\n  \"portrait_exports\": 81,\n  \"layer_stacks_with_metadata\": 3,\n  \"errors\": [],\n  \"limits\": \"Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability.\"\n}\n"
+      "elapsed_seconds": 4.38,
+      "output": "{\n  \"kind\": \"art_file_integrity\",\n  \"status\": \"passed\",\n  \"raster_exports\": 272,\n  \"svg_exports\": 32,\n  \"portrait_exports\": 81,\n  \"layer_stacks_with_metadata\": 3,\n  \"errors\": [],\n  \"limits\": \"Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability.\"\n}\n"
     },
     {
       "name": "test_kernel.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.33,
+      "elapsed_seconds": 0.55,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nKERNEL TESTS: 31 checks; 0 failures\n"
     },
     {
@@ -1162,7 +1176,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.24,
+      "elapsed_seconds": 0.43,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nVALIDATION TESTS: 26 checks; 0 failures\n"
     },
     {
@@ -1170,7 +1184,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.33,
+      "elapsed_seconds": 0.68,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nS2 REGRESSIONS: 37 checks; 0 failures\n"
     },
     {
@@ -1178,7 +1192,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 3.58,
+      "elapsed_seconds": 9.41,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCAMPAIGN TESTS: 30 levels; 16 alternatives; 732 checks; 0 failures\n"
     },
     {
@@ -1186,7 +1200,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.32,
+      "elapsed_seconds": 0.36,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSERVICE TESTS: 26 checks; 0 failures\n"
     },
     {
@@ -1194,7 +1208,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 2.28,
+      "elapsed_seconds": 4.77,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nINDEPENDENT SERVICE BOUNDARIES: 31 checks; 0 failures; audio clock simulated1200s, not listening\n"
     },
     {
@@ -1202,7 +1216,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.7,
+      "elapsed_seconds": 1.32,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCLIENT LOADING: 12 checks; 0 failures\n"
     },
     {
@@ -1210,7 +1224,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.14,
+      "elapsed_seconds": 0.28,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSAVE RECOVERY EDGES: 11 checks; 0 failures\n"
     },
     {
@@ -1218,7 +1232,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.32,
+      "elapsed_seconds": 0.47,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO CONDUCTOR: 21 checks; 0 failures\n"
     },
     {
@@ -1226,15 +1240,15 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.62,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO TRANSPORT EDGES: 13 checks; 0 failures\n"
+      "elapsed_seconds": 0.97,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO TRANSPORT EDGES: 14 checks; 0 failures\n"
     },
     {
       "name": "test_audio_shutdown.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.7,
+      "elapsed_seconds": 0.85,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO SHUTDOWN: 5 checks; 0 failures\n"
     },
     {
@@ -1242,7 +1256,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.16,
+      "elapsed_seconds": 1.26,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO SHUTDOWN EDGES: 8 checks; 0 failures\n"
     },
     {
@@ -1250,7 +1264,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.52,
+      "elapsed_seconds": 1.13,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO SHUTDOWN DRAIN: 8 checks; 0 failures\n"
     },
     {
@@ -1258,7 +1272,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.53,
+      "elapsed_seconds": 3.68,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nWORKBENCH: 72 checks; 0 failures\n"
     },
     {
@@ -1266,7 +1280,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.32,
+      "elapsed_seconds": 0.77,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPUPPET: 43 checks; 0 failures; 9 actual part rigs\n"
     },
     {
@@ -1274,7 +1288,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.14,
+      "elapsed_seconds": 0.29,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPUPPET EDGES: 9 checks; 0 failures\n"
     },
     {
@@ -1282,7 +1296,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.32,
+      "elapsed_seconds": 0.36,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCHARACTER ACTING: 1069 checks; 0 failures; 47 special clips\n"
     },
     {
@@ -1290,7 +1304,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.88,
+      "elapsed_seconds": 2.1,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCHARACTER ANIMATION CONTRACT: 126 checks; 0 failures\n"
     },
     {
@@ -1298,23 +1312,23 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 13.43,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE LAYOUT: 5444 checks across 776 layouts; 0 failures\n"
+      "elapsed_seconds": 29.83,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE LAYOUT: 10752 checks across 824 layouts; 0 failures\n"
     },
     {
       "name": "test_stage_boundaries.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.54,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE BOUNDARIES: 58 checks; 0 failures\n"
+      "elapsed_seconds": 3.76,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE BOUNDARIES: 59 checks; 0 failures\n"
     },
     {
       "name": "test_presentation.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.51,
+      "elapsed_seconds": 1.01,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPRESENTATION: 32 checks; 0 failures\n"
     },
     {
@@ -1322,7 +1336,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.51,
+      "elapsed_seconds": 0.92,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE TARGETS: 12 checks; 0 failures\n"
     },
     {
@@ -1330,7 +1344,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.51,
+      "elapsed_seconds": 0.91,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE INPUT EDGES: 7 checks; 0 failures; 9 native input events\n"
     },
     {
@@ -1338,31 +1352,39 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 9.33,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE POINTER UI: 31 checks; 0 failures; 44 pointer events\n"
+      "elapsed_seconds": 10.06,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE POINTER UI: 35 checks; 0 failures; 46 pointer events\n"
     },
     {
       "name": "test_touch_capability.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.56,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nTOUCH CAPABILITY: 8 checks; 0 failures; 42 native touch events\n"
+      "elapsed_seconds": 1.67,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nTOUCH CAPABILITY: 13 checks; 0 failures; 28 native touch events\n"
     },
     {
       "name": "test_complex_ui_journeys.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 12.56,
+      "elapsed_seconds": 13.67,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nUI JOURNEY L11 actual initial→victory; 7 UI commands\nUI JOURNEY L21 actual initial→victory; 11 UI commands\nUI JOURNEY L30 actual initial→victory; 30 UI commands\nCOMPLEX UI JOURNEYS: 59 checks; 0 failures; 290 pointer events\n"
+    },
+    {
+      "name": "test_quest_journey.gd",
+      "exit_code": 0,
+      "process_exit_code": 0,
+      "engine_errors": [],
+      "elapsed_seconds": 3.71,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nQUEST JOURNEY: 4411 checks; 410 real states; 0 failures\n"
     },
     {
       "name": "audio-files",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 9.91,
+      "elapsed_seconds": 28.36,
       "output": "{\n  \"kind\": \"audio_file_measurements\",\n  \"status\": \"passed\",\n  \"files\": 222,\n  \"music_runtime_files\": 15,\n  \"stingers\": 5,\n  \"voices\": 90,\n  \"sfx_variants\": 106,\n  \"ambiences\": 6,\n  \"errors\": [],\n  \"advisories\": [],\n  \"limits\": \"No subjective listening, speaker/headphone, mobile interruption or 20-minute scene-mix acceptance.\"\n}\n"
     }
   ],

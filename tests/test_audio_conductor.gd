@@ -21,8 +21,12 @@ func run() -> void:
 	check(audio.music.stream.get_instance_id()==timeline_id,"crossfade preserves incoming synchronized timeline")
 	audio.set_phase("PERFORMANCE")
 	var scheduled: float=audio.conductor_state().next_bar_mix_at
-	check(is_equal_approx(scheduled,2.5),"96 BPM four-beat river theme schedules next bar at 2.5 seconds")
-	audio._process(1.29)
+	var catalog: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_catalog.json"))
+	var expected_bar: float=0
+	for track in catalog.files:
+		if track.id=="MUS_RIVER_BED":expected_bar=float(track.meter[0])*60.0/float(track.tempo_bpm)
+	check(expected_bar>0 and is_equal_approx(scheduled,expected_bar),"river conductor schedules the next bar from the authored music tempo and meter")
+	audio._process(scheduled-audio._transport_seconds-.01)
 	check(is_zero_approx(audio.conductor_state().mix[2]),"tension remains silent before the scheduled bar")
 	audio._process(.01)
 	check(audio.conductor_state().mix[2]>0 and audio.conductor_state().mix[2]<.1,"phase fade begins at the next bar")

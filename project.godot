@@ -1,23 +1,23 @@
-; Almost God — native portrait mobile game
+; Almost God — native landscape mobile game
 config_version=5
 [application]
 config/name="Почти бог"
-config/version="0.3.0-preview"
+config/version="0.4.0-preview"
 config/icon="res://assets/art/ui/app_icon_1024.png"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 [display]
-window/size/viewport_width=1080
-window/size/viewport_height=1920
-window/size/window_width_override=540
-window/size/window_height_override=960
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/handheld/orientation=1
+window/handheld/orientation=4
 [rendering]
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.96, 0.92, 0.82, 1)
+environment/defaults/default_clear_color=Color(0.859, 0.945, 0.957, 1)
 textures/vram_compression/import_etc2_astc=true
 [audio]
 default_bus_layout="res://default_bus_layout.tres"

@@ -7,7 +7,7 @@
     "sound_enabled": true,
     "categories": {
       "Music": {
-        "volume": 0.45,
+        "volume": 0.42,
         "enabled": true
       },
       "SFX": {
