@@ -1,0 +1,77 @@
+{
+  "failed_run_id": 40204756671,
+  "failed_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40204756671",
+  "artifact": "android-build-logs-40204756671-1",
+  "download_exit_code": 0,
+  "download_output": "",
+  "collected_at": "2026-10-25T15:07:21.077552+00:00",
+  "diagnostic_run_id": "40205418584",
+  "filenames": [
+    "AlmostGod-0.4.0-preview.export.log",
+    "AlmostGod-0.4.0-preview.import.log",
+    "AlmostGod-0.4.0-preview.keytool.log",
+    "AlmostGod-0.4.0-preview.signature.log",
+    "build.log",
+    "import.log",
+    "verification.log"
+  ],
+  "json_character_limit": 20000,
+  "files": [
+    {
+      "file": "AlmostGod-0.4.0-preview.export.log",
+      "size_bytes": 6291,
+      "line_count": 131,
+      "error_lines": "",
+      "tail_last_80_lines": "ADDING: res/layout/godot_app_layout.xml\nADDING: res/layout/notification_template_part_chronometer.xml\nADDING: res/layout/notification_template_part_time.xml\nADDING: res/layout/remote_godot_fragment_layout.xml\nADDING: res/layout/snackbar.xml\nADDING: res/layout/splash_screen_view.xml\nADDING: res/mipmap-anydpi-v26/icon.xml\nADDING: res/mipmap-hdpi-v4/icon.webp\nADDING: res/mipmap-hdpi-v4/icon_background.webp\nADDING: res/mipmap-hdpi-v4/icon_foreground.webp\nADDING: res/mipmap-hdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-mdpi-v4/icon.webp\nADDING: res/mipmap-mdpi-v4/icon_background.webp\nADDING: res/mipmap-mdpi-v4/icon_foreground.webp\nADDING: res/mipmap-mdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xhdpi-v4/icon.webp\nADDING: res/mipmap-xhdpi-v4/icon_background.webp\nADDING: res/mipmap-xhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xxhdpi-v4/icon.webp\nADDING: res/mipmap-xxhdpi-v4/icon_background.webp\nADDING: res/mipmap-xxhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xxhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xxxhdpi-v4/icon.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_background.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap/icon.webp\nADDING: res/mipmap/icon_background.webp\nADDING: res/mipmap/icon_foreground.webp\nADDING: res/mipmap/icon_monochrome.webp\nADDING: res/xml/godot_provider_paths.xml\nADDING: resources.arsc\nADDING: DebugProbesKt.bin\nADDING: kotlin/annotation/annotation.kotlin_builtins\nADDING: kotlin/collections/collections.kotlin_builtins\nADDING: kotlin/concurrent/atomics/atomics.kotlin_builtins\nADDING: kotlin/coroutines/coroutines.kotlin_builtins\nADDING: kotlin/internal/internal.kotlin_builtins\nADDING: kotlin/kotlin.kotlin_builtins\nADDING: kotlin/ranges/ranges.kotlin_builtins\nADDING: kotlin/reflect/reflect.kotlin_builtins\n[   0% ] \u001b[90m\u001b[1mexport\u001b[22m | Adding files...\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mexport\u001b[22m | Aligning APK...\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mexport\u001b[22m | Signing debug APK...\u001b[39m\u001b[0m\nCould not find version of build tools that matches Target SDK, using 31.0.2\nSigning binary using: \n/home/runner/work/_temp/god-native-tools/android-sdk/build-tools/31.0.2/apksigner sign --verbose --ks <REDACTED> --ks-pass pass:<REDACTED> --ks-key-alias <REDACTED> /home/runner/work/GOD-game/GOD-game/build/ci-android/AlmostGod-0.4.0-preview.apk\nSigned\n\n[  99% ] \u001b[90m\u001b[1mexport\u001b[22m | Verifying APK...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mexport\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
+      "excerpt_truncated": true
+    },
+    {
+      "file": "AlmostGod-0.4.0-preview.import.log",
+      "size_bytes": 110307,
+      "line_count": 1639,
+      "error_lines": "",
+      "tail_last_80_lines": "[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | front_left_leg.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | collar_bell.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | Finalizing Asset Import...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Started (Re)Importing Assets (532 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Executing post-reimport operations...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Loading editor (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading editor layout...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading docks...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
+      "excerpt_truncated": true
+    },
+    {
+      "file": "AlmostGod-0.4.0-preview.keytool.log",
+      "size_bytes": 164,
+      "line_count": 2,
+      "error_lines": "",
+      "tail_last_80_lines": "Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days\n\tfor: CN=Almost God Preview, O=Local Development, C=US",
+      "excerpt_truncated": false
+    },
+    {
+      "file": "AlmostGod-0.4.0-preview.signature.log",
+      "size_bytes": 908,
+      "line_count": 16,
+      "error_lines": "",
+      "tail_last_80_lines": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): false\nVerified using v3 scheme (APK Signature Scheme v3): true\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\nSigner #1 certificate DN: CN=Almost God Preview, O=Local Development, C=US\nSigner #1 certificate SHA-256 digest: 725dff01fc3a5ff68592b5ea5caf233bc164062482e13b1abe48e9d561c819d7\nSigner #1 certificate SHA-1 digest: ca3be7dbf23acb0fee405321265c2f44557a146c\nSigner #1 certificate MD5 digest: 1c038d4eaa2e44608f63c14f3f548fa7\nSigner #1 key algorithm: RSA\nSigner #1 key size (bits): 2048\nSigner #1 public key SHA-256 digest: 09aab71d95a73b8d18886a9b48c92591066097cffd3f741b1451d3e3e70c9d06\nSigner #1 public key SHA-1 digest: fd26bed90181765caf302d90eabefe5b1d589670\nSigner #1 public key MD5 digest: 6ed18133eec2fed6a6e1e8f64f6942f4",
+      "excerpt_truncated": false
+    },
+    {
+      "file": "build.log",
+      "size_bytes": 362,
+      "line_count": 10,
+      "error_lines": "",
+      "tail_last_80_lines": "Importing isolated native project…\nExporting signed arm64 debug APK…\n{\n  \"apk\": \"/home/runner/work/GOD-game/GOD-game/build/ci-android/AlmostGod-0.4.0-preview.apk\",\n  \"size_bytes\": 122617683,\n  \"sha256\": \"6a2169b65ae5fcbc9d91329f72fb77a837e0ddccbd9f0c9aa2e7ffeebbea8d89\",\n  \"signature_verified\": true,\n  \"level_count\": 30,\n  \"physical_device_tested\": false\n}",
+      "excerpt_truncated": false
+    },
+    {
+      "file": "import.log",
+      "size_bytes": 112261,
+      "line_count": 1673,
+      "error_lines": "",
+      "tail_last_80_lines": "[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | front_left_leg.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | collar_bell.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | Finalizing Asset Import...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Started (Re)Importing Assets (532 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Executing post-reimport operations...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Loading editor (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading editor layout...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading docks...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
+      "excerpt_truncated": true
+    },
+    {
+      "file": "verification.log",
+      "size_bytes": 902,
+      "line_count": 32,
+      "error_lines": "",
+      "tail_last_80_lines": "PASS verification-tools\nPASS content\nPASS art-files\nPASS test_kernel.gd\nPASS test_validation.gd\nPASS test_s2_regressions.gd\nPASS test_campaign.gd\nPASS test_services.gd\nPASS test_service_boundaries.gd\nPASS test_client_loading.gd\nPASS test_save_recovery_edges.gd\nPASS test_audio_conductor.gd\nPASS test_audio_transport_edges.gd\nPASS test_audio_shutdown.gd\nPASS test_audio_shutdown_edges.gd\nPASS test_audio_shutdown_drain.gd\nPASS test_workbench.gd\nPASS test_puppet.gd\nPASS test_puppet_edges.gd\nPASS test_character_acting.gd\nPASS test_character_animation_contract.gd\nPASS test_layout.gd\nPASS test_stage_boundaries.gd\nPASS test_presentation.gd\nPASS test_stage_targets.gd\nPASS test_stage_input_edges.gd\nPASS test_ui.gd\nPASS test_touch_capability.gd\nPASS test_complex_ui_journeys.gd\nPASS test_quest_journey.gd\nPASS audio-files\npassed /home/runner/work/GOD-game/GOD-game/tests/reports/project-verification.json",
+      "excerpt_truncated": false
+    }
+  ]
+}
