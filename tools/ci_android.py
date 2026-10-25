@@ -37,8 +37,13 @@ def validate_reports(verification, build, expected_digest, apk):
     game_activities = [entry.get("attributes", {}) for entry in build.get("manifest", [])
                        if entry.get("element") == "activity"
                        and entry.get("attributes", {}).get("name") == "com.godot.game.GodotApp"]
-    if len(game_activities) != 1 or game_activities[0].get("screenOrientation") != 6:
-        raise RuntimeError("The exported Android activity must use sensorLandscape orientation.")
+    # Godot 4.7.2 maps SCREEN_SENSOR_LANDSCAPE (project enum 4) to Android
+    # userLandscape (11), respecting the user's landscape rotation preference.
+    # platform/android/export/gradle_export_util.cpp at tag 4.7.2-stable.
+    if len(game_activities) != 1 or game_activities[0].get("screenOrientation") != 11:
+        actual_orientations = [activity.get("screenOrientation") for activity in game_activities]
+        raise RuntimeError("The exported Godot activity must use userLandscape (11), the Godot 4.7.2 "
+                           f"SCREEN_SENSOR_LANDSCAPE mapping; found {actual_orientations}.")
     if build.get("sha256") != hashlib.sha256(apk.read_bytes()).hexdigest():
         raise RuntimeError("APK bytes do not match the build report.")
     if build.get("size_bytes") != apk.stat().st_size:
@@ -113,6 +118,8 @@ def main():
         f"{hashlib.sha256((output / name).read_bytes()).hexdigest()}  {name}\n" for name in filenames))
     (output / "release-notes.md").write_text(
         "Тестовая сборка «Почти бог» 0.4.0-preview для Android 10+ / ARM64.\n\n"
+        "В 0.4: горизонтальная игра на весь экран, объёмные мультяшные фоны с 2D-персонажами, "
+        "спокойная фоновая музыка и подсказки по этапам с явным переходом к следующему уровню.\n\n"
         "Скачайте `AlmostGod-0.4.0-preview.apk` ниже и разрешите установку из выбранного источника.\n\n"
         "Каждый запуск CI использует новый временный тестовый сертификат. Если уже установлена другая "
         "сборка `com.almostgod.game.preview`, для установки потребуется удалить её; это удаляет её локальные сохранения. "

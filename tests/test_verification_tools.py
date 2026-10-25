@@ -33,7 +33,7 @@ class VerificationDiagnostics(unittest.TestCase):
             build = {'source_runtime_digest_sha256': 'source-fixture', 'signature_verified': True,
                      'new_debug_identity': True, 'sha256': checksum, 'size_bytes': apk.stat().st_size,
                      'manifest': [{'element': 'activity', 'attributes':
-                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 6}}],
+                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 11}}],
                      'source_verification': {'missing': [], 'mismatched': []}}
             ci_android.validate_reports(verification, build, 'source-fixture', apk)
             for mode in ('missing', 'duplicate', 'zero'):
@@ -46,10 +46,13 @@ class VerificationDiagnostics(unittest.TestCase):
                     broken['checks'] = []
                 with self.subTest(mode=mode), self.assertRaises(RuntimeError):
                     ci_android.validate_reports(broken, build, 'source-fixture', apk)
-            portrait = json.loads(json.dumps(build))
-            portrait['manifest'][0]['attributes']['screenOrientation'] = 1
-            with self.assertRaisesRegex(RuntimeError, 'sensorLandscape'):
-                ci_android.validate_reports(verification, portrait, 'source-fixture', apk)
+            for orientation in (1, 4, 6, 10, None):
+                # Portrait and unrestricted sensor modes must never pass. The
+                # legacy value 6 is also not the pinned exporter's output (11).
+                invalid = json.loads(json.dumps(build))
+                invalid['manifest'][0]['attributes']['screenOrientation'] = orientation
+                with self.subTest(orientation=orientation), self.assertRaisesRegex(RuntimeError, 'userLandscape.*found'):
+                    ci_android.validate_reports(verification, invalid, 'source-fixture', apk)
 
     def test_zero_exit_leak_warnings_are_errors(self):
         for warning in (

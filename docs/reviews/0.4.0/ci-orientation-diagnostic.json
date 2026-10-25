@@ -1,0 +1,13 @@
+{
+  "failed_run": "https://github.com/pazzia/GOD-game/actions/runs/40204756671",
+  "console_diagnostic_run": "https://github.com/pazzia/GOD-game/actions/runs/40205952598",
+  "diagnostic_branch": "codex/diagnose-android-0.4",
+  "failure": "Post-export CI gate expected Android screenOrientation=6. Godot4.7.2 exports SCREEN_SENSOR_LANDSCAPE as Android USER_LANDSCAPE=11.",
+  "verification_suites_passed": 31,
+  "apk_export_and_signature_passed": true,
+  "resolution": "Require Android userLandscape=11 for the pinned Godot4.7.2 exporter. Preserve portrait/unrestricted rejection. No runtime changes.",
+  "sources": [
+    "https://github.com/godotengine/godot/blob/4.7.2-stable/platform/android/export/gradle_export_util.cpp",
+    "https://github.com/godotengine/godot/blob/4.7.2-stable/platform/android/java/lib/src/org/godotengine/godot/GodotIO.java"
+  ]
+}
