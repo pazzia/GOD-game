@@ -1,0 +1,9 @@
+{
+  "assetdownloadURL": "https://github.com/pazzia/GOD-game/releases/download/v0.3.0-preview/Almost-God-0.3.0-preview-source.zip",
+  "checksumdownloadURL": "https://github.com/pazzia/GOD-game/releases/download/v0.3.0-preview/SHA256SUMS.txt",
+  "releaseURL": "https://github.com/pazzia/GOD-game/releases/tag/v0.3.0-preview",
+  "sha": "b1e240f8545687d20fa4a2e97fbc966950718959ee6706d239edcf4a503f4fc5",
+  "size": 178087466,
+  "sourcecommit": "ca910c954d8b6e5b7301a18ba217e0c825b54d2b",
+  "status": "published"
+}
