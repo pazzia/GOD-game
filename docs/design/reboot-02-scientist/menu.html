@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='20' fill='%23252647'/%3E%3Ccircle cx='24' cy='24' r='8' fill='%23F7D760'/%3E%3C/svg%3E">
+  <title>Почти бог — учёный, вариант меню</title>
+  <link rel="stylesheet" href="../reboot-01/mocks/style.css">
+  <style>
+    html,body{width:100%;height:100%;overflow:hidden}
+    .frame-space{width:100%;height:100%;aspect-ratio:auto;border-radius:0;box-shadow:none}
+    .scientist-cutout{left:770px;top:15px;width:620px;height:705px;filter:drop-shadow(0 10px 4px #25264725)}
+    .menu-copy .menu-footnote{font-size:20px;gap:14px;white-space:nowrap}
+    .menu-copy .eyebrow{letter-spacing:3.6px}
+    .menu-emblem{top:668px;font-size:19px}
+    .float{animation:none!important}
+  </style>
+</head>
+<body class="capture">
+  <main class="frame-space" aria-label="Макет стартового меню с учёным">
+    <div class="game-frame" id="game-frame" data-screen="menu">
+      <img class="scene-plate" src="../reboot-01/assets/scene/canal.png" alt="Солнечный город у канала" draggable="false">
+      <div class="menu-shade"></div>
+      <div class="hero-halo"></div>
+      <img class="character scientist-cutout" src="scientist-cutout.png" alt="Профессор Феликс — зрелый учёный с седой бородой, очками и исследовательским прибором" draggable="false">
+      <img class="character actor-plum" style="left:1272.125px;top:104px;width:235.75px;height:205px" src="../reboot-01/assets/characters/plum-cutout.png" alt="Плюм" draggable="false">
+      <div class="scene-hud">
+        <div class="menu-copy">
+          <span class="eyebrow">МИР НЕВОЗМОЖНЫХ ОТКРЫТИЙ</span>
+          <h1 class="wordmark">ПОЧТИ<span class="second">Б<em>О</em>Г</span></h1>
+          <p class="menu-description">Сначала — смелый опыт.<br>Потом — совсем другой мир.</p>
+          <button class="game-button" type="button"><span>Начать историю</span><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button>
+          <div class="menu-footnote"><span>Профессор Феликс и Плюм</span><i></i><span>Первое открытие</span></div>
+        </div>
+        <div class="top-right"><button type="button" class="round-control" aria-label="Настройки"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m10 2-.7 3-2 .9L4.6 5 2 9l2.2 2v2L2 15l2.6 4 2.7-.9 2 .9.7 3h4l.7-3 2-.9 2.7.9 2.6-4-2.2-2v-2L22 9l-2.6-4-2.7.9-2-.9L14 2Z"/></svg></button></div>
+        <div class="menu-emblem"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></svg>НЕВОЗМОЖНОЕ ВОЗМОЖНО</div>
+      </div>
+    </div>
+  </main>
+  <script>
+    function resize(){
+      const frame=document.getElementById('game-frame');
+      const scale=Math.min(innerWidth/1560,innerHeight/720);
+      frame.style.transform=`translate(${(innerWidth-1560*scale)/2}px, ${(innerHeight-720*scale)/2}px) scale(${scale})`;
+    }
+    addEventListener('resize',resize);resize();
+  </script>
+</body>
+</html>

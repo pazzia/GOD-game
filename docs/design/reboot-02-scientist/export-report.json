@@ -1,0 +1,170 @@
+{
+  "status": "passed",
+  "scope": "Static design menu, not shipped gameplay or owner acceptance",
+  "captures": [
+    {
+      "file": "menu-scientist-1560x720.png",
+      "width": 1560,
+      "height": 720,
+      "sha256": "bb07a676c7ad717c4e98f6e6a2905b58774c5e6aae3d1b3cb78b345f1ce8dbbd",
+      "checks": {
+        "images": [
+          {
+            "src": "../reboot-01/assets/scene/canal.png",
+            "loaded": true
+          },
+          {
+            "src": "scientist-cutout.png",
+            "loaded": true
+          },
+          {
+            "src": "../reboot-01/assets/characters/plum-cutout.png",
+            "loaded": true
+          }
+        ],
+        "fontsLoaded": true,
+        "texts": [
+          {
+            "text": "МИР НЕВОЗМОЖНЫХ ОТКРЫТИЙ",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "ПОЧТИ\nБОГ",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Сначала — смелый опыт.\nПотом — совсем другой мир.",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Начать историю",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Профессор Феликс и Плюм",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Первое открытие",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "НЕВОЗМОЖНОЕ ВОЗМОЖНО",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          }
+        ],
+        "cta": {
+          "x": 70,
+          "y": 516.03125,
+          "width": 465,
+          "height": 96,
+          "top": 516.03125,
+          "right": 535,
+          "bottom": 612.03125,
+          "left": 70
+        },
+        "scientist": {
+          "x": 770,
+          "y": 15,
+          "width": 620,
+          "height": 705,
+          "top": 15,
+          "right": 1390,
+          "bottom": 720,
+          "left": 770
+        }
+      },
+      "pageErrors": [],
+      "failedRequests": []
+    },
+    {
+      "file": "menu-scientist-844x390.png",
+      "width": 844,
+      "height": 390,
+      "sha256": "bd07b3519ecf7160efe2a79a1521522e2e05330038ccfe76d6f11dd5f2a43b38",
+      "checks": {
+        "images": [
+          {
+            "src": "../reboot-01/assets/scene/canal.png",
+            "loaded": true
+          },
+          {
+            "src": "scientist-cutout.png",
+            "loaded": true
+          },
+          {
+            "src": "../reboot-01/assets/characters/plum-cutout.png",
+            "loaded": true
+          }
+        ],
+        "fontsLoaded": true,
+        "texts": [
+          {
+            "text": "МИР НЕВОЗМОЖНЫХ ОТКРЫТИЙ",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "ПОЧТИ\nБОГ",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Сначала — смелый опыт.\nПотом — совсем другой мир.",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Начать историю",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Профессор Феликс и Плюм",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "Первое открытие",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          },
+          {
+            "text": "НЕВОЗМОЖНОЕ ВОЗМОЖНО",
+            "insideFrame": true,
+            "insideOwnBlock": true
+          }
+        ],
+        "cta": {
+          "x": 37.871795654296875,
+          "y": 279.4169006347656,
+          "width": 251.57693481445312,
+          "height": 51.9384765625,
+          "top": 279.4169006347656,
+          "right": 289.44873046875,
+          "bottom": 331.3553771972656,
+          "left": 37.871795654296875
+        },
+        "scientist": {
+          "x": 416.5897521972656,
+          "y": 8.34615421295166,
+          "width": 335.4358825683594,
+          "height": 381.4230651855469,
+          "top": 8.34615421295166,
+          "right": 752.025634765625,
+          "bottom": 389.76921939849854,
+          "left": 416.5897521972656
+        }
+      },
+      "pageErrors": [],
+      "failedRequests": []
+    }
+  ]
+}

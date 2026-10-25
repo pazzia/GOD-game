@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "date": "2026-10-25",
+  "status": "proposal_pending_owner_review",
+  "scope": "New scientist protagonist and one static menu candidate; no runtime, APK, rules, or deployment changes",
+  "request": "Я думаю этого молодого мальчишку надо сменить на более серьезного дядьку ученого",
+  "generator": {
+    "tool": "image_gen.imagegen",
+    "prompt": "Create a new ORIGINAL polished full-body character cutout for a contemporary colorful animated-adventure game. The attached existing menu is a STYLE, palette and lighting reference only. REPLACE its young theatrical hero with a completely NEW mature scientist, not merely the same young face with grey hair. One adult MAN aged about 58–62, broad grounded shoulders and a sturdy mature build, realistic mature animation proportions about 6.8 heads tall. A serious, intelligent, composed, quietly charismatic inventor/professor: strong adult nose, clear forehead and eye wrinkles, expressive grey-blue eyes visible through elegant round brass-rim eyeglasses, swept-back salt-and-pepper silver hair with dark roots, neatly trimmed short grey beard and moustache, thoughtful confident brows. Closed mouth with a subtle warm hint of a smile, NOT a toothy grin, not an eccentric comic mad scientist. He looks directly toward the player in a relaxed three-quarter standing pose, head and torso turned a little toward frame left. Costume: excellent tailored dark deep-teal long practical professor's coat with broad simple shapes and indigo shadow planes, warm cream high-collared shirt and waistcoat, tiny muted coral neck scarf, mature straight dark navy trousers, sensible brown leather ankle boots, brass buttons, one leather utility belt pouch. No top hat, no magician cape, no lab coat, no medical insignia. One hand, at lower chest height, calmly presents a compact beautifully designed original brass-and-glass measuring instrument with two clean concentric rings and a small turquoise core, recognizable as a scientist's field apparatus, not a weapon; the other hand rests confidently by his side holding a small indigo research notebook with no text. Hands anatomically coherent, each has five fingers. Both shoes and entire hair are inside the image with generous transparent margin. No scenery, no pedestal, no extra objects, no titles, no letters. Transparent background with clean alpha, NO coloured matte, NO glow cloud behind him, NO opaque background or floor shadow. Match the reference's warm sunny key light from upper left, subtle soft painted volume and rounded 3D-animation-inspired form, expressive human face, refined contemporary illustrated-animation finish, cream warm highlights, indigo soft shadows, no photorealistic skin or gritty texture, no crude flat vector art. The SINGLE scientist is the only figure. Full height fills about 92 percent of portrait image. This is a serious mature protagonist for Almost God, an investigator of impossible laws in a beautiful sunny canal town.",
+    "referenced_image_paths": [
+      "/workspace/GOD-game/docs/design/reboot-01/mocks/exports/01-menu-1560x720.png"
+    ],
+    "transparent_background": true,
+    "original_output_path": "/workspace/generated_images/exec-479e147a-960b-4972-aa6f-5ce4ddc48881.png"
+  },
+  "output": {
+    "file": "scientist-cutout.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "sha256": "fd9589eedbf6bb439220a819ede9975b23d1abc264b1e4cec16fa62cb59a5218",
+    "bytes": 1769969,
+    "alpha_bbox": [
+      149,
+      9,
+      996,
+      1520
+    ],
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "source_reference_sha256": {
+    "docs/design/reboot-01/mocks/exports/01-menu-1560x720.png": "2541f48b7a8714f81b9023616d84607833ecdc6ae8dcb08969deb1d4e46d53cc",
+    "docs/design/reboot-01/mocks/style.css": "4b78b7814031889ea9b3c032b74cbe95a361c42ceaaa2535ddf142ea4ab77cf6",
+    "docs/design/reboot-01/assets/scene/canal.png": "897fbcab41c1dacc0eb99afb995bc4687a65c53cbe5d716738a56c55ff3a8029",
+    "docs/design/reboot-01/assets/characters/plum-cutout.png": "c2d03b8967b3449c85af996d216e3c43accad5580c4eb7e8036cb12c3361506d"
+  },
+  "composition": {
+    "method": "Original PNG copied without pixel edits, then browser HTML/CSS composition with original reboot-01 scene, Plum, Onest, and UI CSS.",
+    "source": "menu.html",
+    "exports": [
+      "menu-scientist-1560x720.png",
+      "menu-scientist-844x390.png"
+    ],
+    "image_editing": "No Python or other raster editing performed."
+  },
+  "observations": [
+    "New mature face, grey hair and short beard, glasses, grounded pose, teal tailored coat, research notebook and brass field instrument.",
+    "All four corner alpha values are zero; no opaque rectangle appears in either menu capture.",
+    "The generated source includes a soft translucent warm halo despite the no-glow instruction. It is retained in the exact original and blends into the sunny scene; it is not claimed to be a tightly normalized production sprite.",
+    "Fine clothing seams and apparatus design remain concept details, not an animation rig or a turntable.",
+    "Parent Manager reviewed both menu captures and accepted them for owner design review; owner approval remains pending."
+  ],
+  "rights": "Original generated candidate based on project-owned generated menu imagery. This provenance is not a legal-clearance or exclusivity claim."
+}
