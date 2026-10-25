@@ -1,0 +1,4 @@
+3fa416d53fc26730b22e66f9a91057cb7258a684735d1912d213d28960854e31  AlmostGod-0.4.0-preview.apk
+b7e738ebb65df49becc788ce68ccd0e2e27c437a06b9edc5a51fa1b9d733803b  AlmostGod-0.4.0-preview.build.json
+06a71c8dec48ddeef0c0b386fa14a794cfe042a0c61d0ad414a8fc6089775ce1  project-verification.json
+67733cf1139433bc987b98a6fdc707f01cd03c771bed07054405f35e56b1e3d6  provenance.json

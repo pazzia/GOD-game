@@ -1,0 +1,20 @@
+{
+  "source_commit": "6e1c93091de67666ba0f98fd7d5518f7b26de0f2",
+  "runtime_digest_sha256": "599c7267754b08ab50968a91af60bf5edf377c1676e262f5fc00af47d3385c79",
+  "started_at": "2026-10-25T13:44:55.667555+00:00",
+  "completed_at": "2026-10-25T13:47:33.791482+00:00",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40198967962",
+  "workflow_run_attempt": "1",
+  "apk_sha256": "de3830b29a65bf5c50ecab0981f6b0896d7d12a9996dae25ec06c873e6dffc24",
+  "certificate_sha256": "cc38f8e97fdb810e07e3614d4f14ac681afb108b03758c295d54ab3f6259d64e",
+  "verification_suites": 30,
+  "physical_device_tested": false,
+  "signing_key": "Ephemeral test key generated on runner; never uploaded. Reinstall required between builds.",
+  "status": "published",
+  "release_url": "https://github.com/pazzia/GOD-game/releases/tag/android-preview-0.3.0-ci2",
+  "apk_download_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-0.3.0-ci2/AlmostGod-0.3.0-preview.apk",
+  "checksum_download_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-0.3.0-ci2/SHA256SUMS.txt",
+  "download_verified": true,
+  "download_zip_crc_verified": true,
+  "size_bytes": 113731908
+}

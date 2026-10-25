@@ -1,7 +1,7 @@
 {
   "version": "0.4.0-preview",
   "android_version_code": 5,
-  "status": "local_validation_passed",
+  "status": "github_release_verified",
   "suites": 31,
   "gdscript_suites": 27,
   "gdscript_assertions": 17661,
@@ -11,9 +11,18 @@
   "changed": [],
   "physical_device_tested": false,
   "design_review": "Accepted for test delivery; see docs/design/landscape-ux.md",
-  "release_status": "pending_github_actions",
+  "release_status": "published",
   "native_campaign_captures": 60,
   "focused_ui_captures": 20,
   "native_capture_engine_errors": 0,
-  "runtime_source_unchanged": true
+  "runtime_source_unchanged": true,
+  "release_tag": "android-preview-0.4.0-ci2",
+  "source_commit": "c60a124e3c0c2c1776400a45b414c3610f596c86",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40206125522",
+  "apk_download_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-0.4.0-ci2/AlmostGod-0.4.0-preview.apk",
+  "apk_sha256": "3fa416d53fc26730b22e66f9a91057cb7258a684735d1912d213d28960854e31",
+  "download_checksums_verified": true,
+  "download_zip_crc_verified": true,
+  "download_runtime_assets_verified": true,
+  "android_game_activity_orientation": 11
 }

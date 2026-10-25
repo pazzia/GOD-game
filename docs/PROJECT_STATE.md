@@ -18,7 +18,7 @@
 
 ## Поставка
 
-Android: versionName `0.4.0-preview`, versionCode `5`, ARM64, Android 10+, пакет `com.almostgod.game.preview`. Сборку, полный прогон, подпись и публикацию выполняет `.github/workflows/android-preview.yml`. APK, SHA-256 и отчёты хранятся в GitHub Releases. Последний подтверждённый результат поставки записывается в `docs/reviews/ci/android-preview.json`; до новой успешной публикации этот файл может указывать на 0.3.0.
+Android: versionName `0.4.0-preview`, versionCode `5`, ARM64, Android 10+, пакет `com.almostgod.game.preview`. Сборку, полный прогон, подпись и публикацию выполняет `.github/workflows/android-preview.yml`. APK, SHA-256 и отчёты хранятся в GitHub Releases. **[Скачать проверенный APK](https://github.com/pazzia/GOD-game/releases/download/android-preview-0.4.0-ci2/AlmostGod-0.4.0-preview.apk)**. [GitHub Actions](https://github.com/pazzia/GOD-game/actions/runs/40206125522) прошёл все 31 набор и опубликовал `android-preview-0.4.0-ci2` из коммита `c60a124e3c0c2c1776400a45b414c3610f596c86`. Скачанный APK (122617683 байт) прошёл SHA-256, ZIP CRC и независимое сравнение ресурсов с исходниками. Фактический режим Android — `userLandscape=11`, соответствующий Godot `SCREEN_SENSOR_LANDSCAPE=4`. Результат поставки — `docs/reviews/ci/android-preview.json`; отчёты CI сохранены также в `docs/reviews/0.4.0/ci-*.json`.
 
 CI создаёт новый временный тестовый сертификат. Для установки поверх другой preview может потребоваться её удаление с потерей её локальных сохранений. Закрытые ключи не публикуются. Магазинная подпись и публикация в магазин не входят в этот preview.
 

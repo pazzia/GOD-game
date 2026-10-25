@@ -8,11 +8,13 @@
 
 Музыкальная партитура полностью заменена: семь новых спокойных композиций, 15 фоновых файлов и пять коротких акцентов. MIDI, генератор, происхождение инструментов и лицензии включены в проект. Предметные эффекты, голоса и атмосферы сохранены.
 
-Подробности: [состояние проекта](docs/PROJECT_STATE.md), [решения после отзыва](docs/decisions/2026-10-25-landscape-preview.md), [дизайн и UX](docs/design/landscape-ux.md), [музыка](docs/audio-rework.md). Исторические отчёты 0.2/0.3 относятся к прежним сборкам.
+Подробности: [состояние проекта](docs/PROJECT_STATE.md), [решения после отзыва](docs/decisions/2026-10-25-landscape-preview.md), [дизайн и UX](docs/design/landscape-ux.md), [музыка](docs/audio-rework.md), [облачная среда](docs/cloud-environment.md). Исторические отчёты 0.2/0.3 относятся к прежним сборкам.
 
 ## Тестовый APK из GitHub Actions
 
-APK и отчёты публикуются в [GitHub Releases](https://github.com/pazzia/GOD-game/releases) после успешного запуска [Android preview APK](https://github.com/pazzia/GOD-game/actions/workflows/android-preview.yml). Проверенные сведения о последней поставке находятся в [docs/reviews/ci/android-preview.json](docs/reviews/ci/android-preview.json).
+**[Скачать APK 0.4.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-0.4.0-ci2/AlmostGod-0.4.0-preview.apk)** · [релиз и отчёты](https://github.com/pazzia/GOD-game/releases/tag/android-preview-0.4.0-ci2) · [успешная сборка](https://github.com/pazzia/GOD-game/actions/runs/40206125522).
+
+31 набор проверок пройден; скачанный APK проверен по SHA-256, ZIP CRC и совпадению ресурсов с исходниками. Сведения о поставке — [docs/reviews/ci/android-preview.json](docs/reviews/ci/android-preview.json).
 
 Workflow [Android preview APK](.github/workflows/android-preview.yml) собирает APK на GitHub из точного коммита тега `android-preview-*`. Для нового теста создайте и отправьте новый тег на нужном коммите; также доступен ручной запуск workflow после его включения в основную ветку.
 

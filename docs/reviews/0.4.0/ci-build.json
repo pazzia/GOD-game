@@ -1,0 +1,306 @@
+{
+  "filename": "AlmostGod-0.4.0-preview.apk",
+  "size_bytes": 122617683,
+  "sha256": "3fa416d53fc26730b22e66f9a91057cb7258a684735d1912d213d28960854e31",
+  "manifest": [
+    {
+      "element": "manifest",
+      "attributes": {
+        "versionCode": 5,
+        "versionName": "0.4.0-preview",
+        "installLocation": 0,
+        "compileSdkVersion": 36,
+        "compileSdkVersionCodename": "16",
+        "package": "com.almostgod.game.preview",
+        "platformBuildVersionCode": 36,
+        "platformBuildVersionName": 16
+      }
+    },
+    {
+      "element": "uses-sdk",
+      "attributes": {
+        "minSdkVersion": 29,
+        "targetSdkVersion": 36
+      }
+    },
+    {
+      "element": "supports-screens",
+      "attributes": {
+        "smallScreens": true,
+        "normalScreens": true,
+        "largeScreens": true,
+        "xlargeScreens": true
+      }
+    },
+    {
+      "element": "uses-feature",
+      "attributes": {
+        "glEsVersion": 196608,
+        "required": true
+      }
+    },
+    {
+      "element": "application",
+      "attributes": {
+        "label": 2131427336,
+        "icon": 2131361792,
+        "debuggable": true,
+        "allowBackup": false,
+        "isGame": true,
+        "extractNativeLibs": true,
+        "appCategory": 0,
+        "appComponentFactory": "androidx.core.app.CoreComponentFactory",
+        "hasFragileUserData": false,
+        "requestLegacyExternalStorage": false
+      }
+    },
+    {
+      "element": "profileable",
+      "attributes": {
+        "enabled": true,
+        "shell": true
+      }
+    },
+    {
+      "element": "activity",
+      "attributes": {
+        "theme": 2131492872,
+        "name": "com.godot.game.GodotApp",
+        "exported": false,
+        "excludeFromRecents": false,
+        "launchMode": 4,
+        "screenOrientation": 11,
+        "configChanges": 16372,
+        "windowSoftInputMode": 16,
+        "resizeableActivity": true,
+        "supportsPictureInPicture": true
+      }
+    },
+    {
+      "element": "activity-alias",
+      "attributes": {
+        "name": "com.godot.game.GodotAppLauncher",
+        "exported": true,
+        "targetActivity": "com.godot.game.GodotApp"
+      }
+    },
+    {
+      "element": "intent-filter",
+      "attributes": {}
+    },
+    {
+      "element": "action",
+      "attributes": {
+        "name": "android.intent.action.MAIN"
+      }
+    },
+    {
+      "element": "category",
+      "attributes": {
+        "name": "android.intent.category.DEFAULT"
+      }
+    },
+    {
+      "element": "category",
+      "attributes": {
+        "name": "android.intent.category.LAUNCHER"
+      }
+    },
+    {
+      "element": "meta-data",
+      "attributes": {
+        "name": "org.godotengine.library.version",
+        "value": "4.7.2.stable"
+      }
+    },
+    {
+      "element": "activity",
+      "attributes": {
+        "theme": 16973840,
+        "name": "org.godotengine.godot.utils.ProcessPhoenix",
+        "exported": false,
+        "process": ":phoenix"
+      }
+    },
+    {
+      "element": "provider",
+      "attributes": {
+        "name": "androidx.core.content.FileProvider",
+        "exported": false,
+        "authorities": "com.almostgod.game.preview.fileprovider",
+        "grantUriPermissions": true
+      }
+    },
+    {
+      "element": "meta-data",
+      "attributes": {
+        "name": "android.support.FILE_PROVIDER_PATHS",
+        "resource": 2131623936
+      }
+    },
+    {
+      "element": "provider",
+      "attributes": {
+        "name": "androidx.startup.InitializationProvider",
+        "exported": false,
+        "authorities": "com.almostgod.game.preview.fileprovider"
+      }
+    },
+    {
+      "element": "meta-data",
+      "attributes": {
+        "name": "androidx.profileinstaller.ProfileInstallerInitializer",
+        "value": "androidx.startup"
+      }
+    },
+    {
+      "element": "receiver",
+      "attributes": {
+        "name": "androidx.profileinstaller.ProfileInstallReceiver",
+        "permission": "android.permission.DUMP",
+        "enabled": true,
+        "exported": true,
+        "directBootAware": false
+      }
+    },
+    {
+      "element": "intent-filter",
+      "attributes": {}
+    },
+    {
+      "element": "action",
+      "attributes": {
+        "name": "androidx.profileinstaller.action.INSTALL_PROFILE"
+      }
+    },
+    {
+      "element": "intent-filter",
+      "attributes": {}
+    },
+    {
+      "element": "action",
+      "attributes": {
+        "name": "androidx.profileinstaller.action.SKIP_FILE"
+      }
+    },
+    {
+      "element": "intent-filter",
+      "attributes": {}
+    },
+    {
+      "element": "action",
+      "attributes": {
+        "name": "androidx.profileinstaller.action.SAVE_PROFILE"
+      }
+    },
+    {
+      "element": "intent-filter",
+      "attributes": {}
+    },
+    {
+      "element": "action",
+      "attributes": {
+        "name": "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      }
+    },
+    {
+      "element": "meta-data",
+      "attributes": {
+        "name": "org.godotengine.rendering.method",
+        "value": "gl_compatibility"
+      }
+    },
+    {
+      "element": "meta-data",
+      "attributes": {
+        "name": "org.godotengine.editor.version",
+        "value": "4.7.2.stable"
+      }
+    },
+    {
+      "element": "uses-permission",
+      "attributes": {
+        "name": "android.permission.VIBRATE"
+      }
+    }
+  ],
+  "level_count": 30,
+  "runtime_rig_metadata": [
+    "assets/assets/art/characters/rigs/caramelka/rig.json",
+    "assets/assets/art/characters/rigs/felix/rig.json",
+    "assets/assets/art/characters/rigs/hugo/rig.json",
+    "assets/assets/art/characters/rigs/lada/rig.json",
+    "assets/assets/art/characters/rigs/marfa/rig.json",
+    "assets/assets/art/characters/rigs/nika/rig.json",
+    "assets/assets/art/characters/rigs/plum/rig.json",
+    "assets/assets/art/characters/rigs/roza/rig.json",
+    "assets/assets/art/characters/rigs/semyon/rig.json"
+  ],
+  "portrait_resource_count": 81,
+  "source_verification": {
+    "metadata_expected": 50,
+    "font_licenses_expected": 2,
+    "portraits_expected": 81,
+    "textures_expected": 272,
+    "audio_resources_expected": 222,
+    "environment_layers_expected": 18,
+    "missing": [],
+    "mismatched": []
+  },
+  "extract_native_libraries": true,
+  "native_libraries": [
+    {
+      "path": "lib/arm64-v8a/libc++_shared.so",
+      "zip_compression": 8,
+      "data_offset": 2159982,
+      "zip_16k_aligned": false,
+      "elf_load_alignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "elf_16k_compatible": true,
+      "installation_16k_compatible": true
+    },
+    {
+      "path": "lib/arm64-v8a/libgodot_android.so",
+      "zip_compression": 8,
+      "data_offset": 2614895,
+      "zip_16k_aligned": false,
+      "elf_load_alignments": [
+        16384,
+        16384,
+        16384
+      ],
+      "elf_16k_compatible": true,
+      "installation_16k_compatible": true
+    }
+  ],
+  "elapsed_seconds": 53.79,
+  "signature_verified": true,
+  "certificate_sha256": "5c14e1560144d16366333bb3c5b92080662fdbc23fb434e885fdddd27f471167",
+  "signing": "new local preview debug key",
+  "new_debug_identity": true,
+  "release_store_key": false,
+  "godot_version": "4.7.2",
+  "physical_device_tested": false,
+  "build_method": "Godot built-in template export; AOSP signing subset, no Gradle",
+  "source_runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "custom_template_provenance": {
+    "official_template": "android_debug.apk",
+    "official_template_sha256": "59e0073f0fa59f552684a861d8f4266b0b34b488a140d6657eac7dd70d1a0a0d",
+    "custom_template_sha256": "3fc937e6393fd6330403b210d4c231bdac0600b86448636290e1371034cd5ac1",
+    "manifest_patch": {
+      "element": "uses-sdk",
+      "attribute": "android:minSdkVersion",
+      "value_offset": 4340,
+      "before": 24,
+      "after": 29,
+      "before_sha256": "0c23a84cc3ad46240dac623c012eb7773ea39d6092ca9de34111e4187702622d",
+      "after_sha256": "c5d79b22d726222d18f927bd28da0a6a8307065e2eed887ae9eb4a942f7d814b"
+    },
+    "other_entry_contents_unchanged": true,
+    "original_template_unchanged": true,
+    "temporary_unsigned_template": true
+  }
+}

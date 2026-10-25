@@ -1,0 +1,13 @@
+{
+  "source_commit": "c60a124e3c0c2c1776400a45b414c3610f596c86",
+  "runtime_digest_sha256": "761a2dfbc364628422a43de310f71a0ed0a31d6888baf9db104da2973dcfb16f",
+  "started_at": "2026-10-25T15:17:24.065984+00:00",
+  "completed_at": "2026-10-25T15:20:49.847634+00:00",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40206125522",
+  "workflow_run_attempt": "1",
+  "apk_sha256": "3fa416d53fc26730b22e66f9a91057cb7258a684735d1912d213d28960854e31",
+  "certificate_sha256": "5c14e1560144d16366333bb3c5b92080662fdbc23fb434e885fdddd27f471167",
+  "verification_suites": 31,
+  "physical_device_tested": false,
+  "signing_key": "Ephemeral test key generated on runner; never uploaded. Reinstall required between builds."
+}
