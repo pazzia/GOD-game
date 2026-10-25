@@ -1,0 +1,205 @@
+name: Publish verified GOD source preview
+
+'on':
+  push:
+    branches: [codex/publish-source-preview-2026-10-25]
+    paths: [.github/workflows/publish-source-preview.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: god-source-preview-v0.3.0-preview
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'pazzia/GOD-game' && github.ref == 'refs/heads/codex/publish-source-preview-2026-10-25'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TZ: UTC
+      SOURCE_COMMIT: ca910c954d8b6e5b7301a18ba217e0c825b54d2b
+    steps:
+      - name: Fetch the exact reviewed source commit
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init --quiet source
+          git -C source remote add origin https://github.com/pazzia/GOD-game.git
+          git -C source fetch --quiet --depth=1 origin "$SOURCE_COMMIT"
+          git -C source checkout --quiet --detach FETCH_HEAD
+          test "$(git -C source rev-parse HEAD)" = "$SOURCE_COMMIT"
+          python - <<'PY'
+          import os, pathlib, subprocess
+          root = pathlib.Path('source')
+          stamp = int(subprocess.check_output(['git', '-C', str(root), 'show', '-s', '--format=%ct', 'HEAD']))
+          names = subprocess.check_output(['git', '-C', str(root), 'ls-files', '-z']).decode().split('\0')
+          for name in filter(None, names):
+              path = root / name
+              if path.is_file() and not path.is_symlink():
+                  os.utime(path, (stamp, stamp))
+          PY
+
+      - name: Package and validate the source archive
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p deliverables
+          python source/tools/package_project.py --output "$GITHUB_WORKSPACE/deliverables/Almost-God-0.3.0-preview-source.zip"
+          python - <<'PY'
+          import hashlib, json, pathlib, zipfile
+          archive = pathlib.Path('deliverables/Almost-God-0.3.0-preview-source.zip')
+          with zipfile.ZipFile(archive) as bundle:
+              assert bundle.testzip() is None, 'ZIP CRC failed'
+              names = bundle.namelist()
+              for name in names:
+                  path = pathlib.PurePosixPath(name)
+                  assert not set(path.parts) & {'.git', '.godot', 'build', 'android-sdk', 'GOD-local-signing'}, 'Excluded directory in ZIP'
+                  assert path.suffix.lower() not in {'.keystore', '.jks', '.p12', '.pfx', '.key', '.apk'}, 'Private/build file in ZIP'
+                  assert not any(part.startswith('.env') for part in path.parts), 'Environment file in ZIP'
+              assert 'almost-god/project.godot' in names
+              assert all('almost-god/.agents/skills/' + role + '/SKILL.md' in names for role in ['team-manager', 'team-architect', 'team-designer', 'team-developer'])
+              report = json.loads(bundle.read('almost-god/tests/reports/project-verification.json'))
+              build = json.loads(bundle.read('almost-god/docs/reviews/2026-10-25/build-report.json'))
+              assert report['status'] == 'passed'
+              assert report['runtime_digest_sha256'] == build['source_runtime_digest_sha256']
+              assert sum(name.startswith('almost-god/data/levels/') and name.endswith('.json') for name in names) == 30
+              assert sum(name.startswith('almost-god/assets/art/') and '/source/' not in name and name.endswith('.png') for name in names) == 269
+              assert sum(name.startswith('almost-god/assets/audio/production/') and name.endswith(('.wav', '.ogg')) for name in names) == 222
+          digest = hashlib.sha256(archive.read_bytes()).hexdigest()
+          sums = archive.parent / 'SHA256SUMS.txt'
+          sums.write_text(digest + '  ' + archive.name + '\n')
+          metadata = {'size': archive.stat().st_size, 'sha': digest, 'entries': len(names)}
+          (archive.parent / 'bundle-meta.json').write_text(json.dumps(metadata))
+          print(json.dumps(metadata))
+          PY
+
+      - name: Verify, publish the prerelease, and record the result
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE_OUTCOME: ${{ steps.source.outcome }}
+          PACKAGE_OUTCOME: ${{ steps.package.outcome }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, hashlib, json, os, pathlib, subprocess, sys
+          REPO = 'pazzia/GOD-game'
+          BRANCH = 'codex/publish-source-preview-2026-10-25'
+          SOURCE = os.environ['SOURCE_COMMIT']
+          PREVIOUS = '31293da9c3b1bc286fd167493b6ca5c04f446944'
+          TAG = 'v0.3.0-preview'
+          RELEASE_ID = 423324770
+          RESULT_PATH = '.release/publish-result.json'
+          API = 'repos/' + REPO
+          RELEASE = API + '/releases/' + str(RELEASE_ID)
+          ARCHIVE = pathlib.Path('deliverables/Almost-God-0.3.0-preview-source.zip')
+          SUMS = ARCHIVE.parent / 'SHA256SUMS.txt'
+          RELEASE_URL = 'https://github.com/' + REPO + '/releases/tag/' + TAG
+
+          def api(endpoint, method='GET', payload=None, missing_ok=False):
+              command = ['gh', 'api', '--method', method, endpoint]
+              if payload is not None:
+                  command += ['--input', '-']
+              result = subprocess.run(command, input=None if payload is None else json.dumps(payload), text=True, capture_output=True)
+              if result.returncode:
+                  if missing_ok and 'HTTP 404' in result.stderr:
+                      return None
+                  raise RuntimeError('GitHub API failed: ' + method + ' ' + endpoint + ' (exit ' + str(result.returncode) + ')')
+              return json.loads(result.stdout) if result.stdout else None
+
+          def release_state():
+              release = api(RELEASE)
+              assert release['id'] == RELEASE_ID and release['tag_name'] == TAG, 'Unexpected release identity'
+              assert release['target_commitish'] in {PREVIOUS, SOURCE}, 'Unexpected release target'
+              return release
+
+          def tag_target(required=False):
+              ref = api(API + '/git/ref/tags/' + TAG, missing_ok=not required)
+              if ref is None:
+                  return None
+              obj = ref['object']
+              for _ in range(4):
+                  if obj['type'] == 'commit':
+                      assert obj['sha'] == SOURCE, 'Existing tag points elsewhere; refusing to overwrite'
+                      return obj['sha']
+                  assert obj['type'] == 'tag', 'Unexpected tag object type'
+                  obj = api(API + '/git/tags/' + obj['sha'])['object']
+              raise RuntimeError('Tag nesting limit exceeded')
+
+          def verify_assets(release, expected, complete):
+              assets = release['assets']
+              names = [asset['name'] for asset in assets]
+              assert len(names) == len(set(names)), 'Duplicate release asset names'
+              assert set(names) <= set(expected), 'Unexpected existing release assets; refusing to replace'
+              for asset in assets:
+                  size, digest = expected[asset['name']]
+                  assert asset['state'] == 'uploaded', 'Asset upload is incomplete'
+                  assert asset['size'] == size, 'Existing asset size differs'
+                  assert asset.get('digest') == 'sha256:' + digest, 'Existing asset digest differs or is unavailable'
+              if complete:
+                  assert set(names) == set(expected), 'Release assets are missing'
+              return {asset['name']: asset for asset in assets}
+
+          def record_result(record):
+              endpoint = API + '/contents/' + RESULT_PATH
+              existing = api(endpoint + '?ref=' + BRANCH, missing_ok=True)
+              encoded = (json.dumps(record, ensure_ascii=False, sort_keys=True, indent=2) + '\n').encode()
+              payload = {'message': 'Record GOD source preview publication result', 'branch': BRANCH, 'content': base64.b64encode(encoded).decode()}
+              if existing:
+                  assert existing['type'] == 'file', 'Result path is not a file'
+                  previous_bytes = base64.b64decode(existing['content'])
+                  previous = json.loads(previous_bytes)
+                  assert previous.get('sourcecommit') == SOURCE and previous.get('releaseURL') == RELEASE_URL, 'Refusing to overwrite unrelated result'
+                  if previous_bytes == encoded:
+                      return
+                  payload['sha'] = existing['sha']
+              api(endpoint, 'PUT', payload)
+
+          result_record = {'releaseURL': RELEASE_URL, 'sourcecommit': SOURCE, 'status': 'failed'}
+          try:
+              assert os.environ['SOURCE_OUTCOME'] == 'success', 'Source checkout or pin verification failed'
+              assert os.environ['PACKAGE_OUTCOME'] == 'success', 'Source packaging or integrity verification failed'
+              expected = {path.name: (path.stat().st_size, hashlib.sha256(path.read_bytes()).hexdigest()) for path in (ARCHIVE, SUMS)}
+              release = release_state()
+              tag_target(required=not release['draft'])
+              existing = verify_assets(release, expected, complete=not release['draft'])
+              if release['draft']:
+                  for path in (ARCHIVE, SUMS):
+                      if path.name not in existing:
+                          upload = subprocess.run(['gh', 'release', 'upload', TAG, str(path), '--repo', REPO], capture_output=True, text=True)
+                          if upload.returncode:
+                              raise RuntimeError('GitHub release upload failed for ' + path.name + ' (exit ' + str(upload.returncode) + ')')
+                  release = release_state()
+                  verify_assets(release, expected, complete=True)
+                  tag_target(required=not release['draft'])
+                  if release['draft']:
+                      body = ('Тестовая версия GOD / «Почти бог» 0.3.0-preview.\n\n'
+                              'Скачайте Almost-God-0.3.0-preview-source.zip в Assets. Архив содержит исходники, 30 уровней, графику, звук, ТЗ, командные навыки и отчёты. SHA256SUMS.txt содержит контрольную сумму архива.\n\n'
+                              'Исходный commit: `' + SOURCE + '`. Архив собран на GitHub из этого commit; байты ZIP отличаются от прежней локальной упаковки.\n\n'
+                              'Проверенная игровая версия: 30 наборов, 7 931 проверка GDScript и 11 тестов Python. Проверки заново не запускались при упаковке.\n\n'
+                              'Этот релиз содержит архив исходников. APK к этому релизу не приложен.\n\n'
+                              'Физический Android, iOS и магазинная готовность не приняты. Полные направления и мимика персонажей требуют доработки. При заполнении диска интерфейс пока не сообщает об отказе сохранения.\n')
+                      api(RELEASE, 'PATCH', {'name': 'GOD / Почти бог — 0.3.0-preview', 'body': body, 'target_commitish': SOURCE, 'draft': False, 'prerelease': True, 'make_latest': 'false'})
+              release = release_state()
+              assert not release['draft'] and release['prerelease'], 'Release is not a published prerelease'
+              assert release['target_commitish'] == SOURCE, 'Published release target differs'
+              tag_target(required=True)
+              assets = verify_assets(release, expected, complete=True)
+              asset = assets[ARCHIVE.name]
+              result_record.update(status='published', assetdownloadURL=asset['browser_download_url'], size=asset['size'], sha=expected[ARCHIVE.name][1], checksumdownloadURL=assets[SUMS.name]['browser_download_url'])
+          except Exception as error:
+              result_record['error'] = str(error)
+              print(json.dumps(result_record, ensure_ascii=False))
+              try:
+                  record_result(result_record)
+              except Exception as reporting_error:
+                  print('Could not persist failure report: ' + str(reporting_error))
+              raise SystemExit(1)
+          record_result(result_record)
+          print(json.dumps(result_record, ensure_ascii=False))
+          PY
