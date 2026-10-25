@@ -19,14 +19,17 @@ jobs:
     timeout-minutes: 60
     permissions:
       contents: write
-    env:
-      TOOLS_DIR: ${{ runner.temp }}/god-native-tools
-      APK_OUTPUT_DIR: ${{ github.workspace }}/build/ci-android
-      PREVIEW_KEYSTORE: ${{ runner.temp }}/god-signing/preview-debug.keystore
-      XDG_CONFIG_HOME: ${{ runner.temp }}/god-config
-      XDG_CACHE_HOME: ${{ runner.temp }}/god-cache
-      XDG_DATA_HOME: ${{ runner.temp }}/god-data
     steps:
+      - name: Configure runner-local paths
+        run: |
+          printf '%s\n' \
+            "TOOLS_DIR=$RUNNER_TEMP/god-native-tools" \
+            "APK_OUTPUT_DIR=$GITHUB_WORKSPACE/build/ci-android" \
+            "PREVIEW_KEYSTORE=$RUNNER_TEMP/god-signing/preview-debug.keystore" \
+            "XDG_CONFIG_HOME=$RUNNER_TEMP/god-config" \
+            "XDG_CACHE_HOME=$RUNNER_TEMP/god-cache" \
+            "XDG_DATA_HOME=$RUNNER_TEMP/god-data" >> "$GITHUB_ENV"
+
       - name: Check out the exact workflow commit
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
