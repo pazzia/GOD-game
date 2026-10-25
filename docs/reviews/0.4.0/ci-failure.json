@@ -1,76 +1,164 @@
 {
   "failed_run_id": 40204756671,
   "failed_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40204756671",
-  "artifact": "android-build-logs-40204756671-1",
-  "download_exit_code": 0,
-  "download_output": "",
-  "collected_at": "2026-10-25T15:07:21.077552+00:00",
-  "diagnostic_run_id": "40205418584",
+  "source": "GitHub Actions failed step console log; not the nested build log artifact",
+  "actions_log_exit_code": 0,
+  "metadata_exit_code": 0,
+  "metadata_error_output": "",
+  "run_summary": {
+    "conclusion": "failure",
+    "jobs": [
+      {
+        "completedAt": "2026-10-25T15:02:51Z",
+        "conclusion": "failure",
+        "databaseId": 121203226050,
+        "name": "build-and-release",
+        "startedAt": "2026-10-25T14:58:54Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-25T14:58:57Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-25T14:58:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T14:58:57Z",
+            "conclusion": "success",
+            "name": "Configure runner-local paths",
+            "number": 2,
+            "startedAt": "2026-10-25T14:58:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T14:59:04Z",
+            "conclusion": "success",
+            "name": "Check out the exact workflow commit",
+            "number": 3,
+            "startedAt": "2026-10-25T14:58:57Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T14:59:04Z",
+            "conclusion": "success",
+            "name": "Set up Python 3.12",
+            "number": 4,
+            "startedAt": "2026-10-25T14:59:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T14:59:04Z",
+            "conclusion": "success",
+            "name": "Set up JDK 17",
+            "number": 5,
+            "startedAt": "2026-10-25T14:59:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:00:03Z",
+            "conclusion": "success",
+            "name": "Install runtime and verification dependencies",
+            "number": 6,
+            "startedAt": "2026-10-25T14:59:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:00:13Z",
+            "conclusion": "success",
+            "name": "Download and verify pinned Godot and Android tools",
+            "number": 7,
+            "startedAt": "2026-10-25T15:00:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:47Z",
+            "conclusion": "failure",
+            "name": "Verify project, build APK, and check signature and resources",
+            "number": 8,
+            "startedAt": "2026-10-25T15:00:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "success",
+            "name": "Preserve build logs",
+            "number": 9,
+            "startedAt": "2026-10-25T15:02:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "skipped",
+            "name": "Publish verified test APK on GitHub Releases",
+            "number": 10,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "success",
+            "name": "Remove ephemeral test signing key",
+            "number": 11,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "success",
+            "name": "Post Set up JDK 17",
+            "number": 20,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "skipped",
+            "name": "Post Set up Python 3.12",
+            "number": 21,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:48Z",
+            "conclusion": "success",
+            "name": "Post Check out the exact workflow commit",
+            "number": 22,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-25T15:02:49Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-25T15:02:48Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/pazzia/GOD-game/actions/runs/40204756671/job/121203226050"
+      }
+    ],
+    "status": "completed"
+  },
+  "build_report_json": {
+    "available": false,
+    "reason": "The failed run archived only *.log; its *.build.json was not uploaded and the original runner has ended."
+  },
+  "collected_at": "2026-10-25T15:14:09.253732+00:00",
+  "diagnostic_run_id": "40205952598",
   "filenames": [
-    "AlmostGod-0.4.0-preview.export.log",
-    "AlmostGod-0.4.0-preview.import.log",
-    "AlmostGod-0.4.0-preview.keytool.log",
-    "AlmostGod-0.4.0-preview.signature.log",
-    "build.log",
-    "import.log",
-    "verification.log"
+    "actions-failed.log"
   ],
   "json_character_limit": 20000,
   "files": [
     {
-      "file": "AlmostGod-0.4.0-preview.export.log",
-      "size_bytes": 6291,
-      "line_count": 131,
-      "error_lines": "",
-      "tail_last_80_lines": "ADDING: res/layout/godot_app_layout.xml\nADDING: res/layout/notification_template_part_chronometer.xml\nADDING: res/layout/notification_template_part_time.xml\nADDING: res/layout/remote_godot_fragment_layout.xml\nADDING: res/layout/snackbar.xml\nADDING: res/layout/splash_screen_view.xml\nADDING: res/mipmap-anydpi-v26/icon.xml\nADDING: res/mipmap-hdpi-v4/icon.webp\nADDING: res/mipmap-hdpi-v4/icon_background.webp\nADDING: res/mipmap-hdpi-v4/icon_foreground.webp\nADDING: res/mipmap-hdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-mdpi-v4/icon.webp\nADDING: res/mipmap-mdpi-v4/icon_background.webp\nADDING: res/mipmap-mdpi-v4/icon_foreground.webp\nADDING: res/mipmap-mdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xhdpi-v4/icon.webp\nADDING: res/mipmap-xhdpi-v4/icon_background.webp\nADDING: res/mipmap-xhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xxhdpi-v4/icon.webp\nADDING: res/mipmap-xxhdpi-v4/icon_background.webp\nADDING: res/mipmap-xxhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xxhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap-xxxhdpi-v4/icon.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_background.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_foreground.webp\nADDING: res/mipmap-xxxhdpi-v4/icon_monochrome.webp\nADDING: res/mipmap/icon.webp\nADDING: res/mipmap/icon_background.webp\nADDING: res/mipmap/icon_foreground.webp\nADDING: res/mipmap/icon_monochrome.webp\nADDING: res/xml/godot_provider_paths.xml\nADDING: resources.arsc\nADDING: DebugProbesKt.bin\nADDING: kotlin/annotation/annotation.kotlin_builtins\nADDING: kotlin/collections/collections.kotlin_builtins\nADDING: kotlin/concurrent/atomics/atomics.kotlin_builtins\nADDING: kotlin/coroutines/coroutines.kotlin_builtins\nADDING: kotlin/internal/internal.kotlin_builtins\nADDING: kotlin/kotlin.kotlin_builtins\nADDING: kotlin/ranges/ranges.kotlin_builtins\nADDING: kotlin/reflect/reflect.kotlin_builtins\n[   0% ] \u001b[90m\u001b[1mexport\u001b[22m | Adding files...\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mexport\u001b[22m | Aligning APK...\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mexport\u001b[22m | Signing debug APK...\u001b[39m\u001b[0m\nCould not find version of build tools that matches Target SDK, using 31.0.2\nSigning binary using: \n/home/runner/work/_temp/god-native-tools/android-sdk/build-tools/31.0.2/apksigner sign --verbose --ks <REDACTED> --ks-pass pass:<REDACTED> --ks-key-alias <REDACTED> /home/runner/work/GOD-game/GOD-game/build/ci-android/AlmostGod-0.4.0-preview.apk\nSigned\n\n[  99% ] \u001b[90m\u001b[1mexport\u001b[22m | Verifying APK...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mexport\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
-      "excerpt_truncated": true
-    },
-    {
-      "file": "AlmostGod-0.4.0-preview.import.log",
-      "size_bytes": 110307,
-      "line_count": 1639,
-      "error_lines": "",
-      "tail_last_80_lines": "[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | front_left_leg.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | collar_bell.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | Finalizing Asset Import...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Started (Re)Importing Assets (532 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Executing post-reimport operations...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Loading editor (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading editor layout...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading docks...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
-      "excerpt_truncated": true
-    },
-    {
-      "file": "AlmostGod-0.4.0-preview.keytool.log",
-      "size_bytes": 164,
-      "line_count": 2,
-      "error_lines": "",
-      "tail_last_80_lines": "Generating 2,048 bit RSA key pair and self-signed certificate (SHA256withRSA) with a validity of 10,000 days\n\tfor: CN=Almost God Preview, O=Local Development, C=US",
-      "excerpt_truncated": false
-    },
-    {
-      "file": "AlmostGod-0.4.0-preview.signature.log",
-      "size_bytes": 908,
-      "line_count": 16,
-      "error_lines": "",
-      "tail_last_80_lines": "Verifies\nVerified using v1 scheme (JAR signing): false\nVerified using v2 scheme (APK Signature Scheme v2): false\nVerified using v3 scheme (APK Signature Scheme v3): true\nVerified using v4 scheme (APK Signature Scheme v4): false\nVerified for SourceStamp: false\nNumber of signers: 1\nSigner #1 certificate DN: CN=Almost God Preview, O=Local Development, C=US\nSigner #1 certificate SHA-256 digest: 725dff01fc3a5ff68592b5ea5caf233bc164062482e13b1abe48e9d561c819d7\nSigner #1 certificate SHA-1 digest: ca3be7dbf23acb0fee405321265c2f44557a146c\nSigner #1 certificate MD5 digest: 1c038d4eaa2e44608f63c14f3f548fa7\nSigner #1 key algorithm: RSA\nSigner #1 key size (bits): 2048\nSigner #1 public key SHA-256 digest: 09aab71d95a73b8d18886a9b48c92591066097cffd3f741b1451d3e3e70c9d06\nSigner #1 public key SHA-1 digest: fd26bed90181765caf302d90eabefe5b1d589670\nSigner #1 public key MD5 digest: 6ed18133eec2fed6a6e1e8f64f6942f4",
-      "excerpt_truncated": false
-    },
-    {
-      "file": "build.log",
-      "size_bytes": 362,
-      "line_count": 10,
-      "error_lines": "",
-      "tail_last_80_lines": "Importing isolated native project…\nExporting signed arm64 debug APK…\n{\n  \"apk\": \"/home/runner/work/GOD-game/GOD-game/build/ci-android/AlmostGod-0.4.0-preview.apk\",\n  \"size_bytes\": 122617683,\n  \"sha256\": \"6a2169b65ae5fcbc9d91329f72fb77a837e0ddccbd9f0c9aa2e7ffeebbea8d89\",\n  \"signature_verified\": true,\n  \"level_count\": 30,\n  \"physical_device_tested\": false\n}",
-      "excerpt_truncated": false
-    },
-    {
-      "file": "import.log",
-      "size_bytes": 112261,
-      "line_count": 1673,
-      "error_lines": "",
-      "tail_last_80_lines": "[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  93% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  94% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  95% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | front_left_leg.png\u001b[39m\u001b[0m\n[  96% ] \u001b[90m\u001b[1mreimport\u001b[22m | collar_bell.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  97% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | extra.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | embarrassed.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | celebrate.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | accept.png\u001b[39m\u001b[0m\n[  98% ] \u001b[90m\u001b[1mreimport\u001b[22m | suspect.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | reveal_react.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | observe.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | idle.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | focused.png\u001b[39m\u001b[0m\n[  99% ] \u001b[90m\u001b[1mreimport\u001b[22m | Finalizing Asset Import...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Started (Re)Importing Assets (532 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mreimport\u001b[22m | Executing post-reimport operations...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mreimport\u001b[22m\n\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Started Loading editor (5 steps)\u001b[39m\u001b[0m\n[   0% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading editor layout...\u001b[39m\u001b[0m\n[  16% ] \u001b[90m\u001b[1mloading_editor_layout\u001b[22m | Loading docks...\u001b[39m\u001b[0m\n\u001b[92m[ DONE ]\u001b[39m \u001b[1mloading_editor_layout\u001b[22m\n\u001b[0m\ncannot connect to daemon at tcp:5037: Connection refused",
-      "excerpt_truncated": true
-    },
-    {
-      "file": "verification.log",
-      "size_bytes": 902,
-      "line_count": 32,
-      "error_lines": "",
-      "tail_last_80_lines": "PASS verification-tools\nPASS content\nPASS art-files\nPASS test_kernel.gd\nPASS test_validation.gd\nPASS test_s2_regressions.gd\nPASS test_campaign.gd\nPASS test_services.gd\nPASS test_service_boundaries.gd\nPASS test_client_loading.gd\nPASS test_save_recovery_edges.gd\nPASS test_audio_conductor.gd\nPASS test_audio_transport_edges.gd\nPASS test_audio_shutdown.gd\nPASS test_audio_shutdown_edges.gd\nPASS test_audio_shutdown_drain.gd\nPASS test_workbench.gd\nPASS test_puppet.gd\nPASS test_puppet_edges.gd\nPASS test_character_acting.gd\nPASS test_character_animation_contract.gd\nPASS test_layout.gd\nPASS test_stage_boundaries.gd\nPASS test_presentation.gd\nPASS test_stage_targets.gd\nPASS test_stage_input_edges.gd\nPASS test_ui.gd\nPASS test_touch_capability.gd\nPASS test_complex_ui_journeys.gd\nPASS test_quest_journey.gd\nPASS audio-files\npassed /home/runner/work/GOD-game/GOD-game/tests/reports/project-verification.json",
+      "file": "actions-failed.log",
+      "size_bytes": 4624,
+      "line_count": 24,
+      "error_lines": "build-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:02:47.3798632Z ##[error]Process completed with exit code 1.",
+      "tail_last_80_lines": "build-and-release\tVerify project, build APK, and check signature and resources\t﻿2026-10-25T15:00:13.3079068Z ##[group]Run python tools/ci_android.py --tools-dir \"$TOOLS_DIR\" --output-dir \"$APK_OUTPUT_DIR\" --debug-keystore \"$PREVIEW_KEYSTORE\" --source-sha \"$GITHUB_SHA\"\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3079923Z ^[[36;1mpython tools/ci_android.py --tools-dir \"$TOOLS_DIR\" --output-dir \"$APK_OUTPUT_DIR\" --debug-keystore \"$PREVIEW_KEYSTORE\" --source-sha \"$GITHUB_SHA\"^[[0m\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3138320Z shell: /usr/bin/bash -e {0}\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3138552Z env:\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3138761Z   TOOLS_DIR: /home/runner/work/_temp/god-native-tools\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3139096Z   APK_OUTPUT_DIR: /home/runner/work/GOD-game/GOD-game/build/ci-android\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3139486Z   PREVIEW_KEYSTORE: /home/runner/work/_temp/god-signing/preview-debug.keystore\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3139823Z   XDG_CONFIG_HOME: /home/runner/work/_temp/god-config\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3140092Z   XDG_CACHE_HOME: /home/runner/work/_temp/god-cache\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3140352Z   XDG_DATA_HOME: /home/runner/work/_temp/god-data\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3140645Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3141007Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3141334Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3141633Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3141930Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3142229Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3142571Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3143151Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.3143449Z ##[endgroup]\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:13.5785235Z Running: /home/runner/work/_temp/god-native-tools/Godot_v4.7.2-stable_linux.x86_64 --headless --editor --path /home/runner/work/GOD-game/GOD-game --import --quit\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:00:31.1144133Z Running: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python tools/verify_project.py --godot /home/runner/work/_temp/god-native-tools/Godot_v4.7.2-stable_linux.x86_64 --ui --audio\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:02:02.6426868Z Running: /opt/hostedtoolcache/Python/3.12.15/x64/bin/python tools/build_android.py --tools-dir /home/runner/work/_temp/god-native-tools --new-debug-identity --debug-keystore /home/runner/work/_temp/god-signing/preview-debug.keystore --output /home/runner/work/GOD-game/GOD-game/build/ci-android/AlmostGod-0.4.0-preview.apk\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:02:47.3732480Z The exported Android activity must use sensorLandscape orientation.\nbuild-and-release\tVerify project, build APK, and check signature and resources\t2026-10-25T15:02:47.3798632Z ##[error]Process completed with exit code 1.",
       "excerpt_truncated": false
     }
   ]
