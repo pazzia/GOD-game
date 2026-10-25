@@ -61,6 +61,12 @@ def main():
  extra=R/'data/authoring/extra_translations.json'
  if extra.exists():
   for k,(r,e)in json.loads(extra.read_text()).items():ru[k]=r;en[k]=e
+ scientist=R/'data/authoring/scientist_campaign.json'
+ if scientist.exists():
+  source=json.loads(scientist.read_text())
+  for lid,card in source['story'].items():
+   for field,(r,e)in card.items():ru['level.'+lid+'.'+field]=r;en['level.'+lid+'.'+field]=e
+  for k,(r,e)in source['translations'].items():ru[k]=r;en[k]=e
  assert ru.keys()==en.keys()and all(ru.values())and all(en.values())
  p=R/'data/localization';p.mkdir(parents=True,exist_ok=True)
  for lang,d in(('ru',ru),('en',en)):(p/(lang+'.json')).write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')

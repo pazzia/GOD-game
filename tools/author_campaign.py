@@ -205,5 +205,32 @@ def apply_character_cast():
   for witness_id,character_id in cast.items():find(level['witnesses'],witness_id)['character_id']=character_id
   assert len({w['character_id']for w in level['witnesses']})==len(level['witnesses']),lid+' duplicate person in one audience'
   p.write_text(json.dumps(level,ensure_ascii=False,indent=2)+'\n')
+def apply_scientist_overrides():
+ """Apply reviewed authoring sources after historical layouts are rebuilt.
+
+ The tutorial, anchor-first progression and their command replays are explicit
+ sources; never infer them by swapping already-mutated runtime files.
+ """
+ source=R/'data/authoring/scientist_campaign.json'
+ if source.exists():
+  authored=json.loads(source.read_text())
+  for lid,level in authored['level_overrides'].items():
+   assert level['level_id']==lid
+   (R/'data/levels'/(lid+'.json')).write_text(json.dumps(level,ensure_ascii=False,indent=2)+'\n')
+  properties_by_type=authored.get('property_overrides_by_type',{})
+  for path in sorted((R/'data/levels').glob('L*.json')):
+   level=json.loads(path.read_text());changed=False
+   for item in level['entities']:
+    overrides=properties_by_type.get(item['type_id'],{})
+    if overrides:
+     if overrides.get('switchable'):assert item['type_id']=='oven' and item['properties'].get('emitter_class')=='FIRE'
+     item['properties'].update(deepcopy(overrides));changed=True
+   if changed:path.write_text(json.dumps(level,ensure_ascii=False,indent=2)+'\n')
+ replays=R/'data/authoring/scientist_replays.json'
+ if replays.exists():
+  for relative,replay in json.loads(replays.read_text())['overrides'].items():
+   target=R/relative
+   assert target.resolve().is_relative_to((R/'tests').resolve())
+   target.write_text(json.dumps(replay,ensure_ascii=False,indent=2)+'\n')
 if __name__=='__main__':
- one();two();three();alternatives();apply_character_cast();print('Authored 27 levels and 16 alternatives, applied campaign cast; actual replay checks still required.')
+ one();two();three();alternatives();apply_character_cast();apply_scientist_overrides();print('Authored 30 levels with scientist overrides and 16 alternatives; actual replay checks still required.')

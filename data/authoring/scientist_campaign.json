@@ -1,0 +1,3761 @@
+{
+  "schema_version": 1,
+  "content_version": "0.5.0-scientist",
+  "status": "implementation_after_owner_direction_approval",
+  "level_overrides": {
+    "L01": {
+      "schema_version": 1,
+      "content_version": "0.5.0-scientist",
+      "status": "authored_pending_native_verification",
+      "level_id": "L01",
+      "chapter": 1,
+      "title_key": "level.L01.title",
+      "scene_id": "ENV01",
+      "available_myths": [
+        "M01"
+      ],
+      "initial_active_laws": [],
+      "max_active_laws": 1,
+      "required_votes": 1,
+      "entities": [
+        {
+          "id": "hero",
+          "type_id": "actor_felix",
+          "asset_id": "CH01_RIG",
+          "material": "ORGANIC",
+          "apparent_class": "PERSON",
+          "initial_slot": "hero_start",
+          "movable": false,
+          "mass_units": 2,
+          "properties": {}
+        },
+        {
+          "id": "stone",
+          "type_id": "stone_m",
+          "asset_id": "PROP_STONE_M",
+          "material": "STONE",
+          "apparent_class": "STONE",
+          "initial_slot": "stage_stone",
+          "movable": false,
+          "mass_units": 3,
+          "properties": {
+            "size": "M",
+            "carry_capacity": 0,
+            "buoyant": false
+          }
+        },
+        {
+          "id": "float",
+          "type_id": "float",
+          "asset_id": "PROP_FLOAT",
+          "material": "WOOD",
+          "apparent_class": "FLOAT",
+          "initial_slot": "stage_float",
+          "movable": false,
+          "mass_units": 1,
+          "properties": {
+            "supports_entity": "stone",
+            "support_when_slot": "stage_float",
+            "hidden_method": true,
+            "removable": true,
+            "remove_requires_law": "M01"
+          }
+        },
+        {
+          "id": "screen_a",
+          "type_id": "screen",
+          "asset_id": "PROP_SCREEN",
+          "material": "CLOTH",
+          "apparent_class": "SCREEN",
+          "initial_slot": "tray_screen_a",
+          "movable": true,
+          "mass_units": 1,
+          "properties": {
+            "foldable": true,
+            "initial_folded": false
+          }
+        },
+        {
+          "id": "marfa",
+          "type_id": "actor_marfa",
+          "asset_id": "CH03_RIG",
+          "material": "ORGANIC",
+          "apparent_class": "PERSON",
+          "initial_slot": "marfa_start",
+          "movable": false,
+          "mass_units": 2,
+          "properties": {
+            "locomotion": "walk",
+            "initial_reach_zone_id": "near"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "id": "tray_screen_a",
+          "position": [
+            6,
+            24
+          ],
+          "zone_id": "near",
+          "mount_layer": "tray",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "stage_stone",
+          "position": [
+            14,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "surface",
+          "allowed_entity_types": [
+            "stone_m"
+          ]
+        },
+        {
+          "id": "stage_float",
+          "position": [
+            14,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "below",
+          "allowed_entity_types": [
+            "float"
+          ]
+        },
+        {
+          "id": "screen_left",
+          "position": [
+            9,
+            11
+          ],
+          "zone_id": "near",
+          "mount_layer": "screen",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "hero_start",
+          "position": [
+            6,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "actor_felix"
+          ]
+        },
+        {
+          "id": "audience_a",
+          "position": [
+            6,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "marfa_start",
+          "position": [
+            6,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "actor_marfa"
+          ]
+        }
+      ],
+      "occluders": [
+        {
+          "id": "left_screen",
+          "owner_entity": "screen_a",
+          "active_slot": "screen_left",
+          "segment": [
+            [
+              9,
+              10
+            ],
+            [
+              9,
+              14
+            ]
+          ],
+          "channels": [
+            "Vision"
+          ],
+          "folded_segment": [
+            [
+              9,
+              10
+            ],
+            [
+              9,
+              12
+            ]
+          ]
+        }
+      ],
+      "witnesses": [
+        {
+          "id": "w1",
+          "character_id": "CH03",
+          "initial_view_slot": "audience_a",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                6,
+                12
+              ],
+              "from_tick": 0,
+              "duration_ticks": 30,
+              "clear_ticks": 15,
+              "look_at": [
+                14,
+                13
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        }
+      ],
+      "proofs": [
+        {
+          "myth_id": "M01",
+          "result_anchors": [
+            {
+              "entity_id": "stone",
+              "offset": [
+                -1,
+                2
+              ]
+            },
+            {
+              "entity_id": "stone",
+              "offset": [
+                0,
+                3
+              ]
+            },
+            {
+              "entity_id": "stone",
+              "offset": [
+                1,
+                2
+              ]
+            }
+          ],
+          "method_anchors": [
+            {
+              "entity_id": "float",
+              "offset": [
+                0,
+                -3
+              ]
+            }
+          ],
+          "predicates": [
+            {
+              "type": "apparent_class_is",
+              "parameters": {
+                "entity_id": "stone",
+                "value": "STONE"
+              }
+            },
+            {
+              "type": "over_water",
+              "parameters": {
+                "entity_id": "stone",
+                "zone_id": "demo_pool"
+              }
+            },
+            {
+              "type": "stable_support",
+              "parameters": {
+                "entity_id": "stone"
+              }
+            }
+          ]
+        }
+      ],
+      "navigation": {
+        "nodes": [
+          {
+            "id": "start",
+            "position": [
+              6,
+              12
+            ]
+          },
+          {
+            "id": "near_bank",
+            "position": [
+              10,
+              12
+            ]
+          },
+          {
+            "id": "stone_link",
+            "position": [
+              14,
+              12
+            ]
+          },
+          {
+            "id": "far_bank",
+            "position": [
+              18,
+              12
+            ]
+          },
+          {
+            "id": "goal",
+            "position": [
+              21,
+              12
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "id": "cross",
+            "nodes": [
+              "start",
+              "near_bank",
+              "stone_link",
+              "far_bank",
+              "goal"
+            ],
+            "required_support_entity": "stone",
+            "required_support_slot": "stage_stone",
+            "ticks_per_edge": 6
+          }
+        ]
+      },
+      "goals": [
+        {
+          "id": "crossed",
+          "kind": "latched",
+          "predicate_id": "route_completed",
+          "parameters": {
+            "actor_id": "marfa",
+            "route_id": "cross"
+          },
+          "required": true
+        },
+        {
+          "id": "float_removed",
+          "kind": "state",
+          "predicate_id": "entity_removed",
+          "parameters": {
+            "entity_id": "float"
+          },
+          "required": true
+        }
+      ],
+      "hints": [
+        "level.L01.hint1",
+        "level.L01.hint2",
+        "level.L01.hint3"
+      ],
+      "presentation": {
+        "layout_asset_id": "SCENE_L01_LAYOUT",
+        "overlay_asset_id": "SCENE_L01_OVERLAY",
+        "domain_label_key": "level.L01.domain",
+        "tutorial": "first_crossing",
+        "observer_actor_id": "marfa"
+      },
+      "canonical_solution_ref": "L01_solution.json",
+      "zones": [
+        {
+          "id": "near",
+          "kind": "REACH"
+        },
+        {
+          "id": "demo_pool",
+          "kind": "WATER",
+          "polygon": [
+            [
+              10,
+              8
+            ],
+            [
+              18,
+              8
+            ],
+            [
+              18,
+              16
+            ],
+            [
+              10,
+              16
+            ]
+          ],
+          "initial_phase": "liquid",
+          "initial_thermal_charge": 0
+        }
+      ],
+      "demonstration_timeout_ticks": 30
+    },
+    "L02": {
+      "schema_version": 1,
+      "content_version": "0.5.0-scientist",
+      "status": "authored_pending_native_verification",
+      "level_id": "L02",
+      "chapter": 1,
+      "title_key": "level.L02.title",
+      "scene_id": "ENV01",
+      "available_myths": [
+        "M01"
+      ],
+      "initial_active_laws": [
+        "M01"
+      ],
+      "max_active_laws": 1,
+      "required_votes": 3,
+      "entities": [
+        {
+          "id": "hero",
+          "type_id": "actor_felix",
+          "asset_id": "CH01_RIG",
+          "material": "ORGANIC",
+          "apparent_class": "PERSON",
+          "initial_slot": "hero_start",
+          "movable": false,
+          "mass_units": 2,
+          "properties": {
+            "locomotion": "walk",
+            "initial_reach_zone_id": "near"
+          }
+        },
+        {
+          "id": "boat",
+          "type_id": "boat",
+          "asset_id": "PROP_BOAT",
+          "material": "WOOD",
+          "apparent_class": "BOAT",
+          "initial_slot": "boat_start",
+          "movable": false,
+          "mass_units": 3,
+          "properties": {}
+        },
+        {
+          "id": "anchor",
+          "type_id": "stone_anchor",
+          "asset_id": "PROP_STONE_ANCHOR",
+          "material": "STONE",
+          "apparent_class": "ANCHOR",
+          "initial_slot": "anchor_start",
+          "movable": false,
+          "mass_units": 1,
+          "properties": {
+            "size": "S",
+            "buoyant": false,
+            "grounded": true,
+            "anchored": true
+          }
+        },
+        {
+          "id": "bollard",
+          "type_id": "bollard",
+          "asset_id": "PROP_BOLLARD",
+          "material": "WOOD",
+          "apparent_class": "BOLLARD",
+          "initial_slot": "bollard_start",
+          "movable": false,
+          "mass_units": 1,
+          "properties": {
+            "grounded": true,
+            "anchored": true
+          }
+        },
+        {
+          "id": "mooring",
+          "type_id": "mooring_rope",
+          "asset_id": "PROP_ROPE",
+          "material": "WOOD",
+          "apparent_class": "ROPE",
+          "initial_slot": "mooring_start",
+          "movable": true,
+          "mass_units": 0,
+          "properties": {
+            "attachment_kind": "mooring",
+            "mooring_owner_entity_id": "boat",
+            "attachment_target_entity_id": "anchor",
+            "rope_length_units": 24
+          }
+        },
+        {
+          "id": "cargo",
+          "type_id": "cargo_crate",
+          "asset_id": "PROP_CARGO_CRATE",
+          "material": "WOOD",
+          "apparent_class": "CARGO",
+          "initial_slot": "cargo_start",
+          "movable": true,
+          "mass_units": 2,
+          "properties": {
+            "transport_mode": "carried",
+            "carrier_entity_id": "hero"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "id": "hero_start",
+          "position": [
+            6,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "actor_felix"
+          ]
+        },
+        {
+          "id": "audience_1",
+          "position": [
+            3,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_2",
+          "position": [
+            4,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_3",
+          "position": [
+            5,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "boat_start",
+          "position": [
+            8,
+            21
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "boat"
+          ]
+        },
+        {
+          "id": "anchor_start",
+          "position": [
+            10,
+            22
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "stone_anchor"
+          ]
+        },
+        {
+          "id": "bollard_start",
+          "position": [
+            7,
+            22
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "bollard"
+          ]
+        },
+        {
+          "id": "mooring_start",
+          "position": [
+            7,
+            21
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "mooring_rope"
+          ]
+        },
+        {
+          "id": "cargo_start",
+          "position": [
+            6,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "cargo_crate"
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "id": "near",
+          "kind": "REACH"
+        },
+        {
+          "id": "mooring_bay",
+          "kind": "WATER",
+          "thermal_position": [
+            10,
+            23
+          ],
+          "polygon": [
+            [
+              8,
+              21
+            ],
+            [
+              12,
+              21
+            ],
+            [
+              12,
+              25
+            ],
+            [
+              8,
+              25
+            ]
+          ],
+          "initial_phase": "liquid",
+          "initial_thermal_charge": 0
+        }
+      ],
+      "occluders": [],
+      "witnesses": [
+        {
+          "id": "w1",
+          "character_id": "CH03",
+          "initial_view_slot": "audience_1",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                3,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w2",
+          "character_id": "CH05",
+          "initial_view_slot": "audience_2",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                4,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w3",
+          "character_id": "CROWD03",
+          "initial_view_slot": "audience_3",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                5,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        }
+      ],
+      "proofs": [],
+      "navigation": {
+        "nodes": [
+          {
+            "id": "unload_0",
+            "position": [
+              6,
+              20
+            ]
+          },
+          {
+            "id": "unload_1",
+            "position": [
+              9,
+              20
+            ]
+          },
+          {
+            "id": "unload_2",
+            "position": [
+              12,
+              20
+            ]
+          },
+          {
+            "id": "unload_3",
+            "position": [
+              15,
+              20
+            ]
+          },
+          {
+            "id": "unload_4",
+            "position": [
+              18,
+              20
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "id": "unload",
+            "nodes": [
+              "unload_0",
+              "unload_1",
+              "unload_2",
+              "unload_3",
+              "unload_4"
+            ],
+            "ticks_per_edge": 10,
+            "requirements": [
+              {
+                "type": "entity_state",
+                "parameters": {
+                  "entity_id": "boat",
+                  "key": "moored",
+                  "value": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "goals": [
+        {
+          "id": "boat_held",
+          "kind": "state",
+          "predicate_id": "entity_state",
+          "parameters": {
+            "entity_id": "boat",
+            "key": "moored",
+            "value": true
+          },
+          "required": true
+        },
+        {
+          "id": "arrived_cargo",
+          "kind": "latched",
+          "predicate_id": "cargo_delivered",
+          "parameters": {
+            "entity_id": "cargo",
+            "route_id": "unload"
+          },
+          "required": true
+        }
+      ],
+      "hints": [
+        "level.L02.hint1",
+        "level.L02.hint2",
+        "level.L02.hint3"
+      ],
+      "presentation": {
+        "layout_asset_id": "SCENE_L02_LAYOUT",
+        "overlay_asset_id": "SCENE_L02_OVERLAY",
+        "domain_label_key": "level.L02.domain"
+      },
+      "canonical_solution_ref": "L02_solution.json"
+    },
+    "L05": {
+      "schema_version": 1,
+      "content_version": "0.5.0-scientist",
+      "status": "authored_pending_native_verification",
+      "level_id": "L05",
+      "chapter": 1,
+      "title_key": "level.L05.title",
+      "scene_id": "ENV01",
+      "available_myths": [
+        "M01"
+      ],
+      "initial_active_laws": [],
+      "max_active_laws": 1,
+      "required_votes": 3,
+      "entities": [
+        {
+          "id": "hero",
+          "type_id": "actor_felix",
+          "asset_id": "CH01_RIG",
+          "material": "ORGANIC",
+          "apparent_class": "PERSON",
+          "initial_slot": "hero_start",
+          "movable": false,
+          "mass_units": 2,
+          "properties": {}
+        },
+        {
+          "id": "stone",
+          "type_id": "stone_l",
+          "asset_id": "PROP_STONE_L",
+          "material": "STONE",
+          "apparent_class": "STONE",
+          "initial_slot": "tray_stone",
+          "movable": true,
+          "mass_units": 3,
+          "properties": {
+            "size": "L",
+            "carry_capacity": 5,
+            "buoyant": false
+          }
+        },
+        {
+          "id": "float",
+          "type_id": "float",
+          "asset_id": "PROP_FLOAT",
+          "material": "WOOD",
+          "apparent_class": "FLOAT",
+          "initial_slot": "tray_float",
+          "movable": true,
+          "mass_units": 1,
+          "properties": {
+            "supports_entity": "stone",
+            "support_when_slot": "stage_float",
+            "hidden_method": true
+          }
+        },
+        {
+          "id": "screen_a",
+          "type_id": "screen",
+          "asset_id": "PROP_SCREEN",
+          "material": "CLOTH",
+          "apparent_class": "SCREEN",
+          "initial_slot": "tray_screen_a",
+          "movable": true,
+          "mass_units": 1,
+          "properties": {}
+        },
+        {
+          "id": "booth",
+          "type_id": "ticket_booth",
+          "asset_id": "PROP_TICKET_BOOTH",
+          "material": "WOOD",
+          "apparent_class": "BOOTH",
+          "initial_slot": "booth_slot",
+          "movable": false,
+          "mass_units": 20,
+          "properties": {}
+        },
+        {
+          "id": "cargo",
+          "type_id": "cargo_crate",
+          "asset_id": "PROP_CARGO_CRATE",
+          "material": "WOOD",
+          "apparent_class": "CARGO",
+          "initial_slot": "cargo_start",
+          "movable": true,
+          "mass_units": 2,
+          "properties": {
+            "transport_mode": "carried",
+            "carrier_entity_id": "hero"
+          }
+        }
+      ],
+      "slots": [
+        {
+          "id": "tray_stone",
+          "position": [
+            2,
+            24
+          ],
+          "zone_id": "near",
+          "mount_layer": "tray",
+          "allowed_entity_types": [
+            "stone_l"
+          ]
+        },
+        {
+          "id": "tray_float",
+          "position": [
+            4,
+            24
+          ],
+          "zone_id": "near",
+          "mount_layer": "tray",
+          "allowed_entity_types": [
+            "float"
+          ]
+        },
+        {
+          "id": "tray_screen_a",
+          "position": [
+            6,
+            24
+          ],
+          "zone_id": "near",
+          "mount_layer": "tray",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "stage_stone",
+          "position": [
+            14,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "surface",
+          "allowed_entity_types": [
+            "stone_l"
+          ]
+        },
+        {
+          "id": "stage_float",
+          "position": [
+            14,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "below",
+          "allowed_entity_types": [
+            "float"
+          ]
+        },
+        {
+          "id": "screen_left",
+          "position": [
+            9,
+            6
+          ],
+          "zone_id": "near",
+          "mount_layer": "screen",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "bridge",
+          "position": [
+            12,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "surface",
+          "allowed_entity_types": [
+            "stone_l"
+          ]
+        },
+        {
+          "id": "hero_start",
+          "position": [
+            6,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "actor_felix"
+          ]
+        },
+        {
+          "id": "audience_a",
+          "position": [
+            3,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_b",
+          "position": [
+            4,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_c",
+          "position": [
+            5,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_bad",
+          "position": [
+            2,
+            12
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "booth_slot",
+          "position": [
+            6,
+            13
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "ticket_booth"
+          ]
+        },
+        {
+          "id": "cargo_start",
+          "position": [
+            7,
+            21
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "cargo_crate"
+          ]
+        }
+      ],
+      "occluders": [
+        {
+          "id": "left_screen",
+          "owner_entity": "screen_a",
+          "active_slot": "screen_left",
+          "segment": [
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              7
+            ]
+          ],
+          "channels": [
+            "Vision"
+          ]
+        },
+        {
+          "id": "ticket_booth",
+          "owner_entity": "booth",
+          "active_slot": null,
+          "segment": [
+            [
+              6,
+              11
+            ],
+            [
+              6,
+              15
+            ]
+          ],
+          "channels": [
+            "Vision"
+          ]
+        }
+      ],
+      "witnesses": [
+        {
+          "id": "w1",
+          "character_id": "CH03",
+          "initial_view_slot": "audience_a",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                3,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 100,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w2",
+          "character_id": "CH05",
+          "initial_view_slot": "audience_b",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                4,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 100,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w3",
+          "character_id": "CROWD02",
+          "initial_view_slot": "audience_bad",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                2,
+                12
+              ],
+              "from_tick": 0,
+              "duration_ticks": 100,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        }
+      ],
+      "proofs": [
+        {
+          "myth_id": "M01",
+          "result_anchors": [
+            {
+              "entity_id": "stone",
+              "offset": [
+                -1,
+                2
+              ]
+            },
+            {
+              "entity_id": "stone",
+              "offset": [
+                0,
+                3
+              ]
+            },
+            {
+              "entity_id": "stone",
+              "offset": [
+                1,
+                2
+              ]
+            }
+          ],
+          "method_anchors": [
+            {
+              "entity_id": "float",
+              "offset": [
+                0,
+                -3
+              ]
+            }
+          ],
+          "predicates": [
+            {
+              "type": "apparent_class_is",
+              "parameters": {
+                "entity_id": "stone",
+                "value": "STONE"
+              }
+            },
+            {
+              "type": "over_water",
+              "parameters": {
+                "entity_id": "stone",
+                "zone_id": "demo_pool"
+              }
+            },
+            {
+              "type": "stable_support",
+              "parameters": {
+                "entity_id": "stone"
+              }
+            }
+          ]
+        }
+      ],
+      "navigation": {
+        "nodes": [
+          {
+            "id": "start",
+            "position": [
+              6,
+              20
+            ]
+          },
+          {
+            "id": "near_bank",
+            "position": [
+              9,
+              20
+            ]
+          },
+          {
+            "id": "stone_link",
+            "position": [
+              12,
+              20
+            ]
+          },
+          {
+            "id": "far_bank",
+            "position": [
+              15,
+              20
+            ]
+          },
+          {
+            "id": "goal",
+            "position": [
+              18,
+              20
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "id": "cross",
+            "nodes": [
+              "start",
+              "near_bank",
+              "stone_link",
+              "far_bank",
+              "goal"
+            ],
+            "required_support_entity": "stone",
+            "required_support_slot": "bridge"
+          }
+        ]
+      },
+      "goals": [
+        {
+          "id": "delivered",
+          "kind": "latched",
+          "predicate_id": "cargo_delivered",
+          "parameters": {
+            "entity_id": "cargo",
+            "route_id": "cross"
+          },
+          "required": true
+        },
+        {
+          "id": "float_removed",
+          "kind": "state",
+          "predicate_id": "entity_removed",
+          "parameters": {
+            "entity_id": "float"
+          },
+          "required": true
+        }
+      ],
+      "hints": [
+        "level.L05.hint1",
+        "level.L05.hint2",
+        "level.L05.hint3"
+      ],
+      "presentation": {
+        "layout_asset_id": "SCENE_L05_LAYOUT",
+        "overlay_asset_id": "SCENE_L05_OVERLAY",
+        "domain_label_key": "level.L05.domain"
+      },
+      "canonical_solution_ref": "L05_solution.json",
+      "zones": [
+        {
+          "id": "near",
+          "kind": "REACH"
+        },
+        {
+          "id": "demo_pool",
+          "kind": "WATER",
+          "polygon": [
+            [
+              10,
+              8
+            ],
+            [
+              18,
+              8
+            ],
+            [
+              18,
+              16
+            ],
+            [
+              10,
+              16
+            ]
+          ],
+          "initial_phase": "liquid",
+          "initial_thermal_charge": 0
+        },
+        {
+          "id": "crossing_water",
+          "kind": "WATER",
+          "polygon": [
+            [
+              10,
+              17
+            ],
+            [
+              14,
+              17
+            ],
+            [
+              14,
+              23
+            ],
+            [
+              10,
+              23
+            ]
+          ],
+          "initial_phase": "liquid",
+          "initial_thermal_charge": 0
+        }
+      ]
+    },
+    "L18": {
+      "schema_version": 1,
+      "content_version": "0.2.0",
+      "status": "layout_seed",
+      "level_id": "L18",
+      "chapter": 2,
+      "title_key": "level.L18.title",
+      "scene_id": "ENV02",
+      "available_myths": [
+        "M01",
+        "M02"
+      ],
+      "initial_active_laws": [
+        "M01",
+        "M02"
+      ],
+      "max_active_laws": 2,
+      "required_votes": 3,
+      "entities": [
+        {
+          "id": "hero",
+          "type_id": "actor_felix",
+          "asset_id": "CH01_RIG",
+          "material": "ORGANIC",
+          "apparent_class": "PERSON",
+          "initial_slot": "hero_start",
+          "movable": false,
+          "mass_units": 2,
+          "properties": {
+            "locomotion": "walk",
+            "initial_reach_zone_id": "near"
+          }
+        },
+        {
+          "id": "oven",
+          "type_id": "oven",
+          "asset_id": "PROP_FIRE",
+          "material": "FIRE",
+          "apparent_class": "FIRE",
+          "initial_slot": "oven_start",
+          "movable": true,
+          "mass_units": 3,
+          "properties": {
+            "emitter_class": "FIRE",
+            "thermal_delta_per_tick": 1,
+            "thermal_radius_units": 5,
+            "enabled": true,
+            "switchable": true
+          }
+        },
+        {
+          "id": "boat_oven",
+          "type_id": "oven",
+          "asset_id": "PROP_FIRE",
+          "material": "FIRE",
+          "apparent_class": "FIRE",
+          "initial_slot": "boat_oven_start",
+          "movable": true,
+          "mass_units": 3,
+          "properties": {
+            "emitter_class": "FIRE",
+            "thermal_delta_per_tick": 1,
+            "thermal_radius_units": 5,
+            "enabled": true,
+            "switchable": true
+          }
+        },
+        {
+          "id": "thermal_screen",
+          "type_id": "screen",
+          "asset_id": "PROP_SCREEN",
+          "material": "CLOTH",
+          "apparent_class": "SCREEN",
+          "initial_slot": "thermal_screen_start",
+          "movable": true,
+          "mass_units": 1,
+          "properties": {}
+        },
+        {
+          "id": "heated_stone",
+          "type_id": "heated_stone",
+          "asset_id": "PROP_HEATED_STONE",
+          "material": "STONE",
+          "apparent_class": "HEATED_OBJECT",
+          "initial_slot": "heated_stone_start",
+          "movable": true,
+          "mass_units": 3,
+          "properties": {
+            "emitter_class": "HEATED_OBJECT",
+            "thermal_delta_per_tick": 1,
+            "thermal_radius_units": 3,
+            "enabled": true
+          }
+        },
+        {
+          "id": "boat",
+          "type_id": "boat",
+          "asset_id": "PROP_BOAT",
+          "material": "WOOD",
+          "apparent_class": "VEHICLE",
+          "initial_slot": "boat_start",
+          "movable": false,
+          "mass_units": 3,
+          "properties": {
+            "locomotion": "sail"
+          }
+        },
+        {
+          "id": "stone",
+          "type_id": "stone_m",
+          "asset_id": "PROP_STONE_M",
+          "material": "STONE",
+          "apparent_class": "STONE",
+          "initial_slot": "stone_start",
+          "movable": true,
+          "mass_units": 3,
+          "properties": {
+            "size": "M",
+            "buoyant": false
+          }
+        }
+      ],
+      "slots": [
+        {
+          "id": "hero_start",
+          "position": [
+            6,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "actor_felix"
+          ]
+        },
+        {
+          "id": "audience_1",
+          "position": [
+            3,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_2",
+          "position": [
+            4,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "audience_3",
+          "position": [
+            5,
+            3
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "witness"
+          ]
+        },
+        {
+          "id": "oven_start",
+          "position": [
+            12,
+            17
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "oven"
+          ]
+        },
+        {
+          "id": "oven_far",
+          "position": [
+            3,
+            22
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "oven"
+          ]
+        },
+        {
+          "id": "boat_oven_start",
+          "position": [
+            20,
+            16
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "oven"
+          ]
+        },
+        {
+          "id": "boat_oven_far",
+          "position": [
+            3,
+            22
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "oven"
+          ]
+        },
+        {
+          "id": "thermal_screen_start",
+          "position": [
+            5,
+            25
+          ],
+          "zone_id": "near",
+          "mount_layer": "tray",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "thermal_block",
+          "position": [
+            20,
+            18
+          ],
+          "zone_id": "near",
+          "mount_layer": "screen",
+          "allowed_entity_types": [
+            "screen"
+          ]
+        },
+        {
+          "id": "heated_stone_start",
+          "position": [
+            2,
+            25
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "heated_stone"
+          ]
+        },
+        {
+          "id": "warm_boat",
+          "position": [
+            18,
+            19
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "heated_stone"
+          ]
+        },
+        {
+          "id": "boat_start",
+          "position": [
+            22,
+            19
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "boat"
+          ]
+        },
+        {
+          "id": "stone_start",
+          "position": [
+            12,
+            20
+          ],
+          "zone_id": "near",
+          "mount_layer": "ground",
+          "allowed_entity_types": [
+            "stone_m"
+          ]
+        }
+      ],
+      "zones": [
+        {
+          "id": "near",
+          "kind": "REACH"
+        },
+        {
+          "id": "crossing_water",
+          "kind": "WATER",
+          "thermal_position": [
+            12,
+            20
+          ],
+          "polygon": [
+            [
+              10,
+              18
+            ],
+            [
+              14,
+              18
+            ],
+            [
+              14,
+              22
+            ],
+            [
+              10,
+              22
+            ]
+          ],
+          "initial_phase": "liquid",
+          "initial_thermal_charge": 0
+        },
+        {
+          "id": "boat_water",
+          "kind": "WATER",
+          "thermal_position": [
+            21,
+            19
+          ],
+          "polygon": [
+            [
+              19,
+              18
+            ],
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              22
+            ],
+            [
+              19,
+              22
+            ]
+          ],
+          "initial_phase": "frozen",
+          "initial_thermal_charge": -20
+        }
+      ],
+      "occluders": [
+        {
+          "id": "thermal_screen_occluder",
+          "owner_entity": "thermal_screen",
+          "active_slot": "thermal_block",
+          "segment": [
+            [
+              18,
+              18
+            ],
+            [
+              22,
+              18
+            ]
+          ],
+          "channels": [
+            "Thermal"
+          ]
+        }
+      ],
+      "witnesses": [
+        {
+          "id": "w1",
+          "character_id": "CH06",
+          "initial_view_slot": "audience_1",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                3,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w2",
+          "character_id": "CH05",
+          "initial_view_slot": "audience_2",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                4,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        },
+        {
+          "id": "w3",
+          "character_id": "CROWD01",
+          "initial_view_slot": "audience_3",
+          "views": [
+            {
+              "id": "front",
+              "eye_position": [
+                5,
+                3
+              ],
+              "from_tick": 0,
+              "duration_ticks": 180,
+              "clear_ticks": 25,
+              "look_at": [
+                14,
+                14
+              ]
+            }
+          ],
+          "expose_ticks": 5,
+          "gap_tolerance_ticks": 2
+        }
+      ],
+      "proofs": [],
+      "navigation": {
+        "nodes": [
+          {
+            "id": "cross_0",
+            "position": [
+              6,
+              20
+            ]
+          },
+          {
+            "id": "cross_1",
+            "position": [
+              9,
+              20
+            ]
+          },
+          {
+            "id": "cross_2",
+            "position": [
+              12,
+              20
+            ]
+          },
+          {
+            "id": "cross_3",
+            "position": [
+              15,
+              20
+            ]
+          },
+          {
+            "id": "cross_4",
+            "position": [
+              18,
+              20
+            ]
+          },
+          {
+            "id": "boat_route_0",
+            "position": [
+              22,
+              19
+            ]
+          },
+          {
+            "id": "boat_route_1",
+            "position": [
+              21,
+              20
+            ]
+          },
+          {
+            "id": "boat_route_2",
+            "position": [
+              22,
+              21
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "id": "cross",
+            "nodes": [
+              "cross_0",
+              "cross_1",
+              "cross_2",
+              "cross_3",
+              "cross_4"
+            ],
+            "ticks_per_edge": 10,
+            "requirements": [
+              {
+                "type": "water_phase",
+                "parameters": {
+                  "zone_id": "crossing_water",
+                  "phase": "frozen"
+                }
+              }
+            ]
+          },
+          {
+            "id": "boat_route",
+            "nodes": [
+              "boat_route_0",
+              "boat_route_1",
+              "boat_route_2"
+            ],
+            "ticks_per_edge": 10,
+            "requirements": [
+              {
+                "type": "water_phase",
+                "parameters": {
+                  "zone_id": "boat_water",
+                  "phase": "liquid"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "goals": [
+        {
+          "id": "pedestrian_support",
+          "kind": "state",
+          "predicate_id": "support_valid",
+          "parameters": {
+            "entity_id": "stone"
+          },
+          "required": true
+        },
+        {
+          "id": "arrived_boat",
+          "kind": "latched",
+          "predicate_id": "route_completed",
+          "parameters": {
+            "actor_id": "boat",
+            "route_id": "boat_route"
+          },
+          "required": true
+        }
+      ],
+      "hints": [
+        "level.L18.hint1",
+        "level.L18.hint2",
+        "level.L18.hint3"
+      ],
+      "presentation": {
+        "layout_asset_id": "SCENE_L18_LAYOUT",
+        "overlay_asset_id": "SCENE_L18_OVERLAY"
+      },
+      "canonical_solution_ref": "L18_solution.json"
+    }
+  },
+  "story": {
+    "L01": {
+      "title": [
+        "Первый переход",
+        "The First Crossing"
+      ],
+      "objective": [
+        "Помогите Марфе перейти канал к пекарне.",
+        "Help Marfa cross the canal to her bakery."
+      ],
+      "intro": [
+        "Марфа: «Мост сломан, а ключ от пекарни у меня». Профессор: «Покажем невозможное. Атлас сделает его настоящим». Поплавок держит только камень. Масса Марфы с корзиной — две единицы.",
+        "Marfa: “The bridge is broken, and I have the bakery key.” Professor: “Show the impossible. The Atlas can make it real.” The float supports only the stone. Marfa and her basket weigh two units together."
+      ],
+      "success": [
+        "Марфа добралась до своей двери с корзиной. Теперь можно открывать пекарню. Камень удержала вода после удаления поплавка.",
+        "Marfa reached her door with the basket. She can open the bakery now. The water supported the stone after the float was removed."
+      ],
+      "next_story": [
+        "Тот же закон поднял каменный якорь. На соседнем причале лодке нужна другая швартовка.",
+        "The same law lifted a stone anchor. At the next pier, the boat needs another mooring."
+      ],
+      "plan_tip": [
+        "Нажмите на ширму: поменяйте место и сложите верх.",
+        "Tap the screen: change its position and fold the top."
+      ],
+      "resolution_tip": [
+        "Вода держит камень вместе с грузом. Уберите поплавок, затем переправьте Марфу.",
+        "The water supports the stone and its load. Remove the float, then guide Marfa across."
+      ],
+      "success_title": [
+        "Марфа у пекарни!",
+        "Marfa reached the bakery!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Марфа должна видеть камень. Опора должна остаться скрыта.",
+        "Marfa must see the stone while its support stays hidden."
+      ],
+      "hint2": [
+        "Высокая ширма закроет и камень. Попробуйте сложить верх.",
+        "A tall screen hides the stone too. Try folding its top."
+      ],
+      "hint3": [
+        "Поставьте ширму перед поплавком и сложите её. Проведите опыт, сделайте результат законом и уберите поплавок.",
+        "Place the screen in front of the float and fold it. Demonstrate, make it a law, then remove the float."
+      ]
+    },
+    "L02": {
+      "title": [
+        "Якорь на поверхности",
+        "The Floating Anchor"
+      ],
+      "objective": [
+        "Закрепите лодку у деревянного кнехта и выгрузите ящик.",
+        "Moor the boat to the wooden bollard and unload the crate."
+      ],
+      "intro": [
+        "Марфа: «Переправа помогла. Только якорь теперь тоже плавает». Страница каменного закона уже перенесена на этот причал; повторный опыт не нужен.",
+        "Marfa: “The crossing worked. Now the anchor floats too.” The stone-law page is already applied at this pier; no new demonstration is needed."
+      ],
+      "success": [
+        "Лодку удерживает верёвка у деревянного кнехта, а ящик доставлен на настил. Дерево сохранило обычные свойства.",
+        "A rope tied to the wooden bollard holds the boat, and the crate reached the landing. Wood kept its ordinary properties."
+      ],
+      "next_story": [
+        "Семён ждёт следующую посылку и хочет посмотреть опыт с двух сторон.",
+        "Semyon is waiting for another parcel and wants to inspect the demonstration from both sides."
+      ],
+      "plan_tip": [
+        "Выберите швартовочный канат и проверьте его крепление.",
+        "Select the mooring rope and inspect its attachment."
+      ],
+      "resolution_tip": [
+        "Закрепите канат на кнехте. После этого назначьте ящику разгрузку и запустите план.",
+        "Attach the rope to the bollard. Then assign the crate an unloading route and run the plan."
+      ],
+      "success_title": [
+        "Лодка закреплена!",
+        "The boat is safely moored!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "каменный закон действует и на якорь.",
+        "The stone law affects the anchor too."
+      ],
+      "hint2": [
+        "Вещи из дерева не изменились.",
+        "Wood still behaves as usual."
+      ],
+      "hint3": [
+        "Привяжите лодку к деревянному кнехту до запуска разгрузки.",
+        "Tie the boat to the wooden bollard before unloading."
+      ]
+    },
+    "L03": {
+      "title": [
+        "Проверка со всех сторон",
+        "Every Angle Counts"
+      ],
+      "objective": [
+        "Покажите опыт с двух ракурсов и доставьте посылку.",
+        "Demonstrate the effect from both views and deliver the parcel."
+      ],
+      "intro": [
+        "Семён: «Я не сомневаюсь. Я уточняю, что видно сбоку». Новая страница Атласа относится к этой площадке: оба ракурса должны показывать камень без опоры.",
+        "Semyon: “I am not doubting. I am checking the side view.” This Atlas page belongs to this stage: both views must show the stone without its support."
+      ],
+      "success": [
+        "Посылка на дальнем берегу. Семён проверил оба ракурса, а настоящая переправа выдержала груз.",
+        "The parcel reached the far bank. Semyon checked both views, and the real crossing carried the load."
+      ],
+      "next_story": [
+        "На открытом настиле поднялся ветер. Следующий опыт потребует закрепить оборудование.",
+        "Wind is rising over the open landing. The next demonstration needs secure equipment."
+      ],
+      "plan_tip": [
+        "Проверьте второй ракурс Семёна до начала опыта.",
+        "Check Semyon’s second view before the demonstration."
+      ],
+      "resolution_tip": [
+        "После записи закона уберите поплавок, поставьте камень на переправу и доставьте посылку.",
+        "After recording the law, remove the float, position the crossing stone and deliver the parcel."
+      ],
+      "success_title": [
+        "Посылка доставлена!",
+        "The parcel is delivered!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Семён не остаётся на первом месте.",
+        "Semyon will inspect more than the front."
+      ],
+      "hint2": [
+        "Посмотрите его вторую остановку и луч к поплавку.",
+        "Check his second stop and the ray to the float."
+      ],
+      "hint3": [
+        "Поставьте вторую ширму на правый край сцены: она должна скрыть поплавок со второго ракурса.",
+        "Place the second screen on the right side of the stage to hide the float from the second view."
+      ]
+    },
+    "L04": {
+      "title": [
+        "Опыт на ветру",
+        "A Windy Experiment"
+      ],
+      "objective": [
+        "Закрепите ширму, запишите закон и перейдите канал.",
+        "Secure the screen, record the law and cross the canal."
+      ],
+      "intro": [
+        "Плюм едва удерживает сумочку на ветру. Профессор: «Хороший опыт начинается с устойчивой установки». Два зажима доступны до начала показа.",
+        "Plum can barely hold his satchel in the wind. Professor: “A good experiment starts with a stable setup.” Two clamps are available before the demonstration."
+      ],
+      "success": [
+        "Ширма выдержала порыв. Профессор перешёл по камню после удаления поплавка.",
+        "The screen held through the gust. The professor crossed on the stone after the float was removed."
+      ],
+      "next_story": [
+        "У билетной будки собрались помощники. Не из каждого места видно результат.",
+        "Helpers are gathering by the ticket booth. The result is not visible from every seat."
+      ],
+      "plan_tip": [
+        "Закрепите обе ножки ширмы до начала опыта.",
+        "Secure both screen legs before the demonstration."
+      ],
+      "resolution_tip": [
+        "После опыта уберите поплавок и перенесите камень в место переправы. Затем задайте путь профессору.",
+        "After the demonstration, remove the float and move the stone to the crossing. Then assign the professor’s route."
+      ],
+      "success_title": [
+        "Установка выдержала ветер!",
+        "The setup weathered the wind!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Порыв сдвигает незакреплённую ширму во время опыта.",
+        "The gust moves an unsecured screen during the demonstration."
+      ],
+      "hint2": [
+        "Для устойчивости нужны два независимых зажима.",
+        "Stability needs two independent clamps."
+      ],
+      "hint3": [
+        "Поставьте ширму и прикрепите к ней оба зажима до опыта.",
+        "Position the screen and attach both clamps before the demonstration."
+      ]
+    },
+    "L05": {
+      "title": [
+        "Хороший ракурс",
+        "A Clear View"
+      ],
+      "objective": [
+        "Откройте результат трём наблюдателям и доставьте ящик.",
+        "Give all three observers a clear view and deliver the crate."
+      ],
+      "intro": [
+        "Один помощник сел за билетной будкой. Он видит стойку вместо камня. Атласу нужен видимый результат, поэтому сначала проверьте его место.",
+        "One helper is sitting behind the ticket booth. The booth hides the stone. The Atlas needs a visible result, so first check the helper’s position."
+      ],
+      "success": [
+        "Ящик доставлен. Каждый наблюдатель видел камень, а скрытая опора больше не нужна.",
+        "The crate is delivered. Every observer saw the stone, and the hidden support is no longer needed."
+      ],
+      "next_story": [
+        "У переправы ждёт Карамелька и два ящика. Потребуется учитывать нагрузку разных опор.",
+        "Caramel and two crates are waiting at the crossing. The capacities of the supports now matter."
+      ],
+      "plan_tip": [
+        "Проверьте помощника за будкой и свободное место рядом.",
+        "Check the helper behind the booth and the empty seat nearby."
+      ],
+      "resolution_tip": [
+        "Закрепив закон, уберите поплавок. Большой камень выдержит профессора с ящиком.",
+        "After recording the law, remove the float. The large stone can carry the professor and crate."
+      ],
+      "success_title": [
+        "Ящик на другом берегу!",
+        "The crate reached the far bank!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Один зритель видит только стойку.",
+        "One spectator can only see the ticket booth."
+      ],
+      "hint2": [
+        "Сравните видимость результата с двух боковых мест.",
+        "Compare the two side seats."
+      ],
+      "hint3": [
+        "Пересадите зрителя из-за будки на свободное место справа. Затем повторите показ.",
+        "Move the spectator from behind the booth to the empty seat on the right, then perform again."
+      ]
+    },
+    "L06": {
+      "title": [
+        "Раздельные рейсы",
+        "Separate Crossings"
+      ],
+      "objective": [
+        "Переведите Карамельку и доставьте оба ящика.",
+        "Guide Caramel across and deliver both crates."
+      ],
+      "intro": [
+        "Карамелька уверенно идёт к среднему камню. Малый камень несёт только одну дополнительную единицу массы. Эта площадка уже использует каменный закон.",
+        "Caramel heads toward the medium stone. The small stone carries only one extra mass unit. This stage already uses the stone law."
+      ],
+      "success": [
+        "Карамелька и оба ящика на другом берегу. Раздельные рейсы сохранили нагрузку в пределах вместимости.",
+        "Caramel and both crates reached the far bank. Separate crossings kept the load within the supports’ capacities."
+      ],
+      "next_story": [
+        "Впереди широкий канал с островком. Одного расположения камней до финиша не хватит.",
+        "A wider canal with an island lies ahead. One stone arrangement will not reach the finish."
+      ],
+      "plan_tip": [
+        "Сравните массу пассажиров с вместимостью опор.",
+        "Compare passenger mass with support capacity."
+      ],
+      "resolution_tip": [
+        "Карамелька идёт по среднему камню. Ящики перевозятся по малому раздельно, с буксирной верёвкой.",
+        "Caramel uses the medium stone. Tow each crate separately across the small stone."
+      ],
+      "success_title": [
+        "Все пассажиры на берегу!",
+        "Everyone reached the bank!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Карамелька тяжелее одного ящика. Вместимость камня указана отдельно.",
+        "Caramel weighs more than one crate. Stone capacity is shown separately."
+      ],
+      "hint2": [
+        "Средний камень выдерживает Карамельку. Малый — один буксируемый ящик.",
+        "The medium stone carries Caramel. The small stone carries one towed crate."
+      ],
+      "hint3": [
+        "Отправьте Карамельку по основной переправе. Затем буксируйте каждый ящик отдельно по малому камню.",
+        "Send Caramel over the main crossing. Then tow each crate separately over the small stone."
+      ]
+    },
+    "L07": {
+      "title": [
+        "Остров на полпути",
+        "The Halfway Island"
+      ],
+      "objective": [
+        "Дойдите до островка, затем до дальнего причала.",
+        "Reach the island, then the far pier."
+      ],
+      "intro": [
+        "Профессор: «Остров — не препятствие, а место для второго шага». С островка можно переставить освобождённую ближнюю опору дальше.",
+        "Professor: “The island is a place for the next step.” From the island, the released near support can be moved farther ahead."
+      ],
+      "success": [
+        "Профессор на дальнем причале. Островок дал безопасную точку, откуда удалось перестроить вторую часть пути.",
+        "The professor reached the far pier. The island provided a safe place to rearrange the second part of the route."
+      ],
+      "next_story": [
+        "Ника заметила у новой установки лишнюю страховочную нить. Нужно разобраться с обеими опорами.",
+        "Nika noticed an extra safety thread in the next setup. Both supports need attention."
+      ],
+      "plan_tip": [
+        "Соберите путь до островка и проверьте зону досягаемости.",
+        "Build the route to the island and check your reach."
+      ],
+      "resolution_tip": [
+        "Сначала пройдите на остров. Затем переставьте освобождённый камень в дальнее место и задайте второй путь.",
+        "Reach the island first. Then move the released stone to the far position and assign the second route."
+      ],
+      "success_title": [
+        "Дальний причал достигнут!",
+        "The far pier is reached!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Середина реки — безопасное место.",
+        "The island is a safe stopping point."
+      ],
+      "hint2": [
+        "Опора за спиной уже не нужна для следующего шага.",
+        "A support behind you can help with the next part."
+      ],
+      "hint3": [
+        "Дойдите до островка, затем перенесите освобождённый камень в дальний разрешённый слот.",
+        "Reach the island, then move the released near stone to the reachable far slot."
+      ]
+    },
+    "L08": {
+      "title": [
+        "Два скрытых механизма",
+        "Two Hidden Methods"
+      ],
+      "objective": [
+        "Уберите обе подпорки и завершите переправу.",
+        "Remove both supports and complete the crossing."
+      ],
+      "intro": [
+        "Ника: «Поплавок вижу. А это ещё что за нить?» Атлас учитывает каждый видимый механизм. Одной ширмы может оказаться мало.",
+        "Nika: “I see the float. What is that thread?” The Atlas checks every visible method. One screen may not be enough."
+      ],
+      "success": [
+        "Поплавок и нить убраны, а камень выдержал настоящий переход. Проверка не зависела от знания секрета.",
+        "The float and thread are removed, and the stone carried the real crossing. The test did not depend on anyone forgetting the method."
+      ],
+      "next_story": [
+        "Семён хочет закончить обход прежде, чем Атлас поставит печать.",
+        "Semyon wants to finish his inspection before the Atlas seals the page."
+      ],
+      "plan_tip": [
+        "Проверьте поплавок и страховочную нить отдельно.",
+        "Inspect the float and safety thread separately."
+      ],
+      "resolution_tip": [
+        "Уберите все подпорки после записи закона. Затем поставьте камень на путь и проведите профессора.",
+        "Remove every support after recording the law. Then move the stone onto the route and guide the professor."
+      ],
+      "success_title": [
+        "Камень держится без подпорок!",
+        "The stone holds without supports!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Иконка раскрытия относится к другому механизму.",
+        "The warning points to another mechanism."
+      ],
+      "hint2": [
+        "У камня есть две поддержки.",
+        "The stone has two supports."
+      ],
+      "hint3": [
+        "Снимите страховочную нить до показа либо закройте её отдельной ширмой.",
+        "Remove the safety thread before the show, or hide it behind a separate screen."
+      ]
+    },
+    "L09": {
+      "title": [
+        "Полная проверка",
+        "The Full Inspection"
+      ],
+      "objective": [
+        "Дождитесь проверки Семёна и доставьте груз.",
+        "Complete Semyon’s inspection and deliver the cargo."
+      ],
+      "intro": [
+        "Семён: «Мне нужен полный ракурс, а не первые аплодисменты». Запись готова только после непрерывного наблюдения из каждой назначенной точки.",
+        "Semyon: “I need the full view, not the first applause.” The record is ready only after continuous observation from every required position."
+      ],
+      "success": [
+        "Семён закончил осмотр, закон записан, груз доставлен. Короткого первого впечатления для печати было недостаточно.",
+        "Semyon finished the inspection, the law is recorded and the cargo is delivered. A brief first impression was not enough to seal the page."
+      ],
+      "next_story": [
+        "Последняя переправа квартала объединит лодку, груз и Карамельку.",
+        "The district’s final crossing combines the boat, cargo and Caramel."
+      ],
+      "plan_tip": [
+        "Не начинайте заново, пока проверяющий ещё меняет ракурс.",
+        "Do not restart while the inspector is still changing views."
+      ],
+      "resolution_tip": [
+        "Дождитесь полного осмотра, закрепите закон и подготовьте настоящую переправу для груза.",
+        "Wait for the complete inspection, record the law and prepare the real cargo crossing."
+      ],
+      "success_title": [
+        "Проверка завершена!",
+        "The inspection is complete!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Вторая точка осмотра важна так же, как первая.",
+        "The second inspection point matters as much as the first."
+      ],
+      "hint2": [
+        "Готовность записи появляется после непрерывного обзора из обеих точек.",
+        "The record becomes ready after continuous clear observation from both points."
+      ],
+      "hint3": [
+        "Скройте поплавок двумя ширмами и дождитесь полного осмотра. Затем сделайте результат законом.",
+        "Hide the float with both screens and wait for the full inspection. Then make the result a law."
+      ],
+      "joke": [
+        "Семён закончил осмотр, закон записан, груз доставлен. Короткого первого впечатления для печати было недостаточно.",
+        "Semyon finished the inspection, the law is recorded and the cargo is delivered. A brief first impression was not enough to seal the page."
+      ]
+    },
+    "L10": {
+      "title": [
+        "Рабочая переправа",
+        "A Working Crossing"
+      ],
+      "objective": [
+        "Доставьте груз и Карамельку, удерживая лодку у причала.",
+        "Deliver the cargo and Caramel while keeping the boat moored."
+      ],
+      "intro": [
+        "Марфа сверяет список: лодка, ящик, Карамелька. Закон пригодится всем, но каменный якорь после печати перестанет держать лодку.",
+        "Marfa checks the list: boat, crate, Caramel. The law will help everyone, but the stone anchor will stop holding the boat after sealing."
+      ],
+      "success": [
+        "Груз и Карамелька доставлены, лодка осталась у причала. Деревянная швартовка сохранила крепление после изменения камня.",
+        "The cargo and Caramel are delivered, and the boat stayed at the pier. The wooden mooring held after the stone changed."
+      ],
+      "next_story": [
+        "Лада зовёт на праздничную площадь. Для следующего опыта потребуется изменить действие огня.",
+        "Lada calls from the festival square. The next experiment will change what fire does."
+      ],
+      "plan_tip": [
+        "Подготовьте швартовку до изменения каменного якоря.",
+        "Prepare the mooring before changing the stone anchor."
+      ],
+      "resolution_tip": [
+        "Закрепите лодку за дерево. После записи закона перевозите груз и Карамельку раздельно.",
+        "Moor the boat to wood. After recording the law, transport the cargo and Caramel separately."
+      ],
+      "success_title": [
+        "Переправа работает!",
+        "The crossing is working!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Закон поднимет каменный якорь вместе с остальными каменными вещами.",
+        "The law lifts the stone anchor along with other stone objects."
+      ],
+      "hint2": [
+        "Деревянный кнехт остаётся надёжным креплением.",
+        "The wooden bollard remains a reliable mooring."
+      ],
+      "hint3": [
+        "Прикрепите швартовочный канат к кнехту до записи закона. Груз и Карамельку переправляйте раздельно.",
+        "Attach the mooring rope to the bollard before recording the law. Transport the cargo and Caramel separately."
+      ]
+    },
+    "L11": {
+      "title": [
+        "Холодное пламя",
+        "Cold Fire"
+      ],
+      "objective": [
+        "Покажите замерзание воды и перейдите ледяной проход.",
+        "Show water freezing and cross the ice passage."
+      ],
+      "intro": [
+        "Лада: «Огонь должен греть. Хотя десерт с этим бы поспорил». Для записи нового закона вода должна замёрзнуть во время наблюдения, рядом с видимым пламенем.",
+        "Lada: “Fire should warm things. Dessert might disagree.” To record the new law, water must freeze during observation beside a visible flame."
+      ],
+      "success": [
+        "Профессор прошёл по льду. После записи Атласа настоящая жаровня охлаждает проход, а не бутафорское пламя.",
+        "The professor crossed the ice. After the Atlas record, the real brazier cools the passage; the stage flame does not."
+      ],
+      "next_story": [
+        "Теперь Ладе нужны холодный десерт и тёплый хлеб одновременно.",
+        "Lada now needs cold dessert and warm bread at the same time."
+      ],
+      "plan_tip": [
+        "Покажите переход жидкой воды в лёд, скрыв криопак.",
+        "Show liquid water turning to ice while hiding the cold pack."
+      ],
+      "resolution_tip": [
+        "После записи закона настоящая жаровня заморозит проход. Назначьте путь и дождитесь готового льда.",
+        "After recording the law, the real brazier freezes the passage. Assign the route and wait for safe ice."
+      ],
+      "success_title": [
+        "Ледяной проход открыт!",
+        "The ice passage is open!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Вода должна измениться во время показа.",
+        "The water must change during the show."
+      ],
+      "hint2": [
+        "Зрители видят пламя, но не криопак.",
+        "The flame and water must remain visible."
+      ],
+      "hint3": [
+        "Установите скрытый источник под чашей и начните с жидкой воды.",
+        "Start with liquid water and place the hidden cold pack beneath the bowl."
+      ]
+    },
+    "L12": {
+      "title": [
+        "Два блюда — два режима",
+        "Two Dishes, Two Temperatures"
+      ],
+      "objective": [
+        "Заморозьте десерт, сохраните хлеб и доставьте оба блюда.",
+        "Freeze the dessert, protect the bread and deliver both dishes."
+      ],
+      "intro": [
+        "Лада: «Мороженое должно быть холодным. Хлеб — нет». Закон уже действует, но закрытый термокороб защищает хлеб от холода.",
+        "Lada: “Ice cream should be cold. Bread should not.” The law is already active, but a closed insulated box protects the bread."
+      ],
+      "success": [
+        "Десерт заморожен, хлеб цел и оба блюда доставлены. Короб был закрыт до охлаждения и остался рядом с хлебом при погрузке.",
+        "The dessert is frozen, the bread is intact and both are delivered. The box was closed before cooling and stayed beside the bread during loading."
+      ],
+      "next_story": [
+        "На следующей площадке проход нужно заморозить, а правый контрольный бассейн оставить жидким.",
+        "On the next stage, freeze the passage while keeping the right-hand control pool liquid."
+      ],
+      "plan_tip": [
+        "Защитите хлеб до того, как запустите охлаждение.",
+        "Protect the bread before starting the cooling step."
+      ],
+      "resolution_tip": [
+        "Охладите десерт, затем загрузите оба блюда и закрытый короб в места доставки.",
+        "Freeze the dessert, then load both dishes and the closed box at their delivery positions."
+      ],
+      "success_title": [
+        "Угощение доставлено!",
+        "The dishes are delivered!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Двум блюдам нужны разные условия.",
+        "The dishes need different temperatures."
+      ],
+      "hint2": [
+        "Термокороб закрывает тепловое воздействие.",
+        "A closed insulated box blocks the cold."
+      ],
+      "hint3": [
+        "Уберите готовый хлеб в короб, а десерт оставьте у холодного источника.",
+        "Protect the bread, freeze the dessert, then load both into the delivery crate."
+      ]
+    },
+    "L13": {
+      "title": [
+        "Лёд и жидкая вода",
+        "Ice and Liquid Water"
+      ],
+      "objective": [
+        "Заморозьте проход, сохранив жидкую воду в правом бассейне.",
+        "Freeze the passage while keeping the right-hand pool liquid."
+      ],
+      "intro": [
+        "Лада: «Лёд нужен только на проходе». Вода в правом контрольном бассейне должна остаться жидкой. Закон действует на обе настоящие жаровни.",
+        "Lada: “Only the passage needs ice.” The right-hand control pool must stay liquid. The law affects both real braziers."
+      ],
+      "success": [
+        "Профессор перешёл по льду. В правом бассейне вода осталась жидкой: два участка подготовлены по-разному.",
+        "The professor crossed the ice. The right-hand pool stayed liquid: the two areas have different temperatures."
+      ],
+      "next_story": [
+        "Семён попросил проверить следующий холодный опыт с обратной стороны.",
+        "Semyon wants to inspect the next cold experiment from the other side."
+      ],
+      "plan_tip": [
+        "Проверьте влияние второй жаровни на правый бассейн.",
+        "Check the second brazier’s effect on the right-hand pool."
+      ],
+      "resolution_tip": [
+        "Защитите правый бассейн от охлаждения. Основной проход должен замёрзнуть.",
+        "Protect the right-hand pool from cooling. The main passage must freeze."
+      ],
+      "success_title": [
+        "Нужные температуры сохранены!",
+        "The temperatures are right!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Замерзают обе зоны по одной причине.",
+        "Both zones freeze for the same reason."
+      ],
+      "hint2": [
+        "Сам закон не выбирает любимую печь.",
+        "The law affects every real fire."
+      ],
+      "hint3": [
+        "Перекройте охлаждение правого бассейна экраном или отодвиньте вторую жаровню.",
+        "Screen the cooling path to the right-hand pool or move the second brazier away."
+      ],
+      "zone.boat_water": [
+        "вода в правом бассейне",
+        "water in the right-hand pool"
+      ],
+      "joke": [
+        "Профессор перешёл по льду. В правом бассейне вода осталась жидкой: два участка подготовлены по-разному.",
+        "The professor crossed the ice. The right-hand pool stayed liquid: the two areas have different temperatures."
+      ]
+    },
+    "L14": {
+      "title": [
+        "Холод со всех сторон",
+        "Cold from Every Angle"
+      ],
+      "objective": [
+        "Покажите замерзание с двух ракурсов и откройте проход.",
+        "Show freezing from both views and open the passage."
+      ],
+      "intro": [
+        "Семён: «Я проверю чашу и снизу, и сбоку». Скрыть механизм недостаточно: поверхность воды и её изменение должны остаться видны.",
+        "Semyon: “I will check the bowl from both sides.” Hiding the method is not enough: the water surface and its change must remain visible."
+      ],
+      "success": [
+        "Семён завершил оба наблюдения. Закон записан, и профессор прошёл по льду.",
+        "Semyon completed both observations. The law is recorded, and the professor crossed the ice."
+      ],
+      "next_story": [
+        "На следующей площадке замёрз правый бассейн. Нагретый камень поможет оттаять ему, сохранив лёд на проходе.",
+        "At the next stage, the right-hand pool has frozen. A heated stone can thaw it while preserving the ice passage."
+      ],
+      "plan_tip": [
+        "Проверьте луч к криопаку из второй точки осмотра.",
+        "Check the cold-pack view from the second inspection point."
+      ],
+      "resolution_tip": [
+        "После записи используйте настоящую печь для ледяного прохода и назначьте путь профессору.",
+        "After recording, use the real brazier to freeze the passage and assign the professor’s route."
+      ],
+      "success_title": [
+        "Холодный опыт проверен!",
+        "The cold experiment is verified!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Механизм не должен быть виден ни из одной точки проверки.",
+        "The method must stay hidden from every inspection point."
+      ],
+      "hint2": [
+        "Поверхность чаши остаётся видимой поверх ширм.",
+        "The bowl surface must remain visible above the screens."
+      ],
+      "hint3": [
+        "Поставьте обе ширмы, скрыв криопак с двух сторон. Проведите полный опыт.",
+        "Position both screens to hide the cold pack from both sides. Run the full demonstration."
+      ]
+    },
+    "L15": {
+      "title": [
+        "Тепло без огня",
+        "Heat Without Fire"
+      ],
+      "objective": [
+        "Оттайте правый бассейн, сохранив лёд на основном проходе.",
+        "Thaw the right-hand pool while preserving the main ice passage."
+      ],
+      "intro": [
+        "Лада: «Печь теперь морозит. А нагретый камень?» Атлас изменил источники огня; запасённое тепло камня к ним не относится.",
+        "Lada: “The brazier cools now. What about a heated stone?” The Atlas changed fire sources; stored heat in a stone is a different kind of source."
+      ],
+      "success": [
+        "Правый бассейн оттаял, основной проход остался замороженным. Вода в двух участках теперь подготовлена по-разному.",
+        "The right-hand pool thawed while the main passage stayed frozen. The water in the two areas now has different temperatures."
+      ],
+      "next_story": [
+        "Следующая установка скрывает механизм паром. Он скоро рассеется.",
+        "The next setup hides its method with steam. It will not last forever."
+      ],
+      "plan_tip": [
+        "Отделите правый бассейн от холода и добавьте другое тепло.",
+        "Block cooling at the right-hand pool and add another heat source."
+      ],
+      "resolution_tip": [
+        "Защитите правый бассейн от холодной жаровни и поднесите нагретый камень. Запустите время для оттаивания.",
+        "Protect the right-hand pool from the cold brazier and bring the heated stone closer. Run time so it can thaw."
+      ],
+      "success_title": [
+        "Правый бассейн оттаял!",
+        "The right-hand pool has thawed!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Закон относится к источникам огня.",
+        "The law changes fire sources."
+      ],
+      "hint2": [
+        "Нагретый камень сохраняет свой тепловой класс.",
+        "A heated stone keeps its thermal class."
+      ],
+      "hint3": [
+        "Перекройте охлаждение правого бассейна и согрейте воду нагретым камнем.",
+        "Block cooling at the right-hand pool and warm its water with the heated stone."
+      ],
+      "zone.bowl_water": [
+        "вода в правом бассейне",
+        "water in the right-hand pool"
+      ],
+      "joke": [
+        "Правый бассейн оттаял, основной проход остался замороженным. Вода в двух участках теперь подготовлена по-разному.",
+        "The right-hand pool thawed while the main passage stayed frozen. The water in the two areas now has different temperatures."
+      ]
+    },
+    "L16": {
+      "title": [
+        "Опыт за паром",
+        "The Steam Experiment"
+      ],
+      "objective": [
+        "Запишите закон до рассеивания пара и перейдите проход.",
+        "Record the law before the steam clears and cross the passage."
+      ],
+      "intro": [
+        "Профессор: «Пар может скрыть прибор, но не должен скрывать результат». Плотная завеса держится только во время первого интервала опыта.",
+        "Professor: “Steam may hide the instrument, but must not hide the result.” The dense veil lasts only through the first observation interval."
+      ],
+      "success": [
+        "Атлас успел записать наблюдаемый результат, и проход открыт. После печати пару больше не нужно скрывать прибор.",
+        "The Atlas recorded the observed result, and the passage is open. After sealing, steam no longer needs to hide the instrument."
+      ],
+      "next_story": [
+        "На следующей площадке уже плавают камни. Нужно добавить холодный огонь, сохранив первую запись.",
+        "Stones already float on the next stage. Cold fire must be added while keeping the first record."
+      ],
+      "plan_tip": [
+        "Сравните время наблюдения со временем жизни пара.",
+        "Compare the observation interval with the steam duration."
+      ],
+      "resolution_tip": [
+        "После печати дождитесь льда и проведите профессора. Для подготовки можно выбрать постоянную ширму.",
+        "After sealing, wait for ice and guide the professor. A permanent screen is another way to prepare the setup."
+      ],
+      "success_title": [
+        "Запись сохранена!",
+        "The record is secured!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Пар нужен до печати.",
+        "Steam only needs to last until sealing."
+      ],
+      "hint2": [
+        "Должно хватить полного непрерывного интервала наблюдения.",
+        "Allow a full continuous observation interval."
+      ],
+      "hint3": [
+        "Закройте только луч к методу плотным паром либо используйте устойчивую ширму.",
+        "Hide only the mechanism ray with steam, or use a permanent screen."
+      ]
+    },
+    "L17": {
+      "title": [
+        "Две страницы Атласа",
+        "Two Atlas Pages"
+      ],
+      "objective": [
+        "Сохраните плавающий камень, добавьте холодный огонь и пройдите путь.",
+        "Keep the floating stone, add cold fire and complete the route."
+      ],
+      "intro": [
+        "Ника держит Атлас открытым: «Для второй записи ещё есть место». На этой площадке каменный закон уже включён; новый опыт должен добавить другой закон.",
+        "Nika holds the Atlas open: “There is room for another record.” The stone law is already active here; the new experiment adds a different law."
+      ],
+      "success": [
+        "Обе записи действуют, профессор прошёл каменный и ледяной участки. Первая опора не исчезла при добавлении второй страницы.",
+        "Both records are active, and the professor crossed the stone and ice sections. Adding the second page preserved the first support."
+      ],
+      "next_story": [
+        "В следующей протоке лёд мешает лодке. Нужно изменить температуру только там.",
+        "Ice blocks the next boat channel. Only that zone’s temperature needs to change."
+      ],
+      "plan_tip": [
+        "Вторая запись добавляется в свободное место Атласа.",
+        "The second record goes into the Atlas’s empty slot."
+      ],
+      "resolution_tip": [
+        "Подготовьте камень и холодный опыт. Сохраните оба закона и назначьте общий путь.",
+        "Prepare the stone and cold demonstration. Keep both laws and assign the complete route."
+      ],
+      "success_title": [
+        "Два закона работают вместе!",
+        "Two laws work together!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Новый закон помещается во второе место.",
+        "The second law fits in the empty slot."
+      ],
+      "hint2": [
+        "Не отменяйте работающую переправу.",
+        "Keep the stone crossing working."
+      ],
+      "hint3": [
+        "Закрепите закон холодного огня в свободном слоте, затем разыграйте маршрут.",
+        "Seal the cold-fire law in the free slot, then run the whole route."
+      ]
+    },
+    "L18": {
+      "title": [
+        "Освободить протоку",
+        "Free the Channel"
+      ],
+      "objective": [
+        "Оттайте путь лодке, сохранив пешеходную опору.",
+        "Thaw the boat channel while preserving the pedestrian support."
+      ],
+      "intro": [
+        "Профессор: «Лёд полезен для пешеходов, но мешает лодке». Два закона уже действуют; каменную опору можно сохранить.",
+        "Professor: “Ice helps walkers but blocks the boat.” Two laws are active; the stone support can be preserved."
+      ],
+      "success": [
+        "Лодка завершила путь, а камень остался устойчивой опорой. Вода для лодочного маршрута стала жидкой.",
+        "The boat completed its route, and the stone remained a stable support. The water required by the boat route became liquid."
+      ],
+      "next_story": [
+        "Праздничная кухня ждёт возвращения обычного огня. Переправу придётся подготовить заранее.",
+        "The festival kitchen needs ordinary fire again. A crossing must be prepared first."
+      ],
+      "plan_tip": [
+        "Отделите протоку от холода, затем согрейте её камнем.",
+        "Block cooling at the channel, then warm it with the stone."
+      ],
+      "resolution_tip": [
+        "Запустите оттаивание. Когда протока станет жидкой, назначьте лодке путь и запустите движение.",
+        "Run the thawing step. Once the channel is liquid, assign the boat’s route and start movement."
+      ],
+      "success_title": [
+        "Лодка снова идёт!",
+        "The boat can sail again!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Лодке нужен переход фазы именно в её зоне.",
+        "The boat needs liquid water in its own zone."
+      ],
+      "hint2": [
+        "Уберите охлаждение и добавьте независимый нагрев.",
+        "Stop the cooling and add independent heat."
+      ],
+      "hint3": [
+        "Поставьте экран между печью и водой, а нагретый камень рядом с лодочной зоной.",
+        "Put the screen between the oven and the boat, then bring the heated stone closer."
+      ],
+      "joke": [
+        "Лодка завершила путь, а камень остался устойчивой опорой. Вода для лодочного маршрута стала жидкой.",
+        "The boat completed its route, and the stone remained a stable support. The water required by the boat route became liquid."
+      ]
+    },
+    "L19": {
+      "title": [
+        "Вернуть печи тепло",
+        "Restore the Oven’s Heat"
+      ],
+      "objective": [
+        "Отмените холодный огонь и доставьте груз по каменной опоре.",
+        "Revoke cold fire and deliver cargo across the stone support."
+      ],
+      "intro": [
+        "Лада готова печь хлеб. Но обычный огонь растопит ледяной переход. Профессор сначала подготовит опору, которая от температуры не зависит.",
+        "Lada is ready to bake bread. Ordinary fire will thaw the ice crossing, so the professor must first prepare a support that does not depend on temperature."
+      ],
+      "success": [
+        "Огонь снова греет, вода жидкая, груз доставлен по камню. Переправа была готова до отмены холодного закона.",
+        "Fire warms again, the water is liquid and the cargo crossed on stone. The replacement crossing was ready before cold fire was revoked."
+      ],
+      "next_story": [
+        "Лада собирает праздничную доставку: тёплый хлеб и холодный десерт поедут вместе.",
+        "Lada is preparing a festival delivery: warm bread and cold dessert will travel together."
+      ],
+      "plan_tip": [
+        "Сначала создайте каменную опору, потом отменяйте холод.",
+        "Create the stone support before revoking the cold law."
+      ],
+      "resolution_tip": [
+        "Запишите каменный закон и подготовьте переправу. Затем отмените холодный огонь и доставьте груз.",
+        "Record the stone law and prepare the crossing. Then revoke cold fire and deliver the cargo."
+      ],
+      "success_title": [
+        "Печь снова греет!",
+        "The oven is warm again!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "После отмены закон холодного огня лёд не останется надёжной дорогой.",
+        "Ordinary fire will thaw the ice."
+      ],
+      "hint2": [
+        "Подготовьте независимую опору.",
+        "Prepare a support that does not depend on ice."
+      ],
+      "hint3": [
+        "Создайте каменную переправу с каменный закон и только потом верните обычный огонь.",
+        "Build the stone crossing before revoking the cold-fire law."
+      ]
+    },
+    "L20": {
+      "title": [
+        "Угощение для площади",
+        "A Feast for the Square"
+      ],
+      "objective": [
+        "Сохраните хлеб, заморозьте десерт и доставьте угощение.",
+        "Protect the bread, freeze the dessert and deliver the feast."
+      ],
+      "intro": [
+        "Лада: «Одной доставке нужны два разных режима». Каменная переправа уже доступна. Перед холодным опытом хлебу нужен закрытый короб.",
+        "Lada: “One delivery needs two temperature rules.” The stone crossing is available. The bread needs a closed insulated box before the cold demonstration."
+      ],
+      "success": [
+        "Оба блюда доставлены: десерт заморожен, хлеб цел. Праздничная доставка завершена без потери опоры.",
+        "Both dishes are delivered: the dessert is frozen and the bread intact. The festival delivery kept its crossing support."
+      ],
+      "next_story": [
+        "Гуго строит бумажную мастерскую. Атласу предстоит новый опыт с настоящим испытательным грузом.",
+        "Hugo is building a paper workshop. The Atlas will need a new experiment with a real test load."
+      ],
+      "plan_tip": [
+        "Закройте хлеб в коробе до холодного опыта.",
+        "Close the bread in its box before the cold experiment."
+      ],
+      "resolution_tip": [
+        "Защитите хлеб, добавьте холодный закон, охладите десерт и загрузите оба блюда для доставки.",
+        "Protect the bread, add the cold law, freeze the dessert and load both dishes for delivery."
+      ],
+      "success_title": [
+        "Праздничная доставка готова!",
+        "The festival delivery is complete!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Празднику нужны сразу два температурных результата.",
+        "The feast needs two different temperature results."
+      ],
+      "hint2": [
+        "Законы общие, положение источников и защита выбираются отдельно.",
+        "Source positions and insulation remain your choices."
+      ],
+      "hint3": [
+        "Защитите тёплое блюдо, охладите десерт и доставьте оба по каменной опоре.",
+        "Protect the bread, freeze the dessert before loading, then deliver both across the stone support."
+      ]
+    },
+    "L21": {
+      "title": [
+        "Несущая бумага",
+        "Load-Bearing Paper"
+      ],
+      "objective": [
+        "Запишите прочность бумаги, уберите раму и доставьте груз.",
+        "Record paper’s strength, remove the frame and deliver the load."
+      ],
+      "intro": [
+        "Гуго: «Лист на раме ещё не мост». Профессор покажет настоящий груз на бумаге; скрытая рама поможет только до записи Атласа.",
+        "Hugo: “A sheet on a frame is not a bridge yet.” The professor will show a real load on paper; the hidden frame helps only before the Atlas record."
+      ],
+      "success": [
+        "Рама убрана, груз проехал по бумаге между двумя опорами. Закон изменил прочность листа, а крепления остались необходимы.",
+        "The frame is removed, and the load crossed the paper between two anchors. The law changed the sheet’s strength; it still needed its anchors."
+      ],
+      "next_story": [
+        "Карамелька встретила прочную бумажную преграду. Рядом есть обычная деревянная калитка.",
+        "Caramel has met a strong paper barrier. An ordinary wooden gate stands nearby."
+      ],
+      "plan_tip": [
+        "Лист должен держать груз, а рама — остаться вне обзора.",
+        "The sheet must carry the load while the frame stays hidden."
+      ],
+      "resolution_tip": [
+        "После записи уберите раму, верните груз к тали и задайте путь через бумажный пролёт.",
+        "After recording, remove the frame, return the load to the hoist and assign the paper-span route."
+      ],
+      "success_title": [
+        "Бумага выдержала груз!",
+        "The paper carried the load!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Лист должен держать груз, а не просто лежать рядом.",
+        "The paper must actually carry the weight."
+      ],
+      "hint2": [
+        "Рама — механизм, контакт груза — результат.",
+        "The frame is the method; contact with the weight is the result."
+      ],
+      "hint3": [
+        "Поставьте бумагу на два узла, скройте раму и талью опустите испытательный груз на бумагу.",
+        "Mount the paper at both anchors, screen the frame and use the hoist to lower the test load onto the paper."
+      ]
+    },
+    "L22": {
+      "title": [
+        "Калитка для Карамельки",
+        "A Gate for Caramel"
+      ],
+      "objective": [
+        "Проведите Карамельку в обход, сохранив бумажный лист.",
+        "Guide Caramel around the barrier and preserve the paper."
+      ],
+      "intro": [
+        "Прочная бумага стала прочной преградой. Карамелька не сможет её разорвать, но деревянная калитка сохранила обычную ручку.",
+        "Strong paper has become a strong barrier. Caramel cannot tear through it, but the wooden gate still has an ordinary handle."
+      ],
+      "success": [
+        "Карамелька прошла в обход преграды, бумажный лист цел. Закон не пришлось отменять, чтобы открыть деревянную калитку.",
+        "Caramel went around the barrier, and the paper sheet is intact. The law did not need to change for the wooden gate to open."
+      ],
+      "next_story": [
+        "В архиве рядом с бумагой горит печь. Прочность не защищает лист от огня.",
+        "A brazier is burning near the archive’s paper. Strength does not make a sheet fireproof."
+      ],
+      "plan_tip": [
+        "Проверьте деревянную калитку рядом с прочной бумагой.",
+        "Inspect the wooden gate beside the strong paper."
+      ],
+      "resolution_tip": [
+        "Откройте калитку и назначьте Карамельке обход. Бумажную преграду трогать не нужно.",
+        "Open the gate and assign Caramel the detour. Leave the paper barrier intact."
+      ],
+      "success_title": [
+        "Карамелька прошла в обход!",
+        "Caramel took the detour!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Бумага тоже стала преградой прочнее стали.",
+        "Strong paper makes a strong barrier too."
+      ],
+      "hint2": [
+        "Рядом есть другой материал и обычный механизм.",
+        "The gate has another material and an ordinary handle."
+      ],
+      "hint3": [
+        "Откройте деревянную калитку и назначьте обход.",
+        "Open the wooden gate and choose the detour."
+      ],
+      "joke": [
+        "Карамелька прошла в обход преграды, бумажный лист цел. Закон не пришлось отменять, чтобы открыть деревянную калитку.",
+        "Caramel went around the barrier, and the paper sheet is intact. The law did not need to change for the wooden gate to open."
+      ]
+    },
+    "L23": {
+      "title": [
+        "Архив без пожара",
+        "A Fire-Safe Archive"
+      ],
+      "objective": [
+        "Доставьте груз, сохранив бумажный мост целым.",
+        "Deliver the load while preserving the paper bridge."
+      ],
+      "intro": [
+        "Гуго: «Прочное не означает негорючее». У вас есть тепловой экран; другой путь — добавить закон холодного огня.",
+        "Hugo: “Strong does not mean fireproof.” A heat screen is available; adding cold fire is another possible approach."
+      ],
+      "success": [
+        "Груз доставлен по целому пролёту. Нагрев был перекрыт экраном или изменён отдельным законом.",
+        "The load crossed the intact span. Heat was blocked by a screen or changed by another law."
+      ],
+      "next_story": [
+        "Следующий бумажный пролёт опирается на два плавающих камня. Их нагрузку тоже нужно проверить.",
+        "The next paper span rests on two floating stones. Their load limit matters too."
+      ],
+      "plan_tip": [
+        "Проверьте путь тепла от печи к бумажному пролёту.",
+        "Check the heat path from the brazier to the paper span."
+      ],
+      "resolution_tip": [
+        "Перекройте нагрев экраном или добавьте холодный огонь. Только затем запускайте груз.",
+        "Block heating with the screen or add cold fire. Only then run the load’s route."
+      ],
+      "success_title": [
+        "Архив сохранён!",
+        "The archive is safe!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "закон прочной бумаги не меняет горючесть.",
+        "Strength does not make paper fireproof."
+      ],
+      "hint2": [
+        "Можно изменить огонь или закрыть его воздействие.",
+        "Change the fire or block its thermal path."
+      ],
+      "hint3": [
+        "Добавьте закон холодного огня во второй слот либо поставьте тепловой экран между огнём и мостом.",
+        "Add the cold-fire law, or put the screen between the oven and paper."
+      ],
+      "joke": [
+        "Груз доставлен по целому пролёту. Нагрев был перекрыт экраном или изменён отдельным законом.",
+        "The load crossed the intact span. Heat was blocked by a screen or changed by another law."
+      ]
+    },
+    "L24": {
+      "title": [
+        "Лёгкий мост, точный расчёт",
+        "A Light Bridge, a Careful Load"
+      ],
+      "objective": [
+        "Доставьте груз по бумаге, не перегружая каменные опоры.",
+        "Deliver the load over paper without overloading its stone supports."
+      ],
+      "intro": [
+        "Профессор сверяет две величины: прочность листа и вместимость камней. Бумажный закон меняет только первую.",
+        "The professor checks two limits: the sheet’s strength and the stones’ capacity. The paper law changes only the first."
+      ],
+      "success": [
+        "Груз доставлен, бумага цела, плавающие опоры не перегружены. Тяжёлый испытательный груз был снят до движения.",
+        "The load is delivered, the paper intact and the floating supports within capacity. The heavy test load was removed before movement."
+      ],
+      "next_story": [
+        "Роза проверит следующий пролёт с двух сторон. Скрытой должна остаться рама, а не сам груз.",
+        "Roza will inspect the next span from both sides. The frame must be hidden, not the load."
+      ],
+      "plan_tip": [
+        "Разделяйте прочность бумаги и вместимость опор.",
+        "Keep paper strength separate from support capacity."
+      ],
+      "resolution_tip": [
+        "Снимите испытательный груз и раму после записи. Затем везите рабочий груз по закреплённому листу.",
+        "Remove the test load and frame after recording. Then carry the working load over the anchored sheet."
+      ],
+      "success_title": [
+        "Расчёт выдержал проверку!",
+        "The load calculation held!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Прочность листа не повышает вместимость каменных опор.",
+        "A stronger sheet does not increase the stone supports’ capacity."
+      ],
+      "hint2": [
+        "Тяжёлый испытательный груз нужен только для записи.",
+        "The heavy test load is needed only for the record."
+      ],
+      "hint3": [
+        "Закрепите бумагу на двух опорах. После записи снимите испытательный груз и раму, затем доставьте рабочий груз.",
+        "Anchor the paper at both ends. After recording, remove the test load and frame, then deliver the working load."
+      ],
+      "joke": [
+        "Груз доставлен, бумага цела, плавающие опоры не перегружены. Тяжёлый испытательный груз был снят до движения.",
+        "The load is delivered, the paper intact and the floating supports within capacity. The heavy test load was removed before movement."
+      ]
+    },
+    "L25": {
+      "title": [
+        "Проверка пролёта",
+        "The Span Inspection"
+      ],
+      "objective": [
+        "Пройдите обе проверки Розы и доставьте груз.",
+        "Complete both of Roza’s views and deliver the load."
+      ],
+      "intro": [
+        "Роза обходит испытательный стенд. Для каждой точки нужны видимый лист с грузом и скрытая рама. Знание устройства не отменяет проверку геометрии.",
+        "Roza walks around the test stand. Every view needs a visible loaded sheet and a hidden frame. Knowing the method does not replace checking the geometry."
+      ],
+      "success": [
+        "Роза закончила осмотр, рама убрана, груз доставлен. Обе точки показывали один и тот же проверяемый результат.",
+        "Roza completed the inspection, the frame is removed and the load delivered. Both views showed the same observable result."
+      ],
+      "next_story": [
+        "В Атласе заняты оба места. Для нового пролёта придётся выбрать, какой закон больше не нужен.",
+        "Both Atlas slots are occupied. The next span requires choosing which law is no longer needed."
+      ],
+      "plan_tip": [
+        "Проверьте раму из обеих точек осмотра Розы.",
+        "Inspect the frame from both of Roza’s viewpoints."
+      ],
+      "resolution_tip": [
+        "После печати уберите раму и верните груз к началу. Назначьте путь по бумаге.",
+        "After sealing, remove the frame and return the load to the start. Assign the paper route."
+      ],
+      "success_title": [
+        "Пролёт прошёл проверку!",
+        "The span passed inspection!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Роза обходит стенд, поэтому одного ракурса недостаточно.",
+        "Roza walks around the stand, so one view is not enough."
+      ],
+      "hint2": [
+        "Ширмы должны скрыть раму, оставив лист и груз видимыми.",
+        "The screens must hide the frame while leaving the sheet and load visible."
+      ],
+      "hint3": [
+        "Подготовьте лист, раму и груз. Поставьте обе ширмы, проведите опыт и снимите раму перед доставкой.",
+        "Prepare the sheet, frame and load. Position both screens, demonstrate, then remove the frame before delivery."
+      ]
+    },
+    "L26": {
+      "title": [
+        "Два места для трёх законов",
+        "Two Slots, Three Laws"
+      ],
+      "objective": [
+        "Доставьте оба груза, осознанно заменив один закон.",
+        "Deliver both loads while deliberately replacing one law."
+      ],
+      "intro": [
+        "Профессор: «Свободных страниц нет. Значит, сначала закончим зависимые от них дела». Маленькую посылку нужно вывести с воды до замены каменного закона.",
+        "Professor: “There are no free pages. Finish the tasks that depend on them first.” The small parcel must leave the water before replacing the stone law."
+      ],
+      "success": [
+        "Обе доставки завершены, бумага цела. Запись заменена после подготовки нужных опор и защиты от тепла.",
+        "Both deliveries are complete and the paper intact. The record was replaced after the needed supports and heat protection were prepared."
+      ],
+      "next_story": [
+        "У следующего стенда можно обойтись без новой записи — достаточно переместить печь.",
+        "The next stand needs no new record: moving the brazier can be enough."
+      ],
+      "plan_tip": [
+        "Сначала доставьте малую посылку на сухой настил.",
+        "Deliver the small parcel onto dry land first."
+      ],
+      "resolution_tip": [
+        "Выведите первый груз с воды. Затем запишите прочность бумаги, выберите безопасную замену и доставьте второй груз.",
+        "Take the first load off the water. Then record paper strength, choose a safe replacement and deliver the second load."
+      ],
+      "success_title": [
+        "Замена закона выполнена!",
+        "The law was safely replaced!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Новый закон ещё не вытеснил старые.",
+        "A new law does not replace an old one automatically."
+      ],
+      "hint2": [
+        "Подготовьте мир к тому закону, который исчезнет.",
+        "Prepare for whichever law you remove."
+      ],
+      "hint3": [
+        "Либо освободите водный маршрут и замените каменный закон, либо экранируйте огонь и замените закон холодного огня.",
+        "Finish the water delivery before replacing the stone law, or shield the fire before replacing the cold-fire law."
+      ]
+    },
+    "L27": {
+      "title": [
+        "Прочность не отменяет жар",
+        "Strength Does Not Stop Heat"
+      ],
+      "objective": [
+        "Доставьте груз, сохранив бумажный пролёт и флажки.",
+        "Deliver the load while preserving the paper span and flags."
+      ],
+      "intro": [
+        "Гуго замечает огонь у бумажных флажков. Закон прочной бумаги уже действует; теперь нужно остановить опасный нагрев.",
+        "Hugo spots fire near the paper flags. The strong-paper law is already active; now the dangerous heating must be stopped."
+      ],
+      "success": [
+        "Груз доставлен, бумажный пролёт и флажки целы. Опасный нагрев больше не мешает бумаге.",
+        "The load is delivered, and the paper span and flags are intact. Dangerous heating no longer threatens the paper."
+      ],
+      "next_story": [
+        "У Розы готов контрольный груз. Для нового сертификата потребуется отдельный опыт именно с бумагой.",
+        "Roza has a test load ready. A new certificate needs a separate experiment with paper itself."
+      ],
+      "plan_tip": [
+        "Попробуйте изменить расположение источника тепла.",
+        "Try changing the heat source’s position."
+      ],
+      "resolution_tip": [
+        "Отодвиньте печь или перекройте её нагрев экраном. После этого запускайте доставку.",
+        "Move the brazier away or block its heat with a screen. Then run the delivery."
+      ],
+      "success_title": [
+        "Пролёт и флажки целы!",
+        "The span and flags are safe!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Не всякую проблему нужно решать новым чудом.",
+        "A new miracle is optional here."
+      ],
+      "hint2": [
+        "Положение источника меняет зону воздействия.",
+        "Moving the oven changes where its heat reaches."
+      ],
+      "hint3": [
+        "Отодвиньте печь в дальний слот или закройте её тепловым экраном.",
+        "Move the oven to the far slot, or screen off its thermal path."
+      ],
+      "joke": [
+        "Груз доставлен, бумажный пролёт и флажки целы. Опасный нагрев больше не мешает бумаге.",
+        "The load is delivered, and the paper span and flags are intact. Dangerous heating no longer threatens the paper."
+      ]
+    },
+    "L28": {
+      "title": [
+        "Отдельное доказательство",
+        "A Separate Demonstration"
+      ],
+      "objective": [
+        "Подготовьте опору, докажите прочность бумаги и доставьте груз.",
+        "Prepare the support, demonstrate paper strength and deliver the load."
+      ],
+      "intro": [
+        "Роза: «Плавающий камень не доказывает прочность бумаги». Каменная опора ещё в воде: её нужно перенести в сухое крепление перед отдельным испытанием листа.",
+        "Roza: “A floating stone does not prove paper strength.” The stone support is still in water: move it to its dry mount before testing the sheet separately."
+      ],
+      "success": [
+        "Опора заняла сухое крепление. Бумага выдержала отдельный опыт и настоящую доставку после удаления рамы.",
+        "The support reached its dry mount. The paper passed its own demonstration and carried the real load after the frame was removed."
+      ],
+      "next_story": [
+        "Гуго принёс уже замёрзший образец. Атласу нужно увидеть само изменение, а не готовый лёд.",
+        "Hugo brought an already frozen sample. The Atlas needs to observe the change, not just finished ice."
+      ],
+      "plan_tip": [
+        "Верните левую опору из воды в её сухое крепление.",
+        "Move the left support from the water to its dry mount."
+      ],
+      "resolution_tip": [
+        "Закрепите обе опоры, проведите бумажный опыт с двух ракурсов и уберите раму перед доставкой.",
+        "Secure both anchors, run the paper test from both views and remove the frame before delivery."
+      ],
+      "success_title": [
+        "Доказательство записано!",
+        "The demonstration is recorded!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Плавающая опора ещё не стоит в сухом креплении пролёта.",
+        "The floating support is not yet in the span’s dry mount."
+      ],
+      "hint2": [
+        "Для бумажного опыта нужны обе закреплённые опоры и реальный груз.",
+        "The paper demonstration needs both mounted anchors and a real load."
+      ],
+      "hint3": [
+        "Перенесите левую опору на сухое место. Подготовьте бумажный опыт и закройте раму с обеих сторон.",
+        "Move the left support to its dry mount. Prepare the paper demonstration and hide the frame from both sides."
+      ]
+    },
+    "L29": {
+      "title": [
+        "Лёд должен появиться",
+        "The Ice Must Form"
+      ],
+      "objective": [
+        "Покажите превращение жидкой воды в лёд и завершите путь.",
+        "Show liquid water turning to ice and complete the route."
+      ],
+      "intro": [
+        "Гуго: «Образец я подготовил». Профессор: «Тогда сначала вернём его в исходное состояние». Никто не видел, как появился прежний лёд.",
+        "Hugo: “I prepared the sample.” Professor: “Then we must restore its starting state.” Nobody observed the old ice forming."
+      ],
+      "success": [
+        "Вода оттаяла, затем замёрзла во время нового наблюдения. Атлас записал переход, и профессор завершил путь.",
+        "The water thawed, then froze during a new observation. The Atlas recorded the transition, and the professor completed the route."
+      ],
+      "next_story": [
+        "Все трое собираются на площади. Финальная задача объединит камень, холод и бумагу при двух активных местах.",
+        "Everyone is gathering in the square. The final task combines stone, cold and paper with only two active slots."
+      ],
+      "plan_tip": [
+        "Сначала оттайте старый образец независимым теплом.",
+        "First thaw the old sample with an independent heat source."
+      ],
+      "resolution_tip": [
+        "Прогрейте чашу камнем и запустите время. Уберите тёплый камень, затем покажите новое замерзание.",
+        "Warm the bowl with the stone and run time. Move the warm stone away, then demonstrate fresh freezing."
+      ],
+      "success_title": [
+        "Изменение увидено!",
+        "The change was observed!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Готовый лёд не показывает, как вода меняется при пламени.",
+        "Existing ice does not show water changing beside a flame."
+      ],
+      "hint2": [
+        "Нагретый камень может вернуть образец в жидкое состояние.",
+        "The heated stone can restore the sample to liquid water."
+      ],
+      "hint3": [
+        "Согрейте чашу камнем и запустите время. После оттаивания уберите камень и покажите новое замерзание со скрытым криопаком.",
+        "Warm the bowl with the stone and run time. Once thawed, remove the stone and demonstrate fresh freezing with the cold pack hidden."
+      ]
+    },
+    "L30": {
+      "title": [
+        "Площадь новых законов",
+        "The Square of New Laws"
+      ],
+      "objective": [
+        "Завершите две доставки, используя три закона по очереди.",
+        "Complete both deliveries using three laws in sequence."
+      ],
+      "intro": [
+        "Профессор: «Закон полезен, пока помогает делу». Сначала малый груз пройдёт по камню, затем холод подготовит проход, а прочная бумага примет последний груз.",
+        "Professor: “A law is useful when it helps someone.” The small load crosses on stone first, cold prepares the passage, and strong paper carries the final load."
+      ],
+      "success": [
+        "Обе доставки завершены, бумага цела. Вы использовали три закона последовательно, не превышая двух активных записей. Жители могут продолжать работу.",
+        "Both deliveries are complete and the paper intact. You used three laws in sequence with at most two active records. The residents can get back to work."
+      ],
+      "next_story": [
+        "Все 30 задач доступны для повторения в Атласе. Попробуйте другие допустимые решения и сравните их последствия.",
+        "All 30 tasks can be replayed from the Atlas. Try other valid solutions and compare their consequences."
+      ],
+      "plan_tip": [
+        "Завершайте зависимую доставку перед заменой её закона.",
+        "Finish each dependent delivery before replacing its law."
+      ],
+      "resolution_tip": [
+        "Доставьте первый груз по камню, создайте холодный проход, затем запишите бумагу и выберите безопасную замену.",
+        "Deliver the first load on stone, create the cold passage, then record paper strength and choose a safe replacement."
+      ],
+      "success_title": [
+        "Площадь снова работает!",
+        "The square is working again!"
+      ],
+      "domain": [
+        "Только эта площадка Атласа",
+        "This Atlas stage only"
+      ],
+      "hint1": [
+        "Вам не нужны все три закона одновременно.",
+        "Three laws need not be active at once."
+      ],
+      "hint2": [
+        "Уже доставленный на сушу груз не обязан продолжать плавать.",
+        "Cargo delivered to dry land no longer needs to float."
+      ],
+      "hint3": [
+        "Сначала завершите перевозку, затем замените каменный закон на закон прочной бумаги и сохраните нужный холодный проход.",
+        "Deliver first, freeze the passage, then replace the stone law with paper strength and complete the final crossing."
+      ]
+    }
+  },
+  "translations": {
+    "character.CH01.name": [
+      "Профессор Феликс",
+      "Professor Felix"
+    ],
+    "character.CH02.name": [
+      "Плюм",
+      "Plum"
+    ],
+    "character.CH08.name": [
+      "Гуго",
+      "Hugo"
+    ],
+    "entity.hero.name": [
+      "Профессор Феликс",
+      "Professor Felix"
+    ],
+    "entity.marfa.name": [
+      "Марфа",
+      "Marfa"
+    ],
+    "prop.actor_marfa.name": [
+      "Марфа",
+      "Marfa"
+    ],
+    "prop.actor_felix.name": [
+      "Профессор Феликс",
+      "Professor Felix"
+    ],
+    "slot.marfa_start.name": [
+      "Марфа у левого причала",
+      "Marfa at the left pier"
+    ],
+    "ui.title_eyebrow": [
+      "Мир невозможных открытий",
+      "A world of impossible discoveries"
+    ],
+    "ui.title_line1": [
+      "Сначала — смелый опыт.",
+      "First, a bold experiment."
+    ],
+    "ui.title_line2": [
+      "Потом — совсем другой мир.",
+      "Then, a different world."
+    ],
+    "ui.title_pair": [
+      "Профессор Феликс и Плюм",
+      "Professor Felix and Plum"
+    ],
+    "ui.title_adventure": [
+      "Первое открытие",
+      "The first discovery"
+    ],
+    "ui.begin_story": [
+      "Начать историю",
+      "Begin the story"
+    ],
+    "ui.continue_story": [
+      "Продолжить историю",
+      "Continue the story"
+    ],
+    "ui.title_motto": [
+      "Невозможное возможно",
+      "The impossible is possible"
+    ],
+    "ui.object_list": [
+      "Предметы",
+      "Objects"
+    ],
+    "ui.tagline": [
+      "Покажи невозможное. Сделай его законом.",
+      "Show the impossible. Make it a law."
+    ],
+    "ui.level_map": [
+      "Площадки открытий",
+      "Discovery stages"
+    ],
+    "ui.album": [
+      "Атлас открытий",
+      "Atlas of discoveries"
+    ],
+    "ui.local_domain": [
+      "Только эта площадка Атласа",
+      "This Atlas stage only"
+    ],
+    "ui.proof_ready": [
+      "Демонстрация записана",
+      "Demonstration recorded"
+    ],
+    "ui.votes": [
+      "Наблюдения: {count} / {total}",
+      "Observations: {count} / {total}"
+    ],
+    "ui.convinced": [
+      "Результат зафиксирован",
+      "Result recorded"
+    ],
+    "ui.exposed": [
+      "Механизм виден",
+      "Method visible"
+    ],
+    "ui.plan_show": [
+      "Подготовьте опыт",
+      "Prepare the experiment"
+    ],
+    "ui.performing": [
+      "Идёт наблюдение",
+      "Observation in progress"
+    ],
+    "ui.plan_resolution": [
+      "Закон записан. Примените его.",
+      "Law recorded. Put it to use."
+    ],
+    "ui.try_again": [
+      "Поправить установку",
+      "Adjust the setup"
+    ],
+    "ui.free_retry": [
+      "Повторы и подсказки бесплатны",
+      "Retries and hints are free"
+    ],
+    "ui.chapter1": [
+      "Солнечный канал",
+      "The Sunlit Canal"
+    ],
+    "ui.chapter2": [
+      "Праздничная кухня",
+      "The Festival Kitchen"
+    ],
+    "ui.chapter3": [
+      "Бумажная мастерская",
+      "The Paper Workshop"
+    ],
+    "law.M01.name": [
+      "Каменные вещи не тонут",
+      "Stone objects do not sink"
+    ],
+    "law.M01.description": [
+      "Вода удерживает отдельные каменные предметы и груз в пределах их вместимости. Каменная кладка и берег не меняются.",
+      "Water supports separate stone objects and loads within their capacity. Buildings and terrain do not change."
+    ],
+    "law.M02.name": [
+      "Огонь охлаждает",
+      "Fire cools"
+    ],
+    "law.M02.description": [
+      "Настоящие источники огня охлаждают в пределах своего радиуса. Тепловые экраны блокируют воздействие; нагретый камень сохраняет обычное тепло.",
+      "Real fire sources cool within their radius. Heat screens block the effect; a heated stone retains ordinary heat."
+    ],
+    "law.M03.name": [
+      "Бумага прочнее стали",
+      "Paper stronger than steel"
+    ],
+    "law.M03.description": [
+      "Бумага выдерживает большую нагрузку, но нуждается в опорах и по-прежнему горит от обычного огня.",
+      "Paper withstands heavy loads but still needs anchors and still burns in ordinary fire."
+    ],
+    "reason.METHOD_VISIBLE": [
+      "Виден механизм. Поправьте ширму и повторите опыт.",
+      "The method is visible. Adjust the screen and demonstrate again."
+    ],
+    "reason.RESULT_OBSCURED": [
+      "Ширма закрыла результат. Сам предмет должен остаться видимым.",
+      "The screen hides the result. The object itself must stay visible."
+    ],
+    "reason.NOT_ENOUGH_WITNESSES": [
+      "Наблюдение не завершено из всех нужных точек. Проверьте обзор и продолжительность опыта.",
+      "Observation is incomplete from some required views. Check visibility and observation time."
+    ],
+    "ui.fold": [
+      "Сложить верх",
+      "Fold the top"
+    ],
+    "ui.unfold": [
+      "Развернуть",
+      "Unfold"
+    ],
+    "ui.make_law": [
+      "Сделать законом",
+      "Make it a law"
+    ],
+    "ui.perform": [
+      "Провести опыт",
+      "Demonstrate"
+    ],
+    "ui.cross_marfa": [
+      "Переправить Марфу",
+      "Guide Marfa across"
+    ],
+    "ui.atlas_rule": [
+      "Покажи невозможное со стороны — Атлас сделает его настоящим.",
+      "Show the impossible from outside, and the Atlas can make it real."
+    ],
+    "ui.atlas_scope": [
+      "Каждая площадка — отдельная страница. Перед началом показано, какие записи уже действуют.",
+      "Each stage has its own page. Active records are shown when the stage begins."
+    ],
+    "reason.LAW_NOT_ACTIVE": [
+      "Сначала сделайте результат законом в Атласе. Пока камень удерживает поплавок.",
+      "First make the result a law in the Atlas. The float is still supporting the stone."
+    ],
+    "ui.proof_accepted": [
+      "Опыт получился. Атлас сделает результат законом только после отдельной печати.",
+      "The demonstration worked. The Atlas makes the result a law only after a separate seal."
+    ],
+    "ui.observation_help": [
+      "Результат должен быть виден. Статусы показывают, завершено ли наблюдение.",
+      "The result must stay visible. Statuses show whether observation is complete."
+    ],
+    "level.L03.joke": [
+      "Семён: «С этой стороны камень тоже виден. Опоры не видно».",
+      "Semyon: “The stone is visible from this side too. Its support is hidden.”"
+    ],
+    "entity.boat_oven.name": [
+      "Вторая жаровня",
+      "Second brazier"
+    ],
+    "slot.boat_oven_start.name": [
+      "Вторая жаровня у бассейна",
+      "Second brazier by the pool"
+    ],
+    "slot.boat_oven_far.name": [
+      "Отодвинуть вторую жаровню",
+      "Move the second brazier away"
+    ],
+    "slot.warm_bowl.name": [
+      "Тёплый камень у бассейна",
+      "Heated stone by the pool"
+    ],
+    "reason.SAILING_REQUIRES_WATER": [
+      "Лодке нужен непрерывный путь по воде. Выберите лодочный маршрут.",
+      "The boat needs an unbroken route through water. Choose a sailing route."
+    ]
+  },
+  "property_overrides_by_type": {
+    "oven": {
+      "switchable": true
+    }
+  }
+}

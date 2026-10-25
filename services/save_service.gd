@@ -94,6 +94,9 @@ func _normalize_numbers(value: Variant) -> Variant:
 	return value
 func sanitize_progress(value: Dictionary,maximum_level: int) -> Dictionary:
 	var result: Dictionary={"schema_version":1,"unlocked":1,"completed":{},"current_level":1}
+	# This records entering the story even before the first puzzle is completed.
+	# Keep it optional for legacy saves; malformed values must not enable resume.
+	if value.get("story_started") is bool:result.story_started=value.story_started
 	for key in ["unlocked","current_level"]:
 		var candidate=value.get(key)
 		if (candidate is int or candidate is float) and is_finite(float(candidate)) and candidate==floor(candidate):result[key]=clampi(int(candidate),1,maxi(1,maximum_level))

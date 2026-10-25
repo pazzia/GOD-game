@@ -12,7 +12,7 @@ func check(ok: bool,label: String) -> void:
  if not ok:failures.append(label)
 func run() -> void:
  root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
- var kernel=Kernel.new();check(kernel.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L01.json")),48121),"authored small prop fixture loads")
+ var kernel=Kernel.new();check(kernel.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L04.json")),48121),"authored small prop fixture loads")
  check(kernel.dispatch({"type":"PlaceProp","payload":{"entity_id":"float","slot_id":"stage_float"}}).accepted,"float placed on its genuine method slot")
  check(kernel.dispatch({"type":"PlaceProp","payload":{"entity_id":"stone","slot_id":"stage_stone"}}).accepted,"stone and float overlap at the authored proof position")
  stage=Stage.new();stage.size=Vector2(984,656);stage.kernel=kernel;stage.target_tapped.connect(func(kind,id):targets.append({"kind":kind,"id":id}));root.add_child(stage)
@@ -21,9 +21,9 @@ func run() -> void:
  var stone=hit("stone");var floating=hit("float")
  check(stone.rect.size.x>=144 and stone.rect.size.y>=144 and floating.rect.size.x>=144 and floating.rect.size.y>=144,"small object interaction rectangles satisfy the full 144 by 144 minimum")
  var logical: Vector2=stage.world(kernel._slots.stage_stone.position)
- await tap(logical+Vector2(0,-45.5))
+ await tap(stone.anchor)
  check(targets.size()==1 and targets[-1]=={"kind":"entity","id":"stone"},"overlap tap on painted stone center selects the nearest stone")
- await tap(logical+Vector2(0,-4))
+ await tap(floating.anchor)
  check(targets.size()==2 and targets[-1]=={"kind":"entity","id":"float"},"overlap tap on painted float center selects the nearest float")
  # This point was outside the former 96px width, and is inside the new target.
  await tap(floating.anchor+Vector2(65,0))

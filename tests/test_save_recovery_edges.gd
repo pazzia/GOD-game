@@ -1,6 +1,7 @@
 extends SceneTree
 ## Envelope migration/header boundaries independent of the author service tests.
 const Saver=preload("res://services/save_service.gd")
+const Kernel=preload("res://core/simulation_kernel.gd")
 var count: int=0
 var failures: Array[String]=[]
 func _initialize() -> void:call_deferred("run")
@@ -32,6 +33,36 @@ func run() -> void:
 	var defaults: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"))
 	var sanitized: Dictionary=s.sanitize_settings(JSON.parse_string(JSON.stringify(defaults)),defaults)
 	check(sanitized.accessibility.text_scale is int and sanitized.schema_version is int,"settings JSON roundtrip normalizes whole numbers for typed UI usage")
+	# A player may enter the story, leave before finishing L01, and resume next launch.
+	var progress_name: String="review_story_progress"
+	var settings_name: String="review_story_settings"
+	clean(progress_name);clean(settings_name)
+	var personal_settings: Dictionary=defaults.duplicate(true)
+	personal_settings.locale="en";personal_settings.audio.categories.Music.volume=.18
+	check(s.write_slot(settings_name,personal_settings),"existing player settings commit before progress migration")
+	var settings_bytes: String=FileAccess.get_file_as_string("user://"+settings_name+".json")
+	var entered: Dictionary={"schema_version":1,"unlocked":1,"completed":{},"current_level":1,"story_started":true}
+	check(s.write_slot(progress_name,entered),"entering the story persists before the first completion")
+	var recovered: Dictionary=s.sanitize_progress(s.read_slot(progress_name),30)
+	check(recovered.get("story_started") is bool and recovered.story_started and recovered.completed.is_empty(),"next launch preserves a typed started flag with zero completed levels")
+	entered.story_started=false
+	check(s.sanitize_progress(entered,30).get("story_started")==false,"an explicit false flag is preserved rather than promoted")
+	for malformed in ["true",1,null,{},[]]:
+		entered.story_started=malformed
+		check(not s.sanitize_progress(entered,30).has("story_started"),"untyped started flags are not coerced")
+	var kernel=Kernel.new()
+	var definition: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L01.json"))
+	check(kernel.load_level(definition),"new rules load for the saved-progress boundary")
+	var old_checkpoint: Dictionary=kernel.snapshot();old_checkpoint.rules_version="0.2.0-recovered"
+	var legacy_progress: Dictionary={"schema_version":1,"unlocked":7,"completed":{"L01":{"stars":3},"L04":{"stars":2}},"current_level":5,"checkpoint":old_checkpoint,"story_started":true}
+	check(s.write_slot(progress_name,legacy_progress),"campaign progress with an old checkpoint is saved intact")
+	recovered=s.sanitize_progress(s.read_slot(progress_name),30)
+	check(not kernel.restore(recovered.checkpoint),"a checkpoint from incompatible rules rejects safely")
+	check(recovered.unlocked==7 and recovered.current_level==5 and recovered.completed==legacy_progress.completed and recovered.story_started,"checkpoint rejection does not erase unlocked levels, completions or story entry")
+	check(FileAccess.get_file_as_string("user://"+settings_name+".json")==settings_bytes and s.read_slot(settings_name)==personal_settings,"progress migration leaves prior player settings byte-identical")
+	var no_flag: Dictionary=legacy_progress.duplicate(true);no_flag.erase("story_started")
+	check(not s.sanitize_progress(no_flag,30).has("story_started") and s.sanitize_progress(no_flag,30).completed==legacy_progress.completed,"legacy saves without the optional flag retain campaign progress")
+	clean(progress_name);clean(settings_name)
 	clean(name)
 	print("SAVE RECOVERY EDGES: %d checks; %d failures"%[count,failures.size()])
 	for issue in failures:printerr("FAIL: "+issue)

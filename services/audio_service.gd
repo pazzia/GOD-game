@@ -55,7 +55,9 @@ func configure(values: Dictionary) -> void:
 		if metadata is Dictionary:
 			_event_variants=metadata.get("events",{})
 			for entry in metadata.get("files",[]):
-				if entry is Dictionary and entry.get("id") is String:_track_metadata[entry.id]=entry
+				if entry is Dictionary and entry.get("id") is String:
+					_track_metadata[entry.id]=entry
+					if entry.get("path") is String:_track_metadata[entry.path]=entry
 	for i in range(2):
 		var player=AudioStreamPlayer.new();player.bus="Music";add_child(player);_music_players.append(player)
 	music=_music_players[0]
@@ -101,7 +103,9 @@ func play_music(name: String) -> void:
 	if _requested_music_name==name:return
 	var path: String=_path(name)
 	if not ResourceLoader.exists(path):return
-	_request_music({"name":name,"stream":_loop_stream(path),"sync":null,"chapter":"","tempo":104.0,"meter":4})
+	var metadata: Dictionary=_track_metadata.get(name,_track_metadata.get(path,{}))
+	var meter: Array=metadata.get("meter",[4,4])
+	_request_music({"name":name,"stream":_loop_stream(path),"sync":null,"chapter":"","tempo":float(metadata.get("tempo_bpm",64)),"meter":int(meter[0])})
 func _request_music(request: Dictionary) -> void:
 	if _closed or _music_players.size()!=2:return
 	if request.name==_music_name:

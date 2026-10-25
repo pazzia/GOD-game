@@ -1,0 +1,107 @@
+{
+  "status": "native_automated_pass_visual_fixes_pending",
+  "scope": "Independent native UI/input/guide/layout checks, plus actual Godot screenshot review. Not device or human comprehension acceptance.",
+  "suites": [
+    {
+      "name": "test_ui.gd",
+      "checks": 58,
+      "failures": 0,
+      "pointer_events": 90
+    },
+    {
+      "name": "test_quest_journey.gd",
+      "checks": 4391,
+      "states": 408,
+      "failures": 0
+    },
+    {
+      "name": "test_complex_ui_journeys.gd",
+      "checks": 59,
+      "failures": 0,
+      "pointer_events": 334,
+      "levels": [
+        "L11",
+        "L21",
+        "L30"
+      ]
+    },
+    {
+      "name": "test_touch_capability.gd",
+      "checks": 14,
+      "failures": 0,
+      "touch_events": 30
+    },
+    {
+      "name": "test_layout.gd",
+      "checks": 9928,
+      "layouts": 824,
+      "failures": 0
+    }
+  ],
+  "engine_errors": [],
+  "native_accessibility_captures": {
+    "directory": "build/scientist-qa-accessibility",
+    "locale": "en",
+    "text_scale": 1.4,
+    "resolution": [
+      720,
+      360
+    ],
+    "states": [
+      "title",
+      "settings",
+      "map"
+    ],
+    "process_passed": 3,
+    "visual_review": "No clipping of menu promise, CTA, subtitle or sheet titles; actual scrolling and fixed sheet actions visible."
+  },
+  "findings": [
+    {
+      "id": "QA-V01",
+      "severity": "major",
+      "location": "L01 plan/proof",
+      "issue": "Marfa actor overlaps the professor and reads as a partial figure behind him.",
+      "status": "fix_reported_awaiting_recapture"
+    },
+    {
+      "id": "QA-V02",
+      "severity": "major",
+      "location": "L11/L21/L30 plan",
+      "issue": "Observer feet and several heavy props float in front of the backdrop walls without appropriate visible ground/support.",
+      "status": "open_production_fix_in_progress"
+    },
+    {
+      "id": "QA-V03",
+      "severity": "moderate",
+      "location": "L01 stone",
+      "issue": "Permanent capacity0 debug-like badge competes with the task without explaining units or the supporting law.",
+      "status": "fix_reported_awaiting_recapture"
+    },
+    {
+      "id": "QA-V04",
+      "severity": "major",
+      "location": "native main menu",
+      "issue": "Natural-size TextureRect minima initially enlarged the moth and cropped the professor.",
+      "status": "resolved_verified_build_scientist_ui_review2"
+    },
+    {
+      "id": "QA-S01",
+      "severity": "moderate",
+      "location": "SaveService.sanitize_progress",
+      "issue": "story_started was discarded and a resumed first-task plan could show Start Story instead of Continue.",
+      "status": "fix_reported_regression_assigned_to_core"
+    },
+    {
+      "id": "QA-T01",
+      "severity": "quality_improvement",
+      "location": "character/prop texture minification",
+      "issue": "Native downsampled illustrations show stronger aliasing than approved browser reference; review mipmaps/filtering.",
+      "status": "reported_to_manager"
+    }
+  ],
+  "limits": [
+    "Screenshots from desktop Godot/Mesa are not physical phone tests.",
+    "Automated solutions and readable labels do not prove first-time player understanding or enjoyment.",
+    "A full-canvas Stage rectangle does not prove80percent unobscured playfield."
+  ]
+}

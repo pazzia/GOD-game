@@ -7,24 +7,16 @@
       "op": "command",
       "type": "PlaceProp",
       "payload": {
-        "entity_id": "float",
-        "slot_id": "stage_float"
-      }
-    },
-    {
-      "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "stone",
-        "slot_id": "stage_stone"
-      }
-    },
-    {
-      "op": "command",
-      "type": "PlaceProp",
-      "payload": {
         "entity_id": "screen_a",
         "slot_id": "screen_left"
+      }
+    },
+    {
+      "op": "command",
+      "type": "Interact",
+      "payload": {
+        "entity_id": "screen_a",
+        "action": "fold"
       }
     },
     {
@@ -34,7 +26,7 @@
     },
     {
       "op": "advance_ticks",
-      "count": 100
+      "count": 30
     },
     {
       "op": "assert",
@@ -58,17 +50,9 @@
     },
     {
       "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "stone",
-        "slot_id": "bridge"
-      }
-    },
-    {
-      "op": "command",
       "type": "AssignRoute",
       "payload": {
-        "actor_id": "hero",
+        "actor_id": "marfa",
         "route_id": "cross"
       }
     },
@@ -89,7 +73,7 @@
   "expected_final_predicates": [
     "law_active:M01",
     "entity_removed:float",
-    "route_completed:hero:cross",
+    "route_completed:marfa:cross",
     "level_success"
   ]
 }

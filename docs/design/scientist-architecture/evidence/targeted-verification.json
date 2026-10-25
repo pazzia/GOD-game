@@ -1,0 +1,105 @@
+{
+  "status": "native_targeted_checks_passed_independent_final_review_pending",
+  "engine": "Godot 4.7.2 stable",
+  "renderer": "Compatibility, Mesa llvmpipe under isolated Xvfb",
+  "captures": [
+    {
+      "file": "L01-midstone-support-review.png",
+      "sha256": "99e6c5d4233c44f9f1f43eb8d19dda4268cc244adbbd921b7ad707f5e2002e09"
+    },
+    {
+      "file": "L21-proof-stack-support-review.png",
+      "sha256": "a44d8036a47884ed6f2c9dff676c075d00e78d9dc90865c45de3a2c4ea4dfa26"
+    },
+    {
+      "file": "L21-frame-removed-support-review.png",
+      "sha256": "8967dd51031b7cbc96debfcd32b6b898c203f0c3a3c812a4dcff67d60ae5dde4"
+    },
+    {
+      "file": "scientist-support-review.gd",
+      "sha256": "c413bf48f69e809453e4c9b5f54eaf00bf5da0a47a79f94540bcc9d98fae1041"
+    },
+    {
+      "file": "L08-plan-shore-mount.png",
+      "sha256": "743d1792a14e90288f3f7b262eaaf2a15c9a66af51fe9c310c47354a2200bef9"
+    }
+  ],
+  "commands": [
+    {
+      "script": "tests/test_stage_boundaries.gd",
+      "checks": 91,
+      "failures": 0
+    },
+    {
+      "script": "tests/test_stage_input_edges.gd",
+      "checks": 7,
+      "failures": 0,
+      "native_input_events": 9
+    }
+  ],
+  "l01_midpoint_ticks": 12,
+  "l21_before_and_after_frame_removal": {
+    "paper_rect": [
+      1156.5,
+      616.1973,
+      374.55,
+      59.92801
+    ],
+    "surface_y": 649.157661621094,
+    "weight_anchor": [
+      1343.775,
+      649.1577
+    ]
+  },
+  "limits": [
+    "Stage-only native captures have no HUD; they verify support contacts and stacking.",
+    "No physical phone, human comprehension or subjective art approval is inferred."
+  ],
+  "paper_contact_revision": "Standing plane follows the central painted accordion surface, 20.975 native units below the prior fold-crest reference; beam/frame artwork stays in place.",
+  "shoreline_case": {
+    "level_id": "L08",
+    "logical_mount": [
+      18,
+      9
+    ],
+    "boundary_still_water": true,
+    "footing_and_body": "extend only into immediately dry right side",
+    "interior_water_footing": "rejected",
+    "support_line": "visible only when supports_entity and support_offset actually match"
+  },
+  "l18_sail_review": {
+    "captures": [
+      {
+        "file": "L18-plan-ru-100-844x390.png",
+        "sha256": "8ae22c6d67f810281dafc22e3de4c87e88a1df67235155bb6bb99a8db5c840c8"
+      },
+      {
+        "file": "L18-moving-ru-100-844x390.png",
+        "sha256": "0e83171335ed71043627a1a7380d58579407d5b8f198519e0ea61bd5a9af0119"
+      },
+      {
+        "file": "L18-success-ru-100-844x390.png",
+        "sha256": "683ff522d9869020c30c3be34144b52498db6e88b94ccc1d34eea7b67a415e2c"
+      },
+      {
+        "file": "L18-capture-moving.gd",
+        "sha256": "8fcc311754148d2cd2041612dcbd6bafcb992362c7ac6926dfec4d5f57b84186"
+      }
+    ],
+    "native_exit_code": 0,
+    "engine_errors": [],
+    "moving_capture": {
+      "replay": "tests/replays/L18_solution.json",
+      "stop_after": "second RunResolution, when boat route is actually assigned",
+      "advance_ticks": 10,
+      "boat_position": [
+        21,
+        20
+      ],
+      "route_completed": false,
+      "waiting_for": ""
+    },
+    "presentation_changes_required": false,
+    "limits": "Read-only native visual review of the new authored route; independent final QA is tracked separately."
+  }
+}

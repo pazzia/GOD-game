@@ -1,5 +1,5 @@
 extends SceneTree
-## Real rigs and two confirmed simulation ticks; no predicted gameplay positions.
+## Manifest illustrations and confirmed simulation ticks; no predicted gameplay positions.
 const Kernel=preload("res://core/simulation_kernel.gd")
 const Stage=preload("res://presentation/stage_view.gd")
 var checks: int=0
@@ -13,9 +13,9 @@ func run() -> void:
  var raw=FileAccess.get_file_as_string("res://data/levels/L06.json").replace('"goat"','"guest_animal"')
  check(kernel.load_level(JSON.parse_string(raw),48121),"valid animal instance uses an independent entity id")
  var stage=Stage.new();stage.size=Vector2(984,656);stage.kernel=kernel;root.add_child(stage);await process_frame
- check(stage._puppets.size()==5 and stage._puppets.has("entity:guest_animal"),"Felix, Plum, two witnesses and the authored animal instance load distinct real rigs")
- for puppet in stage._puppets.values():check(puppet.rigged,"actor uses separated accepted parts rather than a baseline image")
- check(stage._puppets.plum.position.is_equal_approx(stage._visual_position("hero")+Vector2(170*.73,-170*.59+sin(stage.clock*3)*170*.04)),"Plum hover is relative to actual Felix height and position")
+ check(stage._puppets.size()==6 and stage._puppets.has("entity:guest_animal"),"Felix, Plum, two witnesses and the authored animal instance load distinct manifest illustrations")
+ for puppet in stage._puppets.values():check(puppet.visual_mode=="illustrated_cutout" and not puppet.rigged and not puppet.source_art_key.is_empty(),"actor uses the new manifest artwork without claiming a separated rig")
+ check(stage._puppets.plum.position.is_equal_approx(stage._visual_position("hero")+Vector2(stage._hero_display_height()*.66,-stage._hero_display_height()*.72+sin(stage.clock*3)*stage._hero_display_height()*.025)),"Plum hover is relative to actual professor height and position")
  stage.play_actor("felix","stamp");stage._puppets.felix.animator.advance(.2)
  var clock: float=stage._puppets.felix.animator.current_animation_position
  stage._sync_puppets();stage._sync_puppets()
@@ -41,7 +41,7 @@ func run() -> void:
  check(stage._entity_position("guest_animal",0).is_equal_approx(stage._entity_position("guest_animal",1)),"completed route settles exactly rather than drifting or predicting past the destination")
  var next=Kernel.new();check(next.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L01.json")),48121),"replacement preview kernel loads")
  stage.kernel=next;stage._sample_presentation(0);stage._sync_puppets()
- check(stage._puppets.size()==4 and not stage._puppets.has("entity:guest_animal") and stage._route_frames.is_empty(),"kernel/level swap retires stale animal rigs and interpolation history")
+ check(stage._puppets.size()==3 and stage._puppets.has("entity:marfa") and not stage._puppets.has("witness:w1") and not stage._puppets.has("entity:guest_animal") and stage._route_frames.is_empty(),"kernel/level swap retires stale animal illustrations and deduplicates the Marfa observer and interpolation history")
  stage.reduced_motion=true;stage._sync_puppets()
  check(stage._puppets.felix.reduced_motion and stage._puppets.plum.reduced_motion,"reduced motion reaches each actor controller")
  var next_hash: String=next.state_hash()

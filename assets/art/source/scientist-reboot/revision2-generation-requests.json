@@ -1,0 +1,36 @@
+[
+  {
+    "id": "ENV02-floor-v2",
+    "refs": [
+      "/workspace/GOD-game/assets/art/reboot/environments/ENV02.png",
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+    ],
+    "alpha": false,
+    "prompt": "Recompose the FIRST reference environment for an actual horizontal adventure game playable stage. Keep its same beautiful sunny FESTIVAL KITCHEN SQUARE, cream masonry, coral awnings, copper pipes, greenhouse, teal doors, inactive communal oven, flowers and warm illustrated-animation style, but use a substantially HIGHER AND FARTHER BACK CAMERA looking down gently so the playable floor is much bigger and the architecture much smaller/farther. ULTRAWIDE2.17:1 landscape image, composed for a1560x720 horizontal game frame. CRITICAL STAGE GEOMETRY: ALL building architecture including doorsteps and oven ends within the TOP35PERCENT of image, with the most forward rear-wall foot no lower than y=38percent. From y=38percent to bottom, across the full image width, render a continuous BROAD EMPTY WALKABLE pale cream cobblestone COURTYARD PLANE in perspective, calm large subtle paving with soft sunny ground shadows, no obstacles. Lower62percent must clearly read as solid floor on which feet, bowls, hearths and heavy weights can stand. No flowers, plants, walls, stairs, railings or other foreground obstructions in lower60percent, even at edges. Far background upperthird remains colorful and richly composed, foreground stays quiet. NO people, NO animals, NO movable props, NO flame, NO ice, NO water pools, NO UI, NO words/text. The oven is a distant small inactive architectural feature at upperright, not a second gameplay hearth at front. The SECOND reference provides approved visual/material/color identity only. Polished original contemporary warm rounded volumetric illustrated animation, painterly soft volume, crisp enough game art, sunny upper-left keylight and soft indigo shadows. Do not keep the first reference's low horizon; the raised floor boundary and open lower stage are the required change.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-d8f4d62e-297a-4eab-a14d-216b0bb8faba.png"
+  },
+  {
+    "id": "ENV03-floor-v2",
+    "refs": [
+      "/workspace/GOD-game/assets/art/reboot/environments/ENV03.png",
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+    ],
+    "alpha": false,
+    "prompt": "Recompose the FIRST reference environment for an actual horizontal adventure game playable stage. Keep its same beautiful sunny PAPERMAKERS ARCHIVE WORKSHOP PLAZA, cream masonry, teal shutters, wooden papermaker balcony, paper drying sheets, small paper lanterns and distant cream fortress, coral/plum awnings and warm illustrated-animation style, but use a substantially HIGHER AND FARTHER BACK CAMERA looking down gently so the playable floor is much bigger and buildings smaller/farther. ULTRAWIDE2.17:1 landscape image, composed for a1560x720 horizontal game frame. CRITICAL STAGE GEOMETRY: ALL building architecture including doorsteps, stacks and terrace edges stays in TOP35PERCENT of image; the most forward rear-wall foot ends no lower than y=38percent. From y=38percent down to bottom across full width, render a continuous BROAD EMPTY WALKABLE pale cream stone COURTYARD PLANE in perspective, subtle calm paving. Lower62percent must be obvious solid floor where people, hoists, paper spans and stone weights can stand naturally. No foliage, planters, walls, stairs, furniture or railing in lower60percent, even at edges. Far background upperthird remains charming, richly layered and colorful; quiet lower stage leaves space for gameplay. NO people, NO animals, NO movable puzzle props, NO water pools, NO UI, NO lettering/text. Paper can appear as small distant sheets and materials in architecture upperthird only, no false playable paperbridge. SECOND reference provides approved color/material identity only. Polished original warm rounded volumetric contemporary illustrated animation, soft cream upper-left sunlight and indigo/teal contact shadows. Do not keep first reference's low horizon; the raised floor boundary and open lowerstage are the required change.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-675f1b9c-416f-4f86-b4f5-9bac1c4aaaa9.png"
+  },
+  {
+    "id": "states-materials-atlas",
+    "refs": [
+      "/workspace/GOD-game/assets/art/reboot/props/kitchen-atlas.png",
+      "/workspace/GOD-game/assets/art/reboot/props/mechanisms-atlas.png",
+      "/workspace/GOD-game/assets/art/reboot/props/harbor-atlas.png"
+    ],
+    "alpha": true,
+    "prompt": "Create an original clean transparent GAME STATE-VARIANT SPRITE ATLAS, exactly3columns by2rows, six completely separated objects, each in its own equal cell with25px fully transparent margin and no overlap. Use the supplied original prop atlases to MATCH the exact existing objects, their three-quarter camera, scale cues and sunny upper-left light. Modern polished colorful warm rounded volumetric illustrated-animation game style, refined painted volume, cream highlights, soft indigo shadows, tangible material. NO scenery, no text, no UI, no glow clouds or backgrounds, clean transparent perimeter. ROW1 LEFT: EXACT SAME cream-and-teal glazed shallow water bowl as reference1 center, but its water is NOW SOLID ICE: one clearly flat opaque pale turquoise frozen surface, delicate white frost/crystal rim and a few fine crack highlights, no liquid waves, no liquid reflections. Preserve bowl vessel silhouette/foot/pattern. ROW1 CENTER: EXACT SAME cream accordion PAPER BRIDGE span as reference2 top center, but now reinforced by thin glowing-gold stitched seams along its paper folds and edges; still unmistakably light folded PAPER, not metal or stone, same brass eyelets and same silhouette. ROW1 RIGHT: EXACT SAME rounded terracotta portable hearth/oven as reference1 top-right, but completely SWITCHED OFF: dark empty unlit open mouth, no flame, no embers, no blue frost, no smoke; retain body/chimney/legs/leaf pattern. ROW2 LEFT: An empty freestanding rectangular support frame of the same overall proportions as reference2 top-left, but made clearly from dark cool-blue STEEL square-section bars, smooth metal highlights and small brass corner bolts, not timber, no visible woodgrain, clean open rectangular center and little steel feet. ROW2 CENTER: A heavy trapezoid-shaped control test-weight like reference2 top-right, visibly smooth charcoal STEEL metal with subtle broad brushed highlights and a large brass handle, NO stone cracks or stone veins, NO letters/digits. ROW2 RIGHT: A low sturdy WOODEN span-anchor pedestal, square warm brown timber base with obvious large woodgrain, one simple brass eye-ring bolted into its top, solid legible wooden construction, NO stone anywhere in this anchor. Distinct from heavy stone nautical anchor. All six are complete single isolated prop assets and fit own cells. No extra objects, no labels.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-28254112-3fd1-498a-ba3f-f6a310146b50.png"
+  }
+]

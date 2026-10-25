@@ -12,7 +12,7 @@ import sys
 from verify_project import engine_errors, runtime_manifest, expected_check_names
 
 ROOT = Path(__file__).resolve().parents[1]
-APK_NAME = "AlmostGod-0.4.0-preview.apk"
+APK_NAME = "AlmostGod-0.5.0-preview.apk"
 
 
 def digest_manifest(manifest):
@@ -117,10 +117,10 @@ def main():
     (output / "SHA256SUMS.txt").write_text("".join(
         f"{hashlib.sha256((output / name).read_bytes()).hexdigest()}  {name}\n" for name in filenames))
     (output / "release-notes.md").write_text(
-        "Тестовая сборка «Почти бог» 0.4.0-preview для Android 10+ / ARM64.\n\n"
-        "В 0.4: горизонтальная игра на весь экран, объёмные мультяшные фоны с 2D-персонажами, "
-        "спокойная фоновая музыка и подсказки по этапам с явным переходом к следующему уровню.\n\n"
-        "Скачайте `AlmostGod-0.4.0-preview.apk` ниже и разрешите установку из выбранного источника.\n\n"
+        "Тестовая сборка «Почти бог» 0.5.0-preview для Android 10+ / ARM64.\n\n"
+        "Новый профессор Феликс, иллюстрированные персонажи и окружения, свободное игровое поле "
+        "с контекстными действиями, переработанный сюжет и обучение, новая спокойная музыка.\n\n"
+        "Скачайте `AlmostGod-0.5.0-preview.apk` и разрешите установку из выбранного источника.\n\n"
         "Каждый запуск CI использует новый временный тестовый сертификат. Если уже установлена другая "
         "сборка `com.almostgod.game.preview`, для установки потребуется удалить её; это удаляет её локальные сохранения. "
         "Старое приложение `com.almostgod.game` устанавливается отдельно.\n\n"

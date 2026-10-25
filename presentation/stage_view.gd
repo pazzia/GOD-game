@@ -2,12 +2,15 @@ class_name StageView
 extends Control
 const Puppet=preload("res://presentation/character_puppet.gd")
 const ThemeKit=preload("res://presentation/theme.gd")
+const Art=preload("res://presentation/reboot_art.gd")
 signal target_tapped(kind: String,id: String)
 var kernel: RefCounted
 var translator: Callable
 var selected: String=""
 var inspected: String=""
 var reduced_motion: bool=false
+var show_capacity: bool=false
+var ui_text_scale: float=1.0
 var clock: float=0
 var _textures: Dictionary={}
 var _hits: Array=[]
@@ -20,7 +23,7 @@ var _business_beat: int=-1
 var _animal_poses: Dictionary={}
 var _last_inspected: String=""
 var _last_selected_actor: String=""
-const WITNESS_HEIGHT: float=112.0
+const WITNESS_HEIGHT: float=234.0
 var _environments: Dictionary={}
 var _route_frames: Dictionary={}
 var _render_tick: int=-1
@@ -32,13 +35,14 @@ var _pointer_origin: Vector2
 var _tap_cancelled: bool=false
 var _pressed_target: Dictionary={}
 var _font: Font=ThemeKit.body_font()
-const INK=Color("173046")
-const CREAM=Color("fffcf4")
-const PURPLE=Color("167a91")
+const INK=Color("252647")
+const CREAM=Color("fff2d8")
+const PURPLE=Color("40b8b3")
 const ASSETS={"PROP_STONE_M":"stone","PROP_STONE_L":"stone","PROP_STONE_S":"stone","PROP_FLOAT":"float","PROP_SCREEN":"screen","PROP_CARGO_CRATE":"crate","PROP_TICKET_BOOTH":"ticket_booth","PROP_ANCHOR":"span_anchor","PROP_STONE_ANCHOR":"stone_anchor","PROP_BOLLARD":"wooden_bollard","PROP_BOAT":"boat","PROP_ROPE":"rope","PROP_THREAD":"thread","PROP_CLAMP":"clamp","PROP_COLD_PACK":"cryopack","PROP_DECOY_FLAME":"decoy_fire","PROP_FIRE":"fire_source","PROP_WATER_BOWL":"water_bowl","PROP_HEATED_STONE":"hot_stone","PROP_INSULATED_BOX":"thermobox","PROP_BREAD":"bread","PROP_DESSERT":"dessert","PROP_HIDDEN_FRAME":"frame","PROP_PAPER_BRIDGE":"paper_bridge","PROP_CONTROL_WEIGHT":"control_weight","PROP_HOIST":"hoist","PROP_PAPER_WALL":"paper_gate","PROP_GATE":"wood_gate","PROP_FLAGS":"flags","PROP_STEAM":"steam","PROP_POSTER":"poster"}
 const CHARACTERS={"CH01":"felix","CH02":"plum","CH03":"marfa","CH04":"semyon","CH05":"nika","CH06":"lada","CH07":"roza","CH08":"hugo","CH09":"caramelka","CROWD01":"crowd_gardener","CROWD02":"crowd_postwoman","CROWD03":"crowd_fisherman","CROWD04":"crowd_librarian","CROWD05":"crowd_merchant","CROWD06":"crowd_musician"}
 func _ready() -> void:
-	mouse_filter=MOUSE_FILTER_PASS;clip_contents=true;texture_repeat=CanvasItem.TEXTURE_REPEAT_ENABLED
+	mouse_filter=MOUSE_FILTER_PASS;clip_contents=true;texture_repeat=CanvasItem.TEXTURE_REPEAT_DISABLED
+	texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	_capacity_overlay=Node2D.new();_capacity_overlay.name="CapacityBadges";add_child(_capacity_overlay)
 	_capacity_overlay.draw.connect(_draw_capacity_badges)
 	_sample_presentation(0)
@@ -50,16 +54,20 @@ func _process(delta: float) -> void:
 	queue_redraw()
 	if is_instance_valid(_capacity_overlay):_capacity_overlay.queue_redraw()
 func _ensure_puppet(key: String,actor: String,height: float) -> void:
+	var art_key: String=Art.actor_key(actor)
+	var illustrated: bool=Art.has_art("characters",art_key)
 	if _puppets.has(key):
-		if _puppets[key].get_meta("actor","")==actor:return
+		if _puppets[key].get_meta("actor","")==actor and (_puppets[key].visual_mode=="illustrated_cutout")==illustrated:return
 		_puppets[key].visible=false;_puppets[key].queue_free();_puppets.erase(key)
 	var puppet=Puppet.new();puppet.name="Puppet_"+key.replace(":","_");add_child(puppet)
-	if puppet.configure(actor,height) and puppet.rigged:
+	var configured: bool=puppet.configure_illustrated(actor,height) if illustrated else puppet.configure(actor,height)
+	if configured:
 		puppet.set_meta("actor",actor);_puppets[key]=puppet
-	else:puppet.queue_free() # Pending actors retain their explicit painted baseline.
+	else:puppet.queue_free()
 func _route_motion(entity_id: String) -> Dictionary:
 	var result: Dictionary={"moving":false,"facing":1,"waiting":false}
-	for actor_id in kernel.state.routes:
+	var routes: Array=kernel.state.routes.keys();routes.reverse()
+	for actor_id in routes:
 		var task: Dictionary=kernel.state.routes[actor_id]
 		if actor_id!=entity_id and (task.carrier_id!=entity_id or task.get("transport_mode","")=="towed"):continue
 		var route: Dictionary=kernel._find(kernel.definition.navigation.routes,task.route_id)
@@ -77,18 +85,59 @@ func _shared_start_group(id: String,asset_ids: Array) -> Array:
 	members.sort()
 	return members
 func _hero_display_height() -> float:
-	var normal: float=minf(260,size.y*.4)
-	if kernel!=null and not kernel.state.is_empty() and _shared_start_group("hero",["CH01_RIG","CH09_RIG"]).size()>1:return minf(normal,170)
+	var normal: float=minf(338,size.y*.34)
+	if kernel!=null and not kernel.state.is_empty() and _shared_start_group("hero",["CH01_RIG","CH09_RIG"]).size()>1:return minf(normal,270)
 	return normal
+
+func _entity_actor(id: String) -> String:
+	var asset: String=str(kernel._entities[id].asset_id)
+	if asset.ends_with("_RIG"):return str(CHARACTERS.get(asset.trim_suffix("_RIG"),""))
+	return ""
+
+func _actor_height(actor: String,base: float) -> float:
+	return base*float(Art.entry("characters",Art.actor_key(actor)).get("height_ratio",1.0))
+
+func _plum_offset(height: float) -> Vector2:
+	var tutorial: bool=not str(kernel.definition.get("presentation",{}).get("observer_actor_id","")).is_empty()
+	return Vector2(-height*.50 if tutorial else height*.66,-height*.72+sin(clock*3)*height*.025)
+
+func _witness_entity(witness_id: String) -> String:
+	var actor_id: String=str(kernel.definition.get("presentation",{}).get("observer_actor_id",""))
+	if actor_id.is_empty() or not kernel._entities.has(actor_id):return ""
+	var witness: Dictionary=kernel._find(kernel.definition.witnesses,witness_id)
+	return actor_id if str(witness.get("character_id",""))==str(kernel._entities[actor_id].asset_id).trim_suffix("_RIG") else ""
+
+func entity_display_position(id: String) -> Vector2:
+	return _visual_position(id) if kernel!=null and kernel.state.entities.has(id) else Vector2.ZERO
+
+func witness_display_position(id: String) -> Vector2:
+	var entity_id: String=_witness_entity(id)
+	if not entity_id.is_empty():return _visual_position(entity_id)
+	var eye: Vector2=kernel.witness_eye(id)
+	return world([eye.x,eye.y])
 func _visual_position(id: String) -> Vector2:
 	var exact: Vector2=_entity_position(id)
+	exact.y-=_surface_lift(id,exact)
 	var definition: Dictionary=kernel._entities[id]
+	var attachment: String=str(kernel.state.entities[id].get("attachment_target",""))
+	if definition.properties.get("attachment_kind","")=="clamp" and kernel.state.entities.has(attachment) and not kernel.state.entities[attachment].removed:
+		var siblings: Array=[]
+		for other in kernel.state.entities:
+			if not kernel.state.entities[other].removed and kernel.state.entities[other].get("attachment_target","")==attachment and kernel._entities[other].properties.get("attachment_kind","")=="clamp":siblings.append(other)
+		siblings.sort()
+		var side: float=-1 if siblings.find(id)%2==0 else 1
+		var target_height: float=_prop_height(attachment)
+		return _entity_position(attachment)+Vector2(target_height*.38*side,-target_height*.14)
 	var offset: Vector2=Vector2.ZERO
-	if definition.asset_id in ["CH01_RIG","CH09_RIG"] and _shared_start_group(id,["CH01_RIG","CH09_RIG"]).size()>1:
-		offset=Vector2(-72,-6) if definition.asset_id=="CH01_RIG" else Vector2(58,-6)
+	if id=="hero" and not str(kernel.definition.get("presentation",{}).get("observer_actor_id","")).is_empty():
+		# The tutorial scientist observes beside Marfa, rather than occluding her
+		# face from the player's camera. His planar simulation location is intact.
+		offset=Vector2(-230,-8)
+	elif definition.asset_id in ["CH01_RIG","CH09_RIG"] and _shared_start_group(id,["CH01_RIG","CH09_RIG"]).size()>1:
+		offset=Vector2(-110,-6) if definition.asset_id=="CH01_RIG" else Vector2(110,-6)
 	elif definition.asset_id=="PROP_CARGO_CRATE":
 		var group: Array=_shared_start_group(id,["PROP_CARGO_CRATE"])
-		if group.size()>1:offset=Vector2((group.find(id)-(group.size()-1)*.5)*108,18)
+		if group.size()>1:offset=Vector2((group.find(id)-(group.size()-1)*.5)*140,18)
 	if offset==Vector2.ZERO:return exact
 	# Arrange coincident painted silhouettes around the same logical start point.
 	# The offset eases away as a confirmed route leaves that point; geometry,
@@ -97,21 +146,120 @@ func _visual_position(id: String) -> Vector2:
 	var weight: float=1.0-clampf(exact.distance_to(start)/80.0,0,1)
 	return exact+offset*weight
 
+func _paper_layout(id: String) -> Dictionary:
+	if not kernel.state.entities.has(id) or kernel.state.entities[id].removed:return {}
+	var definition: Dictionary=kernel._entities[id]
+	if definition.type_id!="paper_span":return {}
+	var anchors: Array=definition.properties.get("span_anchor_entity_ids",[])
+	if anchors.size()<2:return {}
+	var entity: Dictionary=kernel.state.entities[id]
+	var endpoint_offsets: Array=definition.properties.get("span_endpoint_offsets",[])
+	if endpoint_offsets.size()<2:return {}
+	for index in range(2):
+		if not kernel.state.entities.has(anchors[index]) or kernel.state.entities[anchors[index]].removed:return {}
+		var expected: Vector2=_vec(entity.position)+_vec(endpoint_offsets[index])
+		if expected!=_vec(kernel.state.entities[anchors[index]].position):return {}
+	var first: Vector2=world(kernel.state.entities[anchors[0]].position)
+	var last: Vector2=world(kernel.state.entities[anchors[1]].position)
+	var ground: Vector2=world(entity.position)
+	var width: float=maxf(180,first.distance_to(last)+24)
+	var thickness: float=clampf(width*.16,56,80)
+	# A workshop span is supported above its ground-plane anchor, not painted
+	# on the same foot pivot as the load and the temporary frame.
+	var support_height: float=minf(_prop_height(anchors[0]),_prop_height(anchors[1]))*.76
+	var beam_top: float=ground.y-support_height-thickness*.20
+	var rect: Rect2=Rect2(ground.x-width*.5,beam_top,width,thickness)
+	# In the painted accordion span the central standing plane is below the
+	# silhouette's upper folds. Align the material base, not its transparent box
+	# with those crests; this also supplies the same plane to walking actors.
+	var surface: float=beam_top+thickness*.55
+	var elevation: float=ground.y-surface
+	return {"id":id,"rect":rect,"surface_y":surface,"ground":ground,"first":first,"last":last,"elevation":elevation}
+
+func _paper_under_load(id: String) -> Dictionary:
+	if not kernel.state.entities.has(id):return {}
+	var entity: Dictionary=kernel.state.entities[id]
+	for paper_id in kernel.state.entities:
+		var paper: Dictionary=kernel._entities[paper_id]
+		if paper.type_id!="paper_span" or entity.slot not in paper.properties.get("load_slot_ids",[]):continue
+		var layout: Dictionary=_paper_layout(paper_id)
+		if not layout.is_empty() and entity.position==kernel.state.entities[paper_id].position:return layout
+	return {}
+
+func _route_support(route: Dictionary) -> String:
+	if route.has("required_support_entity"):return str(route.required_support_entity)
+	for requirement in route.get("requirements",[]):
+		if requirement.type=="support":return str(requirement.parameters.get("entity_id",""))
+	return ""
+
+func _surface_lift(id: String,at: Vector2) -> float:
+	var prepared: Dictionary=_paper_under_load(id)
+	if not prepared.is_empty():
+		var radius: float=float(prepared.rect.size.x)*.52
+		var blend: float=clampf((radius-absf(at.x-float(prepared.ground.x)))/maxf(1,radius*.32),0,1)
+		return float(prepared.elevation)*blend*blend*(3-2*blend)
+	var routes: Array=kernel.state.routes.keys();routes.reverse()
+	for actor_id in routes:
+		var task: Dictionary=kernel.state.routes[actor_id]
+		var payloads: Array=kernel._entities[actor_id].properties.get("payload_entity_ids",[])
+		if actor_id!=id and (task.carrier_id!=id or task.get("transport_mode","")=="towed") and id not in payloads:continue
+		var route: Dictionary=kernel._find(kernel.definition.navigation.routes,task.route_id)
+		var support_id: String=_route_support(route)
+		if not kernel.state.entities.has(support_id) or kernel.state.entities[support_id].removed:continue
+		var support: Dictionary=kernel._entities[support_id]
+		var center: Vector2=world(kernel.state.entities[support_id].position)
+		var radius: float=0
+		var lift: float=0
+		if support.type_id=="paper_span":
+			var layout: Dictionary=_paper_layout(support_id)
+			if layout.is_empty():continue
+			radius=float(layout.rect.size.x)*.52;lift=float(layout.elevation)
+		elif support.material=="STONE":
+			var height: float=_prop_height(support_id)
+			var tex: Texture2D=asset_texture(support_id)
+			if tex==null:continue
+			radius=height*float(tex.get_width())/tex.get_height()*.53;lift=height*.50
+		else:continue
+		if absf(at.y-center.y)>maxf(64,size.y*.07):continue
+		var blend: float=clampf((radius-absf(at.x-center.x))/maxf(1,radius*.32),0,1)
+		return lift*blend*blend*(3-2*blend)
+	return 0
+
+func _paper_frame_layout(id: String) -> Rect2:
+	var definition: Dictionary=kernel._entities[id]
+	if definition.type_id!="hidden_frame":return Rect2()
+	var target: String=str(definition.properties.get("supports_entity",""))
+	if kernel.state.entities[id].slot!=definition.properties.get("support_when_slot",""):return Rect2()
+	var layout: Dictionary=_paper_layout(target)
+	if layout.is_empty():return Rect2()
+	var width: float=float(layout.rect.size.x)*.88
+	var top: float=float(layout.rect.end.y)-8
+	return Rect2(float(layout.ground.x)-width*.5,top,width,maxf(28,float(layout.ground.y)-top+6))
+
+func _prop_draw_priority(id: String) -> int:
+	var definition: Dictionary=kernel._entities[id]
+	if definition.type_id=="hidden_frame" or kernel._slots[kernel.state.entities[id].slot].mount_layer=="below":return 0
+	if definition.type_id=="span_anchor":return 1
+	if definition.type_id=="paper_span":return 2
+	if not _paper_under_load(id).is_empty():return 3
+	return 2
+
 func _sync_puppets() -> void:
 	if kernel==null or kernel.state.is_empty():
 		for puppet in _puppets.values():puppet.visible=false
 		return
 	var signature: String=str(kernel.get_instance_id())+":"+str(kernel.state.get("content_digest",""))
 	var height: float=_hero_display_height()
-	_ensure_puppet("felix","felix",height);_ensure_puppet("plum","plum",height*.364)
+	_ensure_puppet("felix","felix",height);_ensure_puppet("plum","plum",_actor_height("plum",height))
 	var wanted: Array=["felix","plum"]
 	for witness in kernel.definition.witnesses:
 		var actor: String=CHARACTERS.get(witness.character_id,"")
-		if actor in ["marfa","semyon","nika","lada","roza","hugo"]:
-			var key: String="witness:"+witness.id;wanted.append(key);_ensure_puppet(key,actor,WITNESS_HEIGHT)
+		if not actor.is_empty() and _witness_entity(witness.id).is_empty():
+			var key: String="witness:"+witness.id;wanted.append(key);_ensure_puppet(key,actor,_actor_height(actor,WITNESS_HEIGHT))
 	for id in kernel.state.entities:
-		if kernel._entities[id].asset_id=="CH09_RIG":
-			var key: String="entity:"+id;wanted.append(key);_ensure_puppet(key,"caramelka",144)
+		var actor: String=_entity_actor(id)
+		if not actor.is_empty() and actor!="felix":
+			var key: String="entity:"+id;wanted.append(key);_ensure_puppet(key,actor,_actor_height(actor,300))
 	for key in _puppets.keys():
 		if key not in wanted:
 			_puppets[key].visible=false;_puppets[key].queue_free();_puppets.erase(key)
@@ -135,11 +283,11 @@ func _sync_puppets() -> void:
 		var loop: String="move" if motion.moving else ("celebrate" if kernel.state.phase=="SUCCESS" else ("observe" if kernel.state.phase in ["PERFORMANCE","REHEARSAL"] else "idle"))
 		if key=="felix":puppet.set_display_height(height)
 		elif key=="plum":
-			puppet.set_display_height(height*.364);puppet.position+=Vector2(height*.73,-height*.59+sin(clock*3)*height*.04)
+			puppet.set_display_height(_actor_height("plum",height));puppet.position+=_plum_offset(height)
 			loop="fly" if motion.moving else ("cheer" if kernel.state.phase=="SUCCESS" else "hover")
 		else:
-			puppet.set_display_height(144)
-			if motion.moving:loop="walk"
+			puppet.set_display_height(_actor_height(puppet.actor_id,300))
+			if motion.moving:loop="walk" if puppet.actor_id=="caramelka" else "move"
 		var keep_idle_acting: bool=puppet.current_state in ["idle_chew","sleepy"] and loop in ["idle","hover"] and kernel.state.phase in ["PLAN_SHOW","PLAN_RESOLUTION"]
 		if not keep_idle_acting:puppet.play_state(loop)
 		if key.begins_with("entity:"):
@@ -169,9 +317,10 @@ func _sync_witness_puppet(key: String,puppet: Node2D) -> void:
 	var witness: Dictionary=kernel.state.witnesses[id]
 	var eye: Vector2=kernel.witness_eye(id)
 	puppet.visible=true;puppet.process_mode=Node.PROCESS_MODE_INHERIT
-	puppet.set_display_height(WITNESS_HEIGHT);puppet.set_reduced_motion(reduced_motion)
-	# This is a drawing offset only. Sight rays still use kernel.witness_eye exactly.
-	puppet.position=world([eye.x,eye.y])+Vector2(0,WITNESS_HEIGHT*.78)
+	puppet.set_display_height(_actor_height(puppet.actor_id,WITNESS_HEIGHT));puppet.set_reduced_motion(reduced_motion)
+	# Logical XY is the ground-plane observation position. Painted eyes sit above
+	# the ground pin; never shift the feet away from the authored walking surface.
+	puppet.position=world([eye.x,eye.y])
 	puppet.set_facing(1 if eye.x<12 else -1)
 	var mood: String="success" if kernel.state.phase=="SUCCESS" else ("reveal" if witness.exposed else ("accept" if witness.eligible_vote else ("suspect" if int(witness.get("expose_streak",0))>0 else ("observe" if kernel.state.phase in ["PERFORMANCE","REHEARSAL"] else "idle"))))
 	var loop: String={"success":"celebrate","reveal":"suspect","accept":"observe"}.get(mood,mood)
@@ -241,6 +390,13 @@ func _environment(scene: String) -> Dictionary:
 	_environments[scene]=data
 	return data
 func _draw_environment(scene: String) -> void:
+	var illustration: Texture2D=Art.texture_for("environments",scene)
+	if illustration!=null:
+		var factor: float=maxf(size.x/illustration.get_width(),size.y/illustration.get_height())
+		var crop: Vector2=size/factor
+		var source: Rect2=Rect2(Vector2((illustration.get_width()-crop.x)*.5,0),crop)
+		draw_texture_rect_region(illustration,Rect2(Vector2.ZERO,size),source)
+		return
 	var data: Dictionary=_environment(scene)
 	var landscape: Dictionary=data.get("landscape_background",{})
 	if not landscape.is_empty():
@@ -277,6 +433,8 @@ func _scene_frame(scene: String) -> Dictionary:
 	var offset_y: float=clampf((floor_y-size.y*.56)/maxf(factor,.001),0,maxf(0,source_size.y-crop.y))
 	return {"region":Rect2(Vector2((source_size.x-crop.x)*.5,offset_y),crop),"ground_y":floor_y-offset_y*factor}
 func _play_horizon() -> float:
+	if kernel!=null and Art.has_art("environments",str(kernel.definition.get("scene_id","ENV01"))):
+		return size.y*lerpf(.58,.66,clampf((ui_text_scale-1.0)/.4,0,1))
 	if kernel==null or kernel.state.is_empty():return size.y*.30
 	var frame: Dictionary=_scene_frame(kernel.definition.get("scene_id","ENV01"))
 	# The authored first audience row is grid y=3. Its visual feet must meet the
@@ -284,19 +442,27 @@ func _play_horizon() -> float:
 	var ground: float=float(frame.ground_y)+12
 	var horizon: float=(ground-WITNESS_HEIGHT*.78-(size.y-68)*3.0/28.0)*28.0/25.0
 	return clampf(horizon,size.y*.20,size.y*.48)
+func _illustrated_stage() -> bool:
+	return kernel!=null and not kernel.state.is_empty() and Art.has_art("environments",str(kernel.definition.get("scene_id","ENV01")))
 func world(p: Array) -> Vector2:
 	var horizon: float=_play_horizon()
-	return Vector2(56+float(p[0])*maxf(1,size.x-112)/24.0,horizon+float(p[1])*maxf(1,size.y-horizon-68)/28.0)
+	var margin: float=maxf(56,size.x*.05)
+	var floor_bottom: float=size.y*.84 if _illustrated_stage() else size.y-68
+	return Vector2(margin+float(p[0])*maxf(1,size.x-margin*2)/24.0,horizon+float(p[1])*maxf(1,floor_bottom-horizon)/28.0)
 func unworld(point: Vector2) -> Vector2:
 	# The editor uses the exact inverse of the presentation projection.
 	var horizon: float=_play_horizon()
-	return Vector2((point.x-56)*24.0/maxf(1,size.x-112),(point.y-horizon)*28.0/maxf(1,size.y-horizon-68))
+	var margin: float=maxf(56,size.x*.05)
+	var floor_bottom: float=size.y*.84 if _illustrated_stage() else size.y-68
+	return Vector2((point.x-margin)*24.0/maxf(1,size.x-margin*2),(point.y-horizon)*28.0/maxf(1,floor_bottom-horizon))
 func _vec(p: Array) -> Vector2:return Vector2(float(p[0]),float(p[1]))
 func texture(path: String) -> Texture2D:
 	if not _textures.has(path):_textures[path]=load(path) if ResourceLoader.exists(path) else null
 	return _textures[path]
 func asset_path(entity_id: String) -> String:
 	var d: Dictionary=kernel._entities[entity_id]
+	var illustrated: Dictionary=Art.entry("props",str(d.asset_id),_prop_variant(entity_id))
+	if not illustrated.is_empty():return str(illustrated.path)
 	if d.asset_id=="CH09_RIG":return "res://assets/art/characters/caramelka.png"
 	var stem: String=ASSETS.get(d.asset_id,"crate")
 	var entity: Dictionary=kernel.state.entities[entity_id]
@@ -306,6 +472,206 @@ func asset_path(entity_id: String) -> String:
 		var zone: String=d.properties.get("thermal_subject_zone_id","")
 		if kernel.state.get("zones",{}).get(zone,{}).get("phase","")=="frozen":stem="water_bowl_frozen"
 	return "res://assets/art/props/"+stem+".png"
+
+func _prop_variant(entity_id: String) -> String:
+	var e: Dictionary=kernel.state.entities[entity_id]
+	var d: Dictionary=kernel._entities[entity_id]
+	if d.asset_id=="PROP_SCREEN" and bool(e.get("folded",false)):return "folded"
+	if d.asset_id=="PROP_FIRE" and not bool(e.get("enabled",true)):return "off"
+	if d.asset_id=="PROP_FIRE" and "M02" in kernel.state.active_laws:return "cold"
+	if d.asset_id=="PROP_HEATED_STONE" and not bool(e.get("enabled",true)):return "cold"
+	if d.asset_id=="PROP_PAPER_BRIDGE" and "M03" in kernel.state.active_laws:return "reinforced"
+	if d.asset_id=="PROP_WATER_BOWL":
+		var zone: String=str(d.properties.get("thermal_subject_zone_id",""))
+		if kernel.state.get("zones",{}).get(zone,{}).get("phase","")=="frozen":return "frozen"
+	return ""
+
+func asset_texture(entity_id: String) -> Texture2D:
+	var d: Dictionary=kernel._entities[entity_id]
+	var actor: String=_entity_actor(entity_id)
+	if not actor.is_empty():return Art.texture_for("characters",Art.actor_key(actor))
+	var illustrated: Texture2D=Art.texture_for("props",str(d.asset_id),_prop_variant(entity_id))
+	return illustrated if illustrated!=null else texture(asset_path(entity_id))
+
+func _prop_rect(id: String,at: Vector2,height: float) -> Rect2:
+	var paper_layout: Dictionary=_paper_layout(id)
+	if not paper_layout.is_empty():return paper_layout.rect
+	var frame_layout: Rect2=_paper_frame_layout(id)
+	if frame_layout.has_area():return frame_layout
+	var tex: Texture2D=asset_texture(id)
+	if tex==null:return Rect2(at-Vector2(height*.5,height),Vector2.ONE*height)
+	var base: Texture2D=Art.texture_for("props",str(kernel._entities[id].asset_id))
+	var aspect: float=float(tex.get_width())/tex.get_height()
+	if base!=null and kernel._entities[id].asset_id!="PROP_SCREEN":aspect=float(base.get_width())/base.get_height()
+	var dimensions: Vector2=Vector2(height*aspect,height)
+	var actor: String=_entity_actor(id)
+	var data: Dictionary=Art.entry("characters",Art.actor_key(actor)) if not actor.is_empty() else Art.entry("props",str(kernel._entities[id].asset_id),_prop_variant(id))
+	var values: Array=data.get("pivot",[.5,1.0])
+	if actor.is_empty() and not _paper_under_load(id).is_empty():values=[.5,1.0]
+	var shore: Dictionary=_shoreline_mount(id)
+	if not shore.is_empty() and shore.direction.x!=0:
+		# A fixed shoreline mount uses the bank edge as its attachment origin.
+		# Its painted body extends into the dry side, never into the canal.
+		values=[0.0 if shore.direction.x>0 else 1.0,float(values[1])]
+	return Rect2(at-dimensions*Vector2(float(values[0]),float(values[1])),dimensions)
+
+func _draw_illustrated_prop(id: String,at: Vector2,height: float) -> void:
+	var tex: Texture2D=asset_texture(id)
+	if tex!=null:draw_texture_rect(tex,_prop_rect(id,at,height),false)
+
+func _terrain_art(key: String,rect: Rect2,opacity: float=1) -> void:
+	var tex: Texture2D=Art.texture_for("props",key)
+	if tex!=null:draw_texture_rect(tex,rect,false,Color(1,1,1,opacity))
+
+func _shoreline_mount(id: String) -> Dictionary:
+	var e: Dictionary=kernel.state.entities[id]
+	var d: Dictionary=kernel._entities[id]
+	if e.removed or d.type_id!="safety_thread" or kernel._slots[e.slot].mount_layer not in ["ground","surface"]:return {}
+	var at: Vector2=world(e.position)
+	if not kernel._position_over_water(e.position):return {"rect":Rect2(at-Vector2(125,52),Vector2(250,128)),"direction":Vector2.ZERO}
+	# A boundary point counts as WATER in the kernel. Only a mounting that has
+	# dry ground immediately beside it can acquire a shore-side footing. Never
+	# put a platform around a source that is in the interior of the water zone.
+	for direction in [Vector2.RIGHT,Vector2.LEFT,Vector2.DOWN,Vector2.UP]:
+		var beside: Vector2=_vec(e.position)+direction*.01
+		if kernel._position_over_water([beside.x,beside.y]):continue
+		var rect: Rect2
+		if direction==Vector2.RIGHT:rect=Rect2(at+Vector2(0,-52),Vector2(250,128))
+		elif direction==Vector2.LEFT:rect=Rect2(at+Vector2(-250,-52),Vector2(250,128))
+		elif direction==Vector2.DOWN:rect=Rect2(at+Vector2(-125,0),Vector2(250,128))
+		else:rect=Rect2(at+Vector2(-125,-128),Vector2(250,128))
+		return {"rect":rect,"direction":direction}
+	return {}
+
+func _draw_ground_supports(scene: String) -> void:
+	# The baked canal illustration is only the distant setting. Small authored
+	# dock/terrace cutouts put actual ground starts and route banks on a surface.
+	# No support is painted through a water polygon or under a floating object.
+	if scene!="ENV01":return
+	for id in kernel.state.entities:
+		var mount: Dictionary=_shoreline_mount(id)
+		if not mount.is_empty():_terrain_art("SCENE_DOCK",mount.rect)
+	var points: Array[Vector2]=[]
+	for route in kernel.definition.get("navigation",{}).get("routes",[]):
+		if route.nodes.is_empty():continue
+		for edge in range(route.nodes.size()-1):
+			var start: Dictionary=kernel._find(kernel.definition.navigation.nodes,route.nodes[edge])
+			var finish: Dictionary=kernel._find(kernel.definition.navigation.nodes,route.nodes[edge+1])
+			if start.is_empty() or finish.is_empty():continue
+			var middle: Vector2=_vec(start.position).lerp(_vec(finish.position),.5)
+			if kernel._position_over_water([middle.x,middle.y]):continue
+			var first: Vector2=world(start.position);var last: Vector2=world(finish.position)
+			var left: float=minf(first.x,last.x)-50
+			var width: float=maxf(180,absf(first.x-last.x)+100)
+			_terrain_art("SCENE_DOCK",Rect2(left,minf(first.y,last.y)-58,width,130+absf(first.y-last.y)))
+		for node_id in [route.nodes[0],route.nodes[-1]]:
+			var node: Dictionary=kernel._find(kernel.definition.navigation.nodes,node_id)
+			if not node.is_empty() and not kernel._position_over_water(node.position):points.append(world(node.position))
+	for id in kernel.state.entities:
+		var e: Dictionary=kernel.state.entities[id]
+		if e.removed or kernel._slots[e.slot].mount_layer!="ground" or kernel._position_over_water(e.position):continue
+		points.append(_visual_position(id))
+	for witness in kernel.definition.witnesses:
+		if not _witness_entity(witness.id).is_empty():continue
+		var eye: Vector2=kernel.witness_eye(witness.id)
+		if not kernel._position_over_water([eye.x,eye.y]):points.append(world([eye.x,eye.y]))
+	var placed: Array[Vector2]=[]
+	for point in points:
+		var covered: bool=false
+		for prior in placed:
+			if point.distance_to(prior)<95:covered=true;break
+		if covered:continue
+		placed.append(point)
+		var width: float=clampf(size.x*.17,230,350)
+		_terrain_art("SCENE_DOCK",Rect2(point-Vector2(width*.5,64),Vector2(width,142)))
+
+func _draw_water_zone(zone: Dictionary) -> void:
+	# Thermal subjects are not extra pools on the plaza. Bowl water is drawn
+	# inside the bowl artwork, while bread/dessert zones track their contents.
+	if zone.has("thermal_owner_entity_id"):return
+	for entity_id in kernel._entities:
+		var definition: Dictionary=kernel._entities[entity_id]
+		if definition.asset_id=="PROP_WATER_BOWL" and definition.properties.get("thermal_subject_zone_id","")==zone.id:return
+	var points: PackedVector2Array=[]
+	for p in zone.polygon:points.append(world(p))
+	if points.size()<3:return
+	var frozen: bool=kernel.state.get("zones",{}).get(zone.id,{}).get("phase","")=="frozen"
+	var bounds: Rect2=Rect2(points[0],Vector2.ZERO)
+	for point in points:bounds=bounds.expand(point)
+	if zone.id=="bowl_water":
+		var bowl: Texture2D=Art.texture_for("props","PROP_WATER_BOWL","frozen" if frozen else "")
+		if bowl!=null:
+			var height: float=156
+			var base_bowl: Texture2D=Art.texture_for("props","PROP_WATER_BOWL")
+			var dimensions: Vector2=Vector2(height*base_bowl.get_width()/base_bowl.get_height(),height)
+			var center: Vector2=bounds.get_center()
+			_contact_shadow(center,dimensions.x*.27,.16)
+			draw_texture_rect(bowl,Rect2(center-dimensions*Vector2(.5,.9),dimensions),false)
+		return
+	var surface: Texture2D=Art.texture_for("props","SCENE_ICE" if frozen else "SCENE_WATER")
+	if surface!=null:
+		# Sources have painted irregular alpha edges; geometry remains the exact
+		# author polygon, with a quiet sight/placement outline only on inspection.
+		draw_texture_rect(surface,bounds.grow(10),false,Color(1,1,1,.96))
+	else:
+		draw_colored_polygon(points,Color(.34,.75,.78,.18) if not frozen else Color(.70,.91,.94,.75))
+	for i in range(4):
+		var at: Vector2=Vector2(bounds.position.x+bounds.size.x*(.18+i*.19),bounds.position.y+bounds.size.y*(.32+fmod(i*.23,.48)))
+		var reach: float=minf(46,bounds.size.x*.12)
+		if frozen:
+			draw_line(at-Vector2(reach*.4,5),at+Vector2(reach*.6,3),Color(.96,1,1,.8),2,true)
+			draw_line(at,at+Vector2(5,12),Color(.96,1,1,.65),2,true)
+		else:draw_arc(at,reach,.12,PI-.2,18,Color(.94,.99,.91,.45),2,true)
+	if not selected.is_empty() or not inspected.is_empty():
+		for i in range(points.size()):draw_dashed_line(points[i],points[(i+1)%points.size()],Color(.94,.99,.91,.52),2,12,true)
+
+func _mooring_ends(id: String) -> Array:
+	var d: Dictionary=kernel._entities[id]
+	if d.properties.get("attachment_kind","")!="mooring":return []
+	var target: String=str(kernel.state.entities[id].get("attachment_target",""))
+	var owner: String=str(d.properties.get("mooring_owner_entity_id",""))
+	if not kernel.state.entities.has(target) or not kernel.state.entities.has(owner):return []
+	if kernel.state.entities[target].removed or kernel.state.entities[owner].removed:return []
+	return [_visual_position(owner)-Vector2(0,_prop_height(owner)*.38),_visual_position(target)-Vector2(0,_prop_height(target)*.55)]
+
+func _draw_rope(first: Vector2,last: Vector2,taut: bool=false) -> void:
+	var line: PackedVector2Array=[]
+	var sag: float=9 if taut else minf(42,first.distance_to(last)*.12)
+	for i in range(25):
+		var progress: float=float(i)/24
+		line.append(first.lerp(last,progress)+Vector2(0,sin(progress*PI)*sag))
+	draw_polyline(line,Color(.12,.10,.18,.24),11,true)
+	draw_polyline(line,Color("b78246"),7,true)
+	draw_polyline(line,Color("e6c58a"),3,true)
+	for i in range(2,line.size()-2,3):
+		var tangent: Vector2=(line[i+1]-line[i-1]).normalized()
+		var across: Vector2=Vector2(-tangent.y,tangent.x)*3.5
+		draw_line(line[i]-across-tangent*2,line[i]+across+tangent*2,Color("976336"),1.5,true)
+
+func _draw_connections() -> void:
+	for id in kernel.state.entities:
+		if kernel.state.entities[id].removed:continue
+		var thread: Array=_safety_thread_ends(id)
+		if thread.size()==2:
+			draw_line(thread[0]+Vector2(0,2),thread[1]+Vector2(0,2),Color(.12,.10,.18,.27),5,true)
+			draw_line(thread[0],thread[1],CREAM,2.5,true)
+		var ends: Array=_mooring_ends(id)
+		if ends.size()==2:
+			var owner: String=str(kernel._entities[id].properties.get("mooring_owner_entity_id",""))
+			_draw_rope(ends[0],ends[1],bool(kernel.state.entities[owner].get("moored",false)))
+	for id in kernel.state.routes:
+		var task: Dictionary=kernel.state.routes[id]
+		if task.get("transport_mode","")!="towed" or task.completed:continue
+		var carrier: String=str(task.carrier_id)
+		_draw_rope(_visual_position(carrier)-Vector2(0,_hero_display_height()*.40),_visual_position(id)-Vector2(0,_prop_height(id)*.45),true)
+
+func _safety_thread_ends(id: String) -> Array:
+	var source: Dictionary=kernel.state.entities[id]
+	var definition: Dictionary=kernel._entities[id]
+	var target: String=str(definition.properties.get("supports_entity",""))
+	if source.removed or definition.type_id!="safety_thread" or not kernel.state.entities.has(target) or not kernel._support_source_matches(id,target):return []
+	var body: Rect2=_prop_rect(id,_visual_position(id),_prop_height(id))
+	return [body.get_center()+Vector2(0,body.size.y*.15),_visual_position(target)-Vector2(0,_prop_height(target)*.22)]
 func _art(path: String,pivot: Vector2,height: float,sway: float=0) -> bool:
 	var tex: Texture2D=texture(path)
 	if tex==null:return false
@@ -325,47 +691,38 @@ func _contact_shadow(at: Vector2,radius: float,strength: float=.13) -> void:
 	draw_set_transform(Vector2.ZERO)
 func _prop_height(id: String) -> float:
 	var definition: Dictionary=kernel._entities[id]
-	if definition.material=="STONE":return {"S":80,"M":114,"L":140}.get(definition.properties.get("size","M"),114)
-	if definition.apparent_class=="SCREEN" or definition.asset_id in ["PROP_FIRE","PROP_HOIST","PROP_TICKET_BOOTH"]:return 180
-	if definition.asset_id=="PROP_FLOAT":return 65
-	if definition.asset_id=="CH09_RIG":return 144
-	if definition.asset_id=="PROP_CARGO_CRATE" and _shared_start_group(id,["PROP_CARGO_CRATE"]).size()>1:return 86
-	return 115
+	var actor: String=_entity_actor(id)
+	if not actor.is_empty():return _actor_height(actor,300)
+	var paper_layout: Dictionary=_paper_layout(id)
+	if not paper_layout.is_empty():return float(paper_layout.rect.size.y)
+	var frame_layout: Rect2=_paper_frame_layout(id)
+	if frame_layout.has_area():return frame_layout.size.y
+	if definition.asset_id=="PROP_CLAMP" and not str(kernel.state.entities[id].get("attachment_target","")).is_empty():return 80
+	if definition.material=="STONE":return {"S":104,"M":145,"L":175}.get(definition.properties.get("size","M"),145)
+	if definition.apparent_class=="SCREEN":return 200 if bool(kernel.state.entities[id].get("folded",false)) else 270
+	if definition.asset_id in ["PROP_FIRE","PROP_HOIST","PROP_TICKET_BOOTH"]:return 240
+	if definition.asset_id=="PROP_FLOAT":return 88
+	if definition.asset_id=="PROP_BOAT":return 185
+	if definition.asset_id=="CH09_RIG":return 200
+	if definition.asset_id=="PROP_CARGO_CRATE" and _shared_start_group(id,["PROP_CARGO_CRATE"]).size()>1:return 116
+	return 156
 func _draw() -> void:
 	_hits.clear()
 	if kernel==null or kernel.state.is_empty():return
 	var st: Dictionary=kernel.state
 	var scene: String=kernel.definition.get("scene_id","ENV01")
 	_draw_environment(scene)
-	var overlay: Texture2D=texture("res://assets/art/scenes/"+str(st.get("level_id",""))+"/overlay.png")
-	# Chapter plates supply the cohesive diorama. Authored level accents remain a
-	# subtle foreground layer, rather than covering the playable area with a frame.
-	if overlay!=null:draw_texture_rect(overlay,Rect2(Vector2.ZERO,size),false,Color(1,1,1,.24))
+	_draw_ground_supports(scene)
 	for zone in kernel.definition.get("zones",[]):
 		if zone.kind!="WATER" or not zone.has("polygon"):continue
-		var points: PackedVector2Array=[]
-		for p in zone.polygon:points.append(world(p))
-		var frozen: bool=st.get("zones",{}).get(zone.id,{}).get("phase","")=="frozen"
-		var surface: Texture2D=texture("res://assets/art/props/"+("ice_surface" if frozen else "water_surface")+".png")
-		var uv: PackedVector2Array=[]
-		for point in points:uv.append(point/700.0)
-		draw_colored_polygon(points,Color("b6e9f1") if frozen else Color("3bb7ce"))
-		if surface!=null:draw_polygon(points,PackedColorArray([Color(1,1,1,.42)]),uv,surface)
-		var rim: PackedVector2Array=points.duplicate();rim.append(points[0])
-		draw_polyline(rim,Color(.08,.34,.42,.38),12,true)
-		draw_polyline(rim,Color(.92,.98,.94,.92),6,true)
-		draw_polyline(rim,Color(.30,.75,.84,.85),2,true)
-		if not selected.is_empty() or not inspected.is_empty():
-			for i in range(points.size()):draw_dashed_line(points[i],points[(i+1)%points.size()],Color(.84,.96,.91,.65),2,12,true)
-		for i in range(3):
-			var at: Vector2=points[0]+Vector2(26+i*51,28+i*35)
-			draw_line(at,at+Vector2(29+sin(clock+i)*5,0),Color(.82,.95,.94,.65),3,true)
+		_draw_water_zone(zone)
+	_draw_connections()
 	# Slots preserve the exact geometry used by visibility and navigation.
 	for slot in kernel.definition.slots:
 		if slot.mount_layer=="tray":continue
 		var valid: bool=false
 		if selected.begins_with("w:"):valid="witness" in slot.allowed_entity_types
-		elif st.entities.has(selected):valid=kernel._entities[selected].type_id in slot.allowed_entity_types and not st.entities[selected].removed
+		elif st.entities.has(selected):valid=kernel._entities[selected].get("movable",false) and kernel._entities[selected].type_id in slot.allowed_entity_types and not st.entities[selected].removed
 		if valid:
 			var pos: Vector2=world(slot.position)
 			draw_circle(pos,40,Color(.94,.98,.98,.8))
@@ -373,57 +730,86 @@ func _draw() -> void:
 			draw_circle(pos,10,Color("f1b44c"))
 			_hits.append({"kind":"slot","id":slot.id,"rect":Rect2(pos-Vector2(72,72),Vector2(144,144))})
 	var ids: Array=st.entities.keys()
-	ids.sort_custom(func(a,b):return world(st.entities[a].position).y<world(st.entities[b].position).y)
+	ids.sort_custom(func(a,b):
+		var depth_a: float=world(st.entities[a].position).y
+		var depth_b: float=world(st.entities[b].position).y
+		return _prop_draw_priority(a)<_prop_draw_priority(b) if is_equal_approx(depth_a,depth_b) else depth_a<depth_b)
 	for id in ids:
 		var e: Dictionary=st.entities[id]
 		var d: Dictionary=kernel._entities[id]
 		if e.removed or id=="hero" or kernel._slots[e.slot].mount_layer=="tray":continue
 		var pos: Vector2=_visual_position(id)
 		var height: float=_prop_height(id)
-		if d.apparent_class=="SCREEN":pos.y+=60
-		elif d.asset_id=="PROP_FLOAT":pos.y+=22
+		if d.apparent_class=="SCREEN":pos.y+=30
+		elif d.asset_id=="PROP_FLOAT":pos.y+=32
+		var rope_ends: Array=_mooring_ends(id)
+		if rope_ends.size()==2:
+			height=48;pos=(rope_ends[0]+rope_ends[1])*.5+Vector2(0,height*.4)
 		if e.effective.get("buoyant",false) and kernel._position_over_water(e.position):pos.y+=sin(clock*2)*3
-		_contact_shadow(pos,height*.36,.09 if kernel._position_over_water(e.position) else .15)
-		if not _puppets.has("entity:"+id):_art(asset_path(id),pos,height,sin(clock*2)*.01 if d.asset_id=="CH09_RIG" else 0)
+		if rope_ends.is_empty():_contact_shadow(Vector2(_prop_rect(id,pos,height).get_center().x,pos.y),height*.36,.09 if kernel._position_over_water(e.position) else .15)
+		if not _puppets.has("entity:"+id) and rope_ends.is_empty():_draw_illustrated_prop(id,pos,height)
+		if d.material=="STONE" and e.effective.get("buoyant",false) and kernel._position_over_water(e.position):
+			# The new law has a persistent visible consequence, even with no debug
+			# inspector: a quiet turquoise support ripple beneath the stone.
+			draw_set_transform(pos+Vector2(0,12),0,Vector2(1,.24))
+			draw_arc(Vector2.ZERO,height*.69,0,TAU,48,Color(.73,.97,.92,.65),5,true)
+			draw_set_transform(Vector2.ZERO)
+		if d.material=="PAPER" and "M03" in st.active_laws:
+			var paper_rect: Rect2=_prop_rect(id,pos,height)
+			draw_line(paper_rect.position+Vector2(12,paper_rect.size.y*.8),paper_rect.end-Vector2(12,paper_rect.size.y*.2),Color(.97,.84,.38,.8),4,true)
 		if not e.get("intact",true):
 			draw_line(pos-Vector2(25,60),pos+Vector2(25,-10),Color("a84148"),5,true)
 		if selected==id:
-			draw_arc(pos,54,0,TAU,48,CREAM,10,true)
-			draw_arc(pos,54,0,TAU,48,PURPLE,5,true)
-		var hit_width: float=144
-		var hit_texture: Texture2D=texture(asset_path(id))
-		if hit_texture!=null:hit_width=maxf(144,height*float(hit_texture.get_width())/hit_texture.get_height())
+			var selection_anchor: Vector2=Vector2(_prop_rect(id,pos,height).get_center().x,pos.y)
+			draw_arc(selection_anchor,54,0,TAU,48,CREAM,10,true)
+			draw_arc(selection_anchor,54,0,TAU,48,PURPLE,5,true)
+		var hit_width: float=maxf(144,_prop_rect(id,pos,height).size.x)
 		var hit_size: Vector2=Vector2(hit_width,maxf(144,height+35))
-		var hit_center: Vector2=pos-Vector2(0,height*.5)
+		var hit_center: Vector2=_prop_rect(id,pos,height).get_center()
 		_hits.append({"kind":"entity","id":id,"rect":Rect2(hit_center-hit_size/2,hit_size),"anchor":hit_center})
 	# Eye anchors remain true; generous cards below the stage select the same witness.
 	for i in range(kernel.definition.witnesses.size()):
 		var wd: Dictionary=kernel.definition.witnesses[i]
 		var w: Dictionary=st.witnesses[wd.id]
 		var eye: Vector2=kernel.witness_eye(wd.id)
-		var pos: Vector2=world([eye.x,eye.y])
-		_contact_shadow(pos+Vector2(0,WITNESS_HEIGHT*.78),WITNESS_HEIGHT*.3,.12)
-		if not _puppets.has("witness:"+wd.id):
+		var pos: Vector2=witness_display_position(wd.id)
+		var entity_id: String=_witness_entity(wd.id)
+		if entity_id.is_empty():_contact_shadow(pos,WITNESS_HEIGHT*.3,.12)
+		if entity_id.is_empty() and not _puppets.has("witness:"+wd.id):
 			var actor: String=CHARACTERS.get(wd.character_id,"")
 			if not actor.is_empty():_art("res://assets/art/characters/"+actor+".png",pos+Vector2(0,WITNESS_HEIGHT*.78),WITNESS_HEIGHT)
 		var color: Color=Color("276b5c") if w.eligible_vote else (Color("a84148") if w.exposed else CREAM)
-		var badge: Vector2=pos-Vector2(0,54)
-		draw_circle(badge+Vector2(0,3),30,Color(.15,.14,.23,.2));draw_circle(badge,28,color);draw_arc(badge,28,0,TAU,40,INK,2,true)
-		_label(str(i+1),badge+Vector2(-12,15),42,CREAM if w.eligible_vote or w.exposed else INK)
-		_hits.append({"kind":"witness","id":wd.id,"rect":Rect2(pos-Vector2(72,48),Vector2(144,144)),"anchor":pos})
+		var body_height: float=_prop_height(entity_id) if not entity_id.is_empty() else _actor_height(str(CHARACTERS.get(wd.character_id,"")),WITNESS_HEIGHT)
+		var badge: Vector2=pos-Vector2(0,body_height+28)
+		if inspected==wd.id or selected=="w:"+wd.id:
+			draw_circle(badge+Vector2(0,3),25,Color(.15,.14,.23,.2));draw_circle(badge,23,color)
+			_label(str(i+1),badge+Vector2(-10,12),32,CREAM if w.eligible_vote or w.exposed else INK)
+		var observer_anchor: Vector2=world([eye.x,eye.y])
+		var face: Vector2=pos-Vector2(0,body_height*.84)
+		_hits.append({"kind":"witness","id":wd.id,"rect":Rect2(face-Vector2(72,72),Vector2(144,144)),"anchor":observer_anchor,"pick_anchor":face})
 	var hero_pos: Vector2=_visual_position("hero")
 	var hero_height: float=_hero_display_height()
 	_contact_shadow(hero_pos,hero_height*.28,.16)
 	if not _puppets.has("felix"):_art("res://assets/art/characters/felix.png",hero_pos,hero_height,sin(clock*2.1)*.012)
 	if not _puppets.has("plum"):_art("res://assets/art/characters/plum.png",hero_pos+Vector2(hero_height*.73,-hero_height*.59+sin(clock*3)*hero_height*.04),hero_height*.364,sin(clock*5)*.09)
-	if not inspected.is_empty() and st.witnesses.has(inspected):
+	# The Atlas is a physical object beside the professor, linking the separate
+	# 'make law' action to the source of the transformation.
+	var atlas: Texture2D=Art.texture_for("props","ATLAS")
+	if atlas!=null:
+		var atlas_size: Vector2=Vector2(128,100)
+		var atlas_at: Vector2=hero_pos+Vector2(-hero_height*.39,-14)
+		_contact_shadow(atlas_at+Vector2(0,30),42,.12)
+		draw_texture_rect(atlas,Rect2(atlas_at-atlas_size*.5,atlas_size),false)
+	if not inspected.is_empty() and st.witnesses.has(inspected) and st.phase in ["PLAN_SHOW","PERFORMANCE","REHEARSAL","PROOF_ACCEPTED"]:
 		var diagnostics: Dictionary=kernel.visibility_for(inspected)
 		for ray in diagnostics.rays:
 			var color: Color=Color(.15,.5,.35,.75) if ray.visible else Color(.66,.25,.29,.6)
 			if ray.method and not ray.visible:color=Color(.36,.26,.65,.55)
 			draw_line(world(ray.from),world(ray.to),color,3,true);draw_circle(world(ray.to),7,color)
-		_rounded(Rect2(18,size.y-86,size.x-36,72),CREAM)
-		_label(_t("stage.vision","Обзор {visible}/3 · Механизм {method}").format({"visible":diagnostics.visible_results,"method":_t("stage.visible","виден") if diagnostics.method_visible else _t("stage.hidden","скрыт")}),Vector2(36,size.y-36),42)
+		var note: String=_t("stage.vision","Обзор {visible}/3 · Механизм {method}").format({"visible":diagnostics.visible_results,"method":_t("stage.visible","виден") if diagnostics.method_visible else _t("stage.hidden","скрыт")})
+		var note_width: float=minf(size.x-72,_font.get_string_size(note,HORIZONTAL_ALIGNMENT_LEFT,-1,36).x+48)
+		_rounded(Rect2(36,184,note_width,66),CREAM)
+		_label(note,Vector2(60,230),36)
 func _capacity_badge_layout() -> Array:
 	# Labels are a presentation pass: never relocate props or their input anchors.
 	var badges: Array=[]
@@ -433,6 +819,7 @@ func _capacity_badge_layout() -> Array:
 		var entity: Dictionary=kernel.state.entities[id]
 		var definition: Dictionary=kernel._entities[id]
 		if entity.removed or kernel._slots[entity.slot].mount_layer=="tray" or definition.material!="STONE" or not definition.properties.has("size"):continue
+		if not show_capacity and selected!=id and inspected!=id:continue
 		var pos: Vector2=_visual_position(id)
 		var height: float=_prop_height(id)
 		if entity.effective.get("buoyant",false) and kernel._position_over_water(entity.position):pos.y+=sin(clock*2)*3
@@ -465,9 +852,10 @@ func _draw_capacity_badges() -> void:
 		_capacity_overlay.draw_line(anchor,edge,CREAM,5,true)
 		_capacity_overlay.draw_line(anchor,edge,INK,2,true)
 	for badge in badges:
-		var style=StyleBoxFlat.new();style.bg_color=INK;style.set_corner_radius_all(11)
+		var style=StyleBoxFlat.new();style.bg_color=CREAM;style.set_corner_radius_all(18)
+		style.shadow_color=Color(.15,.14,.28,.15);style.shadow_size=4;style.shadow_offset=Vector2(0,4)
 		_capacity_overlay.draw_style_box(style,badge.rect)
-		_capacity_overlay.draw_string(_font,badge.rect.position+Vector2(16,47),badge.text,HORIZONTAL_ALIGNMENT_LEFT,-1,42,CREAM)
+		_capacity_overlay.draw_string(_font,badge.rect.position+Vector2(16,47),badge.text,HORIZONTAL_ALIGNMENT_LEFT,-1,42,INK)
 func _sample_presentation(delta: float) -> void:
 	if kernel==null or kernel.state.is_empty():
 		_route_frames.clear();_render_tick=-1;_render_phase="";_route_signature="";_tick_elapsed=.1;return
@@ -519,7 +907,7 @@ func _target_at(position: Vector2) -> Dictionary:
 	for i in range(_hits.size()-1,-1,-1):
 		var target: Dictionary=_hits[i]
 		if target.kind=="slot" or not target.rect.has_point(position):continue
-		var d: float=target.get("anchor",target.rect.get_center()).distance_squared_to(position)
+		var d: float=target.get("pick_anchor",target.get("anchor",target.rect.get_center())).distance_squared_to(position)
 		if d<distance:nearest=target;distance=d # Equal-distance ties keep the visually frontmost target.
 	return nearest
 func _gui_input(event: InputEvent) -> void:

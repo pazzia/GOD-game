@@ -5,71 +5,11 @@
   "steps": [
     {
       "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "float",
-        "slot_id": "stage_float"
-      }
-    },
-    {
-      "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "stone",
-        "slot_id": "stage_stone"
-      }
-    },
-    {
-      "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "screen_a",
-        "slot_id": "screen_left"
-      }
-    },
-    {
-      "op": "command",
-      "type": "SetWitnessSlot",
-      "payload": {
-        "witness_id": "w3",
-        "slot_id": "audience_c"
-      }
-    },
-    {
-      "op": "command",
-      "type": "BeginPerformance",
-      "payload": {}
-    },
-    {
-      "op": "advance_ticks",
-      "count": 100
-    },
-    {
-      "op": "assert",
-      "predicate": "proof_ready:M01"
-    },
-    {
-      "op": "command",
-      "type": "ActivateLaw",
-      "payload": {
-        "myth_id": "M01",
-        "replace_law_id": null
-      }
-    },
-    {
-      "op": "command",
       "type": "Interact",
       "payload": {
-        "entity_id": "float",
-        "action": "remove"
-      }
-    },
-    {
-      "op": "command",
-      "type": "PlaceProp",
-      "payload": {
-        "entity_id": "stone",
-        "slot_id": "bridge"
+        "entity_id": "mooring",
+        "action": "attach",
+        "target_entity_id": "bollard"
       }
     },
     {
@@ -77,7 +17,7 @@
       "type": "AssignRoute",
       "payload": {
         "actor_id": "cargo",
-        "route_id": "cross"
+        "route_id": "unload"
       }
     },
     {
@@ -87,7 +27,7 @@
     },
     {
       "op": "advance_ticks",
-      "count": 100
+      "count": 150
     },
     {
       "op": "assert",
@@ -95,9 +35,6 @@
     }
   ],
   "expected_final_predicates": [
-    "law_active:M01",
-    "entity_removed:float",
-    "cargo_delivered:cargo",
     "level_success"
   ]
 }

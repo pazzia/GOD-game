@@ -49,13 +49,15 @@ func targets(mode: String) -> Array:
 				result.append({"kind":"anchor","myth_id":proof.myth_id,"group":mode,"index":i,"label":"%s %s[%d] • %s"%[proof.myth_id,"result" if mode=="result_anchors" else "method",i,proof[mode][i].entity_id]})
 	elif mode=="occluders":
 		for occ in definition.get("occluders",[]):
-			for i in range(2):result.append({"kind":"occluder","id":occ.id,"index":i,"label":occ.id+" • endpoint"+str(i+1)})
+			for group in ["segment","folded_segment"]:
+				if not occ.has(group):continue
+				for i in range(2):result.append({"kind":"occluder","id":occ.id,"segment_key":group,"index":i,"label":occ.id+" • "+("folded " if group=="folded_segment" else "tall ")+"endpoint"+str(i+1)})
 	return result
 func target_point(target: Dictionary) -> Array:
 	if definition.is_empty():return []
 	match target.get("kind",""):
 		"slot":return _find(definition.slots,target.id).get("position",[]).duplicate()
-		"occluder":return _find(definition.occluders,target.id).segment[int(target.index)].duplicate()
+		"occluder":return _find(definition.occluders,target.id)[target.get("segment_key","segment")][int(target.index)].duplicate()
 		"anchor":
 			var proof: Dictionary=_proof(target.myth_id)
 			if proof.is_empty():return []
@@ -72,7 +74,7 @@ func move_target(target: Dictionary,position: Array) -> bool:
 	var old_point: Array=target_point(target)
 	match target.kind:
 		"slot":_find(definition.slots,target.id).position=[int(position[0]),int(position[1])]
-		"occluder":_find(definition.occluders,target.id).segment[int(target.index)]=[int(position[0]),int(position[1])]
+		"occluder":_find(definition.occluders,target.id)[target.get("segment_key","segment")][int(target.index)]=[int(position[0]),int(position[1])]
 		"anchor":
 			var anchor: Dictionary=_proof(target.myth_id)[target.group][int(target.index)]
 			var base: Array=visible_kernel().state.entities[anchor.entity_id].position
@@ -176,7 +178,10 @@ func _restore_author_snapshot(saved: Dictionary) -> void:
 	if saved.comparison!="live":show_law_comparison(saved.comparison)
 func _target_valid(t: Dictionary) -> bool:
 	if t.get("kind")=="slot":return not _find(definition.slots,t.get("id","")).is_empty()
-	if t.get("kind")=="occluder":return not _find(definition.occluders,t.get("id","")).is_empty() and t.get("index",-1) in [0,1]
+	if t.get("kind")=="occluder":
+		var occluder: Dictionary=_find(definition.occluders,t.get("id",""))
+		var group: Variant=t.get("segment_key","segment")
+		return not occluder.is_empty() and group in ["segment","folded_segment"] and occluder.has(group) and t.get("index",-1) in [0,1]
 	if t.get("kind")=="anchor":
 		var p: Dictionary=_proof(t.get("myth_id",""));var group: String=t.get("group","")
 		return not p.is_empty() and group in ["result_anchors","method_anchors"] and t.get("index",-1)>=0 and t.index<p[group].size()

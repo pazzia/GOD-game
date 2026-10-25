@@ -24,7 +24,7 @@ def runtime_manifest():
             records[str(rel)] = hashlib.sha256(p.read_bytes()).hexdigest()
     return records
 
-BASE_SUITES = ['test_kernel.gd','test_validation.gd','test_s2_regressions.gd','test_campaign.gd',
+BASE_SUITES = ['test_kernel.gd','test_scientist_kernel.gd','test_validation.gd','test_s2_regressions.gd','test_campaign.gd',
               'test_services.gd','test_service_boundaries.gd','test_client_loading.gd',
               'test_save_recovery_edges.gd','test_audio_conductor.gd','test_audio_transport_edges.gd',
               'test_audio_shutdown.gd','test_audio_shutdown_edges.gd','test_audio_shutdown_drain.gd',

@@ -31,7 +31,9 @@ static func goal_label(kernel,goal: Dictionary,catalog: Dictionary,locale: Strin
 			return _t(locale,"Подготовить: ","Prepare: ")+entity
 		"water_phase":
 			var zones: Dictionary={"dessert_zone":_t(locale,"десерт","dessert"),"bowl_water":_t(locale,"вода в чаше","bowl water"),"crossing_water":_t(locale,"вода на переправе","crossing water"),"boat_water":_t(locale,"лодочная протока","boat channel"),"cold_passage":_t(locale,"холодный проход","cold passage")}
-			return (_t(locale,"Заморозить: ","Freeze: ") if p.phase=="frozen" else _t(locale,"Сохранить жидкой: ","Keep liquid: "))+str(zones.get(p.zone_id,_t(locale,"вода","water")))
+			var zone_key: String="level."+str(kernel.state.level_id)+".zone."+str(p.zone_id)
+			var zone_name: String=str(catalog.get(zone_key,zones.get(p.zone_id,_t(locale,"вода","water"))))
+			return (_t(locale,"Заморозить: ","Freeze: ") if p.phase=="frozen" else _t(locale,"Сохранить жидкой: ","Keep liquid: "))+zone_name
 		"law_active":return _t(locale,"Действует закон: ","Law active: ")+_law_name(p.myth_id,catalog,locale)
 		"law_inactive":return _t(locale,"Отменить закон: ","Revoke law: ")+_law_name(p.myth_id,catalog,locale)
 	return _t(locale,"Выполнить условие задания","Complete the quest condition")
@@ -51,7 +53,10 @@ static func goal_headline(rows: Array,phase: String,locale: String) -> Dictionar
 		var label: String=full
 		if full.begins_with("Провести: ") or full.begins_with("Guide: "):
 			var actor: String=full.trim_prefix("Провести: ").trim_prefix("Guide: ").split(" → ")[0]
-			label=_t(locale,"Путь: ","Route: ")+actor
+			if actor in ["Марфа","Marfa"]:label=_t(locale,"Переправить Марфу","Help Marfa cross")
+			elif actor in ["Профессор Феликс","Professor Felix","Феликс","Felix"]:label=_t(locale,"Провести профессора","Guide the professor")
+			elif actor in ["Карамелька","Caramel"]:label=_t(locale,"Провести Карамельку","Guide Caramel")
+			else:label=_t(locale,"Провести: ","Guide: ")+actor
 		elif full.begins_with("Доставить: ") or full.begins_with("Deliver: "):
 			label=_t(locale,"Доставить груз","Deliver cargo")
 		elif full.begins_with("Убрать: ") or full.begins_with("Remove: "):
@@ -71,7 +76,7 @@ static func goal_headline(rows: Array,phase: String,locale: String) -> Dictionar
 		elif full.begins_with("Отменить закон: ") or full.begins_with("Revoke law: "):
 			label=_t(locale,"Отменить закон","Revoke the law")
 		elif full.begins_with("Действует закон: ") or full.begins_with("Law active: "):
-			if "замораживает" in full or "Fire freezes" in full:label=_t(locale,"Огонь морозит","Freezing fire")
+			if "Огонь" in full or "Fire" in full:label=_t(locale,"Огонь морозит","Freezing fire")
 			elif "Бумага" in full or "Paper" in full:label=_t(locale,"Прочная бумага","Strong paper")
 			else:label=_t(locale,"Камни плавают","Floating stones")
 		return {"id":row.id,"label":label,"done":false}
@@ -79,53 +84,94 @@ static func goal_headline(rows: Array,phase: String,locale: String) -> Dictionar
 
 static func witness_status(kernel,id: String,locale: String) -> String:
 	var w: Dictionary=kernel.state.witnesses[id]
-	if w.get("exposed",false):return _t(locale,"Разгадал фокус","Secret exposed")
-	if w.get("eligible_vote",false):return _t(locale,"Верит","Convinced")
+	if w.get("exposed",false):return _t(locale,"Механизм был виден","Method was visible")
+	if w.get("eligible_vote",false):return _t(locale,"Результат записан","Result recorded")
 	if str(w.get("status",""))=="MOVING_TO_VIEW":return _t(locale,"Меняет ракурс","Moving to view")
 	var sight: Dictionary=kernel.visibility_for(id)
-	if sight.method_visible:return _t(locale,"Видит секрет","Sees secret")
+	if sight.method_visible:return _t(locale,"Видит механизм","Sees method")
 	if int(sight.visible_results)<2:return _t(locale,"Не видит результат","Cannot see result")
-	if str(w.get("status",""))=="NO_MIRACLE":return _t(locale,"Ждёт чуда","No miracle yet")
+	if str(w.get("status",""))=="NO_MIRACLE":return _t(locale,"Нет изменения","No change yet")
 	if kernel.state.phase in ["PERFORMANCE","REHEARSAL"]:return _t(locale,"Наблюдает","Watching")
 	return _t(locale,"Обзор свободен","Clear view")
 
 static func witness_short(kernel,id: String,locale: String) -> String:
-	var full: String=witness_status(kernel,id,"en")
-	var labels: Dictionary={"Secret exposed":_t(locale,"Разгадал","Exposed"),"Convinced":_t(locale,"Верит","Believes"),"Moving to view":_t(locale,"Идёт","Moving"),"Sees secret":_t(locale,"Секрет!","Secret!"),"Cannot see result":_t(locale,"Не видит","Blocked"),"No miracle yet":_t(locale,"Нет чуда","No magic"),"Watching":_t(locale,"Смотрит","Watching"),"Clear view":_t(locale,"Обзор ✓","View OK")}
-	return str(labels.get(full,_t(locale,"Проверить","Inspect")))
+	var w: Dictionary=kernel.state.witnesses[id]
+	if w.get("exposed",false):return _t(locale,"Механизм виден","Method visible")
+	if w.get("eligible_vote",false):return _t(locale,"Записано","Recorded")
+	var sight: Dictionary=kernel.visibility_for(id)
+	if sight.method_visible:return _t(locale,"Виден механизм","Method visible")
+	if int(sight.visible_results)<2:return _t(locale,"Результат скрыт","Result hidden")
+	if str(w.get("status",""))=="MOVING_TO_VIEW":return _t(locale,"Меняет ракурс","Changing view")
+	return _t(locale,"Наблюдает","Observing") if kernel.state.phase in ["PERFORMANCE","REHEARSAL"] else _t(locale,"Обзор готов","View ready")
+
+static func _required_experiment(kernel) -> String:
+	# Guide decisions describe available phase actions; they never move equipment.
+	var id: String=str(kernel.state.get("level_id",""))
+	var required: Dictionary={"L17":"M02","L19":"M01","L20":"M02","L24":"M03","L28":"M03","L29":"M02"}
+	if id=="L26" and kernel.evaluate("cargo_delivered",{"entity_id":"first_cargo","route_id":"dry_delivery"}):required[id]="M03"
+	if id=="L29" and str(kernel.state.zones.get("demo_water",{}).get("phase","frozen"))!="liquid":return ""
+	if id=="L30":
+		if not kernel.evaluate("cargo_delivered",{"entity_id":"first_cargo","route_id":"cross"}):
+			return "M01" if "M01" not in kernel.state.active_laws else ""
+		if "M03" not in kernel.state.active_laws:
+			if "M02" not in kernel.state.active_laws:return "M02"
+			if str(kernel.state.zones.get("cold_passage",{}).get("phase","liquid"))!="frozen":return ""
+			return "M03"
+	var candidate: String=str(required.get(id,""))
+	return candidate if not candidate.is_empty() and candidate not in kernel.state.active_laws else ""
 
 static func describe(kernel,locale: String,level_number: int,total: int,selected: String="",catalog: Dictionary={}) -> Dictionary:
 	var state: Dictionary=kernel.state
 	var phase: String=str(state.get("phase","PLAN_SHOW"))
 	var rows: Array=goal_rows(kernel,catalog,locale)
 	var current_key: String="level."+str(state.get("level_id",""))+"."
-	var objective: String=str(catalog.get(current_key+"objective",_t(locale,"Помогите жителям этой сцены.","Help the people in this scene.")))
-	var data: Dictionary={"stage_number":1,"stage_title":_t(locale,"1 · Подготовка","1 · Prepare"),"body":"","objective":objective,"primary":_t(locale,"Показать фокус","Perform the trick"),"primary_disabled":false,"goals":rows,"witness_status":{},"witness_short":{},"law":""}
+	var objective: String=str(catalog.get(current_key+"objective",_t(locale,"Помогите жителям этой площадки.","Help the people on this stage.")))
+	var data: Dictionary={"stage_number":1,"stage_title":_t(locale,"1 · Подготовка","1 · Prepare"),"body":"","short_body":"","objective":objective,"primary":_t(locale,"Провести опыт","Demonstrate"),"primary_intent":"","primary_disabled":false,"goals":rows,"witness_status":{},"witness_short":{},"law":"","context_title":"","context_body":""}
 	data.goal_headline=goal_headline(rows,phase,locale)
 	var laws: Array[String]=[]
 	for law in state.get("active_laws",[]):laws.append(_law_name(law,catalog,locale))
-	data.law=(_t(locale,"Законы сцены: ","Scene laws: ")+" · ".join(laws)) if not laws.is_empty() else _t(locale,"Мир пока обыкновенный","An ordinary world, for now")
+	data.law=(_t(locale,"Законы площадки: ","Stage laws: ")+" · ".join(laws)) if not laws.is_empty() else _t(locale,"Записей пока нет","No active records yet")
 	for id in state.get("witnesses",{}):
 		data.witness_status[id]=witness_status(kernel,id,locale)
 		data.witness_short[id]=witness_short(kernel,id,locale)
-	data.body=_t(locale,"Поставьте реквизит. Нажмите на зрителя, чтобы проверить обзор.","Place your props. Tap a witness to check their view.")
+	data.body=str(catalog.get(current_key+"plan_tip",_t(locale,"Результат должен быть виден, механизм — скрыт. Проверьте обзор из места наблюдателя.","The result must be visible and its method hidden. Check the observer’s view.")))
+	data.short_body=str(catalog.get(current_key+"plan_tip",_t(locale,"Выберите предмет. Проверьте, что видно со стороны.","Select an object. Check the view from outside.")))
 	match phase:
 		"PERFORMANCE","REHEARSAL":
-			data.stage_number=2;data.stage_title=_t(locale,"2 · Показ","2 · Perform")
-			data.primary=_t(locale,"К подготовке","Adjust trick")
-			data.body=_t(locale,"Результат должен быть виден, секрет — скрыт. Нажмите на зрителя для проверки.","Keep the result visible and the secret hidden. Tap a witness to inspect.")
+			data.stage_number=2;data.stage_title=_t(locale,"2 · Наблюдение","2 · Observe")
+			data.primary=_t(locale,"Поправить опыт","Adjust the setup")
+			data.body=_t(locale,"Атлас проверяет наблюдаемый результат и скрытый механизм. Личная вера и память наблюдателя не меняются.","The Atlas checks the observed result and hidden method. The observer’s belief and memory do not change.")
+			data.short_body=_t(locale,"Результат виден, механизм скрыт. Дождитесь наблюдения.","Keep the result visible and method hidden. Wait for observation.")
 		"PROOF_ACCEPTED":
-			data.stage_number=2;data.stage_title=_t(locale,"2 · Печать","2 · Seal")
-			data.primary=_t(locale,"Закрепить чудо","Seal the miracle")
-			data.body=_t(locale,"Фокус удался — это ещё не победа. Закрепите закон, затем выполните цели.","The trick worked — the quest is not finished. Seal the law, then complete the goals.")
+			data.stage_number=2;data.stage_title=_t(locale,"2 · Запись Атласа","2 · Atlas record")
+			data.primary=_t(locale,"Сделать законом","Make it a law")
+			data.body=_t(locale,"Опыт получился — это ещё не победа. Сделайте результат законом, затем выполните практическую задачу.","The demonstration worked — the quest is not finished. Make the result a law, then complete the practical task.")
+			data.short_body=_t(locale,"Пока это демонстрация. Атлас ещё не изменил мир.","This is a demonstration. The Atlas has not changed the world yet.")
 		"LAW_SELECTION":
-			data.stage_number=2;data.stage_title=_t(locale,"2 · Выбор","2 · Choose")
+			data.stage_number=2;data.stage_title=_t(locale,"2 · Замена записи","2 · Replace a record")
 			data.primary=_t(locale,"Выбрать замену","Choose a replacement")
-			data.body=_t(locale,"Можно сохранить два закона. Выберите замену и проверьте опоры.","Keep up to two laws. Choose a replacement and check the supports.")
+			data.body=_t(locale,"В Атласе два активных места. Перед заменой проверьте, какие опоры и источники зависят от прежней записи.","The Atlas has two active slots. Before replacing a record, check which supports and sources depend on it.")
+			data.short_body=_t(locale,"Два места заняты. Выберите, какой закон больше не нужен.","Both slots are full. Choose which law is no longer needed.")
 		"PLAN_RESOLUTION":
-			data.stage_number=3;data.stage_title=_t(locale,"3 · Решение","3 · Solve")
-			data.primary=_t(locale,"Проверить решение","Run the plan")
-			data.body=_resolution_help(kernel,rows,catalog,locale)
+			data.stage_number=3;data.stage_title=_t(locale,"3 · Применение","3 · Apply")
+			data.primary=_t(locale,"Запустить план","Run the plan")
+			data.body=str(catalog.get(current_key+"resolution_tip",""))+" "+_resolution_help(kernel,rows,catalog,locale)
+			data.short_body=_resolution_short(kernel,rows,locale)
+			var required: String=_required_experiment(kernel)
+			if not required.is_empty():
+				data.primary=_t(locale,"Провести опыт","Demonstrate")
+				data.primary_intent="begin_required_experiment";data.required_experiment=required
+				data.body=str(catalog.get(current_key+"plan_tip",data.body))+" "+_t(locale,"Подготовьте новый опыт. Закон запишется только после отдельного подтверждения Атласа.","Prepare the new demonstration. The law is recorded only after a separate Atlas confirmation.")
+				data.short_body=_t(locale,"Подготовьте следующий опыт. Запись подтвердите отдельно.","Prepare the next demonstration. Confirm the record separately.")
+			if str(state.get("level_id",""))=="L01":
+				if not bool(state.entities.float.removed):
+					data.primary=_t(locale,"Убрать поплавок","Remove the float");data.primary_intent="remove_l01_float"
+					data.body=_t(locale,"Вода удерживает камень вместе с Марфой и корзиной. Уберите поплавок, чтобы проверить настоящий закон.","Water supports the stone with Marfa and her basket. Remove the float to test the real law.")
+					data.short_body=_t(locale,"Закон записан. Теперь уберите поплавок.","The law is recorded. Remove the float now.")
+				else:
+					data.primary=_t(locale,"Переправить Марфу","Guide Marfa across");data.primary_intent="cross_l01_marfa"
+					data.body=_t(locale,"Поплавок убран. Камень остаётся на воде и выдержит Марфу с корзиной. Пора пройти к пекарне.","The float is removed. The stone stays on the water and can carry Marfa with her basket. It is time to reach the bakery.")
+					data.short_body=_t(locale,"Камень держится без подпорки. Переправьте Марфу.","The stone holds without support. Guide Marfa across.")
 		"RUN_RESOLUTION":
 			data.stage_number=3;data.stage_title=_t(locale,"3 · Проверка","3 · Check")
 			var pending: bool=false
@@ -135,35 +181,48 @@ static func describe(kernel,locale: String,level_number: int,total: int,selected
 				waiting=waiting or not str(task.get("waiting_for","")).is_empty()
 			data.primary=_t(locale,"Выполняется…","In progress…") if pending else _t(locale,"Вернуться к плану","Back to the plan")
 			data.primary_disabled=pending
-			data.body=_t(locale,"Ждём изменения воды; все в безопасности. «Откат» отменит запуск бесплатно.","Waiting for the water; everyone is safe. Undo cancels the run for free.") if waiting else _t(locale,"План выполняется. Выполните все цели, чтобы открыть следующий уровень.","The plan is running. Complete every goal to unlock the next level.")
+			data.body=_t(locale,"Ждём изменения воды. Отмена бесплатно вернёт план перед запуском.","Waiting for the water to change. Undo restores the plan before this run for free.") if waiting else _t(locale,"План выполняется. Победа наступит после настоящей доставки и выполнения всех обязательных условий.","The plan is running. Victory follows the actual delivery and every required condition.")
+			data.short_body=_t(locale,"Ждём изменения воды; путь пока не готов.","Waiting for the water; the route is not ready yet.") if waiting else _t(locale,"План выполняется. Дождитесь настоящего результата.","The plan is running. Wait for the actual result.")
 		"RECOVERABLE_FAILURE":
-			data.stage_number=3;data.stage_title=_t(locale,"Новый план","Retry")
-			data.primary=_t(locale,"Откатить","Undo")
-			data.body=str(catalog.get("reason."+str(state.get("failure_reason","")),_t(locale,"План пока не сработал. Бесплатный откат вернёт состояние до запуска; подсказка объяснит, что проверить.","The plan did not work yet. Undo restores the state before the run for free; a hint explains what to check.")))
+			data.stage_number=3;data.stage_title=_t(locale,"Поправим план","Adjust the plan")
+			data.primary=_t(locale,"Отменить запуск","Undo the run")
+			data.body=str(catalog.get("reason."+str(state.get("failure_reason","")),_t(locale,"План не сработал. Бесплатная отмена вернёт состояние перед запуском.","The plan did not work. Undo restores the state before the run for free.")))
+			data.short_body=_t(locale,"План можно поправить. Отмените запуск без штрафа.","The plan can be adjusted. Undo this run without a penalty.")
 		"SUCCESS":
-			data.stage_number=4;data.stage_title=_t(locale,"Готово!","Complete!")
+			data.stage_number=4;data.stage_title=_t(locale,"Задача решена!","Task complete!")
 			data.primary=_t(locale,"Начать уровень %d","Start level %d") % (level_number+1) if level_number<total else _t(locale,"Итоги путешествия","Journey complete")
-			data.body=_t(locale,"Все обязательные цели выполнены. Следующая сцена — новое задание с собственными законами.","Every required goal is complete. The next scene brings a new quest and its own laws.") if level_number<total else _t(locale,"Вы помогли всем трём главам. Любой уровень можно повторить в альбоме.","You helped all three chapters. Replay any level from the album.")
-	if not selected.is_empty() and (phase in ["PLAN_SHOW","PLAN_RESOLUTION"] or selected.begins_with("w:")):
+			data.body=str(catalog.get(current_key+"success",_t(locale,"Все обязательные условия выполнены.","Every required condition is complete.")))
+			data.short_body=_t(locale,"Результат готов. В Атласе открыта следующая задача.","The result is complete. The next Atlas task is unlocked.") if level_number<total else _t(locale,"Все 30 задач решены. Атлас открыт для повторов.","All 30 tasks are complete. Replay them from the Atlas.")
+	if not selected.is_empty():
 		if selected.begins_with("w:"):
 			var id: String=selected.trim_prefix("w:")
 			var witness: Dictionary=kernel._find(kernel.definition.witnesses,id)
-			var name: String=str(catalog.get("character."+str(witness.get("character_id",""))+".name",_t(locale,"Зритель","Witness")))
-			var state_text: String=str(data.witness_status.get(id,""))
-			var position_tip: String=_t(locale,"Свободное место меняет обзор.","A free seat changes the view.")
-			if witness.get("views",[]).size()>1:position_tip=_t(locale,"Проверяет сцену с нескольких сторон.","Checks the stage from several sides.")
-			if phase in ["PERFORMANCE","REHEARSAL"]:position_tip=_t(locale,"Для изменений вернитесь к подготовке.","Return to preparation to make changes.")
-			data.body=name+" · "+state_text+". "+position_tip
-		else:
-			data.primary=_t(locale,"Действия предмета","Object actions")
-			data.body=_entity_name(kernel,selected,catalog,locale)+_t(locale,": выберите место или откройте действия. Маршруты — в «Плане».",": choose a position or open actions. Routes are in Plan.")
+			data.context_title=str(catalog.get("character."+str(witness.get("character_id",""))+".name",_t(locale,"Наблюдатель","Observer")))
+			data.context_body=str(data.witness_status.get(id,""))+". "+_t(locale,"Проверьте вид из этой точки.","Check the view from this position.")
+		elif kernel._entities.has(selected):
+			data.context_title=_entity_name(kernel,selected,catalog,locale)
+			data.context_body=_t(locale,"Доступные действия показаны у предмета. Основная кнопка продолжает этап.","Available actions are beside the object. The main button continues the current stage.")
 	return data
+
+static func _resolution_short(kernel,rows: Array,locale: String) -> String:
+	for task in kernel.state.get("routes",{}).values():
+		if not bool(task.get("completed",false)):return _t(locale,"Путь назначен. Проверьте опоры и запустите план.","A route is assigned. Check the supports and run the plan.")
+	for row in rows:
+		if row.required and not row.done:return _t(locale,"Подготовьте цель. Пути задаются в действиях предмета.","Prepare the goal. Assign routes through the object’s actions.")
+	return _t(locale,"Условия готовы. Запустите план для проверки.","The conditions are ready. Run the plan to check them.")
 
 static func _resolution_help(kernel,rows: Array,catalog: Dictionary,locale: String) -> String:
 	var complete: bool=true
 	for row in rows:
 		if row.required and not row.done:complete=false
-	if complete:return _t(locale,"Всё готово. Нажмите «Проверить решение», чтобы подтвердить результат.","Everything is ready. Run the plan to confirm the result.")
+	if complete:return _t(locale,"Всё готово. Запустите план, чтобы подтвердить результат.","Everything is ready. Run the plan to confirm the result.")
+	for goal in kernel.definition.goals:
+		if not goal.required or kernel.evaluate(goal.predicate_id,goal.parameters):continue
+		if goal.predicate_id=="entity_removed":
+			return _t(locale,"Сначала уберите лишнюю подпорку через её действия: ","First remove the spare support through its actions: ")+_entity_name(kernel,str(goal.parameters.entity_id),catalog,locale)+"."
+		if goal.predicate_id=="entity_state":
+			if goal.parameters.get("key","")=="moored":return _t(locale,"Сначала выберите швартовочный канат и закрепите лодку за деревянный кнехт.","First select the mooring rope and secure the boat to the wooden bollard.")
+			if goal.parameters.get("key","")=="secured":return _t(locale,"Сначала закрепите ширму обоими зажимами.","First secure the screen with both clamps.")
 	var pending_routes: bool=false
 	for task in kernel.state.get("routes",{}).values():pending_routes=pending_routes or not bool(task.get("completed",false))
 	if pending_routes:return _t(locale,"Маршрут назначен. Проверьте опоры и груз, затем запустите решение.","Route assigned. Check supports and cargo, then run the plan.")
@@ -172,29 +231,33 @@ static func _resolution_help(kernel,rows: Array,catalog: Dictionary,locale: Stri
 		var done: bool=bool(kernel.state.goals.get(goal.id,false)) or kernel.evaluate(goal.predicate_id,goal.parameters)
 		if done:continue
 		var id: String=str(goal.parameters.get("actor_id",goal.parameters.get("entity_id","")))
-		return _t(locale,"Назначьте маршрут: «План» → «Маршруты» → ","Assign a route: Plan → Routes → ")+_entity_name(kernel,id,catalog,locale)+_t(locale,". Подготовьте путь.",". Prepare the path.")
-	return _t(locale,"Подготовьте цели ниже. «Проверить решение» запустит время, тепло и движение.","Prepare the goals below. Run the plan starts time, heat and movement.")
+		return _t(locale,"Выберите предмет и назначьте путь в его действиях: ","Select the object and assign a route through its actions: ")+_entity_name(kernel,id,catalog,locale)+_t(locale,". Подготовьте путь.",". Prepare the path.")
+	return _t(locale,"Подготовьте условия задачи. Запуск плана включает время, тепло и движение.","Prepare the task conditions. Running the plan advances time, heat and movement.")
 
 static func briefing(kernel,locale: String,level_number: int,total: int,catalog: Dictionary) -> String:
 	var key: String="level."+str(kernel.state.level_id)+"."
-	var parts: Array[String]=[]
-	parts.append(str(catalog.get(key+"intro","")))
+	var parts: Array[String]=[str(catalog.get(key+"intro",""))]
 	parts.append(_t(locale,"Ваша цель: ","Your goal: ")+str(catalog.get(key+"objective","")))
-	if level_number<=3 and kernel.state.phase=="PLAN_SHOW":
-		parts.append(_t(locale,"1. Подготовьте фокус: результат виден, секрет скрыт.\n2. Покажите его зрителям и закрепите печатью.\n3. Примените настоящий закон, чтобы выполнить цель уровня.","1. Prepare the trick: show the result, hide the secret.\n2. Perform for the audience and seal the miracle.\n3. Use the real law to complete the level's goal."))
-		if level_number==1:parts.append(_t(locale,"Зрители поверили — это ещё не победа. После печати нужна настоящая переправа. Для движения: «План» → «Маршруты» → Феликс.","Convincing the audience is not the finish. After sealing the law, you still need a real crossing. To move: Plan → Routes → Felix."))
+	if level_number==1:
+		parts.append(_t(locale,"Камень и поплавок уже подготовлены. Меняйте только положение и форму ширмы. Марфа должна видеть камень и не видеть его опору.","The stone and float are ready. Change only the screen’s position and shape. Marfa must see the stone without seeing its support."))
+		parts.append(_t(locale,"Удачный опыт ещё не меняет мир. Отдельная команда Атласа создаст закон; затем уберите поплавок и переправьте Марфу.","A successful demonstration does not change the world yet. A separate Atlas command creates the law; then remove the float and guide Marfa across."))
 	else:
+		parts.append(str(catalog.get("ui.atlas_scope",_t(locale,"Каждая площадка использует свою страницу Атласа.","Each stage uses its own Atlas page."))))
 		var info: Dictionary=describe(kernel,locale,level_number,total,"",catalog)
 		parts.append(_t(locale,"Сейчас: ","Current step: ")+str(info.stage_title)+"\n"+str(info.body))
 	return "\n\n".join(parts)
 
 static func victory(kernel,locale: String,level_number: int,total: int,catalog: Dictionary,next_title: String="") -> Dictionary:
 	var key: String="level."+str(kernel.state.level_id)+"."
-	var lines: Array[String]=[str(catalog.get(key+"success",_t(locale,"Вы помогли жителям этой сцены.","You helped the people in this scene.")))]
+	var lines: Array[String]=[str(catalog.get(key+"success",_t(locale,"Вы помогли жителям этой площадки.","You helped the people on this stage.")))]
 	for row in goal_rows(kernel,catalog,locale):
 		if row.required:lines.append("✓ "+str(row.label))
+	var next_story: String=str(catalog.get(key+"next_story",""))
 	if level_number<total:
-		lines.append(_t(locale,"Дальше — уровень %d: ","Next — level %d: ") % (level_number+1)+next_title)
-		lines.append(_t(locale,"Новая сцена начнётся с новой задачи. Пройденное чудо сохранено в альбоме.","The new scene starts with a new quest. This completed miracle is saved in your album."))
-	else:lines.append(_t(locale,"Все 30 уровней пройдены. В альбоме доступны повторные прохождения и другие решения.","All 30 levels are complete. Replay levels and explore other solutions from the album."))
-	return {"title":_t(locale,"Уровень %d из %d пройден!","Level %d of %d complete!") % [level_number,total],"body":"\n\n".join(lines),"primary":_t(locale,"Начать уровень %d","Start level %d") % (level_number+1) if level_number<total else _t(locale,"Итоги путешествия","Journey complete")}
+		if not next_story.is_empty():lines.append(next_story)
+		lines.append(_t(locale,"Следующая задача %d: ","Next task %d: ") % (level_number+1)+next_title)
+	else:lines.append(_t(locale,"Все 30 задач пройдены. В Атласе можно повторить опыты и найти другие решения.","All 30 tasks are complete. Replay experiments and find other solutions in the Atlas."))
+	var title: String=str(catalog.get(key+"success_title",_t(locale,"Задача выполнена!","Task complete!")))
+	var primary: String=_t(locale,"Начать уровень %d","Start level %d") % (level_number+1) if level_number<total else _t(locale,"Итоги путешествия","Journey complete")
+	if level_number==1 and level_number<total:primary=_t(locale,"2 · К якорю","2 · To the anchor")
+	return {"title":title,"body":"\n\n".join(lines),"primary":primary,"next_story":next_story}

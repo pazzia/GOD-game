@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-10-25T19:10:09.850743+00:00",
+  "files": [
+    {
+      "file": "scene/canal.png",
+      "original_path": "/workspace/generated_images/exec-3b5c8a52-4c3d-48f6-a369-0b3d6266303f.png",
+      "sha256": "897fbcab41c1dacc0eb99afb995bc4687a65c53cbe5d716738a56c55ff3a8029",
+      "method": "image_gen",
+      "note": "New original environment generated from the creative director scene brief.",
+      "status": "concept for user review, not final production asset"
+    },
+    {
+      "file": "characters/felix-cutout.png",
+      "original_path": "/workspace/generated_images/exec-95c5b279-bf98-46f8-a600-a11e7ab354ec.png",
+      "sha256": "38ef1e3c3698817470ac4a343726137e218389f420ce6cfed6cb7c220b154db0",
+      "method": "image_gen",
+      "note": "Imagegen cutout edit of the generated cast-board; preserves approved character appearance.",
+      "status": "concept for user review, not final production asset"
+    },
+    {
+      "file": "characters/marfa-cutout.png",
+      "original_path": "/workspace/generated_images/exec-57cafa4e-4a5a-4b52-ab53-c84c5032a191.png",
+      "sha256": "67e3bff182831fd7f89ef396d5fe4c9055f1f90fc26589144abadc56c97e6802",
+      "method": "image_gen",
+      "note": "Imagegen cutout edit of the generated cast-board; preserves approved character appearance.",
+      "status": "concept for user review, not final production asset"
+    },
+    {
+      "file": "characters/plum-cutout.png",
+      "original_path": "/workspace/generated_images/exec-206830f6-9283-4daa-9b97-b9919502d05c.png",
+      "sha256": "c2d03b8967b3449c85af996d216e3c43accad5580c4eb7e8036cb12c3361506d",
+      "method": "image_gen",
+      "note": "Imagegen cutout edit of the generated cast-board; preserves approved character appearance.",
+      "status": "concept for user review, not final production asset"
+    }
+  ],
+  "cutout_reference": "characters/cast-board.png",
+  "provenance_limits": "Cutout generation was started by scene_art before its model usage limit. Original images are retained; exact cutout prompts were not recovered from that interrupted turn."
+}

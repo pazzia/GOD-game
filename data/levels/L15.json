@@ -42,7 +42,8 @@
         "emitter_class": "FIRE",
         "thermal_delta_per_tick": 1,
         "thermal_radius_units": 5,
-        "enabled": true
+        "enabled": true,
+        "switchable": true
       }
     },
     {
@@ -58,7 +59,8 @@
         "emitter_class": "FIRE",
         "thermal_delta_per_tick": 1,
         "thermal_radius_units": 5,
-        "enabled": true
+        "enabled": true,
+        "switchable": true
       }
     },
     {

@@ -1,15 +1,15 @@
 extends RefCounted
-## Shared visual tokens for the landscape theatre interface.
+## Shared visual tokens for the landscape illustrated research adventure.
 ## Reference canvas: 1920 x 1080; 48px body / 144px targets remain readable at 720 x 360.
-const INK: Color = Color("173046")
-const CREAM: Color = Color("fffcf4")
-const PURPLE: Color = Color("167a91") # Compatibility name: the primary accent is now ocean teal.
-const GREEN: Color = Color("237458")
-const DISABLED_TEXT: Color = Color("536579")
-const SKY: Color = Color("dbf1f4")
-const CORAL: Color = Color("d95b4c")
-const GOLD: Color = Color("f1b44c")
-const BORDER: Color = Color("bad4dc")
+const INK: Color = Color("252647")
+const CREAM: Color = Color("fff2d8")
+const PURPLE: Color = Color("f16c65") # Legacy token name; approved primary action is coral.
+const GREEN: Color = Color("247b77")
+const DISABLED_TEXT: Color = Color("68677a")
+const SKY: Color = Color("d9eeeb")
+const CORAL: Color = Color("f16c65")
+const GOLD: Color = Color("f7d760")
+const BORDER: Color = Color("d5c9b7")
 const BODY_FONT_SIZE: int = 48
 const TARGET_SIZE: int = 144
 const RADIUS: int = 24
@@ -46,22 +46,22 @@ static func button_style(state: String, filled: bool = false) -> StyleBoxFlat:
 	style.content_margin_top = 12
 	style.content_margin_bottom = 12
 	style.bg_color = PURPLE if filled else CREAM
-	style.border_color = Color("125f73") if filled else BORDER
+	style.border_color = Color("aa4b59") if filled else BORDER
 	style.border_width_bottom = 8 if filled else 5
 	style.shadow_color = Color(0.05, 0.16, 0.21, 0.19 if filled else 0.09)
 	style.shadow_size = 8 if filled else 4
 	style.shadow_offset = Vector2(0, 6)
 	match state:
 		"hover":
-			style.bg_color = Color("1a7e94") if filled else Color("eaf5f6")
+			style.bg_color = Color("ff8076") if filled else Color("fff8e9")
 		"pressed":
-			style.bg_color = Color("115f75") if filled else Color("d7ebee")
+			style.bg_color = Color("db5c5c") if filled else Color("efe0c9")
 			style.border_width_bottom = 2
 			style.shadow_size = 0
 			style.shadow_offset = Vector2.ZERO
 		"disabled":
-			style.bg_color = Color("dce5e8")
-			style.border_color = Color("c7d3d8")
+			style.bg_color = Color("dcd7cf")
+			style.border_color = Color("c6beb1")
 			style.shadow_size = 0
 		"focus":
 			style.bg_color = Color.TRANSPARENT
@@ -87,7 +87,7 @@ static func make_theme() -> Theme:
 	result.set_stylebox("panel", "Panel", panel_style())
 	for control in ["HScrollBar", "VScrollBar"]:
 		var track := StyleBoxFlat.new()
-		track.bg_color = Color("e2edf0")
+		track.bg_color = Color("e8ddc9")
 		track.set_corner_radius_all(8)
 		track.content_margin_top = 7
 		track.content_margin_bottom = 7
@@ -96,7 +96,7 @@ static func make_theme() -> Theme:
 		result.set_stylebox("scroll", control, track)
 		for state in ["grabber", "grabber_highlight", "grabber_pressed"]:
 			var thumb := StyleBoxFlat.new()
-			thumb.bg_color = PURPLE if state != "grabber" else Color("76a9b6")
+			thumb.bg_color = PURPLE if state != "grabber" else Color("40b8b3")
 			thumb.set_corner_radius_all(8)
 			thumb.content_margin_left = 10
 			thumb.content_margin_right = 10
@@ -107,7 +107,7 @@ static func make_theme() -> Theme:
 
 static func body_font() -> FontVariation:
 	var font := FontVariation.new()
-	font.base_font = load("res://assets/fonts/NunitoSans-Variable.ttf")
+	font.base_font = load("res://assets/fonts/Onest-Variable.ttf")
 	# Godot uses numeric OpenType axis tags; a raw "wght" string leaves this
 	# font at its 200-weight default and produces unreadably thin mobile text.
 	font.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("weight"): 600.0}
@@ -116,7 +116,7 @@ static func body_font() -> FontVariation:
 
 static func heading_font() -> FontVariation:
 	var font := FontVariation.new()
-	font.base_font = load("res://assets/fonts/NunitoSans-Variable.ttf")
+	font.base_font = load("res://assets/fonts/Onest-Variable.ttf")
 	font.variation_opentype = {TextServerManager.get_primary_interface().name_to_tag("weight"): 800.0}
 	font.fallbacks = [load("res://assets/fonts/DejaVuSans.ttf")]
 	return font

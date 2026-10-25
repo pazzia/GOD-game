@@ -1,0 +1,877 @@
+{
+  "status": "passed",
+  "scope": "Current target wording manually reconciled with all30 entity/witness indices, plus a bounded lexical check for previously mismatched boat/bowl/canopy/food/goat/gate/clamp/hoist targets. Future next_story intentions and figurative introductory wishes are not required to be current entities. This is not a general natural-language proof or a human comprehension test.",
+  "levels": [
+    {
+      "level": "L01",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "marfa"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "actor_marfa",
+        "float",
+        "screen",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH03"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L02",
+      "entity_ids": [
+        "hero",
+        "boat",
+        "anchor",
+        "bollard",
+        "mooring",
+        "cargo"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "boat",
+        "bollard",
+        "cargo_crate",
+        "mooring_rope",
+        "stone_anchor"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD03"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L03",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "screen_b",
+        "cargo"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "cargo_crate",
+        "float",
+        "screen",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CH04"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L04",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "clamp_1",
+        "clamp_2"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "clamp",
+        "float",
+        "screen",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L05",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "booth",
+        "cargo"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "cargo_crate",
+        "float",
+        "screen",
+        "stone_l",
+        "ticket_booth"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD02"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L06",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "goat",
+        "small_stone",
+        "tow_rope",
+        "crate_1",
+        "crate_2"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "actor_goat",
+        "cargo_crate",
+        "stone_m",
+        "stone_s",
+        "tow_rope"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L07",
+      "entity_ids": [
+        "hero",
+        "stone_a",
+        "stone_b"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L08",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "thread",
+        "thread_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "float",
+        "safety_thread",
+        "screen",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L09",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "screen_b",
+        "cargo"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "cargo_crate",
+        "float",
+        "screen",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CH04"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L10",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "boat",
+        "anchor",
+        "bollard",
+        "mooring",
+        "cargo",
+        "goat"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "actor_goat",
+        "boat",
+        "bollard",
+        "cargo_crate",
+        "float",
+        "mooring_rope",
+        "screen",
+        "stone_anchor",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH05",
+        "CROWD06"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L11",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "oven",
+        "screen"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L12",
+      "entity_ids": [
+        "hero",
+        "bread",
+        "dessert",
+        "box",
+        "food_oven",
+        "delivery"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bread",
+        "cargo_crate",
+        "dessert",
+        "insulated_box",
+        "oven"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD05"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L13",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "boat_oven",
+        "thermal_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "oven",
+        "screen"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L14",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "screen_b"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "oven",
+        "screen"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CH04"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L15",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "boat_oven",
+        "thermal_screen",
+        "heated_stone"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "heated_stone",
+        "oven",
+        "screen"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L16",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "permanent_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "oven",
+        "screen",
+        "steam_cloud"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L17",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "stone"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "oven",
+        "screen",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L18",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "boat_oven",
+        "thermal_screen",
+        "heated_stone",
+        "boat",
+        "stone"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "boat",
+        "heated_stone",
+        "oven",
+        "screen",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L19",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "oven",
+        "cargo"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "cargo_crate",
+        "float",
+        "oven",
+        "screen",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L20",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "bread",
+        "dessert",
+        "box",
+        "food_oven",
+        "stone",
+        "feast"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "bread",
+        "cargo_crate",
+        "cold_pack",
+        "decoy_flame",
+        "dessert",
+        "insulated_box",
+        "oven",
+        "screen",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH06",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L21",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "frame",
+        "screen_a"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "control_weight",
+        "hidden_frame",
+        "hoist",
+        "paper_span",
+        "screen",
+        "span_anchor"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L22",
+      "entity_ids": [
+        "hero",
+        "paper",
+        "goat",
+        "gate"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "actor_goat",
+        "paper_wall",
+        "wooden_gate"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L23",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "oven",
+        "thermal_screen",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "cold_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "control_weight",
+        "decoy_flame",
+        "hoist",
+        "oven",
+        "paper_span",
+        "screen",
+        "span_anchor"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L24",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "frame",
+        "screen_a",
+        "test_weight"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "control_weight",
+        "hidden_frame",
+        "hoist",
+        "paper_span",
+        "screen",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD04"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L25",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "frame",
+        "screen_a",
+        "screen_b"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "control_weight",
+        "hidden_frame",
+        "hoist",
+        "paper_span",
+        "screen",
+        "span_anchor"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CH07"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L26",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "frame",
+        "screen_a",
+        "first_cargo",
+        "stone",
+        "oven"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "cargo_crate",
+        "control_weight",
+        "hidden_frame",
+        "hoist",
+        "oven",
+        "paper_span",
+        "screen",
+        "span_anchor",
+        "stone_m"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L27",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "oven",
+        "flags",
+        "thermal_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "control_weight",
+        "hoist",
+        "oven",
+        "paper_flags",
+        "paper_span",
+        "screen",
+        "span_anchor"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L28",
+      "entity_ids": [
+        "hero",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "weight",
+        "hoist",
+        "frame",
+        "screen_a",
+        "screen_b"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "control_weight",
+        "hidden_frame",
+        "hoist",
+        "paper_span",
+        "screen",
+        "span_anchor"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CH07"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L29",
+      "entity_ids": [
+        "hero",
+        "oven",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_a",
+        "heated_stone"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cold_pack",
+        "decoy_flame",
+        "heated_stone",
+        "oven",
+        "screen"
+      ],
+      "witness_character_ids": [
+        "CH08",
+        "CH05",
+        "CROWD01"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    },
+    {
+      "level": "L30",
+      "entity_ids": [
+        "hero",
+        "stone",
+        "float",
+        "screen_a",
+        "first_cargo",
+        "bowl",
+        "flame",
+        "cold_pack",
+        "screen_cold",
+        "oven",
+        "anchor_a",
+        "anchor_b",
+        "paper",
+        "frame",
+        "weight",
+        "hoist",
+        "screen_paper",
+        "thermal_screen"
+      ],
+      "entity_types": [
+        "actor_felix",
+        "bowl",
+        "cargo_crate",
+        "cold_pack",
+        "control_weight",
+        "decoy_flame",
+        "float",
+        "hidden_frame",
+        "hoist",
+        "oven",
+        "paper_span",
+        "screen",
+        "span_anchor",
+        "stone_l"
+      ],
+      "witness_character_ids": [
+        "CH03",
+        "CH06",
+        "CH07"
+      ],
+      "current_target_copy_checked": true,
+      "lexical_suspects": []
+    }
+  ],
+  "corrected_current_target_levels": [
+    "L13",
+    "L15",
+    "L22",
+    "L27"
+  ],
+  "corrected_current_speaker_levels": [
+    "L09",
+    "L13",
+    "L18",
+    "L23",
+    "L24",
+    "L27"
+  ],
+  "corrected_forward_link_levels": [
+    "L08",
+    "L12"
+  ],
+  "mechanical_definition_changes": [],
+  "replay_changes": [],
+  "authoring_byte_idempotent": true,
+  "idempotence_evidence": "Both authoring generators ran twice immediately before this audit. SHA-256 assertions confirmed the second79-file snapshot equals the first; separate assertions confirmed all level/replay bytes equal the pre-edit snapshot.",
+  "files_checked_for_idempotence": 79,
+  "lexical_suspects": []
+}

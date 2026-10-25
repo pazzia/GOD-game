@@ -1,6 +1,6 @@
 {
   "actual_scene_tree_clocks": true,
-  "checks": 59,
+  "checks": 91,
   "device_or_art_acceptance": false,
   "engine": "4.7.2-stable (official)",
   "failures": []

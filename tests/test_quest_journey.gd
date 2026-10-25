@@ -55,8 +55,8 @@ func inspect_guide(kernel,number: int) -> void:
 		check(ids==expected and labels_valid,context+" names every authored condition without raw data placeholders")
 		match str(kernel.state.phase):
 			"PROOF_ACCEPTED":
-				check(guide.stage_number==2 and not guide.primary_disabled,context+" proof remains the convincing phase with an enabled seal")
-				check(guide.primary==("Seal the miracle" if locale=="en" else "Закрепить чудо"),context+" requires explicit sealing")
+				check(guide.stage_number==2 and not guide.primary_disabled,context+" proof remains an observed demonstration with an enabled separate law action")
+				check(guide.primary==("Make it a law" if locale=="en" else "Сделать законом"),context+" requires explicit sealing")
 				check(guide.body.contains("not finished") if locale=="en" else (guide.body.contains("не закончено") or guide.body.contains("ещё не победа")),context+" explains that a successful trick is not the level finish")
 			"PLAN_RESOLUTION","RUN_RESOLUTION":
 				check(guide.stage_number==3 and not guide.goals.is_empty(),context+" applies the law to the actual goal checklist")

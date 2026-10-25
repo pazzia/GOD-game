@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-25",
+  "reviewer": "creative_director",
+  "scope": "13 actual native Godot PNGs,844x390: menu and six representative levels in PLAN/PROOF",
+  "status": "rework_required_paper_stack_only",
+  "evidence": [
+    {
+      "file": "build/scientist-ui-mipmap/L01-title-ru-100-844x390.png",
+      "sha256": "252e31b95f6ce8ff35bc98c8c41f945c67597dbfd86a55334adcd6f1d4c9b444"
+    },
+    {
+      "file": "build/scientist-ground-review/L01-plan-ru-100-844x390.png",
+      "sha256": "600d4991965acdbf93987bde97d2dbef1f3d8c1386435b508be51543045c3e97"
+    },
+    {
+      "file": "build/scientist-ground-review/L01-proof-ru-100-844x390.png",
+      "sha256": "cba6d6b595559fc89bb0b1f1352b33685eef0394b5694b1f549531b8317fe5d5"
+    },
+    {
+      "file": "build/scientist-ground-review/L02-plan-ru-100-844x390.png",
+      "sha256": "0ba374d6a46c43021951d26edb258fc5e6c134c051509db85eb37e88b096fa56"
+    },
+    {
+      "file": "build/scientist-ground-review/L02-proof-ru-100-844x390.png",
+      "sha256": "5342eae43e12b2286b06d955b5bbf6cef05153eeb9ce7c9aa7ceba1bb84e092a"
+    },
+    {
+      "file": "build/scientist-ground-review/L06-plan-ru-100-844x390.png",
+      "sha256": "4caf289cf77a193e082d04f3ad3c8bdf95baf24bb24572238a0ee18c9de6de78"
+    },
+    {
+      "file": "build/scientist-ground-review/L06-proof-ru-100-844x390.png",
+      "sha256": "b598ab384bc7f88a3613d1afbe166e88fd680793ec2e03bfeb8d9372ccfc9763"
+    },
+    {
+      "file": "build/scientist-ground-review/L11-plan-ru-100-844x390.png",
+      "sha256": "33ce43db5136fadee7f642f23a5c757fd48dabf51eaf171b808b907ad5494c5b"
+    },
+    {
+      "file": "build/scientist-ground-review/L11-proof-ru-100-844x390.png",
+      "sha256": "351647caff136237823af69dcc7eb03a66717f36f68ba9416df082ad8fec643a"
+    },
+    {
+      "file": "build/scientist-ground-review/L21-plan-ru-100-844x390.png",
+      "sha256": "6665434a5b4c8697a3a86f8d3c53df35b744ac37f851d00ec023fa0e07753754"
+    },
+    {
+      "file": "build/scientist-ground-review/L21-proof-ru-100-844x390.png",
+      "sha256": "e4daf48b8071afeaf301b97ec1fdf90afd4aca6c1106ab80dcca529011702cc5"
+    },
+    {
+      "file": "build/scientist-ground-review/L30-plan-ru-100-844x390.png",
+      "sha256": "422c0c76525c3c576b8f32fec509a01b7e907b4ff4059e6691290a40bd57ccd7"
+    },
+    {
+      "file": "build/scientist-ground-review/L30-proof-ru-100-844x390.png",
+      "sha256": "9c3baf7fcc7896aaeb4363a6410939e09d36e20d343055303f4ddcf8f8453ba2"
+    }
+  ],
+  "resolved": [
+    "Menu professor and Plum now fit frame and match approved direction.",
+    "Tutorial professor and Marfa have separate readable silhouettes.",
+    "Six chapter PLAN scenes ground characters belowHUD on visible floor or real authored dock surfaces.",
+    "New wood anchor and steel frame visually distinguish relevant materials.",
+    "Current art uses coherent new cast/props, not legacy pixel rigs."
+  ],
+  "findings": [
+    {
+      "id": "paper-stack",
+      "location": "build/scientist-ground-review/L21-proof-ru-100-844x390.png",
+      "severity": "major",
+      "observed": "Paper/weight/frame rendered on one ground pivot and similar156native height; opaque load/frame hide the paper, so load-on-paper relation cannot be read.",
+      "expected": "Paper visibly spans authored wooden anchors, support frame touches underside, weight bottom rests on paper upper surface. After frame removal the same paper and weight positions remain.",
+      "action_owner": "stage_reboot",
+      "fix": "Presentation stack and draw order from actual span/attachment state, no kernel geometry changes.",
+      "verification": "Recapture L21-PROOF and after-law/frame-removal state, examine same conditions in L30."
+    }
+  ],
+  "limits": [
+    "This iteration is historical evidence, not final art or owner acceptance.",
+    "Meaningful frozen bowl/reinforced paper/offhearth states need post-law/toggle native captures; PROOF is pre-law.",
+    "No physical-device performance or first-time-player comprehension claim."
+  ]
+}

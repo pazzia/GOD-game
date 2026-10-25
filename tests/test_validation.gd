@@ -43,7 +43,9 @@ func reject_definition(k,bad: Dictionary,label: String) -> void:
 	check(not k.validate_definition(bad).is_empty() and not k.load_level(bad) and k.state_hash()==before,label+" rejected atomically")
 func reject_state(k,bad: Dictionary,label: String) -> void:
 	var before: String=k.state_hash();check(not k.restore(bad) and k.state_hash()==before,label+" rejected atomically")
-func read_level(id: String) -> Dictionary:return JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/"+id+".json"))
+func read_level(id: String) -> Dictionary:
+	var path: String="res://tests/fixtures/kernel-baseline-L01.json" if id=="L01" else "res://data/levels/"+id+".json"
+	return JSON.parse_string(FileAccess.get_file_as_string(path))
 func check(ok: bool,message: String) -> void:
 	count+=1
 	if not ok:failures.append(message)

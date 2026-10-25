@@ -1,0 +1,158 @@
+[
+  {
+    "id": "MUS_STINGER_PROOF",
+    "seconds": 1.7,
+    "notes": [
+      {
+        "beat": 0.05,
+        "duration": 1.054,
+        "note": 62,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 0.62,
+        "duration": 1.054,
+        "note": 69,
+        "velocity": 36,
+        "channel": 0
+      }
+    ]
+  },
+  {
+    "id": "MUS_STINGER_LAW",
+    "seconds": 2.5,
+    "notes": [
+      {
+        "beat": 0.05,
+        "duration": 1.55,
+        "note": 57,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 0.05,
+        "duration": 1.55,
+        "note": 62,
+        "velocity": 36,
+        "channel": 0
+      },
+      {
+        "beat": 0.5,
+        "duration": 1.55,
+        "note": 66,
+        "velocity": 37,
+        "channel": 0
+      },
+      {
+        "beat": 0.95,
+        "duration": 1.55,
+        "note": 71,
+        "velocity": 35,
+        "channel": 0
+      }
+    ]
+  },
+  {
+    "id": "MUS_STINGER_REVEAL",
+    "seconds": 0.95,
+    "notes": [
+      {
+        "beat": 0.05,
+        "duration": 0.589,
+        "note": 62,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 0.42,
+        "duration": 0.53,
+        "note": 64,
+        "velocity": 36,
+        "channel": 0
+      }
+    ]
+  },
+  {
+    "id": "MUS_STINGER_CHAPTER",
+    "seconds": 3.9,
+    "notes": [
+      {
+        "beat": 0.05,
+        "duration": 2.418,
+        "note": 57,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 0.35,
+        "duration": 2.418,
+        "note": 62,
+        "velocity": 36,
+        "channel": 0
+      },
+      {
+        "beat": 0.9,
+        "duration": 2.418,
+        "note": 66,
+        "velocity": 37,
+        "channel": 0
+      },
+      {
+        "beat": 1.6,
+        "duration": 2.3,
+        "note": 69,
+        "velocity": 35,
+        "channel": 0
+      }
+    ]
+  },
+  {
+    "id": "MUS_STINGER_FINAL",
+    "seconds": 6.8,
+    "notes": [
+      {
+        "beat": 0.05,
+        "duration": 4.216,
+        "note": 50,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 0.05,
+        "duration": 4.216,
+        "note": 57,
+        "velocity": 36,
+        "channel": 0
+      },
+      {
+        "beat": 0.45,
+        "duration": 4.216,
+        "note": 62,
+        "velocity": 37,
+        "channel": 0
+      },
+      {
+        "beat": 1.1,
+        "duration": 4.216,
+        "note": 66,
+        "velocity": 35,
+        "channel": 0
+      },
+      {
+        "beat": 2.0,
+        "duration": 4.216,
+        "note": 69,
+        "velocity": 36,
+        "channel": 0
+      },
+      {
+        "beat": 3.5,
+        "duration": 3.3,
+        "note": 62,
+        "velocity": 37,
+        "channel": 0
+      }
+    ]
+  }
+]

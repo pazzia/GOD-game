@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-25",
+  "reviewer": "creative_director",
+  "verdict": "accepted_for_reviewed_native_compositions",
+  "scope": "New art identity and selected native scene compositions; not blanket owner, gameplay or physical-device acceptance",
+  "evidence_count": 18,
+  "evidence": [
+    {
+      "file": "evidence/menu.png",
+      "capture_source": "build/scientist-ui-mipmap/L01-title-ru-100-844x390.png",
+      "sha256": "252e31b95f6ce8ff35bc98c8c41f945c67597dbfd86a55334adcd6f1d4c9b444",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L01-plan.png",
+      "capture_source": "build/scientist-ground-review/L01-plan-ru-100-844x390.png",
+      "sha256": "600d4991965acdbf93987bde97d2dbef1f3d8c1386435b508be51543045c3e97",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L01-proof.png",
+      "capture_source": "build/scientist-ground-review/L01-proof-ru-100-844x390.png",
+      "sha256": "cba6d6b595559fc89bb0b1f1352b33685eef0394b5694b1f549531b8317fe5d5",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L02-plan.png",
+      "capture_source": "build/scientist-ground-review/L02-plan-ru-100-844x390.png",
+      "sha256": "0ba374d6a46c43021951d26edb258fc5e6c134c051509db85eb37e88b096fa56",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L02-proof.png",
+      "capture_source": "build/scientist-ground-review/L02-proof-ru-100-844x390.png",
+      "sha256": "5342eae43e12b2286b06d955b5bbf6cef05153eeb9ce7c9aa7ceba1bb84e092a",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L06-plan.png",
+      "capture_source": "build/scientist-ground-review/L06-plan-ru-100-844x390.png",
+      "sha256": "4caf289cf77a193e082d04f3ad3c8bdf95baf24bb24572238a0ee18c9de6de78",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L06-proof.png",
+      "capture_source": "build/scientist-ground-review/L06-proof-ru-100-844x390.png",
+      "sha256": "b598ab384bc7f88a3613d1afbe166e88fd680793ec2e03bfeb8d9372ccfc9763",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L11-plan.png",
+      "capture_source": "build/scientist-ground-review/L11-plan-ru-100-844x390.png",
+      "sha256": "33ce43db5136fadee7f642f23a5c757fd48dabf51eaf171b808b907ad5494c5b",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L11-proof.png",
+      "capture_source": "build/scientist-ground-review/L11-proof-ru-100-844x390.png",
+      "sha256": "351647caff136237823af69dcc7eb03a66717f36f68ba9416df082ad8fec643a",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L21-plan.png",
+      "capture_source": "build/scientist-ground-review/L21-plan-ru-100-844x390.png",
+      "sha256": "6665434a5b4c8697a3a86f8d3c53df35b744ac37f851d00ec023fa0e07753754",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L21-proof.png",
+      "capture_source": "build/scientist-ground-review/L21-proof-ru-100-844x390.png",
+      "sha256": "e4daf48b8071afeaf301b97ec1fdf90afd4aca6c1106ab80dcca529011702cc5",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L30-plan.png",
+      "capture_source": "build/scientist-ground-review/L30-plan-ru-100-844x390.png",
+      "sha256": "422c0c76525c3c576b8f32fec509a01b7e907b4ff4059e6691290a40bd57ccd7",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L30-proof.png",
+      "capture_source": "build/scientist-ground-review/L30-proof-ru-100-844x390.png",
+      "sha256": "9c3baf7fcc7896aaeb4363a6410939e09d36e20d343055303f4ddcf8f8453ba2",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L21-stack-contact.png",
+      "capture_source": "build/L21-proof-stack-support-review.png",
+      "sha256": "a44d8036a47884ed6f2c9dff676c075d00e78d9dc90865c45de3a2c4ea4dfa26",
+      "role": "final_targeted_contact"
+    },
+    {
+      "file": "evidence/L21-frame-removed.png",
+      "capture_source": "build/L21-frame-removed-support-review.png",
+      "sha256": "8967dd51031b7cbc96debfcd32b6b898c203f0c3a3c812a4dcff67d60ae5dde4",
+      "role": "final_targeted_contact"
+    },
+    {
+      "file": "evidence/L01-midstone.png",
+      "capture_source": "build/L01-midstone-support-review.png",
+      "sha256": "99e6c5d4233c44f9f1f43eb8d19dda4268cc244adbbd921b7ad707f5e2002e09",
+      "role": "final_targeted_contact"
+    },
+    {
+      "file": "evidence/L11-en140.png",
+      "capture_source": "build/scientist-ui-width-en140/L11-plan-en-140-720x360.png",
+      "sha256": "a804ef864511cad338767c42b4820fd609eaf370777fc8dd87b332a160d09319",
+      "role": "reviewed_iteration2_ui_composition"
+    },
+    {
+      "file": "evidence/L11-M02-oven-on.png",
+      "capture_source": "build/scientist-qa-thermal/L11-M02-oven-on.png",
+      "sha256": "c035939ab41aa4e753cd3d253c9ee7274281dfdf5a03182eb32f4c272cd91095",
+      "role": "native_actual_kernel_state_M02_active_demo_water_frozen"
+    }
+  ],
+  "source_assets": {
+    "manifest": "assets/art/reboot/manifest.json",
+    "source_provenance": "assets/art/source/scientist-reboot/provenance.json",
+    "active_png_files": 16,
+    "named_characters": 9,
+    "crowd_types": 6,
+    "environments": 3,
+    "required_prop_ids": 31,
+    "atlas_region_records_including_aliases_and_variants": 97
+  },
+  "accepted_observations": [
+    "Mature scientist identity replaces the young hero consistently in menu, stage and new app icon; face, glasses, beard and color language agree.",
+    "The full-body professor and small Plum fit the native menu frame; the large title and single clear primary action match the approved direction.",
+    "In six representative chapters/scenes actors are below HUD and stand on visible ground/docks; Marfa has a separate readable tutorial silhouette.",
+    "World plates, character cutouts, book, mechanisms and props share warm cream sunlight, teal/coral accents and indigo shadows; old pixel rigs are not used in reviewed scenes.",
+    "Wood span anchors and steel support frame are visibly different materials. Folded paper remains paper, heated/cold fire variants remain the same identifiable hearth.",
+    "The final L21 targeted PNG shows a continuous paper span between both authored anchors, a load actually touching its top, and a lower supporting steel frame.",
+    "After the frame is removed, the paper and load preserve their positions and readable contact. The earlier6–8pixel gap was corrected before this verdict.",
+    "The final L01 midstone PNG shows Marfa standing on the top plane of the stone with no float visible; the new law has an understandable practical consequence.",
+    "The sampled latest English140percent text screen at720x360 keeps faces below the HUD and shows the entire Plan button label.",
+    "Reviewed atlas contact boards show15complete participant cutouts,31prop categories,6terrain surfaces and6meaningful variants. Runtime/source byte identity and coverage gate passed.",
+    "Actual native L11 after ActivateM02 shows blue cold flame/frost in real hearth and frozen light surface in bowl, while distinct orange decoy flame remains. QA reported actual M02/demo_water=frozen state."
+  ],
+  "open_visual_blockers_in_reviewed_samples": [],
+  "superseded_findings": {
+    "paper_overlap": "resolved by source-independent presentation stack and draw order",
+    "load_gap": "resolved in final targeted captures; initial premature contact acceptance corrected",
+    "menu_plum_crop": "resolved in latest native menu",
+    "npc_grounding": "resolved by higher floor compositions, projection and authored dock support"
+  },
+  "limits": [
+    "Thirteen menu/PLAN/PROOF screenshots reflect the second full-UI review before the last targeted paper-contact and stone-contact tweaks; three final targeted captures explicitly supersede their affected contact details.",
+    "Manual review is a sample, not all30levels or every intermediate state. Independent QA is responsible for the complete native gallery and input regression.",
+    "Cold hearth/frozen bowl are confirmed in an actual postM02 native capture, reinforced paper remains visible after M03/frame removal. Offhearth PNG source is reviewed, but actual disable capture returned UNSUPPORTED_ACTION; that functional issue was escalated to root and no offstate is fabricated or claimed.",
+    "No physicalAndroid performance, human first-time comprehension or owner acceptance is inferred. New actors remain whole-figure cutouts with presentation motion, not newly rigged walk/facial animation.",
+    "Environment plates are flattened generated originals with separate gameplay layers; editablePSD/KRA and3Dmodels are not claimed."
+  ],
+  "related_functional_findings": [
+    {
+      "id": "oven-disable-unsupported",
+      "owner": "root/core/UI/QA",
+      "art_scope": "offhearth texture exists but actual UI/core action must be reconciled; not a claim of accepted behavior",
+      "qa_evidence": "build/scientist-qa-thermal/capture.log",
+      "status": "pending_parent_resolution"
+    }
+  ]
+}

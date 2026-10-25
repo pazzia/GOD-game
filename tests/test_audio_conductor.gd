@@ -7,6 +7,7 @@ func run() -> void:
 	var defaults: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/settings_default.json"))
 	var audio=Audio.new();root.add_child(audio);audio.configure(defaults.audio)
 	audio.play_music("music_menu")
+	check(is_equal_approx(audio.conductor_state().tempo,authored_tempo("MUS_MAIN_FULL")),"menu alias resolves the authored theme tempo rather than a hardcoded beat clock")
 	check(audio.set_chapter_theme("ENV01"),"chapter music initializes")
 	var timeline_id: int=audio.music.stream.get_instance_id()
 	check(audio._music_players.size()==2,"two Music players provide bounded chapter crossfade")
@@ -42,6 +43,8 @@ func run() -> void:
 	check(audio.conductor_state().queued and audio.music.stream.get_instance_id()==kitchen_id,"rapid navigation queues only the latest request during a live fade")
 	audio._process(1.2)
 	check(audio.conductor_state().active=="music_menu" and not audio.conductor_state().queued,"last queued request starts when the previous fade completes")
+	audio._process(1.2);audio.play_music("music_album")
+	check(audio.conductor_state().active=="music_album" and is_equal_approx(audio.conductor_state().tempo,authored_tempo("MUS_ALBUM_FULL")),"album alias resolves its own tempo through the canonical audio path")
 	audio.settings.categories.Music.enabled=false;audio.apply_settings()
 	check(AudioServer.is_bus_mute(AudioServer.get_bus_index("Music")),"chapter transitions respect independent Music mute")
 	for player in audio._music_players:check(player.bus=="Music","each chapter timeline routes through Music")
@@ -59,3 +62,8 @@ func run() -> void:
 func check(passed: bool,message: String) -> void:
 	count+=1
 	if not passed:failures.append(message)
+func authored_tempo(id: String) -> float:
+	var catalog: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/audio_catalog.json"))
+	for track in catalog.files:
+		if track.id==id:return float(track.tempo_bpm)
+	return -1

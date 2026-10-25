@@ -1,0 +1,1316 @@
+{
+  "schema_version": 1,
+  "status": "assets_complete_pending_native_visual_review",
+  "style": "Approved mature professor in warm volumetric illustrated animation",
+  "region_units": "source pixels [x,y,width,height]; regions do not modify original PNGs",
+  "pivot_units": "normalized within selected region, at midpoint between grounded feet",
+  "environments": {
+    "ENV01": {
+      "path": "res://assets/art/reboot/environments/ENV01.png"
+    },
+    "ENV02": {
+      "path": "res://assets/art/reboot/environments/ENV02.png",
+      "floor_source_y": 372,
+      "source_size": [
+        1846,
+        852
+      ],
+      "floor_source_ratio": 0.43661971830985913,
+      "revision": "floor-v2"
+    },
+    "ENV03": {
+      "path": "res://assets/art/reboot/environments/ENV03.png",
+      "floor_source_y": 445,
+      "source_size": [
+        1846,
+        852
+      ],
+      "floor_source_ratio": 0.5223004694835681,
+      "revision": "floor-v2"
+    }
+  },
+  "characters": {
+    "CH01": {
+      "path": "res://assets/art/reboot/characters/professor.png",
+      "pivot": [
+        0.52,
+        0.985
+      ],
+      "height_ratio": 1.0
+    },
+    "CH02": {
+      "path": "res://assets/art/reboot/characters/plum.png",
+      "pivot": [
+        0.5,
+        0.85
+      ],
+      "height_ratio": 0.24
+    },
+    "CH03": {
+      "path": "res://assets/art/reboot/characters/marfa.png",
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.89
+    },
+    "CH04": {
+      "path": "res://assets/art/reboot/characters/cast-a.png",
+      "region": [
+        121,
+        0,
+        441,
+        890
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 0.98
+    },
+    "CH05": {
+      "path": "res://assets/art/reboot/characters/cast-a.png",
+      "region": [
+        682,
+        109,
+        368,
+        773
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 0.64
+    },
+    "CH06": {
+      "path": "res://assets/art/reboot/characters/cast-a.png",
+      "region": [
+        1165,
+        0,
+        525,
+        890
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 0.9
+    },
+    "CH07": {
+      "path": "res://assets/art/reboot/characters/cast-b.png",
+      "region": [
+        156,
+        7,
+        379,
+        869
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 1.02
+    },
+    "CH08": {
+      "path": "res://assets/art/reboot/characters/cast-b.png",
+      "region": [
+        602,
+        8,
+        688,
+        866
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 1.05
+    },
+    "CH09": {
+      "path": "res://assets/art/reboot/characters/cast-b.png",
+      "region": [
+        1313,
+        376,
+        402,
+        496
+      ],
+      "pivot": [
+        0.5,
+        0.99
+      ],
+      "height_ratio": 0.43
+    },
+    "CROWD01": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        140,
+        0,
+        335,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    },
+    "CROWD02": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        630,
+        5,
+        265,
+        507
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    },
+    "CROWD03": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        1125,
+        0,
+        285,
+        512
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    },
+    "CROWD04": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        155,
+        515,
+        235,
+        509
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    },
+    "CROWD05": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        620,
+        515,
+        370,
+        509
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    },
+    "CROWD06": {
+      "path": "res://assets/art/reboot/characters/crowd-atlas.png",
+      "region": [
+        1150,
+        515,
+        260,
+        509
+      ],
+      "pivot": [
+        0.5,
+        0.98
+      ],
+      "height_ratio": 0.95
+    }
+  },
+  "props": {
+    "PROP_STONE_S": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_STONE_M": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_STONE_L": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_FLOAT": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        559,
+        200,
+        519,
+        266
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_SCREEN": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        1117,
+        9,
+        409,
+        515
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "folded": {
+          "path": "res://assets/art/reboot/props/canal-atlas.png",
+          "region": [
+            35,
+            622,
+            444,
+            326
+          ]
+        }
+      }
+    },
+    "ATLAS": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        529,
+        542,
+        549,
+        423
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "MIRACLE_STAMP": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        1128,
+        589,
+        382,
+        355
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_CARGO_CRATE": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        93,
+        31,
+        380,
+        329
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_TICKET_BOOTH": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        615,
+        0,
+        311,
+        383
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_ANCHOR": {
+      "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+      "region": [
+        1068,
+        555,
+        430,
+        395
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_STONE_ANCHOR": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        89,
+        360,
+        359,
+        355
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_BOLLARD": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        607,
+        404,
+        320,
+        310
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_BOAT": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        1011,
+        412,
+        501,
+        280
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_ROPE": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        81,
+        730,
+        426,
+        290
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_THREAD": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        602,
+        734,
+        361,
+        271
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_CLAMP": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        1032,
+        711,
+        470,
+        292
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_COLD_PACK": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        89,
+        54,
+        380,
+        280
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_DECOY_FLAME": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        629,
+        4,
+        253,
+        353
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_FIRE": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1093,
+        8,
+        342,
+        355
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "cold": {
+          "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+          "region": [
+            115,
+            341,
+            337,
+            343
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        },
+        "off": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            1087,
+            41,
+            421,
+            446
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "FIRE_COLD": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        115,
+        341,
+        337,
+        343
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_WATER_BOWL": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        563,
+        390,
+        422,
+        274
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "frozen": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            31,
+            121,
+            474,
+            333
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "PROP_HEATED_STONE": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1051,
+        423,
+        443,
+        245
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "cold": {
+          "path": "res://assets/art/reboot/props/canal-atlas.png",
+          "region": [
+            11,
+            177,
+            531,
+            275
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "PROP_INSULATED_BOX": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        97,
+        684,
+        371,
+        322
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_BREAD": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        530,
+        690,
+        490,
+        327
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_DESSERT": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1065,
+        684,
+        402,
+        303
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_HIDDEN_FRAME": {
+      "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+      "region": [
+        20,
+        529,
+        496,
+        437
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_PAPER_BRIDGE": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        534,
+        83,
+        519,
+        215
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "reinforced": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            519,
+            152,
+            559,
+            267
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "PROP_CONTROL_WEIGHT": {
+      "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+      "region": [
+        555,
+        544,
+        479,
+        425
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_HOIST": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        95,
+        317,
+        377,
+        360
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_PAPER_WALL": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        584,
+        325,
+        400,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_GATE": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        1107,
+        371,
+        389,
+        301
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_FLAGS": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        55,
+        716,
+        473,
+        249
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_POSTER": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        660,
+        663,
+        254,
+        331
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "PROP_STEAM": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        1108,
+        701,
+        387,
+        289
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "SCENE_TERRACE": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        0,
+        145,
+        520,
+        330
+      ],
+      "pivot": [
+        0.5,
+        0.4
+      ]
+    },
+    "SCENE_DOCK": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        525,
+        145,
+        505,
+        335
+      ],
+      "pivot": [
+        0.5,
+        0.4
+      ]
+    },
+    "SCENE_WATER": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        1035,
+        160,
+        500,
+        335
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ]
+    },
+    "SCENE_ICE": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        0,
+        615,
+        515,
+        335
+      ],
+      "pivot": [
+        0.5,
+        0.4
+      ]
+    },
+    "SCENE_PAPER_PLATFORM": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        515,
+        615,
+        515,
+        335
+      ],
+      "pivot": [
+        0.5,
+        0.45
+      ]
+    },
+    "SCENE_STONE_STEP": {
+      "path": "res://assets/art/reboot/props/terrain-atlas.png",
+      "region": [
+        1030,
+        615,
+        505,
+        325
+      ],
+      "pivot": [
+        0.5,
+        0.4
+      ]
+    },
+    "stone_m": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "stone_s": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "tow_rope": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        81,
+        730,
+        426,
+        290
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "cargo_crate": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        93,
+        31,
+        380,
+        329
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "stone_l": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        11,
+        177,
+        531,
+        275
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "float": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        559,
+        200,
+        519,
+        266
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "screen": {
+      "path": "res://assets/art/reboot/props/canal-atlas.png",
+      "region": [
+        1117,
+        9,
+        409,
+        515
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "folded": {
+          "path": "res://assets/art/reboot/props/canal-atlas.png",
+          "region": [
+            35,
+            622,
+            444,
+            326
+          ]
+        }
+      }
+    },
+    "boat": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        1011,
+        412,
+        501,
+        280
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "stone_anchor": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        89,
+        360,
+        359,
+        355
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "bollard": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        607,
+        404,
+        320,
+        310
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "mooring_rope": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        81,
+        730,
+        426,
+        290
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "paper_wall": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        584,
+        325,
+        400,
+        341
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "wooden_gate": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        1107,
+        371,
+        389,
+        301
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "paper_span": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        534,
+        83,
+        519,
+        215
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "reinforced": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            519,
+            152,
+            559,
+            267
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "control_weight": {
+      "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+      "region": [
+        555,
+        544,
+        479,
+        425
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "hoist": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        95,
+        317,
+        377,
+        360
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "oven": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1093,
+        8,
+        342,
+        355
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "cold": {
+          "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+          "region": [
+            115,
+            341,
+            337,
+            343
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        },
+        "off": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            1087,
+            41,
+            421,
+            446
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "paper_flags": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        55,
+        716,
+        473,
+        249
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "heated_stone": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1051,
+        423,
+        443,
+        245
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "cold": {
+          "path": "res://assets/art/reboot/props/canal-atlas.png",
+          "region": [
+            11,
+            177,
+            531,
+            275
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "hidden_frame": {
+      "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+      "region": [
+        20,
+        529,
+        496,
+        437
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "clamp": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        1032,
+        711,
+        470,
+        292
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "bowl": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        563,
+        390,
+        422,
+        274
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ],
+      "variants": {
+        "frozen": {
+          "path": "res://assets/art/reboot/props/states-materials-atlas.png",
+          "region": [
+            31,
+            121,
+            474,
+            333
+          ],
+          "pivot": [
+            0.5,
+            0.9
+          ]
+        }
+      }
+    },
+    "decoy_flame": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        629,
+        4,
+        253,
+        353
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "cold_pack": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        89,
+        54,
+        380,
+        280
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "safety_thread": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        602,
+        734,
+        361,
+        271
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "ticket_booth": {
+      "path": "res://assets/art/reboot/props/harbor-atlas.png",
+      "region": [
+        615,
+        0,
+        311,
+        383
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "bread": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        530,
+        690,
+        490,
+        327
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "dessert": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        1065,
+        684,
+        402,
+        303
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "insulated_box": {
+      "path": "res://assets/art/reboot/props/kitchen-atlas.png",
+      "region": [
+        97,
+        684,
+        371,
+        322
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    },
+    "steam_cloud": {
+      "path": "res://assets/art/reboot/props/mechanisms-atlas.png",
+      "region": [
+        1108,
+        701,
+        387,
+        289
+      ],
+      "pivot": [
+        0.5,
+        0.9
+      ]
+    }
+  },
+  "atlas_filter_clip": true,
+  "ui": {
+    "app_icon": {
+      "path": "res://assets/art/reboot/ui/app_icon.png",
+      "source_size": [
+        1254,
+        1254
+      ]
+    }
+  }
+}

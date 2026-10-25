@@ -19,35 +19,44 @@ func run() -> void:
 	for n in range(1,31):app.level_ids.append("L%02d"%n)
 	app._load_catalog();root.add_child(app);app.start_level(30,false);app.set_process(false)
 	await process_frame;await process_frame
+	app._close_overlay()
+	await touch_tap(app.ui.find_child("OpenObjects",true,false).get_global_rect().get_center())
+	await process_frame;await process_frame
+	check(is_instance_valid(app._inventory_scroll),"native touch opens the deliberate objects drawer")
 	var primary: Rect2=app.primary.get_global_rect();var truth: String=app.kernel.state_hash()
 	var stage_before: Rect2=app.stage.get_global_rect()
 	var tray: Rect2=app._inventory_scroll.get_global_rect()
-	var from: Vector2=Vector2(tray.end.x-80,tray.get_center().y)
-	var to: Vector2=Vector2(tray.position.x+80,tray.get_center().y)
+	var from: Vector2=Vector2(tray.end.x-24,tray.end.y-40)
+	var to: Vector2=Vector2(tray.end.x-24,tray.position.y+40)
 	Input.emulate_touch_from_mouse=false
 	await drag(from,to)
-	if not hardware_touch:check(app._inventory_scroll.scroll_horizontal==0,"desktop/headless ScrollContainer ignores touch drag without touch capability")
-	app._inventory_scroll.scroll_horizontal=0;Input.emulate_touch_from_mouse=true
+	if not hardware_touch:check(app._inventory_scroll.scroll_vertical==0,"headless native ScrollContainer requires the test touch capability flag")
+	app._inventory_scroll.scroll_vertical=0;Input.emulate_touch_from_mouse=true
 	await drag(from,to)
-	check(app._inventory_scroll.scroll_horizontal>0 and app.selected.is_empty(),"same native ScreenTouch/ScreenDrag pans inventory after enabling touch capability without selecting an item")
-	check(app.primary.get_global_rect()==primary and app.stage.get_global_rect()==stage_before,"touch navigation keeps the main action and large stage fixed")
-	check(app.kernel.state_hash()==truth and app.ui_commands.is_empty(),"native touch scrolling cannot emit gameplay commands or alter truth")
+	check(app._inventory_scroll.scroll_vertical>0 and app.selected.is_empty(),"native ScreenTouch/ScreenDrag scrolls the objects drawer without selecting an item")
+	check(app.primary.get_global_rect()==primary and app.stage.get_global_rect()==stage_before,"touch navigation leaves the underlying full stage and main action fixed")
+	check(app.kernel.state_hash()==truth and app.ui_commands.is_empty(),"scrolling cannot emit gameplay commands or change world truth")
 	var inventory_row: Control=app._inventory_scroll.get_child(0)
 	var button: Control=null
 	for child in inventory_row.get_children():
 		if child is Button and tray.encloses(child.get_global_rect()):button=child;break
-	check(button!=null,"pan leaves a whole visible inventory target")
+	check(button!=null,"the scrolled drawer exposes a complete touch target")
 	if button!=null:
 		await touch_tap(button.get_global_rect().get_center())
-		check(not app.selected.is_empty(),"positive ScreenTouch tap selects item, so pan test does not pass by disabling all touch clicks")
-	var audience: Rect2=app._audience_scroll.get_global_rect()
-	for id in app.witness_labels:
-		var cell: Control=app.witness_labels[id].name.get_parent()
-		check(audience.encloses(cell.get_global_rect()) and cell.size.x>=144 and cell.size.y>=144,"every witness has a fully visible touch target without scrolling")
-		await touch_tap(cell.get_global_rect().get_center())
+		check(not app.selected.is_empty() and not is_instance_valid(app.overlay),"a positive ScreenTouch tap selects a real item and closes the drawer")
+	# Every observer remains inspectable directly in the scene, without a permanent audience sidebar.
+	app.selected="";app.stage.selected="";app._build_ui();app._update_ui()
+	await process_frame;await process_frame
+	for id in app.kernel.state.witnesses:
+		var hit: Dictionary={}
+		for candidate in app.stage._hits:
+			if candidate.kind=="witness" and candidate.id==id:hit=candidate;break
+		check(not hit.is_empty(),"scene exposes a visible witness hit target: "+id)
+		if hit.is_empty():continue
+		await touch_tap(app.stage.get_global_transform()*hit.rect.get_center())
 		var witness: Dictionary=app.kernel._find(app.kernel.definition.witnesses,id)
-		check(app.inspected==id and app.instruction.text.contains(app._character_name(witness.character_id)) and app.instruction.get_global_rect().position.y<app._goal_headline.get_global_rect().position.y and app._upper_scroll.get_global_rect().has_point(app.instruction.get_global_rect().position+Vector2(1,1)),"touching each witness puts their full name and live viewing status first in the guide")
-	check(app.kernel.state_hash()==truth and app.ui_commands.is_empty(),"inspection of every witness cannot alter world truth")
+		check(app.inspected==id and app.instruction.text.contains(app._character_name(witness.character_id)),"native touch inspection names the actual observer and live viewing status: "+id)
+	check(app.kernel.state_hash()==truth and app.ui_commands.is_empty(),"inspection of every observer cannot alter world truth")
 	Input.emulate_touch_from_mouse=old_touch;Input.emulate_mouse_from_touch=old_mouse
 	app.free();audio.shutdown();audio.free();await create_timer(.15).timeout
 	print("TOUCH CAPABILITY: %d checks; %d failures; %d native touch events"%[checks,failures.size(),events])

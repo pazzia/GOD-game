@@ -2,7 +2,7 @@ class_name SimulationKernel
 extends RefCounted
 ## Authoritative 10 Hz state machine. No nodes, audio, wall clock, network or physics.
 const Validator = preload("res://core/content_validator.gd")
-const RULES_VERSION = "0.2.0-recovered"
+const RULES_VERSION = "0.5.0-scientist"
 const ACTIVE_PHASES = ["PERFORMANCE","REHEARSAL","RUN_RESOLUTION"]
 const PLAN_PHASES = ["PLAN_SHOW","PLAN_RESOLUTION"]
 const LAWS = ["M01","M02","M03"]
@@ -37,7 +37,7 @@ func load_level(data: Dictionary, seed_value: int=1) -> bool:
 	for e in definition.entities:
 		_entities[e.id]=e
 		state.entities[e.id]={"slot":e.initial_slot,"position":_slots[e.initial_slot].position.duplicate(),"removed":false,
-			"orientation":0,"effective":{},"support":false,"closed":e.properties.get("initial_closed",false),
+			"orientation":0,"effective":{},"support":false,"folded":e.properties.get("initial_folded",false),"closed":e.properties.get("initial_closed",false),
 			"open":e.properties.get("initial_open",false),"enabled":e.properties.get("enabled",true),"intact":true,
 			"heat_ticks":0,"attachment_target":e.properties.get("attachment_target_entity_id",""),"secured":false,"moored":false}
 		state.actor_reach[e.id]=e.properties.get("initial_reach_zone_id",_slots[e.initial_slot].zone_id)
@@ -121,6 +121,8 @@ func dispatch(command: Dictionary) -> Dictionary:
 		if kind=="StopRehearsal" and _rehearsal_origin.is_empty(): return _response(false,"NOT_REHEARSING")
 		if kind=="StopPerformance" and state.phase not in ["PERFORMANCE","PROOF_ACCEPTED"]: return _response(false,"WRONG_PHASE")
 		var origin: Dictionary=_rehearsal_origin if kind=="StopRehearsal" else _action_origin
+		# Undo can restore an accepted trial after its transient origin was cleared.
+		if origin.is_empty() and kind=="StopPerformance": origin=stable_checkpoint()
 		if origin.is_empty(): return _response(false,"NO_CHECKPOINT")
 		state=origin.duplicate(true); _rehearsal_origin.clear(); _action_origin.clear(); _emit("rehearsal_finished" if kind=="StopRehearsal" else "show_stopped"); return _response(true)
 	if kind=="StopResolution":
@@ -143,14 +145,14 @@ func dispatch(command: Dictionary) -> Dictionary:
 		_remember(); state.active_laws.erase(myth); _recompute_effective(); _emit("law_revoked",{"myth_id":myth}); return _response(true)
 	if kind=="PlaceProp": return _place(p)
 	if kind=="SetWitnessSlot":
-		if state.phase not in PLAN_PHASES: return _response(false,"WRONG_PHASE")
+		if state.phase not in PLAN_PHASES+["PROOF_ACCEPTED"]: return _response(false,"WRONG_PHASE")
 		var wid: String=p.get("witness_id",""); var sid: String=p.get("slot_id","")
 		if not state.witnesses.has(wid) or not _slots.has(sid): return _response(false,"UNKNOWN_TARGET")
 		if "witness" not in _slots[sid].allowed_entity_types: return _response(false,"INCOMPATIBLE_SLOT")
 		if _find(definition.witnesses,wid).views.size()>1: return _response(false,"FIXED_INSPECTION_PATH")
 		for other in state.witnesses:
 			if other!=wid and state.witnesses[other].slot==sid: return _response(false,"SLOT_OCCUPIED")
-		_remember(); state.witnesses[wid].slot=sid; _emit("witness_moved",{"witness_id":wid}); return _response(true)
+		_remember(); _invalidate_unsealed_proof(); state.witnesses[wid].slot=sid; _emit("witness_moved",{"witness_id":wid}); return _response(true)
 	if kind in ["BeginPerformance","BeginRehearsal"]:
 		if state.phase not in PLAN_PHASES: return _response(false,"WRONG_PHASE")
 		if state.candidate_law.is_empty() or state.candidate_law in state.active_laws: return _response(false,"NO_CANDIDATE")
@@ -169,7 +171,7 @@ func dispatch(command: Dictionary) -> Dictionary:
 	return _response(false,"UNSUPPORTED_COMMAND")
 
 func _place(p: Dictionary) -> Dictionary:
-	if state.phase not in PLAN_PHASES: return _response(false,"WRONG_PHASE")
+	if state.phase not in PLAN_PHASES+["PROOF_ACCEPTED"]: return _response(false,"WRONG_PHASE")
 	var eid: String=p.get("entity_id",""); var sid: String=p.get("slot_id","")
 	if not _entities.has(eid) or not _slots.has(sid): return _response(false,"UNKNOWN_TARGET")
 	var e: Dictionary=state.entities[eid]; var base: Dictionary=_entities[eid]
@@ -183,8 +185,13 @@ func _place(p: Dictionary) -> Dictionary:
 		if sid not in _entities[hoist].properties.get("service_slot_ids",[]): return _response(false,"HOIST_CANNOT_REACH")
 	for other in state.entities:
 		if other!=eid and not state.entities[other].removed and state.entities[other].slot==sid: return _response(false,"SLOT_OCCUPIED")
-	_remember(); e.slot=sid; e.position=_slots[sid].position.duplicate(); state.actor_reach[eid]=_slots[sid].zone_id
+	_remember(); _invalidate_unsealed_proof(); e.slot=sid; e.position=_slots[sid].position.duplicate(); state.actor_reach[eid]=_slots[sid].zone_id
 	_recompute_effective(); _emit("prop_placed",{"entity_id":eid,"slot_id":sid}); return _response(true)
+
+func _invalidate_unsealed_proof() -> void:
+	if state.phase!="PROOF_ACCEPTED": return
+	_reset_observation(); state.phase="PLAN_SHOW"; state.phase_tick=0; _action_origin.clear()
+	_emit("proof_invalidated",{"myth_id":state.candidate_law})
 
 func _activate(p: Dictionary) -> Dictionary:
 	if state.phase not in ["PROOF_ACCEPTED","LAW_SELECTION"]: return _response(false,"WRONG_PHASE")
@@ -206,18 +213,30 @@ func _activate(p: Dictionary) -> Dictionary:
 	_emit("law_activated",{"myth_id":myth}); return _response(true)
 
 func _interact(p: Dictionary) -> Dictionary:
-	if state.phase not in PLAN_PHASES: return _response(false,"WRONG_PHASE")
+	if state.phase not in PLAN_PHASES+["PROOF_ACCEPTED"]: return _response(false,"WRONG_PHASE")
 	var eid: String=p.get("entity_id",""); var action: String=p.get("action","")
 	if not state.entities.has(eid): return _response(false,"UNKNOWN_TARGET")
 	var e: Dictionary=state.entities[eid]; var base: Dictionary=_entities[eid]
 	if e.removed: return _response(false,"ENTITY_REMOVED")
 	if not _reachable_entity(eid): return _response(false,"OUT_OF_REACH")
 	if action=="remove":
-		if not base.movable: return _response(false,"IMMOVABLE")
-		_remember(); e.removed=true; _recompute_effective(); _emit("prop_removed",{"entity_id":eid}); return _response(true)
+		if not base.movable and not base.properties.get("removable",false): return _response(false,"IMMOVABLE")
+		var required_law: String=base.properties.get("remove_requires_law","")
+		if not required_law.is_empty() and required_law not in state.active_laws: return _response(false,"LAW_NOT_ACTIVE")
+		_remember(); _invalidate_unsealed_proof(); e.removed=true; _recompute_effective(); _emit("prop_removed",{"entity_id":eid}); return _response(true)
+	if action in ["fold","unfold"]:
+		if not base.properties.get("foldable",false): return _response(false,"UNSUPPORTED_ACTION")
+		var next_folded: bool=action=="fold"
+		if e.folded==next_folded: return _response(false,"ALREADY_IN_STATE")
+		_remember(); _invalidate_unsealed_proof(); e.folded=next_folded; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
+	if action in ["enable","disable"]:
+		if not base.properties.get("switchable",false): return _response(false,"UNSUPPORTED_ACTION")
+		var next_enabled: bool=action=="enable"
+		if e.enabled==next_enabled: return _response(false,"ALREADY_IN_STATE")
+		_remember(); _invalidate_unsealed_proof(); e.enabled=next_enabled; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
 	if action in ["open","close"]:
 		if not base.properties.has("initial_closed") and not base.properties.has("initial_open") and not ("gate" in base.type_id or "box" in base.type_id): return _response(false,"UNSUPPORTED_ACTION")
-		_remember(); e.open=action=="open"; e.closed=action=="close"; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
+		_remember(); _invalidate_unsealed_proof(); e.open=action=="open"; e.closed=action=="close"; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
 	if action in ["attach","detach"]:
 		if base.properties.get("attachment_kind","") not in ["clamp","mooring"]: return _response(false,"UNSUPPORTED_ACTION")
 		var target: String=p.get("target_entity_id","")
@@ -225,7 +244,7 @@ func _interact(p: Dictionary) -> Dictionary:
 			if not _entities.has(target) or target==eid or state.entities[target].removed: return _response(false,"UNKNOWN_TARGET")
 			if not _reachable_entity(target): return _response(false,"OUT_OF_REACH")
 			if base.properties.has("attachable_target_types") and _entities[target].type_id not in base.properties.attachable_target_types: return _response(false,"INCOMPATIBLE_ATTACHMENT")
-		_remember(); e.attachment_target=target if action=="attach" else ""; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
+		_remember(); _invalidate_unsealed_proof(); e.attachment_target=target if action=="attach" else ""; _recompute_effective(); _emit("prop_interacted",{"entity_id":eid,"action":action}); return _response(true)
 	return _response(false,"UNSUPPORTED_ACTION")
 
 func _assign_route(p: Dictionary) -> Dictionary:
@@ -241,6 +260,7 @@ func _assign_route(p: Dictionary) -> Dictionary:
 	var carrier: String=props.get("carrier_entity_id",eid)
 	if not _entities.has(carrier) or state.entities[carrier].removed: return _response(false,"CARRIER_REQUIRED")
 	if mode!="towed" and state.entities[carrier].position!=_find(definition.navigation.nodes,route.nodes[0]).position: return _response(false,"ROUTE_START_UNREACHABLE")
+	if mode=="sail" and not _sailing_route_over_water(route): return _response(false,"SAILING_REQUIRES_WATER")
 	if mode in ["carried","wheeled","towed"] and not _reachable_entity(eid): return _response(false,"OUT_OF_REACH")
 	if mode=="towed":
 		var rope: String=props.get("tow_rope_entity_id","")
@@ -255,6 +275,49 @@ func _assign_route(p: Dictionary) -> Dictionary:
 	_remember(); state.routes[eid]={"route_id":rid,"carrier_id":carrier,"transport_mode":mode,"progress":0,"completed":false,"waiting_for":""}
 	_emit("route_assigned",{"actor_id":eid}); return _response(true)
 
+func _sailing_route_over_water(route: Dictionary) -> bool:
+	# Check the authored polyline against water geometry, without adding physics.
+	# Polygon-edge intersections partition each segment into uniform inside/outside
+	# intervals, so dry gaps between wet endpoints cannot pass a sampling shortcut.
+	var polygons: Array[PackedVector2Array]=[]
+	for zone in definition.zones:
+		if zone.kind!="WATER": continue
+		var polygon: PackedVector2Array=[]
+		for vertex in zone.polygon: polygon.append(_vec(vertex))
+		polygons.append(polygon)
+	for i in range(route.nodes.size()-1):
+		var a: Vector2=_vec(_find(definition.navigation.nodes,route.nodes[i]).position)
+		var b: Vector2=_vec(_find(definition.navigation.nodes,route.nodes[i+1]).position)
+		if not _water_contains_point(a,polygons) or not _water_contains_point(b,polygons): return false
+		var delta: Vector2=b-a
+		if delta.is_zero_approx(): continue
+		var cuts: Array[float]=[0.0,1.0]
+		for polygon in polygons:
+			for edge_index in range(polygon.size()):
+				var p: Vector2=polygon[edge_index]
+				var q: Vector2=polygon[(edge_index+1)%polygon.size()]
+				var edge: Vector2=q-p
+				var denominator: float=delta.cross(edge)
+				if absf(denominator)<0.000001:
+					if absf((p-a).cross(delta))<0.000001:
+						for endpoint in [p,q]:
+							var projection: float=(endpoint-a).dot(delta)/delta.length_squared()
+							if projection>0.0 and projection<1.0: cuts.append(projection)
+					continue
+				var t: float=(p-a).cross(edge)/denominator
+				var u: float=(p-a).cross(delta)/denominator
+				if t>0.0 and t<1.0 and u>=0.0 and u<=1.0: cuts.append(t)
+		cuts.sort()
+		for j in range(cuts.size()-1):
+			if cuts[j+1]-cuts[j]<0.000001: continue
+			if not _water_contains_point(a+delta*((cuts[j]+cuts[j+1])*0.5),polygons): return false
+	return true
+
+func _water_contains_point(point: Vector2,polygons: Array[PackedVector2Array]) -> bool:
+	for polygon in polygons:
+		if Geometry2D.is_point_in_polygon(point,polygon): return true
+	return false
+
 func advance_ticks(count: int) -> Array:
 	_events.clear()
 	for _i in range(maxi(0,count)):
@@ -268,6 +331,8 @@ func advance_ticks(count: int) -> Array:
 	return _events.duplicate(true)
 
 func _reset_observation() -> void:
+	# Counters describe this demonstration, not a witness's beliefs or memory.
+	# Repeating a trial observes its new arrangement; nobody forgets the method.
 	for w in state.witnesses.values():
 		w.eligible_vote=false; w.exposed=false; w.expose_streak=0; w.status="WAITING"; w.water_seen_from.clear(); w.water_transition.clear()
 		for vid in w.view_progress: w.view_progress[vid]=0; w.gap_streak[vid]=0; w.view_completed[vid]=false
@@ -279,6 +344,7 @@ func _recompute_effective() -> void:
 	for eid in ids:
 		var e: Dictionary=state.entities[eid]; var base: Dictionary=_entities[eid]
 		e.effective=base.properties.duplicate(true); e.effective.mass_units=int(base.mass_units)
+		if base.properties.has("emitter_class"): e.effective.enabled=e.enabled
 		if base.material=="STONE" and "M01" in state.active_laws:
 			e.effective.buoyant=true; e.effective.carry_capacity={"S":1,"M":3,"L":5}.get(base.properties.get("size","M"),3)
 		if base.material=="PAPER" and "M03" in state.active_laws: e.effective.load_capacity=150; e.effective.tear_resistance=150
@@ -359,9 +425,15 @@ func _step_show() -> void:
 		state.proofs[state.candidate_law].ready=true
 		if state.phase=="REHEARSAL": _finish_rehearsal(true)
 		else: state.phase="PROOF_ACCEPTED"; _emit("proof_accepted",{"myth_id":state.candidate_law})
-	elif state.phase_tick>=199:
+	elif state.phase_tick>=int(definition.get("demonstration_timeout_ticks",200))-1:
 		if state.phase=="REHEARSAL": _finish_rehearsal(false)
-		else: _fail("NOT_ENOUGH_WITNESSES")
+		else:
+			var reason: String="NOT_ENOUGH_WITNESSES"
+			if definition.has("demonstration_timeout_ticks"):
+				for w in state.witnesses.values():
+					if w.exposed or w.method_visible: reason="METHOD_VISIBLE"; break
+					if w.visible_results<2: reason="RESULT_OBSCURED"
+			_fail(reason)
 func _finish_rehearsal(passed: bool) -> void:
 	state=_rehearsal_origin.duplicate(true); _rehearsal_origin.clear(); _action_origin.clear(); _emit("rehearsal_passed" if passed else "rehearsal_failed")
 
@@ -425,7 +497,8 @@ func _occluded(a: Vector2,b: Vector2,channel: String) -> bool:
 		if channel not in o.channels or not state.occluder_enabled[o.id]: continue
 		var owner: Dictionary=state.entities[o.owner_entity]
 		if owner.removed or (o.active_slot!=null and owner.slot!=o.active_slot): continue
-		if _segments_intersect(a,b,_vec(o.segment[0]),_vec(o.segment[1])): return true
+		var segment: Array=o.folded_segment if owner.get("folded",false) and o.has("folded_segment") else o.segment
+		if _segments_intersect(a,b,_vec(segment[0]),_vec(segment[1])): return true
 	return false
 
 func evaluate(kind: String,p: Dictionary={}) -> bool:
@@ -697,8 +770,9 @@ func _valid_state(s: Dictionary) -> bool:
 		if not e is Dictionary or not e.get("slot") is String or not _slots.has(e.slot): return false
 		if not Validator.new().point(e.get("position"),true): return false
 		if not e.get("effective") is Dictionary or not _is_integer(e.get("orientation")) or not _is_integer(e.get("heat_ticks")) or e.heat_ticks<0: return false
-		for key in ["removed","support","closed","open","enabled","intact","secured","moored"]:
+		for key in ["removed","support","folded","closed","open","enabled","intact","secured","moored"]:
 			if not e.get(key) is bool: return false
+		if e.folded and not _entities[eid].properties.get("foldable",false): return false
 		if not e.get("attachment_target") is String or (not e.attachment_target.is_empty() and not _entities.has(e.attachment_target)): return false
 		if not s.actor_reach[eid] is String or _find(definition.zones,s.actor_reach[eid]).get("kind")!="REACH": return false
 	for wd in definition.witnesses:

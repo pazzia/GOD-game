@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib,json,sys,xml.etree.ElementTree as ET
 from PIL import Image
+from verify_reboot_art import validate as validate_reboot
 R=Path(__file__).resolve().parents[1];A=R/'assets/art'
 ACTORS=['felix','plum','marfa','semyon','nika','lada','roza','hugo','caramelka']
 STATES=['idle','observe','suspect','accept','reveal_react','focused','embarrassed','celebrate','extra']
@@ -53,7 +54,9 @@ def main():
     with Image.open(target)as im:
      if list(im.size)!=value.get('canvas_size'):errors.append(env+': layer canvas differs from common fit '+filename)
    if not value.get('draw_stage_content_after_layers') or value.get('water',{}).get('render')!='exact_authoritative_polygon_above_floor':errors.append(env+': layers must preserve authoritative stage water/geometry')
- report={'kind':'art_file_integrity','status':'passed'if not errors else'failed','raster_exports':len(images),'svg_exports':svg_count,
+ reboot=validate_reboot(R)
+ errors.extend('reboot: '+message for message in reboot['errors'])
+ report={'kind':'art_file_integrity','status':'passed'if not errors else'failed','raster_exports':len(images),'svg_exports':svg_count,'reboot':reboot,
          'portrait_exports':9*len(STATES),'layer_stacks_with_metadata':len(layers),'errors':errors,'images':images,
          'limits':'Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability.'}
  dest=R/'tests/reports/art-files.json';dest.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')

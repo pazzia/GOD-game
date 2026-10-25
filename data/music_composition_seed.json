@@ -1,5 +1,5 @@
 {
-  "status": "notation_seed_not_final_audio",
+  "status": "historical_notation_seed_preserved_not_active_score",
   "key": "D major",
   "meter": [
     4,
@@ -147,5 +147,7 @@
         1
       ]
     ]
-  ]
+  ],
+  "active_revision": "0.5.0-professor-open-windows",
+  "active_score_path": "assets/source/audio/scientist-reboot/SCORE.json"
 }

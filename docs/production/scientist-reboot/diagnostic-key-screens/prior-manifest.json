@@ -1,0 +1,35 @@
+{
+  "renderer": "Native Godot4.7.2/Mesa/Xvfb",
+  "runtime_digest_sha256": "e4239d9edc358013c09349b670b2af06270ec15ce554c8a55d7e5b86dbcb4143",
+  "files": [
+    {
+      "file": "L01-law-ru-100-844x390.png",
+      "sha256": "172d3e21ac76b374805afce48fe9e0af68cb4302dcf2fa05fe621d5f2da4d5a8"
+    },
+    {
+      "file": "L01-moving-ru-100-844x390.png",
+      "sha256": "08a6bc89cecf2c7523aac98f25c4af14a2dde19b70037c3284d5d11cd255676c"
+    },
+    {
+      "file": "L01-plan-ru-100-844x390.png",
+      "sha256": "9018e1dfd6cdd59ad7b52fb5211eb7c20230e90a425574140a58ec37d0d89b94"
+    },
+    {
+      "file": "L01-proof-ru-100-844x390.png",
+      "sha256": "67e5e9161117c04b7caa1b640d490ab49b422ec52fca6d4f068cee5b2b5eaff6"
+    },
+    {
+      "file": "L01-settings-ru-100-844x390.png",
+      "sha256": "6e4c1020db3717e0c2d4d4bf5bb67fe2248b8cbac5c4acdad2347c674c7cd9b6"
+    },
+    {
+      "file": "L01-success-ru-100-844x390.png",
+      "sha256": "61f1a4a054bf6d0315e3842238480f0d3d768dfda9e279b5f44c118602efea54"
+    },
+    {
+      "file": "L01-title-ru-100-844x390.png",
+      "sha256": "252e31b95f6ce8ff35bc98c8c41f945c67597dbfd86a55334adcd6f1d4c9b444"
+    }
+  ],
+  "scope": "Actual key screens; no physical-device or human-comprehension claim"
+}

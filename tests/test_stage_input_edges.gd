@@ -8,8 +8,10 @@ var selected: Array=[]
 var events: int=0
 func _initialize() -> void:call_deferred("run")
 func run() -> void:
-	root.size=Vector2i(1080,1920);root.content_scale_size=Vector2i(1080,1920)
-	var k=Kernel.new();k.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L01.json")),48121)
+	root.size=Vector2i(1920,1080);root.content_scale_size=Vector2i(1920,1080)
+	# L04 retains genuinely movable overlapping stone/float props; the new L01
+	# stone is deliberately fixed and must not advertise a placement target.
+	var k=Kernel.new();k.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L04.json")),48121)
 	k.dispatch({"type":"PlaceProp","payload":{"entity_id":"float","slot_id":"stage_float"}});k.dispatch({"type":"PlaceProp","payload":{"entity_id":"stone","slot_id":"stage_stone"}})
 	var stage=Stage.new();stage.kernel=k;stage.size=Vector2(984,656);stage.target_tapped.connect(func(kind,id):selected.append({"kind":kind,"id":id}));root.add_child(stage)
 	await process_frame;await process_frame

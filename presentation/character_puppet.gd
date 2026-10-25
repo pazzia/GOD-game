@@ -3,12 +3,15 @@ extends Node2D
 ## Cosmetic cutout rig. No kernel reference, gameplay callbacks or wall-clock rules.
 signal pose_finished(state: String)
 const Acting=preload("res://presentation/character_acting.gd")
+const Art=preload("res://presentation/reboot_art.gd")
 const BASE_STATES=["idle","move","turn","observe","suspect","accept","reveal_react","celebrate"]
 const EXTRA_STATES=["show_begin","stamp","bow","hover","fly","point","shiver","cheer"]
 const LOOP_STATES=["idle","move","observe","suspect","celebrate","hover","fly","shiver","cheer"]
 const TEMPO={"felix":1.0,"plum":1.2,"marfa":.83,"semyon":.8,"nika":1.12,"lada":1.0,"roza":.75,"hugo":1.08,"caramelka":.95}
 var actor_id: String=""
 var rigged: bool=false
+var visual_mode: String="legacy_baseline"
+var source_art_key: String=""
 var last_error: String=""
 var current_state: String="idle"
 var reduced_motion: bool=false
@@ -21,6 +24,22 @@ var _render_parts: Array=[]
 var _height: float=220
 var _natural_height: float=1320
 var _queued_loop: String="idle"
+
+func configure_illustrated(actor: String,display_height: float=220) -> bool:
+	var key: String=Art.actor_key(actor)
+	var illustration: Texture2D=Art.texture_for("characters",key)
+	if illustration==null:return false
+	_clear();actor_id=actor;_height=maxf(display_height,1);last_error=""
+	visual_mode="illustrated_cutout";source_art_key=key;rigged=false
+	_make_nodes()
+	var sprite=Sprite2D.new();sprite.name="Illustration";sprite.texture=illustration;sprite.centered=false
+	var pivot_data: Array=Art.entry("characters",key).get("pivot",[.5,1.0])
+	var pivot: Vector2=Vector2(float(pivot_data[0]),float(pivot_data[1]))
+	sprite.position=-illustration.get_size()*pivot;sprite.visible=false;_pose.add_child(sprite)
+	_render_parts.append({"bone":_pose,"sprite":sprite,"z":0,"order":0})
+	_natural_height=maxf(1,illustration.get_height())
+	_install_animations();set_display_height(display_height);play_state("idle",true)
+	return true
 
 func configure(actor: String,display_height: float=220) -> bool:
 	_clear()
@@ -72,7 +91,7 @@ func configure_definition(data: Dictionary,base_path: String,actor: String="feli
 			var parent=known[cursor].get("parent")
 			if parent!=null and not parent is String:last_error="Parent must be a part ID or null";return false
 			cursor="" if parent==null else parent
-	_clear();actor_id=actor;_height=display_height;rigged=true;_make_nodes()
+	_clear();actor_id=actor;_height=display_height;rigged=true;visual_mode="separated_rig";_make_nodes()
 	var origin=Vector2(data.feet_origin[0],data.feet_origin[1]);var top: float=origin.y
 	for part in data.parts:
 		var bone=Node2D.new();bone.name=part.id;bone.z_index=int(part.get("z_index",0));_bones[part.id]=bone
@@ -152,7 +171,7 @@ func _make_nodes() -> void:
 func _clear() -> void:
 	if is_instance_valid(animator):animator.stop();animator.free()
 	if is_instance_valid(_fit):_fit.free()
-	animator=null;_fit=null;_pose=null;_bones.clear();_render_parts.clear();rigged=false;current_state="idle";_queued_loop="idle"
+	animator=null;_fit=null;_pose=null;_bones.clear();_render_parts.clear();rigged=false;visual_mode="legacy_baseline";source_art_key="";current_state="idle";_queued_loop="idle"
 func _install_animations() -> void:
 	var library=AnimationLibrary.new()
 	for state in BASE_STATES+EXTRA_STATES:library.add_animation(state,_make_animation(state))
@@ -204,6 +223,7 @@ func _make_animation(state: String) -> Animation:
 			# Preserve the painted silhouette until proper direction art is available.
 			scales=[Vector2.ONE,Vector2(.94,1),Vector2(.84,1),Vector2(.94,1),Vector2.ONE];_pose_rot(rotations,["head"],[0,.06,.12,.06,0])
 		"observe":
+			if visual_mode=="illustrated_cutout":scales=[Vector2.ONE,Vector2(1.006,1),Vector2(1.012,.998),Vector2(1.006,1),Vector2.ONE]
 			_pose_rot(rotations,["head"],[.05,.08,.09,.08,.05]);_pose_rot(rotations,["torso","body"],[.02,.035,.04,.035,.02]);_wings(rotations,.06)
 		"suspect":
 			_pose_rot(rotations,["head"],[-.08,-.12,.02,.08,-.08]);_pose_rot(rotations,["left_arm"],[.2,.3,.3,.2,.2]);_pose_rot(rotations,["tail"],[0,.2,0,-.2,0])
@@ -219,7 +239,12 @@ func _make_animation(state: String) -> Animation:
 		"shiver":positions=[Vector2.ZERO,Vector2(-10,0),Vector2(8,0),Vector2(-6,0),Vector2.ZERO];_wings(rotations,.15)
 	_track(a,"Fit/Pose:position",positions)
 	_track(a,"Fit/Pose:scale",scales)
-	_track(a,"Fit/Pose:rotation",[0.0,0.0,0.0,0.0,0.0])
+	var root_angles: Array=[0.0,0.0,0.0,0.0,0.0]
+	if visual_mode=="illustrated_cutout":
+		if state in ["suspect","turn"]:root_angles=[0,-.012,.016,.008,0]
+		elif state in ["accept","bow"]:root_angles=[0,.018,.03,.016,0]
+		elif state in ["show_begin","point","stamp"]:root_angles=[0,-.008,.014,.006,0]
+	_track(a,"Fit/Pose:rotation",root_angles)
 	for id in _bones:
 		var relative: String=String(_pose.get_path_to(_bones[id]));_track(a,"Fit/Pose/"+relative+":rotation",rotations[id])
 	return a

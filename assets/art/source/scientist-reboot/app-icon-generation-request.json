@@ -1,0 +1,11 @@
+{
+  "id": "app-icon",
+  "refs": [
+    "/workspace/GOD-game/docs/design/reboot-02-scientist/scientist-cutout.png",
+    "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+  ],
+  "alpha": false,
+  "prompt": "Create ONE polished original SQUARE1024x1024 mobile GAME APP ICON for Almost God, using the EXACT APPROVED MATURE SCIENTIST from reference1 and same modern colorful warm volumetric illustrated-animation style as reference2. No text, no letters, no logos, no symbols resembling text, no border, no rounded-corner mask, fill the entire square background. MAIN SUBJECT: large unmistakable head-and-shoulders closeup of the same serious capable professor agedabout60, elegant round brass eyeglasses, clear grey-blue eyes, strong brows, swept-back silver-grey hair with dark roots, neat short silver beard and moustache, closed-mouth subtle confident warm expression, not a young boy, not an Einstein caricature. Preserve his exact face identity and costume: dark deep-teal professor coat, cream waistcoat/high-collared shirt and tiny coral scarf. His face is the focus and fills55–65percent of square height, centered slightly left; all hair and glasses safely within generous icon safe area, no cropped face. One small honey-cream fluffy moth helper PLUM with blue eyes, rounded cream wings and tiny turquoise satchel hovers by lower-right shoulder, about22percent of icon height, clearly separate from the scientist's face. No need to show the measuring instrument; avoid clutter. Simple graphic DEEP INDIGO background with one broad quiet turquoise circular glow behind the professor, no scenery, no extra figures, no scattering of particles or tiny ornaments. Broad readable shape masses, strong cream/silver face separation from dark background, clear at64x64, luxurious but clean rounded 3D-cartoon-inspired painted depth, sunny upper-left face light, matte garment forms, controlled soft shadows. This is the final game application icon for the new mature-protagonist identity, not an interface screenshot or a character-sheet.",
+  "tool": "image_gen.imagegen",
+  "source_path": "/workspace/generated_images/exec-09a64154-254a-44d1-9960-cd30064df1bd.png"
+}

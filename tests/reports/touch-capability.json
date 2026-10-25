@@ -1,7 +1,7 @@
 {
-  "checks": 13,
+  "checks": 14,
   "engine": "4.7.2-stable (official)",
-  "events": 28,
+  "events": 30,
   "failures": [],
   "fixture_mouse_from_touch_enabled": true,
   "hardware_touch": false,

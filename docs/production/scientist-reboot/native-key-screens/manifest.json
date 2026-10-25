@@ -1,0 +1,17 @@
+{
+  "renderer": "Native Godot4.7.2/Mesa/Xvfb",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "files": [
+    {
+      "file": "L01-proof-ru-100-844x390.png",
+      "sha256": "cdac68947ed782645f9f9f3f279917568cb0afc014e8121f615892dadba1c2e8",
+      "captured_utc": "2026-10-25T23:11:24.807114+00:00"
+    },
+    {
+      "file": "L01-title-ru-100-844x390.png",
+      "sha256": "252e31b95f6ce8ff35bc98c8c41f945c67597dbfd86a55334adcd6f1d4c9b444",
+      "captured_utc": "2026-10-25T23:11:33.861261+00:00"
+    }
+  ],
+  "scope": "Actual frozen-final-runtime menu and L01 proof. Earlier diagnostic frames are in the adjacent folder."
+}

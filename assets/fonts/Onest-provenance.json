@@ -1,0 +1,21 @@
+{
+  "source_repository": "https://github.com/google/fonts",
+  "commit": "4c1db3aec83c67dd223dd82a68c039cab30917a9",
+  "license": "SIL Open Font License 1.1",
+  "retrieved_at": "2026-10-25",
+  "modified": false,
+  "files": [
+    {
+      "file": "Onest-Variable.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/4c1db3aec83c67dd223dd82a68c039cab30917a9/ofl/onest/Onest%5Bwght%5D.ttf",
+      "sha256": "966c5c29b4755da84b6854d5c21dd4eaa2420225d0e9874de602de176d4a9f31",
+      "size_bytes": 193056
+    },
+    {
+      "file": "Onest-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/4c1db3aec83c67dd223dd82a68c039cab30917a9/ofl/onest/OFL.txt",
+      "sha256": "071195d8806e226faeee60259c28ca67b458227af5195a73f5cfcab06e3003bc",
+      "size_bytes": 4384
+    }
+  ]
+}

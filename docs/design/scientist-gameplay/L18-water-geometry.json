@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "scope": "Reproducible L18 boat-water geometry and source consistency; native command replay and rendered contact are independently checked by kernel/stage agents.",
+  "boat_route_points": [
+    [
+      22,
+      19
+    ],
+    [
+      21,
+      20
+    ],
+    [
+      22,
+      21
+    ]
+  ],
+  "boat_water_polygon": [
+    [
+      19,
+      18
+    ],
+    [
+      24,
+      18
+    ],
+    [
+      24,
+      22
+    ],
+    [
+      19,
+      22
+    ]
+  ],
+  "boat_thermal_position": [
+    21,
+    19
+  ],
+  "heated_stone_target": [
+    18,
+    19
+  ],
+  "hero_route_end": [
+    18,
+    20
+  ],
+  "all_boat_segments_in_control_water": true,
+  "no_boat_segment_in_frozen_crossing": true,
+  "heater_radius_reaches_zone": true,
+  "cold_source_radius_reaches_zone": true,
+  "mechanical_definition_changes": [
+    "L18"
+  ],
+  "replay_changes": [],
+  "authoring_files_checked": 79,
+  "second_run_byte_changes": [],
+  "first_run_byte_changes": [
+    "data/levels/L18.json",
+    "data/localization/en.json",
+    "data/localization/ru.json"
+  ],
+  "localization_keys_per_language": 790,
+  "water_route_guard_reason": "SAILING_REQUIRES_WATER",
+  "final_authoring_byte_idempotent": true,
+  "display_reason_for_middle_node": "Stage affine projection gives only about7phonepx for a purely vertical2-unit route; a one-unit horizontal midpoint makes the sailed arc visible while retaining all segments inside the same convex water corridor.",
+  "native_validation": {
+    "status": "passed",
+    "executor": "kernel_reboot isolated native Godot verification",
+    "reports": {
+      "targeted": {
+        "file": "tests/reports/scientist-kernel.json",
+        "sha256": "1bca48c707668f1ea1cc600b4a4ed6b32c76039afdb1d8dc0112a6013b739742",
+        "checks": 170,
+        "failures": 0
+      },
+      "campaign": {
+        "file": "tests/reports/campaign.json",
+        "sha256": "97e0c9de58d021e10441c5896d09dcfceb9039e18f21750c971b8f4d796ccfc1",
+        "checks": 730,
+        "failures": 0
+      }
+    },
+    "actual_L18_canonical_and_alternative_success": true,
+    "actual_final_crossing_frozen": true,
+    "actual_final_boat_water_liquid": true,
+    "actual_final_stone_support_valid": true,
+    "limits": [
+      "No physical phone or human comprehension test is inferred.",
+      "Rendered boat-hull contact is reviewed separately by the stage owner."
+    ]
+  }
+}

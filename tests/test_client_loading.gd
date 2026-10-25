@@ -39,8 +39,10 @@ func run() -> void:
 	check(not app.start_level(1,true),"invalid initial scene rejects safely")
 	check(app.kernel.state.is_empty() and is_instance_valid(app.overlay),"invalid boot has a recovery panel rather than an empty screen")
 	app._open_levels()
-	var first=find_button(app.overlay,"1")
-	check(first!=null and first.disabled,"album disables the scene known to be invalid")
+	var first=app.overlay.find_child("Level_L01",true,false)
+	check(first!=null and first.disabled and int(first.get_meta("level_number",0))==1,"album disables the semantic row for the scene known to be invalid")
+	var second=app.overlay.find_child("Level_L02",true,false)
+	check(second!=null and not second.disabled,"a different valid unlocked scene remains usable after a load failure")
 	check(app.progress.completed.has("L01"),"invalid checkpoint/scene does not erase past completions")
 	# Let the audio server consume this frame before tearing down newly-started streams.
 	await create_timer(.06).timeout

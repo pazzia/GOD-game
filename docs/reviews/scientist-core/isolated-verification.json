@@ -1,0 +1,91 @@
+{
+  "scope": "Isolated Godot core/data snapshot, no shared project import or UI/device acceptance",
+  "engine": "Godot4.7.2 ed1daf0bf",
+  "snapshot": "/tmp/scientist-kernel-wc0e1pg6",
+  "suites": [
+    {
+      "name": "kernel",
+      "checks": 31,
+      "failures": []
+    },
+    {
+      "name": "validation",
+      "checks": 26,
+      "failures": []
+    },
+    {
+      "name": "scientist-kernel",
+      "checks": 88,
+      "failures": []
+    },
+    {
+      "name": "campaign",
+      "checks": 730,
+      "failures": []
+    },
+    {
+      "name": "s2-regressions",
+      "checks": 37,
+      "failures": [],
+      "evidence": "Captured process exit0 and S2 REGRESSIONS37checks0failures in agent log"
+    }
+  ],
+  "current_core_sha256": {
+    "core/simulation_kernel.gd": "8133b12ecef977109921792a6d1e1a6aee6d492d16f9afde052723d18045b00e",
+    "core/content_validator.gd": "a9a22b3835b4c6b45b8140dc9ab711995ca1792786187cdcd44f36d4756f55b5"
+  },
+  "save_progress_followup": {
+    "suite": "test_save_recovery_edges.gd",
+    "checks": 26,
+    "failures": [],
+    "scope": "Typed optional story_started survives actual save/read/sanitize before completing L01; malformed values do not enable resume; incompatible rules checkpoint rejects while completed/unlocked/current_level and prior settings survive."
+  },
+  "workbench_followup": {
+    "suite": "test_workbench.gd",
+    "checks": 79,
+    "failures": [],
+    "scope": "Shared production sources and imported assets, fresh isolated user profile, no editor import; actual L01 geometry/fold authoring, replay+manual ticks+comparison rebuild, validated export/reload and all30 canonical tool previews",
+    "diagnosis": "Five old failures referenced removed tray_stone, former occluder endpoints and a replay prefix from before screen folding. Corrected actual-L01 expectations; added independent tall/folded endpoint editing to workbench model."
+  },
+  "source_switch_followup": {
+    "suites": [
+      {
+        "name": "test_scientist_kernel.gd",
+        "checks": 126,
+        "failures": []
+      },
+      {
+        "name": "test_s2_regressions.gd",
+        "checks": 37,
+        "failures": []
+      },
+      {
+        "name": "test_campaign.gd",
+        "checks": 730,
+        "levels": 30,
+        "alternatives": 16,
+        "failures": []
+      }
+    ],
+    "scope": "Real L11 proof followed by controlled oven disable afterM02, heat/cooling comparison, undo, JSON state restore, proof invalidation, phase/reach/capability guards; no editor import; isolated user profiles",
+    "observation": "Thermal propagation and flammability already checked state.enabled. The missing Interact enable/disable handler was the player-facing blocker. The passive HEATED_OBJECT regression fixture now explicitly clears the controlled-FIRE-only switchable capability."
+  },
+  "sailing_followup": {
+    "suites": [
+      {
+        "name": "test_scientist_kernel.gd",
+        "checks": 170,
+        "failures": []
+      },
+      {
+        "name": "test_campaign.gd",
+        "checks": 730,
+        "levels": 30,
+        "alternatives": 16,
+        "failures": []
+      }
+    ],
+    "scope": "Actual final L18 canonical and alternative replays, separate warm-water boat corridor, dry heater/unused pedestrian endpoint, frozen-water wait, real required goals and laws preserved. AssignRoute sailing geometry guard checks every water-boundary interval; dry endpoints and dry concave interiors reject atomically. No physics or schema extension.",
+    "audit": "Only L18 has an actor with locomotion=sail in the current30level campaign. Data and localization changes were made by the campaign owner."
+  }
+}

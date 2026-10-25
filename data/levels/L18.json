@@ -44,7 +44,8 @@
         "emitter_class": "FIRE",
         "thermal_delta_per_tick": 1,
         "thermal_radius_units": 5,
-        "enabled": true
+        "enabled": true,
+        "switchable": true
       }
     },
     {
@@ -60,7 +61,8 @@
         "emitter_class": "FIRE",
         "thermal_delta_per_tick": 1,
         "thermal_radius_units": 5,
-        "enabled": true
+        "enabled": true,
+        "switchable": true
       }
     },
     {
@@ -254,7 +256,7 @@
     {
       "id": "warm_boat",
       "position": [
-        20,
+        18,
         19
       ],
       "zone_id": "near",
@@ -266,8 +268,8 @@
     {
       "id": "boat_start",
       "position": [
-        6,
-        20
+        22,
+        19
       ],
       "zone_id": "near",
       "mount_layer": "ground",
@@ -325,24 +327,24 @@
       "id": "boat_water",
       "kind": "WATER",
       "thermal_position": [
-        20,
-        20
+        21,
+        19
       ],
       "polygon": [
         [
-          18,
+          19,
           18
         ],
         [
-          22,
+          24,
           18
         ],
         [
-          22,
+          24,
           22
         ],
         [
-          18,
+          19,
           22
         ]
       ],
@@ -482,29 +484,22 @@
       {
         "id": "boat_route_0",
         "position": [
-          6,
-          20
+          22,
+          19
         ]
       },
       {
         "id": "boat_route_1",
         "position": [
-          10,
+          21,
           20
         ]
       },
       {
         "id": "boat_route_2",
         "position": [
-          14,
-          20
-        ]
-      },
-      {
-        "id": "boat_route_3",
-        "position": [
-          18,
-          20
+          22,
+          21
         ]
       }
     ],
@@ -534,8 +529,7 @@
         "nodes": [
           "boat_route_0",
           "boat_route_1",
-          "boat_route_2",
-          "boat_route_3"
+          "boat_route_2"
         ],
         "ticks_per_edge": 10,
         "requirements": [

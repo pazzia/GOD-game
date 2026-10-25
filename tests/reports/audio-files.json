@@ -12,183 +12,183 @@
   "measurements": [
     {
       "id": "MUS_MAIN_FULL",
-      "decoded_samples": 5421176,
-      "expected_samples": 5421176,
-      "peak_linear": 0.48419487476348877,
-      "loop_seam_sample_step": 6.441373989218846e-05,
-      "lufs_i": -21.54,
-      "true_peak_db": -6.28
+      "decoded_samples": 8640000,
+      "expected_samples": 8640000,
+      "peak_linear": 0.4593347907066345,
+      "loop_seam_sample_step": 0.0004507717676460743,
+      "lufs_i": -21.53,
+      "true_peak_db": -6.75
     },
     {
       "id": "MUS_RIVER_BED",
-      "decoded_samples": 5760000,
-      "expected_samples": 5760000,
-      "peak_linear": 0.39087799191474915,
-      "loop_seam_sample_step": 0.00010745658073574305,
+      "decoded_samples": 8918710,
+      "expected_samples": 8918710,
+      "peak_linear": 0.3588227927684784,
+      "loop_seam_sample_step": 0.00047279451973736286,
       "lufs_i": -23.03,
-      "true_peak_db": -8.15
+      "true_peak_db": -8.9
     },
     {
       "id": "MUS_RIVER_CURIOSITY",
-      "decoded_samples": 5760000,
-      "expected_samples": 5760000,
-      "peak_linear": 0.13864000141620636,
-      "loop_seam_sample_step": 3.4391114240861498e-06,
-      "lufs_i": -29.47,
-      "true_peak_db": -17.15
+      "decoded_samples": 8918710,
+      "expected_samples": 8918710,
+      "peak_linear": 0.10317520052194595,
+      "loop_seam_sample_step": 0.0,
+      "lufs_i": -29.52,
+      "true_peak_db": -19.72
     },
     {
       "id": "MUS_RIVER_TENSION",
-      "decoded_samples": 5760000,
-      "expected_samples": 5760000,
-      "peak_linear": 0.08810099214315414,
+      "decoded_samples": 8918710,
+      "expected_samples": 8918710,
+      "peak_linear": 0.07031626999378204,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -33.06,
-      "true_peak_db": -21.1
+      "lufs_i": -33.26,
+      "true_peak_db": -23.06
     },
     {
       "id": "MUS_KITCHEN_BED",
-      "decoded_samples": 6400000,
-      "expected_samples": 6400000,
-      "peak_linear": 0.3476575016975403,
-      "loop_seam_sample_step": 0.00010451277194079012,
-      "lufs_i": -23.02,
-      "true_peak_db": -9.17
+      "decoded_samples": 8131765,
+      "expected_samples": 8131765,
+      "peak_linear": 0.3448466956615448,
+      "loop_seam_sample_step": 0.00040184170939028263,
+      "lufs_i": -23.04,
+      "true_peak_db": -9.25
     },
     {
       "id": "MUS_KITCHEN_CURIOSITY",
-      "decoded_samples": 6400000,
-      "expected_samples": 6400000,
-      "peak_linear": 0.13622993230819702,
+      "decoded_samples": 8131765,
+      "expected_samples": 8131765,
+      "peak_linear": 0.15643306076526642,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -29.52,
-      "true_peak_db": -17.31
+      "lufs_i": -29.55,
+      "true_peak_db": -16.11
     },
     {
       "id": "MUS_KITCHEN_TENSION",
-      "decoded_samples": 6400000,
-      "expected_samples": 6400000,
-      "peak_linear": 0.08405303210020065,
+      "decoded_samples": 8131765,
+      "expected_samples": 8131765,
+      "peak_linear": 0.06990721076726913,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -33.16,
-      "true_peak_db": -21.51
+      "lufs_i": -33.04,
+      "true_peak_db": -23.11
     },
     {
       "id": "MUS_ARCHIVE_BED",
-      "decoded_samples": 5574194,
-      "expected_samples": 5574194,
-      "peak_linear": 0.36073037981987,
-      "loop_seam_sample_step": 0.00022776052355766296,
-      "lufs_i": -22.99,
-      "true_peak_db": -8.86
+      "decoded_samples": 6912000,
+      "expected_samples": 6912000,
+      "peak_linear": 0.3591911196708679,
+      "loop_seam_sample_step": 0.00015950738452374935,
+      "lufs_i": -23.03,
+      "true_peak_db": -8.89
     },
     {
       "id": "MUS_ARCHIVE_CURIOSITY",
-      "decoded_samples": 5574194,
-      "expected_samples": 5574194,
-      "peak_linear": 0.0970163568854332,
+      "decoded_samples": 6912000,
+      "expected_samples": 6912000,
+      "peak_linear": 0.16062432527542114,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -29.62,
-      "true_peak_db": -20.24
+      "lufs_i": -29.52,
+      "true_peak_db": -15.88
     },
     {
       "id": "MUS_ARCHIVE_TENSION",
-      "decoded_samples": 5574194,
-      "expected_samples": 5574194,
-      "peak_linear": 0.08811219036579132,
+      "decoded_samples": 6912000,
+      "expected_samples": 6912000,
+      "peak_linear": 0.0719519704580307,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -33.06,
-      "true_peak_db": -21.1
+      "lufs_i": -33.12,
+      "true_peak_db": -22.86
     },
     {
       "id": "MUS_ALBUM_FULL",
-      "decoded_samples": 5945806,
-      "expected_samples": 5945806,
-      "peak_linear": 0.47309401631355286,
-      "loop_seam_sample_step": 0.0002509219339117408,
-      "lufs_i": -21.54,
-      "true_peak_db": -6.5
+      "decoded_samples": 9216000,
+      "expected_samples": 9216000,
+      "peak_linear": 0.4878823757171631,
+      "loop_seam_sample_step": 3.799516707658768e-05,
+      "lufs_i": -21.52,
+      "true_peak_db": -6.23
     },
     {
       "id": "MUS_FINALE_BED",
-      "decoded_samples": 6582857,
-      "expected_samples": 6582857,
-      "peak_linear": 0.4127505123615265,
-      "loop_seam_sample_step": 4.937010817229748e-05,
+      "decoded_samples": 8378182,
+      "expected_samples": 8378182,
+      "peak_linear": 0.3694468140602112,
+      "loop_seam_sample_step": 0.00024069403298199177,
       "lufs_i": -23.03,
-      "true_peak_db": -7.68
+      "true_peak_db": -8.65
     },
     {
       "id": "MUS_FINALE_CURIOSITY",
-      "decoded_samples": 6582857,
-      "expected_samples": 6582857,
-      "peak_linear": 0.14599789679050446,
+      "decoded_samples": 8378182,
+      "expected_samples": 8378182,
+      "peak_linear": 0.16815350949764252,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -29.51,
-      "true_peak_db": -16.71
+      "lufs_i": -29.54,
+      "true_peak_db": -15.48
     },
     {
       "id": "MUS_FINALE_TENSION",
-      "decoded_samples": 6582857,
-      "expected_samples": 6582857,
-      "peak_linear": 0.08763352781534195,
+      "decoded_samples": 8378182,
+      "expected_samples": 8378182,
+      "peak_linear": 0.06975235790014267,
       "loop_seam_sample_step": 0.0,
-      "lufs_i": -33.03,
-      "true_peak_db": -21.15
+      "lufs_i": -33.23,
+      "true_peak_db": -23.13
     },
     {
       "id": "MUS_CREDITS_FULL",
-      "decoded_samples": 6981818,
-      "expected_samples": 6981818,
-      "peak_linear": 0.44329479336738586,
-      "loop_seam_sample_step": 0.00013796280836686492,
+      "decoded_samples": 8918710,
+      "expected_samples": 8918710,
+      "peak_linear": 0.45932719111442566,
+      "loop_seam_sample_step": 0.0003769742324948311,
       "lufs_i": -21.53,
-      "true_peak_db": -7.06
+      "true_peak_db": -6.75
     },
     {
       "id": "MUS_STINGER_PROOF",
-      "decoded_samples": 76800,
-      "expected_samples": 76800,
-      "peak_linear": 0.224822998046875,
+      "decoded_samples": 81600,
+      "expected_samples": 81600,
+      "peak_linear": 0.218719482421875,
       "loop_seam_sample_step": null,
-      "lufs_i": -24.0,
-      "true_peak_db": -12.92
+      "lufs_i": -23.99,
+      "true_peak_db": -13.2
     },
     {
       "id": "MUS_STINGER_LAW",
-      "decoded_samples": 115200,
-      "expected_samples": 115200,
-      "peak_linear": 0.24200439453125,
+      "decoded_samples": 120000,
+      "expected_samples": 120000,
+      "peak_linear": 0.227783203125,
       "loop_seam_sample_step": null,
-      "lufs_i": -24.0,
-      "true_peak_db": -12.32
+      "lufs_i": -24.01,
+      "true_peak_db": -12.84
     },
     {
       "id": "MUS_STINGER_REVEAL",
       "decoded_samples": 45600,
       "expected_samples": 45600,
-      "peak_linear": 0.17486572265625,
+      "peak_linear": 0.229217529296875,
       "loop_seam_sample_step": null,
-      "lufs_i": -24.0,
-      "true_peak_db": -15.13
+      "lufs_i": -23.99,
+      "true_peak_db": -12.78
     },
     {
       "id": "MUS_STINGER_CHAPTER",
-      "decoded_samples": 182400,
-      "expected_samples": 182400,
-      "peak_linear": 0.2777099609375,
+      "decoded_samples": 187200,
+      "expected_samples": 187200,
+      "peak_linear": 0.26922607421875,
       "loop_seam_sample_step": null,
-      "lufs_i": -24.01,
-      "true_peak_db": -11.13
+      "lufs_i": -23.99,
+      "true_peak_db": -11.39
     },
     {
       "id": "MUS_STINGER_FINAL",
-      "decoded_samples": 312000,
-      "expected_samples": 312000,
-      "peak_linear": 0.263763427734375,
+      "decoded_samples": 326400,
+      "expected_samples": 326400,
+      "peak_linear": 0.289703369140625,
       "loop_seam_sample_step": null,
-      "lufs_i": -24.0,
-      "true_peak_db": -11.58
+      "lufs_i": -24.09,
+      "true_peak_db": -10.75
     },
     {
       "id": "AMB_RIVER_WATER",

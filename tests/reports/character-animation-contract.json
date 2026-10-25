@@ -1,14 +1,20 @@
 {
-  "checks": 126,
+  "checks": 788,
   "engine": "4.7.2-stable (official)",
   "failures": [],
   "integrated_witness_actors": [
     "marfa",
     "nika",
+    "crowd_fisherman",
     "semyon",
+    "crowd_gardener",
+    "crowd_postwoman",
+    "crowd_musician",
     "lada",
+    "crowd_merchant",
     "hugo",
+    "crowd_librarian",
     "roza"
   ],
-  "limits": "Part-rig integration and logical isolation; visual acting quality and devices require separate review."
+  "limits": "Manifest illustration integration, animated cue timing and logical isolation; no separated-limb or device acceptance claim."
 }

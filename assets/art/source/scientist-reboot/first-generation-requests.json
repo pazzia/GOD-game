@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cast-a",
+    "refs": [
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+      "/workspace/GOD-game/docs/design/reboot-01/assets/characters/cast-board.png"
+    ],
+    "alpha": true,
+    "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. A transparent landscape CHARACTER SPRITE ATLAS, exactly three separated full-body people side by side in three equal-width columns with at least 60px empty transparent gutters, no overlap, all hair and feet entirely visible, same baseline and same lighting. LEFT: SEMYON, a tall slim middle-aged meticulous carpenter, shaved head with dark side hair, small angular neat moustache, long narrow face distinct from professor, round work spectacles, warm-grey shirt, dark indigo practical waistcoat with two big pockets, mustard belt, brown shoes, holds folded wooden ruler and calmly studies it. CENTER: NIKA, a short observant child inventor age11, brown skin, large curly dark hair tied in two puffs, big practical safety goggles on forehead, sunny-yellow cropped jacket over teal overalls, chunky cream shoes, one large indigo notebook secured with strap, alert curious bright eyes; child stands slightly lower/smaller than adult but readable, no tools held dangerously. RIGHT: LADA, a stout mature female festival cook, warm freckled face, auburn hair under a simple tall soft cream chef hat, pumpkin orange tunic and berry-red apron, warm-cream sleeves, small oven-mitt cape, brass/copper spoon at belt, one hand on hip, capable friendly open expression. Neutral three-quarter front standing poses appropriate for NPC talking and observing. Characters occupy most column height but all fit in their own column. Empty transparent background, no ground/pedestal, no backdrop, no cast shadows behind figures, no scenery, no glow.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-ea7d2fb7-abc0-4bda-be1e-098b71c4834e.png"
+  },
+  {
+    "id": "cast-b",
+    "refs": [
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+      "/workspace/GOD-game/docs/design/reboot-01/assets/characters/cast-board.png"
+    ],
+    "alpha": true,
+    "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. A transparent landscape CHARACTER SPRITE ATLAS, exactly three separated full-body characters side by side in three equal-width columns with at least60px empty transparent gutters, no overlap, all hair, hats and feet inside image, same baseline. LEFT: ROZA, a tall severe but fair mature female inspector aged50, deep-plum straight tailored jacket and skirt, sage trim, cream blouse, square brass-rim glasses, sleek silver-streaked black hair in a tidy bun, long clear adult face, holds a large sage clipboard and small simple wooden administrative stamp, skeptical raised eyebrow, competent calm. CENTER: HUGO, a mature male rival stage craftsman aged48, large stocky powerful triangular silhouette, reddish-brown swept-back hair, handlebar moustache, dark navy and muted raspberry elegant stage coat, short broad matching cape, wide navy hat with simple brass band, long raspberry ribbon secured safely at shoulder, cream shirt, sturdy dark boots, confident slightly theatrical stance and an amused knowing expression, no resemblance to professor. RIGHT: CARAMELKA, a single small barrel-bodied female domestic GOAT standing naturally on four separate cream legs, caramel-russet back and short coat, cream muzzle, short gently curved comma horns, turquoise bell collar, intelligent golden eyes and playful sideways look. One full side/three-quarter body, clear goat anatomy, no human limbs, no saddle. Goat stands at about45percent adult height. All characters in consistent warm illustrated-animation style. No text, no frame, no background, no glow cloud, no pedestal, clean alpha.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-b87dc31e-5fa2-4f76-98aa-cf622e1473e3.png"
+  },
+  {
+    "id": "ENV02",
+    "refs": [
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+    ],
+    "alpha": false,
+    "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. Landscape 16:9 environment plate for an Android horizontal adventure puzzle game, a sunny Mediterranean-inspired FESTIVAL KITCHEN SQUARE in the same town as attached menu. Wide three-quarter view slightly elevated. Upper45percent: attractive cream rounded stone bakery buildings, copper pipes, a glass greenhouse, terracotta tiled roofs, teal doors, coral awnings and a few hanging colorful festival flags; a substantial brick communal bread oven built into the right rear wall, oven mouth DARK and inactive, NO flame/ice, no baked-in gameplay event. Lower55percent is a broad OPEN pale warm stone stage-like courtyard with simple quiet paving in perspective, spacious at left, center and right so many movable people and props can be composed here; a narrow distant water channel only far beyond square, NO water/gaps/obstructions across playable courtyard. Foreground calm, no furniture or puzzle objects in central play space. Warm amber sunlight, soft local turquoise reflected light, abundant color and refined volume, polished high-budget original animated-film environment, clear value hierarchy, charming useful architecture. NO people, NO animals, NO UI, NO letters, NO symbols resembling buttons. Distinct from canal scene but coherent palette.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-18d49388-58cb-4ab5-aff2-f67aad39d3d3.png"
+  },
+  {
+    "id": "ENV03",
+    "refs": [
+      "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+    ],
+    "alpha": false,
+    "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. Landscape16:9 environment plate for an Android horizontal adventure puzzle game, a sunny PAPERMAKERS ARCHIVE WORKSHOP PLAZA in the same cream stone town as attached menu. Wide three-quarter view slightly elevated. Upper45percent: beautiful layered cream masonry and wood paper-workshop buildings, curved teal shutters and plum/coral fabric awnings, paper lanterns and neatly hanging paper sheets on upper balcony lines, tasteful towers of closed archive folders behind windows, an airy small distant crenellated fortress gate silhouette and blue sky. Build a rich original place made from paper, timber and warm architecture, not literally a cardboard box world. Lower55percent: broad OPEN warm pale-cream courtyard terrace stage with subdued simple paving and spacious readable left/center/right areas for movable puzzle props and characters. NO large furniture, bridges, gaps or objects across central play area. A few restrained paper-craft materials at rear building edge only; foreground quiet so important paper mechanisms read clearly. Golden sunny upper-left light with teal/indigo soft shadows, polished volumetric illustrated animation consistent with approved menu. No people or animals, NO UI, NO lettering, no puzzle solution baked in.",
+    "tool": "image_gen.imagegen",
+    "source_path": "/workspace/generated_images/exec-f742bf75-afdc-4f0c-941f-0e97a0501a57.png"
+  }
+]

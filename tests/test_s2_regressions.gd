@@ -54,7 +54,7 @@ func thermal_cases() -> void:
 	check(kb.state.zones.demo_water.thermal_charge==1,"Vision-only wall does not block heat")
 	k=fresh("L11");k.state.active_laws=["M02"];k.state.entities.oven.position=[14,17];k._recompute_effective();k._step_thermal()
 	check(k.state.zones.demo_water.thermal_charge==-1,"M02 reverses real FIRE")
-	d=data("L11");d.initial_active_laws=["M02"];entity(d,"oven").properties.emitter_class="HEATED_OBJECT"
+	d=data("L11");d.initial_active_laws=["M02"];entity(d,"oven").properties.emitter_class="HEATED_OBJECT";entity(d,"oven").properties.switchable=false
 	var kh=Kernel.new();kh.load_level(d);kh.state.entities.oven.position=[14,17];kh._step_thermal()
 	check(kh.state.zones.demo_water.thermal_charge==1,"M02 does not reverse HEATED_OBJECT")
 	k=fresh("L11");k.state.entities.oven.enabled=false;k.state.zones.demo_water.phase="frozen";k.state.zones.demo_water.thermal_charge=-1;k._step_thermal()

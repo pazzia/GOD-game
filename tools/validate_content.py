@@ -19,9 +19,19 @@ def main():
  for row in campaign['levels']:
   lid=row['id'];d=read('data/levels/'+lid+'.json');es=index(d['entities'],lid+'entities');ss=index(d['slots'],lid+'slots');zs=index(d['zones'],lid+'zones');ws=index(d['witnesses'],lid+'witnesses');ns=index(d['navigation']['nodes'],lid+'nodes');rs=index(d['navigation']['routes'],lid+'routes');os=index(d['occluders'],lid+'occluders')
   check(d['level_id']==lid,lid+' identity');check(len(set(d['initial_active_laws']))==len(d['initial_active_laws'])<=d['max_active_laws']<=2,lid+' laws');check(d['title_key']in ru and set(d['hints'])<=ru.keys(),lid+' text');check(len(set(d['hints']))==3,lid+' hints')
+  if 'demonstration_timeout_ticks'in d:check(type(d['demonstration_timeout_ticks'])is int and 1<=d['demonstration_timeout_ticks']<=200,lid+' demonstration horizon')
+  for o in os.values():
+   if 'folded_segment'in o:
+    points=o['folded_segment'];check(isinstance(points,list)and len(points)==2 and all(isinstance(v,list)and len(v)==2 and all(type(n)is int and 0<=n<=m for n,m in zip(v,[24,28]))for v in points)and points[0]!=points[1],lid+' folded visibility segment')
+    check(es.get(o.get('owner_entity'),{}).get('properties',{}).get('foldable')is True,lid+' folded visibility owner')
   for s in ss.values():check(s['zone_id']in zs,lid+' slot zone');check(len(s['position'])==2 and all(type(v)is int and 0<=v<=m for v,m in zip(s['position'],[24,28])),lid+' slot coordinates');check('slot.'+s['id']+'.name'in ru,lid+' slot translation '+s['id'])
   for e in es.values():
    assets.add(e['asset_id']);check(e['initial_slot']in ss,lid+' initial slot');check(e['type_id']in ss[e['initial_slot']]['allowed_entity_types'],lid+' initial slot type');check(type(e['mass_units'])is int and e['mass_units']>=0,lid+' mass');p=e['properties']
+   for k in('foldable','initial_folded','removable','switchable'):
+    if k in p:check(type(p[k])is bool,lid+' boolean property '+k)
+   if p.get('switchable'):check(p.get('emitter_class')=='FIRE',lid+' switchable controlled emitter')
+   if p.get('initial_folded'):check(p.get('foldable')is True,lid+' initial folded capability')
+   if 'remove_requires_law'in p:check(p['remove_requires_law']in('M01','M02','M03'),lid+' removal law')
    for k in('supports_entity','carrier_entity_id','tow_rope_entity_id','hoist_entity_id','mooring_owner_entity_id','attachment_target_entity_id'):
     if k in p:check(p[k]in es,lid+' property reference '+k)
    for k in('span_anchor_entity_ids','insulation_by_entity_ids','protects_entity_ids','payload_entity_ids'):

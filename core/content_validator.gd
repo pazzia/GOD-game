@@ -68,6 +68,7 @@ func validate(data: Dictionary) -> Array[String]:
 			if law not in LAWS: fail(group,"unknown law")
 			if seen.has(law): fail(group,"duplicate law")
 			seen[law]=true
+	if data.has("demonstration_timeout_ticks"): integer_field(data,"demonstration_timeout_ticks","level",1,200)
 	integer_field(data,"max_active_laws","level",1,2)
 	integer_field(data,"required_votes","level",0 if data.proofs.is_empty() else 1,witnesses.size())
 	if is_integer(data.max_active_laws) and data.initial_active_laws.size()>data.max_active_laws: fail("initial_active_laws","too many")
@@ -112,6 +113,12 @@ func validate(data: Dictionary) -> Array[String]:
 		if o.get("active_slot")!=null and not slots.has(o.get("active_slot","")): fail("occluders."+id,"active slot")
 		if not o.get("segment") is Array or o.segment.size()!=2: fail("occluders."+id,"segment")
 		elif not point(o.segment[0],true) or not point(o.segment[1],true) or o.segment[0]==o.segment[1]: fail("occluders."+id,"segment points")
+		if o.has("folded_segment"):
+			var folded: Variant=o.folded_segment
+			if not folded is Array or folded.size()!=2: fail("occluders."+id,"folded segment")
+			elif not point(folded[0],true) or not point(folded[1],true) or folded[0]==folded[1]: fail("occluders."+id,"folded segment points")
+			var owner_props: Variant=entities.get(o.get("owner_entity",""),{}).get("properties",{})
+			if not owner_props is Dictionary or not owner_props.get("foldable",false): fail("occluders."+id,"folded segment requires foldable owner")
 		if not o.get("channels") is Array: fail("occluders."+id,"channels")
 		else:
 			for channel in o.channels:
@@ -186,8 +193,11 @@ func validate_properties(e: Dictionary, id: String) -> void:
 		if p.has(key) and (not is_integer(p[key]) or p[key]<0): fail(path+"."+key,"nonnegative integer required")
 	for key in ["thermal_delta_per_tick","cold_damage_below"]:
 		if p.has(key) and not is_integer(p[key]): fail(path+"."+key,"integer required")
-	for key in ["buoyant","hidden_method","grounded","anchored","flammable","enabled","initial_closed","initial_open","payload_mass_included"]:
+	for key in ["buoyant","hidden_method","grounded","anchored","flammable","enabled","initial_closed","initial_open","payload_mass_included","foldable","initial_folded","removable","switchable"]:
 		if p.has(key) and not p[key] is bool: fail(path+"."+key,"boolean required")
+	if p.get("switchable",false) and p.get("emitter_class","")!="FIRE": fail(path,"switchable requires a controlled FIRE emitter")
+	if p.has("remove_requires_law") and p.remove_requires_law not in LAWS: fail(path,"unknown removal law")
+	if p.get("initial_folded",false) and not p.get("foldable",false): fail(path,"folded initial state requires foldable entity")
 	if p.has("size") and p.size not in ["S","M","L"]: fail(path,"unknown size")
 	if p.has("transport_mode") and p.transport_mode not in ["carried","wheeled","towed"]: fail(path,"unknown transport mode")
 	if p.has("emitter_class") and p.emitter_class not in ["FIRE","HEATED_OBJECT","COLD_PACK"]: fail(path,"unknown emitter class")

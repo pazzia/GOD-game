@@ -1,0 +1,1748 @@
+[
+  {
+    "id": "CH01",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/professor.png",
+    "region": [
+      0,
+      0,
+      1024,
+      1536
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      212,
+      14,
+      853,
+      1517
+    ]
+  },
+  {
+    "id": "CH02",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/plum.png",
+    "region": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      260,
+      22,
+      1303,
+      987
+    ]
+  },
+  {
+    "id": "CH03",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/marfa.png",
+    "region": [
+      0,
+      0,
+      1024,
+      1536
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      89,
+      15,
+      1007,
+      1514
+    ]
+  },
+  {
+    "id": "CH04",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-a.png",
+    "region": [
+      121,
+      0,
+      441,
+      890
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      131,
+      10,
+      551,
+      880
+    ]
+  },
+  {
+    "id": "CH05",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-a.png",
+    "region": [
+      682,
+      109,
+      368,
+      773
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      692,
+      121,
+      1039,
+      872
+    ]
+  },
+  {
+    "id": "CH06",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-a.png",
+    "region": [
+      1165,
+      0,
+      525,
+      890
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1176,
+      10,
+      1679,
+      879
+    ]
+  },
+  {
+    "id": "CH07",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-b.png",
+    "region": [
+      156,
+      7,
+      379,
+      869
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      167,
+      17,
+      524,
+      865
+    ]
+  },
+  {
+    "id": "CH08",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-b.png",
+    "region": [
+      602,
+      8,
+      688,
+      866
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      613,
+      18,
+      1279,
+      864
+    ]
+  },
+  {
+    "id": "CH09",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/cast-b.png",
+    "region": [
+      1313,
+      376,
+      402,
+      496
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1324,
+      387,
+      1704,
+      862
+    ]
+  },
+  {
+    "id": "CROWD01",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      140,
+      0,
+      335,
+      512
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      161,
+      10,
+      462,
+      510
+    ]
+  },
+  {
+    "id": "CROWD02",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      630,
+      5,
+      265,
+      507
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      652,
+      13,
+      875,
+      509
+    ]
+  },
+  {
+    "id": "CROWD03",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      1125,
+      0,
+      285,
+      512
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1150,
+      8,
+      1387,
+      505
+    ]
+  },
+  {
+    "id": "CROWD04",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      155,
+      515,
+      235,
+      509
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      166,
+      521,
+      377,
+      1018
+    ]
+  },
+  {
+    "id": "CROWD05",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      620,
+      515,
+      370,
+      509
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      623,
+      518,
+      989,
+      1017
+    ]
+  },
+  {
+    "id": "CROWD06",
+    "variant": "",
+    "category": "characters",
+    "path": "assets/art/reboot/characters/crowd-atlas.png",
+    "region": [
+      1150,
+      515,
+      260,
+      509
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1165,
+      520,
+      1394,
+      1018
+    ]
+  },
+  {
+    "id": "PROP_STONE_S",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "PROP_STONE_M",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "PROP_STONE_L",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "PROP_FLOAT",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      559,
+      200,
+      519,
+      266
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      565,
+      206,
+      1071,
+      460
+    ]
+  },
+  {
+    "id": "PROP_SCREEN",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      1117,
+      9,
+      409,
+      515
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1124,
+      15,
+      1519,
+      518
+    ]
+  },
+  {
+    "id": "PROP_SCREEN",
+    "variant": "folded",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      35,
+      622,
+      444,
+      326
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      42,
+      629,
+      473,
+      941
+    ]
+  },
+  {
+    "id": "ATLAS",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      529,
+      542,
+      549,
+      423
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      536,
+      549,
+      1072,
+      959
+    ]
+  },
+  {
+    "id": "MIRACLE_STAMP",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      1128,
+      589,
+      382,
+      355
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1135,
+      595,
+      1503,
+      938
+    ]
+  },
+  {
+    "id": "PROP_CARGO_CRATE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      93,
+      31,
+      380,
+      329
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      99,
+      37,
+      466,
+      353
+    ]
+  },
+  {
+    "id": "PROP_TICKET_BOOTH",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      615,
+      0,
+      311,
+      383
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      621,
+      3,
+      920,
+      376
+    ]
+  },
+  {
+    "id": "PROP_ANCHOR",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      1068,
+      555,
+      430,
+      395
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1074,
+      562,
+      1492,
+      943
+    ]
+  },
+  {
+    "id": "PROP_STONE_ANCHOR",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      89,
+      360,
+      359,
+      355
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      96,
+      367,
+      442,
+      709
+    ]
+  },
+  {
+    "id": "PROP_BOLLARD",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      607,
+      404,
+      320,
+      310
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      613,
+      411,
+      921,
+      707
+    ]
+  },
+  {
+    "id": "PROP_BOAT",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      1011,
+      412,
+      501,
+      280
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1017,
+      419,
+      1506,
+      686
+    ]
+  },
+  {
+    "id": "PROP_ROPE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      81,
+      730,
+      426,
+      290
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      88,
+      737,
+      501,
+      1013
+    ]
+  },
+  {
+    "id": "PROP_THREAD",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      602,
+      734,
+      361,
+      271
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      608,
+      740,
+      956,
+      998
+    ]
+  },
+  {
+    "id": "PROP_CLAMP",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      1032,
+      711,
+      470,
+      292
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1039,
+      718,
+      1495,
+      997
+    ]
+  },
+  {
+    "id": "PROP_COLD_PACK",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      89,
+      54,
+      380,
+      280
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      96,
+      60,
+      462,
+      328
+    ]
+  },
+  {
+    "id": "PROP_DECOY_FLAME",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      629,
+      4,
+      253,
+      353
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      636,
+      11,
+      875,
+      350
+    ]
+  },
+  {
+    "id": "PROP_FIRE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1093,
+      8,
+      342,
+      355
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1099,
+      14,
+      1429,
+      356
+    ]
+  },
+  {
+    "id": "PROP_FIRE",
+    "variant": "cold",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      115,
+      341,
+      337,
+      343
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      121,
+      347,
+      445,
+      683
+    ]
+  },
+  {
+    "id": "PROP_FIRE",
+    "variant": "off",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      1087,
+      41,
+      421,
+      446
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1093,
+      48,
+      1501,
+      480
+    ]
+  },
+  {
+    "id": "FIRE_COLD",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      115,
+      341,
+      337,
+      343
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      121,
+      347,
+      445,
+      683
+    ]
+  },
+  {
+    "id": "PROP_WATER_BOWL",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      563,
+      390,
+      422,
+      274
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      570,
+      397,
+      979,
+      657
+    ]
+  },
+  {
+    "id": "PROP_WATER_BOWL",
+    "variant": "frozen",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      31,
+      121,
+      474,
+      333
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      37,
+      128,
+      498,
+      448
+    ]
+  },
+  {
+    "id": "PROP_HEATED_STONE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1051,
+      423,
+      443,
+      245
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1057,
+      430,
+      1487,
+      661
+    ]
+  },
+  {
+    "id": "PROP_HEATED_STONE",
+    "variant": "cold",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "PROP_INSULATED_BOX",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      97,
+      684,
+      371,
+      322
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      103,
+      685,
+      462,
+      1000
+    ]
+  },
+  {
+    "id": "PROP_BREAD",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      530,
+      690,
+      490,
+      327
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      536,
+      696,
+      1014,
+      1010
+    ]
+  },
+  {
+    "id": "PROP_DESSERT",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1065,
+      684,
+      402,
+      303
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1072,
+      691,
+      1460,
+      980
+    ]
+  },
+  {
+    "id": "PROP_HIDDEN_FRAME",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      20,
+      529,
+      496,
+      437
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      26,
+      536,
+      509,
+      959
+    ]
+  },
+  {
+    "id": "PROP_PAPER_BRIDGE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      534,
+      83,
+      519,
+      215
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      541,
+      90,
+      1046,
+      291
+    ]
+  },
+  {
+    "id": "PROP_PAPER_BRIDGE",
+    "variant": "reinforced",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      519,
+      152,
+      559,
+      267
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      526,
+      159,
+      1071,
+      413
+    ]
+  },
+  {
+    "id": "PROP_CONTROL_WEIGHT",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      555,
+      544,
+      479,
+      425
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      562,
+      551,
+      1028,
+      962
+    ]
+  },
+  {
+    "id": "PROP_HOIST",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      95,
+      317,
+      377,
+      360
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      102,
+      324,
+      465,
+      670
+    ]
+  },
+  {
+    "id": "PROP_PAPER_WALL",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      584,
+      325,
+      400,
+      341
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      590,
+      332,
+      978,
+      664
+    ]
+  },
+  {
+    "id": "PROP_GATE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      1107,
+      371,
+      389,
+      301
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1114,
+      377,
+      1490,
+      665
+    ]
+  },
+  {
+    "id": "PROP_FLAGS",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      55,
+      716,
+      473,
+      249
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      61,
+      722,
+      521,
+      958
+    ]
+  },
+  {
+    "id": "PROP_POSTER",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      660,
+      663,
+      254,
+      331
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      667,
+      663,
+      908,
+      987
+    ]
+  },
+  {
+    "id": "PROP_STEAM",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      1108,
+      701,
+      387,
+      289
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1115,
+      708,
+      1489,
+      980
+    ]
+  },
+  {
+    "id": "SCENE_TERRACE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      0,
+      145,
+      520,
+      330
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      12,
+      155,
+      509,
+      458
+    ]
+  },
+  {
+    "id": "SCENE_DOCK",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      525,
+      145,
+      505,
+      335
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      534,
+      158,
+      1014,
+      467
+    ]
+  },
+  {
+    "id": "SCENE_WATER",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      1035,
+      160,
+      500,
+      335
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1039,
+      183,
+      1524,
+      481
+    ]
+  },
+  {
+    "id": "SCENE_ICE",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      0,
+      615,
+      515,
+      335
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      13,
+      626,
+      510,
+      941
+    ]
+  },
+  {
+    "id": "SCENE_PAPER_PLATFORM",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      515,
+      615,
+      515,
+      335
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      517,
+      629,
+      1018,
+      926
+    ]
+  },
+  {
+    "id": "SCENE_STONE_STEP",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/terrain-atlas.png",
+    "region": [
+      1030,
+      615,
+      505,
+      325
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1039,
+      630,
+      1520,
+      923
+    ]
+  },
+  {
+    "id": "stone_m",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "stone_s",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "tow_rope",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      81,
+      730,
+      426,
+      290
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      88,
+      737,
+      501,
+      1013
+    ]
+  },
+  {
+    "id": "cargo_crate",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      93,
+      31,
+      380,
+      329
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      99,
+      37,
+      466,
+      353
+    ]
+  },
+  {
+    "id": "stone_l",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "float",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      559,
+      200,
+      519,
+      266
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      565,
+      206,
+      1071,
+      460
+    ]
+  },
+  {
+    "id": "screen",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      1117,
+      9,
+      409,
+      515
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1124,
+      15,
+      1519,
+      518
+    ]
+  },
+  {
+    "id": "screen",
+    "variant": "folded",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      35,
+      622,
+      444,
+      326
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      42,
+      629,
+      473,
+      941
+    ]
+  },
+  {
+    "id": "boat",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      1011,
+      412,
+      501,
+      280
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1017,
+      419,
+      1506,
+      686
+    ]
+  },
+  {
+    "id": "stone_anchor",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      89,
+      360,
+      359,
+      355
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      96,
+      367,
+      442,
+      709
+    ]
+  },
+  {
+    "id": "bollard",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      607,
+      404,
+      320,
+      310
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      613,
+      411,
+      921,
+      707
+    ]
+  },
+  {
+    "id": "mooring_rope",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      81,
+      730,
+      426,
+      290
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      88,
+      737,
+      501,
+      1013
+    ]
+  },
+  {
+    "id": "paper_wall",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      584,
+      325,
+      400,
+      341
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      590,
+      332,
+      978,
+      664
+    ]
+  },
+  {
+    "id": "wooden_gate",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      1107,
+      371,
+      389,
+      301
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1114,
+      377,
+      1490,
+      665
+    ]
+  },
+  {
+    "id": "paper_span",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      534,
+      83,
+      519,
+      215
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      541,
+      90,
+      1046,
+      291
+    ]
+  },
+  {
+    "id": "paper_span",
+    "variant": "reinforced",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      519,
+      152,
+      559,
+      267
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      526,
+      159,
+      1071,
+      413
+    ]
+  },
+  {
+    "id": "control_weight",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      555,
+      544,
+      479,
+      425
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      562,
+      551,
+      1028,
+      962
+    ]
+  },
+  {
+    "id": "hoist",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      95,
+      317,
+      377,
+      360
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      102,
+      324,
+      465,
+      670
+    ]
+  },
+  {
+    "id": "oven",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1093,
+      8,
+      342,
+      355
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1099,
+      14,
+      1429,
+      356
+    ]
+  },
+  {
+    "id": "oven",
+    "variant": "cold",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      115,
+      341,
+      337,
+      343
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      121,
+      347,
+      445,
+      683
+    ]
+  },
+  {
+    "id": "oven",
+    "variant": "off",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      1087,
+      41,
+      421,
+      446
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1093,
+      48,
+      1501,
+      480
+    ]
+  },
+  {
+    "id": "paper_flags",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      55,
+      716,
+      473,
+      249
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      61,
+      722,
+      521,
+      958
+    ]
+  },
+  {
+    "id": "heated_stone",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1051,
+      423,
+      443,
+      245
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1057,
+      430,
+      1487,
+      661
+    ]
+  },
+  {
+    "id": "heated_stone",
+    "variant": "cold",
+    "category": "props",
+    "path": "assets/art/reboot/props/canal-atlas.png",
+    "region": [
+      11,
+      177,
+      531,
+      275
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      18,
+      184,
+      535,
+      446
+    ]
+  },
+  {
+    "id": "hidden_frame",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      20,
+      529,
+      496,
+      437
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      26,
+      536,
+      509,
+      959
+    ]
+  },
+  {
+    "id": "clamp",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      1032,
+      711,
+      470,
+      292
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1039,
+      718,
+      1495,
+      997
+    ]
+  },
+  {
+    "id": "bowl",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      563,
+      390,
+      422,
+      274
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      570,
+      397,
+      979,
+      657
+    ]
+  },
+  {
+    "id": "bowl",
+    "variant": "frozen",
+    "category": "props",
+    "path": "assets/art/reboot/props/states-materials-atlas.png",
+    "region": [
+      31,
+      121,
+      474,
+      333
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      37,
+      128,
+      498,
+      448
+    ]
+  },
+  {
+    "id": "decoy_flame",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      629,
+      4,
+      253,
+      353
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      636,
+      11,
+      875,
+      350
+    ]
+  },
+  {
+    "id": "cold_pack",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      89,
+      54,
+      380,
+      280
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      96,
+      60,
+      462,
+      328
+    ]
+  },
+  {
+    "id": "safety_thread",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      602,
+      734,
+      361,
+      271
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      608,
+      740,
+      956,
+      998
+    ]
+  },
+  {
+    "id": "ticket_booth",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/harbor-atlas.png",
+    "region": [
+      615,
+      0,
+      311,
+      383
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      621,
+      3,
+      920,
+      376
+    ]
+  },
+  {
+    "id": "bread",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      530,
+      690,
+      490,
+      327
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      536,
+      696,
+      1014,
+      1010
+    ]
+  },
+  {
+    "id": "dessert",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      1065,
+      684,
+      402,
+      303
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1072,
+      691,
+      1460,
+      980
+    ]
+  },
+  {
+    "id": "insulated_box",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/kitchen-atlas.png",
+    "region": [
+      97,
+      684,
+      371,
+      322
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      103,
+      685,
+      462,
+      1000
+    ]
+  },
+  {
+    "id": "steam_cloud",
+    "variant": "",
+    "category": "props",
+    "path": "assets/art/reboot/props/mechanisms-atlas.png",
+    "region": [
+      1108,
+      701,
+      387,
+      289
+    ],
+    "solid_alpha_bbox_absolute_ltrb": [
+      1115,
+      708,
+      1489,
+      980
+    ]
+  }
+]

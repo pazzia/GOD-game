@@ -12,9 +12,12 @@ def main():
  parser.add_argument('--tools-dir',type=Path,default=ROOT.parent/'tools')
  parser.add_argument('--output',type=Path,default=ROOT/'build/ui')
  parser.add_argument('--quick',action='store_true')
+ parser.add_argument('--display',type=int,default=96,choices=range(90,111),help='Dedicated Xvfb display; use distinct values for parallel capture runs.')
  parser.add_argument('--campaign',action='store_true',help='Capture all30 initial and successful campaign states.')
  parser.add_argument('--jobs',type=int,default=2,choices=[1,2,3],help='Bounded parallel native viewport captures, each with isolated saves.')
  parser.add_argument('--resolution',help='Override every capture with WIDTHxHEIGHT (for landscape device review).')
+ parser.add_argument('--locale',choices=['ru','en'],help='Override every capture locale.')
+ parser.add_argument('--text-scale',type=float,choices=[1.0,1.2,1.4],help='Override every capture text scale.')
  parser.add_argument('--only',help='Capture only view names starting with this prefix.')
  parser.add_argument('--levels',type=int,nargs='+',help='Capture these campaign levels with --stages (1–30).')
  parser.add_argument('--stages',nargs='+',choices=['title','briefing','map','plan','show','proof','law','resolution','moving','success','settings','selection'],help='Capture these states for each --levels entry at normal RU text size.')
@@ -28,11 +31,13 @@ def main():
  if not args.quick:
   cases +=[(n,s,locale,scale,res) for n,s,locale,scale,res in [(1,'plan','ru',1.4,'720x360'),(1,'plan','en',1.4,'720x360'),(1,'settings','en',1.4,'720x360'),(1,'settings','ru',1.4,'720x360'),(1,'map','en',1.4,'844x390'),(11,'plan','en',1.4,'844x390'),(21,'plan','en',1.4,'720x360'),(30,'selection','en',1.4,'844x390')]]
  cases=[(*c,'') for c in cases]
- if not args.quick:cases +=[(1,'plan','ru',1.4,'720x360','audience'),(1,'plan','en',1.4,'720x360','audience'),(21,'plan','ru',1.4,'720x360','audience'),(1,'plan','ru',1.4,'720x360','audience_end'),(1,'plan','ru',1.4,'720x360','inventory_end')]
+
  if args.campaign:cases=[(n,stage,'ru',1.0,'844x390','') for n in range(1,31) for stage in ['plan','success']]
  if args.levels or args.stages:
   if not args.levels or not args.stages or any(n<1 or n>30 for n in args.levels):parser.error('--levels (1–30) and --stages must be supplied together.')
   cases=[(n,stage,'ru',1.0,'960x540','') for n in args.levels for stage in args.stages]
+ if args.locale or args.text_scale is not None:
+  cases=[(c[0],c[1],args.locale or c[2],args.text_scale if args.text_scale is not None else c[3],c[4],c[5]) for c in cases]
  if args.resolution:
   import re
   if not re.fullmatch(r'[1-9][0-9]{2,3}x[1-9][0-9]{2,3}',args.resolution):parser.error('--resolution must be WIDTHxHEIGHT.')
@@ -40,16 +45,16 @@ def main():
  env=os.environ.copy();env['LIBGL_ALWAYS_SOFTWARE']='1'
  env['MESA_SHADER_CACHE_DIR']=str(tools/'capture-shader-cache')
  with (out/'xvfb.log').open('w') as log:
-  server=subprocess.Popen([xvfb,':96','-screen','0','2400x1200x24','-ac','-nolisten','unix','-nolisten','local','-listen','tcp'],env=env,stdout=log,stderr=log)
+  server=subprocess.Popen([xvfb,':'+str(args.display),'-screen','0','2400x1200x24','-ac','-nolisten','unix','-nolisten','local','-listen','tcp'],env=env,stdout=log,stderr=log)
   try:
    for _ in range(50):
     try:
-     with socket.create_connection(('127.0.0.1',6096),timeout=.1):break
+     with socket.create_connection(('127.0.0.1',6000+args.display),timeout=.1):break
     except OSError:
      if server.poll() is not None:raise RuntimeError('Xvfb startup failed; see '+str(out/'xvfb.log'))
      time.sleep(.1)
    else:raise RuntimeError('Xvfb TCP listener timed out.')
-   env['DISPLAY']='127.0.0.1:96'
+   env['DISPLAY']='127.0.0.1:'+str(args.display)
    results=[]
    def capture(case):
     n,stage,locale,scale,res,scroll=case

@@ -1,8 +1,17 @@
 {
   "kind": "art_file_integrity",
   "status": "passed",
-  "raster_exports": 272,
+  "raster_exports": 288,
   "svg_exports": 32,
+  "reboot": {
+    "status": "passed",
+    "characters": 15,
+    "environments": 3,
+    "props": 70,
+    "source_images": 16,
+    "errors": [],
+    "limits": "Metadata, campaign coverage and source identity; composition, acting and readability need visual review."
+  },
   "portrait_exports": 81,
   "layer_stacks_with_metadata": 3,
   "errors": [],
@@ -1434,6 +1443,102 @@
       "width": 366,
       "height": 295,
       "sha256": "9517ff47ef21f8efc099b5c06b5db6c96b9b9b1070e6bdc38f846addb30b7793"
+    },
+    {
+      "path": "assets/art/reboot/characters/cast-a.png",
+      "width": 1767,
+      "height": 890,
+      "sha256": "fe23d990cf48be9d7b9da1e32f08f022249569e6726f6ca7c4a3c57108862efe"
+    },
+    {
+      "path": "assets/art/reboot/characters/cast-b.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "edc6712cfeccda932c892be54abba21ad5684edd4823710e91d5ffa14036cc25"
+    },
+    {
+      "path": "assets/art/reboot/characters/crowd-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "30a08e1c9b312835482de76a697560a7f5e25ec62b3ffe352975e9bd78fe6f21"
+    },
+    {
+      "path": "assets/art/reboot/characters/marfa.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "67e3bff182831fd7f89ef396d5fe4c9055f1f90fc26589144abadc56c97e6802"
+    },
+    {
+      "path": "assets/art/reboot/characters/plum.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c2d03b8967b3449c85af996d216e3c43accad5580c4eb7e8036cb12c3361506d"
+    },
+    {
+      "path": "assets/art/reboot/characters/professor.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "fd9589eedbf6bb439220a819ede9975b23d1abc264b1e4cec16fa62cb59a5218"
+    },
+    {
+      "path": "assets/art/reboot/environments/ENV01.png",
+      "width": 1844,
+      "height": 853,
+      "sha256": "897fbcab41c1dacc0eb99afb995bc4687a65c53cbe5d716738a56c55ff3a8029"
+    },
+    {
+      "path": "assets/art/reboot/environments/ENV02.png",
+      "width": 1846,
+      "height": 852,
+      "sha256": "98b377937954cdcb316370f6542febd68c6261fd6cb98ec5a3a4926600a9f02b"
+    },
+    {
+      "path": "assets/art/reboot/environments/ENV03.png",
+      "width": 1846,
+      "height": 852,
+      "sha256": "cd7731d170f7c0f19f629339f09420e416a18b709d623c42143dca05f74d9723"
+    },
+    {
+      "path": "assets/art/reboot/props/canal-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "95deafa75ef5b42737912b6f9b11fd2c1801e361088a3f86f5695234f302ff35"
+    },
+    {
+      "path": "assets/art/reboot/props/harbor-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a3321ca28099cfe4fbc548949045bef6abce1f0ba3e2470892b8d4db88ac97aa"
+    },
+    {
+      "path": "assets/art/reboot/props/kitchen-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "228f18b30057f2c26772be2deae279e93fdecb11c1c5c852119ed7fe4ab7096c"
+    },
+    {
+      "path": "assets/art/reboot/props/mechanisms-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f89162bdedbe82800038ac639454853f620cad1dd7bed6fb22a6c47d357b4437"
+    },
+    {
+      "path": "assets/art/reboot/props/states-materials-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0dc4deb0b71317614783727a5806e9bdc433fab2d254755ecf61ce3dec82937a"
+    },
+    {
+      "path": "assets/art/reboot/props/terrain-atlas.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "78c4e4e2e753eaf2e0052cb3b88664ffd6c1d2bfaddbd467b704545356e3d1c4"
+    },
+    {
+      "path": "assets/art/reboot/ui/app_icon.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "5346a76a21c56304189c2bbe98b0353e939b1067aff0a2176c9df705c0d5eb37"
     },
     {
       "path": "assets/art/scenes/L01/overlay.png",

@@ -66,7 +66,7 @@ func command_through_ui(step: Dictionary) -> bool:
 	match step.type:
 		"PlaceProp":
 			if not await select_inventory(payload.entity_id):return false
-			await click_control(app.primary)
+			if not await click_named("ObjectContext"):return false
 			if not await click_text(app.tx("ui.place_prop","Выбрать место…")):return false
 			var index: int=0;var slot_label: String=""
 			for slot in app.kernel.definition.slots:
@@ -77,7 +77,7 @@ func command_through_ui(step: Dictionary) -> bool:
 			return await click_text(slot_label)
 		"Interact":
 			if not await select_inventory(payload.entity_id):return false
-			await click_control(app.primary)
+			if not await click_named("ObjectContext"):return false
 			var action: String=payload.action
 			if action=="remove":return await click_text(app.tx("ui.remove_prop","Убрать реквизит"))
 			if action in ["open","close"]:return await click_text(app.tx("ui."+action,"Открыть" if action=="open" else "Закрыть"))
@@ -106,9 +106,14 @@ func command_through_ui(step: Dictionary) -> bool:
 		"StopResolution":await click_control(app.primary);return true
 	check(false,"unimplemented UI test command, not product defect: "+step.type);return false
 func select_inventory(id: String) -> bool:
+	if not await click_named("OpenObjects"):return false
 	if not await click_text(app._name(id)):return false
 	if app.selected!=id:check(false,"inventory button did not select expected entity "+id+"; actual="+app.selected);return false
 	return true
+func click_named(value: String) -> bool:
+	var control=app.ui.find_child(value,true,false)
+	if control==null:check(false,"semantic pointer target missing: "+value);return false
+	await click_control(control);return true
 func open_plan() -> bool:return await click_text(app.tx("ui.plan","План"))
 func wait_for_client(ticks: int,prepare_only: bool) -> bool:
 	var start: int=app.kernel.state.tick

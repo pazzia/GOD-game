@@ -1,0 +1,340 @@
+{
+  "version": 1,
+  "date": "2026-10-25",
+  "direction": "Approved mature professor and menu; warm modern volumetric illustrated animation",
+  "scope": "Native Godot visual asset production for all30 campaign levels",
+  "tool": "image_gen.imagegen",
+  "pixel_editing": "None; all runtime PNGs are byte-identical copies of generated or approved source PNGs. AtlasTexture regions are source-pixel metadata.",
+  "approved_copies": [
+    {
+      "original": "docs/design/reboot-02-scientist/scientist-cutout.png",
+      "source": "assets/art/source/scientist-reboot/approved/characters/professor.png",
+      "runtime": "assets/art/reboot/characters/professor.png",
+      "sha256": "fd9589eedbf6bb439220a819ede9975b23d1abc264b1e4cec16fa62cb59a5218",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    },
+    {
+      "original": "docs/design/reboot-01/assets/characters/marfa-cutout.png",
+      "source": "assets/art/source/scientist-reboot/approved/characters/marfa.png",
+      "runtime": "assets/art/reboot/characters/marfa.png",
+      "sha256": "67e3bff182831fd7f89ef396d5fe4c9055f1f90fc26589144abadc56c97e6802",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA"
+    },
+    {
+      "original": "docs/design/reboot-01/assets/characters/plum-cutout.png",
+      "source": "assets/art/source/scientist-reboot/approved/characters/plum.png",
+      "runtime": "assets/art/reboot/characters/plum.png",
+      "sha256": "c2d03b8967b3449c85af996d216e3c43accad5580c4eb7e8036cb12c3361506d",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA"
+    },
+    {
+      "original": "docs/design/reboot-01/assets/scene/canal.png",
+      "source": "assets/art/source/scientist-reboot/approved/environments/ENV01.png",
+      "runtime": "assets/art/reboot/environments/ENV01.png",
+      "sha256": "897fbcab41c1dacc0eb99afb995bc4687a65c53cbe5d716738a56c55ff3a8029",
+      "width": 1844,
+      "height": 853,
+      "mode": "RGB"
+    },
+    {
+      "original": "docs/design/reboot-01/assets/props/prop-sheet.png",
+      "source": "assets/art/source/scientist-reboot/approved/props/canal-atlas.png",
+      "runtime": "assets/art/reboot/props/canal-atlas.png",
+      "sha256": "95deafa75ef5b42737912b6f9b11fd2c1801e361088a3f86f5695234f302ff35",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA"
+    }
+  ],
+  "generated": [
+    {
+      "id": "cast-a",
+      "source": "assets/art/source/scientist-reboot/generated/cast-a.png",
+      "runtime": "assets/art/reboot/characters/cast-a.png",
+      "sha256": "fe23d990cf48be9d7b9da1e32f08f022249569e6726f6ca7c4a3c57108862efe",
+      "width": 1767,
+      "height": 890,
+      "mode": "RGBA",
+      "request": {
+        "id": "cast-a",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/characters/cast-board.png"
+        ],
+        "alpha": true,
+        "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. A transparent landscape CHARACTER SPRITE ATLAS, exactly three separated full-body people side by side in three equal-width columns with at least 60px empty transparent gutters, no overlap, all hair and feet entirely visible, same baseline and same lighting. LEFT: SEMYON, a tall slim middle-aged meticulous carpenter, shaved head with dark side hair, small angular neat moustache, long narrow face distinct from professor, round work spectacles, warm-grey shirt, dark indigo practical waistcoat with two big pockets, mustard belt, brown shoes, holds folded wooden ruler and calmly studies it. CENTER: NIKA, a short observant child inventor age11, brown skin, large curly dark hair tied in two puffs, big practical safety goggles on forehead, sunny-yellow cropped jacket over teal overalls, chunky cream shoes, one large indigo notebook secured with strap, alert curious bright eyes; child stands slightly lower/smaller than adult but readable, no tools held dangerously. RIGHT: LADA, a stout mature female festival cook, warm freckled face, auburn hair under a simple tall soft cream chef hat, pumpkin orange tunic and berry-red apron, warm-cream sleeves, small oven-mitt cape, brass/copper spoon at belt, one hand on hip, capable friendly open expression. Neutral three-quarter front standing poses appropriate for NPC talking and observing. Characters occupy most column height but all fit in their own column. Empty transparent background, no ground/pedestal, no backdrop, no cast shadows behind figures, no scenery, no glow.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-ea7d2fb7-abc0-4bda-be1e-098b71c4834e.png"
+      }
+    },
+    {
+      "id": "cast-b",
+      "source": "assets/art/source/scientist-reboot/generated/cast-b.png",
+      "runtime": "assets/art/reboot/characters/cast-b.png",
+      "sha256": "edc6712cfeccda932c892be54abba21ad5684edd4823710e91d5ffa14036cc25",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "request": {
+        "id": "cast-b",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/characters/cast-board.png"
+        ],
+        "alpha": true,
+        "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. A transparent landscape CHARACTER SPRITE ATLAS, exactly three separated full-body characters side by side in three equal-width columns with at least60px empty transparent gutters, no overlap, all hair, hats and feet inside image, same baseline. LEFT: ROZA, a tall severe but fair mature female inspector aged50, deep-plum straight tailored jacket and skirt, sage trim, cream blouse, square brass-rim glasses, sleek silver-streaked black hair in a tidy bun, long clear adult face, holds a large sage clipboard and small simple wooden administrative stamp, skeptical raised eyebrow, competent calm. CENTER: HUGO, a mature male rival stage craftsman aged48, large stocky powerful triangular silhouette, reddish-brown swept-back hair, handlebar moustache, dark navy and muted raspberry elegant stage coat, short broad matching cape, wide navy hat with simple brass band, long raspberry ribbon secured safely at shoulder, cream shirt, sturdy dark boots, confident slightly theatrical stance and an amused knowing expression, no resemblance to professor. RIGHT: CARAMELKA, a single small barrel-bodied female domestic GOAT standing naturally on four separate cream legs, caramel-russet back and short coat, cream muzzle, short gently curved comma horns, turquoise bell collar, intelligent golden eyes and playful sideways look. One full side/three-quarter body, clear goat anatomy, no human limbs, no saddle. Goat stands at about45percent adult height. All characters in consistent warm illustrated-animation style. No text, no frame, no background, no glow cloud, no pedestal, clean alpha.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-b87dc31e-5fa2-4f76-98aa-cf622e1473e3.png"
+      }
+    },
+    {
+      "id": "harbor-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/harbor-atlas.png",
+      "runtime": "assets/art/reboot/props/harbor-atlas.png",
+      "sha256": "a3321ca28099cfe4fbc548949045bef6abce1f0ba3e2470892b8d4db88ac97aa",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "harbor-atlas",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/props/prop-sheet.png"
+        ],
+        "alpha": true,
+        "prompt": "Create an original transparent PNG GAME PROP ATLAS for the same warm colorful modern illustrated-animation game as the references. Polished rounded 3D-cartoon-like painted volume, cream sunny upper-left highlights and deep-indigo soft shadows, teal/coral/brass accents, tangible wood/cloth/stone materials, clean object silhouettes, no pixels/flat vector art, no UI, no labels or text. STRICT regular 3 COLUMNS by3 ROWS grid: exactly one completely isolated object centered within each of nine equal cells, same camera three-quarter view, at least40px transparent padding around each cell's object. All objects fully visible, no overlapping objects, no extra objects, no scenery, no ground, no background, no cast shadow cloud or glow halo. Transparent between and around all nine objects. Landscape canvas. READING ORDER left to right then next row: row1 col1 a sturdy cream wood cargo crate with indigo reinforcing slats and brass corner bolts, row1 col2 a charming tall compact closed ticket booth with coral roof and teal shutter (no letters), row1 col3 a simple sturdy brass mooring eye-ring mounted into a low square stone anchor block (single solid apparatus); row2 col1 a recognizable heavy CARVED STONE nautical anchor with short crossbar and two curved flukes, row2 col2 a short strong brown timber bollard with rounded top mounted on small wooden base, row2 col3 a small elegant empty wooden canal rowboat side-three-quarter view with coral hull stripe and teal interior (no sail or people); row3 col1 a thick honey-brown coil of mooring rope with one loose clean end, row3 col2 a small wooden spool wound with thin cream safety thread and a clear loose thread tail, row3 col3 a large practical brass screw C-clamp with dark indigo grip. All nine in same material/lighting style as reference stone/float, crop-friendly empty separation.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-341f156f-d469-4b56-98ea-7ebc0a66aebf.png"
+      }
+    },
+    {
+      "id": "kitchen-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/kitchen-atlas.png",
+      "runtime": "assets/art/reboot/props/kitchen-atlas.png",
+      "sha256": "228f18b30057f2c26772be2deae279e93fdecb11c1c5c852119ed7fe4ab7096c",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "kitchen-atlas",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/props/prop-sheet.png"
+        ],
+        "alpha": true,
+        "prompt": "Create an original transparent PNG GAME PROP ATLAS for the same warm colorful modern illustrated-animation game as the references. Polished rounded 3D-cartoon-like painted volume, cream sunny upper-left highlights and deep-indigo soft shadows, teal/coral/brass accents, tangible wood/cloth/stone materials, clean object silhouettes, no pixels/flat vector art, no UI, no labels or text. STRICT regular 3 COLUMNS by3 ROWS grid: exactly one completely isolated object centered within each of nine equal cells, same camera three-quarter view, at least40px transparent padding around each cell's object. All objects fully visible, no overlapping objects, no extra objects, no scenery, no ground, no background, no cast shadow cloud or glow halo. Transparent between and around all nine objects. Landscape canvas. READING ORDER: row1 col1 a small portable cream-and-turquoise insulated cold pack wrapped with indigo straps (no text), row1 col2 a theatrical fake flame apparatus: coral-orange fabric flame fixed above a small brass dish with visible hinge/base so it is distinguishable from actual fire, row1 col3 a compact rounded terracotta portable hearth/oven with three legs and an open front containing small warm orange fire; row2 col1 the EXACT SAME compact terracotta hearth design as upper-right but flame is turquoise-blue with a little white frost at the mouth (same camera and silhouette), row2 col2 an open wide shallow glazed cream-and-teal bowl visibly filled with water, row2 col3 one broad flat dense grey stone with a subtle warm-orange heat glow on its surface (the stone itself visible and opaque, no cloud); row3 col1 a small sturdy indigo insulated food storage chest with cream lining visible beneath a slightly raised lid, row3 col2 three golden bread rolls gathered as one compact bread prop on a plain cream napkin, row3 col3 an elegant small berry-red and cream layered dessert cake on a simple brass plate. Do not add decorative food text or lettering.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-1c2c49c8-ba16-46b4-b3f5-a80031527934.png"
+      }
+    },
+    {
+      "id": "mechanisms-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/mechanisms-atlas.png",
+      "runtime": "assets/art/reboot/props/mechanisms-atlas.png",
+      "sha256": "f89162bdedbe82800038ac639454853f620cad1dd7bed6fb22a6c47d357b4437",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "mechanisms-atlas",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/props/prop-sheet.png"
+        ],
+        "alpha": true,
+        "prompt": "Create an original transparent PNG GAME PROP ATLAS for the same warm colorful modern illustrated-animation game as the references. Polished rounded 3D-cartoon-like painted volume, cream sunny upper-left highlights and deep-indigo soft shadows, teal/coral/brass accents, tangible wood/cloth/stone materials, clean object silhouettes, no pixels/flat vector art, no UI, no labels or text. STRICT regular 3 COLUMNS by3 ROWS grid: exactly one completely isolated object centered within each of nine equal cells, same camera three-quarter view, at least40px transparent padding around each cell's object. All objects fully visible, no overlapping objects, no extra objects, no scenery, no ground, no background, no cast shadow cloud or glow halo. Transparent between and around all nine objects. Landscape canvas. READING ORDER: row1 col1 a simple empty freestanding hidden wooden rectangular support frame, dark wood with brass corner joints, no fabric so entire internal opening visibly empty, row1 col2 one thick cream folded PAPER BRIDGE span, broad accordion-supported horizontal beam with clearly visible paper folded edges and brass attachment eyelets at ends, row1 col3 a compact large charcoal iron control test-weight with a thick brass lifting handle (no letters or digits); row2 col1 a small wooden manual winch HOIST consisting of simple A-frame, brass spool and cream rope hanging from top pulley, whole freestanding apparatus in one crop, row2 col2 a freestanding cream PAPER WALL on two small feet, visibly paper with folded edge and subtle indigo border, row2 col3 a closed low sturdy WOODEN GATE made from teal-painted planks with brass hinges on two short timber posts; row3 col1 a short curved string of three colorful triangular paper festival pennants (coral/teal/cream), row3 col2 one upright cream paper POSTER SHEET with curled corners and a simple original teal circular abstract illustration, no letters, mounted between two short thin rods, row3 col3 a small isolated softly translucent STEAM CLOUD made of three rounded pale warm-grey curling vapour puffs with clear visible outline and internal translucency (no glowing effect). Maintain exact nine-cell separation.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-72aa485b-dd77-4a5e-b2b5-3bb9db6e0797.png"
+      }
+    },
+    {
+      "id": "crowd-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/crowd-atlas.png",
+      "runtime": "assets/art/reboot/characters/crowd-atlas.png",
+      "sha256": "30a08e1c9b312835482de76a697560a7f5e25ec62b3ffe352975e9bd78fe6f21",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "crowd-atlas",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+        ],
+        "alpha": true,
+        "prompt": "Original modern warm rounded volumetric illustrated-animation game character SPRITE ATLAS on transparent background, polished soft painted forms, same sunny upper-left lighting and deep indigo/cream/teal/coral palette as reference menu. EXACTLY6 separated full-body adults in a strict3columns x2rows, all contained within each equal cell with30px transparent margin, no overlap, no words/labels, no scenery, no floor or halo. Neutral three-quarter front poses, clean readable faces and complete boots. Row1 left: friendly sturdy male gardener in sage overalls, straw hat and cream rolled-sleeve shirt, small watering can at hip. Row1 center: confident middle-aged female postwoman with dark bob, coral short jacket, navy trousers and large teal messenger satchel. Row1 right: older brown-skinned male fisherman with short grey beard, teal knitted cap, ochre vest and practical navy waterproof trousers, holds one short wooden fishing pole vertically inside own cell. Row2 left: slim middle-aged female librarian with round glasses and chestnut hair bun, long indigo dress and cream cardigan, holds one large closed coral book. Row2 center: broad friendly male merchant, warm brown skin, cream turban-style cloth cap, dark plum vest, coral shirt and teal sash, small woven produce basket at waist. Row2 right: smiling young adult female musician with short curly black hair, mustard jacket and indigo pants, holds compact brown wooden mandolin. Distinct original faces and silhouettes in a coherent same-world cast. No medical/hazardous props. Enough empty transparent gutters for exact sprite crops.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-89b5d3e2-31f3-4822-a5b1-d8d5e9e055ae.png"
+      }
+    },
+    {
+      "id": "terrain-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/terrain-atlas.png",
+      "runtime": "assets/art/reboot/props/terrain-atlas.png",
+      "sha256": "78c4e4e2e753eaf2e0052cb3b88664ffd6c1d2bfaddbd467b704545356e3d1c4",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "terrain-atlas",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-01/assets/scene/canal.png",
+          "/workspace/GOD-game/docs/design/reboot-01/assets/props/prop-sheet.png"
+        ],
+        "alpha": true,
+        "prompt": "Create an original polished warm colorful illustrated-animation GAME TERRAIN SPRITE ATLAS matching the attached sunny cream-stone canal town, rounded volumetric soft painted 3D-cartoon-like forms, matte tangible materials, warm sun upper left and indigo soft shadows. TRANSPARENT background. STRICT3columns by2rows grid, exactly SIX isolated terrain cutouts in six equal cells, each centered inside own cell with at least40px transparent gutters. No overlap. Same slightly-top-down3/4 camera, broad horizontal usable top surfaces, no writing or UI, no people, no scenery. Row1 left: one broad low cream cobblestone terrace slab, irregular soft rounded perimeter and visible shallow stone foundation sidewalls, a stable top surface for4people, no railing. Row1 center: one broad low wooden timber dock platform, warm brown planks and thick short under-frame, four very short support posts not tall obstructions, clean rectangular perspective top for3people, no railing. Row1 right: one broad calm turquoise WATER SURFACE PATCH, shallow perspective plane with a few cream painted wave highlights and softly feathered alpha edge, NO container or land. Row2 left: one broad translucent pale-turquoise ICE SURFACE SHEET slab, thin white frost edge and a few large delicate cracks, same perspective plane, no water underneath. Row2 center: one broad flat folded cream PAPER PLATFORM with slightly curled layered edges and indigo subtle paper grain, very low thickness, no metal/plastic. Row2 right: one broad flat dense grey STONE STEP slab with cream sunlit top and dark-indigo shaded short side, irregular slightly rounded perimeter. All six cutouts fill own cells and stay completely separated. Distinguish natural water from solid ice, paper from stone. Transparent gutters and perimeter. Do not paint cast shadow/glow clouds behind objects. High quality original materials coherent with reference.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-f773dc15-1d82-4cb9-9c17-4ec5254654e2.png"
+      }
+    },
+    {
+      "id": "ENV02-floor-v2",
+      "source": "assets/art/source/scientist-reboot/generated/ENV02.png",
+      "runtime": "assets/art/reboot/environments/ENV02.png",
+      "sha256": "98b377937954cdcb316370f6542febd68c6261fd6cb98ec5a3a4926600a9f02b",
+      "width": 1846,
+      "height": 852,
+      "mode": "RGB",
+      "request": {
+        "id": "ENV02-floor-v2",
+        "refs": [
+          "/workspace/GOD-game/assets/art/reboot/environments/ENV02.png",
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+        ],
+        "alpha": false,
+        "prompt": "Recompose the FIRST reference environment for an actual horizontal adventure game playable stage. Keep its same beautiful sunny FESTIVAL KITCHEN SQUARE, cream masonry, coral awnings, copper pipes, greenhouse, teal doors, inactive communal oven, flowers and warm illustrated-animation style, but use a substantially HIGHER AND FARTHER BACK CAMERA looking down gently so the playable floor is much bigger and the architecture much smaller/farther. ULTRAWIDE2.17:1 landscape image, composed for a1560x720 horizontal game frame. CRITICAL STAGE GEOMETRY: ALL building architecture including doorsteps and oven ends within the TOP35PERCENT of image, with the most forward rear-wall foot no lower than y=38percent. From y=38percent to bottom, across the full image width, render a continuous BROAD EMPTY WALKABLE pale cream cobblestone COURTYARD PLANE in perspective, calm large subtle paving with soft sunny ground shadows, no obstacles. Lower62percent must clearly read as solid floor on which feet, bowls, hearths and heavy weights can stand. No flowers, plants, walls, stairs, railings or other foreground obstructions in lower60percent, even at edges. Far background upperthird remains colorful and richly composed, foreground stays quiet. NO people, NO animals, NO movable props, NO flame, NO ice, NO water pools, NO UI, NO words/text. The oven is a distant small inactive architectural feature at upperright, not a second gameplay hearth at front. The SECOND reference provides approved visual/material/color identity only. Polished original contemporary warm rounded volumetric illustrated animation, painterly soft volume, crisp enough game art, sunny upper-left keylight and soft indigo shadows. Do not keep the first reference's low horizon; the raised floor boundary and open lower stage are the required change.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-d8f4d62e-297a-4eab-a14d-216b0bb8faba.png"
+      }
+    },
+    {
+      "id": "ENV03-floor-v2",
+      "source": "assets/art/source/scientist-reboot/generated/ENV03.png",
+      "runtime": "assets/art/reboot/environments/ENV03.png",
+      "sha256": "cd7731d170f7c0f19f629339f09420e416a18b709d623c42143dca05f74d9723",
+      "width": 1846,
+      "height": 852,
+      "mode": "RGB",
+      "request": {
+        "id": "ENV03-floor-v2",
+        "refs": [
+          "/workspace/GOD-game/assets/art/reboot/environments/ENV03.png",
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+        ],
+        "alpha": false,
+        "prompt": "Recompose the FIRST reference environment for an actual horizontal adventure game playable stage. Keep its same beautiful sunny PAPERMAKERS ARCHIVE WORKSHOP PLAZA, cream masonry, teal shutters, wooden papermaker balcony, paper drying sheets, small paper lanterns and distant cream fortress, coral/plum awnings and warm illustrated-animation style, but use a substantially HIGHER AND FARTHER BACK CAMERA looking down gently so the playable floor is much bigger and buildings smaller/farther. ULTRAWIDE2.17:1 landscape image, composed for a1560x720 horizontal game frame. CRITICAL STAGE GEOMETRY: ALL building architecture including doorsteps, stacks and terrace edges stays in TOP35PERCENT of image; the most forward rear-wall foot ends no lower than y=38percent. From y=38percent down to bottom across full width, render a continuous BROAD EMPTY WALKABLE pale cream stone COURTYARD PLANE in perspective, subtle calm paving. Lower62percent must be obvious solid floor where people, hoists, paper spans and stone weights can stand naturally. No foliage, planters, walls, stairs, furniture or railing in lower60percent, even at edges. Far background upperthird remains charming, richly layered and colorful; quiet lower stage leaves space for gameplay. NO people, NO animals, NO movable puzzle props, NO water pools, NO UI, NO lettering/text. Paper can appear as small distant sheets and materials in architecture upperthird only, no false playable paperbridge. SECOND reference provides approved color/material identity only. Polished original warm rounded volumetric contemporary illustrated animation, soft cream upper-left sunlight and indigo/teal contact shadows. Do not keep first reference's low horizon; the raised floor boundary and open lowerstage are the required change.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-675f1b9c-416f-4f86-b4f5-9bac1c4aaaa9.png"
+      }
+    },
+    {
+      "id": "states-materials-atlas",
+      "source": "assets/art/source/scientist-reboot/generated/states-materials-atlas.png",
+      "runtime": "assets/art/reboot/props/states-materials-atlas.png",
+      "sha256": "0dc4deb0b71317614783727a5806e9bdc433fab2d254755ecf61ce3dec82937a",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "request": {
+        "id": "states-materials-atlas",
+        "refs": [
+          "/workspace/GOD-game/assets/art/reboot/props/kitchen-atlas.png",
+          "/workspace/GOD-game/assets/art/reboot/props/mechanisms-atlas.png",
+          "/workspace/GOD-game/assets/art/reboot/props/harbor-atlas.png"
+        ],
+        "alpha": true,
+        "prompt": "Create an original clean transparent GAME STATE-VARIANT SPRITE ATLAS, exactly3columns by2rows, six completely separated objects, each in its own equal cell with25px fully transparent margin and no overlap. Use the supplied original prop atlases to MATCH the exact existing objects, their three-quarter camera, scale cues and sunny upper-left light. Modern polished colorful warm rounded volumetric illustrated-animation game style, refined painted volume, cream highlights, soft indigo shadows, tangible material. NO scenery, no text, no UI, no glow clouds or backgrounds, clean transparent perimeter. ROW1 LEFT: EXACT SAME cream-and-teal glazed shallow water bowl as reference1 center, but its water is NOW SOLID ICE: one clearly flat opaque pale turquoise frozen surface, delicate white frost/crystal rim and a few fine crack highlights, no liquid waves, no liquid reflections. Preserve bowl vessel silhouette/foot/pattern. ROW1 CENTER: EXACT SAME cream accordion PAPER BRIDGE span as reference2 top center, but now reinforced by thin glowing-gold stitched seams along its paper folds and edges; still unmistakably light folded PAPER, not metal or stone, same brass eyelets and same silhouette. ROW1 RIGHT: EXACT SAME rounded terracotta portable hearth/oven as reference1 top-right, but completely SWITCHED OFF: dark empty unlit open mouth, no flame, no embers, no blue frost, no smoke; retain body/chimney/legs/leaf pattern. ROW2 LEFT: An empty freestanding rectangular support frame of the same overall proportions as reference2 top-left, but made clearly from dark cool-blue STEEL square-section bars, smooth metal highlights and small brass corner bolts, not timber, no visible woodgrain, clean open rectangular center and little steel feet. ROW2 CENTER: A heavy trapezoid-shaped control test-weight like reference2 top-right, visibly smooth charcoal STEEL metal with subtle broad brushed highlights and a large brass handle, NO stone cracks or stone veins, NO letters/digits. ROW2 RIGHT: A low sturdy WOODEN span-anchor pedestal, square warm brown timber base with obvious large woodgrain, one simple brass eye-ring bolted into its top, solid legible wooden construction, NO stone anywhere in this anchor. Distinct from heavy stone nautical anchor. All six are complete single isolated prop assets and fit own cells. No extra objects, no labels.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-28254112-3fd1-498a-ba3f-f6a310146b50.png"
+      }
+    },
+    {
+      "id": "app-icon",
+      "source": "assets/art/source/scientist-reboot/generated/app-icon.png",
+      "runtime": "assets/art/reboot/ui/app_icon.png",
+      "sha256": "5346a76a21c56304189c2bbe98b0353e939b1067aff0a2176c9df705c0d5eb37",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "request": {
+        "id": "app-icon",
+        "refs": [
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/scientist-cutout.png",
+          "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+        ],
+        "alpha": false,
+        "prompt": "Create ONE polished original SQUARE1024x1024 mobile GAME APP ICON for Almost God, using the EXACT APPROVED MATURE SCIENTIST from reference1 and same modern colorful warm volumetric illustrated-animation style as reference2. No text, no letters, no logos, no symbols resembling text, no border, no rounded-corner mask, fill the entire square background. MAIN SUBJECT: large unmistakable head-and-shoulders closeup of the same serious capable professor agedabout60, elegant round brass eyeglasses, clear grey-blue eyes, strong brows, swept-back silver-grey hair with dark roots, neat short silver beard and moustache, closed-mouth subtle confident warm expression, not a young boy, not an Einstein caricature. Preserve his exact face identity and costume: dark deep-teal professor coat, cream waistcoat/high-collared shirt and tiny coral scarf. His face is the focus and fills55–65percent of square height, centered slightly left; all hair and glasses safely within generous icon safe area, no cropped face. One small honey-cream fluffy moth helper PLUM with blue eyes, rounded cream wings and tiny turquoise satchel hovers by lower-right shoulder, about22percent of icon height, clearly separate from the scientist's face. No need to show the measuring instrument; avoid clutter. Simple graphic DEEP INDIGO background with one broad quiet turquoise circular glow behind the professor, no scenery, no extra figures, no scattering of particles or tiny ornaments. Broad readable shape masses, strong cream/silver face separation from dark background, clear at64x64, luxurious but clean rounded 3D-cartoon-inspired painted depth, sunny upper-left face light, matte garment forms, controlled soft shadows. This is the final game application icon for the new mature-protagonist identity, not an interface screenshot or a character-sheet.",
+        "tool": "image_gen.imagegen",
+        "source_path": "/workspace/generated_images/exec-09a64154-254a-44d1-9960-cd30064df1bd.png"
+      }
+    }
+  ],
+  "runtime_manifest": "assets/art/reboot/manifest.json",
+  "coverage": {
+    "campaign_levels": 30,
+    "named_characters": 9,
+    "crowd_characters": 6,
+    "environments": 3,
+    "required_prop_asset_ids": [
+      "PROP_ANCHOR",
+      "PROP_BOAT",
+      "PROP_BOLLARD",
+      "PROP_BREAD",
+      "PROP_CARGO_CRATE",
+      "PROP_CLAMP",
+      "PROP_COLD_PACK",
+      "PROP_CONTROL_WEIGHT",
+      "PROP_DECOY_FLAME",
+      "PROP_DESSERT",
+      "PROP_FIRE",
+      "PROP_FLAGS",
+      "PROP_FLOAT",
+      "PROP_GATE",
+      "PROP_HEATED_STONE",
+      "PROP_HIDDEN_FRAME",
+      "PROP_HOIST",
+      "PROP_INSULATED_BOX",
+      "PROP_PAPER_BRIDGE",
+      "PROP_PAPER_WALL",
+      "PROP_ROPE",
+      "PROP_SCREEN",
+      "PROP_STEAM",
+      "PROP_STONE_ANCHOR",
+      "PROP_STONE_L",
+      "PROP_STONE_M",
+      "PROP_STONE_S",
+      "PROP_THREAD",
+      "PROP_TICKET_BOOTH",
+      "PROP_WATER_BOWL"
+    ],
+    "missing_prop_asset_ids": []
+  },
+  "limitations": [
+    "Whole-character cutouts; no skeletal rigs, face animation sheets, model turnarounds or multi-view animation are claimed.",
+    "Environment plates are flattened generated source images; interactive subjects are separate. Editable PSD/KRA layers are not claimed.",
+    "Some generated cutouts retain soft semi-transparent warm light around their silhouettes; no opaque background rectangle is observed. Native compositing must be reviewed.",
+    "No performance/device/owner acceptance inferred from asset existence or alpha checks.",
+    "The professor and menu were approved by owner; newly produced secondary cast and props are production candidates pending native visual review."
+  ],
+  "revision2": {
+    "reason": "Native game visual review required correct floor composition, material and meaningful state evidence",
+    "superseded_environment_records": "assets/art/source/scientist-reboot/superseded/environment-v1-provenance.json",
+    "active_generated_outputs": 10,
+    "state_variants": [
+      "PROP_WATER_BOWL/frozen",
+      "PROP_PAPER_BRIDGE/reinforced",
+      "PROP_FIRE/off"
+    ],
+    "material_corrections": [
+      "PROP_ANCHOR/WOOD",
+      "PROP_HIDDEN_FRAME/STEEL",
+      "PROP_CONTROL_WEIGHT/STEEL"
+    ]
+  },
+  "runtime_png_bytes": 34101400
+}

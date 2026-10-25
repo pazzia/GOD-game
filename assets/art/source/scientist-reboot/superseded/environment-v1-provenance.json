@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ENV02",
+    "source": "assets/art/source/scientist-reboot/superseded/ENV02-v1.png",
+    "sha256": "59c7fd6a40d962ed50ae259392ed6c5baabd05c3d420cc20c2b347488fe0f6cd",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "request": {
+      "id": "ENV02",
+      "refs": [
+        "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+      ],
+      "alpha": false,
+      "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. Landscape 16:9 environment plate for an Android horizontal adventure puzzle game, a sunny Mediterranean-inspired FESTIVAL KITCHEN SQUARE in the same town as attached menu. Wide three-quarter view slightly elevated. Upper45percent: attractive cream rounded stone bakery buildings, copper pipes, a glass greenhouse, terracotta tiled roofs, teal doors, coral awnings and a few hanging colorful festival flags; a substantial brick communal bread oven built into the right rear wall, oven mouth DARK and inactive, NO flame/ice, no baked-in gameplay event. Lower55percent is a broad OPEN pale warm stone stage-like courtyard with simple quiet paving in perspective, spacious at left, center and right so many movable people and props can be composed here; a narrow distant water channel only far beyond square, NO water/gaps/obstructions across playable courtyard. Foreground calm, no furniture or puzzle objects in central play space. Warm amber sunlight, soft local turquoise reflected light, abundant color and refined volume, polished high-budget original animated-film environment, clear value hierarchy, charming useful architecture. NO people, NO animals, NO UI, NO letters, NO symbols resembling buttons. Distinct from canal scene but coherent palette.",
+      "tool": "image_gen.imagegen",
+      "source_path": "/workspace/generated_images/exec-18d49388-58cb-4ab5-aff2-f67aad39d3d3.png"
+    },
+    "runtime_at_time": "assets/art/reboot/environments/ENV02.png",
+    "superseded_by": "ENV02-floor-v2"
+  },
+  {
+    "id": "ENV03",
+    "source": "assets/art/source/scientist-reboot/superseded/ENV03-v1.png",
+    "sha256": "f174daef87c4009d167b55e6a6c7fb083fcdc1d158d76a81c81a7b22b27f7a5c",
+    "width": 1672,
+    "height": 941,
+    "mode": "RGB",
+    "request": {
+      "id": "ENV03",
+      "refs": [
+        "/workspace/GOD-game/docs/design/reboot-02-scientist/menu-scientist-1560x720.png"
+      ],
+      "alpha": false,
+      "prompt": "Original modern colorful illustrated-animation game art, warm rounded volumetric 3D-cartoon-inspired painted forms consistent with supplied game menu, matte fabrics and soft cream highlights, ink-indigo shadows, warm sunny upper-left light, expressive faces, clean readable silhouettes, not pixel art, not flat vector, no text or lettering, no UI. Landscape16:9 environment plate for an Android horizontal adventure puzzle game, a sunny PAPERMAKERS ARCHIVE WORKSHOP PLAZA in the same cream stone town as attached menu. Wide three-quarter view slightly elevated. Upper45percent: beautiful layered cream masonry and wood paper-workshop buildings, curved teal shutters and plum/coral fabric awnings, paper lanterns and neatly hanging paper sheets on upper balcony lines, tasteful towers of closed archive folders behind windows, an airy small distant crenellated fortress gate silhouette and blue sky. Build a rich original place made from paper, timber and warm architecture, not literally a cardboard box world. Lower55percent: broad OPEN warm pale-cream courtyard terrace stage with subdued simple paving and spacious readable left/center/right areas for movable puzzle props and characters. NO large furniture, bridges, gaps or objects across central play area. A few restrained paper-craft materials at rear building edge only; foreground quiet so important paper mechanisms read clearly. Golden sunny upper-left light with teal/indigo soft shadows, polished volumetric illustrated animation consistent with approved menu. No people or animals, NO UI, NO lettering, no puzzle solution baked in.",
+      "tool": "image_gen.imagegen",
+      "source_path": "/workspace/generated_images/exec-f742bf75-afdc-4f0c-941f-0e97a0501a57.png"
+    },
+    "runtime_at_time": "assets/art/reboot/environments/ENV03.png",
+    "superseded_by": "ENV03-floor-v2"
+  }
+]

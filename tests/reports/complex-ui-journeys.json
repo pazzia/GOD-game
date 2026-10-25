@@ -59,7 +59,7 @@
         }
       ],
       "level": "L11",
-      "state_hash": "056b729aa4d960a022297e611ee128e14012bd755ae422a1efe4e1984a82b7d0",
+      "state_hash": "d72f6b2d18333b965d1547fe2b66035a5adbf9c89c81f0306579b064a7626a5f",
       "success": true,
       "tick": 133
     },
@@ -152,7 +152,7 @@
         }
       ],
       "level": "L21",
-      "state_hash": "b8b506ad8111e3dc5ed0ff2104ecd6e802757e7d653d973d33c4b57e8dce7a66",
+      "state_hash": "5238d8bfd5accd90535becd926fdd833ad35ad94fd5c9a605c7e04b49cd6a374",
       "success": true,
       "tick": 65
     },
@@ -380,12 +380,12 @@
         }
       ],
       "level": "L30",
-      "state_hash": "8ce151e004d1329cd69409b543370848a67d447d6b1cdba2851abbf695055d8c",
+      "state_hash": "8b112b11f643006b6907f008f8bfd7bcb3bcc6e4e13c0ba03656c9b11a1e4418",
       "success": true,
-      "tick": 247
+      "tick": 246
     }
   ],
-  "pointer_events": 290,
+  "pointer_events": 334,
   "scroll_navigation": "native ensure_control_visible; separate touch gesture suite validates physical pan",
   "simulation_time_scale": 8
 }

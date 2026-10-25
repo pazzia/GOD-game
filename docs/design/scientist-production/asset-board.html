@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,">
+<title>Почти бог — новые игровые ресурсы</title>
+<style>
+@font-face{font-family:Onest;src:url('../reboot-01/mocks/assets/Onest-Variable.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#252647;color:#fff2d8;font-family:Onest,sans-serif;padding:28px}h1{font-size:30px;margin:0 0 8px}p{margin:0 0 22px;color:#d5c9b7;font-size:16px}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.card{margin:0;background:#fff2d8;border-radius:18px;color:#252647;padding:12px;min-width:0}.card svg{display:block;width:100%;height:240px;overflow:hidden}.card figcaption{font-size:14px;font-weight:800;line-height:1.2;margin-top:8px;overflow-wrap:anywhere}.card small{font-size:10px;font-weight:500;display:block;opacity:.65;margin-top:5px}.props{grid-template-columns:repeat(6,1fr)}.props .card svg{height:170px}.terrain{grid-template-columns:repeat(3,1fr)}.terrain .card svg{height:245px}.environments{grid-template-columns:repeat(1,1fr)}.environments .card svg{height:500px}
+</style></head><body><h1 id="heading">Новые игровые ресурсы</h1><p>Производственный лист: исходные PNG отображены через реальные регионы атласа. Новые позы и скелетные риги не заявляются.</p><div id="grid" class="grid"></div>
+<script>
+const labels={characters:'Все участники: новый учёный и жители',props:'Реквизит всей кампании',terrain:'Поверхности игрового мира',environments:'Три главы — один нарисованный мир',states:'Значимые состояния предметов'};
+const group=new URLSearchParams(location.search).get('group')||'characters';
+const prefix='../../../';
+async function run(){
+ const manifest=await fetch(prefix+'assets/art/reboot/manifest.json').then(r=>r.json());
+ const textures={};
+ const entries=group==='characters'?Object.entries(manifest.characters):group==='environments'?Object.entries(manifest.environments):group==='states'?Object.entries(manifest.props).filter(([k])=>k.startsWith('PROP_')).flatMap(([id,a])=>Object.entries(a.variants||{}).map(([variant,v])=>[id+'-'+variant,v])):Object.entries(manifest.props).filter(([k])=>k.startsWith(group==='terrain'?'SCENE_':'PROP_'));
+ document.getElementById('heading').textContent=labels[group];
+ const grid=document.getElementById('grid');grid.classList.add(group);
+ for(const [id,a] of entries){
+  const href=prefix+a.path.replace('res://','');
+  if(!textures[href])textures[href]=await new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve([i.naturalWidth,i.naturalHeight]);i.onerror=reject;i.src=href;});
+  const [w,h]=textures[href],r=a.region||[0,0,w,h];
+  const card=document.createElement('figure');card.className='card';
+  card.innerHTML=`<svg viewBox="${r.join(' ')}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${id}"><defs><clipPath id="clip-${id}"><rect x="${r[0]}" y="${r[1]}" width="${r[2]}" height="${r[3]}"/></clipPath></defs><image href="${href}" width="${w}" height="${h}" clip-path="url(#clip-${id})"/></svg><figcaption>${id}<small>${r.join(' · ')}</small></figcaption>`;grid.appendChild(card);
+ }
+ await document.fonts.ready;window.boardReady={group,count:entries.length};
+}
+run().catch(e=>{window.boardError=String(e);throw e;});
+</script></body></html>

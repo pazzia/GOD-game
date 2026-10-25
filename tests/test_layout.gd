@@ -63,13 +63,26 @@ func run() -> void:
 					inspect_layout("L%02d %s %s %s"%[number,locale,str(scale_value),str(resolution)])
 					var pixel_scale: float=float(resolution.y)/app.get_viewport_rect().size.y
 					check(app.primary.size.y*pixel_scale>=47.5,"primary keeps48px touch height at "+str(resolution))
+					# A wrapped observer context must not consume the48dp footer touch targets.
+					var observer_ids: Array=app.kernel.state.witnesses.keys()
+					if not observer_ids.is_empty():
+						app.selected="w:"+str(observer_ids[0]);app.inspected=str(observer_ids[0]);app._build_ui();app._update_ui()
+						await process_frame;await process_frame
+						var context_button: Control=app.ui.find_child("ObjectContext",true,false)
+						check(context_button!=null and app.get_viewport_rect().encloses(context_button.get_global_rect()),"observer context stays visible "+locale+" "+str(scale_value)+" "+str(resolution))
+						if context_button!=null:
+							var context_bounds: Rect2=context_button.get_global_rect()
+							var no_footer_overlap: bool=not context_bounds.intersects(app.primary.get_global_rect())
+							for control_name in ["OpenObjects","OpenPlan"]:
+								no_footer_overlap=no_footer_overlap and not context_bounds.intersects(app.ui.find_child(control_name,true,false).get_global_rect())
+							check(no_footer_overlap,"wrapped observer context preserves all fixed footer touch targets "+locale+" "+str(scale_value)+" "+str(resolution))
 				# The album remains navigable; lower rows may scroll, the return action stays visible.
 				app._open_levels();await process_frame;await process_frame
 				var last_level: Button=null;var back: Button=null;var targets_fit: bool=true
 				for child in all_buttons(app.overlay):
-					if child.text.is_valid_int():
+					if child.has_meta("level_number"):
 						targets_fit=targets_fit and child.size.x>=144 and child.size.y>=144
-						if child.text=="30":last_level=child
+						if int(child.get_meta("level_number"))==30:last_level=child
 					elif child.text.replace("\n"," ")==app.tx("ui.back_game","Вернуться в игру"):back=child
 				check(targets_fit,"album has48dp number targets "+locale+" "+str(scale_value))
 				check(last_level!=null and back!=null,"album exposes last level and return action")
@@ -113,42 +126,29 @@ func inspect_layout(context: String) -> void:
 	var screen: Rect2=app.get_viewport_rect()
 	var stage_bounds: Rect2=app.stage.get_global_rect()
 	var action_bounds: Rect2=app.primary.get_global_rect()
-	var body: Label=app.instruction
-	var law: Label=app.law_label
-	check(screen.encloses(stage_bounds) and stage_bounds.size.x>stage_bounds.size.y,context+" entire landscape stage is visible")
-	var large_text: bool=float(app.settings.accessibility.text_scale)>=1.4
-	check(stage_bounds.get_area()>=screen.get_area()*(.40 if large_text else .43) and stage_bounds.size.y>=screen.size.y*(.58 if large_text else .62),context+" game world remains dominant, allowing space for accessibility text")
-	check(not stage_bounds.intersects(action_bounds) and screen.encloses(action_bounds) and app.primary.size.y>=144,context+" main action is visible, large and outside the scene")
-	check(body.get_line_count()==body.get_visible_line_count(),context+" quest instruction contains complete shaped lines")
+	check(screen.encloses(stage_bounds) and stage_bounds.get_area()>=screen.get_area()*.98,context+" illustrated stage fills the native viewport")
+	check(screen.encloses(action_bounds) and app.primary.size.y>=144,context+" main phase action stays visible with48dp native touch height")
+	check(app.instruction.get_line_count()==app.instruction.get_visible_line_count(),context+" next-action instruction has complete shaped lines")
+	check(screen.encloses(app.instruction.get_parent().get_global_rect()),context+" next-action ticket stays inside the screen")
 	var headline: Label=app._goal_headline
-	var scroll_bounds: Rect2=app._upper_scroll.get_global_rect()
-	check(not headline.text.strip_edges().is_empty() and headline.get_line_count()==headline.get_visible_line_count(),context+" current objective has complete shaped text")
-	check(headline.get_global_rect().end.y<=body.get_global_rect().position.y and scroll_bounds.encloses(headline.get_global_rect()),context+" current objective is visible above instructions before any scrolling")
-	check(law.get_line_count()==law.get_visible_line_count(),context+" phase title contains complete shaped lines")
-	var names_fit: bool=true
-	for card in app.witness_labels.values():
-		var label: Label=card.name
-		var cell: Control=label.get_parent()
-		if label.visible:names_fit=names_fit and label.get_line_count()==label.get_visible_line_count() and label.position.x+label.size.x<=cell.size.x+1 and label.position.y+label.size.y<=cell.size.y+1
-		names_fit=names_fit and app._audience_scroll.get_global_rect().encloses(cell.get_global_rect())
-	check(names_fit,context+" witness names have complete shaped lines and every card is visible without panning")
-	var inventory_fit: bool=true;var inventory_text_fit: bool=true;var inventory_color_preserved: bool=true
-	for row in app._inventory_scroll.get_children():
-		if not row is HBoxContainer:continue
-		for button in row.get_children():
-			inventory_fit=inventory_fit and button.size.y+(app._inventory_scroll.get_h_scroll_bar().size.y if app._inventory_scroll.get_h_scroll_bar().visible else 0.0)<=app._inventory_scroll.size.y+1
-			var icon_space: float=0
-			if button.icon!=null:
-				icon_space=float(button.get_theme_constant("icon_max_width"))+float(button.get_theme_constant("h_separation"))
-				inventory_color_preserved=inventory_color_preserved and button.get_theme_color("icon_normal_color").is_equal_approx(Color.WHITE)
-			var available: float=button.size.x-button.get_theme_stylebox("normal").get_minimum_size().x-icon_space
-			for line in button.text.split("\n"):
-				var measured: float=button.get_theme_font("font").get_string_size(line,HORIZONTAL_ALIGNMENT_LEFT,-1,button.get_theme_font_size("font_size")).x
-				inventory_text_fit=inventory_text_fit and measured<=available+1
-	check(inventory_fit,context+" complete prop labels/icons fit above the horizontal scrollbar")
-	check(inventory_text_fit,context+" every inventory word fits its actual font, icon and content padding")
-	check(inventory_color_preserved,context+" colored prop illustrations retain their authored colors")
-	check(screen.encloses(app._inventory_scroll.get_global_rect()),context+" inventory remains visible without scrolling the scene")
+	var objective: Control=app.ui.find_child("ObjectiveTicket",true,false)
+	check(not headline.text.strip_edges().is_empty() and headline.get_line_count()==headline.get_visible_line_count(),context+" compact current goal has a visible complete line")
+	check(objective!=null and screen.encloses(objective.get_global_rect()) and objective.tooltip_text.contains(str(app._hud_copy().objective)),context+" objective ticket exposes the full authored goal")
+	check(app.law_label.get_line_count()==app.law_label.get_visible_line_count(),context+" active law context has complete shaped lines")
+	var objects: Control=app.ui.find_child("OpenObjects",true,false)
+	var plan: Control=app.ui.find_child("OpenPlan",true,false)
+	check(objects!=null and plan!=null and screen.encloses(objects.get_global_rect()) and screen.encloses(plan.get_global_rect()),context+" objects and plan are deliberate reachable drawers")
+	if objects!=null and plan!=null:
+		check(not objects.get_global_rect().intersects(action_bounds) and not plan.get_global_rect().intersects(action_bounds),context+" phase action never overlaps object or plan input")
+	check(not is_instance_valid(app._inventory_scroll) and not is_instance_valid(app._audience_scroll) and not is_instance_valid(app._upper_scroll),context+" closed drawers do not leave the rejected permanent sidebar")
+	for child in app.ui.get_children():
+		if not child is Button or child.text.is_empty():continue
+		var icon_space: float=float(child.get_theme_constant("icon_max_width"))+float(child.get_theme_constant("h_separation")) if child.icon!=null else 0.0
+		var available: float=child.size.x-child.get_theme_stylebox("normal").get_minimum_size().x-icon_space
+		var text_fits: bool=true
+		for line in child.text.split("\n"):
+			text_fits=text_fits and child.get_theme_font("font").get_string_size(line,HORIZONTAL_ALIGNMENT_LEFT,-1,child.get_theme_font_size("font_size")).x<=available+1
+		check(text_fits,context+" "+str(child.name)+" text fits its actual font, icon and content padding")
 func all_buttons(node: Node) -> Array:
 	var result: Array=[]
 	if node is Button:result.append(node)

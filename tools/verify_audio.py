@@ -26,8 +26,9 @@ def main():
     if f.getnframes()!=row['sample_count']or f.getframerate()!=48000:errors.append('PCM length/rate '+row['id'])
  for name,theme in catalog['themes'].items():
   if len(theme)==3 and len({byid[k]['sample_count']for k in theme})!=1:errors.append('Unequal stem samples '+name)
+ music_source=R/catalog.get('music_sources',{}).get('directory','assets/source/audio')
  for name in ['main','river','kitchen','archive','album','finale','credits']:
-  p=R/'assets/source/audio'/(name+'.mid')
+  p=music_source/(name+'.mid')
   if not p.exists()or p.read_bytes()[:4]!=b'MThd':errors.append('MIDI source '+name)
  long=[row for row in rows if row['bus']in('Music','Ambience')]
  def measure(row):

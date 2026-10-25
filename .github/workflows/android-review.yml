@@ -1,0 +1,83 @@
+name: Scientist reboot review APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feat/scientist-game-reboot
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'AGENTS.md'
+      - 'tests/reports/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: scientist-review-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Configure disposable runner paths
+        run: |
+          printf '%s\n' \
+            "TOOLS_DIR=$RUNNER_TEMP/god-native-tools" \
+            "APK_OUTPUT_DIR=$GITHUB_WORKSPACE/build/scientist-review" \
+            "PREVIEW_KEYSTORE=$RUNNER_TEMP/god-signing/preview-debug.keystore" \
+            "XDG_CONFIG_HOME=$RUNNER_TEMP/god-config" \
+            "XDG_CACHE_HOME=$RUNNER_TEMP/god-cache" \
+            "XDG_DATA_HOME=$RUNNER_TEMP/god-data" >> "$GITHUB_ENV"
+
+      - name: Check out the exact review commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install build and verification dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg dpkg libfontconfig1 libx11-6 libxcursor1 libxinerama1 libgl1 libxrandr2 libxi6 libasound2t64 libpulse0
+          python -m pip install Pillow==12.3.0 numpy==2.3.5
+          mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME"
+
+      - name: Provision pinned engine and Android tools
+        run: python tools/bootstrap_native.py --tools-dir "$TOOLS_DIR" --no-graphics
+
+      - name: Verify all content and build the review APK
+        run: |
+          python tools/ci_android.py --tools-dir "$TOOLS_DIR" --output-dir "$APK_OUTPUT_DIR" --debug-keystore "$PREVIEW_KEYSTORE" --source-sha "$GITHUB_SHA"
+
+      - name: Preserve review APK and evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: AlmostGod-scientist-review-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/scientist-review/*.apk
+            build/scientist-review/*.json
+            build/scientist-review/*.log
+            build/scientist-review/SHA256SUMS.txt
+            tests/reports/project-verification.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Remove disposable test signing key
+        if: always()
+        run: rm -f -- "$PREVIEW_KEYSTORE"

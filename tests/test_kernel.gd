@@ -79,7 +79,7 @@ func _initialize() -> void:
 	quit(0 if failures.is_empty() else 1)
 func clock_replay(fps: int,d: Dictionary) -> String:
 	var k=Kernel.new();k.load_level(d,42)
-	var replay: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://tests/L01_solution.json"))
+	var replay: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/kernel-baseline-L01-solution.json"))
 	for step in replay.steps:
 		if step.op=="command":k.dispatch(step)
 		elif step.op=="advance_ticks":
@@ -104,7 +104,9 @@ func prepared():
 	for pair in [["float","stage_float"],["stone","stage_stone"],["screen_a","screen_left"]]:place(k,pair[0],pair[1])
 	return k
 func fresh(id: String):var k=Kernel.new();k.load_level(data(id),9);return k
-func data(id: String) -> Dictionary:return JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/"+id+".json"))
+func data(id: String) -> Dictionary:
+	var path: String="res://tests/fixtures/kernel-baseline-L01.json" if id=="L01" else "res://data/levels/"+id+".json"
+	return JSON.parse_string(FileAccess.get_file_as_string(path))
 func place(k,eid: String,sid: String) -> void:
 	var result: Dictionary=k.dispatch({"type":"PlaceProp","payload":{"entity_id":eid,"slot_id":sid}})
 	if not result.accepted:failures.append("fixture place "+eid+": "+result.reason_code)
