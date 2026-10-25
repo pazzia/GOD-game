@@ -444,7 +444,7 @@
   "ui.game_title": "ALMOST GOD",
   "ui.title_subtitle": "A small miracle.\nBig consequences.",
   "ui.credits_text": "Felix, Plum, Marfa, Semyon, Nika, Lada, Roza, Hugo and Caramel thank you.\n\nThis world now knows that even the impossible begins with a well-planned trick.\n\nMusic and illustrations were created for this game.",
-  "stage.load": "Load {capacity}",
+  "stage.load": "Capacity: {capacity}",
   "stage.vision": "View {visible}/3 · Method {method}",
   "stage.visible": "visible",
   "stage.hidden": "hidden",

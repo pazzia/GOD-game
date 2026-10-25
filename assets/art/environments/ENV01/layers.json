@@ -6,7 +6,7 @@
     1024
   ],
   "aspect_ratio": 1.5,
-  "status": "independently_painted_stack_pending_runtime_review",
+  "status": "recreated_independent_layers_awaiting_device_review",
   "fit": "contain_preserve_aspect",
   "source_directory": "res://assets/art/source/environments/ENV01",
   "layers": [
@@ -74,10 +74,11 @@
     "applies_to_all_environments": true
   },
   "notes": [
-    "All five are independent imagegen paintings, not cropped strips of a fullplate.",
+    "Four ENV01 / five ENV02+ENV03 layers newly painted via imagegen from old references; original ENV01 atmosphere retained. Midground paired corners scaled60%, foreground50% mechanically for clear center.",
     "Keep every image full-canvas; no alpha trim.",
     "Use one common fit transform and playrect for layers, water, entities, eye pins and hit regions.",
     "Near architecture and foreground are decoration; they must not claim to hide methods or block sight.",
     "Atmosphere is visual light only and has no steam/occluder meaning."
-  ]
+  ],
+  "source_generation": "res://assets/art/source/environments/generation-2026-10-25.json"
 }

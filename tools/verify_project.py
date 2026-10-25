@@ -7,12 +7,18 @@ from pathlib import Path
 import argparse, hashlib, json, os, re, subprocess, sys, tempfile, time
 
 ROOT = Path(__file__).resolve().parents[1]
+ENGINE_ERROR_PATTERN = re.compile(r'^(SCRIPT ERROR:|ERROR:)|ObjectDB instances (?:were )?leaked|Resources still in use at exit')
+
+def engine_errors(output):
+    """Godot can exit successfully even after a script error or native leak."""
+    return [line for line in output.splitlines() if ENGINE_ERROR_PATTERN.search(line)]
+
 def runtime_manifest():
     suffixes = {'.gd', '.json', '.tscn', '.tres', '.ttf', '.png', '.svg', '.ogg', '.wav', '.import'}
     records = {}
     for p in sorted(ROOT.rglob('*')):
         rel = p.relative_to(ROOT)
-        if any(x in {'build','tests','tools','docs','source','authoring','.godot','__pycache__'} for x in rel.parts):
+        if any(x in {'build','tests','tools','docs','source','authoring','old','artifacts','.agents','.git','.godot','__pycache__'} for x in rel.parts):
             continue
         if p.is_file() and (p.suffix in suffixes or p.name in {'project.godot','export_presets.cfg'}):
             records[str(rel)] = hashlib.sha256(p.read_bytes()).hexdigest()
@@ -27,13 +33,15 @@ def main():
     if not Path(opts.godot).is_file():
         ap.error('Godot binary missing; supply --godot /absolute/path/to/godot.')
     before = runtime_manifest()
-    commands = [('content', [sys.executable, str(ROOT/'tools/validate_content.py')]),
+    commands = [('verification-tools', [sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_verification_tools.py']),
+                ('content', [sys.executable, str(ROOT/'tools/validate_content.py')]),
                 ('art-files', [sys.executable, str(ROOT/'tools/verify_art.py')])]
     suites = ['test_kernel.gd','test_validation.gd','test_s2_regressions.gd','test_campaign.gd',
               'test_services.gd','test_service_boundaries.gd','test_client_loading.gd',
               'test_save_recovery_edges.gd','test_audio_conductor.gd','test_audio_transport_edges.gd',
-              'test_audio_shutdown.gd','test_audio_shutdown_edges.gd',
+              'test_audio_shutdown.gd','test_audio_shutdown_edges.gd','test_audio_shutdown_drain.gd',
               'test_workbench.gd','test_puppet.gd','test_puppet_edges.gd',
+              'test_character_acting.gd','test_character_animation_contract.gd',
               'test_layout.gd','test_stage_boundaries.gd','test_presentation.gd','test_stage_targets.gd','test_stage_input_edges.gd']
     if opts.ui:
         suites.extend(['test_ui.gd','test_touch_capability.gd','test_complex_ui_journeys.gd'])
@@ -52,9 +60,9 @@ def main():
             start=time.monotonic()
             try:
                 result=subprocess.run(command,cwd=ROOT,env=env,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=240)
-                engine_errors=[line for line in result.stdout.splitlines() if re.search(r'^(SCRIPT ERROR:|ERROR:)|ObjectDB instances leaked|Resources still in use at exit',line)]
-                item={'name':name,'exit_code':result.returncode or (1 if engine_errors else 0),'process_exit_code':result.returncode,
-                      'engine_errors':engine_errors,'elapsed_seconds':round(time.monotonic()-start,2),'output':result.stdout[-12000:]}
+                errors=engine_errors(result.stdout)
+                item={'name':name,'exit_code':result.returncode or (1 if errors else 0),'process_exit_code':result.returncode,
+                      'engine_errors':errors,'elapsed_seconds':round(time.monotonic()-start,2),'output':result.stdout[-12000:]}
             except subprocess.TimeoutExpired as e:
                 item={'name':name,'exit_code':124,'output':'Verification timed out; not a pass.'}
             outcomes.append(item)

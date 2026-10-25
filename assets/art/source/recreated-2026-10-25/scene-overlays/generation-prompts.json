@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "notes": "Exact submitted prompt strings; portable reference paths. ENV03 initial atlas retained as a source of the layout correction, not exported.",
+  "generations": [
+    {
+      "id": "ENV01-corner-vignettes",
+      "source_file": "ENV01-corner-vignettes.png",
+      "generated_file": "exec-7ccb141f-be78-4dc9-ab6f-9ce39e5126c4.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "assets/art/environments/ENV01/backdrop.png",
+        "assets/art/source/recreated-2026-10-25/props/river-tools.png"
+      ],
+      "prompt": "Create a set of TEN distinct little painted decorative CORNER VIGNETTES for the ten riverside levels of the original puzzle game Almost God. Use the reference world's soft gouache storybook style and restrained cream/teal/plum/copper palette, lower contrast than the interactive prop reference. This is a transparent PNG sprite sheet with exactly FIVE COLUMNS and TWO ROWS, ten isolated cells, no text, no numbers, no labels, no frames. Each vignette is a small compact still-life cluster with lots of transparent space around it, all separate and never crossing cell boundaries. They will be placed only in the far bottom corners of a gameplay stage. No characters, no platforms, no rocks large enough to cross water, no gameplay screens, no full backgrounds. Exact reading order: row1 cell1 fresh riverside reeds and three tiny white daisies; cell2 a little bunch of rolled blank ticket ribbons tied to two marigold blooms; cell3 a curling fern frond, snail shell and shore grasses; cell4 wind-bent grass with one tiny cream-and-plum windsock on a short decorative twig; cell5 a neatly tied nautical knot and a small sprig of moss beside a weathered driftwood chip. Row2 cell1 a little tuft of hay, clover flowers and a decorative tiny goat-bell lying in the grass; cell2 pale driftwood twig, two blue dragonflies and a few lily leaves; cell3 two contrasting plum-and-teal theatrical tassels resting on a small tuft of grass; cell4 an open miniature blank notepad with a quill and a pressed leaf, no writing; cell5 a celebratory cluster of reeds and small plum/cream/teal ribbon loops with a few meadow flowers. Each has an individual original arrangement and silhouette. Decorative painted cutouts only with true transparent alpha. Bright daylight, gentle handmade brushwork, clear margin between all10cells, no overall scene.",
+      "selected_for_export": true
+    },
+    {
+      "id": "ENV02-corner-vignettes",
+      "source_file": "ENV02-corner-vignettes.png",
+      "generated_file": "exec-0e132223-b73b-4bf0-b31a-f9a635fa5b50.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "ENV01-corner-vignettes.png",
+        "assets/art/environments/ENV02/backdrop.png"
+      ],
+      "prompt": "Paint the next TEN unique tiny decorative CORNER VIGNETTES for the festive kitchen chapter of Almost God. Match reference1's soft, low-contrast gouache cutout illustrations and reference2's warm cream/copper/ochre village light, with modest teal/plum fabric accents. Exactly FIVE COLUMNS and TWO ROWS of separately isolated still-life clusters on a real transparent PNG. No grid, labels, text, letters, numbers or full scene. Keep a generous transparent gutter around each of all ten individual cells; no overlap or touching. These are distant decorative details for the far bottom corners of the game stage, NOT interactable props, no active fire, smoke, frozen water or gameplay barriers. Exact reading order: ROW1 (1) small terracotta herb pot with copper ladle and thyme; (2) basket of ripe berries resting on folded cream linen with tiny embroidered plum border; (3) two decorative ceramic chimney-cap miniatures with marjoram leaves, no flame or smoke; (4) a little herb drying rack with sage and a cream ribbon tied in a loop; (5) pair of quilted oven mitts and worn kitchen tongs with a sprig of rosemary. ROW2 (1) short curled decorative copper pipe with little water droplets and a green fern, no steam; (2) two small embroidered rosettes, one teal one plum, with cream ribbon tails and herbs; (3) two neatly folded nautical-pattern napkins beside a seashell and small sprig of mint; (4) an empty woven bread basket with folded checked tea towel and wooden spoon; (5) a festive oval serving tray bearing only a few bright citrus slices and berries, decorated with tiny bunting ribbon loops. Natural material textures, gentle hand-painted edges, compact silhouettes, soft midday light. Transparent alpha throughout all the space between items. No person, architecture or large ground patches.",
+      "selected_for_export": true
+    },
+    {
+      "id": "ENV03-corner-vignettes-initial",
+      "source_file": "ENV03-corner-vignettes-initial.png",
+      "generated_file": "exec-22a30021-18f5-4337-9584-c1dab1947de4.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "ENV01-corner-vignettes.png",
+        "assets/art/environments/ENV03/backdrop.png"
+      ],
+      "prompt": "Paint TEN unique little decorative CORNER VIGNETTES for the paper-archive chapter of the original game Almost God. Match reference1's charming muted gouache cutout style and reference2's cream/plum/copper/teal world. Exactly FIVE COLUMNS by TWO ROWS, ten separate compact still-life clusters on a true transparent PNG, generous gaps, no grid, text, letters, numbers or labels. This is decorative marginal art placed only in the far bottom corner of a gameplay stage; no playable barriers, active flame, water or characters. Every cluster must be distinct and fully visible within its own cell. Exact reading order: ROW1 (1) origami cream paper leaves with two small quills tied in plum ribbon; (2) a few clover flowers and a whimsical paper leaf with a tiny decorative nibble at its corner; (3) two slim old books and a small CLOSED unlit brass lantern, no fire or smoke; (4) light paper feather ornaments, one cream and one pale teal, joined by fine gold cord; (5) three rolled blank certificates with plum wax seals and a copper clip, absolutely no writing. ROW2 (1) two tiny cream vases holding three stylised paper flowers in plum, teal and copper; (2) a folded accordion paper garland and loose soft cream ribbon, light delicate still life; (3) a round plum wax seal on blank cream ribbon with decorative oak leaves and quill; (4) theatrical plum velvet tassel, copper star brooch and small teal bow, ornate but low-contrast; (5) celebratory paper flower bouquet using cream/plum/teal with a few copper stars, generous graceful ribbon tails. All are peripheral decorative illustrations, not UI icons or screens. Soft natural light, tangible paper fibers and cloth textures, handcrafted silhouette, reduced contrast compared with gameplay props. Real alpha transparency around each complete isolated vignette. No full scene, ground plane or background color.",
+      "selected_for_export": false
+    },
+    {
+      "id": "ENV03-corner-vignettes",
+      "source_file": "ENV03-corner-vignettes.png",
+      "generated_file": "exec-cec4e943-a693-4220-bb88-ab35255c00f5.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "ENV03-corner-vignettes-initial.png"
+      ],
+      "prompt": "Production atlas layout correction only. Keep all TEN existing decorative vignettes, their identities, materials, colors, positions in reading order and painted style. Arrange them strictly in a uniform FIVE-COLUMN TWO-ROW grid with each vignette SHRUNK TO SIXTY PERCENT of its allocated cell width and SIXTY PERCENT of cell height. Center each in its cell. This creates extremely generous real transparent gutters, at least20percent cell width on EACH side and20percent height above/below. Every entire silhouette including the finest leaves/ribbons must remain inside its cell. The old vignettes nearly touched, which prevents safe sprite extraction; fix this by reducing their scale and increasing spacing, not by trimming their leaves. Preserve all10 unique motifs, no duplication, no deletion. True transparent alpha everywhere between and outside vignettes. No gridlines, no labels, no words, no background. Output one wide transparent PNG sprite sheet.",
+      "selected_for_export": true
+    }
+  ]
+}

@@ -340,7 +340,7 @@
     "Main goal complete"
   ],
   "ui.level_select_help": [
-    "Каждый эксперимент можно повторить бесплатно.",
+    "Опыты можно повторять бесплатно.",
     "Every experiment can be repeated for free."
   ],
   "ui.back_game": [
@@ -384,8 +384,8 @@
     "Felix, Plum, Marfa, Semyon, Nika, Lada, Roza, Hugo and Caramel thank you.\n\nThis world now knows that even the impossible begins with a well-planned trick.\n\nMusic and illustrations were created for this game."
   ],
   "stage.load": [
-    "Груз {capacity}",
-    "Load {capacity}"
+    "Вмещает: {capacity}",
+    "Capacity: {capacity}"
   ],
   "stage.vision": [
     "Обзор {visible}/3 · Механизм {method}",

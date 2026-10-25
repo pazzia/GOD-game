@@ -1,0 +1,249 @@
+{
+  "files": [
+    {
+      "path": "assets/art/characters/rigs/semyon/head.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        21,
+        21,
+        417,
+        393
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "aafd4eb0864cc0c9ab8e18ed4ffe713890d8d3ebf7afbc8da5fc94edec36796b",
+      "size": [
+        396,
+        372
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/torso.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        465,
+        56,
+        790,
+        400
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "af85c0b7adc0872f7dae2c6ecf10f5fc50c98e7bf9e787d84a9860aa293c5cc1",
+      "size": [
+        325,
+        344
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_arm.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        854,
+        83,
+        1237,
+        338
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "0ba60997ad12f99230396145ab1350fc4c95cf225bf871bd459d2d2d2e60c1e7",
+      "size": [
+        383,
+        255
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_arm.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        65,
+        468,
+        409,
+        750
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "1626762f05763a89358213b3d2c8c56657ef4091efeccc2885a287a2d8d4428b",
+      "size": [
+        344,
+        282
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_leg.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        548,
+        422,
+        724,
+        813
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "f9b6e7e82941e2ceb84342317203ce8570df797a46e48f1bf959272cf0096c89",
+      "size": [
+        176,
+        391
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_leg.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        944,
+        421,
+        1202,
+        810
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "6896102b999fe12edd16a059c3a42568acf78b2dbe0164d3f0566dbb73d6bd0a",
+      "size": [
+        258,
+        389
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/cape.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        74,
+        843,
+        364,
+        1209
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "9fbd63f02dda4a298b672d8c65ba56a4560770612c44f3dd29d6a4579b6d037a",
+      "size": [
+        290,
+        366
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/prop.png",
+      "source": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+      "crop": [
+        839,
+        896,
+        1223,
+        1183
+      ],
+      "operation": "atlas extraction, no repainting",
+      "sha256": "593d8b8ff5d81249c120de590e7e1aefc575e72e38f18f2709640ab82e4d6730",
+      "size": [
+        384,
+        287
+      ],
+      "mode": "RGBA",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "2a3674e9c35c0ffe28d0d6eb8833594316bd784b361441c0a77caeb11b2ee477"
+    },
+    {
+      "path": "assets/art/characters/semyon.png",
+      "source": "assets/art/source/recreated-2026-10-25/native-semyon.png",
+      "operation": "Native Godot4.7.2 render of authored CharacterPuppet rig at idle0, alpha-bounds crop only",
+      "sha256": "89d1ad09b4e2a0f24e9c985aafcb7b9d54c966c238b73b018bc02050ccb721fb",
+      "size": [
+        796,
+        1239
+      ],
+      "mode": "RGBA",
+      "status": "new native rig export, identity and geometry reviewed",
+      "source_sha256": "ec5e17e8966af128562cdd44ee81c51e69413596f23e14327f717a896a0472d8",
+      "crop": [
+        525,
+        174,
+        1321,
+        1413
+      ]
+    },
+    {
+      "path": "assets/art/characters/roza.png",
+      "source": "assets/art/source/recreated-2026-10-25/native-roza.png",
+      "operation": "Native Godot4.7.2 render of authored CharacterPuppet rig at idle0, alpha-bounds crop only",
+      "sha256": "99356142dec7e1fb10ae5cb10643ed1b50fff3c03a27b8a0d3194bb940716f2e",
+      "size": [
+        1101,
+        1265
+      ],
+      "mode": "RGBA",
+      "status": "new native rig export, identity and geometry reviewed",
+      "source_sha256": "18dd523a3eb70e9b3cb47c57b761f2d91196020a1981b8ea04e8ff8873eac751",
+      "crop": [
+        307,
+        136,
+        1408,
+        1401
+      ]
+    },
+    {
+      "path": "assets/art/ui/app_icon_192.png",
+      "source": "assets/art/source/recreated-2026-10-25/icon.png",
+      "operation": "Lanczos resize to 192 square",
+      "sha256": "cce133597df45dda33842b204c425165f2ec38ea426cfaa2d45d454ba2b9da88",
+      "size": [
+        192,
+        192
+      ],
+      "mode": "RGB",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659"
+    },
+    {
+      "path": "assets/art/ui/app_icon_512.png",
+      "source": "assets/art/source/recreated-2026-10-25/icon.png",
+      "operation": "Lanczos resize to 512 square",
+      "sha256": "2cf22308bdc33beb67fec5d16c8d71f6f62cb2f61b989de1945a2f1f4c57cba6",
+      "size": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659"
+    },
+    {
+      "path": "assets/art/ui/app_icon_1024.png",
+      "source": "assets/art/source/recreated-2026-10-25/icon.png",
+      "operation": "Lanczos resize to 1024 square",
+      "sha256": "216fb40111ec4c2d3055ba55a7c76157b7b70d7a70afc95779b6527f4f713ec0",
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659"
+    },
+    {
+      "path": "assets/art/ui/app_icon_master.png",
+      "source": "assets/art/source/recreated-2026-10-25/icon.png",
+      "operation": "unchanged native1254square master; not claimed2048",
+      "sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "status": "new generated replacement; distinct from historical frozen hash",
+      "source_sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659"
+    }
+  ],
+  "retained_original": "assets/art/characters/rigs/semyon/accessory.png",
+  "baseline_review": "Native Godot rig exports accepted for preview after Semyon shoulder/ruler calibration and nine-keypose visual review; runtime full-cycle animation and directional model-sheet acceptance remain separate.",
+  "review_scope": "New character/icon art and Semyon9base keyposes reviewed. Native rig baseline exports ensure body proportions match in-game puppets. Genuine directional sheets and continuous full acting remain separate production requirements."
+}

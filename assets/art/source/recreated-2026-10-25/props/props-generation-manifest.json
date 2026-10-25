@@ -1,0 +1,971 @@
+{
+  "kind": "new_generated_prop_assets",
+  "date": "2026-10-25",
+  "restoration_claim": "New replacement illustrations, NOT identical to lost originals.",
+  "references": [
+    "old/assets/art/characters/felix.png",
+    "old/assets/art/characters/portraits/semyon/idle.png"
+  ],
+  "export_policy": "ImageMagick mechanical rectangular crop, aspect-preserving Lanczos resize and transparent canvas padding. No procedural illustration; original metadata dimensions retained.",
+  "assets": [
+    {
+      "path": "assets/art/props/stone.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        25,
+        93,
+        384,
+        341
+      ],
+      "size": [
+        445,
+        233
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "e7e1b24b176010c2648286dea99f797db6ffb113b2e421e6ceb2614b918b2be3",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "a5d7322adb6508178f43fbadeffc2cbc032b99bf0ddb9717db502d5bbf912270"
+    },
+    {
+      "path": "assets/art/props/float.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        453,
+        64,
+        691,
+        327
+      ],
+      "size": [
+        246,
+        295
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "892bf0ca75d11e0e71b62d3f8100cdf6a5fdbe659c4010b6835ccfa7ecd23e3d",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "1f7c2bcee3834d85434bfc18cf1822c2dceb784e18b225d075ab8d3b056c30d4"
+    },
+    {
+      "path": "assets/art/props/screen.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        734,
+        34,
+        1085,
+        346
+      ],
+      "size": [
+        396,
+        322
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "abe441ef77cac0e0ffc08b6e82a92472f436915c165af7c60d741e037d7cfbff",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "c69d763be8f6f1b2469057d10135740aecadb2c0793d9280b40a2558cf24f503"
+    },
+    {
+      "path": "assets/art/props/crate.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        1117,
+        70,
+        1407,
+        339
+      ],
+      "size": [
+        326,
+        299
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "a598377440d3e3e1feee323a9d53f32b15dc192e606ee2ab3861b5c7ab080f3f",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "ff85d61763ee75e65debba1954c93c070c8615e8ee53259eee4e83ca23412367"
+    },
+    {
+      "path": "assets/art/props/rope.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        55,
+        426,
+        380,
+        706
+      ],
+      "size": [
+        363,
+        236
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "d4450357d67f86633b96e8e3f952eca214f52a469bca3a0b1d39addc457be7ab",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "6b2a586dfda20903a3bb005154d3de8a437e095a0f89a1ae5e4443e76c5ddbce"
+    },
+    {
+      "path": "assets/art/props/wooden_bollard.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        421,
+        398,
+        709,
+        704
+      ],
+      "size": [
+        366,
+        295
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "9517ff47ef21f8efc099b5c06b5db6c96b9b9b1070e6bdc38f846addb30b7793",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "1da0807fdf2648736fd61378de09a2e2fd898a0a8e381fb805dee24be3e8147f"
+    },
+    {
+      "path": "assets/art/props/boat.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        740,
+        395,
+        1060,
+        686
+      ],
+      "size": [
+        479,
+        240
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "f9c16b9e32191336b9aa16b4f3ccab208f024ccd5cde67615a9c3d2d8580a11e",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "714cb939554b30d3cdda4b844840298c67f0fbe3898a1f0f6183933f8f9ef8ba"
+    },
+    {
+      "path": "assets/art/props/ticket_booth.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        1099,
+        381,
+        1404,
+        707
+      ],
+      "size": [
+        317,
+        320
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "22cdec56202be91c242ac1201e17d9403eba5cf98d914ca543878aac372a159e",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "15599d162f49de30b3464f7839077f9d427a3e4ab2bd1229f14e617dad4ed62a"
+    },
+    {
+      "path": "assets/art/props/dock.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        45,
+        760,
+        435,
+        1022
+      ],
+      "size": [
+        523,
+        271
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "6a978e26869c168e83e3896045c2f2dd9cfd0d5dd9b6fd200dd299ad1e0ef136",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "000bab6abd7f3f35d19e243d6cadc375654c23b7dc9b45b7120fd77f906ca078"
+    },
+    {
+      "path": "assets/art/props/frame.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        447,
+        728,
+        755,
+        1024
+      ],
+      "size": [
+        454,
+        324
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b43f313aa1409634e47e6589a550da071175a69f9a3935d505e083d6fd73a843",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "1c356501ac24acc22b24456b09821f092894668d328c4d2085b345bcfafa0650"
+    },
+    {
+      "path": "assets/art/props/hoist.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        811,
+        704,
+        1057,
+        1042
+      ],
+      "size": [
+        388,
+        339
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "f9f0b0a1502df4fc3660e1411d0774ad0ddfec41e7e45cbc81efe44990c75849",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "084a445bea620536c4c97fb9f985f15a7ab9038f89b155c9b58df2f1d0828113"
+    },
+    {
+      "path": "assets/art/props/clamp.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "crop": [
+        1108,
+        752,
+        1411,
+        995
+      ],
+      "size": [
+        451,
+        321
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "300c3b9b76b0c053f71acbfb828ef6f0dc1430896c4c333995c36dc121047f89",
+      "status": "new_generated_replacement",
+      "source_sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "rgba_sha256": "874d071e214745ff03cb31bec44617a336e19c5ae43667daa34ba156ef4121fb"
+    },
+    {
+      "path": "assets/art/props/decoy_fire.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        71,
+        36,
+        327,
+        391
+      ],
+      "size": [
+        360,
+        331
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "a5379a3d0ac4a741ac2bea2ab184c0723b7409cd89401a8898fdab8264d61dfe",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "2bb7a06ab34299dc211a6a00a1d048bebd7c90f82cea7777967a46781bafa5a4"
+    },
+    {
+      "path": "assets/art/props/cryopack.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        384,
+        93,
+        692,
+        368
+      ],
+      "size": [
+        418,
+        321
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "525080c56658846c44e022b00439195d1b701858ec6af17a953e2b2878d4e998",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "2d0ec701ccd93be53a7d1dc7e5d33e3684d3405895e1715ea1ef4a304eab9dc4"
+    },
+    {
+      "path": "assets/art/props/water_bowl.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        736,
+        123,
+        1073,
+        367
+      ],
+      "size": [
+        413,
+        269
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "5c55269c795dd26baac14058519615afb89fa545b2e4a94632732956eb343f52",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "d1332581ae8a2936c9f17f5a3397c7752a4e60f1bd872194f8d30da88f101a83"
+    },
+    {
+      "path": "assets/art/props/fire_source.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        1104,
+        22,
+        1428,
+        383
+      ],
+      "size": [
+        424,
+        356
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "39177756c2caf723a4886b7d02a41375d2e18c70737a9419c67af96ee7b6d4c4",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "69c84ee4587b039f743eed8d8d27f3ec96cbdcc16f8827125da6e995bf46b7a9"
+    },
+    {
+      "path": "assets/art/props/hot_stone.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        38,
+        447,
+        347,
+        666
+      ],
+      "size": [
+        358,
+        258
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "d77c11d29f81d683becddc4fd2e9823e95da6caff8d4835a065b698559a647a7",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "6d5624b514f049128c06c8d8a4b159820657138b53aac1d492c29ba321f3b625"
+    },
+    {
+      "path": "assets/art/props/thermobox.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        382,
+        398,
+        705,
+        696
+      ],
+      "size": [
+        379,
+        321
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "a2365fca67df65378db4d3c88a9fe6da2160b7c3037229f05b9143ff6f07c973",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "3f6e3346d4ddb9aae73bdaa473b789eec4e5e844789acf20096c5af9301c513c"
+    },
+    {
+      "path": "assets/art/props/bread.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        740,
+        456,
+        1063,
+        676
+      ],
+      "size": [
+        491,
+        301
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b62f1eb459cd38634cf685a5095bdc44c52bac965746333f87b313a401b1a866",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "2386d456df9f56cc6fa06031befe76a5645bea6908f519720814378308cf2a19"
+    },
+    {
+      "path": "assets/art/props/dessert.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        1111,
+        412,
+        1419,
+        671
+      ],
+      "size": [
+        427,
+        303
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "69ddcb83af5f1e49dadfec1f58c2afaa01dfe8cf8413fd1741159b0b3e8f7d12",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "f2db168b2642c2693c841d5fae292edfb3afe22465cea57d42e6ca9f14b82e4e"
+    },
+    {
+      "path": "assets/art/props/steam.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        59,
+        708,
+        332,
+        1054
+      ],
+      "size": [
+        382,
+        332
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "692c6ad346122cf83d2c5f211f56b0ed6acc78ec0a8e08ce94480e53ab5b70ca",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "43127f4d345883830a6b52e9e56b77e83a4e51ac9a6a6a478b470e85dfd674a6"
+    },
+    {
+      "path": "assets/art/props/fire_source_cold.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        372,
+        693,
+        696,
+        1043
+      ],
+      "size": [
+        385,
+        434
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "34e45eec20d96a6974d097ca2c12b8a9bc52b64c48459e04423ff2305ef4c5b0",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "60a609d0daba2e2d3b99f83626a997050c592601b91d95873c6199e72d152f4d"
+    },
+    {
+      "path": "assets/art/props/water_bowl_frozen.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        728,
+        778,
+        1072,
+        1027
+      ],
+      "size": [
+        397,
+        296
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "80e3ba30c3dc3cf00ecd22e9e9214b81e98f91ae6565a88e2e0429ff9b769934",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "54fa71da614de52f81b9afe83728b5946c8c1dc5ae127baff0f0807c2358959d"
+    },
+    {
+      "path": "assets/art/props/kettle.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "crop": [
+        1116,
+        709,
+        1402,
+        1034
+      ],
+      "size": [
+        384,
+        383
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b2f382154f04b8f89df3fa826c606b7a38c17473a423615eb6a38f571d44cca5",
+      "status": "new_generated_replacement",
+      "source_sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "rgba_sha256": "3a0938d2a0fa6be3e38164678efc51cf809d67e71de6dbb46881e69e65aeba73"
+    },
+    {
+      "path": "assets/art/props/paper_bridge.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        22,
+        95,
+        419,
+        373
+      ],
+      "size": [
+        506,
+        257
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "a6b5538a64fbbd3e6523db33630911ee69f20eca337527ea2fef171af669f68d",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "5a96408320f66c84f2cce720b8a590a29be7bc0583bfda91bba8b63a02a3a96d"
+    },
+    {
+      "path": "assets/art/props/paper_gate.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        435,
+        26,
+        733,
+        368
+      ],
+      "size": [
+        369,
+        322
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "fa2044243346cdf42d338563eb09ad111e249aba65fe7883d1b86b11e95134cf",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "011dd41e2723ce140f0707f5034f16236860dd74febd8d188f30f72cab77a475"
+    },
+    {
+      "path": "assets/art/props/wood_gate.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        783,
+        45,
+        1106,
+        376
+      ],
+      "size": [
+        383,
+        321
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "d208610d3c85ac93a9764b5e47798be3d85681911123709ff4cf58853df4e923",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "056adf16512285733d8b53efb098e851122c8eb464bb3dcc8e21ad6d443ce04c"
+    },
+    {
+      "path": "assets/art/props/control_weight.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        1149,
+        77,
+        1431,
+        380
+      ],
+      "size": [
+        406,
+        311
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "69cce4cda68b907a5ef62751e9c0d77f3e260910d403b5572e93f879fee5fcce",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "6ab7c9504df732a25cb5b7b4e4ced55bf40a9f414bc42206f03b1d78196717cc"
+    },
+    {
+      "path": "assets/art/props/thread.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        77,
+        415,
+        329,
+        707
+      ],
+      "size": [
+        387,
+        302
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "739382505fa2eb7c2cb3d7eea0caba04b6587f0cae30fd84cf7d9bf2199f3c12",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "293c72b5cb02e93a4d5855ce01d53202daa353cf6582448593d3c03799abd7dc"
+    },
+    {
+      "path": "assets/art/props/flags.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        353,
+        428,
+        752,
+        624
+      ],
+      "size": [
+        460,
+        319
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "59721fd3dcf4b9190357b184dd0b29943789f495225d6f9ece7d99a9d4d8d652",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "cc7dfe3c175fdfc89cdc2ae9f7314f4283c43d8949528e966b8b8f16ab531af7"
+    },
+    {
+      "path": "assets/art/props/paper_reinforced.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        787,
+        426,
+        1142,
+        669
+      ],
+      "size": [
+        412,
+        319
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "21d6a30933a83cbe3dfb538fa21feca70abb33d6f27be68e97b91eb1fb972367",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "ede1214f79c5e90e112abfb16fa510574f30ba06ed80ceb441f5a401f54fba77"
+    },
+    {
+      "path": "assets/art/props/miracle_stamp.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        1175,
+        408,
+        1405,
+        672
+      ],
+      "size": [
+        388,
+        287
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b045aceee80250ec49337d24f367332a57d8094e9393901cb6c4875d8e122e11",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "297bf8974a2473b6fd51bb7de25015f1367dd4cd883d674fb26e42d782a753ad"
+    },
+    {
+      "path": "assets/art/props/paper_sheet.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        30,
+        724,
+        373,
+        1049
+      ],
+      "size": [
+        390,
+        349
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b2651f1305af1607b025999c48f39212b00d5b84a1cb2b9e0a465a049bd80576",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "c149a80e07a14e48c3387e27a97b2220f7bc90da0a348328574a23c7d63bf0c0"
+    },
+    {
+      "path": "assets/art/props/sandbag.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        399,
+        709,
+        715,
+        1026
+      ],
+      "size": [
+        395,
+        380
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "2fbf598dafe7905fad981fd6f6424f8150be16878f611c544a088ea863c5d236",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "ea003eaac77148e221d61c62f4e20f5abe4298d04af601a152a8c3dae2b6712f"
+    },
+    {
+      "path": "assets/art/props/thermal_screen.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        745,
+        698,
+        1109,
+        1027
+      ],
+      "size": [
+        392,
+        406
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "ab95d9188745c5ed2ce9399c568f2ca05e736942c7292a8b5bb73133b0d6e7e4",
+      "status": "new_generated_replacement",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "96b815e9bd28cd9be1b9b0cfba668cd9a3c0b14c135cd20e4ea9fd46d0a40cc9"
+    },
+    {
+      "path": "assets/art/props/poster.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "crop": [
+        1152,
+        673,
+        1424,
+        1056
+      ],
+      "size": [
+        512,
+        640
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "b4e5a870442684aece89541bcaaa46a17e4117fe2ee11b410fb61056b931a45a",
+      "status": "new_generated_previously_unproduced",
+      "source_sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "rgba_sha256": "3d9651df3ab12ae23689b8a9d4f518a3e089bd94387c294a0fed62d58ca170d5"
+    },
+    {
+      "path": "assets/art/props/stone_anchor.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/supports.png",
+      "crop": [
+        68,
+        78,
+        723,
+        978
+      ],
+      "size": [
+        1170,
+        1295
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "f4dde4de88685a919a7d77945a6584dbe940bcc4b30a2f02a968326394b5a30c",
+      "status": "new_generated_replacement",
+      "source_sha256": "9062dac3865d5537ec51081eca2182c86fedb49f85854cc8df3cd1ebb79a7fa7",
+      "rgba_sha256": "df131e4106410315c72f53b251352e92adbcdc10947ec3f73a25e3e33e86465e"
+    },
+    {
+      "path": "assets/art/props/span_anchor.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/supports.png",
+      "crop": [
+        869,
+        48,
+        1473,
+        965
+      ],
+      "size": [
+        885,
+        1206
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "c4228eaf0befa02c23f0a0c24dbe0326d0cfdfd639615281c47c6ddbb6352920",
+      "status": "new_generated_replacement",
+      "source_sha256": "9062dac3865d5537ec51081eca2182c86fedb49f85854cc8df3cd1ebb79a7fa7",
+      "rgba_sha256": "3e8cda80c02e4333050abc56b620cd3fd5b77be75e6409a90a5d205b88c20c6d"
+    },
+    {
+      "path": "assets/art/props/water_surface.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/water-and-ice.png",
+      "crop": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "c18369889b91efd6a0aa7a14193be980746c977aabfd23601c17522b65eed7fb",
+      "status": "new_generated_replacement",
+      "source_sha256": "e7086d2a3b8f977f254f16eff97a554ad1163d3f7a7b972fc545c9c39ea92e88",
+      "rgba_sha256": "b70286114c9390ae6d7723822524cea25eea029dfc200ecd154a70e30173d18b"
+    },
+    {
+      "path": "assets/art/props/ice_surface.png",
+      "source": "assets/art/source/recreated-2026-10-25/props/water-and-ice.png",
+      "crop": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "size": [
+        1254,
+        1254
+      ],
+      "pivot": [
+        0.5,
+        1.0
+      ],
+      "sha256": "ffb8ca0d126f90e61cf4cef66bc550a88c1bf6d368c7fb016a2359b682ea43a7",
+      "status": "new_generated_replacement",
+      "source_sha256": "e7086d2a3b8f977f254f16eff97a554ad1163d3f7a7b972fc545c9c39ea92e88",
+      "rgba_sha256": "a193244d3b5500bb65e69cd5e29207e28bfe51fd75e26d8bf62eac3891750aaf"
+    }
+  ],
+  "sources": [
+    {
+      "path": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
+      "original_generated_path": "/workspace/generated_images/exec-df559426-4a28-467c-ace1-e2224e3451a0.png",
+      "sha256": "c1cf6d019ff76b57a9c3a6038f8de65e1fb1ad18b5500fc27721adf7ad20ec8e",
+      "objects_in_reading_order": [
+        "stone",
+        "float",
+        "screen",
+        "crate",
+        "rope",
+        "wooden_bollard",
+        "boat",
+        "ticket_booth",
+        "dock",
+        "frame",
+        "hoist",
+        "clamp"
+      ]
+    },
+    {
+      "path": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
+      "original_generated_path": "/workspace/generated_images/exec-618846c1-3d37-4b3e-b85f-9f7796b310e4.png",
+      "sha256": "e454a6878f48ebb3a7e1c48f0227fe03690da593e7c066d12ab83bf82881993e",
+      "objects_in_reading_order": [
+        "decoy_fire",
+        "cryopack",
+        "water_bowl",
+        "fire_source",
+        "hot_stone",
+        "thermobox",
+        "bread",
+        "dessert",
+        "steam",
+        "fire_source_cold",
+        "water_bowl_frozen",
+        "kettle"
+      ]
+    },
+    {
+      "path": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+      "original_generated_path": "/workspace/generated_images/exec-e4106b6d-15f5-4381-9fd1-f54d67662467.png",
+      "sha256": "cda64255f50e3c0321a02bc1c85a71add9013703cd35519d3a45516f7d8ea8e3",
+      "objects_in_reading_order": [
+        "paper_bridge",
+        "paper_gate",
+        "wood_gate",
+        "control_weight",
+        "thread",
+        "flags",
+        "paper_reinforced",
+        "miracle_stamp",
+        "paper_sheet",
+        "sandbag",
+        "thermal_screen",
+        "poster"
+      ]
+    },
+    {
+      "path": "assets/art/source/recreated-2026-10-25/props/supports.png",
+      "original_generated_path": "/workspace/generated_images/exec-49863302-2666-4abb-b5ac-ba4cf0ea4129.png",
+      "sha256": "9062dac3865d5537ec51081eca2182c86fedb49f85854cc8df3cd1ebb79a7fa7",
+      "objects_in_reading_order": [
+        "stone_anchor",
+        "span_anchor"
+      ]
+    },
+    {
+      "path": "assets/art/source/recreated-2026-10-25/props/water-and-ice.png",
+      "original_generated_path": "/workspace/generated_images/exec-91480df4-bfda-474a-b4ba-802adf5fc88f.png",
+      "sha256": "e7086d2a3b8f977f254f16eff97a554ad1163d3f7a7b972fc545c9c39ea92e88",
+      "objects_in_reading_order": [
+        "water_surface",
+        "ice_surface"
+      ]
+    }
+  ],
+  "review_limits": "Atlas and exported contact sheets visually reviewed; native gameplay integration and phone readability require separate review.",
+  "export_byte_stability": "PNG metadata contains ImageMagick creation timestamps. Reproduction checks RGBA pixels; shipped-byte SHA256 remains recorded separately."
+}

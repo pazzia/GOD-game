@@ -16,4 +16,7 @@ dist/
 local.properties
 *.jks
 *.keystore
-!tools/signing/debug.keystore
+
+# Local build outputs; reviewed evidence lives in docs/reviews/.
+build/
+*.idsig

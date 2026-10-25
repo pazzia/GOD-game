@@ -1,0 +1,8 @@
+{
+  "actual_rig_textures": false,
+  "checks": 1069,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "limits": "Transform and cue-contract verification. Human visual and facial/art acceptance remains separate.",
+  "special_clips_evaluated": 47
+}

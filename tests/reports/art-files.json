@@ -1,7 +1,7 @@
 {
   "kind": "art_file_integrity",
   "status": "passed",
-  "raster_exports": 238,
+  "raster_exports": 269,
   "svg_exports": 32,
   "portrait_exports": 81,
   "layer_stacks_with_metadata": 3,
@@ -1011,63 +1011,63 @@
     },
     {
       "path": "assets/art/characters/rigs/semyon/cape.png",
-      "width": 309,
-      "height": 364,
-      "sha256": "d32c8dd249acf428b33dfaa129e89f9507cb3ab09678ff576575a5fd47a05af4"
+      "width": 290,
+      "height": 366,
+      "sha256": "9fbd63f02dda4a298b672d8c65ba56a4560770612c44f3dd29d6a4579b6d037a"
     },
     {
       "path": "assets/art/characters/rigs/semyon/head.png",
-      "width": 354,
-      "height": 368,
-      "sha256": "456bb3b2d9a093877188033247b2e4d0eb36827f4039fc814ad5761ed6cbffd5"
+      "width": 396,
+      "height": 372,
+      "sha256": "aafd4eb0864cc0c9ab8e18ed4ffe713890d8d3ebf7afbc8da5fc94edec36796b"
     },
     {
       "path": "assets/art/characters/rigs/semyon/left_arm.png",
-      "width": 383,
-      "height": 329,
-      "sha256": "bb30a5beb8abd3db23e7782c55bad841ee93b7c8384e63194160e3864687b6dd"
+      "width": 344,
+      "height": 282,
+      "sha256": "1626762f05763a89358213b3d2c8c56657ef4091efeccc2885a287a2d8d4428b"
     },
     {
       "path": "assets/art/characters/rigs/semyon/left_leg.png",
-      "width": 182,
-      "height": 428,
-      "sha256": "fd6d8cdf226d8103d2e796ec822040ab59163448dc793ae985959fbce9af0ad2"
+      "width": 176,
+      "height": 391,
+      "sha256": "f9b6e7e82941e2ceb84342317203ce8570df797a46e48f1bf959272cf0096c89"
     },
     {
       "path": "assets/art/characters/rigs/semyon/prop.png",
-      "width": 383,
-      "height": 218,
-      "sha256": "f79d1b0fe84dc06c79eba12a5100396c63b95f1c13a6671594d05c7f18431852"
+      "width": 384,
+      "height": 287,
+      "sha256": "593d8b8ff5d81249c120de590e7e1aefc575e72e38f18f2709640ab82e4d6730"
     },
     {
       "path": "assets/art/characters/rigs/semyon/right_arm.png",
-      "width": 409,
-      "height": 307,
-      "sha256": "8690fd42c1cd6a69171c8b614dc363d21cd74b1af7ebcccb028cf4c083ea42a6"
+      "width": 383,
+      "height": 255,
+      "sha256": "0ba60997ad12f99230396145ab1350fc4c95cf225bf871bd459d2d2d2e60c1e7"
     },
     {
       "path": "assets/art/characters/rigs/semyon/right_leg.png",
-      "width": 267,
-      "height": 424,
-      "sha256": "e72314ab30e5c2e5b710681b6f6710a0268ac7ec1ccb839ebd82c15feb18df1a"
+      "width": 258,
+      "height": 389,
+      "sha256": "6896102b999fe12edd16a059c3a42568acf78b2dbe0164d3f0566dbb73d6bd0a"
     },
     {
       "path": "assets/art/characters/rigs/semyon/torso.png",
       "width": 325,
-      "height": 361,
-      "sha256": "eb165a83cf43d11bfd383172d5bbb158df3601f089cef86ed25d0c8579e50b92"
+      "height": 344,
+      "sha256": "af85c0b7adc0872f7dae2c6ecf10f5fc50c98e7bf9e787d84a9860aa293c5cc1"
     },
     {
       "path": "assets/art/characters/roza.png",
-      "width": 217,
-      "height": 337,
-      "sha256": "8c9f61bba68c97d30a9bcda31c74bd5534c435418729b022f93c4a5b055512e6"
+      "width": 1101,
+      "height": 1265,
+      "sha256": "99356142dec7e1fb10ae5cb10643ed1b50fff3c03a27b8a0d3194bb940716f2e"
     },
     {
       "path": "assets/art/characters/semyon.png",
-      "width": 208,
-      "height": 340,
-      "sha256": "d73de0b802e90c25adcf27fe7de741a9b14da84a4223e8cd3ab96acfc1c5a6f9"
+      "width": 796,
+      "height": 1239,
+      "sha256": "89d1ad09b4e2a0f24e9c985aafcb7b9d54c966c238b73b018bc02050ccb721fb"
     },
     {
       "path": "assets/art/environments/ENV01/atmosphere.png",
@@ -1079,361 +1079,547 @@
       "path": "assets/art/environments/ENV01/backdrop.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "982bfb538b13cbfcf545d726920686acec207ae01ebec5d6b140ca15835ce8e7"
+      "sha256": "6706efdd4b9f1f9a6b87ea4056fed70af4728df4d250e62a80b48c7a235d3a01"
     },
     {
       "path": "assets/art/environments/ENV01/floor.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "a818937e1805333b44bb0ad44ca4771a13874aa28b24c0f7e9568385664c1f7f"
+      "sha256": "7bec4eb6e258621bb9455f855ca3efce9aae2c7954b052f26670c2fff0b9a1fd"
     },
     {
       "path": "assets/art/environments/ENV01/foreground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "168ab86f76fac8550999cab2c6b8747d5e5518292ccf718ffa0f41c4fc26dcd0"
+      "sha256": "c9412eb5c6dd4c2e3e8b536fb90b8b32816231af09d43541bae89067455d98da"
     },
     {
       "path": "assets/art/environments/ENV01/midground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "076f1e3ba325f4dea2cb4e225babe861849cb4cdda7d35741467c7ebdbe6dc3b"
+      "sha256": "d8ed2212b555da5ffda94c880f381b71cb24c776ae32ab8eb1c06b4b80837793"
     },
     {
       "path": "assets/art/environments/ENV02/atmosphere.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "7cfabfccc9bd5fd7f0f3b72ebc307c5ecad8fbb061a857cd956dd845baa6d24e"
+      "sha256": "a0e489990872af030e29cdad175933684ac9a7b5b6011a7a5776b261131fa7a3"
     },
     {
       "path": "assets/art/environments/ENV02/backdrop.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "9dfa0600645fefe0796dad4e881788c34a5b130f14ea3fa4a1b5124854aa5989"
+      "sha256": "27658fbc5abc50d15f1989018bf058a5b6bf4972d36c1c9d9d3519864f0cb28c"
     },
     {
       "path": "assets/art/environments/ENV02/floor.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "abef83bea3056275c3576b1eaff2fc20037175382471712582d2adb4aff24268"
+      "sha256": "dc801fa4d3f9b3350d18831224e730a806da16ce5b1780548c122041c00f3465"
     },
     {
       "path": "assets/art/environments/ENV02/foreground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "199be604fae2159f587c3c0a31eda817cb6a0965e84e4721ded99805ae0b1626"
+      "sha256": "f1bfc790f90cba27bf0edb660e5fdca724520452e3190bffa0e938d8d8e732ee"
     },
     {
       "path": "assets/art/environments/ENV02/midground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "d2892f405299799ede7287151c1f18ebd8413ea995783d09e4e6db64433982e5"
+      "sha256": "0a4f3b96be9c63802f35397884a03e12c063d9e1dcc0e2cb60caaf8b78ae631a"
     },
     {
       "path": "assets/art/environments/ENV03/atmosphere.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "bffb14dda496cfdf72e4122eef13d56c6d620f49aa054019ea6a3bd0bd4d0119"
+      "sha256": "c372a1bfbab3a192ed704c005fc78ca836ab93e3f28d35358ea7c072a77b195b"
     },
     {
       "path": "assets/art/environments/ENV03/backdrop.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "6f7115cfe1c88b9b99b916c97deddf86f88feaeb70f0a5ae6e0b20770f843239"
+      "sha256": "867cbeac9e57921ebc442546b036aba288535126010e5d3de3dc746c106c5783"
     },
     {
       "path": "assets/art/environments/ENV03/floor.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "b9da91321e6affa59c18cd33fbc6af6caf3a1defc2bfdf2844e588e4ff785c95"
+      "sha256": "7ca62a5b215835c2ee6ecacfb31c1413e7ecc490c62220a4d77f8e0c00c20393"
     },
     {
       "path": "assets/art/environments/ENV03/foreground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "b8954ddc1b8638a078ce257f8b8a724cb8824082bb9328e8bfe274215030a6d4"
+      "sha256": "cfc3a0c5c5eb38aaf2c3ebb6d873b6530edc8ed38ff6193e3a0b1058f1868b64"
     },
     {
       "path": "assets/art/environments/ENV03/midground.png",
       "width": 1536,
       "height": 1024,
-      "sha256": "fa02c58be420aa162a4df86b8148e25e9cc5e5e48730b416c4f3f303217e3f33"
+      "sha256": "0c388a72be87613bbf364fc3733091a052486259b624ba33dce407bb0a03bede"
     },
     {
       "path": "assets/art/environments/bg_archive.png",
-      "width": 941,
-      "height": 1672,
-      "sha256": "83eb9bbc2ec8a2d0ce68e4d00c4c5daad4bc6808cb26504dcad5fd8309a56fb7"
+      "width": 1536,
+      "height": 1024,
+      "sha256": "91e9c249e47ec82b8364e27b2d39439a64371a79a76fbfd00fdd45e0029f5797"
     },
     {
       "path": "assets/art/environments/bg_kitchen.png",
-      "width": 941,
-      "height": 1672,
-      "sha256": "097a6b62271a4d17525ee08e28eecfcec5bb15dff613d6d97dd1d6499440034c"
+      "width": 1536,
+      "height": 1024,
+      "sha256": "da95698b0fcbb5fd1bd3669b35ca2f65bc909d8fd7caa55ffcb51f4d58b2b257"
     },
     {
       "path": "assets/art/environments/bg_river.png",
-      "width": 941,
-      "height": 1672,
-      "sha256": "70f21728c000a7c75fbedab8634ce01b0587c773b91481876eab83cd4d62c8e5"
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d4823c10887f5ec054dee48acbd8ee3fb3febc4f414742ed44398eed70500940"
     },
     {
       "path": "assets/art/props/boat.png",
       "width": 479,
       "height": 240,
-      "sha256": "763726a591b45d990d23e9bc6bcf747355aca1d021bf4779f2668010e73cdfaa"
+      "sha256": "f9c16b9e32191336b9aa16b4f3ccab208f024ccd5cde67615a9c3d2d8580a11e"
     },
     {
       "path": "assets/art/props/bread.png",
       "width": 491,
       "height": 301,
-      "sha256": "66a2922ca0ccfb814b627f05f9943e67528552cb1e13c4062cf6646b35734210"
+      "sha256": "b62f1eb459cd38634cf685a5095bdc44c52bac965746333f87b313a401b1a866"
     },
     {
       "path": "assets/art/props/clamp.png",
       "width": 451,
       "height": 321,
-      "sha256": "e5c8f5f950857c717fc01847aea67cc2d286814c4411656b6f212061945ac510"
+      "sha256": "300c3b9b76b0c053f71acbfb828ef6f0dc1430896c4c333995c36dc121047f89"
     },
     {
       "path": "assets/art/props/control_weight.png",
       "width": 406,
       "height": 311,
-      "sha256": "735144e97b1c32da603f81410c033f527f143dbeae55aab4ac8029432ba4e36c"
+      "sha256": "69cce4cda68b907a5ef62751e9c0d77f3e260910d403b5572e93f879fee5fcce"
     },
     {
       "path": "assets/art/props/crate.png",
       "width": 326,
       "height": 299,
-      "sha256": "b41266efa5364d4b3e6c0cf0ad81e57bbc5015b0a474131ecd3553e51a3954b8"
+      "sha256": "a598377440d3e3e1feee323a9d53f32b15dc192e606ee2ab3861b5c7ab080f3f"
     },
     {
       "path": "assets/art/props/cryopack.png",
       "width": 418,
       "height": 321,
-      "sha256": "52db43342ca1b60155a6f583ce9e1098fda4e0160388001316a0d6acb8ebfd87"
+      "sha256": "525080c56658846c44e022b00439195d1b701858ec6af17a953e2b2878d4e998"
     },
     {
       "path": "assets/art/props/decoy_fire.png",
       "width": 360,
       "height": 331,
-      "sha256": "62b2b84a07af444ab8d1ca7e423e0fa44232c865b068e192892ffc8577a06cc7"
+      "sha256": "a5379a3d0ac4a741ac2bea2ab184c0723b7409cd89401a8898fdab8264d61dfe"
     },
     {
       "path": "assets/art/props/dessert.png",
       "width": 427,
       "height": 303,
-      "sha256": "3aa74406e0caec139e8db33f382f7555e1d6bc7d8868704c17e856a4da2746d3"
+      "sha256": "69ddcb83af5f1e49dadfec1f58c2afaa01dfe8cf8413fd1741159b0b3e8f7d12"
     },
     {
       "path": "assets/art/props/dock.png",
       "width": 523,
       "height": 271,
-      "sha256": "93138b2eff129306e999c8f536ead40b2b1efd9a874e9b8b60c733d9b30b4f35"
+      "sha256": "6a978e26869c168e83e3896045c2f2dd9cfd0d5dd9b6fd200dd299ad1e0ef136"
     },
     {
       "path": "assets/art/props/fire_source.png",
       "width": 424,
       "height": 356,
-      "sha256": "2468409b621f19f17b147f781ebb8f64f5ef466673b99df33f076a1ac78153d6"
+      "sha256": "39177756c2caf723a4886b7d02a41375d2e18c70737a9419c67af96ee7b6d4c4"
     },
     {
       "path": "assets/art/props/fire_source_cold.png",
       "width": 385,
       "height": 434,
-      "sha256": "b27391b42366c58ad4d0faa91911315d6e1c3a7b16db2f680d3181e5227325ab"
+      "sha256": "34e45eec20d96a6974d097ca2c12b8a9bc52b64c48459e04423ff2305ef4c5b0"
     },
     {
       "path": "assets/art/props/flags.png",
       "width": 460,
       "height": 319,
-      "sha256": "e2e26b8ab2f5e61085c5f3744c991be3c0004b3507f85b8dbb8d37e4f4512e1c"
+      "sha256": "59721fd3dcf4b9190357b184dd0b29943789f495225d6f9ece7d99a9d4d8d652"
     },
     {
       "path": "assets/art/props/float.png",
       "width": 246,
       "height": 295,
-      "sha256": "381d50f9839e2fd1949fa67f67290f97ca65d7b5d709e55de1a85d72c31d222a"
+      "sha256": "892bf0ca75d11e0e71b62d3f8100cdf6a5fdbe659c4010b6835ccfa7ecd23e3d"
     },
     {
       "path": "assets/art/props/frame.png",
       "width": 454,
       "height": 324,
-      "sha256": "9aa8942c60a6ab0ed271acbb934b725a1e2da0b099d111e37517ee2a280c93e4"
+      "sha256": "b43f313aa1409634e47e6589a550da071175a69f9a3935d505e083d6fd73a843"
     },
     {
       "path": "assets/art/props/hoist.png",
       "width": 388,
       "height": 339,
-      "sha256": "c6e9afafae3a51bb70c7357250a2280a4bae17176047c21db2b3ae504fa597fd"
+      "sha256": "f9f0b0a1502df4fc3660e1411d0774ad0ddfec41e7e45cbc81efe44990c75849"
     },
     {
       "path": "assets/art/props/hot_stone.png",
       "width": 358,
       "height": 258,
-      "sha256": "461a055a87a8defc16483e4cf334a9f100ae0fe46a5e7ddf0b5fc988f0506fe3"
+      "sha256": "d77c11d29f81d683becddc4fd2e9823e95da6caff8d4835a065b698559a647a7"
     },
     {
       "path": "assets/art/props/ice_surface.png",
       "width": 1254,
       "height": 1254,
-      "sha256": "34236b5947c89fadfc4904f2c81cbf4bb6feb00736217b355466e2f2e6130adf"
+      "sha256": "ffb8ca0d126f90e61cf4cef66bc550a88c1bf6d368c7fb016a2359b682ea43a7"
     },
     {
       "path": "assets/art/props/kettle.png",
       "width": 384,
       "height": 383,
-      "sha256": "c294ad92bf4f41b92522bfba05dad8bd0fd4b51f9be1dce0f7b9477bb1b700d7"
+      "sha256": "b2f382154f04b8f89df3fa826c606b7a38c17473a423615eb6a38f571d44cca5"
     },
     {
       "path": "assets/art/props/miracle_stamp.png",
       "width": 388,
       "height": 287,
-      "sha256": "03f99d301d6cb305b801363295387e1d124fd8f34cbe4236a2a369c2548cc2f5"
+      "sha256": "b045aceee80250ec49337d24f367332a57d8094e9393901cb6c4875d8e122e11"
     },
     {
       "path": "assets/art/props/paper_bridge.png",
       "width": 506,
       "height": 257,
-      "sha256": "fa2b7e8288cdcfa93830f6aafb30dd8e689238911c0e6229cce100999cc2340d"
+      "sha256": "a6b5538a64fbbd3e6523db33630911ee69f20eca337527ea2fef171af669f68d"
     },
     {
       "path": "assets/art/props/paper_gate.png",
       "width": 369,
       "height": 322,
-      "sha256": "a8bac65a54a7a5724329cf4fa67f5a0690a0591fdbefadf8d3b9e4c4384dfdd0"
+      "sha256": "fa2044243346cdf42d338563eb09ad111e249aba65fe7883d1b86b11e95134cf"
     },
     {
       "path": "assets/art/props/paper_reinforced.png",
       "width": 412,
       "height": 319,
-      "sha256": "a1d027660bb03890c02f1b7b7e83149f78c7151560887b06f6e75f3a8df1fe7b"
+      "sha256": "21d6a30933a83cbe3dfb538fa21feca70abb33d6f27be68e97b91eb1fb972367"
     },
     {
       "path": "assets/art/props/paper_sheet.png",
       "width": 390,
       "height": 349,
-      "sha256": "304befef35f902cced79a89cdd048312ce271a0090fc3647fd05345ea85b8c81"
+      "sha256": "b2651f1305af1607b025999c48f39212b00d5b84a1cb2b9e0a465a049bd80576"
+    },
+    {
+      "path": "assets/art/props/poster.png",
+      "width": 512,
+      "height": 640,
+      "sha256": "b4e5a870442684aece89541bcaaa46a17e4117fe2ee11b410fb61056b931a45a"
     },
     {
       "path": "assets/art/props/rope.png",
       "width": 363,
       "height": 236,
-      "sha256": "1b5eb22917dca5a88d2dd23e63d549ca25e0771d72cdc77b3ae067851a990d2c"
+      "sha256": "d4450357d67f86633b96e8e3f952eca214f52a469bca3a0b1d39addc457be7ab"
     },
     {
       "path": "assets/art/props/sandbag.png",
       "width": 395,
       "height": 380,
-      "sha256": "49d48ca51b1eaa084bfcee78f686e75c589d7f105cd1dd05fa3ae73976e3571c"
+      "sha256": "2fbf598dafe7905fad981fd6f6424f8150be16878f611c544a088ea863c5d236"
     },
     {
       "path": "assets/art/props/screen.png",
       "width": 396,
       "height": 322,
-      "sha256": "4e0a90dace9f243312b7dca5c946101e7d832c96db2a3e6212d64526cf044d3e"
+      "sha256": "abe441ef77cac0e0ffc08b6e82a92472f436915c165af7c60d741e037d7cfbff"
     },
     {
       "path": "assets/art/props/span_anchor.png",
       "width": 885,
       "height": 1206,
-      "sha256": "7db9eb699af2133b520d297addfe6d4d8529f6c19602a54acbbd8706efe0dc72"
+      "sha256": "c4228eaf0befa02c23f0a0c24dbe0326d0cfdfd639615281c47c6ddbb6352920"
     },
     {
       "path": "assets/art/props/steam.png",
       "width": 382,
       "height": 332,
-      "sha256": "0e137ebd5cc53385d71c84d3957e8627ec5ba8784ca1f6d8a0ea4e279d85200b"
+      "sha256": "692c6ad346122cf83d2c5f211f56b0ed6acc78ec0a8e08ce94480e53ab5b70ca"
     },
     {
       "path": "assets/art/props/stone.png",
       "width": 445,
       "height": 233,
-      "sha256": "08f1f8b16d8d90c375c50f525555ad24d0806bc2e924760af81110206e4aa900"
+      "sha256": "e7e1b24b176010c2648286dea99f797db6ffb113b2e421e6ceb2614b918b2be3"
     },
     {
       "path": "assets/art/props/stone_anchor.png",
       "width": 1170,
       "height": 1295,
-      "sha256": "03e09065d2373f3fa9fdd9c5e218b3a8637b505a460a61701ad6fb614427b60e"
+      "sha256": "f4dde4de88685a919a7d77945a6584dbe940bcc4b30a2f02a968326394b5a30c"
     },
     {
       "path": "assets/art/props/thermal_screen.png",
       "width": 392,
       "height": 406,
-      "sha256": "3ac5b7dfc5a12f02b98b302ee9918b142ab68b2954a3b5558a7c04ee3335b2be"
+      "sha256": "ab95d9188745c5ed2ce9399c568f2ca05e736942c7292a8b5bb73133b0d6e7e4"
     },
     {
       "path": "assets/art/props/thermobox.png",
       "width": 379,
       "height": 321,
-      "sha256": "7bb631ccd2c56cc50bbacd09b8d3e8421d9f34cd796c91d4ec7bdcccece49910"
+      "sha256": "a2365fca67df65378db4d3c88a9fe6da2160b7c3037229f05b9143ff6f07c973"
     },
     {
       "path": "assets/art/props/thread.png",
       "width": 387,
       "height": 302,
-      "sha256": "5e2ec2bbe661efec290e520efaa016d63f6264aff9e784f8afd20ff5ebd8a0ec"
+      "sha256": "739382505fa2eb7c2cb3d7eea0caba04b6587f0cae30fd84cf7d9bf2199f3c12"
     },
     {
       "path": "assets/art/props/ticket_booth.png",
       "width": 317,
       "height": 320,
-      "sha256": "e139b956b1aa3fcfadb56288a5d343db96bc16097b4d8bdd23941b8fec61bf61"
+      "sha256": "22cdec56202be91c242ac1201e17d9403eba5cf98d914ca543878aac372a159e"
     },
     {
       "path": "assets/art/props/water_bowl.png",
       "width": 413,
       "height": 269,
-      "sha256": "ec0155b1aae60f4ac7799b2d8253bcff5d7c230a7dcb2f865ad72dfde94dfd6a"
+      "sha256": "5c55269c795dd26baac14058519615afb89fa545b2e4a94632732956eb343f52"
     },
     {
       "path": "assets/art/props/water_bowl_frozen.png",
       "width": 397,
       "height": 296,
-      "sha256": "7fc553780354857fe3bbc50119debf34593e65c582ba1f14d1a659d744ccac54"
+      "sha256": "80e3ba30c3dc3cf00ecd22e9e9214b81e98f91ae6565a88e2e0429ff9b769934"
     },
     {
       "path": "assets/art/props/water_surface.png",
       "width": 1254,
       "height": 1254,
-      "sha256": "e0874518f012a277966be5c0c627e27c5ed080d43d7b3b841bbf339417b32d29"
+      "sha256": "c18369889b91efd6a0aa7a14193be980746c977aabfd23601c17522b65eed7fb"
     },
     {
       "path": "assets/art/props/wood_gate.png",
       "width": 383,
       "height": 321,
-      "sha256": "b830c535a753ef16ba7a31b16668b4a257241172194cca5846565e49d475cae7"
+      "sha256": "d208610d3c85ac93a9764b5e47798be3d85681911123709ff4cf58853df4e923"
     },
     {
       "path": "assets/art/props/wooden_bollard.png",
       "width": 366,
       "height": 295,
-      "sha256": "5f1a46c478d7f34fbe57ff8aeb58e007e2cb9026f5f86046ae8e9c2b5ee6c7d5"
+      "sha256": "9517ff47ef21f8efc099b5c06b5db6c96b9b9b1070e6bdc38f846addb30b7793"
+    },
+    {
+      "path": "assets/art/scenes/L01/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3cdc0d8bae39477f5d28343c5914f67b13ede76eb35f2ef9c89567e0b9a34cfc"
+    },
+    {
+      "path": "assets/art/scenes/L02/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4d3b29c06b4559bd0f57227460001d71bb6404cf94076a0f3c26aa55380fa6e4"
+    },
+    {
+      "path": "assets/art/scenes/L03/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "108f4ca1a537f9caf57e07faa467b1b7c27e533b0eecc90a805d18c1d50c3cd7"
+    },
+    {
+      "path": "assets/art/scenes/L04/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8a7f19d9f7537af8d161f1d17a9f57ae2357659063127459e480769c6968cc80"
+    },
+    {
+      "path": "assets/art/scenes/L05/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "435c5eafc8a1e860061d7da4871cf07212617532bacc7cfc9ac879b5a7765589"
+    },
+    {
+      "path": "assets/art/scenes/L06/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3afa2edf7f483050dee55f610f9100e0ffeed0806152816b7d6015f4b23288c9"
+    },
+    {
+      "path": "assets/art/scenes/L07/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "98a74b3c5e3c848e353385c8a904407b7a48ec2f3a2e5689ec0bb978c39efc4e"
+    },
+    {
+      "path": "assets/art/scenes/L08/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e5cfb96d15a63773ec60308b3e6f5e5edc6c3bb7ed19de0de28f115d85bfac8a"
+    },
+    {
+      "path": "assets/art/scenes/L09/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "4433d97dd4e300c5d63d58214ef62d74953440d7aa0763c42935b9d026684843"
+    },
+    {
+      "path": "assets/art/scenes/L10/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "67f243e976c027b59011eb2eabdbf1ca3515f4246dc530d9f3d9c3c6603b5efc"
+    },
+    {
+      "path": "assets/art/scenes/L11/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0614c64c01d3be3360a791e68c71d4598d7dd6ebe9fe8efb4bbebb62632cb6db"
+    },
+    {
+      "path": "assets/art/scenes/L12/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "189e7f0f0a508b72d74efc8b3a8fa7ce355db1b5ac2278572d50eedbc54834d5"
+    },
+    {
+      "path": "assets/art/scenes/L13/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c7534638335d69ea5444dce156c570b60cc5102be5a060f73173960134dc2a07"
+    },
+    {
+      "path": "assets/art/scenes/L14/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9562726740aa66179069f9c242fc27b5d3d63b5806a91607bb3adcf9d4d5c94e"
+    },
+    {
+      "path": "assets/art/scenes/L15/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "fa7b8c692942d323b20bbe01967b14dad8a0d95601006eead228a4b84d9df79d"
+    },
+    {
+      "path": "assets/art/scenes/L16/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "bf61d753942a5461c5333a5094a82139089b84e6069b4d8bbf8a6631cef0fe9d"
+    },
+    {
+      "path": "assets/art/scenes/L17/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0ae5bc1ce3cdbcf42f5339662464be9855617e351cece0517510ad116a8180b7"
+    },
+    {
+      "path": "assets/art/scenes/L18/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2e0013c5b164e0e48344e6ae53046f4e1179da20a4336a2bc3af4519f41fe5c9"
+    },
+    {
+      "path": "assets/art/scenes/L19/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ba9f9ebe02fff9ca3c01c2a8a0c2f21a545ce47105746179050988fd36ead377"
+    },
+    {
+      "path": "assets/art/scenes/L20/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "56504f9758688ce217704b30ea4cb2f6215c0538f621feedaad74bd335097653"
+    },
+    {
+      "path": "assets/art/scenes/L21/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "004a9f08f19410fafa7e3d023f7d6805716f98ee8ae7e553926c482233649a6f"
+    },
+    {
+      "path": "assets/art/scenes/L22/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "3c3e502f2cf65b001cc8cd10971e196b27616dd2676b5265ee79f917926ab4e1"
+    },
+    {
+      "path": "assets/art/scenes/L23/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e56afa5a921d4f7da58a0a465f7dd044fb313413cda432b353ee2f7095cb4bb2"
+    },
+    {
+      "path": "assets/art/scenes/L24/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2b607fbc4eb47b1e252fc5dd2961e8e461a0ee3c80211b1b17e2d8b79297857b"
+    },
+    {
+      "path": "assets/art/scenes/L25/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ca80684df8da1fb5ccd3df2a4b46c95e7999df1d7370ef9b24272a21cc16a279"
+    },
+    {
+      "path": "assets/art/scenes/L26/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8066d129da115970abfc46b2368f1849a50a5eb4bf568be3f5fe15b46cf5f663"
+    },
+    {
+      "path": "assets/art/scenes/L27/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f58a9e1c722dabf99b7ee882e4c5f568e011fbf4e6bd3f6ec749a6d03900b7cd"
+    },
+    {
+      "path": "assets/art/scenes/L28/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "d45a8e26e294af3dc709fc413efe69806eb504639c7bc134abef4abcbdec9da8"
+    },
+    {
+      "path": "assets/art/scenes/L29/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ac94c44acae6cf778de9e0f3ab67aafef57118eacfa34a390ec8628e87af2241"
+    },
+    {
+      "path": "assets/art/scenes/L30/overlay.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "835e70dd87bb1532278a51be2d4b189c4a3175f0afc1cdaa17815cd3cbc30a49"
     },
     {
       "path": "assets/art/ui/app_icon_1024.png",
       "width": 1024,
       "height": 1024,
-      "sha256": "fc065b6d18188333eaac09cda70976f5b5f4305b07da769ebb4918ebef3887ad"
+      "sha256": "216fb40111ec4c2d3055ba55a7c76157b7b70d7a70afc95779b6527f4f713ec0"
     },
     {
       "path": "assets/art/ui/app_icon_192.png",
       "width": 192,
       "height": 192,
-      "sha256": "2d53cf1f1e25f1ebcfd2c34d33fa5facce278821031a381f2e960c1f3458dcd9"
+      "sha256": "cce133597df45dda33842b204c425165f2ec38ea426cfaa2d45d454ba2b9da88"
     },
     {
       "path": "assets/art/ui/app_icon_512.png",
       "width": 512,
       "height": 512,
-      "sha256": "e11f8487553d729058a9c80f2c38f33d3ed97aacab75da0e7eb3483c6fc8e99b"
+      "sha256": "2cf22308bdc33beb67fec5d16c8d71f6f62cb2f61b989de1945a2f1f4c57cba6"
     },
     {
       "path": "assets/art/ui/app_icon_master.png",
       "width": 1254,
       "height": 1254,
-      "sha256": "85b049badf2342086d78542fbbc487e4d121c217b2579e55419b587e90af24e5"
+      "sha256": "1d298a5fcd8de4219054c570fa45236b439fba9a7c4384c62ada396d6d07f659"
     }
   ],
   "limits": "Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability."

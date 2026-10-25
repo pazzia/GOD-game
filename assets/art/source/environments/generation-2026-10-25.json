@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "date": "2026-10-25",
+  "canvas_size": [
+    1536,
+    1024
+  ],
+  "note": "New original artworks based on surviving old references and original prompt specifications; not byte recovery. ENV01 atmosphere retained untouched.",
+  "images": [
+    {
+      "environment_id": "ENV01",
+      "layer": "backdrop",
+      "file": "ENV01/backdrop.png",
+      "generated_source": "/workspace/generated_images/exec-66886ef2-613f-4008-8cf3-f12214508363.png",
+      "source_sha256": "6706efdd4b9f1f9a6b87ea4056fed70af4728df4d250e62a80b48c7a235d3a01",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV01 backdrop layer for original mobile puzzle game Almost God. A LANDSCAPE 3:2 canvas, 1536 by 1024. Fully opaque image.\nPrimary request: Paint a distant Mediterranean storybook harbor in warm gouache on textured paper. This is only the FAR BACKDROP of a five-layer playable scene: the actual plaza floor, near architecture, foreground plants, characters, and playable water are added separately.\nComposition: Very wide, cheerful theatrical composition. The upper 30 percent has pale morning sky with painterly cream clouds, softly layered blue mountains, a small island lighthouse in the upper left, and a tiny apricot-colored village with terracotta roofs along the distant upper-right shore. The horizon is high at about 30 percent of canvas height. The bottom 70 percent is a quiet, low-contrast blue-green painted wash suggesting distant harbor light; it will be mostly covered by a separate floor layer. Keep central action space clear and visually calm. Buildings remain small in the distance.\nStyle: polished hand-painted gouache children's adventure book, rich broad brushstrokes, readable simplified geometry, gentle whimsy, warm cream light, turquoise water, muted sage greens, clay orange roofs, subtle lavender shadows. Avoid photographic realism. No harsh outlines.\nConstraints: ONLY distant scenery on a complete opaque landscape canvas. No near pier, no foreground quay, no near plants, no stage props, no boat, no bollard, no rope, no characters, no UI, no lettering, no watermark. Do not imitate a portrait phone screenshot. Do not show a giant central building.\nReference attachments show existing character art. Match their painterly gouache brushwork, cream/teal/plum/copper world palette and warmth; do not draw any character. New original environment, full opaque 1536x1024 landscape. Keep buildings within TOP 30% only, bottom70% clear lowcontrast backdrop wash.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV01",
+      "layer": "floor",
+      "file": "ENV01/floor.png",
+      "generated_source": "/workspace/generated_images/exec-f81bec2a-bd91-469f-9317-a65f09cd4ec1.png",
+      "source_sha256": "7bec4eb6e258621bb9455f855ca3efce9aae2c7954b052f26670c2fff0b9a1fd",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV01 floor layer, independently painted gouache game scenery. Full LANDSCAPE 1536 by 1024 canvas, true transparent alpha in the upper area.\nPrimary request: A sunlit broad warm limestone harbor plaza viewed at a gentle elevated three-quarter angle. This is ONLY the ground plane for a mobile puzzle game's playable stage, on transparent background. Large soft cream and pale apricot irregular paving slabs, subtle hand-painted joints, lightly worn edges, tiny moss in rare seams near the outer edges. Low contrast at center so small colorful props remain readable. Pretty rich gouache brushwork on paper, chunky storybook simplification, lavender contact shadows, warm afternoon cream light.\nComposition: Upper 35 percent of canvas is completely transparent. From a roughly horizontal high boundary at 35 percent, the ground extends continuously across the entire canvas width down to the bottom edge. Large calm uncluttered open paving surface, no raised step across the center, no obstacle. Keep full canvas and transparent upper margin.\nConstraints: Do not draw water or pools; actual gameplay water will be composited on top of this floor using exact geometry. No cliff, no dock edge, no walls, no buildings, no sky, no horizon landscape, no grass lawn, no reeds, no plants, no boxes, no boats, no bollards, no ropes, no characters. No text, no UI, no watermark. Genuine alpha above the ground, not an opaque cream rectangle. This is one independent floor asset, not a complete postcard.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas",
+      "earlier_source_sha256": "b97d53cfe301cf3a183b65879b1c2f3e138fe351e09f1829395f239ac6168c0f",
+      "revision_note": "Imagegen precise edit extends floor upper edge to y200 (20%) for actor grounding; preserves lower gouache paving.",
+      "revision_prompt": "Precise edit of the attached harbor FLOOR layer for Almost God. Keep the exact1536x1024landscape canvas, actual transparent alpha at top, gouache limestone tile style, creamy warm paper texture, gentle lavender seams, low contrast. The current floor upper edge starts at35-42%height; EXTEND the painted limestone paving upwards so its straight far horizontal boundary is at y=200pixels(20%height). Entire bottom80%fromy200to1024mustbe continuous uninterrupted lightly worn limestone paving across fullwidth. Keep lower floor tiles and style. Top20%remains transparent. No water, no raised rim, no walls or cliffs, no plants, no buildings, no objects, no letters, no UI. This is only an independent ground layer, not a complete scene. Gentle elevated threequarter perspective, increasing tile size toward bottom, very subtle contrast so game props read clearly.",
+      "revision_reference": "ENV01/floor_before_grounding_2026-10-25.png"
+    },
+    {
+      "environment_id": "ENV01",
+      "layer": "midground",
+      "file": "ENV01/midground.png",
+      "generated_source": "/workspace/generated_images/exec-7a5362ad-8593-4dee-8d76-21e381ce1bb1.png",
+      "source_sha256": "256a3fb8231ecadbfbc2d347c10fe2bd3d423712396c66547d66f9d6b2cc1008",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV01 midground, a SINGLE separately painted transparent game scenery layer on a full LANDSCAPE 1536 by 1024 canvas. Original mobile storybook puzzle game Almost God.\nPrimary request: Paint two delightful small harbor architecture clusters framing the upper left and upper right edges. Warm apricot plaster, terracotta tiled roofs, uneven arched windows, tiny lavender bougainvillea over an awning, a short open arcade. Simplified chunky handmade coastal village, polished gouache brush texture, creamy sunlit highlights, lavender shaded walls, sage greenery. Friendly and witty, not photorealistic.\nComposition: Entire central 60 percent of canvas is fully transparent from top to bottom, and the entire lower 65 percent is fully transparent. Architecture is ONLY at the upper outer left and right corners, extending inward at most 20 percent from either side and downward at most 35 percent. The two groups stand near a high horizon and leave a huge clean empty action space. No connecting floor or background. Their bottom edges end as clean architectural silhouettes so a separate plaza floor will meet them.\nConstraints: This is a compositing layer, NOT a complete picture. Genuine transparent alpha everywhere except painted architecture and tiny foliage attached to it. Full canvas remains 1536 by 1024 with transparent margins; do not tightly crop the two clusters. No sky, no water, no ground plane, no pale colored rectangle behind the art. No characters, no near props, no boats, no rope, no bollards, no text, no UI, no watermark.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 60% and anchored north"
+    },
+    {
+      "environment_id": "ENV01",
+      "layer": "foreground",
+      "file": "ENV01/foreground.png",
+      "generated_source": "/workspace/generated_images/exec-2bad7473-f5eb-4e66-9101-2f5612a410fe.png",
+      "source_sha256": "9adb3dae4739188e4356a6970c5575452f7e82049ae269f503b05ee0434ec67a",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV01 foreground, a single original hand-painted transparent game layer on a full LANDSCAPE 1536 by 1024 canvas.\nPrimary request: Two tiny charming harbor edge vignettes only at the extreme bottom-left and bottom-right corners: rough cream limestone fragments with moss, a few graceful sage-green reeds and small lavender wildflowers. The left and right groups are entirely separate with a huge transparent gap between. Warm storybook gouache, chunky natural shapes, visible paper-brush texture, creamy sunlit highlights, muted turquoise and lavender shadows, matching a cheerful Mediterranean quay.\nComposition: All artwork is confined to the outer 14 percent of canvas width at each side AND the bottom 18 percent of canvas height. Keep the central 72 percent completely transparent all the way down to the bottom edge. Upper 82 percent is completely transparent. These are subtle corner accents, not a heavy frame, no large reeds crossing the action space. Preserve the full 1536 by 1024 transparent canvas.\nConstraints: Genuine transparent alpha background. No connecting ledge or ground strip between the two corners. No sky, no water, no full landscape, no architecture, no characters, no boats, no ropes, no bollards, no lantern, no gameplay objects. No text, no UI, no watermark.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n\nCRITICAL: these are two TINY decorations confined to bottom outer corners, at most180pixels wide and180pixels tall per corner. Keep the vast majority of1536x1024transparent canvas literally empty. No large corner scene.",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 50% and anchored south"
+    },
+    {
+      "environment_id": "ENV02",
+      "layer": "backdrop",
+      "file": "ENV02/backdrop.png",
+      "generated_source": "/workspace/generated_images/exec-993fd67d-e2a9-4ade-9db0-2246e61aae76.png",
+      "source_sha256": "27658fbc5abc50d15f1989018bf058a5b6bf4972d36c1c9d9d3519864f0cb28c",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV02 FAR BACKDROP for original mobile puzzle game Almost God. Full opaque LANDSCAPE 3:2 canvas, 1536 by 1024.\nPrimary request: A cheerful hillside garden kitchen district seen from a sunny open terrace: distant cream-and-ochre village roofs, green rolling cultivated hills, a few tall cypress trees, and tiny glass greenhouse rooftops catching turquoise light. This is only the far scenery behind a separate playable cooking courtyard.\nComposition: Morning sky and pale peach clouds above a high horizon at the upper 30 percent. Small distant hillside houses and greenhouses remain in the upper third. Lower 70 percent is quiet low-contrast warm cream and terracotta garden light, mostly covered later by an independent floor layer. Keep central action space visually calm; no close furniture.\nStyle: polished broad-brush gouache on textured paper, warm children's adventure book, simplified handmade Mediterranean architecture, soft lavender shadows, sage green foliage, copper orange accents, light turquoise glazing. Painterly, not photographic.\nConstraints: Complete opaque canvas. No foreground oven, no flame, no fire, no smoke or steam, no pool or water bowl, no big copper cooking pot, no kitchen tool, no food, no near plants, no props, no characters, no UI, no text, no watermark. This is distant scenery only, not a portrait phone screenshot.\nReference attachments show existing character art. Match their painterly gouache brushwork, cream/teal/plum/copper world palette and warmth; do not draw any character. New original environment, full opaque 1536x1024 landscape. Keep buildings within TOP 30% only, bottom70% clear lowcontrast backdrop wash.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV02",
+      "layer": "floor",
+      "file": "ENV02/floor.png",
+      "generated_source": "/workspace/generated_images/exec-0fbff149-30ce-43b3-afe5-4efd446798f4.png",
+      "source_sha256": "dc801fa4d3f9b3350d18831224e730a806da16ce5b1780548c122041c00f3465",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached ENV02 terracotta floor layer. Keep the same full LANDSCAPE1536×1024canvas, warm apricot octagonal clay tiles with tiny cream diamond insets, broad low-contrast gouache material and existing lower paving appearance.\nChange only the paving's UPPER EXTENT: extend the painted terrace UPWARD so its high perspective boundary is at y=200pixels, about20percent of canvasheight, instead of the current boundary aroundy430. Entire bottom80percent must be continuous painted terracotta floor, full width. Paint extra matching smaller tile rows toward that higher boundary with consistent perspective. Top20percent ONLY remains genuine transparent alpha.\nPurpose: actual gameplay bowls and props stand around30–40percent height and need visible ground beneath their bases. This is one independent floor layer, not a complete scene.\nConstraints: preserve original1536×1024dimensions and lower tile style. No added object, building, landscape, plants, food, tools, water, fire, smoke, lettering, UI or watermark. No floor island centered on transparency. Genuine alpha only in the top20percent.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV02",
+      "layer": "midground",
+      "file": "ENV02/midground.png",
+      "generated_source": "/workspace/generated_images/exec-8ea74f84-c5cf-44ce-8c83-1b4bbda36276.png",
+      "source_sha256": "4feeda2b6b623743c1374787da3ecd50614e7e354ff201fd7454fb9408fdd5c8",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV02 MIDGROUND, a separately painted transparent environment layer for mobile storybook puzzle game Almost God. Full LANDSCAPE 1536 by 1024 canvas.\nPrimary request: Two small architectural groups framing a sunny garden kitchen courtyard. At upper left: warm terracotta-brick open kitchen arcade with an arched cold oven opening, a copper chimney, three small hanging copper pans high on its rear wall, climbing sage herbs. At upper right: a charming turquoise glass greenhouse corner on an apricot stone base, a wooden spice cupboard against the far wall and small lavender flowers attached to the architecture. Distinct kitchen-garden character, handmade Mediterranean shapes.\nStyle: polished warm gouache on paper, broad textured brush strokes, creamy highlights, lavender shadows, copper orange, muted sage and turquoise. Storybook game art, no photorealism.\nComposition: Only the upper outer corners carry architecture. Leave central60percent of the canvas entirely transparent and the lower60percent entirely transparent. Architecture may extend at most22percent inward from each side and40percent down from top. No connecting ground or background. Keep full transparent canvas margins.\nConstraints: Actual transparent alpha outside architecture. No sky, no hillside background, no ground plane, no courtyard floor, no water pool, no water bowl, no near gameplay brazier, NO FLAME, NO FIRE, NO SMOKE, NO STEAM. The oven is visibly unlit. No food, no characters, no tools floating in the center, no lettering, no UI, no watermark. A compositing layer, not a complete scene.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 60% and anchored north"
+    },
+    {
+      "environment_id": "ENV02",
+      "layer": "foreground",
+      "file": "ENV02/foreground.png",
+      "generated_source": "/workspace/generated_images/exec-e0834d6f-ee46-4bd0-969c-d8eedc704f25.png",
+      "source_sha256": "b16ab2c7156d75a1be26e1e67cc7cfc06593cb45335e397408a780ad083cf0ae",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV02 FOREGROUND corner accents, independently painted transparent environment layer for an original garden-kitchen mobile puzzle game. Full LANDSCAPE 1536 by 1024 canvas.\nPrimary request: Two very small delightful herb-garden corner groups only at the extreme bottom-left and bottom-right: on left, a low terracotta herb planter with soft sage leaves, tiny thyme sprigs and lavender blossoms; on right, a low worn turquoise ceramic pot with rosemary and a few cream wildflowers. A little warm stone and moss under each. Original polished handpainted gouache on paper, broad textured strokes, cream sun, warm clay, muted sage/turquoise, lavender shadows, charming handmade shapes.\nComposition: Artwork confined to the outer15percent on either side and bottom20percent only. Entire center70percent is completely transparent through to bottom edge. Upper80percent entirely transparent. Two isolated corner accents with a huge alpha gap, no connected floor strip, no heavy enclosing border. Keep the full1536×1024canvas.\nConstraints: True alpha background. No architecture, no sky, no water, no fire, no smoke, no steam, no food ingredients, no bread or dessert, no cooking tool, no character, no large leaves crossing the center, no lettering, no UI, no watermark.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n\nCRITICAL: these are two TINY decorations confined to bottom outer corners, at most180pixels wide and180pixels tall per corner. Keep the vast majority of1536x1024transparent canvas literally empty. No large corner scene.",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 50% and anchored south"
+    },
+    {
+      "environment_id": "ENV02",
+      "layer": "atmosphere",
+      "file": "ENV02/atmosphere.png",
+      "generated_source": "/workspace/generated_images/exec-795e22b1-d84e-40b5-8afa-78721e38553c.png",
+      "source_sha256": "a0e489990872af030e29cdad175933684ac9a7b5b6011a7a5776b261131fa7a3",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV02 ATMOSPHERE, independent transparent overlay for a sunlit garden-kitchen mobile puzzle game. Full LANDSCAPE 1536 by 1024 canvas.\nPrimary request: Very sparse tiny cream-gold garden pollen motes and a faint cool turquoise reflected window-light shimmer near the extreme upper-right corner. Only subtle warm light and a few specks for a gentle parallax layer. Most of the canvas must remain truly transparent.\nStyle: delicate gouache flecks on alpha with soft edges, original warm storybook brush texture, understated. Fewer than25tiny flecks, broadly separated; almost all no bigger than5pixels at full canvas size. No large glowing circles. Keep the central action space nearly empty.\nComposition: Small faint light shimmer confined to top-right outer corner. Sparse motes toward the sides. No continuous painted wash behind them. Full1536×1024transparentcanvas preserved.\nConstraints: No scenery or object at all. NO STEAM, NO SMOKE, NO FOG, NO FLAME, NO FIRE, NO clouds, NO water droplets, NO snowflakes, NO ice crystals, NO stars, NO magic icons, NO characters or insects, NO colored background rectangle, NO lettering, NO UI, NO watermark. Genuine alpha outside subtle light flecks.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png",
+        "old/assets/art/environments/ENV01/atmosphere.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV03",
+      "layer": "backdrop",
+      "file": "ENV03/backdrop.png",
+      "generated_source": "/workspace/generated_images/exec-bf350f76-5142-433f-80dd-610e72928b63.png",
+      "source_sha256": "867cbeac9e57921ebc442546b036aba288535126010e5d3de3dc746c106c5783",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV03 FAR BACKDROP for original mobile puzzle game Almost God, chapter The Paper Fortress. Fully opaque LANDSCAPE 3:2 canvas, 1536 by 1024.\nPrimary request: A whimsical distant hilltop town of archivists and paper artisans: elegant cream limestone library towers, tiny arched passages, teal rooftops, lavender awnings and a few small plum-purple pennants with simple gold sun ornaments but no writing. A far friendly citadel above a green valley, rich architectural silhouettes seen from a broad quiet bookbinders' courtyard. This is ONLY far scenery behind separately painted nearby workshops and floor.\nComposition: Very high horizon near upper30percent. Pale warm blue sky, cream clouds, distant lavender hills, small library town silhouettes in upperthird. Lower70percent is quiet low-contrast warm parchment-cream light, mostly covered later by a separate floor. Central action area visually calm, no nearby furniture or objects.\nStyle: original polished handpainted gouache on paper, broad beautifully textured strokes, chunky handmade storybook architecture, cream-gold light, muted turquoise roofs, sage foliage, lavender shadows. Warm witty adventure-book mood, not photographic.\nConstraints: No foreground buildings, no near floor details, no near books or scrolls, no bridge, no paper wall, no gate, no pillars serving as gameplay supports, no near flags, no ropes, no characters, no text, no UI, no watermark. No huge floating books or impossible levitating fortress. A distant landscape layer, not a portrait phone screenshot.\nReference attachments show existing character art. Match their painterly gouache brushwork, cream/teal/plum/copper world palette and warmth; do not draw any character. New original environment, full opaque 1536x1024 landscape. Keep buildings within TOP 30% only, bottom70% clear lowcontrast backdrop wash.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV03",
+      "layer": "floor",
+      "file": "ENV03/floor.png",
+      "generated_source": "/workspace/generated_images/exec-fbcccaa5-dc13-4366-899b-adc82b1b94ae.png",
+      "source_sha256": "7ca62a5b215835c2ee6ecacfb31c1413e7ecc490c62220a4d77f8e0c00c20393",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached ENV03 floor layer. Keep the same full LANDSCAPE1536×1024canvas, pale parchment limestone material, broad low-contrast slab style, subtle teal/plum trim at the far left/right and all existing lower paving unchanged.\nChange only the paving's UPPER EXTENT: extend the painted ground UPWARD so its high straight perspective boundary is at y=200 pixels, about20percent of the canvas height, instead of the current middle-height boundary aroundy500. The entire bottom80percent of the canvas must be continuous painted paving, full width, no gap. Draw additional natural matching stone rows into that upper region; make them smaller with perspective. Top20percent ONLY remains genuine transparent alpha.\nPurpose: gameplay props stand at30–40percent height, so they must stand visibly on this ground, not float in a blank background. This is a full-canvas floor layer for a composited mobile game.\nConstraints: preserve the existing lower floor appearance and original1536×1024dimensions. No new object, no scenery, no buildings, no water, no bridge, no plants, no text, no UI, no watermark. Genuine transparent alpha only in the top20percent; no opaque backdrop above the paving. Do not center a small floor patch.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "unmodified full canvas"
+    },
+    {
+      "environment_id": "ENV03",
+      "layer": "midground",
+      "file": "ENV03/midground.png",
+      "generated_source": "/workspace/generated_images/exec-70fc130d-bbbd-49e1-8289-9be85ee07b37.png",
+      "source_sha256": "faf0fcf85e7097abc24894a13efe5b25c07a62b2ea7a29f942418debe6364fda",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV03 MIDGROUND for original mobile puzzle game Almost God, chapter The Paper Fortress. ONE independently painted transparent scenery layer on a full LANDSCAPE1536×1024canvas.\nPrimary request: Two delightful paper-artisan workshop architecture clusters at the upper outer corners. Upper left: a timber-and-cream-plaster bookbinders' shop with a muted teal awning and wall shelves of rolled blank parchment, a tiny decorative plum-purple pennant with a simple gold sun motif. Upper right: a cream stone archive arcade, a deep lavender fabric awning, warm wooden cabinets with rolled scroll ends and closed leatherbound books, small sage vines attached to the wall. Clear handmade whimsical craft-town identity.\nStyle: original polished gouache storybook game art, richly textured paper-brush strokes, chunky simplified wood and plaster shapes, warm cream-gold sunlight, muted teal and royal plum accents, lavender shadows. No photorealism.\nComposition: ONLY the upper outer left/right corners have architecture. Central60percent is entirely transparent from top to bottom; lower60percent entirely transparent. Each architectural group stays within outer22percent from its side and upper40percent from the top. No connecting floor, wall across the center or full landscape behind them. Preserve full1536×1024transparentcanvas and broad empty action space.\nConstraints: Actual transparent alpha outside painted architecture. No sky, no mountains, no floor, no water, no bridge, no near anchor/support, no heavy gate, no near paper wall, no hidden frame, no ropes, no tools or loose sheets crossing the center, no characters. No readable lettering or numbers, no UI, no watermark. A compositing layer, not a complete postcard.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 60% and anchored north"
+    },
+    {
+      "environment_id": "ENV03",
+      "layer": "foreground",
+      "file": "ENV03/foreground.png",
+      "generated_source": "/workspace/generated_images/exec-6cce47ce-1bda-42cb-bef9-e4987830dc7d.png",
+      "source_sha256": "62ca49e7383eb20fd64d3e52b015c5e244de4167f150f95e13cf7a123a819146",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV03 FOREGROUND, a single independently painted transparent scenery layer for original paper-artisans courtyard mobile puzzle game Almost God. Full LANDSCAPE1536×1024canvas.\nPrimary request: Two small charming bookbinders' corner accents at the extreme bottom-left and bottom-right. Left: a low worn wooden storage tray holding a few rolled blank cream parchments tied with a muted teal ribbon, tiny cream flowers and sage moss beside it. Right: a low stack of three closed leatherbound books in plum, ochre and teal with a small trailing sage vine. Beautiful handpainted gouache paper texture, warm cream light, soft lavender shadows, chunky storybook craft shapes.\nComposition: Artwork restricted to outer15percent on either side and bottom20percent of the canvas. Central70percent fully transparent all the way to the bottom edge. Upper80percent fully transparent. The two tiny corner groups have a huge transparent gap between them, no connected ground or frame. Full1536×1024transparentcanvas remains.\nConstraints: Genuine transparent alpha outside corner art. No loose page or ribbon crossing the center. No actual bridge, supports, paper wall, hidden frame, heavy weight, gate, fire or water. No architecture, no full background, no character. Book covers and parchments have NO letters or numbers, no readable writing. No UI, no watermark.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n\nCRITICAL: these are two TINY decorations confined to bottom outer corners, at most180pixels wide and180pixels tall per corner. Keep the vast majority of1536x1024transparent canvas literally empty. No large corner scene.",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png"
+      ],
+      "export": "paired edge groups uniformly scaled 50% and anchored south"
+    },
+    {
+      "environment_id": "ENV03",
+      "layer": "atmosphere",
+      "file": "ENV03/atmosphere.png",
+      "generated_source": "/workspace/generated_images/exec-1ab5c9d3-447d-4571-83d5-08e1b10f85fb.png",
+      "source_sha256": "c372a1bfbab3a192ed704c005fc78ca836ab93e3f28d35358ea7c072a77b195b",
+      "prompt": "Use case: illustration-story.\nAsset type: ENV03 ATMOSPHERE, independent transparent overlay for original archive-courtyard mobile puzzle game Almost God. Full LANDSCAPE1536×1024canvas.\nPrimary request: Very sparse delicate ivory-gold dust motes in warm archive-window light, with one extremely faint soft lavender reflected-light streak near the upper-left outer corner. Only subtle light and tiny specks for a slow parallax overlay above handpainted scenery. Most pixels genuinely transparent.\nStyle: original soft gouache flecks with feathered alpha edges, paper brush texture, warm cream light and very faint lavender. Fewer than25widely separated motes, almost all smaller than5pixels at full canvas scale. No large bokeh circles, central action region almost completely clear.\nComposition: Little faint light only near extreme upper-left; scattered very tiny motes toward outer areas. No continuous wash or background. Preserve full1536×1024transparentcanvas.\nConstraints: No scenery or physical objects, no paper sheets or scroll scraps, no books, no snowflakes, no ice crystals, no stars or magic symbols, no smoke or steam or fog, no clouds, no insects or characters. No opaque rectangle, no lettering, no UI, no watermark. Genuine alpha outside the very subtle light flecks.\nStyle reference: the attached existing character art defines the game's creamy gouache/teal/plum/copper palette and appealing shapes. Do not draw people. THIS OUTPUT IS ONE TRANSPARENT LAYER, NO GRID OR LABELS. Full landscape1536x1024. Real alpha as specified, preserving composition and generous empty center for play.\n",
+      "references": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/marfa.png",
+        "old/assets/art/environments/ENV01/atmosphere.png"
+      ],
+      "export": "unmodified full canvas"
+    }
+  ]
+}

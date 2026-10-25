@@ -1,0 +1,70 @@
+GOD 0.3.0-preview — native visual review, 2026-10-25
+Reviewer: team-designer / final_visual, independent read-only review.
+
+CURRENT VERDICT: ACCEPTED FOR PREVIEW after capacity-badge correction.
+No blocking or major presentation defect remains in the reviewed scope.
+This is not full S3/S4 visual, device or commercial acceptance.
+
+EVIDENCE
+Reviewed all 60 native Godot/Mesa frames at 360x640: before/after for L01–L30.
+Each after state is SUCCESS per captures.json. run.json: exit_code 0, frames 60,
+no engine errors. Six labelled contact sheets are in final-visual-contact/.
+Individually reviewed L06-before/after, L07-after, L17-before and L24-before/after.
+Also viewed prior revision2 RU140 map and settings_end at 360x640.
+
+ACCEPTED FOR PREVIEW
+- All three chapter environments load with a consistent cream/purple/teal palette.
+- Separate hero, moth, goat, props, witnesses and water/ice are present; no missing
+  texture placeholders or black scene areas in the reviewed frames.
+- L06 starting hero, goat and two crates now have distinguishable silhouettes.
+  The final goat/cargo group remains compact, but start selection no longer forms
+  one unreadable pile. This is a presentation review, not a change to core geometry.
+- All 30 individual edge overlays are visible with small chapter-appropriate
+  differences; they leave the main interaction field open. They are decorative
+  variations on three environments, not 30 fully independent backgrounds.
+- Main instruction, law ribbon, action button and navigation labels are legible
+  in all 60 views. Horizontal card strips intentionally reveal partial next cards.
+- RU140 map fits all 30 buttons and the return button; settings_end wraps the
+  reduced-motion label and retains an unobstructed return action.
+
+HISTORICAL VERDICT: REJECTED (before capacity-badge fix)
+The initial rejection below is retained as review history. It is superseded by
+the current ACCEPTED FOR PREVIEW verdict and final recheck evidence.
+
+RESOLVED DEFECT (initial review; corrected in current evidence)
+1. MAJOR: capacity labels overlap or are hidden by characters.
+   L07-after: neighbouring stone badges overlap, obscuring the second capacity.
+   L24-before/after: two labels merge into a duplicated string; one value is hidden.
+   L17-before: Felix obscures the numeric value at the stone label.
+   Location: presentation/stage_view.gd capacity-label pass around line 336.
+   Expected: each visible stone capacity remains uniquely associated and readable.
+   Recommendation: collision-aware label layout with a distinct overlay draw layer,
+   and short leader lines when a badge moves away from its stone. Preserve core
+   coordinates, hit geometry and simulation. Recheck L07/L17/L24 at 360x640 in RU/EN.
+
+NOT CLAIMED
+This review does not accept S3/S4: directional character sheets, literal facial /
+hand-prop acting, crowd rigs, every animation timing, full VFX, physical Android,
+iOS, commercial integration and comprehension with new players remain open.
+Chapter art still presents puzzle geometry as a readable miniature stage. Decorative
+floor/water integration and authored geometry are not a finished cinematic world.
+Device performance, touch hit accuracy and subjective audio require separate evidence.
+FINAL RECHECK
+The manager recaptured all 60 campaign frames after the badge correction.
+Rebuilt and reviewed all six contact sheets; individually reviewed L07/L17/L24
+before/after at native 360x640. The two stone values remain readable in L07/L24;
+L17 value is no longer hidden behind Felix. Offset badges have clear leader lines.
+No new scene/HUD intersections or missing labels were observed in the other levels.
+Current campaign run.json still reports exit_code 0, 60 frames and no errors.
+
+The 18-case native-final UI series reports no errors. Individually reviewed
+L01-settings, L01-success, L30-selection and L06-moving at 540x960. Modal text
+and actions remain unobstructed, success text fits, replacement choices are
+unambiguous, and L06 retains separable figures/crates during movement.
+These quick captures were partly taken before the badge change and are used as
+supplementary UI evidence; the 60-frame campaign series is after the final change.
+RU140 modal evidence remains the prior native-qa-revision2 series.
+
+Non-blocking limits: capacity badges are compact at 360x640 and may overlay a
+small portion of character clothing. Values are now readable and associated with
+the relevant object. Physical-device legibility must still be assessed.

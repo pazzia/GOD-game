@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "suites": 30,
+  "gdscript_suites": 26,
+  "gdscript_assertions": 7931,
+  "engine_errors": 0,
+  "changed": [],
+  "test_build_current_runtime_match": true,
+  "runtime_digest": "599c7267754b08ab50968a91af60bf5edf377c1676e262f5fc00af47d3385c79",
+  "apk_size_bytes": 113731908,
+  "apk_sha256": "243b95e7210f88f3f18c05b7bed7af21033d8f878d3d30d13c561b4fe9b58e01",
+  "art_audio_verification": {
+    "metadata_expected": 49,
+    "portraits_expected": 81,
+    "textures_expected": 269,
+    "audio_resources_expected": 222,
+    "environment_layers_expected": 15,
+    "missing": [],
+    "mismatched": []
+  }
+}

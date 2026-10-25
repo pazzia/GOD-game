@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-25",
+  "notes": "Exact submitted prompt strings; paths in reference_files use portable repo/source names rather than original absolute invocation paths. Initial supports already had correct alpha; the extra removal request was prompted by an inline preview showing RGB behind alpha. Export uses the second result, whose composited alpha was verified.",
+  "generations": [
+    {
+      "id": "river-tools",
+      "source_file": "river-tools.png",
+      "generated_file": "exec-df559426-4a28-467c-ace1-e2224e3451a0.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "old/assets/art/characters/felix.png",
+        "old/assets/art/characters/portraits/semyon/idle.png"
+      ],
+      "prompt": "Create a production GAME PROP SPRITE ATLAS for the original mobile game Almost God. The reference images establish the approved soft painted gouache storybook style: warm cream highlights, plum shadows, copper wood accents, tangible paper/wood/stone textures, gentle handmade irregular edges. Do not include any person. Output a high-resolution landscape transparent PNG, exactly FOUR COLUMNS by THREE ROWS, twelve equally sized isolated cells, no grid lines, no labels, no letters. Each object is centered in its own cell with generous 12 percent transparent safety margin, never touches a neighbouring cell, clearly readable slight top-down three-quarter game view, believable soft shading without rectangular background. All twelve objects must be different and in this exact reading order: ROW1: (1) wide low rough pale-grey limestone boulder with simple faceted shape; (2) orange-and-cream cork float/buoy with a small eyelet, a clearly lightweight hollow flotation device; (3) freestanding three-panel plum fabric magician screen on copper-toned wooden frame, panels fully opaque; (4) closed sturdy wooden cargo crate with diagonal slats. ROW2: (5) neatly coiled thick hemp rope with one loose end; (6) wooden dock bollard, stout low post on a wooden base with rope groove; (7) small empty wooden rowboat, seen from above three-quarter, no water, long curved hull; (8) tiny timber ferry ticket booth with blank cream sign, teal pitched roof, small window, no text. ROW3: (9) a short broad horizontal wooden dock platform with plank grain and two supporting posts, no water; (10) folded wooden construction frame shaped as an open A-frame support with visible crossbar; (11) simple wooden hoist with a clearly readable pulley and hook, no giant background structures; (12) heavy wooden clamp with copper threaded screw. Keep the objects compact, handsome, tactile and consistent with the reference game's rendering. Entire canvas around objects must be real transparent alpha, not painted white or a checkerboard. This is new prop artwork continuing the supplied game's style, not a collage of the reference characters."
+    },
+    {
+      "id": "kitchen-thermal",
+      "source_file": "kitchen-thermal.png",
+      "generated_file": "exec-618846c1-3d37-4b3e-b85f-9f7796b310e4.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "river-tools.png",
+        "old/assets/art/characters/portraits/semyon/idle.png"
+      ],
+      "prompt": "Create the SECOND matching production GAME PROP SPRITE ATLAS for Almost God. Reference1 is the approved new prop set, reference2 is the original character illustration style. Continue this exact tactile gouache storybook painting, soft cream highlights, copper, plum, warm wood, teal magical cooling. Output high-resolution landscape transparent PNG, exactly FOUR equal COLUMNS and THREE equal ROWS, twelve individual isolated cells. No grid, no labels, no text. EACH item must fit strictly within central 78 percent of its cell, with a large empty transparent gutter around it. Do not allow any sprite to cross cell boundaries. Exact twelve items in reading order: ROW1: 1 clearly FAKE FIRE theatrical prop: stiff red and orange cloth flame shapes mounted on a visible little wooden base with screws; 2 a compact cream cloth cold pack tied with teal cord, frosty blue crystal edges, small snowflake pictogram allowed, no letters; 3 a shallow round copper water bowl with liquid turquoise surface, no ice; 4 real orange fire burning above three blackened logs in a small metal brazier. ROW2: 5 single low dark stone still glowing warm orange in cracks, no flame; 6 insulated food delivery box made of wood with thick cream lining showing at an open corner, copper latch; 7 rustic golden loaf of bread with three scoring marks; 8 cheerful small cream-and-berry layered dessert on a saucer. ROW3: 9 isolated curling gentle steam plume, readable pearly grey translucent cloud, no pot and no background; 10 the SAME three-log brazier as item4 but its real magical flame now glows icy turquoise with light frost on the rim; 11 the SAME copper bowl as item3 but with clearly solid pale-blue frozen surface, a few ice fractures, no liquid ripples; 12 a small copper kettle with round belly, spout and curved handle. Three-quarter slightly top-down game view, compact readable silhouettes. Real transparent alpha behind every sprite, no checkerboard, no white canvas. Maintain clear material differences between cloth fake flame and real flame, water and frozen water. Entire objects visible, no clipping."
+    },
+    {
+      "id": "paper-theatre",
+      "source_file": "paper-theatre.png",
+      "generated_file": "exec-e4106b6d-15f5-4381-9fd1-f54d67662467.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "river-tools.png",
+        "old/assets/art/characters/felix.png"
+      ],
+      "prompt": "Paint the THIRD matching production GAME PROP ATLAS for the game Almost God. Match the first reference's high-quality soft gouache picture-book style, warm cream paper, plum accents, copper and wood tones. No characters. Transparent PNG landscape with FOUR equally spaced columns and THREE rows, exactly12 clearly separated objects. Every object in its own imaginary cell with 12 percent empty margin on all sides, no overlaps, no grid, no labels, NO WORDS/LETTERS. Three-quarter slightly top-down game camera, readable silhouettes. Exact reading order ROW1: 1 a wide little arched PAPER BRIDGE made from folded ivory paper with visible folds and short railings, entirely paper not wood; 2 tall freestanding folded cream paper GATE with ornamental arched top, clearly thin paper construction; 3 solid brown timber garden GATE with two posts and cross-braced closed door, clearly wooden; 4 a squat heavy dark steel calibration WEIGHT with a brass ring handle, no numbers. ROW2: 5 wooden spool with fine pale thread and a neat loose strand; 6 a short curved string of five triangular bunting FLAGS in plum, teal and cream, free-floating, no poles; 7 a wide ivory folded reinforced PAPER panel whose edges have delicate golden stitching, visibly still paper, not a metal slab; 8 small handheld wooden MIRACLE STAMP with a plum handle and brass circular base, starburst engraved underneath. ROW3: 9 a gently curled plain ivory PAPER SHEET with one folded corner and subtle paper fibers, no marks; 10 a squat burlap SANDBAG filled with sand and tied at the neck; 11 compact free-standing thick thermal insulating screen with two copper-framed cream padded panels, different from the purple magician screen; 12 a charming blank theatrical POSTER on a short wooden easel, cream parchment with an illustrated small floating stone and golden stars but absolutely no text, clear open center for later UI lettering. Actual transparent alpha around all objects. No scene, no background, no people. Each object must remain compact and wholly inside its allocated cell."
+    },
+    {
+      "id": "supports-initial",
+      "source_file": "supports-initial.png",
+      "generated_file": "exec-2f542097-42b4-4065-b4d9-d8589df82b38.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "river-tools.png"
+      ],
+      "prompt": "Create TWO isolated tall gameplay support sprites, side by side in two equal columns, transparent PNG, high resolution. Follow exactly the soft gouache storybook style of the supplied game prop sheet: tactile natural materials, cream highlights, warm wooden browns, plum shaded edges, gentle painted volume, readable slightly top-down three-quarter view. Left sprite is a STONE ANCHOR: a rough heavy pale grey limestone block with a broad sturdy base and a carved fastening hole near the upper part. Its entire structural body and base are unquestionably porous irregular stone, with no wooden structural components and no metal ship anchor shape. A small piece of rope through the hole is allowed. Right sprite is a WOODEN BRIDGE SUPPORT: a tall stout squared timber post on a chunky rectangular wooden foot, strong visible triangular wooden bracket halfway up and a short horizontal wooden bar for attaching a bridge. Its structural body/base/brace are entirely visibly WOOD, warm honey-brown grain, small dark bolts only; absolutely no stone blocks, grey concrete or metal structural frame. Both are elegant functional handmade tools for a whimsical island puzzle game, not ruins or buildings. Each sprite occupies at most seventy percent of its own half-canvas, with full transparent margin all around and a wide empty gap in the center. No text, labels, border, background, ground plane, extra props or people. True transparent alpha."
+    },
+    {
+      "id": "supports",
+      "source_file": "supports.png",
+      "generated_file": "exec-49863302-2666-4abb-b5ac-ba4cf0ea4129.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": true,
+      "reference_files": [
+        "supports-initial.png"
+      ],
+      "prompt": "Remove the entire brown/grey/black painted background from this exact image. Preserve both isolated game objects exactly: the stone limestone support with rope on the left and the wooden bracket post on the right. Produce a genuine RGBA PNG with fully transparent background around both objects, including the empty gap between them and transparent space inside the stone hole around its rope. No atmosphere, no glow, no background shadow cloud, no ground. Keep natural shading painted on the object surfaces. Do not change the design, composition, material, color, scale or proportions of either object. Edges should be clean and softly antialiased without a white/brown halo. Real transparent alpha is essential; do not paint any color or checkerboard where the background used to be."
+    },
+    {
+      "id": "water-and-ice",
+      "source_file": "water-and-ice.png",
+      "generated_file": "exec-91480df4-bfda-474a-b4ba-802adf5fc88f.png",
+      "tool": "image_gen.imagegen",
+      "transparent_background": false,
+      "reference_files": [
+        "kitchen-thermal.png"
+      ],
+      "prompt": "Create TWO flat top-down painted material texture swatches for the mobile game Almost God, side by side, left WATER and right ICE. Wide 2:1 landscape canvas composed of exactly two full square texture fields with a straight vertical seam at the exact center. No frames or gaps, no objects, no containers, no props, no shore, no perspective horizon, no islands, no shadows, no text. The supplied reference is only for matching the hand-painted gouache material style. LEFT HALF: calm muted teal water based on #4C98AA, gentle short pale turquoise horizontal ripple brush marks distributed evenly; restrained contrast so gameplay objects remain legible, seamless-looking homogeneous water material. RIGHT HALF: frozen pale blue water based on #B6E4ED, delicate sparse irregular fine ice fracture lines, soft translucent white patches painted into the ice, same calm restrained contrast and same scale as water; no chunks or snowbanks. Fill both halves entirely to all edges, fully opaque material textures. Natural soft brushwork and subtle paper grain, not photorealism or noisy generated clouds. These will each be extracted and UV mapped over exact arbitrary gameplay polygons, so they must be uniform material fields, not illustrations with outer silhouettes."
+    }
+  ]
+}

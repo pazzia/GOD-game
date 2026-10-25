@@ -1,0 +1,16 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Almost God Preview, O=Local Development, C=US
+Signer #1 certificate SHA-256 digest: 3b31ce694a6ef1524c3208ca0873c7cbe8a640f2949987dcb30fddcf00126d8b
+Signer #1 certificate SHA-1 digest: ad4c183fbfa03b900df6acfafc158cf5100e6e8a
+Signer #1 certificate MD5 digest: a28864195c6809b61a3e73cc1a785bd6
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: d97a896428133a52b4de006b3bfb86ae90ae547630b2d28c6d22089d3cd87e1b
+Signer #1 public key SHA-1 digest: 41a4d6d19d2a668372efe83734c68d5d65064f0e
+Signer #1 public key MD5 digest: fc061c8264f119838e29241a795722d8

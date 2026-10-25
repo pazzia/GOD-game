@@ -1,21 +1,22 @@
 {
   "environments/bg_river.png": {
-    "original": "exec-2b77a32e-2bfc-4440-aa11-f66a27778025.png",
+    "original": "2026-10-25 independent imagegen layer composite",
     "crop": null,
     "alpha_trim": [
       0,
       0,
-      941,
-      1672
+      1536,
+      1024
     ],
     "size": [
-      941,
-      1672
+      1536,
+      1024
     ],
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/environments/generation-2026-10-25.json"
   },
   "characters/felix.png": {
     "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
@@ -87,27 +88,23 @@
     ]
   },
   "characters/semyon.png": {
-    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "original": "assets/art/source/recreated-2026-10-25/native-semyon.png",
     "crop": [
-      0,
-      341,
-      512,
-      682
+      525,
+      174,
+      1321,
+      1413
     ],
-    "alpha_trim": [
-      256,
-      0,
-      464,
-      340
-    ],
+    "alpha_trim": null,
     "size": [
-      208,
-      340
+      796,
+      1239
     ],
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
   },
   "characters/nika.png": {
     "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
@@ -156,27 +153,23 @@
     ]
   },
   "characters/roza.png": {
-    "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
+    "original": "assets/art/source/recreated-2026-10-25/native-roza.png",
     "crop": [
-      0,
-      682,
-      512,
-      1024
+      307,
+      136,
+      1408,
+      1401
     ],
-    "alpha_trim": [
-      239,
-      0,
-      456,
-      337
-    ],
+    "alpha_trim": null,
     "size": [
-      217,
-      337
+      1101,
+      1265
     ],
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
   },
   "characters/hugo.png": {
     "original": "exec-6153fddc-a4c5-451b-aab0-bd4e560dce6f.png",
@@ -225,55 +218,52 @@
     ]
   },
   "environments/bg_kitchen.png": {
-    "original": "exec-37afd372-07bb-496c-9d8e-2ad38e732731.png",
+    "original": "2026-10-25 independent imagegen layer composite",
     "crop": null,
     "alpha_trim": [
       0,
       0,
-      941,
-      1672
+      1536,
+      1024
     ],
     "size": [
-      941,
-      1672
+      1536,
+      1024
     ],
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/environments/generation-2026-10-25.json"
   },
   "environments/bg_archive.png": {
-    "original": "exec-a470db49-910a-4bec-a3b2-0399e1568188.png",
+    "original": "2026-10-25 independent imagegen layer composite",
     "crop": null,
     "alpha_trim": [
       0,
       0,
-      941,
-      1672
+      1536,
+      1024
     ],
     "size": [
-      941,
-      1672
+      1536,
+      1024
     ],
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/environments/generation-2026-10-25.json"
   },
   "props/stone.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      0,
-      0,
-      540,
+      25,
+      93,
+      384,
       341
     ],
-    "alpha_trim": [
-      35,
-      85,
-      480,
-      318
-    ],
+    "alpha_trim": null,
     "size": [
       445,
       233
@@ -281,22 +271,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/float.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      540,
-      0,
-      1024,
-      341
+      453,
+      64,
+      691,
+      327
     ],
-    "alpha_trim": [
-      112,
-      39,
-      358,
-      334
-    ],
+    "alpha_trim": null,
     "size": [
       246,
       295
@@ -304,22 +290,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/screen.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      1024,
-      0,
-      1536,
-      350
+      734,
+      34,
+      1085,
+      346
     ],
-    "alpha_trim": [
-      48,
-      27,
-      444,
-      349
-    ],
+    "alpha_trim": null,
     "size": [
       396,
       322
@@ -327,22 +309,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/crate.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      0,
-      341,
-      540,
-      674
+      1117,
+      70,
+      1407,
+      339
     ],
-    "alpha_trim": [
-      81,
-      21,
-      407,
-      320
-    ],
+    "alpha_trim": null,
     "size": [
       326,
       299
@@ -350,22 +328,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/rope.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      540,
-      341,
-      1024,
-      674
+      55,
+      426,
+      380,
+      706
     ],
-    "alpha_trim": [
-      59,
-      50,
-      422,
-      286
-    ],
+    "alpha_trim": null,
     "size": [
       363,
       236
@@ -373,22 +347,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/wooden_bollard.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      1024,
-      350,
-      1536,
-      680
+      421,
+      398,
+      709,
+      704
     ],
-    "alpha_trim": [
-      66,
-      15,
-      432,
-      310
-    ],
+    "alpha_trim": null,
     "size": [
       366,
       295
@@ -396,22 +366,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/boat.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      0,
-      674,
-      570,
-      1024
+      740,
+      395,
+      1060,
+      686
     ],
-    "alpha_trim": [
-      43,
-      48,
-      522,
-      288
-    ],
+    "alpha_trim": null,
     "size": [
       479,
       240
@@ -419,22 +385,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/ticket_booth.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      570,
-      674,
-      980,
-      1024
+      1099,
+      381,
+      1404,
+      707
     ],
-    "alpha_trim": [
-      35,
-      0,
-      352,
-      320
-    ],
+    "alpha_trim": null,
     "size": [
       317,
       320
@@ -442,22 +404,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/dock.png": {
-    "original": "exec-60afd313-51e3-4e25-a048-4fc5bb23e5be.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      980,
-      680,
-      1536,
-      1024
+      45,
+      760,
+      435,
+      1022
     ],
-    "alpha_trim": [
-      5,
-      40,
-      528,
-      311
-    ],
+    "alpha_trim": null,
     "size": [
       523,
       271
@@ -465,22 +423,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/decoy_fire.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      0,
-      0,
-      520,
-      345
+      71,
+      36,
+      327,
+      391
     ],
-    "alpha_trim": [
-      103,
-      14,
-      463,
-      345
-    ],
+    "alpha_trim": null,
     "size": [
       360,
       331
@@ -488,22 +442,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/cryopack.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      520,
-      0,
-      1024,
-      350
+      384,
+      93,
+      692,
+      368
     ],
-    "alpha_trim": [
-      40,
-      29,
-      458,
-      350
-    ],
+    "alpha_trim": null,
     "size": [
       418,
       321
@@ -511,22 +461,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/water_bowl.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      1024,
-      0,
-      1536,
-      340
+      736,
+      123,
+      1073,
+      367
     ],
-    "alpha_trim": [
-      32,
-      54,
-      445,
-      323
-    ],
+    "alpha_trim": null,
     "size": [
       413,
       269
@@ -534,22 +480,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/fire_source.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      0,
-      312,
-      520,
-      680
+      1104,
+      22,
+      1428,
+      383
     ],
-    "alpha_trim": [
-      67,
-      5,
-      491,
-      361
-    ],
+    "alpha_trim": null,
     "size": [
       424,
       356
@@ -557,22 +499,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/hot_stone.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      520,
-      350,
-      1024,
-      680
+      38,
+      447,
+      347,
+      666
     ],
-    "alpha_trim": [
-      74,
-      42,
-      432,
-      300
-    ],
+    "alpha_trim": null,
     "size": [
       358,
       258
@@ -580,22 +518,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/thermobox.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      1024,
-      340,
-      1536,
-      680
+      382,
+      398,
+      705,
+      696
     ],
-    "alpha_trim": [
-      58,
-      6,
-      437,
-      327
-    ],
+    "alpha_trim": null,
     "size": [
       379,
       321
@@ -603,22 +537,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/bread.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      0,
-      680,
-      565,
-      1024
+      740,
+      456,
+      1063,
+      676
     ],
-    "alpha_trim": [
-      38,
-      11,
-      529,
-      312
-    ],
+    "alpha_trim": null,
     "size": [
       491,
       301
@@ -626,22 +556,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/dessert.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      565,
-      680,
-      1024,
-      1024
+      1111,
+      412,
+      1419,
+      671
     ],
-    "alpha_trim": [
-      2,
-      0,
-      429,
-      303
-    ],
+    "alpha_trim": null,
     "size": [
       427,
       303
@@ -649,22 +575,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/steam.png": {
-    "original": "exec-5143bd65-bef2-4603-9e0c-7d4004e479d4.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      1024,
-      660,
-      1536,
-      1024
+      59,
+      708,
+      332,
+      1054
     ],
-    "alpha_trim": [
-      80,
-      0,
-      462,
-      332
-    ],
+    "alpha_trim": null,
     "size": [
       382,
       332
@@ -672,22 +594,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/paper_bridge.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      0,
-      0,
-      565,
-      341
+      22,
+      95,
+      419,
+      373
     ],
-    "alpha_trim": [
-      30,
-      56,
-      536,
-      313
-    ],
+    "alpha_trim": null,
     "size": [
       506,
       257
@@ -695,22 +613,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/paper_gate.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      565,
-      0,
-      1024,
-      341
+      435,
+      26,
+      733,
+      368
     ],
-    "alpha_trim": [
-      37,
-      14,
-      406,
-      336
-    ],
+    "alpha_trim": null,
     "size": [
       369,
       322
@@ -718,22 +632,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/wood_gate.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      1024,
-      0,
-      1536,
-      341
+      783,
+      45,
+      1106,
+      376
     ],
-    "alpha_trim": [
-      66,
-      10,
-      449,
-      331
-    ],
+    "alpha_trim": null,
     "size": [
       383,
       321
@@ -741,22 +651,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/control_weight.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      0,
-      341,
-      545,
-      680
+      1149,
+      77,
+      1431,
+      380
     ],
-    "alpha_trim": [
-      75,
-      21,
-      481,
-      332
-    ],
+    "alpha_trim": null,
     "size": [
       406,
       311
@@ -764,22 +670,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/frame.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      545,
-      341,
-      1024,
-      680
+      447,
+      728,
+      755,
+      1024
     ],
-    "alpha_trim": [
-      14,
-      5,
-      468,
-      329
-    ],
+    "alpha_trim": null,
     "size": [
       454,
       324
@@ -787,22 +689,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/hoist.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      1024,
-      341,
-      1536,
-      680
+      811,
+      704,
+      1057,
+      1042
     ],
-    "alpha_trim": [
-      77,
-      0,
-      465,
-      339
-    ],
+    "alpha_trim": null,
     "size": [
       388,
       339
@@ -810,22 +708,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/clamp.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/river-tools.png",
     "crop": [
-      0,
-      680,
-      535,
-      1024
+      1108,
+      752,
+      1411,
+      995
     ],
-    "alpha_trim": [
-      62,
-      2,
-      513,
-      323
-    ],
+    "alpha_trim": null,
     "size": [
       451,
       321
@@ -833,22 +727,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/thread.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      535,
-      680,
-      1024,
-      1024
+      77,
+      415,
+      329,
+      707
     ],
-    "alpha_trim": [
-      54,
-      5,
-      441,
-      307
-    ],
+    "alpha_trim": null,
     "size": [
       387,
       302
@@ -856,22 +746,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/flags.png": {
-    "original": "exec-cdf10bd6-be72-4575-8f53-4964418073c8.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      1024,
-      680,
-      1536,
-      1024
+      353,
+      428,
+      752,
+      624
     ],
-    "alpha_trim": [
-      28,
-      0,
-      488,
-      319
-    ],
+    "alpha_trim": null,
     "size": [
       460,
       319
@@ -879,17 +765,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/stone_anchor.png": {
-    "original": "exec-eec26ff5-c968-4c5b-9707-f36177ee5d76.png",
-    "crop": null,
-    "alpha_trim": [
-      22,
-      10,
-      1192,
-      1305
+    "original": "assets/art/source/recreated-2026-10-25/props/supports.png",
+    "crop": [
+      68,
+      78,
+      723,
+      978
     ],
+    "alpha_trim": null,
     "size": [
       1170,
       1295
@@ -897,22 +784,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/fire_source_cold.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      435,
-      0,
-      875,
-      445
+      372,
+      693,
+      696,
+      1043
     ],
-    "alpha_trim": [
-      32,
-      4,
-      417,
-      438
-    ],
+    "alpha_trim": null,
     "size": [
       385,
       434
@@ -920,22 +803,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/water_bowl_frozen.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      875,
-      0,
-      1312,
-      442
+      728,
+      778,
+      1072,
+      1027
     ],
-    "alpha_trim": [
-      29,
-      114,
-      426,
-      410
-    ],
+    "alpha_trim": null,
     "size": [
       397,
       296
@@ -943,22 +822,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/paper_reinforced.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      0,
-      445,
-      435,
-      790
+      787,
+      426,
+      1142,
+      669
     ],
-    "alpha_trim": [
-      20,
-      6,
-      432,
-      325
-    ],
+    "alpha_trim": null,
     "size": [
       412,
       319
@@ -966,22 +841,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/miracle_stamp.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      435,
-      445,
-      875,
-      790
+      1175,
+      408,
+      1405,
+      672
     ],
-    "alpha_trim": [
-      37,
-      32,
-      425,
-      319
-    ],
+    "alpha_trim": null,
     "size": [
       388,
       287
@@ -989,22 +860,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/paper_sheet.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      875,
-      442,
-      1312,
-      804
+      30,
+      724,
+      373,
+      1049
     ],
-    "alpha_trim": [
-      29,
-      3,
-      419,
-      352
-    ],
+    "alpha_trim": null,
     "size": [
       390,
       349
@@ -1012,22 +879,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/kettle.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/kitchen-thermal.png",
     "crop": [
-      0,
-      790,
-      435,
-      1199
+      1116,
+      709,
+      1402,
+      1034
     ],
-    "alpha_trim": [
-      22,
-      0,
-      406,
-      383
-    ],
+    "alpha_trim": null,
     "size": [
       384,
       383
@@ -1035,22 +898,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/sandbag.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      435,
-      790,
-      875,
-      1199
+      399,
+      709,
+      715,
+      1026
     ],
-    "alpha_trim": [
-      30,
-      3,
-      425,
-      383
-    ],
+    "alpha_trim": null,
     "size": [
       395,
       380
@@ -1058,22 +917,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/thermal_screen.png": {
-    "original": "exec-2a2f431d-f3c8-4ad3-8ac9-49b77fec20b1.png",
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
     "crop": [
-      875,
-      780,
-      1312,
-      1199
+      745,
+      698,
+      1109,
+      1027
     ],
-    "alpha_trim": [
-      19,
-      0,
-      411,
-      406
-    ],
+    "alpha_trim": null,
     "size": [
       392,
       406
@@ -1081,17 +936,13 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "ui/app_icon_master.png": {
-    "original": "exec-67341689-c0be-415a-9774-e2fe28513252.png",
+    "original": "assets/art/source/recreated-2026-10-25/icon.png",
     "crop": null,
-    "alpha_trim": [
-      0,
-      0,
-      1254,
-      1254
-    ],
+    "alpha_trim": null,
     "size": [
       1254,
       1254
@@ -1099,7 +950,8 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
   },
   "characters/crowd_gardener.png": {
     "original": "exec-d61cf055-5a5c-4549-94f7-4c5a29b03534.png",
@@ -1240,14 +1092,14 @@
     ]
   },
   "props/water_surface.png": {
-    "original": "exec-0f4602ab-1784-4590-9f91-29f28a3e955f.png",
-    "crop": null,
-    "alpha_trim": [
+    "original": "assets/art/source/recreated-2026-10-25/props/water-and-ice.png",
+    "crop": [
       0,
       0,
-      1254,
-      1254
+      887,
+      887
     ],
+    "alpha_trim": null,
     "size": [
       1254,
       1254
@@ -1255,17 +1107,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/ice_surface.png": {
-    "original": "exec-4932ec13-67f6-4d9d-a8c6-54427db74afe.png",
-    "crop": null,
-    "alpha_trim": [
+    "original": "assets/art/source/recreated-2026-10-25/props/water-and-ice.png",
+    "crop": [
+      887,
       0,
-      0,
-      1254,
-      1254
+      1774,
+      887
     ],
+    "alpha_trim": null,
     "size": [
       1254,
       1254
@@ -1273,17 +1126,18 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "props/span_anchor.png": {
-    "original": "exec-1c8ed71b-ac79-4473-82df-f43415dc76c8.png",
-    "crop": null,
-    "alpha_trim": [
-      171,
-      61,
-      1056,
-      1267
+    "original": "assets/art/source/recreated-2026-10-25/props/supports.png",
+    "crop": [
+      869,
+      48,
+      1473,
+      965
     ],
+    "alpha_trim": null,
     "size": [
       885,
       1206
@@ -1291,7 +1145,8 @@
     "pivot": [
       0.5,
       1.0
-    ]
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
   },
   "characters/portraits/marfa/idle.png": {
     "original": "marfa_expressions.png",
@@ -3776,5 +3631,218 @@
       0.5,
       1.0
     ]
+  },
+  "props/poster.png": {
+    "original": "assets/art/source/recreated-2026-10-25/props/paper-theatre.png",
+    "crop": [
+      1152,
+      673,
+      1424,
+      1056
+    ],
+    "alpha_trim": null,
+    "size": [
+      512,
+      640
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/props/props-generation-manifest.json"
+  },
+  "characters/rigs/semyon/head.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      21,
+      21,
+      417,
+      393
+    ],
+    "alpha_trim": null,
+    "size": [
+      396,
+      372
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/torso.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      465,
+      56,
+      790,
+      400
+    ],
+    "alpha_trim": null,
+    "size": [
+      325,
+      344
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/right_arm.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      854,
+      83,
+      1237,
+      338
+    ],
+    "alpha_trim": null,
+    "size": [
+      383,
+      255
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/left_arm.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      65,
+      468,
+      409,
+      750
+    ],
+    "alpha_trim": null,
+    "size": [
+      344,
+      282
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/left_leg.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      548,
+      422,
+      724,
+      813
+    ],
+    "alpha_trim": null,
+    "size": [
+      176,
+      391
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/right_leg.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      944,
+      421,
+      1202,
+      810
+    ],
+    "alpha_trim": null,
+    "size": [
+      258,
+      389
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/cape.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      74,
+      843,
+      364,
+      1209
+    ],
+    "alpha_trim": null,
+    "size": [
+      290,
+      366
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "characters/rigs/semyon/prop.png": {
+    "original": "assets/art/source/recreated-2026-10-25/semyon-parts.png",
+    "crop": [
+      839,
+      896,
+      1223,
+      1183
+    ],
+    "alpha_trim": null,
+    "size": [
+      384,
+      287
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "ui/app_icon_192.png": {
+    "original": "assets/art/source/recreated-2026-10-25/icon.png",
+    "crop": null,
+    "alpha_trim": null,
+    "size": [
+      192,
+      192
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "ui/app_icon_512.png": {
+    "original": "assets/art/source/recreated-2026-10-25/icon.png",
+    "crop": null,
+    "alpha_trim": null,
+    "size": [
+      512,
+      512
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
+  },
+  "ui/app_icon_1024.png": {
+    "original": "assets/art/source/recreated-2026-10-25/icon.png",
+    "crop": null,
+    "alpha_trim": null,
+    "size": [
+      1024,
+      1024
+    ],
+    "pivot": [
+      0.5,
+      1.0
+    ],
+    "generation_manifest": "assets/art/source/recreated-2026-10-25/generated-asset-manifest.json"
   }
 }

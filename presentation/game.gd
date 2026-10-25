@@ -7,6 +7,9 @@ const INK=Color("25243b")
 const CREAM=Color("fff5de")
 const PURPLE=Color("5d43a7")
 const GREEN=Color("276b5c")
+# 1080 reference pixels map to 360 dp: 48 px keeps body copy at 16 sp.
+const BODY_FONT_SIZE: int=48
+const DISABLED_TEXT=Color("494552")
 const CHARACTER_NAMES={"CH01":"Феликс","CH02":"Плам","CH03":"Марфа","CH04":"Семён","CH05":"Ника","CH06":"Лада","CH07":"Роза","CH08":"Гюго","CH09":"Карамелька"}
 const PROP_NAMES={"stone_m":"Камень M","stone_l":"Камень L","stone_s":"Камень S","float":"Поплавок","screen":"Ширма","cargo_crate":"Ящик","clamp":"Зажим","cold_pack":"Криопак","control_weight":"Контрольный груз","decoy_flame":"Бутафорский огонь","oven":"Жаровня","bowl":"Чаша","heated_stone":"Тёплый камень","insulated_box":"Термокороб","bread":"Хлеб","dessert":"Десерт","hidden_frame":"Тайная рама","paper_span":"Бумажный мост","paper_wall":"Бумажная преграда","paper_flags":"Флажки","hoist":"Таль","boat":"Лодка","mooring_rope":"Причальная верёвка","tow_rope":"Буксирная верёвка","safety_thread":"Страховочная нить","span_anchor":"Опора","stone_anchor":"Каменный якорь","bollard":"Деревянный кнехт","wooden_gate":"Калитка","ticket_booth":"Билетная будка","steam_cloud":"Пар","actor_felix":"Феликс","actor_goat":"Карамелька"}
 var kernel=Kernel.new()
@@ -54,7 +57,7 @@ var _inventory_scroll: ScrollContainer
 var _text_measure_cache: Dictionary={}
 
 func _ready() -> void:
-	var global_theme=Theme.new();global_theme.default_font=load("res://assets/fonts/DejaVuSans.ttf");global_theme.default_font_size=40;theme=global_theme
+	var global_theme=Theme.new();global_theme.default_font=load("res://assets/fonts/DejaVuSans.ttf");global_theme.default_font_size=BODY_FONT_SIZE;theme=global_theme
 	var defaults: Dictionary=_json("res://data/settings_default.json")
 	settings=saver.sanitize_settings(saver.read_slot("settings",defaults),defaults)
 	progress=saver.read_slot("progress",{"schema_version":1,"unlocked":1,"completed":{},"current_level":1})
@@ -128,13 +131,14 @@ func _level_load_failed(id: String) -> void:
 func _box(parent: Control,rect: Rect2,color: Color,radius: int=24) -> Panel:
 	var panel=Panel.new();panel.position=rect.position;panel.size=rect.size
 	var style=StyleBoxFlat.new();style.bg_color=color;style.set_corner_radius_all(radius);panel.add_theme_stylebox_override("panel",style);panel.mouse_filter=MOUSE_FILTER_IGNORE;parent.add_child(panel);return panel
-func _text(parent: Control,value: String,rect: Rect2,font_size: int=42,color: Color=INK) -> Label:
+func _text(parent: Control,value: String,rect: Rect2,font_size: int=BODY_FONT_SIZE,color: Color=INK) -> Label:
 	var label=Label.new();label.position=rect.position;label.size=rect.size;label.text=value
 	label.add_theme_font_size_override("font_size",int(font_size*float(settings.get("accessibility",{}).get("text_scale",1))))
 	label.add_theme_color_override("font_color",color);label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;label.vertical_alignment=VERTICAL_ALIGNMENT_CENTER;label.mouse_filter=MOUSE_FILTER_IGNORE;parent.add_child(label);return label
-func _button(parent: Control,value: String,rect: Rect2,callback: Callable,filled: bool=false,font_size: int=36,icon: String="") -> Button:
+func _button(parent: Control,value: String,rect: Rect2,callback: Callable,filled: bool=false,font_size: int=BODY_FONT_SIZE,icon: String="") -> Button:
 	var b=Button.new();b.mouse_filter=MOUSE_FILTER_PASS;b.position=rect.position;b.size=rect.size;b.clip_text=true;b.text=value;b.add_theme_font_size_override("font_size",int(font_size*float(settings.get("accessibility",{}).get("text_scale",1))))
 	b.add_theme_color_override("font_color",CREAM if filled else INK);b.add_theme_color_override("font_hover_color",CREAM if filled else PURPLE);b.add_theme_color_override("font_pressed_color",CREAM if filled else PURPLE)
+	b.add_theme_color_override("font_disabled_color",DISABLED_TEXT);b.add_theme_color_override("icon_disabled_color",DISABLED_TEXT)
 	for state_name in ["normal","hover","pressed","focus","disabled"]:
 		var style=StyleBoxFlat.new();style.bg_color=PURPLE if filled else Color("f4e8cd");style.set_corner_radius_all(22);style.border_color=Color("d4c8ac");style.set_border_width_all(2)
 		if state_name=="hover":style.bg_color=Color("6a4eb9") if filled else Color("ebddbd")
@@ -143,7 +147,9 @@ func _button(parent: Control,value: String,rect: Rect2,callback: Callable,filled
 		if state_name=="focus":style.border_color=Color("d7aa47");style.set_border_width_all(5)
 		b.add_theme_stylebox_override(state_name,style)
 	if not icon.is_empty() and ResourceLoader.exists("res://assets/art/ui/"+icon+".svg"):
-		b.icon=load("res://assets/art/ui/"+icon+".svg");b.expand_icon=true;b.add_theme_constant_override("icon_max_width",48);b.add_theme_constant_override("h_separation",14)
+		var icon_only: bool=icon=="settings" and value.is_empty()
+		b.icon=load("res://assets/art/ui/"+icon+".svg");b.expand_icon=true;b.add_theme_constant_override("icon_max_width",72 if icon_only else 48);b.add_theme_constant_override("h_separation",14)
+		if icon_only:b.icon_alignment=HORIZONTAL_ALIGNMENT_CENTER
 	b.pressed.connect(func():audio.play("tap","UI");callback.call());parent.add_child(b);_wrap_button(b);return b
 func _hud_copy() -> Dictionary:
 	var names: Array=[]
@@ -185,7 +191,7 @@ func _build_ui() -> void:
 	var screen: Vector2=get_viewport_rect().size
 	ui.position=Vector2(maxf(0,(screen.x-1080)/2),0);ui.size=Vector2(1080,screen.y)
 	var text_scale: float=clampf(float(settings.accessibility.text_scale),1.0,1.4)
-	var font_size: int=int(42*text_scale)
+	var font_size: int=int(BODY_FONT_SIZE*text_scale)
 	var copy: Dictionary=_hud_copy()
 	var safe_top: float=40;var safe_bottom: float=40
 	if DisplayServer.get_name()!="headless":
@@ -227,19 +233,20 @@ func _build_ui() -> void:
 	_text(content,heading,Rect2(54,safe_top,804,title_h),48)
 	_button(content,"",Rect2(882,safe_top,144,title_h),_open_settings,false,48,"settings")
 	_box(content,Rect2(54,safe_top+title_h+16,972,law_h),Color("e5dded"),22)
-	law_label=_text(content,copy.law,Rect2(78,safe_top+title_h+28,924,law_h-24),42,PURPLE)
+	law_label=_text(content,copy.law,Rect2(78,safe_top+title_h+28,924,law_h-24),BODY_FONT_SIZE,PURPLE)
 	stage=reusable_stage if reusable_stage!=null else Stage.new();stage.kernel=kernel;stage.translator=tx;stage.selected=selected;stage.inspected=inspected;stage.position=Vector2(48,stage_y);stage.size=Vector2(984,stage_h);stage.reduced_motion=settings.accessibility.reduced_motion;stage.process_mode=Node.PROCESS_MODE_DISABLED if _app_paused else Node.PROCESS_MODE_INHERIT;content.add_child(stage)
 	if not stage.target_tapped.is_connected(_on_target):stage.target_tapped.connect(_on_target)
 	_caption_panel=_box(content,Rect2(68,stage_y+stage_h-maxf(132,84*text_scale+40),944,maxf(132,84*text_scale+40)),Color(.99,.96,.87,.94),20)
 	_caption_panel.visible=previous_remaining>0 and settings.accessibility.subtitles
-	_caption_label=_text(_caption_panel,previous_caption,Rect2(24,12,896,_caption_panel.size.y-24),38)
+	_caption_label=_text(_caption_panel,previous_caption,Rect2(24,12,896,_caption_panel.size.y-24),BODY_FONT_SIZE)
 	_caption_remaining=previous_remaining;_caption_queue=previous_queue
+	if not previous_caption.is_empty():_fit_caption()
 	_box(content,Rect2(54,instruction_y,972,instruction_h),Color("f3e8cf"),24)
-	instruction=_text(content,copy.body,Rect2(82,instruction_y+12,916,instruction_h-24),42)
+	instruction=_text(content,copy.body,Rect2(82,instruction_y+12,916,instruction_h-24),BODY_FONT_SIZE)
 	witness_labels.clear();_audience_scroll=null
 	if n==0:
 		_box(content,Rect2(54,witness_y,972,witness_h),Color("e5ecdd"),24)
-		_text(content,tx("ui.no_audience","Закон уже действует. Собери план и проверь последствия."),Rect2(78,witness_y+12,922,witness_h-24),42,GREEN)
+		_text(content,tx("ui.no_audience","Закон уже действует. Собери план и проверь последствия."),Rect2(78,witness_y+12,922,witness_h-24),BODY_FONT_SIZE,GREEN)
 	else:
 		var audience_scroll=ScrollContainer.new();_audience_scroll=audience_scroll;audience_scroll.mouse_filter=MOUSE_FILTER_PASS;audience_scroll.position=Vector2(54,witness_y);audience_scroll.size=Vector2(972,witness_h+12);audience_scroll.vertical_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;audience_scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_AUTO;content.add_child(audience_scroll)
 		var audience=HBoxContainer.new();audience.mouse_filter=MOUSE_FILTER_PASS;audience.add_theme_constant_override("separation",10);audience_scroll.add_child(audience)
@@ -253,8 +260,8 @@ func _build_ui() -> void:
 				portrait=TextureRect.new();portrait.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;portrait.custom_minimum_size=Vector2.ZERO
 				var tex: Texture2D=load(path);var crop=AtlasTexture.new();crop.atlas=tex;crop.region=Rect2(tex.get_width()*.18,tex.get_height()*.015,tex.get_width()*.64,tex.get_height()*.28);portrait.texture=crop
 				portrait.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;portrait.position=Vector2(12,8);portrait.size=Vector2(72,72)*text_scale;portrait.mouse_filter=MOUSE_FILTER_IGNORE;cell.add_child(portrait)
-			var status_label: Label=_text(cell,"0%",Rect2(32+72*text_scale,8,card_width-44-72*text_scale,72*text_scale),42)
-			var name_label: Label=_text(cell,_character_name(wd.character_id),Rect2(12,80*text_scale,card_width-24,witness_h-80*text_scale-8),42)
+			var status_label: Label=_text(cell,"0%",Rect2(32+72*text_scale,8,card_width-44-72*text_scale,72*text_scale),BODY_FONT_SIZE)
+			var name_label: Label=_text(cell,_character_name(wd.character_id),Rect2(12,80*text_scale,card_width-24,witness_h-80*text_scale-8),BODY_FONT_SIZE)
 			witness_labels[wd.id]={"name":name_label,"status":status_label,"portrait":portrait,"character":char_name}
 			if is_instance_valid(portrait):portrait.set_meta("fallback",portrait.texture)
 	var inventory=ScrollContainer.new();_inventory_scroll=inventory;inventory.mouse_filter=MOUSE_FILTER_PASS;inventory.position=Vector2(54,tray_y);inventory.size=Vector2(972,tray_h);inventory.vertical_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;inventory.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_AUTO;content.add_child(inventory)
@@ -263,19 +270,23 @@ func _build_ui() -> void:
 		if not entity.movable and entity.properties.get("attachment_kind","").is_empty():continue
 		var id: String=entity.id
 		var item_width: float=_inventory_item_width(_name(id),text_scale)
-		var b: Button=_button(row,_name(id),Rect2(0,0,item_width,inventory_h),func():_select(id),false,42)
+		var b: Button=_button(row,_name(id),Rect2(0,0,item_width,inventory_h),func():_select(id),false,BODY_FONT_SIZE)
 		b.custom_minimum_size=Vector2(item_width,inventory_h)
 		var path: String=stage.asset_path(id)
 		if ResourceLoader.exists(path):b.icon=load(path);b.expand_icon=true;b.add_theme_constant_override("icon_max_width",int(64*text_scale));b.add_theme_constant_override("h_separation",12)
-		_wrap_button(b)
-	primary=_button(ui,"",Rect2(54,primary_y,972,button_h),_primary,true,42,"play")
-	_button(ui,tx("ui.undo_short","Откат"),Rect2(54,footer_y,282,button_h),func():_command("Undo"),false,42,"undo")
-	_button(ui,tx("ui.hint_short","Совет"),Rect2(352,footer_y,352,button_h),_hint,false,42,"hint")
-	_button(ui,tx("ui.plan","План"),Rect2(720,footer_y,306,button_h),_plan_menu,false,42,"rehearsal")
+		# Reflow the authored label after installing its icon, not already-wrapped lines.
+		b.text=_name(id);_wrap_button(b)
+	primary=_button(ui,"",Rect2(54,primary_y,972,button_h),_primary,true,BODY_FONT_SIZE,"play")
+	_button(ui,tx("ui.undo_short","Откат"),Rect2(54,footer_y,282,button_h),func():_command("Undo"),false,BODY_FONT_SIZE,"undo")
+	_button(ui,tx("ui.hint_short","Совет"),Rect2(352,footer_y,352,button_h),_hint,false,BODY_FONT_SIZE,"hint")
+	_button(ui,tx("ui.plan","План"),Rect2(720,footer_y,306,button_h),_plan_menu,false,BODY_FONT_SIZE,"rehearsal")
 	_flash=ColorRect.new();_flash.size=screen;_flash.color=Color(1,.94,.68,0);_flash.mouse_filter=MOUSE_FILTER_IGNORE;ui.add_child(_flash)
 func _process(delta: float) -> void:
 	_frame+=1
 	if _frame==10:
+		if _capture_scroll=="settings_end" and is_instance_valid(overlay):
+			for child in overlay.get_children():
+				if child is ScrollContainer:child.scroll_vertical=int(child.get_v_scroll_bar().max_value)
 		if _capture_scroll.begins_with("audience") and is_instance_valid(_audience_scroll):
 			_upper_scroll.ensure_control_visible(_audience_scroll)
 			if _capture_scroll=="audience_end":_audience_scroll.scroll_horizontal=int(_audience_scroll.get_h_scroll_bar().max_value)
@@ -346,6 +357,7 @@ func _events(events: Array) -> void:
 			"recoverable_failure":audio.play_event("SFX_FAIL_RECOVERABLE")
 			"rehearsal_passed":_toast(tx("ui.rehearsal_passed","Репетиция удалась. Теперь — настоящий показ!"))
 			"rehearsal_failed":_toast(tx("ui.rehearsal_failed","Репетиция закончилась. Вернулись к исходному плану."))
+		stage.react_to_event(event.type,payload)
 func _prop_sound(id: String) -> String:
 	if not kernel._entities.has(id):return "SFX_UI_DROP_VALID"
 	var d: Dictionary=kernel._entities[id]
@@ -372,7 +384,7 @@ func _on_target(kind: String,id: String) -> void:
 func _update_ui() -> void:
 	if not is_instance_valid(primary):return
 	var copy: Dictionary=_hud_copy()
-	var font_size: int=int(42*float(settings.accessibility.text_scale))
+	var font_size: int=int(BODY_FONT_SIZE*float(settings.accessibility.text_scale))
 	if _layout_law_height!=maxf(108,_text_height(copy.law,924,font_size)+24) or _layout_instruction_height!=maxf(144,_text_height(copy.body,916,font_size)+24):_build_ui()
 	var state: Dictionary=kernel.state
 	law_label.text=copy.law
@@ -447,15 +459,15 @@ func _modal(title: String,body: String,confirm: String,callback: Callable) -> vo
 	_sheet(title)
 	var scroll=ScrollContainer.new();scroll.position=Vector2(108,_sheet_content_top);scroll.size=Vector2(864,1480-_sheet_content_top);scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;overlay.add_child(scroll)
 	var label: Label=_text(scroll,body,Rect2(0,0,842,0),48);label.custom_minimum_size=Vector2(842,0)
-	_button(overlay,confirm,Rect2(108,1536,864,144),func():_close_overlay();callback.call(),true,40)
+	_button(overlay,confirm,Rect2(108,1536,864,144),func():_close_overlay();callback.call(),true,BODY_FONT_SIZE)
 func _choices(title: String,choices: Array) -> void:
 	_sheet(title)
 	var scroll=ScrollContainer.new();scroll.position=Vector2(108,_sheet_content_top);scroll.size=Vector2(864,1486-_sheet_content_top);scroll.horizontal_scroll_mode=ScrollContainer.SCROLL_MODE_DISABLED;overlay.add_child(scroll)
 	var rows=VBoxContainer.new();rows.mouse_filter=MOUSE_FILTER_PASS;rows.custom_minimum_size=Vector2(842,0);rows.add_theme_constant_override("separation",16);scroll.add_child(rows)
 	for choice in choices:
-		var b: Button=_button(rows,choice.label,Rect2(0,0,842,144),func():_close_overlay();choice.action.call(),choice.get("primary",false),42)
+		var b: Button=_button(rows,choice.label,Rect2(0,0,842,144),func():_close_overlay();choice.action.call(),choice.get("primary",false),BODY_FONT_SIZE)
 		b.custom_minimum_size=Vector2(842,maxf(144,(b.text.count("\n")+1)*b.get_theme_font_size("font_size")*1.25+32))
-	_button(overlay,tx("ui.close","Вернуться"),Rect2(108,1536,864,144),_dismiss_overlay,true,42)
+	_button(overlay,tx("ui.close","Вернуться"),Rect2(108,1536,864,144),_dismiss_overlay,true,BODY_FONT_SIZE)
 func _toast(message: String) -> void:_modal(tx("ui.plum_help","Плам подсказывает"),message,tx("ui.understood","Понятно"),func():pass)
 func _briefing() -> void:_modal(tx(_key("title"),"Новое чудо"),tx(_key("intro"),"Сначала поставь фокус. Затем преврати его в настоящий закон.")+"\n\n"+tx(_key("objective"),""),tx("ui.begin","За работу"),func():audio.play("voice_felix","Voice"))
 func _hint() -> void:
@@ -529,16 +541,24 @@ func _next_level() -> void:
 func _open_levels() -> void:
 	audio.play_music("music_album")
 	_sheet(tx("ui.album","Альбом невозможного"))
-	_text(overlay,tx("ui.level_select_help","Каждый эксперимент можно повторить бесплатно."),Rect2(108,340,864,100),36)
+	var help_text: String=tx("ui.level_select_help","Опыты можно повторять бесплатно.")
+	var help_height: float=_text_height(help_text,864,int(BODY_FONT_SIZE*float(settings.accessibility.text_scale)))
+	_text(overlay,help_text,Rect2(108,_sheet_content_top,864,help_height),BODY_FONT_SIZE)
+	var grid_y: float=_sheet_content_top+help_height+24
 	for i in range(level_ids.size()):
-		var n: int=i+1;var x: float=108+(i%5)*174;var y: float=470+int(i/5)*158
-		var label: String=str(n)+( " ★" if progress.completed.has(level_ids[i]) else "")
-		var b: Button=_button(overlay,label,Rect2(x,y,154,144),func():_front_menu=false;_close_overlay();start_level(n),n==level_number,42)
+		var n: int=i+1;var x: float=108+(i%5)*174;var y: float=grid_y+int(i/5)*158
+		var b: Button=_button(overlay,str(n),Rect2(x,y,154,144),func():_front_menu=false;_close_overlay();start_level(n),n==level_number,BODY_FONT_SIZE)
+		if progress.completed.has(level_ids[i]):
+			_text(b,"★",Rect2(108,2,42,42),28,CREAM if n==level_number else GREEN)
 		b.disabled=n>int(progress.get("unlocked",1)) or _invalid_levels.has(level_ids[i])
-	_button(overlay,tx("ui.back_game","Вернуться в игру"),Rect2(108,1536,864,144),_dismiss_overlay,true,39)
+	_button(overlay,tx("ui.back_game","Вернуться в игру"),Rect2(108,1536,864,144),_dismiss_overlay,true,BODY_FONT_SIZE)
 func _toggle(parent: Control,label: String,rect: Rect2,value: bool,callback: Callable) -> CheckButton:
-	var check=CheckButton.new();check.mouse_filter=MOUSE_FILTER_PASS;check.text=label;check.position=rect.position;check.size=rect.size;check.button_pressed=value
-	check.add_theme_font_size_override("font_size",int(42*float(settings.accessibility.text_scale)))
+	var check=CheckButton.new();check.mouse_filter=MOUSE_FILTER_PASS;check.position=rect.position;check.size=rect.size;check.button_pressed=value
+	var font_size: int=int(BODY_FONT_SIZE*float(settings.accessibility.text_scale))
+	check.add_theme_font_size_override("font_size",font_size)
+	check.text=_wrap_words(label,maxf(80,rect.size.x-136),font_size)
+	var label_height: float=get_theme_font("font").get_height(font_size)*(check.text.count("\n")+1)+24
+	check.custom_minimum_size=Vector2(rect.size.x,maxf(rect.size.y,label_height))
 	check.add_theme_icon_override("checked",load("res://presentation/resources/toggle_on.svg"));check.add_theme_icon_override("unchecked",load("res://presentation/resources/toggle_off.svg"))
 	for color_name in ["font_color","font_hover_color","font_pressed_color","font_focus_color","font_disabled_color"]:check.add_theme_color_override(color_name,INK)
 	parent.add_child(check);check.toggled.connect(callback);return check
@@ -554,30 +574,30 @@ func _open_settings() -> void:
 	for i in range(cats.size()):
 		var category: String=cats[i]
 		var card=Control.new();card.mouse_filter=MOUSE_FILTER_PASS
-		var label_width: float=840 if category=="Master" else 580
-		var heading_height: float=_text_height(cat_names[i],label_width,int(42*float(settings.accessibility.text_scale)))
+		var label_width: float=840 if category=="Master" else 560
+		var heading_height: float=_text_height(cat_names[i],label_width,int(BODY_FONT_SIZE*float(settings.accessibility.text_scale)))
 		var slider_y: float=maxf(144,heading_height)+16
 		card.custom_minimum_size=Vector2(840,slider_y+160);rows.add_child(card)
-		_text(card,cat_names[i],Rect2(0,0,label_width,maxf(82,heading_height)),42)
-		if category!="Master":_toggle(card,tx("ui.enabled","Вкл"),Rect2(600,0,240,144),settings.audio.categories[category].enabled,func(v):settings.audio.categories[category].enabled=v;_apply_audio())
+		_text(card,cat_names[i],Rect2(0,0,label_width,maxf(82,heading_height)),BODY_FONT_SIZE)
+		if category!="Master":_toggle(card,tx("ui.enabled","Вкл"),Rect2(580,0,260,144),settings.audio.categories[category].enabled,func(v):settings.audio.categories[category].enabled=v;_apply_audio())
 		var slider=HSlider.new();slider.position=Vector2(8,slider_y);slider.size=Vector2(620,144);slider.min_value=0;slider.max_value=1;slider.step=.01;slider.add_theme_icon_override("grabber",load("res://presentation/resources/slider_knob.svg"));slider.add_theme_icon_override("grabber_highlight",load("res://presentation/resources/slider_knob.svg"));slider.value=settings.audio.master_volume if category=="Master" else settings.audio.categories[category].volume;card.add_child(slider)
-		var percent: Label=_text(card,"%d%%" % int(slider.value*100),Rect2(638,slider_y+32,202,96),42)
+		var percent: Label=_text(card,"%d%%" % int(slider.value*100),Rect2(638,slider_y+32,202,96),BODY_FONT_SIZE)
 		slider.value_changed.connect(func(v):
 			if category=="Master":settings.audio.master_volume=v
 			else:settings.audio.categories[category].volume=v
 			percent.text="%d%%" % int(v*100);_apply_audio())
-	var access=Control.new();access.mouse_filter=MOUSE_FILTER_PASS;access.custom_minimum_size=Vector2(840,432);rows.add_child(access)
+	var access=VBoxContainer.new();access.mouse_filter=MOUSE_FILTER_PASS;access.custom_minimum_size=Vector2(840,0);access.add_theme_constant_override("separation",8);rows.add_child(access)
 	_toggle(access,tx("ui.reduced_motion","Уменьшить движение"),Rect2(0,0,840,144),settings.accessibility.reduced_motion,_set_reduced_motion)
 	_toggle(access,tx("ui.subtitles","Субтитры"),Rect2(0,144,840,144),settings.accessibility.subtitles,_set_subtitles)
 	_toggle(access,tx("ui.haptics","Вибрация"),Rect2(0,288,840,144),settings.accessibility.haptics,func(v):settings.accessibility.haptics=v;saver.write_slot("settings",settings))
 	var scale_row=HBoxContainer.new();scale_row.mouse_filter=MOUSE_FILTER_PASS;rows.add_child(scale_row)
 	for scale_value in [1.0,1.2,1.4]:
-		var b: Button=_button(scale_row,"%d%%" % int(scale_value*100),Rect2(0,0,268,144),func():settings.accessibility.text_scale=scale_value;saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,42)
+		var b: Button=_button(scale_row,"%d%%" % int(scale_value*100),Rect2(0,0,268,144),func():settings.accessibility.text_scale=scale_value;saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,BODY_FONT_SIZE)
 		b.custom_minimum_size=Vector2(272,144)
-	var lang: Button=_button(rows,tx("ui.language","Язык")+": "+settings.locale.to_upper(),Rect2(0,0,840,144),func():settings.locale="en" if settings.locale=="ru" else "ru";_load_catalog();saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,42);lang.custom_minimum_size=Vector2(840,144)
-	var restart: Button=_button(rows,tx("ui.restart","Заново"),Rect2(0,0,840,144),func():_close_overlay();_command("Restart"),false,42);restart.custom_minimum_size=Vector2(840,144)
-	var album: Button=_button(rows,tx("ui.album","Альбом уровней"),Rect2(0,0,840,144),_open_levels,false,42);album.custom_minimum_size=Vector2(840,144)
-	_button(overlay,tx("ui.back_game","Вернуться в игру"),Rect2(108,1576,864,144),_dismiss_overlay,true,42)
+	var lang: Button=_button(rows,tx("ui.language","Язык")+": "+settings.locale.to_upper(),Rect2(0,0,840,144),func():settings.locale="en" if settings.locale=="ru" else "ru";_load_catalog();saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,BODY_FONT_SIZE);lang.custom_minimum_size=Vector2(840,144)
+	var restart: Button=_button(rows,tx("ui.restart","Заново"),Rect2(0,0,840,144),func():_close_overlay();_command("Restart"),false,BODY_FONT_SIZE);restart.custom_minimum_size=Vector2(840,144)
+	var album: Button=_button(rows,tx("ui.album","Альбом уровней"),Rect2(0,0,840,144),_open_levels,false,BODY_FONT_SIZE);album.custom_minimum_size=Vector2(840,144)
+	_button(overlay,tx("ui.back_game","Вернуться в игру"),Rect2(108,1576,864,144),_dismiss_overlay,true,BODY_FONT_SIZE)
 func _apply_audio() -> void:audio.settings=settings.audio;audio.apply_settings();saver.write_slot("settings",settings)
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_GO_BACK_REQUEST:
@@ -599,9 +619,10 @@ func _quit_gracefully() -> void:
 	_quitting=true;_app_paused=true
 	if not kernel.state.is_empty():_save_progress()
 	if not settings.is_empty():saver.write_slot("settings",settings)
-	if is_instance_valid(audio):audio.shutdown()
-	await get_tree().create_timer(.15).timeout
-	get_tree().quit()
+	var released: bool=true
+	if is_instance_valid(audio):released=await audio.shutdown_and_wait()
+	if not released:push_error("Audio playback did not release before shutdown")
+	get_tree().quit(0 if released else 1)
 func _prepare_capture() -> void:
 	_close_overlay();kernel.load_level(_json("res://data/levels/"+level_ids[level_number-1]+".json"),48121)
 	if _capture_stage=="title":_show_title()
@@ -652,8 +673,8 @@ func _show_title() -> void:
 		var figure=TextureRect.new();figure.position=item.rect.position;figure.size=item.rect.size;figure.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;figure.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;figure.texture=load(path);figure.mouse_filter=MOUSE_FILTER_IGNORE;overlay.add_child(figure)
 	_box(overlay,Rect2(54,1280,972,570),Color(.99,.96,.87,.96),36)
 	_button(overlay,tx("ui.play","Играть"),Rect2(108,1320,864,144),_enter_game,true,52,"play")
-	_button(overlay,tx("ui.album","Альбом уровней"),Rect2(108,1490,864,144),_open_levels,false,44)
-	_button(overlay,tx("ui.settings","Настройки"),Rect2(108,1660,864,144),_open_settings,false,44,"settings")
+	_button(overlay,tx("ui.album","Альбом уровней"),Rect2(108,1490,864,144),_open_levels,false,BODY_FONT_SIZE)
+	_button(overlay,tx("ui.settings","Настройки"),Rect2(108,1660,864,144),_open_settings,false,BODY_FONT_SIZE,"settings")
 	audio.play_music("music_menu")
 func _show_credits() -> void:
 	audio.play_music("music_credits")
@@ -721,7 +742,11 @@ func _caption(character: String,emotion: String) -> void:
 	if _caption_remaining<=0:_next_caption()
 func _next_caption() -> void:
 	if not is_instance_valid(_caption_panel) or _caption_queue.is_empty():return
-	_caption_label.text=_caption_queue.pop_front();_caption_panel.visible=true;_caption_remaining=2.2
+	_caption_label.text=_caption_queue.pop_front();_fit_caption();_caption_panel.visible=true;_caption_remaining=2.2
+func _fit_caption() -> void:
+	var height: float=maxf(132,_text_height(_caption_label.text,896,_caption_label.get_theme_font_size("font_size"))+24)
+	_caption_panel.size.y=height;_caption_panel.position.y=stage.position.y+stage.size.y-height
+	_caption_label.size.y=height-24
 func _advance_caption(delta: float) -> void:
 	if not settings.accessibility.subtitles:
 		_caption_remaining=0;_caption_queue.clear()
@@ -740,5 +765,5 @@ func _set_subtitles(value: bool) -> void:
 func _inventory_item_width(label: String,scale_value: float) -> float:
 	var font: Font=get_theme_font("font")
 	var widest: float=0
-	for word in label.split(" "):widest=maxf(widest,font.get_string_size(word,HORIZONTAL_ALIGNMENT_LEFT,-1,int(42*scale_value)).x)
+	for word in label.split(" "):widest=maxf(widest,font.get_string_size(word,HORIZONTAL_ALIGNMENT_LEFT,-1,int(BODY_FONT_SIZE*scale_value)).x)
 	return maxf(316*scale_value,widest+124*scale_value)

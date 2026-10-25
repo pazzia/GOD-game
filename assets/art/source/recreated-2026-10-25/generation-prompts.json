@@ -1,0 +1,43 @@
+{
+  "semyon": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/workspace/GOD-game/old/assets/art/characters/portraits/semyon/idle.png",
+      "/workspace/GOD-game/old/assets/art/characters/rigs/semyon/accessory.png"
+    ],
+    "prompt": "Production sprite atlas for the SAME young carpenter Semyon in the attached original game art. Preserve face identity, round spectacles, wavy brown hair, cream-gray high collar, navy vest, warm storybook gouache texture and ochre tool belt. Make a square 1536 by 1536 RGBA atlas with an invisible strict 3 by 3 grid of NINE fully separated animation cutouts, one centered in each equal cell, large transparent gutters. No grid lines, no labels, no words. Pieces must NEVER touch adjacent cells. In 3-quarter view facing screen-right. Row 1: cell1 HEAD including hair spectacles complete face and solid short neck, no shoulders or clothing; cell2 TORSO narrow navy waistcoat over gray buttoned shirt, rounded solid cloth shoulder overlap, no head arms belt or legs; cell3 SCREEN-RIGHT ARM only gray loose sleeve bent 90 degrees to extend hand right, complete upward-facing palm for supporting ruler, shoulder at upper-left. Row 2: cell1 SCREEN-LEFT ARM only gray sleeve with complete hand angled toward body in a gentle pinching gesture, no ruler; cell2 LEFT LEG slim long navy trouser leg with brown lace-up work boot, solid thigh overlap; cell3 RIGHT LEG matching opposite trouser leg and brown boot. Row3: cell1 BACK PANEL of ordinary short navy waistcoat, no fantasy cape, no arms body or head; cell2 OCHRE TOOL BELT AND POUCH as reference (standalone belt only); cell3 YELLOW WOODEN FOLDING RULE hinged in an open broad zigzag/triangle horizontal gesture, small dark measurement ticks but no letters or numbers, no hands attached. All joint regions solid painted cloth/skin, never hollow shoulder sockets. Each piece isolated and completely inside its cell. Full transparent alpha background. Do not add assembled person, cast shadow, background paper, floor, decoration, logo or watermark. Maintain approved exact warm handmade gouache look."
+  },
+  "roza": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/workspace/GOD-game/old/assets/art/characters/portraits/roza/idle.png",
+      "/workspace/GOD-game/old/assets/art/characters/rigs/roza/torso.png",
+      "/workspace/GOD-game/old/assets/art/characters/rigs/roza/prop.png",
+      "/workspace/GOD-game/old/assets/art/characters/rigs/roza/accessory.png"
+    ],
+    "prompt": "Reconstruct the full-body SAME original Roza character shown by this exact face portrait and clothing/props. A dignified friendly middle-aged inspector with gray bobbed hair, black rectangular eyeglasses, tiny knowing smile, long deep-plum tailored coat with lapels, olive-sage fitted waistcoat, cream high-neck cravat, charcoal long skirt and dark practical ankle boots. Hold the ochre archive folder from reference in one arm and small wooden/brass administrative stamp in the other hand; this is an ordinary bureaucracy stamp with no glowing magic. Three-quarter view facing screen-right, entire body head to boots, relaxed clear silhouette; same big expressive face proportions as original game illustrations, approximately 3.8 heads tall. Original warm soft gouache storybook painting on real TRANSPARENT background. No paper plate behind character, no cast backdrop, no text, no logos, no other figures, no cutoff extremities. Preserve exact facial identity and all costume details from attached references. Center with transparent 8 percent safety margin on all sides. Production isolated game sprite, high quality complete hands and boots."
+  },
+  "roza_clean": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/workspace/generated_images/exec-edacdb7f-acb2-4586-9aee-5c63bbb261ac.png"
+    ],
+    "prompt": "Image edit for production game cutout: preserve this Roza full-body character EXACTLY — face, costume, hands, folder, stamp, feet, colors, shape, scale and pose. Remove absolutely ALL background and ALL colored fog/halo/glow outside the silhouette, including purple/brown diffuse haze. The only nontransparent pixels must belong to her hair, body, clothing, folder, stamp and boots. True clean transparent alpha around silhouette, solid opaque interior, naturally antialiased clean edges. No floor shadow. Do not redraw or add anything. Same full image canvas, no crop. Need usable isolated sprite."
+  },
+  "semyon_full": {
+    "transparent_background": true,
+    "referenced_image_paths": [
+      "/workspace/GOD-game/old/assets/art/characters/portraits/semyon/idle.png",
+      "/workspace/generated_images/exec-27da75b7-1fac-429f-9189-06775452a816.png"
+    ],
+    "prompt": "Create one FULL-BODY assembled standing Semyon game character by faithfully assembling the exact identity/costume from these references. Slim friendly young carpenter, wavy brown hair, large round glasses, gentle clever smile, pale-gray high-collar shirt, short navy waistcoat, long slim navy trousers, brown lace-up work boots, ochre toolbelt and pouch. He holds a yellow wooden hinged folding rule open horizontally with BOTH hands at waist/chest height, screen-left hand pinching one end and screen-right upturned palm supporting the other end. Three-quarter view facing screen-right. Complete body from hair to boots, about3.8 heads tall, same warm handpainted storybook gouache style. Isolate on perfectly transparent alpha background, no scenery, no floor, no glow, no haze, no backdrop, no paper rectangle. Center with6percent safety margin. Coherent anatomy, two arms two legs five fingers per hand. No text or numbers or labels. Preserve the EXACT portrait face and navy working waistcoat, no fantasy cloak or hat."
+  },
+  "icon": {
+    "transparent_background": false,
+    "referenced_image_paths": [
+      "/workspace/GOD-game/old/assets/art/characters/portraits/felix/idle.png",
+      "/workspace/GOD-game/old/assets/art/characters/plum.png"
+    ],
+    "prompt": "Create the polished square mobile game app icon for the original game Almost God, faithfully using these exact Felix and Plum character identities. Felix is the expressive kind young brown-haired conjurer with purple top hat, plum cloak, cream shirt and red neck ribbon from reference. Plum is the fluffy golden moth with big cream wings and teal satchel from reference. Compose a close-up of Felix's delighted amazed face on left-center and tiny Plum floating beside his cheek on right, both looking at a small warm gold magical seal of a floating grey stone above one curved teal ripple, near lower center. Readable strong simple silhouettes at 48px. Full bleed deep plum background with subtle warm paper/gouache texture, soft cream halo behind heads, teal and copper accents. Crop at chest, faces very large, preserve face identity exactly. Hand-painted gouache, soft paper grain, rich but not neon colors, no generic vector flatness or plastic 3D look. No letters, no title, no logo, no numbers, no border, no rounded external corners (platform adds its own mask). Square 1024x1024 image. Put all meaningful shapes safely within central80 percent. Every face has anatomically coherent eyes; moth has only two eyes."
+  }
+}

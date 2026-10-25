@@ -1,0 +1,5454 @@
+{
+  "schema_version": 1,
+  "units": "seconds, radians, reference-canvas pixels",
+  "interpolation": "linear: no cubic overshoot beyond keyed anatomy",
+  "limits": [
+    "Body acting only; independent facial expressions, scarf cloth, carried note and recipe page need dedicated artwork.",
+    "No clip mutates gameplay or implies successful physical interaction."
+  ],
+  "actors": {
+    "felix": {
+      "distract": {
+        "duration": 1.35,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            0.18,
+            0.9,
+            0.84,
+            0.25,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.1,
+            -0.18,
+            -0.46,
+            -0.12,
+            0
+          ],
+          "head": [
+            0,
+            -0.09,
+            -0.16,
+            0.09,
+            0.03,
+            0
+          ],
+          "cape": [
+            0,
+            -0.03,
+            0.08,
+            0.13,
+            0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Look left, sweep the empty hand wide, glance back while the prop hand stays low."
+      },
+      "place_prop": {
+        "duration": 0.95,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.05,
+            0.17,
+            0.2,
+            0.09,
+            0
+          ],
+          "head": [
+            0,
+            0.1,
+            0.18,
+            0.12,
+            0.06,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.18,
+            -0.48,
+            -0.35,
+            -0.12,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.12,
+            0.4,
+            0.31,
+            0.08,
+            0
+          ],
+          "prop": [
+            0,
+            -0.04,
+            -0.16,
+            0.06,
+            0.02,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            16
+          ],
+          [
+            0,
+            19
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Bend with both hands, lower the held prop, release and straighten."
+      },
+      "concealed_panic": {
+        "duration": 1.1,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.13,
+            0.13,
+            -0.09,
+            0.06,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.1,
+            -0.32,
+            -0.25,
+            -0.12,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.12,
+            0.27,
+            0.21,
+            0.08,
+            0
+          ],
+          "cape": [
+            0,
+            0.04,
+            -0.04,
+            0.03,
+            -0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            -3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Quick side glances and hands pressed inward, then a deliberately composed recovery."
+      },
+      "genuine_surprise": {
+        "duration": 1.3,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.04,
+            -0.23,
+            -0.18,
+            -0.07,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.05,
+            0.66,
+            0.48,
+            0.18,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.05,
+            -0.72,
+            -0.52,
+            -0.16,
+            0
+          ],
+          "cape": [
+            0,
+            -0.04,
+            0.15,
+            0.1,
+            0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            -33
+          ],
+          [
+            0,
+            -16
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Compress before a startled rise, open both hands and settle."
+      },
+      "rescue_react": {
+        "duration": 1.55,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            -0.05,
+            0.12,
+            0.08,
+            0.02,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.18,
+            0.56,
+            0.34,
+            0.1,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.18,
+            -0.58,
+            -0.35,
+            -0.12,
+            0
+          ],
+          "head": [
+            0,
+            -0.08,
+            0.07,
+            0.17,
+            0.08,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            -12
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Reach to steady a safely arrived traveller, look down, then give a relieved nod."
+      }
+    },
+    "plum": {
+      "land": {
+        "duration": 1.15,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "wing_left": [
+            0,
+            0.62,
+            -0.24,
+            0.12,
+            0.03,
+            0
+          ],
+          "wing_right": [
+            0,
+            -0.62,
+            0.24,
+            -0.12,
+            -0.03,
+            0
+          ],
+          "foot_left": [
+            0,
+            -0.2,
+            0.15,
+            0.08,
+            0.02,
+            0
+          ],
+          "foot_right": [
+            0,
+            0.2,
+            -0.15,
+            -0.08,
+            -0.02,
+            0
+          ],
+          "head": [
+            0,
+            -0.07,
+            0.1,
+            0.04,
+            0,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            -32
+          ],
+          [
+            0,
+            -24
+          ],
+          [
+            0,
+            -11
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Wings brake the descent, feet extend and the body settles through a small landing bounce."
+      },
+      "scarf": {
+        "duration": 1.8,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "wing_left": [
+            0,
+            0.12,
+            0.65,
+            0.56,
+            0.35,
+            0
+          ],
+          "wing_right": [
+            0,
+            -0.05,
+            -0.12,
+            -0.62,
+            -0.36,
+            0
+          ],
+          "head": [
+            0,
+            0.13,
+            0.06,
+            -0.05,
+            -0.02,
+            0
+          ],
+          "bag": [
+            0,
+            -0.3,
+            -0.18,
+            0.1,
+            0.04,
+            0
+          ],
+          "antenna_left": [
+            0,
+            0.08,
+            0.15,
+            0.03,
+            0,
+            0
+          ],
+          "antenna_right": [
+            0,
+            -0.08,
+            -0.15,
+            -0.03,
+            0,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            -3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Reach toward the satchel and wrap the wings at the neck; scarf cloth awaits its separate art."
+      },
+      "hide": {
+        "duration": 1.1,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "wing_left": [
+            0,
+            0.2,
+            0.9,
+            0.86,
+            0.4,
+            0
+          ],
+          "wing_right": [
+            0,
+            -0.2,
+            -0.9,
+            -0.86,
+            -0.4,
+            0
+          ],
+          "head": [
+            0,
+            0.14,
+            0.2,
+            0.21,
+            0.12,
+            0
+          ],
+          "antenna_left": [
+            0,
+            0.1,
+            0.35,
+            0.32,
+            0.1,
+            0
+          ],
+          "antenna_right": [
+            0,
+            -0.1,
+            -0.35,
+            -0.32,
+            -0.1,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            0.98,
+            0.98
+          ],
+          [
+            0.91,
+            0.92
+          ],
+          [
+            0.91,
+            0.92
+          ],
+          [
+            0.97,
+            0.98
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Fold both wings protectively around the face and cautiously re-emerge."
+      },
+      "sleepy": {
+        "duration": 3.4,
+        "loop": true,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0.03,
+            0.08,
+            0.16,
+            0.2,
+            -0.05,
+            0.03
+          ],
+          "wing_left": [
+            0.08,
+            0.06,
+            0.04,
+            0.02,
+            0.14,
+            0.08
+          ],
+          "wing_right": [
+            -0.08,
+            -0.06,
+            -0.04,
+            -0.02,
+            -0.14,
+            -0.08
+          ],
+          "antenna_left": [
+            0.03,
+            0.07,
+            0.13,
+            0.17,
+            -0.01,
+            0.03
+          ],
+          "antenna_right": [
+            -0.03,
+            -0.07,
+            -0.13,
+            -0.17,
+            0.01,
+            -0.03
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            -3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Slow drooping antennae and head, a tiny startle, then back into the same drowsy posture."
+      },
+      "carry_note": {
+        "duration": 1.65,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "wing_left": [
+            0,
+            0.55,
+            -0.25,
+            0.55,
+            0.2,
+            0
+          ],
+          "wing_right": [
+            0,
+            -0.55,
+            0.25,
+            -0.55,
+            -0.2,
+            0
+          ],
+          "foot_left": [
+            0,
+            -0.24,
+            -0.32,
+            -0.32,
+            -0.14,
+            0
+          ],
+          "foot_right": [
+            0,
+            0.24,
+            0.32,
+            0.32,
+            0.14,
+            0
+          ],
+          "bag": [
+            0,
+            -0.08,
+            0.06,
+            -0.06,
+            0.03,
+            0
+          ],
+          "head": [
+            0,
+            -0.09,
+            -0.04,
+            0.08,
+            0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -8
+          ],
+          [
+            0,
+            -15
+          ],
+          [
+            0,
+            -12
+          ],
+          [
+            0,
+            -5
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lift carefully with both feet together, balance the satchel and offer the carried note; separate note art remains."
+      }
+    },
+    "marfa": {
+      "inspect_rope": {
+        "duration": 1.6,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.1,
+            0.18,
+            0.13,
+            0.05,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.12,
+            -0.48,
+            -0.38,
+            -0.15,
+            0
+          ],
+          "prop": [
+            0,
+            0.15,
+            0.32,
+            -0.1,
+            0.07,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.04,
+            0.2,
+            0.15,
+            0.06,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lift and turn the coil, follow the rope with the eyes, then lower it."
+      },
+      "pull_mooring": {
+        "duration": 1.45,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.06,
+            -0.12,
+            -0.17,
+            -0.04,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.42,
+            -0.18,
+            0.12,
+            0.04,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.32,
+            0.18,
+            -0.12,
+            -0.04,
+            0
+          ],
+          "prop": [
+            0,
+            -0.16,
+            0.05,
+            0.13,
+            0.03,
+            0
+          ],
+          "head": [
+            0,
+            0.05,
+            -0.06,
+            -0.09,
+            -0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            -11,
+            4
+          ],
+          [
+            -16,
+            5
+          ],
+          [
+            -4,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Reach forward, plant weight back and give the mooring a firm two-hand pull."
+      },
+      "arms_crossed": {
+        "duration": 1.25,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            -0.2,
+            -0.64,
+            -0.62,
+            -0.23,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.18,
+            0.58,
+            0.59,
+            0.2,
+            0
+          ],
+          "head": [
+            0,
+            -0.04,
+            -0.07,
+            -0.03,
+            -0.02,
+            0
+          ],
+          "torso": [
+            0,
+            -0.01,
+            -0.025,
+            -0.025,
+            -0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Bring the forearms across the apron, hold a patient appraisal, then release."
+      },
+      "restrained_laugh": {
+        "duration": 1.8,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.06,
+            0.05,
+            -0.04,
+            0.02,
+            0
+          ],
+          "torso": [
+            0,
+            -0.015,
+            0.02,
+            -0.018,
+            0.008,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.08,
+            0.13,
+            0.1,
+            0.05,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.09,
+            -0.15,
+            -0.1,
+            -0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "A contained shoulder laugh, small head dip and a calm settling pause."
+      }
+    },
+    "semyon": {
+      "measure": {
+        "duration": 1.85,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            -0.2,
+            -0.58,
+            -0.6,
+            -0.18,
+            0
+          ],
+          "prop": [
+            0,
+            -0.12,
+            0.32,
+            0.39,
+            0.08,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.2,
+            0.38,
+            0.42,
+            0.12,
+            0
+          ],
+          "head": [
+            0,
+            0.12,
+            0.21,
+            0.13,
+            0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Extend the wooden rule, sight along it, adjust its angle and fold back."
+      },
+      "crouch_inspect": {
+        "duration": 1.65,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.04,
+            0.18,
+            0.2,
+            0.08,
+            0
+          ],
+          "left_leg": [
+            0,
+            0.03,
+            0.13,
+            0.13,
+            0.05,
+            0
+          ],
+          "right_leg": [
+            0,
+            -0.03,
+            -0.13,
+            -0.13,
+            -0.05,
+            0
+          ],
+          "head": [
+            0,
+            0.06,
+            0.15,
+            0.22,
+            0.07,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.1,
+            -0.25,
+            -0.32,
+            -0.1,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            12
+          ],
+          [
+            0,
+            58
+          ],
+          [
+            0,
+            65
+          ],
+          [
+            0,
+            17
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0.99
+          ],
+          [
+            1.03,
+            0.96
+          ],
+          [
+            1.03,
+            0.96
+          ],
+          [
+            1,
+            0.99
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lower into a grounded inspection crouch, look under the mechanism, rise without translating feet."
+      },
+      "glasses_wipe": {
+        "duration": 2.0,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            -0.18,
+            -1.0,
+            -0.84,
+            -0.28,
+            0
+          ],
+          "head": [
+            0,
+            0.05,
+            0.13,
+            0.09,
+            0.03,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.07,
+            0.14,
+            0.1,
+            0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Raise one glove to the spectacle area, make a short wiping arc and lower it; separate glasses are not rigged."
+      },
+      "point_method": {
+        "duration": 0.9,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            0.25,
+            0.82,
+            0.78,
+            0.25,
+            0
+          ],
+          "head": [
+            0,
+            -0.08,
+            -0.12,
+            -0.09,
+            -0.02,
+            0
+          ],
+          "torso": [
+            0,
+            0.02,
+            0.06,
+            0.05,
+            0.02,
+            0
+          ],
+          "prop": [
+            0,
+            0.05,
+            0.1,
+            0.04,
+            0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "A quick clear extended arm toward the exposed method, followed by a firm recovery."
+      },
+      "thoughtful_nod": {
+        "duration": 1.35,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.04,
+            0.17,
+            0.06,
+            0.12,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.08,
+            -0.16,
+            -0.16,
+            -0.07,
+            0
+          ],
+          "torso": [
+            0,
+            0,
+            0.012,
+            0.015,
+            0.005,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Consider first, give one deep and one shallow nod while the rule stays still."
+      }
+    },
+    "nika": {
+      "notebook_draw": {
+        "duration": 2.1,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            -0.18,
+            -0.33,
+            -0.29,
+            -0.34,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.16,
+            0.4,
+            0.32,
+            0.38,
+            0
+          ],
+          "prop": [
+            0,
+            -0.06,
+            -0.15,
+            -0.1,
+            -0.13,
+            0
+          ],
+          "head": [
+            0,
+            0.13,
+            0.24,
+            0.18,
+            0.19,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Hold the notebook at chest level, draw several small strokes and inspect the sketch."
+      },
+      "lean_forward": {
+        "duration": 1.25,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.03,
+            0.11,
+            0.13,
+            0.06,
+            0
+          ],
+          "head": [
+            0,
+            -0.025,
+            0.055,
+            0.075,
+            0.025,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.04,
+            -0.11,
+            -0.12,
+            -0.04,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.05,
+            0.13,
+            0.12,
+            0.05,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            7,
+            0
+          ],
+          [
+            9,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Shift curiosity forward with the notebook held out of the way, then return to balance."
+      },
+      "raised_hand": {
+        "duration": 1.05,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            -0.35,
+            -1.55,
+            -1.47,
+            -0.55,
+            0
+          ],
+          "head": [
+            0,
+            -0.04,
+            -0.12,
+            -0.09,
+            -0.02,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.03,
+            -0.08,
+            -0.06,
+            -0.02,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -5
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "An eager high hand above the head, held long enough to read, then lowered."
+      },
+      "small_hop": {
+        "duration": 0.8,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_leg": [
+            0,
+            -0.07,
+            0.12,
+            0.06,
+            -0.03,
+            0
+          ],
+          "right_leg": [
+            0,
+            0.07,
+            -0.12,
+            -0.06,
+            0.03,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.06,
+            0.28,
+            0.2,
+            0.06,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.06,
+            -0.26,
+            -0.18,
+            -0.05,
+            0
+          ],
+          "head": [
+            0,
+            0.04,
+            -0.04,
+            -0.02,
+            0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            -36
+          ],
+          [
+            0,
+            -22
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1.03,
+            0.97
+          ],
+          [
+            0.99,
+            1.02
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1.02,
+            0.98
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Small anticipation, joyful hop and soft landing; feet do not leave their logical slot."
+      },
+      "protect_notes": {
+        "duration": 1.2,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            0.1,
+            0.58,
+            0.61,
+            0.2,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.15,
+            -0.63,
+            -0.6,
+            -0.21,
+            0
+          ],
+          "prop": [
+            0,
+            0.02,
+            0.2,
+            0.17,
+            0.05,
+            0
+          ],
+          "torso": [
+            0,
+            -0.03,
+            -0.08,
+            -0.06,
+            -0.02,
+            0
+          ],
+          "head": [
+            0,
+            -0.08,
+            -0.17,
+            -0.1,
+            -0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Draw the notebook safely into the chest and turn the shoulders away from the disturbance."
+      }
+    },
+    "lada": {
+      "taste": {
+        "duration": 1.8,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            -0.18,
+            -0.86,
+            -0.83,
+            -0.25,
+            0
+          ],
+          "prop": [
+            0,
+            0.08,
+            0.28,
+            0.2,
+            0.06,
+            0
+          ],
+          "head": [
+            0,
+            0.04,
+            0.1,
+            -0.06,
+            -0.025,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.04,
+            0.12,
+            0.16,
+            0.05,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lift the copper spoon, pause to taste, consider and lower it."
+      },
+      "kettle_check": {
+        "duration": 1.5,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.02,
+            0.09,
+            0.12,
+            0.03,
+            0
+          ],
+          "head": [
+            0,
+            0.08,
+            0.2,
+            0.14,
+            0.04,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.12,
+            -0.4,
+            -0.36,
+            -0.1,
+            0
+          ],
+          "prop": [
+            0,
+            0.12,
+            0.3,
+            0.1,
+            0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lean over the kettle area and test with the spoon, keeping a cautious distance."
+      },
+      "apron_shake": {
+        "duration": 1.25,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            -0.15,
+            -0.32,
+            -0.18,
+            -0.27,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.15,
+            0.32,
+            0.18,
+            0.27,
+            0
+          ],
+          "torso": [
+            0,
+            -0.015,
+            0.035,
+            -0.025,
+            0.015,
+            0
+          ],
+          "cape": [
+            0,
+            -0.08,
+            0.14,
+            -0.12,
+            0.05,
+            0
+          ],
+          "accessory": [
+            0,
+            0.05,
+            -0.07,
+            0.06,
+            -0.025,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            -3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lift the apron sides and shake out a little flour in two broad beats."
+      },
+      "recipe_flip": {
+        "duration": 1.55,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            0.15,
+            0.34,
+            0.38,
+            0.14,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.18,
+            -0.45,
+            -0.2,
+            -0.08,
+            0
+          ],
+          "prop": [
+            0,
+            -0.08,
+            -0.28,
+            0.21,
+            0.04,
+            0
+          ],
+          "head": [
+            0,
+            0.1,
+            0.16,
+            0.08,
+            0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Hold an imagined recipe at chest level and turn a page; the missing page prop remains an art limitation."
+      },
+      "delighted_plan": {
+        "duration": 1.45,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.04,
+            -0.16,
+            -0.07,
+            0.06,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.1,
+            0.65,
+            0.48,
+            0.17,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.1,
+            -0.62,
+            -0.42,
+            -0.13,
+            0
+          ],
+          "cape": [
+            0,
+            0.03,
+            -0.05,
+            0.03,
+            0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            -9
+          ],
+          [
+            0,
+            -5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "An idea arrives: lift the head, open both hands generously, then nod at the new plan."
+      }
+    },
+    "roza": {
+      "inspect": {
+        "duration": 1.7,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.06,
+            0.13,
+            -0.035,
+            0.055,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.06,
+            0.12,
+            0.12,
+            0.04,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.04,
+            -0.12,
+            -0.08,
+            -0.03,
+            0
+          ],
+          "torso": [
+            0,
+            0.01,
+            0.035,
+            0.025,
+            0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Inspect from one angle, pause, then compare a second angle while the folder stays upright."
+      },
+      "page_turn": {
+        "duration": 1.9,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            -0.16,
+            -0.49,
+            -0.24,
+            -0.08,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.09,
+            0.19,
+            0.18,
+            0.06,
+            0
+          ],
+          "prop": [
+            0,
+            0.03,
+            0.1,
+            0.07,
+            0.02,
+            0
+          ],
+          "accessory": [
+            0,
+            0.08,
+            0.19,
+            -0.08,
+            0.02,
+            0
+          ],
+          "head": [
+            0,
+            0.11,
+            0.18,
+            0.12,
+            0.05,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Steady the folder and move the free hand across it to turn one page."
+      },
+      "stamp_check": {
+        "duration": 1.15,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "right_arm": [
+            0,
+            -0.24,
+            -0.68,
+            0.18,
+            0.04,
+            0
+          ],
+          "accessory": [
+            0,
+            -0.08,
+            -0.18,
+            0.14,
+            0.03,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.08,
+            0.2,
+            0.23,
+            0.07,
+            0
+          ],
+          "head": [
+            0,
+            0.07,
+            0.14,
+            0.18,
+            0.05,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Inspect the administrative stamp, lift, press once against the folder and recover; no game-law callback."
+      },
+      "eyebrow_raise": {
+        "duration": 1.1,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.03,
+            -0.08,
+            -0.065,
+            -0.02,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.025,
+            -0.1,
+            -0.07,
+            -0.02,
+            0
+          ],
+          "torso": [
+            0,
+            0,
+            -0.01,
+            -0.01,
+            0,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Reserved questioning head tilt with a long appraisal hold; independent eyebrow artwork remains missing."
+      },
+      "approval_smile": {
+        "duration": 1.65,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.02,
+            0.09,
+            0.045,
+            0.065,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.03,
+            -0.08,
+            -0.06,
+            -0.02,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.025,
+            0.07,
+            0.05,
+            0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Tiny approving nod and relaxed arms; the fixed painted mouth does not become a facial smile."
+      }
+    },
+    "hugo": {
+      "grand_entrance": {
+        "duration": 2.0,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "left_arm": [
+            0,
+            -0.06,
+            0.92,
+            0.82,
+            0.25,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.05,
+            -0.91,
+            -0.83,
+            -0.26,
+            0
+          ],
+          "cape": [
+            0,
+            -0.13,
+            0.22,
+            0.1,
+            -0.03,
+            0
+          ],
+          "accessory": [
+            0,
+            -0.22,
+            0.3,
+            0.13,
+            -0.05,
+            0
+          ],
+          "head": [
+            0,
+            -0.04,
+            -0.18,
+            -0.09,
+            -0.04,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            -8,
+            4
+          ],
+          [
+            9,
+            -12
+          ],
+          [
+            5,
+            -6
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Gather the cape, open a grand two-arm presentation, let the hat ribbon overshoot and settle."
+      },
+      "premature_bow": {
+        "duration": 1.5,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.06,
+            0.3,
+            0.29,
+            -0.045,
+            0
+          ],
+          "head": [
+            0,
+            0.08,
+            0.25,
+            0.13,
+            -0.08,
+            0
+          ],
+          "left_arm": [
+            0,
+            -0.12,
+            -0.42,
+            -0.38,
+            0.1,
+            0
+          ],
+          "right_arm": [
+            0,
+            0.1,
+            0.33,
+            0.3,
+            -0.08,
+            0
+          ],
+          "accessory": [
+            0,
+            0.13,
+            0.3,
+            -0.1,
+            -0.05,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            20
+          ],
+          [
+            0,
+            19
+          ],
+          [
+            0,
+            -4
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Bow too confidently, hold, then lift the head suddenly to check whether applause has started."
+      },
+      "ribbon_tangle": {
+        "duration": 1.75,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "accessory": [
+            0,
+            0.3,
+            -0.6,
+            0.42,
+            -0.18,
+            0
+          ],
+          "head": [
+            0,
+            -0.12,
+            0.16,
+            -0.07,
+            0.04,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.25,
+            -0.95,
+            -0.6,
+            -0.14,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.12,
+            0.38,
+            0.28,
+            0.08,
+            0
+          ],
+          "cape": [
+            0,
+            0.05,
+            -0.1,
+            0.08,
+            -0.025,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "The hat ribbon swings across his head; he catches at it, disentangles and regains composure."
+      },
+      "honest_help": {
+        "duration": 1.6,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.035,
+            0.12,
+            0.09,
+            0.03,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.12,
+            0.42,
+            0.37,
+            0.11,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.12,
+            -0.4,
+            -0.36,
+            -0.1,
+            0
+          ],
+          "head": [
+            0,
+            0.07,
+            0.12,
+            0.06,
+            0.025,
+            0
+          ],
+          "cape": [
+            0,
+            0.02,
+            0.05,
+            0.03,
+            0.01,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Step out of presentation mode and extend both hands low to support someone else’s work."
+      },
+      "shared_bow": {
+        "duration": 2.05,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            0.025,
+            0.13,
+            0.145,
+            0.06,
+            0
+          ],
+          "head": [
+            0,
+            0.05,
+            0.15,
+            0.17,
+            0.06,
+            0
+          ],
+          "left_arm": [
+            0,
+            0.2,
+            0.45,
+            0.4,
+            0.15,
+            0
+          ],
+          "right_arm": [
+            0,
+            -0.1,
+            -0.2,
+            -0.18,
+            -0.06,
+            0
+          ],
+          "accessory": [
+            0,
+            0.045,
+            0.1,
+            0.075,
+            0.025,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            11
+          ],
+          [
+            0,
+            13
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Invite a partner with one open arm and bow together at a gentler, respectful pace."
+      }
+    },
+    "caramelka": {
+      "walk": {
+        "duration": 1.0,
+        "loop": true,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "front_left_leg": [
+            -0.19,
+            0.08,
+            0.23,
+            0.02,
+            -0.18,
+            -0.19
+          ],
+          "hind_right_leg": [
+            -0.19,
+            0.08,
+            0.23,
+            0.02,
+            -0.18,
+            -0.19
+          ],
+          "front_right_leg": [
+            0.19,
+            -0.08,
+            -0.23,
+            -0.02,
+            0.18,
+            0.19
+          ],
+          "hind_left_leg": [
+            0.19,
+            -0.08,
+            -0.23,
+            -0.02,
+            0.18,
+            0.19
+          ],
+          "head": [
+            0.015,
+            -0.025,
+            0.02,
+            -0.02,
+            0.01,
+            0.015
+          ],
+          "tail": [
+            0.03,
+            0.1,
+            0.02,
+            -0.08,
+            0.01,
+            0.03
+          ],
+          "collar_bell": [
+            0.02,
+            -0.12,
+            0.14,
+            -0.1,
+            0.04,
+            0.02
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -8
+          ],
+          [
+            0,
+            -2
+          ],
+          [
+            0,
+            -8
+          ],
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "A four-legged diagonal walk with a grounded rise/fall and delayed bell swing."
+      },
+      "idle_chew": {
+        "duration": 2.35,
+        "loop": true,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0.01,
+            0.045,
+            -0.015,
+            0.05,
+            -0.01,
+            0.01
+          ],
+          "collar_bell": [
+            0,
+            0.025,
+            -0.015,
+            0.025,
+            -0.01,
+            0
+          ],
+          "tail": [
+            0,
+            0.025,
+            0.06,
+            0.025,
+            -0.025,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1.002,
+            0.999
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1.002,
+            0.999
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Small chewing head beats and a relaxed tail swish; no independently deforming jaw is present."
+      },
+      "sniff": {
+        "duration": 1.35,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.04,
+            0.18,
+            0.12,
+            0.2,
+            0
+          ],
+          "torso": [
+            0,
+            0.005,
+            0.025,
+            0.02,
+            0.025,
+            0
+          ],
+          "tail": [
+            0,
+            0.04,
+            0.1,
+            0.08,
+            0.04,
+            0
+          ],
+          "collar_bell": [
+            0,
+            0.02,
+            0.06,
+            -0.02,
+            0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Extend the muzzle, take two small inquisitive sniffs, then pull back."
+      },
+      "nibble_attempt": {
+        "duration": 1.65,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            0.1,
+            0.31,
+            0.25,
+            0.32,
+            0
+          ],
+          "torso": [
+            0,
+            0.02,
+            0.05,
+            0.045,
+            0.05,
+            0
+          ],
+          "collar_bell": [
+            0,
+            0.09,
+            0.16,
+            0.04,
+            0.12,
+            0
+          ],
+          "tail": [
+            0,
+            0.06,
+            0.13,
+            0.08,
+            0.02,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Reach to the paper, try two tiny nibbles, then withdraw; never modifies paper state."
+      },
+      "surprised_stop": {
+        "duration": 0.85,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.05,
+            -0.19,
+            -0.14,
+            -0.04,
+            0
+          ],
+          "front_left_leg": [
+            0,
+            -0.08,
+            -0.16,
+            -0.1,
+            -0.03,
+            0
+          ],
+          "front_right_leg": [
+            0,
+            -0.07,
+            -0.15,
+            -0.1,
+            -0.025,
+            0
+          ],
+          "hind_left_leg": [
+            0,
+            0.05,
+            0.1,
+            0.07,
+            0.02,
+            0
+          ],
+          "hind_right_leg": [
+            0,
+            0.04,
+            0.09,
+            0.06,
+            0.015,
+            0
+          ],
+          "tail": [
+            0,
+            0.14,
+            0.32,
+            0.22,
+            0.07,
+            0
+          ],
+          "collar_bell": [
+            0,
+            -0.1,
+            0.18,
+            -0.12,
+            0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            -9,
+            -6
+          ],
+          [
+            -7,
+            -3
+          ],
+          [
+            -2,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Plant the front hooves, lift the muzzle abruptly and let the bell finish its swing."
+      },
+      "cargo_balance": {
+        "duration": 1.45,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "torso": [
+            0,
+            -0.035,
+            0.05,
+            -0.03,
+            0.015,
+            0
+          ],
+          "head": [
+            0,
+            0.06,
+            -0.08,
+            0.05,
+            -0.025,
+            0
+          ],
+          "front_left_leg": [
+            0,
+            0.04,
+            -0.06,
+            0.035,
+            -0.01,
+            0
+          ],
+          "front_right_leg": [
+            0,
+            -0.04,
+            0.06,
+            -0.035,
+            0.01,
+            0
+          ],
+          "hind_left_leg": [
+            0,
+            -0.03,
+            0.05,
+            -0.025,
+            0.01,
+            0
+          ],
+          "hind_right_leg": [
+            0,
+            0.03,
+            -0.05,
+            0.025,
+            -0.01,
+            0
+          ],
+          "tail": [
+            0,
+            0.1,
+            -0.12,
+            0.07,
+            -0.03,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            -5,
+            0
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            -4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Counterbalance a rocking load with four planted hooves and an opposing head motion."
+      },
+      "safe_rescue": {
+        "duration": 1.7,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.09,
+            -0.13,
+            0.1,
+            0.04,
+            0
+          ],
+          "front_left_leg": [
+            0,
+            -0.05,
+            0.2,
+            0.03,
+            -0.02,
+            0
+          ],
+          "front_right_leg": [
+            0,
+            -0.04,
+            0.18,
+            0.03,
+            -0.02,
+            0
+          ],
+          "hind_left_leg": [
+            0,
+            0.06,
+            -0.15,
+            -0.03,
+            0.02,
+            0
+          ],
+          "hind_right_leg": [
+            0,
+            0.05,
+            -0.14,
+            -0.03,
+            0.02,
+            0
+          ],
+          "tail": [
+            0,
+            0.14,
+            0.22,
+            0.12,
+            0.05,
+            0
+          ],
+          "collar_bell": [
+            0,
+            -0.1,
+            0.16,
+            -0.08,
+            0.025,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            -24
+          ],
+          [
+            0,
+            -7
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "A relieved little bound only after safe arrival, with four-foot recovery and bell follow-through."
+      },
+      "satisfied": {
+        "duration": 1.9,
+        "loop": false,
+        "times": [
+          0,
+          0.16,
+          0.36,
+          0.56,
+          0.78,
+          1
+        ],
+        "rotations": {
+          "head": [
+            0,
+            -0.05,
+            -0.11,
+            0.06,
+            0.025,
+            0
+          ],
+          "tail": [
+            0,
+            0.16,
+            -0.12,
+            0.13,
+            -0.03,
+            0
+          ],
+          "collar_bell": [
+            0,
+            -0.04,
+            0.06,
+            -0.02,
+            0.01,
+            0
+          ],
+          "torso": [
+            0,
+            -0.005,
+            -0.012,
+            0.008,
+            0.003,
+            0
+          ]
+        },
+        "positions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "scales": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "root_rotation": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "description": "Lift the chin proudly, swish the tail, then give a contented final nod."
+      }
+    }
+  },
+  "cues": {
+    "felix": {
+      "interact": [
+        "place_prop",
+        "distract"
+      ],
+      "suspect": [
+        "concealed_panic"
+      ],
+      "reveal": [
+        "genuine_surprise"
+      ],
+      "success": [
+        "rescue_react"
+      ],
+      "enter": [
+        "show_begin"
+      ]
+    },
+    "plum": {
+      "enter": [
+        "land"
+      ],
+      "accept": [
+        "scarf"
+      ],
+      "suspect": [
+        "hide"
+      ],
+      "idle": [
+        "sleepy",
+        "hover"
+      ],
+      "interact": [
+        "carry_note"
+      ],
+      "reveal": [
+        "shiver"
+      ],
+      "success": [
+        "cheer"
+      ],
+      "move": [
+        "fly"
+      ]
+    },
+    "marfa": {
+      "observe": [
+        "inspect_rope"
+      ],
+      "interact": [
+        "pull_mooring"
+      ],
+      "suspect": [
+        "arms_crossed"
+      ],
+      "accept": [
+        "restrained_laugh"
+      ],
+      "success": [
+        "restrained_laugh"
+      ]
+    },
+    "semyon": {
+      "observe": [
+        "measure"
+      ],
+      "interact": [
+        "crouch_inspect"
+      ],
+      "idle": [
+        "glasses_wipe",
+        "idle"
+      ],
+      "reveal": [
+        "point_method"
+      ],
+      "suspect": [
+        "point_method"
+      ],
+      "accept": [
+        "thoughtful_nod"
+      ]
+    },
+    "nika": {
+      "idle": [
+        "notebook_draw",
+        "idle"
+      ],
+      "observe": [
+        "lean_forward"
+      ],
+      "accept": [
+        "raised_hand"
+      ],
+      "success": [
+        "small_hop"
+      ],
+      "reveal": [
+        "protect_notes"
+      ],
+      "interact": [
+        "notebook_draw"
+      ]
+    },
+    "lada": {
+      "idle": [
+        "taste",
+        "idle"
+      ],
+      "observe": [
+        "kettle_check"
+      ],
+      "suspect": [
+        "apron_shake"
+      ],
+      "interact": [
+        "recipe_flip"
+      ],
+      "accept": [
+        "delighted_plan"
+      ],
+      "success": [
+        "delighted_plan"
+      ]
+    },
+    "roza": {
+      "observe": [
+        "inspect"
+      ],
+      "idle": [
+        "page_turn",
+        "idle"
+      ],
+      "interact": [
+        "stamp_check"
+      ],
+      "suspect": [
+        "eyebrow_raise"
+      ],
+      "accept": [
+        "approval_smile"
+      ],
+      "success": [
+        "approval_smile"
+      ]
+    },
+    "hugo": {
+      "enter": [
+        "grand_entrance"
+      ],
+      "accept": [
+        "premature_bow"
+      ],
+      "reveal": [
+        "ribbon_tangle"
+      ],
+      "suspect": [
+        "ribbon_tangle"
+      ],
+      "interact": [
+        "honest_help"
+      ],
+      "success": [
+        "shared_bow"
+      ]
+    },
+    "caramelka": {
+      "move": [
+        "walk"
+      ],
+      "idle": [
+        "idle_chew",
+        "idle"
+      ],
+      "observe": [
+        "sniff"
+      ],
+      "interact": [
+        "nibble_attempt"
+      ],
+      "reveal": [
+        "surprised_stop"
+      ],
+      "suspect": [
+        "cargo_balance"
+      ],
+      "success": [
+        "safe_rescue",
+        "satisfied"
+      ],
+      "accept": [
+        "satisfied"
+      ]
+    }
+  }
+}

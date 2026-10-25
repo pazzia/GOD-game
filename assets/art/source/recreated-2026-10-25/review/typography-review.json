@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-25",
+  "body_font_reference_px": 48,
+  "body_font_sp_at360dp": 16,
+  "disabled_label_contrast": 5.66,
+  "disabled_text": "#494552",
+  "disabled_surface": "#d1c9b9",
+  "changes": [
+    "Single body size shared by labels, buttons and layout measurement",
+    "Subtitles measured to fit content",
+    "Readable disabled CTA and level-number text",
+    "Album help measured before grid, completion star separated from number",
+    "Settings toggle labels wrap and accessibility rows grow",
+    "Inventory wraps from original label after texture icon is installed"
+  ],
+  "checks": {
+    "layout": {
+      "checks": 5444,
+      "layouts": 776,
+      "failures": 0,
+      "log": "layout-current.log"
+    },
+    "pointer_ui": {
+      "checks": 31,
+      "pointer_events": 44,
+      "failures": 0,
+      "log": "ui-current.log"
+    }
+  },
+  "native_visual_review": "Accepted after review of17initial native captures and6revision captures. Map140overflow and Semyon shoulder defects fixed. L06 staging remains architect-owned.",
+  "source": "presentation/game.gd"
+}

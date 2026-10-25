@@ -4,6 +4,15 @@ from concurrent.futures import ThreadPoolExecutor
 import json,subprocess,hashlib,wave,math,sys
 import numpy as np
 R=Path(__file__).resolve().parents[1]
+def parse_loudnorm_output(stderr):
+ """Read a loudnorm JSON object without consuming FFmpeg's trailing log lines."""
+ decoder=json.JSONDecoder()
+ for index in reversed([i for i,char in enumerate(stderr) if char=='{']):
+  try:stats,_=decoder.raw_decode(stderr[index:])
+  except json.JSONDecodeError:continue
+  if isinstance(stats,dict) and {'input_i','input_tp'}<=stats.keys():return stats
+ raise ValueError('FFmpeg did not emit a complete loudnorm measurement')
+
 def main():
  catalog=json.loads((R/'data/audio_catalog.json').read_text());rows=catalog['files'];errors=[]
  plan=json.loads((R/'data/authoring/audio_plan.json').read_text());byid={r['id']:r for r in rows}
@@ -29,9 +38,15 @@ def main():
   result=dict(id=row['id'],decoded_samples=len(a),expected_samples=row['sample_count'],peak_linear=float(np.max(np.abs(a))),loop_seam_sample_step=seam)
   if row['bus']=='Music':
    proc=subprocess.run(['ffmpeg','-hide_banner','-nostats','-i',str(p),'-af','loudnorm=I=-20:TP=-1.5:LRA=9:print_format=json','-f','null','-'],capture_output=True,text=True,check=True)
-   text=proc.stderr;start=text.rfind('{');stats=json.loads(text[start:]);result.update(lufs_i=float(stats['input_i']),true_peak_db=float(stats['input_tp']))
+   stats=parse_loudnorm_output(proc.stderr);result.update(lufs_i=float(stats['input_i']),true_peak_db=float(stats['input_tp']))
   return result
- with ThreadPoolExecutor(max_workers=3)as pool:measurements=list(pool.map(measure,long))
+ def measure_checked(row):
+  try:return measure(row)
+  except (OSError,ValueError,subprocess.CalledProcessError) as exc:
+   return {'id':row['id'],'error':str(exc)}
+ with ThreadPoolExecutor(max_workers=3)as pool:results=list(pool.map(measure_checked,long))
+ measurements=[row for row in results if 'error' not in row]
+ errors.extend('Measurement '+row['id']+': '+row['error'] for row in results if 'error' in row)
  for row in measurements:
   if abs(row['decoded_samples']-row['expected_samples'])>1:errors.append('Decoded length '+row['id'])
   if row.get('true_peak_db',-99)>-1:errors.append('True peak above -1dBTP '+row['id'])

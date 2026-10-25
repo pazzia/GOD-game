@@ -41,6 +41,7 @@ var _mix_fade_elapsed: float=STEM_FADE_SECONDS
 var _duck_db: float=0.0
 var _track_metadata: Dictionary={}
 var _closed: bool=false
+var _retiring_playbacks: Array[WeakRef]=[]
 func configure(values: Dictionary) -> void:
 	if _closed:last_error="AUDIO_SHUTDOWN";return
 	settings=values.duplicate(true)
@@ -118,7 +119,7 @@ func _start_music(request: Dictionary) -> void:
 	var has_old: bool=_music_players[old_index].stream!=null
 	if has_old:_incoming_index=1-old_index
 	var incoming: AudioStreamPlayer=_music_players[_incoming_index]
-	incoming.stop();incoming.stream=request.stream;incoming.volume_db=-80
+	_stop_player(incoming);incoming.stream=request.stream;incoming.volume_db=-80
 	music=incoming
 	_sync=request.sync;_chapter_theme=request.chapter;_music_name=request.name
 	_tempo_bpm=request.tempo;_beats_per_bar=request.meter
@@ -136,7 +137,7 @@ func _start_music(request: Dictionary) -> void:
 func play_ambience(name: String="river_ambience") -> void:
 	if _closed:return
 	var path: String=_path(name)
-	if ResourceLoader.exists(path):ambience.stream=_loop_stream(path);ambience.play();ambience.stream_paused=_paused
+	if ResourceLoader.exists(path):_stop_player(ambience);ambience.stream=_loop_stream(path);ambience.play();ambience.stream_paused=_paused
 func play(name: String,category: String="SFX",pitch: float=1) -> void:
 	if _closed:return
 	var path: String=_path(name)
@@ -145,7 +146,7 @@ func play(name: String,category: String="SFX",pitch: float=1) -> void:
 	var leaf: String=entry.get("bus",category)
 	if leaf not in CATEGORIES:last_error="INVALID_LEAF_BUS";return
 	var player: AudioStreamPlayer=_pool[_next];_next=(_next+1)%_pool.size()
-	player.stop();player.bus=leaf;player.stream=load(path);player.pitch_scale=clampf(pitch,.8,1.2);player.play();player.stream_paused=_paused
+	_stop_player(player);player.bus=leaf;player.stream=load(path);player.pitch_scale=clampf(pitch,.8,1.2);player.play();player.stream_paused=_paused
 	if player.bus=="Voice" and _audible("Voice"):duck_music(.65,-4.0)
 func set_paused(value: bool) -> void:
 	if _closed:return
@@ -154,17 +155,38 @@ func set_paused(value: bool) -> void:
 	for player in _music_players:player.stream_paused=value
 	for layer in _ambience_layers:layer.stream_paused=value
 	for player in _pool:player.stream_paused=value
+func _stop_player(player: AudioStreamPlayer) -> void:
+	# Godot retires stopped playback on its mixer thread, then releases it during
+	# AudioServer.update(). A cleared player.stream is not evidence of that release.
+	if player.has_stream_playback():_retiring_playbacks.append(weakref(player.get_stream_playback()))
+	player.stop()
+func _prune_retiring_playbacks() -> void:
+	for i in range(_retiring_playbacks.size()-1,-1,-1):
+		if _retiring_playbacks[i].get_ref()==null:_retiring_playbacks.remove_at(i)
+func shutdown_complete() -> bool:
+	_prune_retiring_playbacks()
+	return _closed and _retiring_playbacks.is_empty()
+func shutdown_and_wait(timeout_seconds: float=2.0) -> bool:
+	shutdown()
+	var deadline: int=Time.get_ticks_msec()+int(maxf(0,timeout_seconds)*1000)
+	while not shutdown_complete():
+		if not is_inside_tree() or Time.get_ticks_msec()>=deadline:
+			last_error="AUDIO_SHUTDOWN_TIMEOUT"
+			return false
+		await get_tree().process_frame
+	if last_error=="AUDIO_SHUTDOWN_TIMEOUT":last_error=""
+	return true
 func shutdown() -> void:
 	_closed=true;set_process(false)
 	_sync=null
 	for player in _music_players:
-		if is_instance_valid(player):player.stream_paused=false;player.stop();player.stream=null
+		if is_instance_valid(player):player.stream_paused=false;_stop_player(player);player.stream=null
 	_queued_music.clear();_music_players.clear()
 	for layer in _ambience_layers:
-		if is_instance_valid(layer):layer.stream_paused=false;layer.stop();layer.stream=null
+		if is_instance_valid(layer):layer.stream_paused=false;_stop_player(layer);layer.stream=null
 	_ambience_layers.clear()
 	for player in _pool:
-		if is_instance_valid(player):player.stream_paused=false;player.stop();player.stream=null
+		if is_instance_valid(player):player.stream_paused=false;_stop_player(player);player.stream=null
 	_pool.clear()
 func _exit_tree() -> void:shutdown()
 
@@ -201,6 +223,7 @@ func duck_music(seconds: float,decibels: float=-9.0) -> void:
 	_duck_remaining=maxf(_duck_remaining,seconds);_duck_level=minf(_duck_level,decibels)
 func _process(delta: float) -> void:
 	if _closed or not is_processing():return
+	_prune_retiring_playbacks()
 	_transport_seconds+=maxf(0,delta)
 	if _sync!=null:
 		if _next_mix_at>=0 and _transport_seconds>=_next_mix_at:
@@ -217,7 +240,7 @@ func _process(delta: float) -> void:
 		_music_weights[_incoming_index]=sin(alpha*PI*.5)
 		if _outgoing_index>=0:_music_weights[_outgoing_index]=_outgoing_start*cos(alpha*PI*.5)
 		if _chapter_fade_elapsed>=CHAPTER_FADE_SECONDS and _outgoing_index>=0:
-			_music_players[_outgoing_index].stop();_music_players[_outgoing_index].stream=null
+			_stop_player(_music_players[_outgoing_index]);_music_players[_outgoing_index].stream=null
 			_music_weights[_outgoing_index]=0;_outgoing_index=-1
 	if _duck_remaining>0:_duck_remaining=maxf(0,_duck_remaining-delta)
 	_duck_db=move_toward(_duck_db,_duck_level if _duck_remaining>0 else 0.0,delta*18)
@@ -244,7 +267,7 @@ func _set_ambience(scene_id: String) -> void:
 	_ambient_names=names.duplicate()
 	for i in range(_ambience_layers.size()):
 		var path: String=_path(names[i])
-		_ambience_layers[i].stop()
+		_stop_player(_ambience_layers[i])
 		if ResourceLoader.exists(path):_ambience_layers[i].stream=_loop_stream(path);_ambience_layers[i].volume_db=-6.0 if i==1 else -2.0;_ambience_layers[i].play();_ambience_layers[i].stream_paused=_paused
 
 func _audible(category: String) -> bool:

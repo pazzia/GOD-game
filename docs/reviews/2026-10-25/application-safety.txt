@@ -1,0 +1,104 @@
+GOD / Almost God 0.3.0-preview — ограниченное ревью безопасности приложения
+Дата UTC: 2026-10-25T09:33:35.912891+00:00
+Область: статическое чтение текущего runtime, export preset и путей сохранения;
+один отдельный native regression. Это не pentest, не аудит Godot/Android SDK,
+не исследование сетевого трафика на телефоне и не аппаратная приёмка.
+
+Результат: в проверенной области не обнаружены блокирующие утечки данных или
+ненужные запросы опасных разрешений. Итоговый APK проверен отдельно ниже.
+
+1. Сеть и данные. Поиск rg в core/, presentation/, services/, main.tscn,
+project.godot и export_presets.cfg не обнаружил HTTPRequest/HTTPClient,
+WebSocket/WebRTC/ENet/Multiplayer, сетевых адресов runtime, Analytics/Telemetry,
+Firebase/Sentry/AdMob/Billing или вызовов внешнего процесса/браузера. В проекте
+нет addons/ и android/ с пользовательскими SDK. Не найдены поля/сбор аккаунта,
+email, телефона, координат, контактов, рекламного ID, камеры/микрофона/clipboard.
+Это вывод по исходникам приложения, не доказательство отсутствия любой сетевой
+возможности внутри универсального бинарника движка.
+
+2. Разрешения. export_presets.cfg: permissions/internet=false,
+permissions/vibrate=true, user_data_backup/allow=false. Вибрация используется
+Input.vibrate_handheld и отключается настройкой haptics; опасного runtime prompt
+для неё не требуется. minSDK29 обеспечивается tools/build_android.py через
+проверяемую временную копию export template; пустое gradle_build/min_sdk само
+по себе этого не доказывает. Итоговые package/version/minSDK/signature должны
+подтверждаться разбором экспортированного APK. Результат итоговой проверки APK приведён ниже.
+
+3. Локальное хранение. SaveService пишет только JSON в user://. Имя слота
+допускает 1–64 символа alnum/_/-, исключая traversal. Конверт schema2, конечная
+монотонная revision, SHA-256 целостности, верификация временного файла, rename
+и последняя валидная backup снижают риск порчи. Это обычный checksum без
+секретного ключа; он не является защитой покупок или от намеренного изменения
+локального сейва. Хранятся настройки/прогресс/checkpoint, не личный профиль.
+Новый preview package отделён от старой установки и её пользовательских файлов.
+
+4. Ключи/пакетирование. Файлы .env/.keystore/.jks/.key/.p12/.pfx по именам и
+tracked private signing keys в repo не обнаружены (содержимое секретов не
+просматривалось). Preview key хранится вне repo; ZIP упаковщик исключает ключи,
+локальные env, build/cache и symlink файлы. .gitignore больше не разрешает
+исключение tools/signing/debug.keystore. old/ сохранён и исключён из runtime.
+
+5. Остаточный риск сохранений: presentation/game.gd:_save_progress и ряд
+settings callbacks не обрабатывают false от saver.write_slot. При полном диске
+последняя валидная копия защищена сервисом, но игрок не получает сообщения об
+отказе новой записи. Перед магазинным выпуском нужен явный UI failure/retry.
+Runtime в рамках этого ревью не менялся.
+
+Независимая выполненная проверка:
+Godot 4.7.2 --headless --script tests/test_save_recovery_edges.gd
+SAVE RECOVERY EDGES: 11 checks; 0 failures; exit 0; ошибок движка не было.
+Изолированные пользовательские данные: GOD-production/architecture-review/safety-data.
+
+Контрольные суммы просмотренных файлов (могут измениться при дальнейших fixes):
+b428f1d3960aba92904f04afe396e8dc17a22cf253d1be1fda9a08a6b505c8bf  project.godot
+6de4dcab481062022a6db51a4740ce94b04d0e7c18a81b9f10bb5a3a2e04cc74  export_presets.cfg
+d54668933f01a0a64cb0e1017dc8f22586def58dc3f8a7dd9dcec44b156800d7  services/save_service.gd
+3fbc0b1757162adf3b817a0772a514e9660a36cff4f864d3cf3754d390299783  presentation/game.gd
+5cd6a7eef4d0f740352b54472768676fad5f30adf82d0ef1e6a05939c57ea105  tools/build_android.py
+d3d38500db79112159b4e9a22ed4ee0fe7d942f7ed38eecfcb41ad346fe4d619  tools/package_project.py
+
+
+ИТОГОВАЯ НЕЗАВИСИМАЯ СВЕРКА APK
+Дата UTC: 2026-10-25T10:08:04.668094+00:00
+Файл: /workspace/GOD-game/build/AlmostGod-0.3.0-preview.apk
+Размер: 113731908 bytes
+SHA-256: 243b95e7210f88f3f18c05b7bed7af21033d8f878d3d30d13c561b4fe9b58e01
+Package: com.almostgod.game.preview; versionName: 0.3.0-preview; versionCode: 4.
+Android minSDK29 / targetSDK36 подтверждены чтением binary manifest из APK.
+Godot 4.7.2.stable, ARM64; обе native libraries имеют ELF LOAD alignment16384.
+Они сжаты и extractNativeLibs=true: inspection подтвердил 16KB installation compatibility.
+
+Полный список uses-permission: android.permission.VIBRATE (ровно одно).
+INTERNET, READ/WRITE_EXTERNAL_STORAGE, камера, микрофон, контакты, геолокация,
+уведомления и реклама разрешениями APK не запрашиваются.
+allowBackup=false, requestLegacyExternalStorage=false. debuggable=true и
+profileable/shell=true соответствуют debug preview; это не магазинная сборка.
+Launcher alias exported=true необходим запуску; основная activity, ProcessPhoenix
+и оба content provider exported=false. AndroidX ProfileInstallReceiver exported=true
+ограничен android.permission.DUMP; это permission компонента, не запрос разрешения
+приложением и не telemetry endpoint.
+
+Наблюдение совместимости: итоговый exporter присвоил двум закрытым provider
+(FileProvider и AndroidX Startup) одинаковую authority
+com.almostgod.game.preview.fileprovider. В официальном входном template authorities
+разные (com.godot.game.fileprovider / com.godot.game.androidx-startup). Наша адресная
+minSDK правка этого поля не касалась. Это не выявленная утечка и не доказанный отказ
+установки; поведение AndroidX startup следует проверить при установке на устройство.
+
+Повторно запущен apksigner verify --verbose --print-certs: Verifies, APK Signature
+Scheme v3=true, ровно один RSA2048 signer. Certificate SHA-256:
+3b31ce694a6ef1524c3208ca0873c7cbe8a640f2949987dcb30fddcf00126d8b
+Совпадает с build report и отличается от исторической debug identity. Закрытый ключ
+не читался; файлов закрытых ключей в APK нет, а исходный ZIP упаковщик их исключает.
+Готовый итоговый ZIP отдельно здесь не проверялся. Preview не заменяет старый package.
+
+Повторный tools/inspect_apk.py --source-root /workspace/GOD-game: exit0.
+30 уровней; 49 metadata files, 269 runtime PNG, 81 portraits, 222 audio,
+15 environment layers; source verification missing=[] / mismatched=[].
+ZIP CRC test=None (ошибок нет). В архиве нет old/tools/tests/docs/.agents/source
+и файлов с суффиксами private signing keys.
+
+Артефакты проверки:
+- apk-independent-inspection.json
+- apk-independent-signature.log
+Физическая установка/запуск/трафик на Android не проверялись.

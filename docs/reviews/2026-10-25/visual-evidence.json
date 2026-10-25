@@ -1,0 +1,487 @@
+{
+  "verdict": "ACCEPTED_FOR_PREVIEW",
+  "reviewed_frames": 60,
+  "all_after_success": true,
+  "frames": [
+    {
+      "error": 0,
+      "level": 1,
+      "path": "/workspace/GOD-production/design/campaign-native/L01-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "1cf939b2cdd0935414c7f309de66420be88ccad32d5a052e5275d14342b8e065"
+    },
+    {
+      "error": 0,
+      "level": 1,
+      "path": "/workspace/GOD-production/design/campaign-native/L01-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "5ba55cd9a1d19dc209b725bf4b5675c4315dba697ab522763efca99a5acaebbb"
+    },
+    {
+      "error": 0,
+      "level": 2,
+      "path": "/workspace/GOD-production/design/campaign-native/L02-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "818a4592139f9b75bd02289fadf83dd659bc67014f1159e77282425c50c6befc"
+    },
+    {
+      "error": 0,
+      "level": 2,
+      "path": "/workspace/GOD-production/design/campaign-native/L02-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "f37fb45b8d4024d2b489697d88d892fd65d194dc4879e3977e4289a59e176328"
+    },
+    {
+      "error": 0,
+      "level": 3,
+      "path": "/workspace/GOD-production/design/campaign-native/L03-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "7177f2219ca1c789a2b4a708b29454f3e8d6694573c09fec61d231d9926282d7"
+    },
+    {
+      "error": 0,
+      "level": 3,
+      "path": "/workspace/GOD-production/design/campaign-native/L03-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "7166caa8d9bf84de2239a29631fc5c3ee4bde760b8586c2d83b7b81c2b5a7a06"
+    },
+    {
+      "error": 0,
+      "level": 4,
+      "path": "/workspace/GOD-production/design/campaign-native/L04-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "381ad7619d45445708f9fb11f03b89693c3c2e83233c3a11d17d3df8714518a3"
+    },
+    {
+      "error": 0,
+      "level": 4,
+      "path": "/workspace/GOD-production/design/campaign-native/L04-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "45777ea15cccffe9d5f50f0e1d7789eea2bf857057876effe9813bd9472f57b1"
+    },
+    {
+      "error": 0,
+      "level": 5,
+      "path": "/workspace/GOD-production/design/campaign-native/L05-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "e24e5cc73185f1a96ce95965887f98e9ce7547fc714f41066d785914fcaf9108"
+    },
+    {
+      "error": 0,
+      "level": 5,
+      "path": "/workspace/GOD-production/design/campaign-native/L05-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "8a796ca3f75dea6f64eceab2d888af5b96d5e64ca01e76ab04bc6b578d3435ac"
+    },
+    {
+      "error": 0,
+      "level": 6,
+      "path": "/workspace/GOD-production/design/campaign-native/L06-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "0ed8611053004f30074349db8a45cdae5469898a7e1690bf078e72100baa49e5"
+    },
+    {
+      "error": 0,
+      "level": 6,
+      "path": "/workspace/GOD-production/design/campaign-native/L06-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "26c66589f7fab834cdaaec2844c4aefb8532947a524905c78bb548dd9d9057e0"
+    },
+    {
+      "error": 0,
+      "level": 7,
+      "path": "/workspace/GOD-production/design/campaign-native/L07-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "481f82888e1fc0f2caf64d17e236bd154cf0544d745a49d17baf689338ffb9f4"
+    },
+    {
+      "error": 0,
+      "level": 7,
+      "path": "/workspace/GOD-production/design/campaign-native/L07-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "d890cb6a9d4dfc988b5e32e0a7a7b0653597ff3163b5af2158fb3b89d8313af7"
+    },
+    {
+      "error": 0,
+      "level": 8,
+      "path": "/workspace/GOD-production/design/campaign-native/L08-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "10299ddc5a6da19f731de82cf083126550ee432aa09cc41fd1258a4eeaf29123"
+    },
+    {
+      "error": 0,
+      "level": 8,
+      "path": "/workspace/GOD-production/design/campaign-native/L08-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "9216e9ca6fb55262c7e8dc40dddc73be4cb5d1a75b82ce3465f52a5485bb22cd"
+    },
+    {
+      "error": 0,
+      "level": 9,
+      "path": "/workspace/GOD-production/design/campaign-native/L09-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "7ded100369501fa29f7bdb4887178b04611d14e32e278ccee9e6e897def784d4"
+    },
+    {
+      "error": 0,
+      "level": 9,
+      "path": "/workspace/GOD-production/design/campaign-native/L09-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "a6162424d95e26c6467f4810a78249186879fc9b1ba728295325d5bc98b154f5"
+    },
+    {
+      "error": 0,
+      "level": 10,
+      "path": "/workspace/GOD-production/design/campaign-native/L10-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "0d0d4fe24cd71b21253103ee2edd5bc96b673422e60724b4275e423bb4b04b4e"
+    },
+    {
+      "error": 0,
+      "level": 10,
+      "path": "/workspace/GOD-production/design/campaign-native/L10-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "88a58b4b8f58b10869828cdac19206e446f680297d475a343e3ff0a3c1b966ee"
+    },
+    {
+      "error": 0,
+      "level": 11,
+      "path": "/workspace/GOD-production/design/campaign-native/L11-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "64f02eed1d8f81eac29ecb1fe69ce62eb0615209a9759b52af19612b7f14fbf2"
+    },
+    {
+      "error": 0,
+      "level": 11,
+      "path": "/workspace/GOD-production/design/campaign-native/L11-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "d60c5a801ab62a2bac08c6375429f84c6100199bbc728c82e2b9a1ef85f86eab"
+    },
+    {
+      "error": 0,
+      "level": 12,
+      "path": "/workspace/GOD-production/design/campaign-native/L12-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "652c6cfad777a516ee68ef6c5d12815a0d94d9990c6f259529bada709fe8a938"
+    },
+    {
+      "error": 0,
+      "level": 12,
+      "path": "/workspace/GOD-production/design/campaign-native/L12-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "bcae10b69f3ca7f815d0646335d0384b6b614d1f2c429fbdc62d9eda0008d2bf"
+    },
+    {
+      "error": 0,
+      "level": 13,
+      "path": "/workspace/GOD-production/design/campaign-native/L13-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "c7c60d4a2e725ea21dc7057e1d16496308f83815a866c11694ceeb1b9c6ecb9b"
+    },
+    {
+      "error": 0,
+      "level": 13,
+      "path": "/workspace/GOD-production/design/campaign-native/L13-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "a136dc473f6820f8095dffebccde0b8fea850537d43c481e9f0109f73275a140"
+    },
+    {
+      "error": 0,
+      "level": 14,
+      "path": "/workspace/GOD-production/design/campaign-native/L14-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "a29e7b2b30c2216689243ba09b715048572b9782cb49a9d37d4b26c15c2093e7"
+    },
+    {
+      "error": 0,
+      "level": 14,
+      "path": "/workspace/GOD-production/design/campaign-native/L14-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "6b054e1a0673766d21fb8fff164f63a818730608dd09bf1411c6a7c1b7f00a5a"
+    },
+    {
+      "error": 0,
+      "level": 15,
+      "path": "/workspace/GOD-production/design/campaign-native/L15-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "69e77e74950c69386457a1a605240c0f5aa9585490fad4b69096caa98bbbcf7e"
+    },
+    {
+      "error": 0,
+      "level": 15,
+      "path": "/workspace/GOD-production/design/campaign-native/L15-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "b51ae3892137a8b20f8a177e61511d323a5bb65fb19e07bf35ad5e3e0a733b84"
+    },
+    {
+      "error": 0,
+      "level": 16,
+      "path": "/workspace/GOD-production/design/campaign-native/L16-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "97f495b15ec819bb5516ccd79e565da93416db0a89331a095718072eb665e481"
+    },
+    {
+      "error": 0,
+      "level": 16,
+      "path": "/workspace/GOD-production/design/campaign-native/L16-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "78d18e5727952294a3c20267f27cfa7567b56579abbb9c8e29de3d3fe0845dc2"
+    },
+    {
+      "error": 0,
+      "level": 17,
+      "path": "/workspace/GOD-production/design/campaign-native/L17-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "9d5d28df93b9448536817180804b87d18e16afc5d7f9a04d61b4bf593c31137a"
+    },
+    {
+      "error": 0,
+      "level": 17,
+      "path": "/workspace/GOD-production/design/campaign-native/L17-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "ec4fc5e6b9f109deea691ca1453a1a51b9f51dc51acf32920e2d5de1d2de7dea"
+    },
+    {
+      "error": 0,
+      "level": 18,
+      "path": "/workspace/GOD-production/design/campaign-native/L18-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "135f10a988f1d3a8c841445844697c1c4c5b9c75f8205a2e8b4da75e093d386e"
+    },
+    {
+      "error": 0,
+      "level": 18,
+      "path": "/workspace/GOD-production/design/campaign-native/L18-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "7a3ec4258b5b6a48bbc8f7fb7b89de1d42797b5842efc27b4d001fea95d3b40a"
+    },
+    {
+      "error": 0,
+      "level": 19,
+      "path": "/workspace/GOD-production/design/campaign-native/L19-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "d5f1b44f49ce172581cde24964a19ad32ad68b3be582f70d8e822af0d4253b6a"
+    },
+    {
+      "error": 0,
+      "level": 19,
+      "path": "/workspace/GOD-production/design/campaign-native/L19-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "581fbb27a4263b9ae9e331657ad3dffb8aabce081be2b28a50b6a956a2ee5350"
+    },
+    {
+      "error": 0,
+      "level": 20,
+      "path": "/workspace/GOD-production/design/campaign-native/L20-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "e848866e91362bf4a8a52cae16243c7f62a4b8989201235c96b886a5ed6c1890"
+    },
+    {
+      "error": 0,
+      "level": 20,
+      "path": "/workspace/GOD-production/design/campaign-native/L20-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "49023b0ad165ec2628ba9bc768ae98484d9ca70937db97d6a1f470d3da7b5cf7"
+    },
+    {
+      "error": 0,
+      "level": 21,
+      "path": "/workspace/GOD-production/design/campaign-native/L21-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "499f41aeb47f200363769b7fbf614bf26e28e6742e3af3b3b295b27eb3e8bc71"
+    },
+    {
+      "error": 0,
+      "level": 21,
+      "path": "/workspace/GOD-production/design/campaign-native/L21-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "e7eb48211a9ab828fd950afc6d9aebd81fb2d0c23e116d24b6eb61d4dbc6bc8e"
+    },
+    {
+      "error": 0,
+      "level": 22,
+      "path": "/workspace/GOD-production/design/campaign-native/L22-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "837989376da4240ecda2daf8bcbe573a214d6f33f52d9dae3bfcf10db6416001"
+    },
+    {
+      "error": 0,
+      "level": 22,
+      "path": "/workspace/GOD-production/design/campaign-native/L22-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "94774aa58ab134c67527cb8729ec8e88cfaa98033ad5dbe47e048cf878803bfd"
+    },
+    {
+      "error": 0,
+      "level": 23,
+      "path": "/workspace/GOD-production/design/campaign-native/L23-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "7920154c506a1a14c47c3755a83cc4e3319c18436949b5c28c010c69d0ccbb65"
+    },
+    {
+      "error": 0,
+      "level": 23,
+      "path": "/workspace/GOD-production/design/campaign-native/L23-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "da6cb867f0268bb3eca7fadb8971e957bf7999b51f13654a482e7da6a24611d3"
+    },
+    {
+      "error": 0,
+      "level": 24,
+      "path": "/workspace/GOD-production/design/campaign-native/L24-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "4e4445d2ea1bf8f2086da49900ea8af7b26d56e7b51ac52628fc2640c1233c9a"
+    },
+    {
+      "error": 0,
+      "level": 24,
+      "path": "/workspace/GOD-production/design/campaign-native/L24-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "fe26e996cbdf78e38e19e76a26a9c7afe45661c8ad8c6f99a4131058b5155fc4"
+    },
+    {
+      "error": 0,
+      "level": 25,
+      "path": "/workspace/GOD-production/design/campaign-native/L25-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "7d70b156e644ce53d5823a405e76294fdabf619539c4109fb5a6fa1ee8d1072c"
+    },
+    {
+      "error": 0,
+      "level": 25,
+      "path": "/workspace/GOD-production/design/campaign-native/L25-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "186fc430826107c5b4074ebc728598534f6e299f4ac176fdc42f2622bece40df"
+    },
+    {
+      "error": 0,
+      "level": 26,
+      "path": "/workspace/GOD-production/design/campaign-native/L26-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "c4f95a6a30bb3794b10bedf0677f09ba7e991abffd962997bf19bd8cc6d690c4"
+    },
+    {
+      "error": 0,
+      "level": 26,
+      "path": "/workspace/GOD-production/design/campaign-native/L26-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "a1d83188a7e2a2e71051d231efb3ed1b68b8ce27cf981145fd0428856c230826"
+    },
+    {
+      "error": 0,
+      "level": 27,
+      "path": "/workspace/GOD-production/design/campaign-native/L27-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "a1315e3cfaaadbd608a7005e8ea92950b2d387b95f79a5358af134c683aebb4e"
+    },
+    {
+      "error": 0,
+      "level": 27,
+      "path": "/workspace/GOD-production/design/campaign-native/L27-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "f72d73d21b3f6e32bb0e6ece08c8b5eadfd0085dacd729c51ad92eebe4438421"
+    },
+    {
+      "error": 0,
+      "level": 28,
+      "path": "/workspace/GOD-production/design/campaign-native/L28-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "332ba9760a122df4d19702da28789f9ab2372f5535f810b2dc06d165672d2ffd"
+    },
+    {
+      "error": 0,
+      "level": 28,
+      "path": "/workspace/GOD-production/design/campaign-native/L28-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "da32030ddfa60c37693a0c5cb566c20424e45b09359c97325133554f1dabeabe"
+    },
+    {
+      "error": 0,
+      "level": 29,
+      "path": "/workspace/GOD-production/design/campaign-native/L29-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before",
+      "sha256": "3640cb15feb7dc242108c79e48543978230bc09beef0a3cf356381266209177b"
+    },
+    {
+      "error": 0,
+      "level": 29,
+      "path": "/workspace/GOD-production/design/campaign-native/L29-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "60f30cf14262b8e4cd7585074b82e625e16a547818ebf1c5adf6be071bed5b2a"
+    },
+    {
+      "error": 0,
+      "level": 30,
+      "path": "/workspace/GOD-production/design/campaign-native/L30-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before",
+      "sha256": "4ee974dd9bc0ede577d64bd8368da508b23c66049c91b174cced36dfd72f5200"
+    },
+    {
+      "error": 0,
+      "level": 30,
+      "path": "/workspace/GOD-production/design/campaign-native/L30-after.png",
+      "phase": "SUCCESS",
+      "state": "after",
+      "sha256": "3c70a7ea4d6e7e2948a405f22fd6d2c6372a52e4a6ac04a7e55e3909f88f93b5"
+    }
+  ]
+}

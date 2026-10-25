@@ -1,0 +1,90 @@
+Восстановление ресурсов GOD из old и аудиогенератора
+
+{
+  "exact_graphics": 169,
+  "audio_exact_originals": 201,
+  "audio_replacements": 21,
+  "font_replacements": 2,
+  "supporting_files": 11,
+  "conflicts": 0,
+  "missing_runtime_png": 70
+}
+
+168 runtime PNG и дополнительные исходники восстановлены по точному SHA-256.
+201 WAV совпадает с историческими SHA-256; 21 OGG — заново сгенерированные замены.
+Два DejaVu Sans версии 2.37 взяты из системного пакета, лицензия включена.
+222 записи audio_catalog соответствуют фактическим SHA-256 файлов.
+Исторический frozen manifest и old не изменены.
+Godot import, fullverify, публикация и коммит не выполнялись.
+
+Отсутствующие PNG после восстановления:
+assets/art/characters/rigs/semyon/cape.png
+assets/art/characters/rigs/semyon/head.png
+assets/art/characters/rigs/semyon/left_arm.png
+assets/art/characters/rigs/semyon/left_leg.png
+assets/art/characters/rigs/semyon/prop.png
+assets/art/characters/rigs/semyon/right_arm.png
+assets/art/characters/rigs/semyon/right_leg.png
+assets/art/characters/rigs/semyon/torso.png
+assets/art/characters/roza.png
+assets/art/characters/semyon.png
+assets/art/environments/ENV01/backdrop.png
+assets/art/environments/ENV01/floor.png
+assets/art/environments/ENV01/foreground.png
+assets/art/environments/ENV01/midground.png
+assets/art/environments/ENV02/atmosphere.png
+assets/art/environments/ENV02/backdrop.png
+assets/art/environments/ENV02/floor.png
+assets/art/environments/ENV02/foreground.png
+assets/art/environments/ENV02/midground.png
+assets/art/environments/ENV03/atmosphere.png
+assets/art/environments/ENV03/backdrop.png
+assets/art/environments/ENV03/floor.png
+assets/art/environments/ENV03/foreground.png
+assets/art/environments/ENV03/midground.png
+assets/art/environments/bg_archive.png
+assets/art/environments/bg_kitchen.png
+assets/art/environments/bg_river.png
+assets/art/props/boat.png
+assets/art/props/bread.png
+assets/art/props/clamp.png
+assets/art/props/control_weight.png
+assets/art/props/crate.png
+assets/art/props/cryopack.png
+assets/art/props/decoy_fire.png
+assets/art/props/dessert.png
+assets/art/props/dock.png
+assets/art/props/fire_source.png
+assets/art/props/fire_source_cold.png
+assets/art/props/flags.png
+assets/art/props/float.png
+assets/art/props/frame.png
+assets/art/props/hoist.png
+assets/art/props/hot_stone.png
+assets/art/props/ice_surface.png
+assets/art/props/kettle.png
+assets/art/props/miracle_stamp.png
+assets/art/props/paper_bridge.png
+assets/art/props/paper_gate.png
+assets/art/props/paper_reinforced.png
+assets/art/props/paper_sheet.png
+assets/art/props/rope.png
+assets/art/props/sandbag.png
+assets/art/props/screen.png
+assets/art/props/span_anchor.png
+assets/art/props/steam.png
+assets/art/props/stone.png
+assets/art/props/stone_anchor.png
+assets/art/props/thermal_screen.png
+assets/art/props/thermobox.png
+assets/art/props/thread.png
+assets/art/props/ticket_booth.png
+assets/art/props/water_bowl.png
+assets/art/props/water_bowl_frozen.png
+assets/art/props/water_surface.png
+assets/art/props/wood_gate.png
+assets/art/props/wooden_bollard.png
+assets/art/ui/app_icon_1024.png
+assets/art/ui/app_icon_192.png
+assets/art/ui/app_icon_512.png
+assets/art/ui/app_icon_master.png

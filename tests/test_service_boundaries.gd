@@ -65,7 +65,8 @@ func audio_cases() -> void:
 	await create_timer(.05).timeout
 	check(a.music.stream_paused and a._duck_remaining==remaining,"background pauses conductor/duck clock")
 	a.set_paused(false);check(not a.music.stream_paused,"resume unpauses actual music player")
-	a.shutdown();a.free();await process_frame
+	check(await a.shutdown_and_wait(),"conductor native playback releases before service destruction")
+	a.free();await process_frame
 func glue_cases() -> void:
 	var s=Saver.new();var a=Audio.new();root.add_child(a);a.configure(defaults.audio);a.play_ambience()
 	var app=App.new();app.settings=defaults.duplicate(true);app.audio=a;app.level_ids.clear()
@@ -88,12 +89,14 @@ func glue_cases() -> void:
 	app._notification(MainLoop.NOTIFICATION_APPLICATION_PAUSED);app._notification(MainLoop.NOTIFICATION_APPLICATION_RESUMED)
 	check(app.kernel.state.active_laws==["M01"],"background after commit preserves law")
 	app.progress=s.read_slot("progress");app.start_level(1,true);check(app.kernel.state.active_laws==["M01"],"reopen restores committed law")
-	app.free();a.shutdown();a.free();await process_frame
+	app.free();check(await a.shutdown_and_wait(),"rapid level changes release native music and ambience playback")
+	a.free();await process_frame
 	a=Audio.new();root.add_child(a);a.configure(defaults.audio)
 	app=App.new();app.settings=defaults.duplicate(true);app.audio=a;app.level_ids.clear();app.level_ids.append("L01");app._capture_stage="plan"
 	app.progress={"schema_version":1,"completed":{"L01":{"stars":1}},"unlocked":2,"current_level":1,"checkpoint":"broken"};root.add_child(app);app.start_level(1,true)
 	check(is_instance_valid(app.ui) and app.progress.completed.has("L01"),"malformed checkpoint falls back without losing campaign")
-	app.free();a.shutdown();a.free();await process_frame
+	app.free();check(await a.shutdown_and_wait(),"checkpoint fallback playback releases before process exit")
+	a.free();await process_frame
 func same_audio(a: AudioStream,b: AudioStream) -> bool:
 	if a is AudioStreamOggVorbis and b is AudioStreamOggVorbis:return a.packet_sequence==b.packet_sequence
 	if a is AudioStreamWAV and b is AudioStreamWAV:return a.data==b.data

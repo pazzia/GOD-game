@@ -1,22 +1,59 @@
 {
   "planned_rows": 571,
   "statuses": {
+    "authored_body_clip_campaign_cue_review_pending": 45,
+    "authored_body_clip_manual_only_review_pending": 2,
     "authored_logic_layout": 30,
     "baseline_crowd_only": 48,
     "controller_clip_assets_partial": 80,
     "font_and_license_present": 1,
     "implemented_native_theme": 1,
     "painted_layer_present_review_pending": 15,
-    "part_rig_keyposes_reviewed_direction_pending": 9,
+    "part_rig_keyposes_reviewed_direction_pending": 1,
+    "part_rig_present_review_pending": 8,
     "partial_composed_title": 1,
-    "partial_emotions_model_bible": 9,
+    "partial_portraits_model_sheet_pending": 9,
     "partial_runtime_effects": 11,
-    "planned_not_produced": 78,
     "produced_measured_mix_review_pending": 222,
     "prop_art_present_not_runtime_mapped": 4,
     "runtime_portraits_present": 9,
-    "runtime_prop_present": 21,
+    "runtime_prop_present": 22,
+    "unique_painted_overlay_runtime_review_pending": 30,
     "vector_source_present": 32
   },
-  "limits": "File presence and controller support never imply final visual, listening, directional-animation or device acceptance."
+  "new_production_evidence": {
+    "authored_body_clips": 47,
+    "campaign_cue_conditions_documented": 45,
+    "manual_only_clip_ids": [
+      "CH09_ANIM_NIBBLE_ATTEMPT",
+      "CH09_ANIM_CARGO_BALANCE"
+    ],
+    "dispatch_evidence": "docs/ANIMATION_ACTING.md source-level traceability, not observed campaign playthrough",
+    "unique_rgba_overlays_verified": 30,
+    "poster_status": "runtime_prop_present"
+  },
+  "remaining": {
+    "planned_not_produced_ids": [],
+    "partial_or_art_dependent_rows_by_category": {
+      "animation": 80,
+      "character_rig": 9,
+      "crowd_animation": 36,
+      "crowd_model": 6,
+      "crowd_rig": 6,
+      "key_art": 1,
+      "model_sheet": 9,
+      "vfx": 11
+    },
+    "manual_only_campaign_integration_ids": [
+      "CH09_ANIM_NIBBLE_ATTEMPT",
+      "CH09_ANIM_CARGO_BALANCE"
+    ],
+    "acceptance_pending": [
+      "Full direction/wardrobe/height model sheets; portrait cutouts are not those sheets.",
+      "Directional rig artwork, crowd rigs/acting, and literal facial/accessory/hand-prop details.",
+      "Native composition/timing and physical-device acceptance, subjective audio review, full VFX/key-art scope."
+    ]
+  },
+  "integrity_errors": [],
+  "limits": "File presence, authored timelines, source-level cue conditions and decoded overlay integrity do not imply final visual, listening, directional-animation or device acceptance. Zero planned_not_produced rows would not mean complete art production."
 }

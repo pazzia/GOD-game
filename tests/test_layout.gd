@@ -48,6 +48,22 @@ func run() -> void:
 					app.selected="";app.inspected="";app._build_ui();app._update_ui();app._close_overlay()
 					await process_frame;await process_frame
 					inspect_layout(id+" "+locale+" "+str(scale_value)+" "+app.kernel.state.phase)
+	# Album targets must stay fully reachable above its sticky return action.
+	for locale in ["ru","en"]:
+		app.settings.locale=locale;app._load_catalog()
+		for scale_value in [1.0,1.4]:
+			app.settings.accessibility.text_scale=scale_value;app._open_levels()
+			await process_frame;await process_frame
+			var last_level: Button=null;var back: Button=null;var targets_fit: bool=true
+			for child in app.overlay.get_children():
+				if not child is Button:continue
+				if child.text.is_valid_int():
+					targets_fit=targets_fit and child.size.x>=144 and child.size.y>=144
+					if child.text=="30":last_level=child
+				elif child.text.replace("\n"," ")==app.tx("ui.back_game","Вернуться в игру"):back=child
+			check(targets_fit,"album has48dp number targets "+locale+" "+str(scale_value))
+			check(last_level!=null and back!=null and last_level.get_global_rect().end.y<=back.get_global_rect().position.y-16,"album final row stays above return action "+locale+" "+str(scale_value))
+			app._close_overlay()
 	# Stateful cosmetic/visibility checks must not be replaced by geometry mirrors.
 	app.settings.locale="ru";app.settings.accessibility.text_scale=1.0
 	app.start_level(1,false);app._close_overlay();await process_frame

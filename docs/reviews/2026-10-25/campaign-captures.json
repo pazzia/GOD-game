@@ -1,0 +1,430 @@
+{
+  "renderer": "native Godot4.7.2",
+  "scope": "30 authored initial states and30 canonical replay end states. Real device and continuous acting not claimed.",
+  "states": [
+    {
+      "error": 0,
+      "level": 1,
+      "path": "/workspace/GOD-production/design/campaign-native/L01-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 1,
+      "path": "/workspace/GOD-production/design/campaign-native/L01-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 2,
+      "path": "/workspace/GOD-production/design/campaign-native/L02-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 2,
+      "path": "/workspace/GOD-production/design/campaign-native/L02-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 3,
+      "path": "/workspace/GOD-production/design/campaign-native/L03-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 3,
+      "path": "/workspace/GOD-production/design/campaign-native/L03-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 4,
+      "path": "/workspace/GOD-production/design/campaign-native/L04-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 4,
+      "path": "/workspace/GOD-production/design/campaign-native/L04-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 5,
+      "path": "/workspace/GOD-production/design/campaign-native/L05-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 5,
+      "path": "/workspace/GOD-production/design/campaign-native/L05-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 6,
+      "path": "/workspace/GOD-production/design/campaign-native/L06-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 6,
+      "path": "/workspace/GOD-production/design/campaign-native/L06-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 7,
+      "path": "/workspace/GOD-production/design/campaign-native/L07-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 7,
+      "path": "/workspace/GOD-production/design/campaign-native/L07-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 8,
+      "path": "/workspace/GOD-production/design/campaign-native/L08-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 8,
+      "path": "/workspace/GOD-production/design/campaign-native/L08-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 9,
+      "path": "/workspace/GOD-production/design/campaign-native/L09-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 9,
+      "path": "/workspace/GOD-production/design/campaign-native/L09-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 10,
+      "path": "/workspace/GOD-production/design/campaign-native/L10-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 10,
+      "path": "/workspace/GOD-production/design/campaign-native/L10-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 11,
+      "path": "/workspace/GOD-production/design/campaign-native/L11-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 11,
+      "path": "/workspace/GOD-production/design/campaign-native/L11-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 12,
+      "path": "/workspace/GOD-production/design/campaign-native/L12-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 12,
+      "path": "/workspace/GOD-production/design/campaign-native/L12-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 13,
+      "path": "/workspace/GOD-production/design/campaign-native/L13-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 13,
+      "path": "/workspace/GOD-production/design/campaign-native/L13-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 14,
+      "path": "/workspace/GOD-production/design/campaign-native/L14-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 14,
+      "path": "/workspace/GOD-production/design/campaign-native/L14-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 15,
+      "path": "/workspace/GOD-production/design/campaign-native/L15-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 15,
+      "path": "/workspace/GOD-production/design/campaign-native/L15-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 16,
+      "path": "/workspace/GOD-production/design/campaign-native/L16-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 16,
+      "path": "/workspace/GOD-production/design/campaign-native/L16-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 17,
+      "path": "/workspace/GOD-production/design/campaign-native/L17-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 17,
+      "path": "/workspace/GOD-production/design/campaign-native/L17-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 18,
+      "path": "/workspace/GOD-production/design/campaign-native/L18-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 18,
+      "path": "/workspace/GOD-production/design/campaign-native/L18-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 19,
+      "path": "/workspace/GOD-production/design/campaign-native/L19-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 19,
+      "path": "/workspace/GOD-production/design/campaign-native/L19-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 20,
+      "path": "/workspace/GOD-production/design/campaign-native/L20-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 20,
+      "path": "/workspace/GOD-production/design/campaign-native/L20-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 21,
+      "path": "/workspace/GOD-production/design/campaign-native/L21-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 21,
+      "path": "/workspace/GOD-production/design/campaign-native/L21-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 22,
+      "path": "/workspace/GOD-production/design/campaign-native/L22-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 22,
+      "path": "/workspace/GOD-production/design/campaign-native/L22-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 23,
+      "path": "/workspace/GOD-production/design/campaign-native/L23-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 23,
+      "path": "/workspace/GOD-production/design/campaign-native/L23-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 24,
+      "path": "/workspace/GOD-production/design/campaign-native/L24-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 24,
+      "path": "/workspace/GOD-production/design/campaign-native/L24-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 25,
+      "path": "/workspace/GOD-production/design/campaign-native/L25-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 25,
+      "path": "/workspace/GOD-production/design/campaign-native/L25-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 26,
+      "path": "/workspace/GOD-production/design/campaign-native/L26-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 26,
+      "path": "/workspace/GOD-production/design/campaign-native/L26-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 27,
+      "path": "/workspace/GOD-production/design/campaign-native/L27-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 27,
+      "path": "/workspace/GOD-production/design/campaign-native/L27-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 28,
+      "path": "/workspace/GOD-production/design/campaign-native/L28-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 28,
+      "path": "/workspace/GOD-production/design/campaign-native/L28-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 29,
+      "path": "/workspace/GOD-production/design/campaign-native/L29-before.png",
+      "phase": "PLAN_RESOLUTION",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 29,
+      "path": "/workspace/GOD-production/design/campaign-native/L29-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    },
+    {
+      "error": 0,
+      "level": 30,
+      "path": "/workspace/GOD-production/design/campaign-native/L30-before.png",
+      "phase": "PLAN_SHOW",
+      "state": "before"
+    },
+    {
+      "error": 0,
+      "level": 30,
+      "path": "/workspace/GOD-production/design/campaign-native/L30-after.png",
+      "phase": "SUCCESS",
+      "state": "after"
+    }
+  ],
+  "window": [
+    360,
+    640
+  ]
+}

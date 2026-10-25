@@ -2,6 +2,7 @@ class_name CharacterPuppet
 extends Node2D
 ## Cosmetic cutout rig. No kernel reference, gameplay callbacks or wall-clock rules.
 signal pose_finished(state: String)
+const Acting=preload("res://presentation/character_acting.gd")
 const BASE_STATES=["idle","move","turn","observe","suspect","accept","reveal_react","celebrate"]
 const EXTRA_STATES=["show_begin","stamp","bow","hover","fly","point","shiver","cheer"]
 const LOOP_STATES=["idle","move","observe","suspect","celebrate","hover","fly","shiver","cheer"]
@@ -112,13 +113,19 @@ func set_reduced_motion(value: bool) -> void:
 	else:
 		animator.play(current_state);animator.speed_scale=TEMPO.get(actor_id,1.0)
 	queue_redraw()
+func special_states() -> Array:
+	return Acting.states_for(actor_id)
+func play_cue(trigger: String,variant: int=0,force: bool=false) -> bool:
+	return play_state(Acting.pose_for(actor_id,trigger,variant),force)
+func is_loop_state(state: String) -> bool:
+	return state in LOOP_STATES or Acting.is_loop(actor_id,state)
 func play_state(state: String,force: bool=false) -> bool:
 	if not is_instance_valid(animator) or not animator.has_animation(state):return false
 	if state==current_state and not force:return true
-	if not force and current_state not in LOOP_STATES and animator.is_playing():
-		if state in LOOP_STATES:_queued_loop=state;return true
+	if not force and not is_loop_state(current_state) and (animator.is_playing() or reduced_motion):
+		if is_loop_state(state):_queued_loop=state;return true
 	current_state=state
-	if state in LOOP_STATES:_queued_loop=state
+	if is_loop_state(state):_queued_loop=state
 	animator.play(state);animator.speed_scale=TEMPO.get(actor_id,1.0);animator.advance(0)
 	if reduced_motion:animator.pause();animator.seek(animator.current_animation_length*.5,true)
 	queue_redraw()
@@ -134,7 +141,7 @@ func _draw() -> void:
 		draw_texture(sprite.texture,Vector2.ZERO,sprite.modulate)
 	draw_set_transform_matrix(Transform2D.IDENTITY)
 func _finished(name: StringName) -> void:
-	if String(name) not in LOOP_STATES:play_state(_queued_loop,true)
+	if not is_loop_state(String(name)):play_state(_queued_loop,true)
 	# Observers may chain another cosmetic action or free this node in the signal.
 	pose_finished.emit(String(name))
 func _make_nodes() -> void:
@@ -149,7 +156,32 @@ func _clear() -> void:
 func _install_animations() -> void:
 	var library=AnimationLibrary.new()
 	for state in BASE_STATES+EXTRA_STATES:library.add_animation(state,_make_animation(state))
+	for state in special_states():library.add_animation(state,_make_authored_animation(state))
 	animator.add_animation_library("",library)
+func _make_authored_animation(state: String) -> Animation:
+	var definition: Dictionary=Acting.definition(actor_id,state)
+	var animation=Animation.new();animation.length=float(definition.duration)
+	animation.loop_mode=Animation.LOOP_LINEAR if bool(definition.loop) else Animation.LOOP_NONE
+	var times: Array=definition.times
+	var positions: Array=[];var scales: Array=[]
+	for value in definition.positions:positions.append(Vector2(value[0],value[1]))
+	for value in definition.scales:scales.append(Vector2(value[0],value[1]))
+	_authored_track(animation,"Fit/Pose:position",times,positions)
+	_authored_track(animation,"Fit/Pose:scale",times,scales)
+	_authored_track(animation,"Fit/Pose:rotation",times,definition.root_rotation)
+	# Every clip owns all rotations, including neutral tracks, so returning from
+	# an actor-specific pose never leaves a prop, head or limb in the previous pose.
+	for id in _bones:
+		var values: Array=definition.rotations.get(id,[0.0,0.0,0.0,0.0,0.0,0.0])
+		var relative: String=String(_pose.get_path_to(_bones[id]))
+		_authored_track(animation,"Fit/Pose/"+relative+":rotation",times,values)
+	return animation
+func _authored_track(animation: Animation,path: String,times: Array,values: Array) -> void:
+	var index: int=animation.add_track(Animation.TYPE_VALUE)
+	animation.track_set_path(index,NodePath(path))
+	# Linear keys preserve deliberately held poses and cannot overshoot limb bounds.
+	animation.track_set_interpolation_type(index,Animation.INTERPOLATION_LINEAR)
+	for key in range(times.size()):animation.track_insert_key(index,animation.length*float(times[key]),values[key])
 func _make_animation(state: String) -> Animation:
 	var a=Animation.new()
 	a.length={"idle":3.2,"move":.8,"turn":.65,"observe":2.6,"suspect":2.0,"accept":1.0,"reveal_react":.85,"celebrate":1.25,"show_begin":1.3,"stamp":.9,"bow":1.2,"hover":1.2,"fly":.45,"point":1.0,"shiver":.4,"cheer":1.0}.get(state,1.0)
@@ -187,6 +219,7 @@ func _make_animation(state: String) -> Animation:
 		"shiver":positions=[Vector2.ZERO,Vector2(-10,0),Vector2(8,0),Vector2(-6,0),Vector2.ZERO];_wings(rotations,.15)
 	_track(a,"Fit/Pose:position",positions)
 	_track(a,"Fit/Pose:scale",scales)
+	_track(a,"Fit/Pose:rotation",[0.0,0.0,0.0,0.0,0.0])
 	for id in _bones:
 		var relative: String=String(_pose.get_path_to(_bones[id]));_track(a,"Fit/Pose/"+relative+":rotation",rotations[id])
 	return a

@@ -1,0 +1,3135 @@
+{
+  "created_utc": "2026-10-25T00:57:53.451841+00:00",
+  "historical_manifest_path": "tests/reports/project-verification.json",
+  "historical_manifest_sha256": "196b1f281f65d4c1586403d17e16dbafbf979438176ddbea86a2a6a2753d555b",
+  "exact_graphics": [
+    {
+      "path": "assets/art/characters/caramelka.png",
+      "sha256": "099774786996444e9fc85e892920346cd7436545c82960dcfbe8eb57334e1ed8",
+      "source": "old/assets/art/characters/caramelka.png",
+      "runtime": true,
+      "bytes": 144985
+    },
+    {
+      "path": "assets/art/characters/crowd_fisherman.png",
+      "sha256": "bf8789f995a93e842e32007a6dd03979f29a5fe1ef3218a53388f99124934e05",
+      "source": "old/assets/art/characters/crowd_fisherman.png",
+      "runtime": true,
+      "bytes": 284564
+    },
+    {
+      "path": "assets/art/characters/crowd_gardener.png",
+      "sha256": "46058bac4cea7c84538727c9eb5a1f1a6cbb8cc94c4d6c3daa6e6f3373b6f3bc",
+      "source": "old/assets/art/characters/crowd_gardener.png",
+      "runtime": true,
+      "bytes": 288255
+    },
+    {
+      "path": "assets/art/characters/crowd_librarian.png",
+      "sha256": "9d723f5037c1d9b90fa3a6c3c43dcddc2e675e75184431f274f1d4c5dddac7c6",
+      "source": "old/assets/art/characters/crowd_librarian.png",
+      "runtime": true,
+      "bytes": 279745
+    },
+    {
+      "path": "assets/art/characters/crowd_merchant.png",
+      "sha256": "7a9ba425050f5f592075a802ecc1bce3bb37d2984eb6cb66e03104397b7c007a",
+      "source": "old/assets/art/characters/crowd_merchant.png",
+      "runtime": true,
+      "bytes": 337138
+    },
+    {
+      "path": "assets/art/characters/crowd_musician.png",
+      "sha256": "7256b03173e5dd37a1583d87f8e169ee9d780551c3f9d4a2a88a9754f78d865f",
+      "source": "old/assets/art/characters/crowd_musician.png",
+      "runtime": true,
+      "bytes": 317878
+    },
+    {
+      "path": "assets/art/characters/crowd_postwoman.png",
+      "sha256": "176ebb9f1d1d45f6e3286b7ec1bf2e393b6f0dde71ff3426df99375b5fb5f4b9",
+      "source": "old/assets/art/characters/crowd_postwoman.png",
+      "runtime": true,
+      "bytes": 281605
+    },
+    {
+      "path": "assets/art/characters/felix.png",
+      "sha256": "708aeb852a78693b70aa9bf887dfbf797271a3b504e59dc8cd2ac7f724b684c8",
+      "source": "old/assets/art/characters/felix.png",
+      "runtime": true,
+      "bytes": 181706
+    },
+    {
+      "path": "assets/art/characters/hugo.png",
+      "sha256": "423ac2e0c7d80a5d9de6acfc96348331c0fcc8898e5b229e34d174ce6d40b66a",
+      "source": "old/assets/art/characters/hugo.png",
+      "runtime": true,
+      "bytes": 201435
+    },
+    {
+      "path": "assets/art/characters/lada.png",
+      "sha256": "fad4b5aa393a52db19e27b96ba215da83a1dccfd903a723e635f6b5158debdc8",
+      "source": "old/assets/art/characters/lada.png",
+      "runtime": true,
+      "bytes": 183461
+    },
+    {
+      "path": "assets/art/characters/marfa.png",
+      "sha256": "addc952cd50faffd08bb68e2fefd4a71c6fdce0a99d9332cf3dd2851c98923fd",
+      "source": "old/assets/art/characters/marfa.png",
+      "runtime": true,
+      "bytes": 168970
+    },
+    {
+      "path": "assets/art/characters/nika.png",
+      "sha256": "c4abb50625f3e517fd5c7966a1c37ef2d3c9b36909ebe62e550c1a91e42acbb6",
+      "source": "old/assets/art/characters/nika.png",
+      "runtime": true,
+      "bytes": 118964
+    },
+    {
+      "path": "assets/art/characters/plum.png",
+      "sha256": "34eaf490dd8d8b93a8cab809128a19935ec54d6b96f18ebd67ec938f44520914",
+      "source": "old/assets/art/characters/plum.png",
+      "runtime": true,
+      "bytes": 162896
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/accept.png",
+      "sha256": "b8fb22e9eb66bdaa83caf6c301735fb1b90e12092c43de7682e52bc2d29becf6",
+      "source": "old/assets/art/characters/portraits/caramelka/accept.png",
+      "runtime": true,
+      "bytes": 240015
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/celebrate.png",
+      "sha256": "079d544626e4b585b9e49670bf66514c66d269a48f031e6ba79c86f3071e4d82",
+      "source": "old/assets/art/characters/portraits/caramelka/celebrate.png",
+      "runtime": true,
+      "bytes": 244737
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/embarrassed.png",
+      "sha256": "03be2619dabd913e58660e1428d0e0e34383f23108f7d36a7f6f226f549db159",
+      "source": "old/assets/art/characters/portraits/caramelka/embarrassed.png",
+      "runtime": true,
+      "bytes": 236286
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/extra.png",
+      "sha256": "796e9fa178504515eb665c0a616b63a04ed0257d26d9ec58bf4697908245e16b",
+      "source": "old/assets/art/characters/portraits/caramelka/extra.png",
+      "runtime": true,
+      "bytes": 233306
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/focused.png",
+      "sha256": "c265e0ad094b1d963cd17f7744952cee0e77af80a9ee8201903e75fbc6ebae6a",
+      "source": "old/assets/art/characters/portraits/caramelka/focused.png",
+      "runtime": true,
+      "bytes": 230842
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/idle.png",
+      "sha256": "b633406610d65418ddab1d757c42f24db841f2432e869915803ad9ad4909c29e",
+      "source": "old/assets/art/characters/portraits/caramelka/idle.png",
+      "runtime": true,
+      "bytes": 234793
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/observe.png",
+      "sha256": "780bb3661dd5cf520517050d2ce6d1f6b3d2401ca7776345ef1240fcbf2a8392",
+      "source": "old/assets/art/characters/portraits/caramelka/observe.png",
+      "runtime": true,
+      "bytes": 224625
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/reveal_react.png",
+      "sha256": "b0c6e0fe86d472e38c4f2f51042adea2bf8f74cd9b2ff1c55089d819a9d08c7a",
+      "source": "old/assets/art/characters/portraits/caramelka/reveal_react.png",
+      "runtime": true,
+      "bytes": 236584
+    },
+    {
+      "path": "assets/art/characters/portraits/caramelka/suspect.png",
+      "sha256": "ec07303f12ba743f4671857d60e34129de7e2c549c857ad55d082fe5be4719c1",
+      "source": "old/assets/art/characters/portraits/caramelka/suspect.png",
+      "runtime": true,
+      "bytes": 228416
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/accept.png",
+      "sha256": "67f0858f3b51f33d0642424021b59a38ed0f190d2a062fec0ddbd1dc000171a0",
+      "source": "old/assets/art/characters/portraits/felix/accept.png",
+      "runtime": true,
+      "bytes": 233875
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/celebrate.png",
+      "sha256": "276eafb81c4bb2688a242fc1af8c010025c67a4a93b06a6cd04c3631124909a3",
+      "source": "old/assets/art/characters/portraits/felix/celebrate.png",
+      "runtime": true,
+      "bytes": 236500
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/embarrassed.png",
+      "sha256": "0b0fe0f97d570f5e86cb6bb9846a85c476065b858f8bde494f20042b5fe9883f",
+      "source": "old/assets/art/characters/portraits/felix/embarrassed.png",
+      "runtime": true,
+      "bytes": 237282
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/extra.png",
+      "sha256": "0e058a0fbb3da874754e47f3b796998612440ca66efe43397f519465a703daba",
+      "source": "old/assets/art/characters/portraits/felix/extra.png",
+      "runtime": true,
+      "bytes": 220745
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/focused.png",
+      "sha256": "9deb4c23e428b8f8d45be5059314f13530e9871feb16faf6a82e645fe3f89e4b",
+      "source": "old/assets/art/characters/portraits/felix/focused.png",
+      "runtime": true,
+      "bytes": 226086
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/idle.png",
+      "sha256": "485c1b1a350d539709c0866b8f7bc0d0f0698fb624a2dfbeff631e74854ecca8",
+      "source": "old/assets/art/characters/portraits/felix/idle.png",
+      "runtime": true,
+      "bytes": 227942
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/observe.png",
+      "sha256": "cd0065ec139054ab351364907047943000220b4bc317fefccbdc2985e8fcc6cc",
+      "source": "old/assets/art/characters/portraits/felix/observe.png",
+      "runtime": true,
+      "bytes": 229534
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/reveal_react.png",
+      "sha256": "31d044d7321ee57a339116c9a841344a4b0407e934c10617b4c1aec45248e316",
+      "source": "old/assets/art/characters/portraits/felix/reveal_react.png",
+      "runtime": true,
+      "bytes": 237494
+    },
+    {
+      "path": "assets/art/characters/portraits/felix/suspect.png",
+      "sha256": "7cd600ccf26fd5a774730c506c8709c94599d8e98d8953cc8a036b505cc0457b",
+      "source": "old/assets/art/characters/portraits/felix/suspect.png",
+      "runtime": true,
+      "bytes": 229260
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/accept.png",
+      "sha256": "92ad24f6a40b237741f8165ea11bba9a1c7264d51f0b269f1d744ab1df094608",
+      "source": "old/assets/art/characters/portraits/hugo/accept.png",
+      "runtime": true,
+      "bytes": 280734
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/celebrate.png",
+      "sha256": "10ce1c3859b0ee5bbd4d75b121bfabbd14f1afbb9f90510b91a0ec0c97c77fd2",
+      "source": "old/assets/art/characters/portraits/hugo/celebrate.png",
+      "runtime": true,
+      "bytes": 285656
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/embarrassed.png",
+      "sha256": "2f4467c450e7ffc0c2e6684cda01b6117aded5e8353d641dd5756cdc5c254e5c",
+      "source": "old/assets/art/characters/portraits/hugo/embarrassed.png",
+      "runtime": true,
+      "bytes": 269811
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/extra.png",
+      "sha256": "c37df484169f69438e4904e1e8435887e4fee24fc9fbfd14afd5412843897241",
+      "source": "old/assets/art/characters/portraits/hugo/extra.png",
+      "runtime": true,
+      "bytes": 268578
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/focused.png",
+      "sha256": "6b2763fb75127bb0c37636b44c1f422c8ed512fb7ec03c3332e4391d76b89c43",
+      "source": "old/assets/art/characters/portraits/hugo/focused.png",
+      "runtime": true,
+      "bytes": 267866
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/idle.png",
+      "sha256": "d435f2f12f9bec8efbc3cde0d55ea57ee94a49c68df52ea2cccbe60540c72cc7",
+      "source": "old/assets/art/characters/portraits/hugo/idle.png",
+      "runtime": true,
+      "bytes": 277257
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/observe.png",
+      "sha256": "9a84e188eee55a77a847c648488d5e8909e7a11e99fb316bb7975c9637b2f3cb",
+      "source": "old/assets/art/characters/portraits/hugo/observe.png",
+      "runtime": true,
+      "bytes": 284202
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/reveal_react.png",
+      "sha256": "f0cae902a3b8e3d170dd30d0f2384c82f3053f2c3a6bd48bca340874f3e5207e",
+      "source": "old/assets/art/characters/portraits/hugo/reveal_react.png",
+      "runtime": true,
+      "bytes": 281523
+    },
+    {
+      "path": "assets/art/characters/portraits/hugo/suspect.png",
+      "sha256": "00bd7f2b5bc09e3cacc1f9cfdf6b52fd7cca5594ffbf17c11058f2f22db2b2e1",
+      "source": "old/assets/art/characters/portraits/hugo/suspect.png",
+      "runtime": true,
+      "bytes": 273336
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/accept.png",
+      "sha256": "b4b28b0c4bc7c9212019c6c90613c5ecbaca62c9fc25ed5b65b11894db917be5",
+      "source": "old/assets/art/characters/portraits/lada/accept.png",
+      "runtime": true,
+      "bytes": 264818
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/celebrate.png",
+      "sha256": "c0bc21e3272fb2854e75005c95f3548c0964cc82f3e4e27e964e7419ae9552a7",
+      "source": "old/assets/art/characters/portraits/lada/celebrate.png",
+      "runtime": true,
+      "bytes": 277806
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/embarrassed.png",
+      "sha256": "f03849d5d849fa6b1ca79ae5360c0e40d26ba1ed43a2d8577d5e7f1068c54ef9",
+      "source": "old/assets/art/characters/portraits/lada/embarrassed.png",
+      "runtime": true,
+      "bytes": 273693
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/extra.png",
+      "sha256": "ee3794a261ee89095bf40df1ee658401665806e45eb02f95ad46261a4b818a01",
+      "source": "old/assets/art/characters/portraits/lada/extra.png",
+      "runtime": true,
+      "bytes": 265468
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/focused.png",
+      "sha256": "7cd6c1d5a7430d63096e2f8f64359a4b35c9788ee5692427840cbaf29bbccd03",
+      "source": "old/assets/art/characters/portraits/lada/focused.png",
+      "runtime": true,
+      "bytes": 263861
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/idle.png",
+      "sha256": "abc6f0928649f7397e4d21a224958e464edb9466d1c952c7d0b3f267c138a564",
+      "source": "old/assets/art/characters/portraits/lada/idle.png",
+      "runtime": true,
+      "bytes": 273211
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/observe.png",
+      "sha256": "6457a11407531a393f373c50a3e9fbc7466f30507be79651a648ae02a9650aae",
+      "source": "old/assets/art/characters/portraits/lada/observe.png",
+      "runtime": true,
+      "bytes": 263676
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/reveal_react.png",
+      "sha256": "cebf44bbc4552a5ee8f440bf32ea25a6414997fa7e8be521e78566b63f1b3cca",
+      "source": "old/assets/art/characters/portraits/lada/reveal_react.png",
+      "runtime": true,
+      "bytes": 264929
+    },
+    {
+      "path": "assets/art/characters/portraits/lada/suspect.png",
+      "sha256": "d24261b740adceb2a7cc54ba2b298315ad31caffd29a491d6ca7fcc6e96216e0",
+      "source": "old/assets/art/characters/portraits/lada/suspect.png",
+      "runtime": true,
+      "bytes": 263038
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/accept.png",
+      "sha256": "cd0708d36f25957438a9c8e6a9f4059c70d864af56ee989308bea049fb26d9d3",
+      "source": "old/assets/art/characters/portraits/marfa/accept.png",
+      "runtime": true,
+      "bytes": 225903
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/celebrate.png",
+      "sha256": "d80f1e2a36c4432cb869088c2c7983bb57324b38f528b7cebd2cbdb661cf8198",
+      "source": "old/assets/art/characters/portraits/marfa/celebrate.png",
+      "runtime": true,
+      "bytes": 227041
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/embarrassed.png",
+      "sha256": "7dcbc5d0e4bfd254af0f98427c99daaae663248acc1ce47f5f62ed1c470f43c5",
+      "source": "old/assets/art/characters/portraits/marfa/embarrassed.png",
+      "runtime": true,
+      "bytes": 228441
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/extra.png",
+      "sha256": "2b22773d9322d8d658cca85d1367c4dff3cad47e20021f8f98cd60a9d5ddd474",
+      "source": "old/assets/art/characters/portraits/marfa/extra.png",
+      "runtime": true,
+      "bytes": 227268
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/focused.png",
+      "sha256": "da8f659ee9871ca4b947573c997948d050668b823d92dc6485145f55ba2ea20b",
+      "source": "old/assets/art/characters/portraits/marfa/focused.png",
+      "runtime": true,
+      "bytes": 223073
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/idle.png",
+      "sha256": "03d034117b8817297dcf5ae90ae2c450166b9e0c79ecc3e67262b21342135cbb",
+      "source": "old/assets/art/characters/portraits/marfa/idle.png",
+      "runtime": true,
+      "bytes": 226899
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/observe.png",
+      "sha256": "006b8ddf7100ca7ecfa43e23b16b6408a8ecf1770b38827cdb44da9c0f151d0c",
+      "source": "old/assets/art/characters/portraits/marfa/observe.png",
+      "runtime": true,
+      "bytes": 217818
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/reveal_react.png",
+      "sha256": "d6772ee43865608701a0f7131261ecd9c7ffb2d092d3eedc40b82ce22d2632e5",
+      "source": "old/assets/art/characters/portraits/marfa/reveal_react.png",
+      "runtime": true,
+      "bytes": 221434
+    },
+    {
+      "path": "assets/art/characters/portraits/marfa/suspect.png",
+      "sha256": "7f04f4c482781793154bb28075a2630bcba28fef15229dff1c2b55358c14e65c",
+      "source": "old/assets/art/characters/portraits/marfa/suspect.png",
+      "runtime": true,
+      "bytes": 220816
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/accept.png",
+      "sha256": "7aa913badd69a4887c53d572adb5400ab55a84139d4c94122aaca3c7c2d9757e",
+      "source": "old/assets/art/characters/portraits/nika/accept.png",
+      "runtime": true,
+      "bytes": 265805
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/celebrate.png",
+      "sha256": "09a6094be747da73c0ffed09072e5b6b60810609901f44e04420b2d1b668b25e",
+      "source": "old/assets/art/characters/portraits/nika/celebrate.png",
+      "runtime": true,
+      "bytes": 275603
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/embarrassed.png",
+      "sha256": "1b88ff2bc05f6e5cba7826f531ade6c3a1feba6db74e3bb00179f3099193ac43",
+      "source": "old/assets/art/characters/portraits/nika/embarrassed.png",
+      "runtime": true,
+      "bytes": 267650
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/extra.png",
+      "sha256": "58b0c31296f6d0615c134489416e8e5944a5740b77f76095b186c102f057eceb",
+      "source": "old/assets/art/characters/portraits/nika/extra.png",
+      "runtime": true,
+      "bytes": 266041
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/focused.png",
+      "sha256": "3627b5d384e19dc0b6b838744900de64d804c6cab311b21f0e7225ae645c077d",
+      "source": "old/assets/art/characters/portraits/nika/focused.png",
+      "runtime": true,
+      "bytes": 264150
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/idle.png",
+      "sha256": "ea706620bbdddb7d686d5cf7bfe165593f3d3ddc978a9632fa799461ea75d8dd",
+      "source": "old/assets/art/characters/portraits/nika/idle.png",
+      "runtime": true,
+      "bytes": 270538
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/observe.png",
+      "sha256": "e0c0c6eda12c1bb15befcdc3bc9edf41df99302e23d7a3a97c693648a10b91f6",
+      "source": "old/assets/art/characters/portraits/nika/observe.png",
+      "runtime": true,
+      "bytes": 264986
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/reveal_react.png",
+      "sha256": "cab7d1a698a7f415b6c136aabc2c415d2b46b210dab3c84236a7f203cda6d622",
+      "source": "old/assets/art/characters/portraits/nika/reveal_react.png",
+      "runtime": true,
+      "bytes": 266733
+    },
+    {
+      "path": "assets/art/characters/portraits/nika/suspect.png",
+      "sha256": "f8c7a8a8cc8eeb217701e177ee2879aee983205ceb2aa7bf53f9aebb00e34820",
+      "source": "old/assets/art/characters/portraits/nika/suspect.png",
+      "runtime": true,
+      "bytes": 262153
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/accept.png",
+      "sha256": "27200b4468d51804954c16a42fc9030845d862f5be48dee2b13cee3bae30f8bf",
+      "source": "old/assets/art/characters/portraits/plum/accept.png",
+      "runtime": true,
+      "bytes": 226252
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/celebrate.png",
+      "sha256": "64576fa918a847d6db37609c931df031fbf877df9577a502ad5c3e5f3cf756e5",
+      "source": "old/assets/art/characters/portraits/plum/celebrate.png",
+      "runtime": true,
+      "bytes": 231642
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/embarrassed.png",
+      "sha256": "095567f3d6f96eb052c1050f37062542dbf2115ea7ed05443a3df916a756e165",
+      "source": "old/assets/art/characters/portraits/plum/embarrassed.png",
+      "runtime": true,
+      "bytes": 229899
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/extra.png",
+      "sha256": "6b8b975f5a847147290b5d16bfcd268b89c8aac6eaba9d06ce5e769f24b0c2b9",
+      "source": "old/assets/art/characters/portraits/plum/extra.png",
+      "runtime": true,
+      "bytes": 219868
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/focused.png",
+      "sha256": "a434d38693b77706c26f0cc85f207483c7f282cb056a560b5cd3215c3e13160e",
+      "source": "old/assets/art/characters/portraits/plum/focused.png",
+      "runtime": true,
+      "bytes": 215011
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/idle.png",
+      "sha256": "679e73fa72fe237f7a91dca026e82cea21034a2e49474985fad17477aff86809",
+      "source": "old/assets/art/characters/portraits/plum/idle.png",
+      "runtime": true,
+      "bytes": 217975
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/observe.png",
+      "sha256": "360c6969c8f50a61ffb8f9b179fb06a64f8616812dcf2ac3102743c5f0428f9b",
+      "source": "old/assets/art/characters/portraits/plum/observe.png",
+      "runtime": true,
+      "bytes": 215956
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/reveal_react.png",
+      "sha256": "a9a62d9795a51e8f4aebbfea7612b72a52c4694cbf0e8b4f4f43eeb3f870f32b",
+      "source": "old/assets/art/characters/portraits/plum/reveal_react.png",
+      "runtime": true,
+      "bytes": 227262
+    },
+    {
+      "path": "assets/art/characters/portraits/plum/suspect.png",
+      "sha256": "9ebe85ea35921010218f8f767e17bf0b23a778f5e4d19ea4b44604928b4f0971",
+      "source": "old/assets/art/characters/portraits/plum/suspect.png",
+      "runtime": true,
+      "bytes": 211721
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/accept.png",
+      "sha256": "9b8ce2ca21bafdbf381804484bd5413a37d9d559f1fa909ec4dce0f5b4bc75f7",
+      "source": "old/assets/art/characters/portraits/roza/accept.png",
+      "runtime": true,
+      "bytes": 244300
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/celebrate.png",
+      "sha256": "5ef2ad826947e7b36bf3f50438766f5ee66f177fb2ef818ec208a60da093effc",
+      "source": "old/assets/art/characters/portraits/roza/celebrate.png",
+      "runtime": true,
+      "bytes": 248146
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/embarrassed.png",
+      "sha256": "5977b01c64f2fdf945e2512c37bca62102160013a964056452fe399f4e1f345d",
+      "source": "old/assets/art/characters/portraits/roza/embarrassed.png",
+      "runtime": true,
+      "bytes": 241663
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/extra.png",
+      "sha256": "14384833b2e74d896eb774f15499954097298fc8b814d08d38dad496eff8de8e",
+      "source": "old/assets/art/characters/portraits/roza/extra.png",
+      "runtime": true,
+      "bytes": 237149
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/focused.png",
+      "sha256": "e3e98d04a626f22907390917015cf8fb668cb628f6259e2e06eeb73589c5155b",
+      "source": "old/assets/art/characters/portraits/roza/focused.png",
+      "runtime": true,
+      "bytes": 240087
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/idle.png",
+      "sha256": "6f446a2e5bc363da95ea20c7a84cb0e136cd2677f3381f12f4afdfe55e5529f1",
+      "source": "old/assets/art/characters/portraits/roza/idle.png",
+      "runtime": true,
+      "bytes": 233579
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/observe.png",
+      "sha256": "d389cf832b3e6f8e80348b4c3919f7a59237f77cb0b4d70158bf6479a60a99a9",
+      "source": "old/assets/art/characters/portraits/roza/observe.png",
+      "runtime": true,
+      "bytes": 233926
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/reveal_react.png",
+      "sha256": "6240a91e2745b27ec94e03dd17f65ff28391b0c63dc47c52ec58a216b62817a8",
+      "source": "old/assets/art/characters/portraits/roza/reveal_react.png",
+      "runtime": true,
+      "bytes": 240287
+    },
+    {
+      "path": "assets/art/characters/portraits/roza/suspect.png",
+      "sha256": "3b1c1dc303a08c2fea771bb6fddf8b38da8dce2bf7b025b2138ebe8d846fa5aa",
+      "source": "old/assets/art/characters/portraits/roza/suspect.png",
+      "runtime": true,
+      "bytes": 232652
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/accept.png",
+      "sha256": "75a8cf29482b44a7e4de447d6a5fde365e7db7cda90161012a20097bdb4ccfaf",
+      "source": "old/assets/art/characters/portraits/semyon/accept.png",
+      "runtime": true,
+      "bytes": 220218
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/celebrate.png",
+      "sha256": "aa6f8ed7567ffa26e3f9890c8a7829779fd8a2f9f1b0bcd69a5ebb8d5042a8e1",
+      "source": "old/assets/art/characters/portraits/semyon/celebrate.png",
+      "runtime": true,
+      "bytes": 225932
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/embarrassed.png",
+      "sha256": "b23a21ca60c54e152f29265ebff6707888f1a8bacdb53bfa7aadd27a43bbe977",
+      "source": "old/assets/art/characters/portraits/semyon/embarrassed.png",
+      "runtime": true,
+      "bytes": 227987
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/extra.png",
+      "sha256": "37b4b0ff5a364f1f2b25155400a6be7cbf2778066eb6708c9f0d2e007532edf6",
+      "source": "old/assets/art/characters/portraits/semyon/extra.png",
+      "runtime": true,
+      "bytes": 223716
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/focused.png",
+      "sha256": "222e0f12166221d977e389fe1849532a69f66c315fc0ea01d74d68c513f40d97",
+      "source": "old/assets/art/characters/portraits/semyon/focused.png",
+      "runtime": true,
+      "bytes": 219895
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/idle.png",
+      "sha256": "fa3f78800ff32b567420d560b101d1b6667498d02da137cfebbfff65ffc52689",
+      "source": "old/assets/art/characters/portraits/semyon/idle.png",
+      "runtime": true,
+      "bytes": 215731
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/observe.png",
+      "sha256": "9afae1d6aba3eb1ef1d0ff8c0236d14a60083ca54ce42e175dbbc8783c1bce2a",
+      "source": "old/assets/art/characters/portraits/semyon/observe.png",
+      "runtime": true,
+      "bytes": 214604
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/reveal_react.png",
+      "sha256": "7b3e6e1f85583b27e8a207f64c707ebf0012a9aa8bad1bebb556d74c3ca8e20c",
+      "source": "old/assets/art/characters/portraits/semyon/reveal_react.png",
+      "runtime": true,
+      "bytes": 222400
+    },
+    {
+      "path": "assets/art/characters/portraits/semyon/suspect.png",
+      "sha256": "dc3bef6f679c8990a7613a74db79140b536cfe3913ec4f5ca35c05f494040688",
+      "source": "old/assets/art/characters/portraits/semyon/suspect.png",
+      "runtime": true,
+      "bytes": 210767
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/collar_bell.png",
+      "sha256": "d70e265e4e449a7428a823eddb8926e5c6e185b300e40f9894708e47f2f9cbf7",
+      "source": "old/assets/art/characters/rigs/caramelka/collar_bell.png",
+      "runtime": true,
+      "bytes": 89046
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/front_left_leg.png",
+      "sha256": "f4a68c5188987c6424a9bd367c61e273d07b4dc0bbb6602e6020b1e842016607",
+      "source": "old/assets/art/characters/rigs/caramelka/front_left_leg.png",
+      "runtime": true,
+      "bytes": 82020
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/front_right_leg.png",
+      "sha256": "bd447228ec978307fcc8df170651b1ed5a8e18f49708e173c46806657a0f0825",
+      "source": "old/assets/art/characters/rigs/caramelka/front_right_leg.png",
+      "runtime": true,
+      "bytes": 78452
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/head.png",
+      "sha256": "8ddd373c77081f5ccf7684811f026bc26a423f4b69251882a1cf12e1ce41f9a6",
+      "source": "old/assets/art/characters/rigs/caramelka/head.png",
+      "runtime": true,
+      "bytes": 176062
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/hind_left_leg.png",
+      "sha256": "d5603687417477d479475844f1070fe45fc21f207a98e1a09d548ae93e54d81b",
+      "source": "old/assets/art/characters/rigs/caramelka/hind_left_leg.png",
+      "runtime": true,
+      "bytes": 95016
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/hind_right_leg.png",
+      "sha256": "881a0ebaaab03e9898e01dd45a285de1e333cbb1624476a349eaf83a181ea738",
+      "source": "old/assets/art/characters/rigs/caramelka/hind_right_leg.png",
+      "runtime": true,
+      "bytes": 100354
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/horns.png",
+      "sha256": "18b1cf274b7194cdeeaa10e8f7823651f9f5edeb38d356da104e5677cf70bc9b",
+      "source": "old/assets/art/characters/rigs/caramelka/horns.png",
+      "runtime": true,
+      "bytes": 97643
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/tail.png",
+      "sha256": "05a6212743f701a2594873e28dc4a1c30150284dcb900714c0901682b3361eea",
+      "source": "old/assets/art/characters/rigs/caramelka/tail.png",
+      "runtime": true,
+      "bytes": 82087
+    },
+    {
+      "path": "assets/art/characters/rigs/caramelka/torso.png",
+      "sha256": "9cc276739e647305095cb5140776acee7e4ddd7df2dda19e7e785f641ccac508",
+      "source": "old/assets/art/characters/rigs/caramelka/torso.png",
+      "runtime": true,
+      "bytes": 273467
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/accessory.png",
+      "sha256": "7e0dbf5696cfd3658ada7345869daddd96cdabed4ce1c0b20bc9a726cdaace6d",
+      "source": "old/assets/art/characters/rigs/felix/accessory.png",
+      "runtime": true,
+      "bytes": 40080
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/cape.png",
+      "sha256": "f5fc169e99f21993efa3f7665ea85a8fb515f3fd75d291cc87304d80d816c16c",
+      "source": "old/assets/art/characters/rigs/felix/cape.png",
+      "runtime": true,
+      "bytes": 269481
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/head.png",
+      "sha256": "5b2e480e57c32165d66a5f3f857dd634455388028478440a87cf73a75dd4bce3",
+      "source": "old/assets/art/characters/rigs/felix/head.png",
+      "runtime": true,
+      "bytes": 203351
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/left_arm.png",
+      "sha256": "89949eaa20fd48d59db1aedc92c2e23f93e30da648054a94bf47e7ddaf3818f3",
+      "source": "old/assets/art/characters/rigs/felix/left_arm.png",
+      "runtime": true,
+      "bytes": 103843
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/left_leg.png",
+      "sha256": "0ae7822f6447cfb1d70f6f5a095f4614de6a84b2d9b311c229512349cd5184c3",
+      "source": "old/assets/art/characters/rigs/felix/left_leg.png",
+      "runtime": true,
+      "bytes": 79366
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/prop.png",
+      "sha256": "497cbea382eb53a8fa9e96e4d9f44685170bc3503d567948bd72035ca451c695",
+      "source": "old/assets/art/characters/rigs/felix/prop.png",
+      "runtime": true,
+      "bytes": 70442
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/right_arm.png",
+      "sha256": "91ac9a45e47231e05e1ae60aa694c5bdb96a59eaba6eb0a060a81e792d7f642f",
+      "source": "old/assets/art/characters/rigs/felix/right_arm.png",
+      "runtime": true,
+      "bytes": 103616
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/right_leg.png",
+      "sha256": "77f6850f29c479b71c74d3f1a401bd17c5b5551ed63decf6e033f4b5f6e06b05",
+      "source": "old/assets/art/characters/rigs/felix/right_leg.png",
+      "runtime": true,
+      "bytes": 83746
+    },
+    {
+      "path": "assets/art/characters/rigs/felix/torso.png",
+      "sha256": "ca90f9061e0da0fe63192f1cd2803ffc039f9fafe2ebecd89bdb14d6281091f8",
+      "source": "old/assets/art/characters/rigs/felix/torso.png",
+      "runtime": true,
+      "bytes": 144508
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/accessory.png",
+      "sha256": "2a8cc18aaeb022bc77bce494fb585f4440f30317addb03f03a9839db73950bff",
+      "source": "old/assets/art/characters/rigs/hugo/accessory.png",
+      "runtime": true,
+      "bytes": 138404
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/cape.png",
+      "sha256": "e1117bd42d3396f5e650ab217689dbe2e2224f5f7803bceb98f59066abac35b7",
+      "source": "old/assets/art/characters/rigs/hugo/cape.png",
+      "runtime": true,
+      "bytes": 297906
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/head.png",
+      "sha256": "d0e9f36c5813be2411064bb9a6d8d8390a58db6de14ffa8a4c861f2667c1e692",
+      "source": "old/assets/art/characters/rigs/hugo/head.png",
+      "runtime": true,
+      "bytes": 193250
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/left_arm.png",
+      "sha256": "aa39d009769324ee07e082cd13eca9b402f4222a6ce92515b04a8692aa1d04c3",
+      "source": "old/assets/art/characters/rigs/hugo/left_arm.png",
+      "runtime": true,
+      "bytes": 98500
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/left_leg.png",
+      "sha256": "de71cb28c329cea48509bfd27f63cc84fd8db1220a2acfbc62ef74abb466eb6a",
+      "source": "old/assets/art/characters/rigs/hugo/left_leg.png",
+      "runtime": true,
+      "bytes": 94994
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/prop.png",
+      "sha256": "5ff8e2fef9b9744e0a70976d8b0452d1c5e928682371adf553e54ea67bb33673",
+      "source": "old/assets/art/characters/rigs/hugo/prop.png",
+      "runtime": true,
+      "bytes": 75866
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/right_arm.png",
+      "sha256": "9b8f52493ddf62595760bf6c9520e23f3254662670b61cca5c9814e0fc00d3bb",
+      "source": "old/assets/art/characters/rigs/hugo/right_arm.png",
+      "runtime": true,
+      "bytes": 106104
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/right_leg.png",
+      "sha256": "f6d05a5190eb5b167df3409aa9e720e65609a39fca41ea54bd3ece4f6c6790ba",
+      "source": "old/assets/art/characters/rigs/hugo/right_leg.png",
+      "runtime": true,
+      "bytes": 97511
+    },
+    {
+      "path": "assets/art/characters/rigs/hugo/torso.png",
+      "sha256": "442dd3d10bcacc382f50bc5749f27cbee1e3f4f4bfd91393254530aac7f71f2d",
+      "source": "old/assets/art/characters/rigs/hugo/torso.png",
+      "runtime": true,
+      "bytes": 140847
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/accessory.png",
+      "sha256": "0922afd189a2c7d9c14de9d144a936d419d0747b7779e3f36d4727051de1bb37",
+      "source": "old/assets/art/characters/rigs/lada/accessory.png",
+      "runtime": true,
+      "bytes": 92918
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/cape.png",
+      "sha256": "2c7c35e19db182eadb049deaed287c911c81f596f33b7da4d61afd0cbaa4878c",
+      "source": "old/assets/art/characters/rigs/lada/cape.png",
+      "runtime": true,
+      "bytes": 257589
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/head.png",
+      "sha256": "9c6d716e11043632acf9eb715efe95d62288d185929de5536bc041e063b95709",
+      "source": "old/assets/art/characters/rigs/lada/head.png",
+      "runtime": true,
+      "bytes": 304765
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/left_arm.png",
+      "sha256": "238ec855be8fdfdf4974be213756f128d3e19a35ca1a29b608118ecfe4d64104",
+      "source": "old/assets/art/characters/rigs/lada/left_arm.png",
+      "runtime": true,
+      "bytes": 113349
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/left_leg.png",
+      "sha256": "0a165ae7998f950c36a1a2a370987a75d29ac2f1a405be210c9b9970a52e0c24",
+      "source": "old/assets/art/characters/rigs/lada/left_leg.png",
+      "runtime": true,
+      "bytes": 84440
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/prop.png",
+      "sha256": "00017708432c6b0366a316a879b17c722d04ae4451c68c92a3918cc09f18bb26",
+      "source": "old/assets/art/characters/rigs/lada/prop.png",
+      "runtime": true,
+      "bytes": 55999
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/right_arm.png",
+      "sha256": "dcb8123f4ef667efa251c9b96796d5bead07c0477cf6bd05f145f83241c7f1d0",
+      "source": "old/assets/art/characters/rigs/lada/right_arm.png",
+      "runtime": true,
+      "bytes": 94012
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/right_leg.png",
+      "sha256": "84de0f038cdcaa8d1f87a568bb58a3c66a1d933a04a042c739214159cad8ab61",
+      "source": "old/assets/art/characters/rigs/lada/right_leg.png",
+      "runtime": true,
+      "bytes": 87881
+    },
+    {
+      "path": "assets/art/characters/rigs/lada/torso.png",
+      "sha256": "721a1fc269c31c84218c7d0f7b426cb9d2f691d9cc290ad89bcc4c4ab38d37c8",
+      "source": "old/assets/art/characters/rigs/lada/torso.png",
+      "runtime": true,
+      "bytes": 311674
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/accessory.png",
+      "sha256": "f9654bc8ceba2aebe2b1af4fd70eb9c6e54d8d65590d373e47fde4369ff62681",
+      "source": "old/assets/art/characters/rigs/marfa/accessory.png",
+      "runtime": true,
+      "bytes": 83377
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/cape.png",
+      "sha256": "f4ed4ee50e9890a517eb0824f7f3c021076d65941c21beafdc09d27d8039299e",
+      "source": "old/assets/art/characters/rigs/marfa/cape.png",
+      "runtime": true,
+      "bytes": 240808
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/head.png",
+      "sha256": "48498ed5db689f94894ef3850bade09ae32217f8c0107d9c0c9cb12ca7b26c27",
+      "source": "old/assets/art/characters/rigs/marfa/head.png",
+      "runtime": true,
+      "bytes": 186882
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/left_arm.png",
+      "sha256": "a205eeaee87c22b6790f1c8aea51c3555636ab97ee92ed61af69442937f8b2b3",
+      "source": "old/assets/art/characters/rigs/marfa/left_arm.png",
+      "runtime": true,
+      "bytes": 134044
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/left_leg.png",
+      "sha256": "4eb3643abf642e342f700fd82598c22a54dfbbbec63a3d94dbe42323a9683598",
+      "source": "old/assets/art/characters/rigs/marfa/left_leg.png",
+      "runtime": true,
+      "bytes": 108863
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/prop.png",
+      "sha256": "9732b816fe5e24cf60dcbc07d17ccaf634c3318645d8db57c12161cd25861972",
+      "source": "old/assets/art/characters/rigs/marfa/prop.png",
+      "runtime": true,
+      "bytes": 109210
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/right_arm.png",
+      "sha256": "949a2a6dd55ef895dc7bf6d96f8ae2e4173ea7098e93c74f49d2660f0950ba2e",
+      "source": "old/assets/art/characters/rigs/marfa/right_arm.png",
+      "runtime": true,
+      "bytes": 111060
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/right_leg.png",
+      "sha256": "b73f65b884f779fbe53f7f0ea67de9790728d21aa238c775401f08ad87bbfed2",
+      "source": "old/assets/art/characters/rigs/marfa/right_leg.png",
+      "runtime": true,
+      "bytes": 108244
+    },
+    {
+      "path": "assets/art/characters/rigs/marfa/torso.png",
+      "sha256": "4c0d2915662035463ca52f1ed3f62395e3700c9df566c41f8c5659ef5b43304a",
+      "source": "old/assets/art/characters/rigs/marfa/torso.png",
+      "runtime": true,
+      "bytes": 292161
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/accessory.png",
+      "sha256": "a8019e6b3ceac801fd32cb918e190eecd4080aa00f6d7258419aec1b48f93db3",
+      "source": "old/assets/art/characters/rigs/nika/accessory.png",
+      "runtime": true,
+      "bytes": 80204
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/cape.png",
+      "sha256": "306f5734750f8323ba8581d5e4733382264471731ce4b0d90bed2370cd094fcf",
+      "source": "old/assets/art/characters/rigs/nika/cape.png",
+      "runtime": true,
+      "bytes": 179956
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/head.png",
+      "sha256": "e9459166bb88e0165b7ca5b5dbb277ce3d35ad0cc34ef655a0fca1621f4d65b7",
+      "source": "old/assets/art/characters/rigs/nika/head.png",
+      "runtime": true,
+      "bytes": 299908
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/left_arm.png",
+      "sha256": "ccf8453e6e6dea042670142d5fee1dc5cf7f24145cd1f1bf54d4b7392e8cc853",
+      "source": "old/assets/art/characters/rigs/nika/left_arm.png",
+      "runtime": true,
+      "bytes": 113078
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/left_leg.png",
+      "sha256": "c4ee491d1c8d449ddf3fe5fc65a6a771bb46d61d41bcd9aacf0321b111849330",
+      "source": "old/assets/art/characters/rigs/nika/left_leg.png",
+      "runtime": true,
+      "bytes": 118345
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/prop.png",
+      "sha256": "68b880f85c19b43193a5b3c5cd8761ed4010f08bc094f1c510a22b7494bb7d84",
+      "source": "old/assets/art/characters/rigs/nika/prop.png",
+      "runtime": true,
+      "bytes": 141768
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/right_arm.png",
+      "sha256": "c8d98622f743348395396302fbb9d86eb11836b2270bb26cbdba47bee9a1dbd2",
+      "source": "old/assets/art/characters/rigs/nika/right_arm.png",
+      "runtime": true,
+      "bytes": 110592
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/right_leg.png",
+      "sha256": "8c83fae834c86a910a1d9b90023aac285194403ee9c35db8388ea7a92904bcce",
+      "source": "old/assets/art/characters/rigs/nika/right_leg.png",
+      "runtime": true,
+      "bytes": 123708
+    },
+    {
+      "path": "assets/art/characters/rigs/nika/torso.png",
+      "sha256": "f0c8c2be0d8f5bab5dc786d513f394ce723655d421cf0cac96822f94d5205d6c",
+      "source": "old/assets/art/characters/rigs/nika/torso.png",
+      "runtime": true,
+      "bytes": 186066
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/antenna_left.png",
+      "sha256": "2c603e503afef29b5402bdfda523897400c37ecd858be5aac1c1ca51322e2789",
+      "source": "old/assets/art/characters/rigs/plum/antenna_left.png",
+      "runtime": true,
+      "bytes": 98447
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/antenna_right.png",
+      "sha256": "66eacf787f8390e9e86ed67d81fd9c140887827d03fe3186f7d2bd1dc34a97ae",
+      "source": "old/assets/art/characters/rigs/plum/antenna_right.png",
+      "runtime": true,
+      "bytes": 98893
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/bag.png",
+      "sha256": "108b51374f49da0c05ebec265a1f712a85dc8b9354c2c641691cc8e8c1f6b38c",
+      "source": "old/assets/art/characters/rigs/plum/bag.png",
+      "runtime": true,
+      "bytes": 116870
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/body.png",
+      "sha256": "8ff31aa8a16e46f1aa0dc3c9abb6c24cfdd7aa3d38ea2ea15e819d16ab673bea",
+      "source": "old/assets/art/characters/rigs/plum/body.png",
+      "runtime": true,
+      "bytes": 193729
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/foot_left.png",
+      "sha256": "90ec46510c2e3daac0beb3a518ee6045068c26cd81fde49c52ee876e33d881c8",
+      "source": "old/assets/art/characters/rigs/plum/foot_left.png",
+      "runtime": true,
+      "bytes": 47079
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/foot_right.png",
+      "sha256": "24561f5a70b23281fed3c80496e55688be39950e033b1322f706c3033f7a676a",
+      "source": "old/assets/art/characters/rigs/plum/foot_right.png",
+      "runtime": true,
+      "bytes": 48512
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/head.png",
+      "sha256": "55aa9a394a4943d9678f57ed02a02c76a4dbf2ec143f9ffd25858eece54e7fa3",
+      "source": "old/assets/art/characters/rigs/plum/head.png",
+      "runtime": true,
+      "bytes": 195903
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/wing_left.png",
+      "sha256": "5920690dd3905493c070fcb8c1d5823d48829025736577a0c6747905fc9fa47c",
+      "source": "old/assets/art/characters/rigs/plum/wing_left.png",
+      "runtime": true,
+      "bytes": 233395
+    },
+    {
+      "path": "assets/art/characters/rigs/plum/wing_right.png",
+      "sha256": "4c44ae5df52b7cbb5728646c49862254884d6b56d375311a0c0357e30061e2c0",
+      "source": "old/assets/art/characters/rigs/plum/wing_right.png",
+      "runtime": true,
+      "bytes": 203740
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/accessory.png",
+      "sha256": "a8c8676c15f47c278f2a90d05b98f25c1601739741db224c95ce51cccf831757",
+      "source": "old/assets/art/characters/rigs/roza/accessory.png",
+      "runtime": true,
+      "bytes": 85105
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/cape.png",
+      "sha256": "7808bfb8b1aa41cbd9e9afa78044cc616167f2f3c7e69c1ba90176263c71712e",
+      "source": "old/assets/art/characters/rigs/roza/cape.png",
+      "runtime": true,
+      "bytes": 190774
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/head.png",
+      "sha256": "dce59017e7a16426ca07ba001d3fefe8527087df27e45103369cb2a2513b8da7",
+      "source": "old/assets/art/characters/rigs/roza/head.png",
+      "runtime": true,
+      "bytes": 232068
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/left_arm.png",
+      "sha256": "98b2fa563089dd4c6b64083fe212b40223324168f0edc9cc6416d70ecbbb85eb",
+      "source": "old/assets/art/characters/rigs/roza/left_arm.png",
+      "runtime": true,
+      "bytes": 102280
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/left_leg.png",
+      "sha256": "ef1a361905274e94a6db8d765354e3aec45c5a8fca71a24969612f3230baa50b",
+      "source": "old/assets/art/characters/rigs/roza/left_leg.png",
+      "runtime": true,
+      "bytes": 80507
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/prop.png",
+      "sha256": "9ce709d43055c16f77546fcd2147d74d91d2f46ff8c193315434de8b154fe48a",
+      "source": "old/assets/art/characters/rigs/roza/prop.png",
+      "runtime": true,
+      "bytes": 206483
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/right_arm.png",
+      "sha256": "db773ac80fbf72b696bed79dc025c7638563603938e4259f21b5d6ae9d718ea7",
+      "source": "old/assets/art/characters/rigs/roza/right_arm.png",
+      "runtime": true,
+      "bytes": 108421
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/right_leg.png",
+      "sha256": "36227ee7c58ddbbe92d488df0735d9fc85ea2c5bd180926274baf62232698fba",
+      "source": "old/assets/art/characters/rigs/roza/right_leg.png",
+      "runtime": true,
+      "bytes": 77009
+    },
+    {
+      "path": "assets/art/characters/rigs/roza/torso.png",
+      "sha256": "bf095eaf16a7f06bdb077bc5f276d9ed1bb8b601ae1ecad684563578b2e15639",
+      "source": "old/assets/art/characters/rigs/roza/torso.png",
+      "runtime": true,
+      "bytes": 169961
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/accessory.png",
+      "sha256": "0e164c6eb04eda62dab8bdc931a6c76cd964c8c46dd6d8aee4e22bf7867d1dff",
+      "source": "old/assets/art/characters/rigs/semyon/accessory.png",
+      "runtime": true,
+      "bytes": 124992
+    },
+    {
+      "path": "assets/art/environments/ENV01/atmosphere.png",
+      "sha256": "81c0e15da8c05202109576e32d9990ae74188b1c06d4329185f935c114c0f2e1",
+      "source": "old/assets/art/source/environments/ENV01/atmosphere.png",
+      "runtime": true,
+      "bytes": 1002613
+    },
+    {
+      "path": "assets/art/source/environments/ENV01/atmosphere.png",
+      "sha256": "81c0e15da8c05202109576e32d9990ae74188b1c06d4329185f935c114c0f2e1",
+      "source": "old/assets/art/source/environments/ENV01/atmosphere.png",
+      "runtime": false,
+      "bytes": 1002613
+    }
+  ],
+  "audio_exact_originals": [
+    {
+      "path": "assets/audio/production/mus_stinger_chapter.wav",
+      "expected_sha256": "58174590d706f53725f7ad3f6cb30ad828c41afe939cfc7b18802864901d08ee",
+      "sha256": "58174590d706f53725f7ad3f6cb30ad828c41afe939cfc7b18802864901d08ee",
+      "bytes": 691244,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_stinger_chapter.wav"
+    },
+    {
+      "path": "assets/audio/production/mus_stinger_final.wav",
+      "expected_sha256": "783fc89bfebddb2c70a6811aec78c2e1ef9cf1f1212221301c290fd1171d68b7",
+      "sha256": "783fc89bfebddb2c70a6811aec78c2e1ef9cf1f1212221301c290fd1171d68b7",
+      "bytes": 1190444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_stinger_final.wav"
+    },
+    {
+      "path": "assets/audio/production/mus_stinger_law.wav",
+      "expected_sha256": "8c101b2a0485f6500f835e4ffca72e77dda6d8ee79a903801000f567bfeecb13",
+      "sha256": "8c101b2a0485f6500f835e4ffca72e77dda6d8ee79a903801000f567bfeecb13",
+      "bytes": 422444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_stinger_law.wav"
+    },
+    {
+      "path": "assets/audio/production/mus_stinger_proof.wav",
+      "expected_sha256": "ceb7a6011e23519ecb46810c62bb9ee2b5d36749cd6386e1a7a6d38e2fbc7448",
+      "sha256": "ceb7a6011e23519ecb46810c62bb9ee2b5d36749cd6386e1a7a6d38e2fbc7448",
+      "bytes": 288044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_stinger_proof.wav"
+    },
+    {
+      "path": "assets/audio/production/mus_stinger_reveal.wav",
+      "expected_sha256": "a0ccd636a9d29c7facf6ea608fc2780c7afc21080de3896a0facc059843b8fb6",
+      "sha256": "a0ccd636a9d29c7facf6ea608fc2780c7afc21080de3896a0facc059843b8fb6",
+      "bytes": 163244,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_stinger_reveal.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_cloth_a.wav",
+      "expected_sha256": "77215db1d0ea2793ecbcc2835386324da991052d016588deea0da6701a297cf3",
+      "sha256": "77215db1d0ea2793ecbcc2835386324da991052d016588deea0da6701a297cf3",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_cloth_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_cloth_b.wav",
+      "expected_sha256": "86b9930a2cb6a26865c322dafce7e87ded9baa88e1485209c36df2261605c19e",
+      "sha256": "86b9930a2cb6a26865c322dafce7e87ded9baa88e1485209c36df2261605c19e",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_cloth_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_ice_a.wav",
+      "expected_sha256": "3650ec9d6404d3d0b2301398e02d34b643cf95ba8390542ca94f1e1f78dd3bf3",
+      "sha256": "3650ec9d6404d3d0b2301398e02d34b643cf95ba8390542ca94f1e1f78dd3bf3",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_ice_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_ice_b.wav",
+      "expected_sha256": "b2f34c9fa7d6b50dd44fe8911abdfdc2a0c68b26a3af35ffefb42b0bf86a5264",
+      "sha256": "b2f34c9fa7d6b50dd44fe8911abdfdc2a0c68b26a3af35ffefb42b0bf86a5264",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_ice_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_ice_c.wav",
+      "expected_sha256": "bf74e0fd6f96178d60c4979212486de4f566d99d422351020c4380f8ebfddd19",
+      "sha256": "bf74e0fd6f96178d60c4979212486de4f566d99d422351020c4380f8ebfddd19",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_ice_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_stone_a.wav",
+      "expected_sha256": "8cb136ea1463e3e5c98bb9feedb6199f544685d8e67b15ba07bc34260a682788",
+      "sha256": "8cb136ea1463e3e5c98bb9feedb6199f544685d8e67b15ba07bc34260a682788",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_stone_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_stone_b.wav",
+      "expected_sha256": "2d5679ef4fa26afdced06ad7d980359af8f55f01b87857b677ee7ffa872ae80f",
+      "sha256": "2d5679ef4fa26afdced06ad7d980359af8f55f01b87857b677ee7ffa872ae80f",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_stone_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_stone_c.wav",
+      "expected_sha256": "0125dc5076386bb8c6c467f9b120a1f0aa6dce29648e61a9d29facd50cda97e0",
+      "sha256": "0125dc5076386bb8c6c467f9b120a1f0aa6dce29648e61a9d29facd50cda97e0",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_stone_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_wood_a.wav",
+      "expected_sha256": "7eac069e760e58c6988dc168a653350a7cde2d8aeedf506796645be06b92aa01",
+      "sha256": "7eac069e760e58c6988dc168a653350a7cde2d8aeedf506796645be06b92aa01",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_wood_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_wood_b.wav",
+      "expected_sha256": "6995e628ba585b16cb509d7775d0c37fa7385c2eef2c67b5b81d181a0cebdfc0",
+      "sha256": "6995e628ba585b16cb509d7775d0c37fa7385c2eef2c67b5b81d181a0cebdfc0",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_wood_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_actor_step_wood_c.wav",
+      "expected_sha256": "cc0794b0f0ca32146fe54a15bbbe0b6adc97e0e0682202260ed7bcbfad7affa0",
+      "sha256": "cc0794b0f0ca32146fe54a15bbbe0b6adc97e0e0682202260ed7bcbfad7affa0",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_actor_step_wood_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_album_page_a.wav",
+      "expected_sha256": "5cb160bc136553caef69b823b5ec044589e02e2e863bd335d2e652a7caae58bd",
+      "sha256": "5cb160bc136553caef69b823b5ec044589e02e2e863bd335d2e652a7caae58bd",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_album_page_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_album_page_b.wav",
+      "expected_sha256": "722665e552d8f496235d0edd92f446a17f6a82f391c51b9cefe3337543b1635a",
+      "sha256": "722665e552d8f496235d0edd92f446a17f6a82f391c51b9cefe3337543b1635a",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_album_page_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_boat_dock_a.wav",
+      "expected_sha256": "0aafa7bd67f3f76a0fb627ad69dd2f091c63bfdcead3e09357d048ce156e0283",
+      "sha256": "0aafa7bd67f3f76a0fb627ad69dd2f091c63bfdcead3e09357d048ce156e0283",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_boat_dock_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_boat_dock_b.wav",
+      "expected_sha256": "9873f3c65d91f1cdbc91863e521cf02900cf0416563b0f6cf665e331f3604542",
+      "sha256": "9873f3c65d91f1cdbc91863e521cf02900cf0416563b0f6cf665e331f3604542",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_boat_dock_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_boat_move_a.wav",
+      "expected_sha256": "62286de49b792c7c508f1e3cded33440933382d7b650454c2c4033bc7783d30d",
+      "sha256": "62286de49b792c7c508f1e3cded33440933382d7b650454c2c4033bc7783d30d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_boat_move_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_boat_move_b.wav",
+      "expected_sha256": "443caa7c0bdf8c903300fa97436861828a2b99c1a6df359b4a36425281ebc5c2",
+      "sha256": "443caa7c0bdf8c903300fa97436861828a2b99c1a6df359b4a36425281ebc5c2",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_boat_move_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_chapter_open_a.wav",
+      "expected_sha256": "2bfd886ccf98839c26cb0474289d7b7250d3967d05ebb1d3ab189d27d24d26f4",
+      "sha256": "2bfd886ccf98839c26cb0474289d7b7250d3967d05ebb1d3ab189d27d24d26f4",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_chapter_open_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_chapter_open_b.wav",
+      "expected_sha256": "0120d8aa6513e1cf0d0cad9b90b8bc7cf6af598358a951d6b95d734868fbab16",
+      "sha256": "0120d8aa6513e1cf0d0cad9b90b8bc7cf6af598358a951d6b95d734868fbab16",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_chapter_open_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_crowd_clap_a.wav",
+      "expected_sha256": "8457cce5d71caa14cd3212bf46e68b9db153f07187bc009aeff994c7b211eb89",
+      "sha256": "8457cce5d71caa14cd3212bf46e68b9db153f07187bc009aeff994c7b211eb89",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_crowd_clap_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_crowd_clap_b.wav",
+      "expected_sha256": "d85fa9fdc284435a7c349e5fc48048d55cd45b9de48a1084eb9f61fee7171944",
+      "sha256": "d85fa9fdc284435a7c349e5fc48048d55cd45b9de48a1084eb9f61fee7171944",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_crowd_clap_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_fail_recoverable_a.wav",
+      "expected_sha256": "eeef1dd59875d3d51c7524b596f90968b327be661fc343ab90b26b0218ebc4aa",
+      "sha256": "eeef1dd59875d3d51c7524b596f90968b327be661fc343ab90b26b0218ebc4aa",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_fail_recoverable_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_fail_recoverable_b.wav",
+      "expected_sha256": "96a55bf88b10d8b93ebeb3ea9a0ae2f3f95086f1b08cfbba302f6e99c7bde11b",
+      "sha256": "96a55bf88b10d8b93ebeb3ea9a0ae2f3f95086f1b08cfbba302f6e99c7bde11b",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_fail_recoverable_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_goal_complete_a.wav",
+      "expected_sha256": "fbd2796845df5e1c2c61d7dd10205bd8972908b2f0196063dd888cc5b87c715a",
+      "sha256": "fbd2796845df5e1c2c61d7dd10205bd8972908b2f0196063dd888cc5b87c715a",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_goal_complete_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_goal_complete_b.wav",
+      "expected_sha256": "0ac4804477e372f9c06f6582049d312dcbe60fd658c002b143498bbdcfcec8cd",
+      "sha256": "0ac4804477e372f9c06f6582049d312dcbe60fd658c002b143498bbdcfcec8cd",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_goal_complete_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_goat_bell_a.wav",
+      "expected_sha256": "5486e0511221a03ab4e0268b0b71cfb29474a6f78ba03a140f34eca6740ae57c",
+      "sha256": "5486e0511221a03ab4e0268b0b71cfb29474a6f78ba03a140f34eca6740ae57c",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_goat_bell_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_goat_bell_b.wav",
+      "expected_sha256": "43b0ecb338dd4f5a1ea055d5e88ffa7ee89a3291dc1ab8fb120770827866fcd4",
+      "sha256": "43b0ecb338dd4f5a1ea055d5e88ffa7ee89a3291dc1ab8fb120770827866fcd4",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_goat_bell_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_goat_bell_c.wav",
+      "expected_sha256": "0d7a9d4db96acfc22765fa2dd7bdf51cc967e6c8050c0d75a1e34da763f19a26",
+      "sha256": "0d7a9d4db96acfc22765fa2dd7bdf51cc967e6c8050c0d75a1e34da763f19a26",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_goat_bell_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_gugo_ribbon_a.wav",
+      "expected_sha256": "b01546ea61e6935bbbad96ad510d5d1fc530957ecabffcbc48f9d70b16c3cb12",
+      "sha256": "b01546ea61e6935bbbad96ad510d5d1fc530957ecabffcbc48f9d70b16c3cb12",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_gugo_ribbon_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_gugo_ribbon_b.wav",
+      "expected_sha256": "94cbc0af7c3db718b0b39c4665a2b072f9ffbced3e3dddb896c808c80ee221ce",
+      "sha256": "94cbc0af7c3db718b0b39c4665a2b072f9ffbced3e3dddb896c808c80ee221ce",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_gugo_ribbon_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_anchor_up_a.wav",
+      "expected_sha256": "049fbed7af0ad11602e7776413e697c052b166b0e3bf9869fdd3a3af27d19213",
+      "sha256": "049fbed7af0ad11602e7776413e697c052b166b0e3bf9869fdd3a3af27d19213",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_anchor_up_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_anchor_up_b.wav",
+      "expected_sha256": "92fd5ae1ae0f5120d0244878f5c229b06cbddba33bbca46f551245a82f98a4b0",
+      "sha256": "92fd5ae1ae0f5120d0244878f5c229b06cbddba33bbca46f551245a82f98a4b0",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_anchor_up_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_frost_a.wav",
+      "expected_sha256": "21b5171a3fd792af45cffacb929350cfb5417df9e20a1a0a5b70c92cb9ac4db7",
+      "sha256": "21b5171a3fd792af45cffacb929350cfb5417df9e20a1a0a5b70c92cb9ac4db7",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_frost_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_frost_b.wav",
+      "expected_sha256": "f53deb353bef49c251efd7ef90f381ac77deddbbd029bb599699c35e839f1855",
+      "sha256": "f53deb353bef49c251efd7ef90f381ac77deddbbd029bb599699c35e839f1855",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_frost_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_paper_strong_a.wav",
+      "expected_sha256": "66cfe700d2ab4bfee57b1e59165846ce43d5ef03d6dde102b8c44abbf5ab515d",
+      "sha256": "66cfe700d2ab4bfee57b1e59165846ce43d5ef03d6dde102b8c44abbf5ab515d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_paper_strong_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_paper_strong_b.wav",
+      "expected_sha256": "3e3b53371084d3eaf48760e036c89bace9f817af0dc5f2546f679846282c3d9a",
+      "sha256": "3e3b53371084d3eaf48760e036c89bace9f817af0dc5f2546f679846282c3d9a",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_paper_strong_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_paper_strong_c.wav",
+      "expected_sha256": "c1113ce501831b83dfc2f68c86aa6feb44fb798bc49502237698d13eaa5c0312",
+      "sha256": "c1113ce501831b83dfc2f68c86aa6feb44fb798bc49502237698d13eaa5c0312",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_paper_strong_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_stamp_a.wav",
+      "expected_sha256": "17c9064080d28fb932ab9f979a4916e1101dbd43e6413a35140c44007adeb7c3",
+      "sha256": "17c9064080d28fb932ab9f979a4916e1101dbd43e6413a35140c44007adeb7c3",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_stamp_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_stamp_b.wav",
+      "expected_sha256": "ebc86e914079284ba3a5cfec124cc8fa800b4908600a55e032869e8e4fd8dc56",
+      "sha256": "ebc86e914079284ba3a5cfec124cc8fa800b4908600a55e032869e8e4fd8dc56",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_stamp_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_stone_buoyancy_a.wav",
+      "expected_sha256": "86a80160c3a748a90f9cde1151939c3ddb1a4ddadecbc16b6b7ad729e19a214d",
+      "sha256": "86a80160c3a748a90f9cde1151939c3ddb1a4ddadecbc16b6b7ad729e19a214d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_stone_buoyancy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_stone_buoyancy_b.wav",
+      "expected_sha256": "a2fe76b93e2fb9ca1b183e6eccb9d8e782b2861e03018226f22c655b9b5d0739",
+      "sha256": "a2fe76b93e2fb9ca1b183e6eccb9d8e782b2861e03018226f22c655b9b5d0739",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_stone_buoyancy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_water_freeze_a.wav",
+      "expected_sha256": "5f473401dc7b1186637b1668dc83a2bdd8bf75a1923dc148df36c14dd374c34a",
+      "sha256": "5f473401dc7b1186637b1668dc83a2bdd8bf75a1923dc148df36c14dd374c34a",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_water_freeze_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_water_freeze_b.wav",
+      "expected_sha256": "b1a43b1d76b1485d5f513e3846428f9ad934b1e150dc0a6be5fbccff3b097521",
+      "sha256": "b1a43b1d76b1485d5f513e3846428f9ad934b1e150dc0a6be5fbccff3b097521",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_water_freeze_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_water_thaw_a.wav",
+      "expected_sha256": "d50d1e67c72e030af30c8596050f7ec10f9faf5bae1e9d72d7cceafede5eb20e",
+      "sha256": "d50d1e67c72e030af30c8596050f7ec10f9faf5bae1e9d72d7cceafede5eb20e",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_water_thaw_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_water_thaw_b.wav",
+      "expected_sha256": "bc80eb2dbb848a8343b82a81e487761754799da52a5f7dd5c44da2763c3c364a",
+      "sha256": "bc80eb2dbb848a8343b82a81e487761754799da52a5f7dd5c44da2763c3c364a",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_water_thaw_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_wave_a.wav",
+      "expected_sha256": "b6609ecf084200f08db4ca974173677308782e0bc9c5bba92297e31e5a1332a8",
+      "sha256": "b6609ecf084200f08db4ca974173677308782e0bc9c5bba92297e31e5a1332a8",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_wave_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_law_wave_b.wav",
+      "expected_sha256": "8fe767a1f627b620f31582f2305eb0ffe2f3f62787db89272304129d459b153d",
+      "sha256": "8fe767a1f627b620f31582f2305eb0ffe2f3f62787db89272304129d459b153d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_law_wave_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_plum_fly_a.wav",
+      "expected_sha256": "cef0e944206035aedd7f3d0886efe5bb6164db9b60b26fdc1cb330ada35986e4",
+      "sha256": "cef0e944206035aedd7f3d0886efe5bb6164db9b60b26fdc1cb330ada35986e4",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_plum_fly_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_plum_fly_b.wav",
+      "expected_sha256": "c0f3d1cfe0069332c37f23e9e2482b6fd283bde39419ccd96373970c48cad44c",
+      "sha256": "c0f3d1cfe0069332c37f23e9e2482b6fd283bde39419ccd96373970c48cad44c",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_plum_fly_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_clamp_a.wav",
+      "expected_sha256": "d8a6b347f72f9963fe4b11908e20869f11493ea6f25cfcb4206d86d55a9f9b5f",
+      "sha256": "d8a6b347f72f9963fe4b11908e20869f11493ea6f25cfcb4206d86d55a9f9b5f",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_clamp_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_clamp_b.wav",
+      "expected_sha256": "cb4fa48aa336ae2560c37757ec42f2e91203b1e8229902eae21090dd53aed481",
+      "sha256": "cb4fa48aa336ae2560c37757ec42f2e91203b1e8229902eae21090dd53aed481",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_clamp_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_cryo_a.wav",
+      "expected_sha256": "6da29b35aef8955d284dcb1f6268c681230898235aba52b0cb189be5636ed542",
+      "sha256": "6da29b35aef8955d284dcb1f6268c681230898235aba52b0cb189be5636ed542",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_cryo_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_cryo_b.wav",
+      "expected_sha256": "bb1ba03604c5009a3d63b2e3b17c2cd062e24b0d033e3bbcd206d9360db8728e",
+      "sha256": "bb1ba03604c5009a3d63b2e3b17c2cd062e24b0d033e3bbcd206d9360db8728e",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_cryo_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_fire_start_a.wav",
+      "expected_sha256": "b417ed25c8709a845beb7f4df1651b8dd9346fa700c089de5cfc3374b39b9b29",
+      "sha256": "b417ed25c8709a845beb7f4df1651b8dd9346fa700c089de5cfc3374b39b9b29",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_fire_start_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_fire_start_b.wav",
+      "expected_sha256": "e8d10b8944e9d7788d4aefb3041c4ca4192d7b3f6973d28591290a95f81fb0e6",
+      "sha256": "e8d10b8944e9d7788d4aefb3041c4ca4192d7b3f6973d28591290a95f81fb0e6",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_fire_start_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_float_remove_a.wav",
+      "expected_sha256": "207f9e6d3f0a8641ffda69079f69e82f3310c00b8b6e517f639a1226b1320a77",
+      "sha256": "207f9e6d3f0a8641ffda69079f69e82f3310c00b8b6e517f639a1226b1320a77",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_float_remove_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_float_remove_b.wav",
+      "expected_sha256": "aaf35e9b1fb5f7a1195f7e3f850d6ee28a9573730c3e135cbce400c785e81330",
+      "sha256": "aaf35e9b1fb5f7a1195f7e3f850d6ee28a9573730c3e135cbce400c785e81330",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_float_remove_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_frame_a.wav",
+      "expected_sha256": "7e8610e7572bd5a4eac7af33441e44d127667bbdb27e19f6f3068c06d42e30a4",
+      "sha256": "7e8610e7572bd5a4eac7af33441e44d127667bbdb27e19f6f3068c06d42e30a4",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_frame_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_frame_b.wav",
+      "expected_sha256": "9bdeab2ae9650f27a33c6d6b4d3763de1d11ea84f9da9a2ce64b147c9280fa7f",
+      "sha256": "9bdeab2ae9650f27a33c6d6b4d3763de1d11ea84f9da9a2ce64b147c9280fa7f",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_frame_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_kettle_a.wav",
+      "expected_sha256": "4dfc53114ac69bb58d086291be6d5b709c8740233e738c6aca9dac854e01c56d",
+      "sha256": "4dfc53114ac69bb58d086291be6d5b709c8740233e738c6aca9dac854e01c56d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_kettle_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_kettle_b.wav",
+      "expected_sha256": "5d1d29fd4392af417e2031c2f65ed8421596563a1fef14f0adad54527e70653d",
+      "sha256": "5d1d29fd4392af417e2031c2f65ed8421596563a1fef14f0adad54527e70653d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_kettle_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_paper_a.wav",
+      "expected_sha256": "4b38c2898f11e8c23ec481f849b9f923d4cc0af3c149a571b5993aec976b84c2",
+      "sha256": "4b38c2898f11e8c23ec481f849b9f923d4cc0af3c149a571b5993aec976b84c2",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_paper_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_paper_b.wav",
+      "expected_sha256": "3b3a8dd22bfcdd064f0981078c9d7f00c3a02734220c4c5640674789fa0cc045",
+      "sha256": "3b3a8dd22bfcdd064f0981078c9d7f00c3a02734220c4c5640674789fa0cc045",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_paper_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_paper_c.wav",
+      "expected_sha256": "5d743beda8e2d905725b258d2920625162b545d90a6017172a1c4a1d2a28d2c4",
+      "sha256": "5d743beda8e2d905725b258d2920625162b545d90a6017172a1c4a1d2a28d2c4",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_paper_c.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_rope_release_a.wav",
+      "expected_sha256": "faf0ef23bdcf50b5c28ac7960293f5d3c46d6acd5423a2a68d151c0ab14b3548",
+      "sha256": "faf0ef23bdcf50b5c28ac7960293f5d3c46d6acd5423a2a68d151c0ab14b3548",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_rope_release_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_rope_release_b.wav",
+      "expected_sha256": "5c7b058bef4e7f9f03e2caf566726b4de31e1a1f900d04978e5eeead6f3fed50",
+      "sha256": "5c7b058bef4e7f9f03e2caf566726b4de31e1a1f900d04978e5eeead6f3fed50",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_rope_release_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_rope_tension_a.wav",
+      "expected_sha256": "0bb890d30058f98fb89267ae572ecde95d38b8a4eac3402f403147d1ceb09a7d",
+      "sha256": "0bb890d30058f98fb89267ae572ecde95d38b8a4eac3402f403147d1ceb09a7d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_rope_tension_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_rope_tension_b.wav",
+      "expected_sha256": "16dff599a96ea57147dfb8f11d2d90d435a3385d436575dae674e30179f5cb2c",
+      "sha256": "16dff599a96ea57147dfb8f11d2d90d435a3385d436575dae674e30179f5cb2c",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_rope_tension_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_screen_close_a.wav",
+      "expected_sha256": "b78b565c7dc0700fbd6b6d1985b37c5dd7586b444cec6d384aa6e9884400eefe",
+      "sha256": "b78b565c7dc0700fbd6b6d1985b37c5dd7586b444cec6d384aa6e9884400eefe",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_screen_close_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_screen_close_b.wav",
+      "expected_sha256": "4b1f58833d8d169ef648cfc1f232171629a2cc39339acb7bf1de6e641e8f6b3c",
+      "sha256": "4b1f58833d8d169ef648cfc1f232171629a2cc39339acb7bf1de6e641e8f6b3c",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_screen_close_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_screen_open_a.wav",
+      "expected_sha256": "f9195c514a5cd54fc9195a5af2b0c4add2d804cd9227ed23efd30399136f1a2d",
+      "sha256": "f9195c514a5cd54fc9195a5af2b0c4add2d804cd9227ed23efd30399136f1a2d",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_screen_open_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_screen_open_b.wav",
+      "expected_sha256": "9789e06f0950f91fc72f580081c20a10cdcc0b58f3a5c140d8bb76df5baaa885",
+      "sha256": "9789e06f0950f91fc72f580081c20a10cdcc0b58f3a5c140d8bb76df5baaa885",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_screen_open_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_stone_dry_a.wav",
+      "expected_sha256": "0f8dd5d361d5b7439b71d947c73b6c610635d2f86ea1035514b5f76b2ed6b4e8",
+      "sha256": "0f8dd5d361d5b7439b71d947c73b6c610635d2f86ea1035514b5f76b2ed6b4e8",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_stone_dry_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_stone_dry_b.wav",
+      "expected_sha256": "cf026d1090f1998a700042c853bcce7c34ede38c59eec3796e80aab7bfcd9d1e",
+      "sha256": "cf026d1090f1998a700042c853bcce7c34ede38c59eec3796e80aab7bfcd9d1e",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_stone_dry_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_stone_water_a.wav",
+      "expected_sha256": "1abc218855cad024f5d3fd29fe506f8ae82cea77aa5b5f0fc591918b9e40e46f",
+      "sha256": "1abc218855cad024f5d3fd29fe506f8ae82cea77aa5b5f0fc591918b9e40e46f",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_stone_water_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_stone_water_b.wav",
+      "expected_sha256": "4468ffb425ea6d43727ea9711574ba02691434ce53bb71b6d782cac66fb0e751",
+      "sha256": "4468ffb425ea6d43727ea9711574ba02691434ce53bb71b6d782cac66fb0e751",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_stone_water_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_weight_a.wav",
+      "expected_sha256": "ecf7e986ff87b08ff3f9b64807d74d7ec38e6b0e1678f82465696dcccc388ff0",
+      "sha256": "ecf7e986ff87b08ff3f9b64807d74d7ec38e6b0e1678f82465696dcccc388ff0",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_weight_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_prop_weight_b.wav",
+      "expected_sha256": "2d828facf541d5c670c3d0b6d546bf32be35aa3b21776f147ff6d3d1ebe3c391",
+      "sha256": "2d828facf541d5c670c3d0b6d546bf32be35aa3b21776f147ff6d3d1ebe3c391",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_prop_weight_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_back_a.wav",
+      "expected_sha256": "f0154ab3c8f533d749b3892acd9bc9ef195ced215fa7db0b18a2224c5e5e9b20",
+      "sha256": "f0154ab3c8f533d749b3892acd9bc9ef195ced215fa7db0b18a2224c5e5e9b20",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_back_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_back_b.wav",
+      "expected_sha256": "0e3b33a5aa8903ef62862688d37f73345ea515afdaf5fce4021087f964e905f4",
+      "sha256": "0e3b33a5aa8903ef62862688d37f73345ea515afdaf5fce4021087f964e905f4",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_back_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_close_a.wav",
+      "expected_sha256": "32b84c98b00dc7eebaa121bde470c5850626772bee1f0ce376d9c5f3909f484d",
+      "sha256": "32b84c98b00dc7eebaa121bde470c5850626772bee1f0ce376d9c5f3909f484d",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_close_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_close_b.wav",
+      "expected_sha256": "2c7313d5955e739f1c9351f4c7d2377bd340a3ba96178f904a1941c768936c39",
+      "sha256": "2c7313d5955e739f1c9351f4c7d2377bd340a3ba96178f904a1941c768936c39",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_close_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_confirm_a.wav",
+      "expected_sha256": "1a761a03ee93e86f510c4e3afbb534a5c9a09150f1527b01ddf50a9128b86f7d",
+      "sha256": "1a761a03ee93e86f510c4e3afbb534a5c9a09150f1527b01ddf50a9128b86f7d",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_confirm_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_confirm_b.wav",
+      "expected_sha256": "038272d0931ebb73da14179a6109f91c8d643bfa4e62e506a826f46ff129d946",
+      "sha256": "038272d0931ebb73da14179a6109f91c8d643bfa4e62e506a826f46ff129d946",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_confirm_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_drop_invalid_a.wav",
+      "expected_sha256": "1fa23298c77e9b82ef2f08c43de903e033ec5086158e04a88609f15ec23366ff",
+      "sha256": "1fa23298c77e9b82ef2f08c43de903e033ec5086158e04a88609f15ec23366ff",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_drop_invalid_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_drop_invalid_b.wav",
+      "expected_sha256": "16c6147dbe0172e96a5e704bb350523bfc7ef4c5761618059911f75db08d97bd",
+      "sha256": "16c6147dbe0172e96a5e704bb350523bfc7ef4c5761618059911f75db08d97bd",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_drop_invalid_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_drop_valid_a.wav",
+      "expected_sha256": "c5679eaf718d5bf940bc52a033f28f320a883fe779c4e2592866018b134d5e53",
+      "sha256": "c5679eaf718d5bf940bc52a033f28f320a883fe779c4e2592866018b134d5e53",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_drop_valid_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_drop_valid_b.wav",
+      "expected_sha256": "93a516d4e8ec9bc895b3c190663aaba42bac743b1811fb8284192edd0b225793",
+      "sha256": "93a516d4e8ec9bc895b3c190663aaba42bac743b1811fb8284192edd0b225793",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_drop_valid_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_hint_a.wav",
+      "expected_sha256": "21eef143373145474e5b9456a3af5b81b1edf315cc069c1e3878ef053736c2e2",
+      "sha256": "21eef143373145474e5b9456a3af5b81b1edf315cc069c1e3878ef053736c2e2",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_hint_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_hint_b.wav",
+      "expected_sha256": "13c0bd25fb6ce1c0daf5174efdfa0c7ff02d09cf1127232c6b9afc88c99bd2d4",
+      "sha256": "13c0bd25fb6ce1c0daf5174efdfa0c7ff02d09cf1127232c6b9afc88c99bd2d4",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_hint_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_open_a.wav",
+      "expected_sha256": "a2a1ba9a42f1fc42a56020515339810cad941aa5be4a3a4a4f46ff36c8092fd8",
+      "sha256": "a2a1ba9a42f1fc42a56020515339810cad941aa5be4a3a4a4f46ff36c8092fd8",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_open_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_open_b.wav",
+      "expected_sha256": "81f7e5fec93b5e39516152b2ff23ef8f29b53a55ca09dcce48493b06e45de640",
+      "sha256": "81f7e5fec93b5e39516152b2ff23ef8f29b53a55ca09dcce48493b06e45de640",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_open_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_select_a.wav",
+      "expected_sha256": "dc173a9d52ad50a30f37c57e528edb0958b916b1ae8ae34bd1dfac30b3d37875",
+      "sha256": "dc173a9d52ad50a30f37c57e528edb0958b916b1ae8ae34bd1dfac30b3d37875",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_select_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_select_b.wav",
+      "expected_sha256": "20e03073aacbc86952a2246940942212c505ddb1c77d1d5d3348b6f7233db6dc",
+      "sha256": "20e03073aacbc86952a2246940942212c505ddb1c77d1d5d3348b6f7233db6dc",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_select_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_star_a.wav",
+      "expected_sha256": "87b80e3cf56ded217e2d8c8dbb95c6e7a0aedc377970434b1c6dc1bb5221e774",
+      "sha256": "87b80e3cf56ded217e2d8c8dbb95c6e7a0aedc377970434b1c6dc1bb5221e774",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_star_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_star_b.wav",
+      "expected_sha256": "564236ed127b64616de4e1b17bb5bdf6e096f364bb52c7f183cfb13a4c297d93",
+      "sha256": "564236ed127b64616de4e1b17bb5bdf6e096f364bb52c7f183cfb13a4c297d93",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_star_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_undo_a.wav",
+      "expected_sha256": "c104ec9367ea003820650639a4522256c408877bc33255118c339235ebf8ecaf",
+      "sha256": "c104ec9367ea003820650639a4522256c408877bc33255118c339235ebf8ecaf",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_undo_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_ui_undo_b.wav",
+      "expected_sha256": "24ae41360dd11c795d907543bfaf9c1f1231c494a467c00e608833584305c4c4",
+      "sha256": "24ae41360dd11c795d907543bfaf9c1f1231c494a467c00e608833584305c4c4",
+      "bytes": 17324,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_ui_undo_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_accept_a.wav",
+      "expected_sha256": "5e6695007f056fc403337679adc12235d891e3d286b4c982c41ec8cd76349614",
+      "sha256": "5e6695007f056fc403337679adc12235d891e3d286b4c982c41ec8cd76349614",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_accept_b.wav",
+      "expected_sha256": "c37580003e605472fecb03925fbd3971436e9e3dd015b05b09f4b50f19954aaf",
+      "sha256": "c37580003e605472fecb03925fbd3971436e9e3dd015b05b09f4b50f19954aaf",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_gather_a.wav",
+      "expected_sha256": "4311c175241e07c6796adeaad55c5f84d5e66849a9febce44ccfe9fa67d39319",
+      "sha256": "4311c175241e07c6796adeaad55c5f84d5e66849a9febce44ccfe9fa67d39319",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_gather_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_gather_b.wav",
+      "expected_sha256": "5bc6d90add0cfde64cc1d1b0b3fee332183ccbc7a1226cfd7586853217257325",
+      "sha256": "5bc6d90add0cfde64cc1d1b0b3fee332183ccbc7a1226cfd7586853217257325",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_gather_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_reveal_a.wav",
+      "expected_sha256": "62abadeaff0bad7722af19a67ef99d6d949eb4092a20c9126b496c93c9cf1014",
+      "sha256": "62abadeaff0bad7722af19a67ef99d6d949eb4092a20c9126b496c93c9cf1014",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_reveal_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_reveal_b.wav",
+      "expected_sha256": "e0d0a2db43d3ddbc22906e35c8fe7d83376f93adb1fe9bd44f16268abad890cc",
+      "sha256": "e0d0a2db43d3ddbc22906e35c8fe7d83376f93adb1fe9bd44f16268abad890cc",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_reveal_b.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_suspect_a.wav",
+      "expected_sha256": "30278189c64f85fc17b608fe171b65d96bc9d33c0ca40a4775bf788a478643c8",
+      "sha256": "30278189c64f85fc17b608fe171b65d96bc9d33c0ca40a4775bf788a478643c8",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_suspect_a.wav"
+    },
+    {
+      "path": "assets/audio/production/sfx_witness_suspect_b.wav",
+      "expected_sha256": "5ae63ce95b5b6a2b9eaca77548b267dd4412906dc13160fc502343ce3174a8ce",
+      "sha256": "5ae63ce95b5b6a2b9eaca77548b267dd4412906dc13160fc502343ce3174a8ce",
+      "bytes": 62444,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/sfx_witness_suspect_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_accept_a.wav",
+      "expected_sha256": "0b41dc4c5fceb3f869b00ad3e8719dbb0da99c26008d84bd12d102599d1f15c2",
+      "sha256": "0b41dc4c5fceb3f869b00ad3e8719dbb0da99c26008d84bd12d102599d1f15c2",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_accept_b.wav",
+      "expected_sha256": "ac62eb701928be1b5240551dc4df838946d1db810266eb97728660882f63081d",
+      "sha256": "ac62eb701928be1b5240551dc4df838946d1db810266eb97728660882f63081d",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_curious_a.wav",
+      "expected_sha256": "de97083a3b8860382598071aeea6996c2f7b45a0f3b8fe1d11a6e9655b391b7c",
+      "sha256": "de97083a3b8860382598071aeea6996c2f7b45a0f3b8fe1d11a6e9655b391b7c",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_curious_b.wav",
+      "expected_sha256": "20b4abf55ef839c7979a11b9846bb22d50e431a1d3630bc6a8e7276590cf7206",
+      "sha256": "20b4abf55ef839c7979a11b9846bb22d50e431a1d3630bc6a8e7276590cf7206",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_doubt_a.wav",
+      "expected_sha256": "87486db54ac185212328408fb5ca80a62a97f1a96b1ee3a9dd6d0c9843304615",
+      "sha256": "87486db54ac185212328408fb5ca80a62a97f1a96b1ee3a9dd6d0c9843304615",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_doubt_b.wav",
+      "expected_sha256": "21faa1b2591f4cf81129d8c71377cbaec8d9709b85c6042de65879a1055063da",
+      "sha256": "21faa1b2591f4cf81129d8c71377cbaec8d9709b85c6042de65879a1055063da",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_joy_a.wav",
+      "expected_sha256": "42cb4269619e251657d5c4c7b9037f1f7f380c5f31b1e3c2faea5aec54aad184",
+      "sha256": "42cb4269619e251657d5c4c7b9037f1f7f380c5f31b1e3c2faea5aec54aad184",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_joy_b.wav",
+      "expected_sha256": "0da35327e16b0dc66a27f1b750f49cc00ddfd848c6f590ad4606b8f0fe1920c5",
+      "sha256": "0da35327e16b0dc66a27f1b750f49cc00ddfd848c6f590ad4606b8f0fe1920c5",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_surprise_a.wav",
+      "expected_sha256": "78958c5af966e9a30e0aa3f3506600f1dde075b287d55aa7c5d181c47f58c0a2",
+      "sha256": "78958c5af966e9a30e0aa3f3506600f1dde075b287d55aa7c5d181c47f58c0a2",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch01_surprise_b.wav",
+      "expected_sha256": "ade51553efcce21514e053ecc5744b91b11ffb1342da08787881be8cee111897",
+      "sha256": "ade51553efcce21514e053ecc5744b91b11ffb1342da08787881be8cee111897",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch01_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_accept_a.wav",
+      "expected_sha256": "d16f62cdaabc989ed1eb128e3b22feeaba11e67e9a326cded2ed29d9d3146475",
+      "sha256": "d16f62cdaabc989ed1eb128e3b22feeaba11e67e9a326cded2ed29d9d3146475",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_accept_b.wav",
+      "expected_sha256": "94091361a3f409289f9c6e951656f06c37250fcd6dd0f0d0780950204fa7ec8f",
+      "sha256": "94091361a3f409289f9c6e951656f06c37250fcd6dd0f0d0780950204fa7ec8f",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_curious_a.wav",
+      "expected_sha256": "f685b69491bcd18dbfcf4ce5fc3aea9fb6323efdece692a25dac77cca0dce7bb",
+      "sha256": "f685b69491bcd18dbfcf4ce5fc3aea9fb6323efdece692a25dac77cca0dce7bb",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_curious_b.wav",
+      "expected_sha256": "a92ba65cef280248327ee3fffb12ca01eb3e07fd8bf9c1df1b397a2ff1716bec",
+      "sha256": "a92ba65cef280248327ee3fffb12ca01eb3e07fd8bf9c1df1b397a2ff1716bec",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_doubt_a.wav",
+      "expected_sha256": "3b99f0380dde2adbe8434b3e055af46c2fe9a877cdc67077d949bcd7c6da93b7",
+      "sha256": "3b99f0380dde2adbe8434b3e055af46c2fe9a877cdc67077d949bcd7c6da93b7",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_doubt_b.wav",
+      "expected_sha256": "d54a6ac509ff9c829a9ea81b9f31db297cd7f1075fa23c93c21e140e9169ed53",
+      "sha256": "d54a6ac509ff9c829a9ea81b9f31db297cd7f1075fa23c93c21e140e9169ed53",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_joy_a.wav",
+      "expected_sha256": "015ef600d261c6cc0a90329ffeaad910835c31725b4e03acca365d3f2559266a",
+      "sha256": "015ef600d261c6cc0a90329ffeaad910835c31725b4e03acca365d3f2559266a",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_joy_b.wav",
+      "expected_sha256": "87ba960f921c599802080b5f0bf77662fa32a07ba3c5ef684c60ad677b80f778",
+      "sha256": "87ba960f921c599802080b5f0bf77662fa32a07ba3c5ef684c60ad677b80f778",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_surprise_a.wav",
+      "expected_sha256": "604b8df3b3daf90e872aeeabcc9d3ae5060f9448564e3a4b83f44b13d06ad71f",
+      "sha256": "604b8df3b3daf90e872aeeabcc9d3ae5060f9448564e3a4b83f44b13d06ad71f",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch02_surprise_b.wav",
+      "expected_sha256": "e5ab9eb89c7786547ea7865b2a7d3f6d59685bf76b98060aabb76e046ba3f896",
+      "sha256": "e5ab9eb89c7786547ea7865b2a7d3f6d59685bf76b98060aabb76e046ba3f896",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch02_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_accept_a.wav",
+      "expected_sha256": "78f45479df15c539670556bbde2feaa62a2888447d31443964273cbd95569a64",
+      "sha256": "78f45479df15c539670556bbde2feaa62a2888447d31443964273cbd95569a64",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_accept_b.wav",
+      "expected_sha256": "29af7b6d130617fdb2d40120aabf1383fe260a6695304b0f6ba21843dfbd04d1",
+      "sha256": "29af7b6d130617fdb2d40120aabf1383fe260a6695304b0f6ba21843dfbd04d1",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_curious_a.wav",
+      "expected_sha256": "1f9138eeee6641a16ef44d3c6493f0bc1f4a5e52424d0a24d7d805a3b2c0788b",
+      "sha256": "1f9138eeee6641a16ef44d3c6493f0bc1f4a5e52424d0a24d7d805a3b2c0788b",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_curious_b.wav",
+      "expected_sha256": "3a4a6323456269e11ed0a59fd867b75fec1ab46af21c53d877234207b9c3f06d",
+      "sha256": "3a4a6323456269e11ed0a59fd867b75fec1ab46af21c53d877234207b9c3f06d",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_doubt_a.wav",
+      "expected_sha256": "eaf14e901afafffb573b73947ba46ddfdd7704781cf8015448f6fbe7e14fd3b7",
+      "sha256": "eaf14e901afafffb573b73947ba46ddfdd7704781cf8015448f6fbe7e14fd3b7",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_doubt_b.wav",
+      "expected_sha256": "c6e491354a134131b0e80d4e510868ace65d8a87d956c50fbfd6f158441f4d55",
+      "sha256": "c6e491354a134131b0e80d4e510868ace65d8a87d956c50fbfd6f158441f4d55",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_joy_a.wav",
+      "expected_sha256": "96a2a0837edd605f608d84cf962548ac02e19a866033fa3648f2592aa2c0cd29",
+      "sha256": "96a2a0837edd605f608d84cf962548ac02e19a866033fa3648f2592aa2c0cd29",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_joy_b.wav",
+      "expected_sha256": "223eafecb3688f517e1dbb89fb05c4034c083408887151142231400bdfa8c589",
+      "sha256": "223eafecb3688f517e1dbb89fb05c4034c083408887151142231400bdfa8c589",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_surprise_a.wav",
+      "expected_sha256": "a08da4c1e6ebcba9f0073e519b0715ea728821fdf0bd23e38e7d3bb01700e91e",
+      "sha256": "a08da4c1e6ebcba9f0073e519b0715ea728821fdf0bd23e38e7d3bb01700e91e",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch03_surprise_b.wav",
+      "expected_sha256": "4f0634ebba7c7b551f7e4204e63dffda5fc47e38226d312ffb3c7ed93bbefedc",
+      "sha256": "4f0634ebba7c7b551f7e4204e63dffda5fc47e38226d312ffb3c7ed93bbefedc",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch03_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_accept_a.wav",
+      "expected_sha256": "e5d6fe9490fdc9e6cc4c673bf0135452ff47ab9e08f33aab75670fb9027abf2e",
+      "sha256": "e5d6fe9490fdc9e6cc4c673bf0135452ff47ab9e08f33aab75670fb9027abf2e",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_accept_b.wav",
+      "expected_sha256": "6c7d9c4348fdb7d53903187189c2a208f5a76242221bf3fbe6a7978477a24771",
+      "sha256": "6c7d9c4348fdb7d53903187189c2a208f5a76242221bf3fbe6a7978477a24771",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_curious_a.wav",
+      "expected_sha256": "9bfca5e852405bb07e293c52b27d38e2be5960cb9a2d39e9c14a07936b34a937",
+      "sha256": "9bfca5e852405bb07e293c52b27d38e2be5960cb9a2d39e9c14a07936b34a937",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_curious_b.wav",
+      "expected_sha256": "91bf4817c79786e01198d3155ee582aeb9bb1d5e05794d2bc97aab60d7333546",
+      "sha256": "91bf4817c79786e01198d3155ee582aeb9bb1d5e05794d2bc97aab60d7333546",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_doubt_a.wav",
+      "expected_sha256": "db846e0bd8b8d68536135743c5bbd7b0b767a65557f2ec03282a0023da13abfb",
+      "sha256": "db846e0bd8b8d68536135743c5bbd7b0b767a65557f2ec03282a0023da13abfb",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_doubt_b.wav",
+      "expected_sha256": "684d8c0ffc585f7f8fb862381dbae573e0c8763ee85f41b80d3b4bb819b023bd",
+      "sha256": "684d8c0ffc585f7f8fb862381dbae573e0c8763ee85f41b80d3b4bb819b023bd",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_joy_a.wav",
+      "expected_sha256": "4e6491681f2cff32a5327e64f2f925679a0ed14378a27ccfb3db873b8f368caf",
+      "sha256": "4e6491681f2cff32a5327e64f2f925679a0ed14378a27ccfb3db873b8f368caf",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_joy_b.wav",
+      "expected_sha256": "9ec6a1ee0a70537424e14380ad6859ed2acd9dd9625b1ec8fdbdbe1bc20a0555",
+      "sha256": "9ec6a1ee0a70537424e14380ad6859ed2acd9dd9625b1ec8fdbdbe1bc20a0555",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_surprise_a.wav",
+      "expected_sha256": "83fb0618535efc81bc60d891bc62434d984b0496b565ad9395cdc0fc5c055d4a",
+      "sha256": "83fb0618535efc81bc60d891bc62434d984b0496b565ad9395cdc0fc5c055d4a",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch04_surprise_b.wav",
+      "expected_sha256": "63267e83371249195c2665c65322c47271534777aa586e86d0b42c5a4f99cd8a",
+      "sha256": "63267e83371249195c2665c65322c47271534777aa586e86d0b42c5a4f99cd8a",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch04_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_accept_a.wav",
+      "expected_sha256": "ff57d61dd552b1fcdd8cbbe1b53945e80c2d0fb71792f8458bca6dbea08864aa",
+      "sha256": "ff57d61dd552b1fcdd8cbbe1b53945e80c2d0fb71792f8458bca6dbea08864aa",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_accept_b.wav",
+      "expected_sha256": "0c31be1ea242dc23156e0eb5c99c1855bc19c9c9c172697c396dee98d91f5b24",
+      "sha256": "0c31be1ea242dc23156e0eb5c99c1855bc19c9c9c172697c396dee98d91f5b24",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_curious_a.wav",
+      "expected_sha256": "b9e51ce2b0ea95148a9ab5352842428215b53b535120cf72188d8326b1fd0480",
+      "sha256": "b9e51ce2b0ea95148a9ab5352842428215b53b535120cf72188d8326b1fd0480",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_curious_b.wav",
+      "expected_sha256": "6bc1188679e7d61dcc4b9862b3b552fec293aaf344718f4156ebdcc3df6b62bb",
+      "sha256": "6bc1188679e7d61dcc4b9862b3b552fec293aaf344718f4156ebdcc3df6b62bb",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_doubt_a.wav",
+      "expected_sha256": "89254dd9c31974728629b68c96c5f7c23e191214d95d05326c8a2bde5fab8ba0",
+      "sha256": "89254dd9c31974728629b68c96c5f7c23e191214d95d05326c8a2bde5fab8ba0",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_doubt_b.wav",
+      "expected_sha256": "ab4de13fd809a319f50d702720069bdd751fde7e08a63f936046c09d0fa04f34",
+      "sha256": "ab4de13fd809a319f50d702720069bdd751fde7e08a63f936046c09d0fa04f34",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_joy_a.wav",
+      "expected_sha256": "39571acf0c3372429e658535de269fa95dc14d63c1d514e375a9635e548ec04b",
+      "sha256": "39571acf0c3372429e658535de269fa95dc14d63c1d514e375a9635e548ec04b",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_joy_b.wav",
+      "expected_sha256": "b1becf11da7bdb7cf8d658a1baedf18dac4f8a75153d1f3da31cc45fc06cac48",
+      "sha256": "b1becf11da7bdb7cf8d658a1baedf18dac4f8a75153d1f3da31cc45fc06cac48",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_surprise_a.wav",
+      "expected_sha256": "078751def78992ad754e8788e11a3e47583c886f577d6f36050d3eb6ba06c400",
+      "sha256": "078751def78992ad754e8788e11a3e47583c886f577d6f36050d3eb6ba06c400",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch05_surprise_b.wav",
+      "expected_sha256": "9fcb4755ee5b4add78d5f65f6868853bc81da564e329f7f0b4dd158eadf3487b",
+      "sha256": "9fcb4755ee5b4add78d5f65f6868853bc81da564e329f7f0b4dd158eadf3487b",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch05_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_accept_a.wav",
+      "expected_sha256": "1d7283f73a72ba78831129c6cf2f99abc2da12144187bfd32b295b383966e5df",
+      "sha256": "1d7283f73a72ba78831129c6cf2f99abc2da12144187bfd32b295b383966e5df",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_accept_b.wav",
+      "expected_sha256": "c8b87672daf2c7ded985eb57a793b2dcac49f7c4318838abef94e4ce168d1698",
+      "sha256": "c8b87672daf2c7ded985eb57a793b2dcac49f7c4318838abef94e4ce168d1698",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_curious_a.wav",
+      "expected_sha256": "a47f09a64d34ed6def8b3888304ee3ab2394918ebe6802b4d70a7255916509cf",
+      "sha256": "a47f09a64d34ed6def8b3888304ee3ab2394918ebe6802b4d70a7255916509cf",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_curious_b.wav",
+      "expected_sha256": "9b8dd77c28c665cccb96432181eaf7e27d3b4efbfd7dfc693dab62fbdc7a5cbf",
+      "sha256": "9b8dd77c28c665cccb96432181eaf7e27d3b4efbfd7dfc693dab62fbdc7a5cbf",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_doubt_a.wav",
+      "expected_sha256": "ab179e60d439cf8e2ecde43ee58f0f52e6fd48797e523a9570e791de6b67f4ef",
+      "sha256": "ab179e60d439cf8e2ecde43ee58f0f52e6fd48797e523a9570e791de6b67f4ef",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_doubt_b.wav",
+      "expected_sha256": "b3de85914385211bdceea11a7962aafeb7d8b023cd9b799c424d7c99ec3e64cb",
+      "sha256": "b3de85914385211bdceea11a7962aafeb7d8b023cd9b799c424d7c99ec3e64cb",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_joy_a.wav",
+      "expected_sha256": "dbe51d282b6cab3ebdf0d32e0549b089b9164ea80d58f6247f4555a50dd29174",
+      "sha256": "dbe51d282b6cab3ebdf0d32e0549b089b9164ea80d58f6247f4555a50dd29174",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_joy_b.wav",
+      "expected_sha256": "7dde7abc92d9114cdb42fabaaa771be734fe644e30811a85f72b1e492f7300b3",
+      "sha256": "7dde7abc92d9114cdb42fabaaa771be734fe644e30811a85f72b1e492f7300b3",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_surprise_a.wav",
+      "expected_sha256": "0555b70641b183bcdf0c6ec8132cbdd37343f3c9417582f94177237f366f2a5c",
+      "sha256": "0555b70641b183bcdf0c6ec8132cbdd37343f3c9417582f94177237f366f2a5c",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch06_surprise_b.wav",
+      "expected_sha256": "c3b171daefd628a7b09a4c0023c6569369bfe5195cd4c8760c263d67474bdab7",
+      "sha256": "c3b171daefd628a7b09a4c0023c6569369bfe5195cd4c8760c263d67474bdab7",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch06_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_accept_a.wav",
+      "expected_sha256": "61599b32785cb9a46a6343192293fecbe8c807aca401b4cc293e5dd7ceb430c4",
+      "sha256": "61599b32785cb9a46a6343192293fecbe8c807aca401b4cc293e5dd7ceb430c4",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_accept_b.wav",
+      "expected_sha256": "47a5f1537928f5380430a869451993cf4dbb4a477b26890f7a9c55e48c06e7e5",
+      "sha256": "47a5f1537928f5380430a869451993cf4dbb4a477b26890f7a9c55e48c06e7e5",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_curious_a.wav",
+      "expected_sha256": "f4dde80a8c580c2bf3b6e1f7f938d73cda0bba79d0d2363f15b5e65a3c59aef7",
+      "sha256": "f4dde80a8c580c2bf3b6e1f7f938d73cda0bba79d0d2363f15b5e65a3c59aef7",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_curious_b.wav",
+      "expected_sha256": "0002a05faf949f066f2253711eb5335658ad8fee3e5050c2b69ce85a41354deb",
+      "sha256": "0002a05faf949f066f2253711eb5335658ad8fee3e5050c2b69ce85a41354deb",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_doubt_a.wav",
+      "expected_sha256": "63f75cef437bb405070edd69ad4fd3a99b6d58cd9a9c76577bdc619a78a0b3ea",
+      "sha256": "63f75cef437bb405070edd69ad4fd3a99b6d58cd9a9c76577bdc619a78a0b3ea",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_doubt_b.wav",
+      "expected_sha256": "9a9aa4c842c971dea0dc1a5fb18a4f6058803881d2c41dded6fef6706e574483",
+      "sha256": "9a9aa4c842c971dea0dc1a5fb18a4f6058803881d2c41dded6fef6706e574483",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_joy_a.wav",
+      "expected_sha256": "927c84e2a1455741fc124b6c28a34273acf31d087ad1c9667150d3868849518f",
+      "sha256": "927c84e2a1455741fc124b6c28a34273acf31d087ad1c9667150d3868849518f",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_joy_b.wav",
+      "expected_sha256": "b96d4a1cf3de8da32da340e461beaec9a685eb49d746814f994a7b942d267adf",
+      "sha256": "b96d4a1cf3de8da32da340e461beaec9a685eb49d746814f994a7b942d267adf",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_surprise_a.wav",
+      "expected_sha256": "4c908cd3689236fe91ca25aacc9a3cbcf7d4a2940294ac652a13bd7768150c58",
+      "sha256": "4c908cd3689236fe91ca25aacc9a3cbcf7d4a2940294ac652a13bd7768150c58",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch07_surprise_b.wav",
+      "expected_sha256": "b04f429ae1cab0cc64b101263be8ed5e1cb59fd586e016fb9d77a811a62f4ce5",
+      "sha256": "b04f429ae1cab0cc64b101263be8ed5e1cb59fd586e016fb9d77a811a62f4ce5",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch07_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_accept_a.wav",
+      "expected_sha256": "d805e5b4bbcb78a3fe9114a9ebf88922451630f4cfd6685ccbc6576f38938aec",
+      "sha256": "d805e5b4bbcb78a3fe9114a9ebf88922451630f4cfd6685ccbc6576f38938aec",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_accept_b.wav",
+      "expected_sha256": "a26288bc7540a7e804a1f4e28469d508dd69c2696dcb2f70d1fab84b054ec9f1",
+      "sha256": "a26288bc7540a7e804a1f4e28469d508dd69c2696dcb2f70d1fab84b054ec9f1",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_curious_a.wav",
+      "expected_sha256": "ab6ac09fff1cc63abd1d36ab5b9571e1c36b61ff4ea60cd46f2dcbecf3131561",
+      "sha256": "ab6ac09fff1cc63abd1d36ab5b9571e1c36b61ff4ea60cd46f2dcbecf3131561",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_curious_b.wav",
+      "expected_sha256": "f4210185f799f2485957a9385dc9c0855979f9c15ce2c26ecca45a96f6e8fb36",
+      "sha256": "f4210185f799f2485957a9385dc9c0855979f9c15ce2c26ecca45a96f6e8fb36",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_doubt_a.wav",
+      "expected_sha256": "4809382e9cf9f2b97196e8c988c818852d00d9b8d1d698bc7dcda83f2cf18929",
+      "sha256": "4809382e9cf9f2b97196e8c988c818852d00d9b8d1d698bc7dcda83f2cf18929",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_doubt_b.wav",
+      "expected_sha256": "971544c82495585fa02fca068c9a8eba2f16cb3467ed905517c17564115eeb1b",
+      "sha256": "971544c82495585fa02fca068c9a8eba2f16cb3467ed905517c17564115eeb1b",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_joy_a.wav",
+      "expected_sha256": "0ef932be27542c4b2147c805e5e1004c08f6d0af76d5844ac69c7c3641c9c0f5",
+      "sha256": "0ef932be27542c4b2147c805e5e1004c08f6d0af76d5844ac69c7c3641c9c0f5",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_joy_b.wav",
+      "expected_sha256": "cdcb435aefd36ef77b2f4ee6c462a4749c8ff82b44c127fef910bc2503a0be9b",
+      "sha256": "cdcb435aefd36ef77b2f4ee6c462a4749c8ff82b44c127fef910bc2503a0be9b",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_surprise_a.wav",
+      "expected_sha256": "1bbcd32ae7948ab35dab4f376f6e3e35ec9f02f311ae3beb35b9b0f79b8eb1df",
+      "sha256": "1bbcd32ae7948ab35dab4f376f6e3e35ec9f02f311ae3beb35b9b0f79b8eb1df",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch08_surprise_b.wav",
+      "expected_sha256": "d49312cef73e42c13b9f0b1be7090060e8e0453348109baefd943ba6964ef02c",
+      "sha256": "d49312cef73e42c13b9f0b1be7090060e8e0453348109baefd943ba6964ef02c",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch08_surprise_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_accept_a.wav",
+      "expected_sha256": "f5a439273fd18b47d89f1aa62184454252c4a91010a41e7175da53e4eef2613f",
+      "sha256": "f5a439273fd18b47d89f1aa62184454252c4a91010a41e7175da53e4eef2613f",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_accept_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_accept_b.wav",
+      "expected_sha256": "54a3529c71a0afdc23bc2f40d181949918f8948e527e444a3b91e536fa6765ee",
+      "sha256": "54a3529c71a0afdc23bc2f40d181949918f8948e527e444a3b91e536fa6765ee",
+      "bytes": 48044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_accept_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_curious_a.wav",
+      "expected_sha256": "9de668917884589c7d163f817041fbfcacd399cff19425bf458e2153c2c2569b",
+      "sha256": "9de668917884589c7d163f817041fbfcacd399cff19425bf458e2153c2c2569b",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_curious_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_curious_b.wav",
+      "expected_sha256": "24a79198321b0c0e22a17d4eca0da3ea581e0e38d78d18de2afdc939c41112f5",
+      "sha256": "24a79198321b0c0e22a17d4eca0da3ea581e0e38d78d18de2afdc939c41112f5",
+      "bytes": 59564,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_curious_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_doubt_a.wav",
+      "expected_sha256": "a9c1225d39a685a7b7409699e440e0dc101dd6b57d74d7da0321be06988f74bb",
+      "sha256": "a9c1225d39a685a7b7409699e440e0dc101dd6b57d74d7da0321be06988f74bb",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_doubt_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_doubt_b.wav",
+      "expected_sha256": "70519d6566ce3b110735f74491f67212d08a9ebef5250fb1ed2561d310f1ba00",
+      "sha256": "70519d6566ce3b110735f74491f67212d08a9ebef5250fb1ed2561d310f1ba00",
+      "bytes": 72044,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_doubt_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_joy_a.wav",
+      "expected_sha256": "bb3555b4d7865ac2f902da64b89cb83a89adfbea6e1dfbf438dc3e1011915e0c",
+      "sha256": "bb3555b4d7865ac2f902da64b89cb83a89adfbea6e1dfbf438dc3e1011915e0c",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_joy_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_joy_b.wav",
+      "expected_sha256": "e1ca62b3a5c23882f482a8d68706b86174fabc84306f275f0351aad84c1cdca6",
+      "sha256": "e1ca62b3a5c23882f482a8d68706b86174fabc84306f275f0351aad84c1cdca6",
+      "bytes": 82604,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_joy_b.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_surprise_a.wav",
+      "expected_sha256": "2fb8e98abb609a2132533a450ab6ba3453f20b5fe9a0906a194c10d0fbb46362",
+      "sha256": "2fb8e98abb609a2132533a450ab6ba3453f20b5fe9a0906a194c10d0fbb46362",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_surprise_a.wav"
+    },
+    {
+      "path": "assets/audio/production/vo_ch09_surprise_b.wav",
+      "expected_sha256": "700be4f207e0195755fccd34c5ff8c041b52714677706f0663df55be14426fed",
+      "sha256": "700be4f207e0195755fccd34c5ff8c041b52714677706f0663df55be14426fed",
+      "bytes": 40364,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/vo_ch09_surprise_b.wav"
+    }
+  ],
+  "audio_replacements": [
+    {
+      "path": "assets/audio/production/amb_archive_paper.ogg",
+      "expected_sha256": "e285db6d4a8af3307564525735cffe27ad194776d14e01663276b7cf43568e4f",
+      "sha256": "b2cefdb0a280fd8b14d51ced61309325a8392d482d6e6d87c8f2efe38be6776f",
+      "bytes": 249970,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_archive_paper.ogg"
+    },
+    {
+      "path": "assets/audio/production/amb_archive_wind.ogg",
+      "expected_sha256": "55c46ee09d2035f91a26af6767d1eeb2ada5fefce6335c6d437289648727b3c5",
+      "sha256": "e55d708c99e3d64d344446ce4c7438dce98eeea73f2cdcfa31c211ddb81914a7",
+      "bytes": 231533,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_archive_wind.ogg"
+    },
+    {
+      "path": "assets/audio/production/amb_kitchen_house.ogg",
+      "expected_sha256": "10a277ff5263fd6f63565068f16f3ee62e926ecd5439d156bfe0d828676257a3",
+      "sha256": "4da365391f7ee1cc9b35b86b02bae1f2c73d3a6e79c6600bac982b5ab6905aab",
+      "bytes": 241467,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_kitchen_house.ogg"
+    },
+    {
+      "path": "assets/audio/production/amb_kitchen_steam.ogg",
+      "expected_sha256": "0febad141b2232a2fbc3e1b3fb07c0cf9e4d4b311b428a5ca355a04be6f73967",
+      "sha256": "e9718e9a12ed7e9d3548581b6159cbe021e3c5e18611a5ca75cd02c339b8c895",
+      "bytes": 241348,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_kitchen_steam.ogg"
+    },
+    {
+      "path": "assets/audio/production/amb_river_water.ogg",
+      "expected_sha256": "8ecfacd969ad0db5a7094eb970468d8f937c01dab9bbae8f51e210b147d1b8c5",
+      "sha256": "f80acb1416ba13c6fa7ade224225b408dc0da6211a635c1785b1acd71eb1d898",
+      "bytes": 241172,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_river_water.ogg"
+    },
+    {
+      "path": "assets/audio/production/amb_river_wind.ogg",
+      "expected_sha256": "a0844f4bae221dfce437d4b175827329355741d8aed1a12e4e6c312b1908a657",
+      "sha256": "641340689fcfc0421d34b4e9d2b5a9ed8afff4485d4d154a439c7c8cbeee071a",
+      "bytes": 231701,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/amb_river_wind.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_album_full.ogg",
+      "expected_sha256": "b337b2184f3b5e7801b62c4ecef5e38d90f6369bac348a0b3b6da48a152725f5",
+      "sha256": "3280985b4b7967df9817781571d3f0f7f8103ab89b580059e5383b5cd2973ecf",
+      "bytes": 919987,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_album_full.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_archive_bed.ogg",
+      "expected_sha256": "c7dce97f4e84f8c85f7a09431f48d6f6957a6daae2ae55e237918732f44fe036",
+      "sha256": "23bff6a387e386bcffd5a569518dfbfd2fc34eb63d375d332936e93fadee2ec6",
+      "bytes": 1124207,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_archive_bed.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_archive_curiosity.ogg",
+      "expected_sha256": "4b6f7ed53d666f7dda4af0fae1fb52804a7a0441a3fe19c71efcedeeafbe93ef",
+      "sha256": "3b09e1b38c26a359d7be556c8457d7db5ae9a0777213bc1183d0961c48bccb13",
+      "bytes": 990803,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_archive_curiosity.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_archive_tension.ogg",
+      "expected_sha256": "d121c175c64c2c471ddfe73935fd84b57c4796c254cf0bd3804c1c06c0fcd1a1",
+      "sha256": "9f682658210eeeae3afebedb3cd56c21744392a7f8f64b2266a5f267e25a835d",
+      "bytes": 799974,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_archive_tension.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_credits_full.ogg",
+      "expected_sha256": "15b7b189c8a286e76bb89623df5fa0dec3964b69202a410bf237cecdbed9f0ca",
+      "sha256": "674724ddded011ec015302142e6523caf46375c928d8dfc46145ebf5b606af66",
+      "bytes": 1432242,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_credits_full.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_finale_bed.ogg",
+      "expected_sha256": "0be5d39ecb04de061cd4adf69995d079036f351d34ef44cac0f497d76bf0b434",
+      "sha256": "e594beb8c4f2b5ee7d9d3dfd3833c29e4413f29d96dcff67dcd4f2eaf40047a8",
+      "bytes": 948496,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_finale_bed.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_finale_curiosity.ogg",
+      "expected_sha256": "4ee65916be43b0db57f4465278dc7ccbfa7ac27602d6984e786ed2eea6bc1986",
+      "sha256": "decf1d61d5639a21a2f59f87c3f1b53c128c022192b5f4d486278408ad60f702",
+      "bytes": 768984,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_finale_curiosity.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_finale_tension.ogg",
+      "expected_sha256": "62b945f3f4363e11ed1c90f873f39bd3903fc2c26223b5f05cbd9899e1333a58",
+      "sha256": "36a025e2c3f5a92ced0d63bc26757ebb017b4451e3c4ee0823585a457a4b41f6",
+      "bytes": 994945,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_finale_tension.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_kitchen_bed.ogg",
+      "expected_sha256": "9d0b4ad2b68aed077dba972bf16ad23e79e197e619df9917b73c90fa93244419",
+      "sha256": "5d67bf4715f3eb19a7c341e1c98bae2f3cd26f8c4ab66483eb98d746554103ff",
+      "bytes": 947766,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_kitchen_bed.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_kitchen_curiosity.ogg",
+      "expected_sha256": "44248b3aa57a3e6528772c4b7be8efb9d8e5bc1d49c4a3a25cb4dd28832d3db1",
+      "sha256": "80693d2b2b40bd55b8b11b7045e25e1772cab58af80c345e509d83366d9e4b41",
+      "bytes": 755084,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_kitchen_curiosity.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_kitchen_tension.ogg",
+      "expected_sha256": "3b3b68c55896d268ca032a9df3198adeb87f245f54629b56abd826d14b4713fd",
+      "sha256": "c04bf3fb7eb3ff9f20c633692a6f64ba3081c7be8dfae8cf7df11f3a86ac362c",
+      "bytes": 993954,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_kitchen_tension.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_main_full.ogg",
+      "expected_sha256": "d232fa26d5ec03fb858d3c164689645c2d5d14f6eadb53568777d890db0ba793",
+      "sha256": "57bcdaf52819ab52766ef19d9f04c3d36d327513267f7f6fc4196f2dac79bca6",
+      "bytes": 1109820,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_main_full.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_river_bed.ogg",
+      "expected_sha256": "46073a252b80a516e49da75b0409c28b3d4cd07f75acfcf78cec9659ddcb27ca",
+      "sha256": "c0f329bf88975334f59ae53c46ccc4ccbf3dcf46b792dc55a9c3903da9d4cdb1",
+      "bytes": 1039581,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_river_bed.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_river_curiosity.ogg",
+      "expected_sha256": "acb0cf0f38f12d04c486a92f3cefb0b44d1f4d23db247449dbb8650ac879dbc0",
+      "sha256": "159f7826e9a3718f4a69cd359054dc60749ab666a5974fbf75db8245dc923e9c",
+      "bytes": 823424,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_river_curiosity.ogg"
+    },
+    {
+      "path": "assets/audio/production/mus_river_tension.ogg",
+      "expected_sha256": "8b676bc05db9f88a76f27d862da830db09e795b11e92095c3ddbf40d965320cd",
+      "sha256": "f9671e82599c7bcaa2fbd3ab182725143645200f7bbf83e9d47aeb1301713ef2",
+      "bytes": 715293,
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/mus_river_tension.ogg"
+    }
+  ],
+  "font_replacements": [
+    {
+      "path": "assets/fonts/DejaVuSans.ttf",
+      "expected_sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+      "sha256": "57f73e11f51999432bf7ab22ce55b6f945d5eca1bf824404cfa9ec2e3718c84e",
+      "bytes": 759720,
+      "source": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "version": "Version 2.37",
+      "ru_en_glyph_coverage": "passed"
+    },
+    {
+      "path": "assets/fonts/DejaVuSans-Bold.ttf",
+      "expected_sha256": "5c1247acef7f2b8522a31742c76d6adcb5569bacc0be7ceaa4dc39dd252ce895",
+      "sha256": "a4c5bc453ca281d90ea079e596da7ae0dfeb5777497c29ec254e76d97ff6f890",
+      "bytes": 708920,
+      "source": "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+      "version": "Version 2.37",
+      "ru_en_glyph_coverage": "passed"
+    }
+  ],
+  "supporting_files": [
+    {
+      "path": "data/audio_catalog.json",
+      "previous_sha256": "d2e2feca0bfd2b1352179b374d57b7a1af20dfea5cb066286fe571b740d2f0ff",
+      "sha256": "9f089eb13a6c4fd92312cff13b873550fddacd781c52ad239417d2395f9fb39c",
+      "source": "/workspace/GOD-recovery/generated-project/data/audio_catalog.json"
+    },
+    {
+      "path": "assets/audio/production/runtime_catalog.json",
+      "previous_sha256": "e370a2f045ed9e5ad86ec5db80d7da865a879297b9590a911a9a3157cb6e7d02",
+      "sha256": "e370a2f045ed9e5ad86ec5db80d7da865a879297b9590a911a9a3157cb6e7d02",
+      "source": "/workspace/GOD-recovery/generated-project/assets/audio/production/runtime_catalog.json"
+    },
+    {
+      "path": "assets/source/audio/main.mid",
+      "previous_sha256": null,
+      "sha256": "841c26f947faf2123c06bb73dc1807076188322bd459cc22752fec61ffd810e7",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/main.mid"
+    },
+    {
+      "path": "assets/source/audio/finale.mid",
+      "previous_sha256": null,
+      "sha256": "841c26f947faf2123c06bb73dc1807076188322bd459cc22752fec61ffd810e7",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/finale.mid"
+    },
+    {
+      "path": "assets/source/audio/credits.mid",
+      "previous_sha256": null,
+      "sha256": "6835bc2aa6a5eb044ffd0c3b4be3759752ab7148858d0c66155ac4abdf3da9ff",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/credits.mid"
+    },
+    {
+      "path": "assets/source/audio/kitchen.mid",
+      "previous_sha256": null,
+      "sha256": "2f8b97d81015e83950805d1a587a21cca85cea233a93d2a6711663d701d53250",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/kitchen.mid"
+    },
+    {
+      "path": "assets/source/audio/archive.mid",
+      "previous_sha256": null,
+      "sha256": "1b6983a1506238045c317df78fe84ddad9a9c0b4d54a2e4aba65f1ebdb520351",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/archive.mid"
+    },
+    {
+      "path": "assets/source/audio/river.mid",
+      "previous_sha256": null,
+      "sha256": "9eb3c36a0a079a16d5e48817a6396fabea5f965ba6cda355f6fdfbce54518baf",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/river.mid"
+    },
+    {
+      "path": "assets/source/audio/album.mid",
+      "previous_sha256": null,
+      "sha256": "b0f6da75c0f86e640836c1172d420e963a72fe0f6685095b0acbcaaa5c73e267",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/album.mid"
+    },
+    {
+      "path": "assets/source/audio/SCORE.json",
+      "previous_sha256": "45728ae6e6f6113b72c3fed2799e790a92a9de8c8ca659881c7e72f2873e1164",
+      "sha256": "45728ae6e6f6113b72c3fed2799e790a92a9de8c8ca659881c7e72f2873e1164",
+      "source": "/workspace/GOD-recovery/generated-project/assets/source/audio/SCORE.json"
+    },
+    {
+      "path": "assets/fonts/LICENSE.txt",
+      "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9",
+      "source": "/usr/share/doc/fonts-dejavu-core/copyright",
+      "license": "Bitstream Vera license; DejaVu changes public domain"
+    }
+  ],
+  "conflicts": [],
+  "missing_runtime_png": [
+    {
+      "path": "assets/art/characters/rigs/semyon/cape.png",
+      "expected_sha256": "d32c8dd249acf428b33dfaa129e89f9507cb3ab09678ff576575a5fd47a05af4"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/head.png",
+      "expected_sha256": "456bb3b2d9a093877188033247b2e4d0eb36827f4039fc814ad5761ed6cbffd5"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_arm.png",
+      "expected_sha256": "bb30a5beb8abd3db23e7782c55bad841ee93b7c8384e63194160e3864687b6dd"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/left_leg.png",
+      "expected_sha256": "fd6d8cdf226d8103d2e796ec822040ab59163448dc793ae985959fbce9af0ad2"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/prop.png",
+      "expected_sha256": "f79d1b0fe84dc06c79eba12a5100396c63b95f1c13a6671594d05c7f18431852"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_arm.png",
+      "expected_sha256": "8690fd42c1cd6a69171c8b614dc363d21cd74b1af7ebcccb028cf4c083ea42a6"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/right_leg.png",
+      "expected_sha256": "e72314ab30e5c2e5b710681b6f6710a0268ac7ec1ccb839ebd82c15feb18df1a"
+    },
+    {
+      "path": "assets/art/characters/rigs/semyon/torso.png",
+      "expected_sha256": "eb165a83cf43d11bfd383172d5bbb158df3601f089cef86ed25d0c8579e50b92"
+    },
+    {
+      "path": "assets/art/characters/roza.png",
+      "expected_sha256": "8c9f61bba68c97d30a9bcda31c74bd5534c435418729b022f93c4a5b055512e6"
+    },
+    {
+      "path": "assets/art/characters/semyon.png",
+      "expected_sha256": "d73de0b802e90c25adcf27fe7de741a9b14da84a4223e8cd3ab96acfc1c5a6f9"
+    },
+    {
+      "path": "assets/art/environments/ENV01/backdrop.png",
+      "expected_sha256": "982bfb538b13cbfcf545d726920686acec207ae01ebec5d6b140ca15835ce8e7"
+    },
+    {
+      "path": "assets/art/environments/ENV01/floor.png",
+      "expected_sha256": "a818937e1805333b44bb0ad44ca4771a13874aa28b24c0f7e9568385664c1f7f"
+    },
+    {
+      "path": "assets/art/environments/ENV01/foreground.png",
+      "expected_sha256": "168ab86f76fac8550999cab2c6b8747d5e5518292ccf718ffa0f41c4fc26dcd0"
+    },
+    {
+      "path": "assets/art/environments/ENV01/midground.png",
+      "expected_sha256": "076f1e3ba325f4dea2cb4e225babe861849cb4cdda7d35741467c7ebdbe6dc3b"
+    },
+    {
+      "path": "assets/art/environments/ENV02/atmosphere.png",
+      "expected_sha256": "7cfabfccc9bd5fd7f0f3b72ebc307c5ecad8fbb061a857cd956dd845baa6d24e"
+    },
+    {
+      "path": "assets/art/environments/ENV02/backdrop.png",
+      "expected_sha256": "9dfa0600645fefe0796dad4e881788c34a5b130f14ea3fa4a1b5124854aa5989"
+    },
+    {
+      "path": "assets/art/environments/ENV02/floor.png",
+      "expected_sha256": "abef83bea3056275c3576b1eaff2fc20037175382471712582d2adb4aff24268"
+    },
+    {
+      "path": "assets/art/environments/ENV02/foreground.png",
+      "expected_sha256": "199be604fae2159f587c3c0a31eda817cb6a0965e84e4721ded99805ae0b1626"
+    },
+    {
+      "path": "assets/art/environments/ENV02/midground.png",
+      "expected_sha256": "d2892f405299799ede7287151c1f18ebd8413ea995783d09e4e6db64433982e5"
+    },
+    {
+      "path": "assets/art/environments/ENV03/atmosphere.png",
+      "expected_sha256": "bffb14dda496cfdf72e4122eef13d56c6d620f49aa054019ea6a3bd0bd4d0119"
+    },
+    {
+      "path": "assets/art/environments/ENV03/backdrop.png",
+      "expected_sha256": "6f7115cfe1c88b9b99b916c97deddf86f88feaeb70f0a5ae6e0b20770f843239"
+    },
+    {
+      "path": "assets/art/environments/ENV03/floor.png",
+      "expected_sha256": "b9da91321e6affa59c18cd33fbc6af6caf3a1defc2bfdf2844e588e4ff785c95"
+    },
+    {
+      "path": "assets/art/environments/ENV03/foreground.png",
+      "expected_sha256": "b8954ddc1b8638a078ce257f8b8a724cb8824082bb9328e8bfe274215030a6d4"
+    },
+    {
+      "path": "assets/art/environments/ENV03/midground.png",
+      "expected_sha256": "fa02c58be420aa162a4df86b8148e25e9cc5e5e48730b416c4f3f303217e3f33"
+    },
+    {
+      "path": "assets/art/environments/bg_archive.png",
+      "expected_sha256": "83eb9bbc2ec8a2d0ce68e4d00c4c5daad4bc6808cb26504dcad5fd8309a56fb7"
+    },
+    {
+      "path": "assets/art/environments/bg_kitchen.png",
+      "expected_sha256": "097a6b62271a4d17525ee08e28eecfcec5bb15dff613d6d97dd1d6499440034c"
+    },
+    {
+      "path": "assets/art/environments/bg_river.png",
+      "expected_sha256": "70f21728c000a7c75fbedab8634ce01b0587c773b91481876eab83cd4d62c8e5"
+    },
+    {
+      "path": "assets/art/props/boat.png",
+      "expected_sha256": "763726a591b45d990d23e9bc6bcf747355aca1d021bf4779f2668010e73cdfaa"
+    },
+    {
+      "path": "assets/art/props/bread.png",
+      "expected_sha256": "66a2922ca0ccfb814b627f05f9943e67528552cb1e13c4062cf6646b35734210"
+    },
+    {
+      "path": "assets/art/props/clamp.png",
+      "expected_sha256": "e5c8f5f950857c717fc01847aea67cc2d286814c4411656b6f212061945ac510"
+    },
+    {
+      "path": "assets/art/props/control_weight.png",
+      "expected_sha256": "735144e97b1c32da603f81410c033f527f143dbeae55aab4ac8029432ba4e36c"
+    },
+    {
+      "path": "assets/art/props/crate.png",
+      "expected_sha256": "b41266efa5364d4b3e6c0cf0ad81e57bbc5015b0a474131ecd3553e51a3954b8"
+    },
+    {
+      "path": "assets/art/props/cryopack.png",
+      "expected_sha256": "52db43342ca1b60155a6f583ce9e1098fda4e0160388001316a0d6acb8ebfd87"
+    },
+    {
+      "path": "assets/art/props/decoy_fire.png",
+      "expected_sha256": "62b2b84a07af444ab8d1ca7e423e0fa44232c865b068e192892ffc8577a06cc7"
+    },
+    {
+      "path": "assets/art/props/dessert.png",
+      "expected_sha256": "3aa74406e0caec139e8db33f382f7555e1d6bc7d8868704c17e856a4da2746d3"
+    },
+    {
+      "path": "assets/art/props/dock.png",
+      "expected_sha256": "93138b2eff129306e999c8f536ead40b2b1efd9a874e9b8b60c733d9b30b4f35"
+    },
+    {
+      "path": "assets/art/props/fire_source.png",
+      "expected_sha256": "2468409b621f19f17b147f781ebb8f64f5ef466673b99df33f076a1ac78153d6"
+    },
+    {
+      "path": "assets/art/props/fire_source_cold.png",
+      "expected_sha256": "b27391b42366c58ad4d0faa91911315d6e1c3a7b16db2f680d3181e5227325ab"
+    },
+    {
+      "path": "assets/art/props/flags.png",
+      "expected_sha256": "e2e26b8ab2f5e61085c5f3744c991be3c0004b3507f85b8dbb8d37e4f4512e1c"
+    },
+    {
+      "path": "assets/art/props/float.png",
+      "expected_sha256": "381d50f9839e2fd1949fa67f67290f97ca65d7b5d709e55de1a85d72c31d222a"
+    },
+    {
+      "path": "assets/art/props/frame.png",
+      "expected_sha256": "9aa8942c60a6ab0ed271acbb934b725a1e2da0b099d111e37517ee2a280c93e4"
+    },
+    {
+      "path": "assets/art/props/hoist.png",
+      "expected_sha256": "c6e9afafae3a51bb70c7357250a2280a4bae17176047c21db2b3ae504fa597fd"
+    },
+    {
+      "path": "assets/art/props/hot_stone.png",
+      "expected_sha256": "461a055a87a8defc16483e4cf334a9f100ae0fe46a5e7ddf0b5fc988f0506fe3"
+    },
+    {
+      "path": "assets/art/props/ice_surface.png",
+      "expected_sha256": "34236b5947c89fadfc4904f2c81cbf4bb6feb00736217b355466e2f2e6130adf"
+    },
+    {
+      "path": "assets/art/props/kettle.png",
+      "expected_sha256": "c294ad92bf4f41b92522bfba05dad8bd0fd4b51f9be1dce0f7b9477bb1b700d7"
+    },
+    {
+      "path": "assets/art/props/miracle_stamp.png",
+      "expected_sha256": "03f99d301d6cb305b801363295387e1d124fd8f34cbe4236a2a369c2548cc2f5"
+    },
+    {
+      "path": "assets/art/props/paper_bridge.png",
+      "expected_sha256": "fa2b7e8288cdcfa93830f6aafb30dd8e689238911c0e6229cce100999cc2340d"
+    },
+    {
+      "path": "assets/art/props/paper_gate.png",
+      "expected_sha256": "a8bac65a54a7a5724329cf4fa67f5a0690a0591fdbefadf8d3b9e4c4384dfdd0"
+    },
+    {
+      "path": "assets/art/props/paper_reinforced.png",
+      "expected_sha256": "a1d027660bb03890c02f1b7b7e83149f78c7151560887b06f6e75f3a8df1fe7b"
+    },
+    {
+      "path": "assets/art/props/paper_sheet.png",
+      "expected_sha256": "304befef35f902cced79a89cdd048312ce271a0090fc3647fd05345ea85b8c81"
+    },
+    {
+      "path": "assets/art/props/rope.png",
+      "expected_sha256": "1b5eb22917dca5a88d2dd23e63d549ca25e0771d72cdc77b3ae067851a990d2c"
+    },
+    {
+      "path": "assets/art/props/sandbag.png",
+      "expected_sha256": "49d48ca51b1eaa084bfcee78f686e75c589d7f105cd1dd05fa3ae73976e3571c"
+    },
+    {
+      "path": "assets/art/props/screen.png",
+      "expected_sha256": "4e0a90dace9f243312b7dca5c946101e7d832c96db2a3e6212d64526cf044d3e"
+    },
+    {
+      "path": "assets/art/props/span_anchor.png",
+      "expected_sha256": "7db9eb699af2133b520d297addfe6d4d8529f6c19602a54acbbd8706efe0dc72"
+    },
+    {
+      "path": "assets/art/props/steam.png",
+      "expected_sha256": "0e137ebd5cc53385d71c84d3957e8627ec5ba8784ca1f6d8a0ea4e279d85200b"
+    },
+    {
+      "path": "assets/art/props/stone.png",
+      "expected_sha256": "08f1f8b16d8d90c375c50f525555ad24d0806bc2e924760af81110206e4aa900"
+    },
+    {
+      "path": "assets/art/props/stone_anchor.png",
+      "expected_sha256": "03e09065d2373f3fa9fdd9c5e218b3a8637b505a460a61701ad6fb614427b60e"
+    },
+    {
+      "path": "assets/art/props/thermal_screen.png",
+      "expected_sha256": "3ac5b7dfc5a12f02b98b302ee9918b142ab68b2954a3b5558a7c04ee3335b2be"
+    },
+    {
+      "path": "assets/art/props/thermobox.png",
+      "expected_sha256": "7bb631ccd2c56cc50bbacd09b8d3e8421d9f34cd796c91d4ec7bdcccece49910"
+    },
+    {
+      "path": "assets/art/props/thread.png",
+      "expected_sha256": "5e2ec2bbe661efec290e520efaa016d63f6264aff9e784f8afd20ff5ebd8a0ec"
+    },
+    {
+      "path": "assets/art/props/ticket_booth.png",
+      "expected_sha256": "e139b956b1aa3fcfadb56288a5d343db96bc16097b4d8bdd23941b8fec61bf61"
+    },
+    {
+      "path": "assets/art/props/water_bowl.png",
+      "expected_sha256": "ec0155b1aae60f4ac7799b2d8253bcff5d7c230a7dcb2f865ad72dfde94dfd6a"
+    },
+    {
+      "path": "assets/art/props/water_bowl_frozen.png",
+      "expected_sha256": "7fc553780354857fe3bbc50119debf34593e65c582ba1f14d1a659d744ccac54"
+    },
+    {
+      "path": "assets/art/props/water_surface.png",
+      "expected_sha256": "e0874518f012a277966be5c0c627e27c5ed080d43d7b3b841bbf339417b32d29"
+    },
+    {
+      "path": "assets/art/props/wood_gate.png",
+      "expected_sha256": "b830c535a753ef16ba7a31b16668b4a257241172194cca5846565e49d475cae7"
+    },
+    {
+      "path": "assets/art/props/wooden_bollard.png",
+      "expected_sha256": "5f1a46c478d7f34fbe57ff8aeb58e007e2cb9026f5f86046ae8e9c2b5ee6c7d5"
+    },
+    {
+      "path": "assets/art/ui/app_icon_1024.png",
+      "expected_sha256": "fc065b6d18188333eaac09cda70976f5b5f4305b07da769ebb4918ebef3887ad"
+    },
+    {
+      "path": "assets/art/ui/app_icon_192.png",
+      "expected_sha256": "2d53cf1f1e25f1ebcfd2c34d33fa5facce278821031a381f2e960c1f3458dcd9"
+    },
+    {
+      "path": "assets/art/ui/app_icon_512.png",
+      "expected_sha256": "e11f8487553d729058a9c80f2c38f33d3ed97aacab75da0e7eb3483c6fc8e99b"
+    },
+    {
+      "path": "assets/art/ui/app_icon_master.png",
+      "expected_sha256": "85b049badf2342086d78542fbbc487e4d121c217b2579e55419b587e90af24e5"
+    }
+  ],
+  "validation": {
+    "old_unchanged": true,
+    "historical_manifest_unchanged": true,
+    "png_decoding_passed": 169,
+    "audio_catalog_hashes_passed": 222,
+    "full_project_tests": "not run; image reconstruction still in progress"
+  },
+  "counts": {
+    "exact_graphics": 169,
+    "audio_exact_originals": 201,
+    "audio_replacements": 21,
+    "font_replacements": 2,
+    "supporting_files": 11,
+    "conflicts": 0,
+    "missing_runtime_png": 70
+  }
+}

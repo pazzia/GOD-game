@@ -1,0 +1,1123 @@
+{
+  "schema_version": 1,
+  "kind": "decorative_level_overlays",
+  "canvas_size": [
+    1536,
+    1024
+  ],
+  "authoring": "Original imagegen vignette atlases mechanically cropped and placed in peripheral corners. No gameplay geometry or occlusion changes.",
+  "acceptance_limits": "Distinct painted peripheral decoration delivered. Native before/after gameplay frames and phone readability remain separate acceptance.",
+  "entries": [
+    {
+      "level_id": "L01",
+      "level_title": "Камень очень старается",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L01/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Камыши и три ромашки у первого причала",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          157,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 0,
+      "source_crop": [
+        22,
+        82,
+        341,
+        459
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "3cdc0d8bae39477f5d28343c5914f67b13ede76eb35f2ef9c89567e0b9a34cfc",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "2c4f95efaafcbe7464f5210d35f5b3216a4e2f9e387df9c0430b7798e67df22d"
+    },
+    {
+      "level_id": "L02",
+      "level_title": "Лучшее место — не первое",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L02/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Билетные ленты с бархатцами",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1345,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 1,
+      "source_crop": [
+        384,
+        169,
+        670,
+        444
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "4d3b29c06b4559bd0f57227460001d71bb6404cf94076a0f3c26aa55380fa6e4",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "a922c62a0043c80a739bd755c467686ba8db2da0e9634658cb72d2df718838c7"
+    },
+    {
+      "level_id": "L03",
+      "level_title": "А с обратной стороны?",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L03/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Папоротник и ракушка обходной тропы",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          188,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 2,
+      "source_crop": [
+        732,
+        165,
+        1028,
+        454
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "108f4ca1a537f9caf57e07faa467b1b7c27e533b0eecc90a805d18c1d50c3cd7",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "e479f1eea20745141c2c5b0252751720db3df6ad5f671d9b571fd7a7d3919737"
+    },
+    {
+      "level_id": "L04",
+      "level_title": "Ветер имеет мнение",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L04/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Гнущиеся травы и декоративный ветроуказатель",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1331,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 3,
+      "source_crop": [
+        1073,
+        148,
+        1421,
+        459
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "8a7f19d9f7537af8d161f1d17a9f57ae2357659063127459e480769c6968cc80",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "4fe63a20ecf70755620df575cea44de1122c76867564c68b66e8e4c3000299f7"
+    },
+    {
+      "level_id": "L05",
+      "level_title": "Якорь получил повышение",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L05/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Морской узел на кусочке плавника",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          874,
+          230,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 4,
+      "source_crop": [
+        1440,
+        255,
+        1751,
+        454
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "435c5eafc8a1e860061d7da4871cf07212617532bacc7cfc9ac879b5a7765589",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "dc66b2c522bf13bd16a8af84e336fcf0a16d553b8cadb2f719f5291b14158229"
+    },
+    {
+      "level_id": "L06",
+      "level_title": "Почти ковчег",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L06/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Клевер, сено и колокольчик Карамельки",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1329,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 5,
+      "source_crop": [
+        20,
+        562,
+        344,
+        848
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "3afa2edf7f483050dee55f610f9100e0ffeed0806152816b7d6015f4b23288c9",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "bcc2d140b05702c6605cc383832d6b8c5196c8a807ff135f0210230e84197ec6"
+    },
+    {
+      "level_id": "L07",
+      "level_title": "Слишком широкая река",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L07/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Плавник, листья кувшинок и стрекозы",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          179,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 6,
+      "source_crop": [
+        366,
+        484,
+        722,
+        850
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "98a74b3c5e3c848e353385c8a904407b7a48ec2f3a2e5689ec0bb978c39efc4e",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "43c0d42fa675a0f4c0594c86909a8373b0ece947449c057310acde8b14176382"
+    },
+    {
+      "level_id": "L08",
+      "level_title": "Секретов ровно два",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L08/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Пара театральных кисточек",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1316,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 7,
+      "source_crop": [
+        734,
+        559,
+        1071,
+        839
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "e5cfb96d15a63773ec60308b3e6f5e5edc6c3bb7ed19de0de28f115d85bfac8a",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "d70f3ad803e4e57ed97960899859d91c95fc374b35e7513da7f8b4dc5ed5b3d7"
+    },
+    {
+      "level_id": "L09",
+      "level_title": "Проверка после аплодисментов",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L09/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Записная книжка проверяющего с листом и пером",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          217,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 8,
+      "source_crop": [
+        1087,
+        575,
+        1413,
+        850
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "4433d97dd4e300c5d63d58214ef62d74953440d7aa0763c42935b9d026684843",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "b818374e24653368d6a2cddfbbee59632b9dcc772c74665bb5eefacc4ca1d2d8"
+    },
+    {
+      "level_id": "L10",
+      "level_title": "Переправа на честном слове",
+      "environment_id": "ENV01",
+      "file": "res://assets/art/scenes/L10/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Праздничные речные ленты и цветы",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1389,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV01-corner-vignettes.png",
+      "source_cell": 9,
+      "source_crop": [
+        1440,
+        474,
+        1750,
+        866
+      ],
+      "source_sha256": "6239cb72c2ee377e3c64b1d4d3b2ff5d38e4bdc20a6471fe42793f5e72a82577",
+      "sha256": "67f243e976c027b59011eb2eabdbf1ca3515f4246dc530d9f3d9c3c6603b5efc",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "da9e128427e9861629729b3b28a1d018373e539cfc736a12c693288d813ee9af"
+    },
+    {
+      "level_id": "L11",
+      "level_title": "Пламя берёт отпуск",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L11/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Тимьян в горшке и медный половник",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          165,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 0,
+      "source_crop": [
+        19,
+        122,
+        327,
+        468
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "0614c64c01d3be3360a791e68c71d4598d7dd6ebe9fe8efb4bbebb62632cb6db",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "ee9726e726509481c1cf10415032bacf90b6bd559a1e9acb69b58e3499ff2d50"
+    },
+    {
+      "level_id": "L12",
+      "level_title": "Пирожки с характером",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L12/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Ягоды на вышитом кухонном льне",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1324,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 1,
+      "source_crop": [
+        343,
+        175,
+        694,
+        478
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "189e7f0f0a508b72d74efc8b3a8fa7ce355db1b5ac2278572d50eedbc54834d5",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "b91888db890cfb8b8892c164deefd63dac06de22275740ac0549050c29061344"
+    },
+    {
+      "level_id": "L13",
+      "level_title": "Два очага, одна лодка",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L13/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Парные керамические дымники без огня",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          208,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 2,
+      "source_crop": [
+        715,
+        142,
+        1071,
+        456
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "c7534638335d69ea5444dce156c570b60cc5102be5a060f73173960134dc2a07",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "eaabcae87a1b7b3c379b345fb2474274e8b16baf8d0a4a06457377f6717997b3"
+    },
+    {
+      "level_id": "L14",
+      "level_title": "Холод под присмотром",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L14/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Сушилка шалфея с кремовым бантом",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1341,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 3,
+      "source_crop": [
+        1086,
+        148,
+        1416,
+        458
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "9562726740aa66179069f9c242fc27b5d3d63b5806a91607bb3adcf9d4d5c94e",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "65b78144b5d106d07842dd34e15475217cf97c9269330f3dc9a2adef99aad5ee"
+    },
+    {
+      "level_id": "L15",
+      "level_title": "Не каждый жар — огонь",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L15/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Прихватки, щипцы и розмарин",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          193,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 4,
+      "source_crop": [
+        1441,
+        160,
+        1765,
+        469
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "fa7b8c692942d323b20bbe01967b14dad8a0d95601006eead228a4b84d9df79d",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "659fc8b8cbe354471e3455a75e51dbde0fceb3118fa93d8e6572f689960f130a"
+    },
+    {
+      "level_id": "L16",
+      "level_title": "Парообразная тайна",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L16/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Медная трубка с каплями и папоротником",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1357,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 5,
+      "source_crop": [
+        16,
+        525,
+        339,
+        858
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "bf61d753942a5461c5333a5094a82139089b84e6069b4d8bbf8a6631cef0fe9d",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "36989519f76217fafd37c828fd81b3ede98f1261886010914a476bcb6dc3f93c"
+    },
+    {
+      "level_id": "L17",
+      "level_title": "Вторая печать",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L17/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Две праздничные розетки",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          198,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 6,
+      "source_crop": [
+        352,
+        521,
+        707,
+        850
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "0ae5bc1ce3cdbcf42f5339662464be9855617e351cece0517510ad116a8180b7",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "9d23b90e6921a08d6a27cc61567f04b4073a8039ab899bc26b32fb5cea808ac3"
+    },
+    {
+      "level_id": "L18",
+      "level_title": "Лодке нужен жидкий путь",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L18/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Морские салфетки, ракушка и мята",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1306,
+          841,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 7,
+      "source_crop": [
+        708,
+        574,
+        1046,
+        840
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "2e0013c5b164e0e48344e6ae53046f4e1179da20a4336a2bc3af4519f41fe5c9",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "da200551851db8ee1b67324d7cb1f2f75276dbe6d2650094570609bbb5f4084d"
+    },
+    {
+      "level_id": "L19",
+      "level_title": "Верните печи работу",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L19/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Пустая хлебная корзина с полотенцем",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          220,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 8,
+      "source_crop": [
+        1051,
+        565,
+        1402,
+        856
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "ba9f9ebe02fff9ca3c01c2a8a0c2f21a545ce47105746179050988fd36ead377",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "ee5c1aa142876fd8fe47bb020405e96de833064727d3ffe9ad393d0c7db17003"
+    },
+    {
+      "level_id": "L20",
+      "level_title": "Праздник наоборот",
+      "environment_id": "ENV02",
+      "file": "res://assets/art/scenes/L20/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Праздничный поднос с цитрусами и ягодами",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1318,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV02-corner-vignettes.png",
+      "source_cell": 9,
+      "source_crop": [
+        1412,
+        563,
+        1764,
+        858
+      ],
+      "source_sha256": "3f3b1e2a6a10509710f7b4ef562353ebd6bc0ff47171e392c707e7a783629750",
+      "sha256": "56504f9758688ce217704b30ea4cb2f6215c0538f621feedaad74bd335097653",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "a94c11f7da4b5ad910f071663e1a8b05d400f1313d7b2379cc1c87c322c8ce60"
+    },
+    {
+      "level_id": "L21",
+      "level_title": "Лист с характером",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L21/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Бумажные листья и писчие перья",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          193,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 0,
+      "source_crop": [
+        67,
+        131,
+        342,
+        393
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "004a9f08f19410fafa7e3d023f7d6805716f98ee8ae7e553926c482233649a6f",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "82b9a713ca4b6551b5e2aa3af29896b2069846921fd0a6cbb366173dcf9b2027"
+    },
+    {
+      "level_id": "L22",
+      "level_title": "Козе не по зубам",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L22/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Клевер и надкушенный декоративный лист",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1362,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 1,
+      "source_crop": [
+        429,
+        133,
+        667,
+        386
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "3c3e502f2cf65b001cc8cd10971e196b27616dd2676b5265ee79f917926ab4e1",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "37acb070dd8a9671e659b79a7b988ccdfe50919cbb4d84e082ba354c0a46e6b4"
+    },
+    {
+      "level_id": "L23",
+      "level_title": "Огневой архив",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L23/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Книги и закрытый незажжённый фонарь",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          192,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 2,
+      "source_crop": [
+        760,
+        140,
+        1018,
+        387
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "e56afa5a921d4f7da58a0a465f7dd044fb313413cda432b353ee2f7095cb4bb2",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "20fd0c302c66c1132a00d08908d0db7f225f7bf9226f542d8f32489dcfeb9122"
+    },
+    {
+      "level_id": "L24",
+      "level_title": "Лёгкое решение",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L24/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Лёгкие бумажные перья на золотом шнуре",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1385,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 3,
+      "source_crop": [
+        1112,
+        112,
+        1340,
+        392
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "2b607fbc4eb47b1e252fc5dd2961e8e461a0ee3c80211b1b17e2d8b79297857b",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "698f8810cc9c10958214ad934900084c832d1b6e5e869b56ac248fc7a50c55b3"
+    },
+    {
+      "level_id": "L25",
+      "level_title": "Обратная сторона сертификата",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L25/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Чистые свитки сертификатов с печатями",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          216,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 4,
+      "source_crop": [
+        1404,
+        145,
+        1693,
+        390
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "ca80684df8da1fb5ccd3df2a4b46c95e7999df1d7370ef9b24272a21cc16a279",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "76bee0411bd71b6c98671ccb2697232b88c07fc2c1342cd2a017fd1521bbb677"
+    },
+    {
+      "level_id": "L26",
+      "level_title": "Два места на три чуда",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L26/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Три бумажных цветка в двух вазах",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1367,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 5,
+      "source_crop": [
+        77,
+        517,
+        319,
+        782
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "8066d129da115970abfc46b2368f1849a50a5eb4bf568be3f5fe15b46cf5f663",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "8a87d94f4287f17e1c22bd519dc541748a85efd841e32db62bead1fea027ea7d"
+    },
+    {
+      "level_id": "L27",
+      "level_title": "Всё ещё бумага",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L27/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Гирлянда из складчатой бумаги",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          211,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 6,
+      "source_crop": [
+        396,
+        537,
+        667,
+        772
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "f58a9e1c722dabf99b7ee882e4c5f568e011fbf4e6bd3f6ec749a6d03900b7cd",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "111872015f5f656cbd8382b0c2d77f52451e753b1baf50eace9d571f320ef4db"
+    },
+    {
+      "level_id": "L28",
+      "level_title": "Сертификат на невозможность",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L28/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Печать, лента и дубовые листья",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1352,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 7,
+      "source_crop": [
+        757,
+        516,
+        1025,
+        784
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "d45a8e26e294af3dc709fc413efe69806eb504639c7bc134abef4abcbdec9da8",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "9e985c9798b2d59ca1499e97c54712c9bc48645667e2a26fee66e362cf9de7ee"
+    },
+    {
+      "level_id": "L29",
+      "level_title": "Чудо соперника",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L29/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Театральная кисть Гуго со звездой",
+      "placement": {
+        "corner": "bottom_left",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          8,
+          840,
+          159,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 8,
+      "source_crop": [
+        1120,
+        518,
+        1356,
+        793
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "ac94c44acae6cf778de9e0f3ab67aafef57118eacfa34a390ec8628e87af2241",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "22e389af02894b6d91f6087aafdaead2aa14008a337b2db73e6f26e2de728631"
+    },
+    {
+      "level_id": "L30",
+      "level_title": "Площадь всех возможностей",
+      "environment_id": "ENV03",
+      "file": "res://assets/art/scenes/L30/overlay.png",
+      "canvas_size": [
+        1536,
+        1024
+      ],
+      "decoration": "Финальный букет бумажных цветов трёх цветов",
+      "placement": {
+        "corner": "bottom_right",
+        "max_size": [
+          222,
+          176
+        ],
+        "margin": 8,
+        "alpha_bbox": [
+          1361,
+          840,
+          1528,
+          1016
+        ]
+      },
+      "source_atlas": "assets/art/source/recreated-2026-10-25/scene-overlays/ENV03-corner-vignettes.png",
+      "source_cell": 9,
+      "source_crop": [
+        1438,
+        515,
+        1706,
+        797
+      ],
+      "source_sha256": "65843b0dd7a2e795882ce1c3baa322b8105f195cec4c9b399193640a22b66011",
+      "sha256": "835e70dd87bb1532278a51be2d4b189c4a3175f0afc1cdaa17815cd3cbc30a49",
+      "status": "new_generated_peripheral_decoration",
+      "rgba_sha256": "d36ee2929c2e825f03373b14c1f206ee1cc9940dfa557ec6506eb5160cd17981"
+    }
+  ],
+  "export_byte_stability": "PNG metadata contains ImageMagick creation timestamps. Reproduction checks RGBA pixels; shipped-byte SHA256 remains recorded separately."
+}

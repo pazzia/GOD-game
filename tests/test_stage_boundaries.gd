@@ -24,7 +24,7 @@ func run() -> void:
 	var hero: Node2D=stage._puppets.felix
 	var animator: AnimationPlayer=hero.animator
 	var initial_actor_ids: Dictionary=actor_ids(stage)
-	check(initial_actor_ids.has("plum") and initial_actor_ids.size()==2 and puppet_nodes(stage).size()==2 and find_actor(stage,"plum").rigged,"L01 has exactly one real Felix and one real Plum rig")
+	check(initial_actor_ids.has("plum") and initial_actor_ids.size()==4 and puppet_nodes(stage).size()==4 and find_actor(stage,"plum").rigged,"L01 has Felix, Plum, Marfa and Nika with one real rig each")
 	animator.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	var stage_id: int=stage.get_instance_id();var hero_id: int=hero.get_instance_id();var animator_id: int=animator.get_instance_id()
 	var original_definition: Variant=app.kernel._canonical(app.kernel.definition)
@@ -90,6 +90,7 @@ func run() -> void:
 	app.set_process(false)
 	app.free();a.shutdown();a.free();await process_frame
 	await route_view_cases()
+	await capacity_badge_cases()
 	await create_timer(.15).timeout
 	finish()
 func route_view_cases() -> void:
@@ -100,7 +101,7 @@ func route_view_cases() -> void:
 	var run: Dictionary=k.dispatch({"type":"RunResolution","payload":{}});k.advance_ticks(5);view._sync_puppets()
 	check(first.accepted and run.accepted and view._puppets.felix.current_state=="idle" and view._entity_position("hero")==view.world(k.state.entities.hero.position),"independently walking animal does not animate or move carrier hero")
 	var goat=find_actor(view,"caramelka")
-	check(goat!=null and goat.rigged and goat.position.is_equal_approx(view._entity_position("goat")) and actor_ids(view).size()==3 and puppet_nodes(view).size()==3,"entity goat binds one actual Caramelka rig alongside Felix and Plum")
+	check(goat!=null and goat.rigged and goat.position.is_equal_approx(view._visual_position("goat")) and actor_ids(view).size()==5 and puppet_nodes(view).size()==5,"entity goat binds one actual Caramelka rig alongside Felix, Plum and two named witnesses")
 	var frozen: Dictionary=actor_clocks(view);view.process_mode=Node.PROCESS_MODE_DISABLED;await create_timer(.04).timeout
 	check(all_actors_paused(view) and actor_clocks(view)==frozen,"all three rig clocks freeze through parent Stage processing mode")
 	view.process_mode=Node.PROCESS_MODE_INHERIT
@@ -122,6 +123,32 @@ func route_view_cases() -> void:
 	goat=find_actor(view,"caramelka")
 	check(goat==null or not goat.is_visible_in_tree(),"switching to level without goat leaves no stale visible Caramelka")
 	view.free();await process_frame
+func capacity_badge_cases() -> void:
+	# Real regressions: two adjacent stones in L07/L24, and Felix over L17's label.
+	for number in [7,17,24]:
+		var id: String="L%02d"%number
+		var k=Kernel.new();k.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/"+id+".json")),48121)
+		var view=Stage.new();view.kernel=k;view.size=Vector2(984,656);root.add_child(view);view.set_process(false)
+		for phase in ["before","after"]:
+			if phase=="after":
+				var replay: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://tests/replays/"+id+"_solution.json"))
+				for step in replay.steps:
+					if step.op=="command":k.dispatch(step)
+					elif step.op=="advance_ticks":k.advance_ticks(int(step.count))
+			view._sync_puppets()
+			var truth: String=k.state_hash()
+			for locale in ["ru","en"]:
+				var catalog: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/localization/"+locale+".json"))
+				view.translator=func(key,fallback):return catalog.get(key,fallback)
+				var badges: Array=view._capacity_badge_layout()
+				var readable: bool=not badges.is_empty()
+				for i in range(badges.size()):
+					readable=readable and Rect2(Vector2.ZERO,view.size).encloses(badges[i].rect)
+					for j in range(i):readable=readable and not badges[i].rect.grow(4).intersects(badges[j].rect)
+				check(readable,id+" "+phase+" "+locale+" capacity badges fit the stage and have a visible gap")
+				check(k.state_hash()==truth,id+" "+phase+" "+locale+" capacity layout cannot mutate simulation")
+			check(view._capacity_overlay.get_index()==view.get_child_count()-1 and view._capacity_overlay.z_index==0,id+" "+phase+" badges render after all puppets without escaping sibling modal order")
+		view.free();await process_frame
 func puppet_nodes(node: Node) -> Array:
 	var found: Array=[]
 	if node.get_script()==Puppet:found.append(node)

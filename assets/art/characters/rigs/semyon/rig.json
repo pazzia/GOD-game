@@ -10,7 +10,7 @@
     1320
   ],
   "nominal_height": 1320,
-  "status": "native_keyposes_verified",
+  "status": "new_parts_native_keyposes_reviewed",
   "runtime_animation_verified": false,
   "parts": [
     {
@@ -81,14 +81,14 @@
       "id": "left_arm",
       "file": "left_arm.png",
       "position": [
-        495,
-        525
+        510,
+        550
       ],
       "pivot": [
-        0.5,
+        0.2,
         0.12
       ],
-      "target_height": 390,
+      "target_height": 350,
       "z_index": 6,
       "parent": "torso",
       "role": "arm"
@@ -97,14 +97,14 @@
       "id": "right_arm",
       "file": "right_arm.png",
       "position": [
-        815,
-        525
+        805,
+        535
       ],
       "pivot": [
         0.16,
         0.12
       ],
-      "target_height": 370,
+      "target_height": 330,
       "z_index": 5,
       "parent": "torso",
       "role": "arm"
@@ -145,14 +145,14 @@
       "id": "prop",
       "file": "prop.png",
       "position": [
-        690,
-        700
+        830,
+        655
       ],
       "pivot": [
-        0.04,
-        0.88
+        0.052,
+        0.732
       ],
-      "target_height": 300,
+      "target_height": 220,
       "z_index": 15,
       "parent": "right_arm",
       "role": "prop"
@@ -169,14 +169,13 @@
     "celebrate": "res://assets/art/characters/portraits/semyon/celebrate.png"
   },
   "angles": {},
-  "assembly_notes": "Actual assembly inspected twice. Narrow vest/head/legs calibrated; screen-left sleeve moved to front draw order so its fingers hold the left folding-rule end, while screen-right palm supports the other end. Toolbelt and short vest-back remain separate. Solid shoulder cloth overlap, no dark hollow sockets. Native motion and direction art pending.",
+  "assembly_notes": "Recreated2026-10-25: left sleeve pivot corrected to [.2,.12], shoulder position [510,550], height350; right arm height330 at[805,535]; ruler height220 at[830,655] with pivot[.052,.732]. Both shoulders overlap torso and ruler clears neck in reviewed keyposes.",
   "native_keypose_review": {
     "accepted_for_integration": true,
-    "date_utc": "2026-10-23T21:09:19.246649+00:00",
-    "evidence": "build/rig-review-final/semyon-keyposes.png",
-    "sha256": "d264b3c915fb6c75a4f444b15267358f09a46e7069c2b02cf464e842a6e02779",
-    "identical_to_individually_reviewed_previous_sheet": true,
-    "scope": "Actual Godot cutout puppet at 35 percent of each of eight base clips plus stamp. Designer inspected each actor; Manager accepted all nine. Coherent anatomical joints, parented props, wing motion and corrected Felix turn. Continuous full-cycle visual QA and genuine front/profile/back art are not claimed."
+    "date_utc": "2026-10-25",
+    "evidence": "assets/art/source/recreated-2026-10-25/review/semyon-keyposes.png",
+    "sha256": "a5c93604d66b19e8ce8605ce93a922dcc18065195b55dfee3b1097c8514e8ae8",
+    "scope": "Current replacement parts in actual Godot at35percent of8base clips plus stamp. Shoulder overlap and ruler hand-level placement visually accepted; full cycles and direction art not claimed."
   },
   "directional_animation_complete": false
 }
