@@ -2000,8 +2000,8 @@
         "The same law lifted a stone anchor. At the next pier, the boat needs another mooring."
       ],
       "plan_tip": [
-        "Нажмите на ширму: поменяйте место и сложите верх.",
-        "Tap the screen: change its position and fold the top."
+        "Откройте «Предметы» и возьмите учебную ширму.",
+        "Open ‘Objects’ and choose the practice screen."
       ],
       "resolution_tip": [
         "Вода держит камень вместе с грузом. Уберите поплавок, затем переправьте Марфу.",
@@ -2088,8 +2088,8 @@
         "Demonstrate the effect from both views and deliver the parcel."
       ],
       "intro": [
-        "Семён: «Я не сомневаюсь. Я уточняю, что видно сбоку». Новая страница Атласа относится к этой площадке: оба ракурса должны показывать камень без опоры.",
-        "Semyon: “I am not doubting. I am checking the side view.” This Atlas page belongs to this stage: both views must show the stone without its support."
+        "Семён: «Я не сомневаюсь. Я уточняю, что видно сбоку». Здесь два жёстких щита: они не складываются, их нужно переставлять. Оба ракурса должны показывать камень без поплавка. После записи закона камень станет опорой на переправе.",
+        "Semyon: “I am not doubting. I am checking the side view.” These two rigid screens do not fold; move them. Both views must show the stone without its float. Once the law is recorded, the stone becomes a crossing support."
       ],
       "success": [
         "Посылка на дальнем берегу. Семён проверил оба ракурса, а настоящая переправа выдержала груз.",
@@ -2124,8 +2124,20 @@
         "Check his second stop and the ray to the float."
       ],
       "hint3": [
-        "Поставьте вторую ширму на правый край сцены: она должна скрыть поплавок со второго ракурса.",
-        "Place the second screen on the right side of the stage to hide the float from the second view."
+        "Поставьте второй жёсткий щит на правый край сцены: он должен скрыть поплавок со второго ракурса.",
+        "Place the second rigid screen on the right side of the stage to hide the float from the second view."
+      ],
+      "resolution_hint1": [
+        "Закон уже действует. Проверьте, есть ли опора на пути посылки.",
+        "The law is active. Check whether the parcel has a support along its route."
+      ],
+      "resolution_hint2": [
+        "Место опыта и место переправы — разные позиции камня.",
+        "The demonstration position and crossing position are different places for the stone."
+      ],
+      "resolution_hint3": [
+        "Перенесите камень в место «Опора на переправе», затем назначьте или повторите путь посылки.",
+        "Move the stone to ‘Crossing support’, then assign or retry the parcel route."
       ]
     },
     "L04": {
@@ -3751,6 +3763,178 @@
     "reason.SAILING_REQUIRES_WATER": [
       "Лодке нужен непрерывный путь по воде. Выберите лодочный маршрут.",
       "The boat needs an unbroken route through water. Choose a sailing route."
+    ],
+    "ui.placing_prop": [
+      "Разместить: {name}",
+      "Place: {name}"
+    ],
+    "ui.placement_invalid": [
+      "Здесь этот предмет не поставить. Выберите подсвеченное место или отмените размещение.",
+      "This object cannot be placed here. Choose a highlighted location or cancel placement."
+    ],
+    "ui.choose_target": [
+      "Выберите предмет",
+      "Choose an item"
+    ],
+    "ui.pause_title": [
+      "Пауза",
+      "Pause"
+    ],
+    "ui.resume": [
+      "Продолжить",
+      "Continue"
+    ],
+    "ui.settings_text": [
+      "Текст и доступность",
+      "Text and accessibility"
+    ],
+    "ui.settings_text_tab": [
+      "Текст",
+      "Text"
+    ],
+    "ui.settings_audio": [
+      "Звук",
+      "Audio"
+    ],
+    "ui.text_size": [
+      "Размер текста",
+      "Text size"
+    ],
+    "ui.main_menu": [
+      "Главное меню",
+      "Main menu"
+    ],
+    "ui.restart_experiment": [
+      "Начать опыт заново",
+      "Restart experiment"
+    ],
+    "ui.placement_active": [
+      "Разместить {entity}: коснитесь подсвеченного места.",
+      "Place {entity}: tap a highlighted location."
+    ],
+    "ui.inspection_status": [
+      "{observer}: результат {visible}/3 · механизм {state}",
+      "{observer}: result {visible}/3 · method {state}"
+    ],
+    "ui.fold_top": [
+      "Сложить верх",
+      "Fold the top"
+    ],
+    "ui.unfold_top": [
+      "Развернуть верх",
+      "Unfold the top"
+    ],
+    "ui.plan_summary": [
+      "Подготовлено сейчас",
+      "Current setup"
+    ],
+    "ui.plan_no_routes": [
+      "Маршруты ещё не назначены.",
+      "No routes have been assigned yet."
+    ],
+    "ui.route_not_assigned": [
+      "Маршрут не назначен",
+      "Route not assigned"
+    ],
+    "ui.route_assigned": [
+      "Маршрут назначен",
+      "Route assigned"
+    ],
+    "ui.route_running": [
+      "Выполняется",
+      "In progress"
+    ],
+    "ui.route_completed": [
+      "Доставка выполнена",
+      "Delivery complete"
+    ],
+    "ui.attachment_missing": [
+      "Не закреплено",
+      "Not attached"
+    ],
+    "ui.attachment_attached": [
+      "Закреплено: {target}",
+      "Attached to: {target}"
+    ],
+    "ui.mooring_not_secure": [
+      "Связь есть, но лодка ещё не удерживается",
+      "Attached, but the boat is not held securely"
+    ],
+    "ui.support_ready": [
+      "Опора готова",
+      "Support ready"
+    ],
+    "ui.support_wrong_slot": [
+      "Опора не в месте переправы",
+      "Support is away from the crossing"
+    ],
+    "ui.support_missing": [
+      "Опора убрана",
+      "Support removed"
+    ],
+    "ui.support_unstable": [
+      "Опора не удерживается",
+      "Support is not supported"
+    ],
+    "ui.support_over_capacity": [
+      "Опора не выдержит общий груз",
+      "Support cannot carry the combined load"
+    ],
+    "ui.goal_pending": [
+      "Ещё не выполнено",
+      "Not completed yet"
+    ],
+    "ui.goal_done": [
+      "Выполнено",
+      "Completed"
+    ],
+    "level.L01.entity.screen_a.name": [
+      "Учебная складная ширма",
+      "Foldable practice screen"
+    ],
+    "level.L01.entity.screen_a.description": [
+      "Верх этой ширмы складывается. Проверьте, что Марфа видит камень, но не поплавок.",
+      "The top of this practice screen folds. Check that Marfa sees the stone but not the float."
+    ],
+    "level.L03.entity.screen_a.name": [
+      "Первый жёсткий щит",
+      "First rigid screen"
+    ],
+    "level.L03.entity.screen_b.name": [
+      "Второй жёсткий щит",
+      "Second rigid screen"
+    ],
+    "level.L03.entity.screen_a.description": [
+      "Этот щит не складывается. Переставляйте его: камень должен быть виден, а поплавок — скрыт из обоих ракурсов.",
+      "This rigid screen does not fold. Move it so the stone remains visible and the float is hidden from both views."
+    ],
+    "level.L03.entity.screen_b.description": [
+      "Этот щит не складывается. Проверьте, что он закрывает поплавок со второго ракурса.",
+      "This rigid screen does not fold. Check that it hides the float from the second view."
+    ],
+    "level.L03.slot.stage_stone.name": [
+      "Место опыта — над поплавком",
+      "Demonstration position — above the float"
+    ],
+    "level.L03.slot.stage_float.name": [
+      "Под камнем — место опыта",
+      "Under the stone — demonstration position"
+    ],
+    "level.L03.slot.bridge.name": [
+      "Опора на переправе",
+      "Crossing support"
+    ],
+    "ui.settings_back": [
+      "Назад",
+      "Back"
+    ],
+    "ui.route_stopped": [
+      "Запуск остановлен",
+      "Run stopped"
+    ],
+    "ui.route_waiting": [
+      "Ожидает изменения среды",
+      "Waiting for the environment"
     ]
   },
   "property_overrides_by_type": {

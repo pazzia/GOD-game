@@ -32,7 +32,7 @@ func run() -> void:
 	var motion=InputEventMouseMotion.new();motion.position=at+Vector2(25,0);motion.global_position=motion.position;Input.parse_input_event(motion);events+=1;await process_frame
 	await button(at+Vector2(25,0),false)
 	check(selected.size()==before,"movement beyond tap threshold cancels even inside enlarged rectangle")
-	stage.selected="stone";stage.queue_redraw();await process_frame;await process_frame
+	stage.selected="stone";stage.placement_entity="stone";stage.queue_redraw();await process_frame;await process_frame
 	var slot: Vector2=stage.world(k._slots.stage_stone.position)
 	await button(slot,true);await button(slot,false)
 	check(selected[-1]=={"kind":"slot","id":"stage_stone"},"compatible selected slot has priority over both enlarged overlapping props")

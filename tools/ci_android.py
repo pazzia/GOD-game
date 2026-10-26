@@ -10,16 +10,17 @@ import subprocess
 import sys
 
 from verify_project import engine_errors, runtime_manifest, expected_check_names
+from build_android import PREVIEW_PACKAGE, selected_android_package, validate_review_provider_authorities
 
 ROOT = Path(__file__).resolve().parents[1]
-APK_NAME = "AlmostGod-0.5.0-preview.apk"
+APK_NAME = "AlmostGod-0.5.1-preview.apk"
 
 
 def digest_manifest(manifest):
     return hashlib.sha256(json.dumps(manifest, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
 
-def validate_reports(verification, build, expected_digest, apk):
+def validate_reports(verification, build, expected_digest, apk, expected_package=PREVIEW_PACKAGE):
     checks = verification.get("checks", [])
     required = expected_check_names(ui=True, audio=True)
     actual = [check.get("name") for check in checks]
@@ -34,6 +35,13 @@ def validate_reports(verification, build, expected_digest, apk):
         raise RuntimeError("APK and verification source digests differ.")
     if not build.get("signature_verified") or not build.get("new_debug_identity"):
         raise RuntimeError("Expected a verified signature for the separate preview application.")
+    if expected_package != PREVIEW_PACKAGE:
+        selected_android_package(True, expected_package)
+        validate_review_provider_authorities(build, expected_package)
+    package_nodes = [entry.get("attributes", {}) for entry in build.get("manifest", [])
+                     if entry.get("element") == "manifest"]
+    if len(package_nodes) != 1 or package_nodes[0].get("package") != expected_package:
+        raise RuntimeError("The exported Android package must match the selected preview identity.")
     game_activities = [entry.get("attributes", {}) for entry in build.get("manifest", [])
                        if entry.get("element") == "activity"
                        and entry.get("attributes", {}).get("name") == "com.godot.game.GodotApp"]
@@ -64,13 +72,41 @@ def run(command, log, env, timeout=1800):
         raise RuntimeError(f"Command failed or reported engine errors; see {log}")
 
 
+def release_notes(current, run_url, build, suites, package):
+    isolated = package != PREVIEW_PACKAGE
+    if isolated:
+        installation = (
+            f"Это отдельная тестовая установка с package `{package}` и именем «Почти бог · UX тест». "
+            "Она ставится рядом с прежней игрой: удалять старую preview или её данные не требуется. "
+            "Прохождение и настройки новой сборки отдельные; автоматического переноса сохранений нет. "
+            "Это не обновление старого package и не исправление постоянной подписи. "
+            "Каждый CI-run/attempt получает другой package, поскольку временный ключ не сохраняется.\n\n")
+    else:
+        installation = (
+            "Это legacy preview package `com.almostgod.game.preview` с временным сертификатом. "
+            "Он не гарантирует обновление ранее установленной preview с иной подписью. "
+            "Не удаляйте прежнюю игру ради установки без отдельной резервной копии и понимания потери локальных данных.\n\n")
+    return (
+        "Тестовая сборка «Почти бог» 0.5.1-preview для Android 10+ / ARM64.\n\n"
+        "Исправления по результатам прогона Игрока: подсказки по текущему этапу, "
+        "объяснение остановки, проверка плана, выбор и размещение предметов, пауза и крупный текст.\n\n"
+        f"Скачайте `{APK_NAME}` — отдельный APK без архива.\n\n" + installation +
+        f"Исходники: `{current}`. Проверки: {suites} наборов, без ошибок движка.\n\n"
+        f"SHA-256 APK: `{build['sha256']}`.\n\n"
+        f"[Сборка и полный журнал]({run_url})\n\n"
+        "Подпись, package, состав APK и соответствие исходникам проверены автоматически. "
+        "Проверка на физическом телефоне ещё не выполнена; это тестовая версия, не магазинный релиз.\n")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tools-dir", required=True, type=Path)
     parser.add_argument("--output-dir", required=True, type=Path)
     parser.add_argument("--debug-keystore", required=True, type=Path)
     parser.add_argument("--source-sha", required=True)
+    parser.add_argument("--preview-package", help="Isolated review package; defaults to the legacy preview identity only when omitted.")
     args = parser.parse_args()
+    package = selected_android_package(True, args.preview_package)
     current = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     if current != args.source_sha:
         raise RuntimeError("Checkout HEAD differs from the workflow source SHA.")
@@ -94,13 +130,15 @@ def main():
         output / "verification.log", env, timeout=1800)
     if not report_path.is_file():
         raise RuntimeError("The current verification run did not produce a report.")
-    run([sys.executable, "tools/build_android.py", "--tools-dir", args.tools_dir.resolve(),
-         "--new-debug-identity", "--debug-keystore", args.debug_keystore.resolve(),
-         "--output", apk], output / "build.log", env, timeout=1200)
+    build_command = [sys.executable, "tools/build_android.py", "--tools-dir", args.tools_dir.resolve(),
+                     "--new-debug-identity", "--debug-keystore", args.debug_keystore.resolve(), "--output", apk]
+    if args.preview_package is not None:
+        build_command += ["--preview-package", package]
+    run(build_command, output / "build.log", env, timeout=1200)
     verification = json.loads(report_path.read_text())
     build_path = apk.with_suffix(".build.json")
     build = json.loads(build_path.read_text())
-    validate_reports(verification, build, expected_digest, apk)
+    validate_reports(verification, build, expected_digest, apk, package)
     if runtime_manifest() != baseline:
         raise RuntimeError("Runtime sources changed during CI.")
     shutil.copy2(report_path, output / "project-verification.json")
@@ -111,24 +149,17 @@ def main():
                   "workflow_run_url": run_url, "workflow_run_attempt": os.environ.get("GITHUB_RUN_ATTEMPT"),
                   "apk_sha256": build["sha256"], "certificate_sha256": build["certificate_sha256"],
                   "verification_suites": len(verification["checks"]), "physical_device_tested": False,
-                  "signing_key": "Ephemeral test key generated on runner; never uploaded. Reinstall required between builds."}
+                  "android_package": package,
+                  "installation_mode": "parallel_isolated_review" if args.preview_package is not None else "legacy_preview",
+                  "signing_continuity": False,
+                  "progress_migration": "Not implemented; the isolated package has separate progress and settings.",
+                  "legacy_installation_action": "No uninstall, reset, or migration is performed or requested.",
+                  "signing_key": "Ephemeral test key generated on runner; never uploaded. Not a stable signing channel."}
     (output / "provenance.json").write_text(json.dumps(provenance, indent=2) + "\n")
     filenames = [APK_NAME, build_path.name, "project-verification.json", "provenance.json"]
     (output / "SHA256SUMS.txt").write_text("".join(
         f"{hashlib.sha256((output / name).read_bytes()).hexdigest()}  {name}\n" for name in filenames))
-    (output / "release-notes.md").write_text(
-        "Тестовая сборка «Почти бог» 0.5.0-preview для Android 10+ / ARM64.\n\n"
-        "Новый профессор Феликс, иллюстрированные персонажи и окружения, свободное игровое поле "
-        "с контекстными действиями, переработанный сюжет и обучение, новая спокойная музыка.\n\n"
-        "Скачайте `AlmostGod-0.5.0-preview.apk` и разрешите установку из выбранного источника.\n\n"
-        "Каждый запуск CI использует новый временный тестовый сертификат. Если уже установлена другая "
-        "сборка `com.almostgod.game.preview`, для установки потребуется удалить её; это удаляет её локальные сохранения. "
-        "Старое приложение `com.almostgod.game` устанавливается отдельно.\n\n"
-        f"Исходники: `{current}`. Проверки: {len(verification['checks'])} наборов, без ошибок движка.\n\n"
-        f"SHA-256 APK: `{build['sha256']}`.\n\n"
-        f"[Сборка и полный журнал]({run_url})\n\n"
-        "Подпись, состав APK и соответствие исходникам проверены автоматически. "
-        "Проверка на физическом телефоне ещё не выполнена; это тестовая версия, не магазинный релиз.\n")
+    (output / "release-notes.md").write_text(release_notes(current, run_url, build, len(verification["checks"]), package))
     print(json.dumps(provenance, indent=2), flush=True)
 
 

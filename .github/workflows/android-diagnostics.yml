@@ -43,7 +43,7 @@ jobs:
                         "files_changed": data.get("files_changed_during_verification"),
                         "failed_checks": [c for c in data.get("checks", []) if c["exit_code"]],
                         "logs": {}}
-          for name in ("import.log", "verification.log", "build.log"):
+          for name in ("bootstrap.log", "import.log", "verification.log", "build.log"):
               path = next(artifact.rglob(name), None)
               if path:
                   diagnostic["logs"][name] = path.read_text(errors="replace")[-12000:]

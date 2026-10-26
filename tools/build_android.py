@@ -11,6 +11,26 @@ from verify_project import runtime_manifest, engine_errors
 ROOT=Path(__file__).resolve().parents[1]
 VERSION='4.7.2'
 MIN_SDK=29
+LEGACY_PACKAGE='com.almostgod.game'
+PREVIEW_PACKAGE=LEGACY_PACKAGE+'.preview'
+REVIEW_PACKAGE_PATTERN=r'com\.almostgod\.game\.review\.r[1-9][0-9]*(?:\.a[1-9][0-9]*)?'
+
+def selected_android_package(new_debug_identity,preview_package=None):
+ """Only an explicitly isolated review identity may override the legacy modes."""
+ if preview_package is not None:
+  if not new_debug_identity:raise RuntimeError('--preview-package requires --new-debug-identity.')
+  if not re.fullmatch(REVIEW_PACKAGE_PATTERN,preview_package):
+   raise RuntimeError('Review package must be com.almostgod.game.review.r<RUN_ID>[.a<ATTEMPT>] with positive numeric identifiers.')
+  return preview_package
+ return PREVIEW_PACKAGE if new_debug_identity else LEGACY_PACKAGE
+
+def validate_review_provider_authorities(report,package):
+ """Parallel packages must not claim another installed app's provider namespace."""
+ for row in report.get('manifest',[]):
+  if row.get('element')!='provider':continue
+  authorities=row.get('attributes',{}).get('authorities','')
+  if not isinstance(authorities,str) or not authorities or any(not item.startswith(package+'.') for item in authorities.split(';')):
+   raise RuntimeError('Review provider authorities must use the isolated Android package namespace.')
 
 def manifest_min_sdk(data):
  """Locate the unique integer Android minSdkVersion in bounded binary AXML.
@@ -131,12 +151,13 @@ def signing_identity(args,java,env,output):
  if expected is not None and actual!=expected:raise RuntimeError('Existing debug key does not match the archived certificate; no APK was exported.')
  return keystore,actual
 
-def validate_android_manifest(report,new_debug_identity):
+def validate_android_manifest(report,new_debug_identity,preview_package=None):
  """Check effective APK values; exporter settings alone are not evidence."""
  nodes={row['element']:row['attributes'] for row in report['manifest']}
  manifest=nodes.get('manifest',{});sdk=nodes.get('uses-sdk',{})
- expected_package='com.almostgod.game.preview' if new_debug_identity else 'com.almostgod.game'
+ expected_package=selected_android_package(new_debug_identity,preview_package)
  if manifest.get('package')!=expected_package:raise RuntimeError('APK package does not match the selected signing mode.')
+ if preview_package is not None:validate_review_provider_authorities(report,expected_package)
  if int(sdk.get('minSdkVersion',0))!=MIN_SDK:raise RuntimeError('APK minSdkVersion must be 29 (Android 10), as required by the game specification.')
  preset=(ROOT/'export_presets.cfg').read_text()
  expected_code=int(re.search(r'^version/code=(\d+)$',preset,re.M).group(1))
@@ -144,6 +165,7 @@ def validate_android_manifest(report,new_debug_identity):
  if manifest.get('versionCode')!=expected_code or manifest.get('versionName')!=expected_name:raise RuntimeError('APK version does not match the source export preset.')
 
 def build(args):
+ package=selected_android_package(args.new_debug_identity,getattr(args,'preview_package',None))
  tools=args.tools_dir.resolve();output=args.output.resolve();output.parent.mkdir(parents=True,exist_ok=True)
  godot=tools/f'Godot_v{VERSION}-stable_linux.x86_64'
  sdk=tools/'android-sdk';templates=tools/f'export_templates/{VERSION}.stable'
@@ -172,7 +194,7 @@ def build(args):
   preset=(staged/'export_presets.cfg').read_text()
   values={'custom_template/debug':custom_debug,'custom_template/release':templates/'android_release.apk','gradle_build/min_sdk':'','keystore/debug':keystore,'keystore/debug_user':'androiddebugkey','keystore/debug_password':'android'}
   if args.new_debug_identity:
-   values.update({'package/unique_name':'com.almostgod.game.preview','package/name':'Почти бог — Preview'})
+   values.update({'package/unique_name':package,'package/name':'Почти бог · UX тест' if getattr(args,'preview_package',None) else 'Почти бог — Preview'})
   for key,value in values.items():preset=re.sub(r'^'+re.escape(key)+r'=.*$',key+'='+quoted(value),preset,flags=re.M)
   (staged/'export_presets.cfg').write_text(preset)
   env['XDG_DATA_HOME']=str(temp/'data');env['XDG_CONFIG_HOME']=str(temp/'config');env['XDG_CACHE_HOME']=str(temp/'cache')
@@ -191,8 +213,9 @@ def build(args):
  if certificate is None or certificate.group(1)!=expected_certificate:raise RuntimeError('APK signing identity does not match the selected debug key.')
  inspection=run([sys.executable,ROOT/'tools/inspect_apk.py',output,'--source-root',ROOT],output.with_suffix('.inspection.json'),env)
  report=json.loads(inspection)
- validate_android_manifest(report,args.new_debug_identity)
+ validate_android_manifest(report,args.new_debug_identity,getattr(args,'preview_package',None))
  report.update({'elapsed_seconds':round(time.monotonic()-started,2),'signature_verified':True,'certificate_sha256':certificate.group(1),'signing':'new local preview debug key' if args.new_debug_identity else 'archived local debug key','new_debug_identity':args.new_debug_identity,'release_store_key':False,'godot_version':VERSION,'physical_device_tested':False,'build_method':'Godot built-in template export; AOSP signing subset, no Gradle','source_runtime_digest_sha256':source_digest,'custom_template_provenance':template_provenance})
+ report.update({'android_package':package,'isolated_review':bool(getattr(args,'preview_package',None))})
  output.with_suffix('.build.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
  print(json.dumps({'apk':str(output),'size_bytes':report['size_bytes'],'sha256':report['sha256'],'signature_verified':True,'level_count':report['level_count'],'physical_device_tested':False},ensure_ascii=False,indent=2),flush=True)
  return report
@@ -203,6 +226,7 @@ if __name__=='__main__':
  parser.add_argument('--output',type=Path,default=ROOT/'build/AlmostGod-debug.apk')
  parser.add_argument('--new-debug-identity',action='store_true',help='Use a separate local key and com.almostgod.game.preview; does not replace an archived installation.')
  parser.add_argument('--debug-keystore',type=Path,help='Persistent preview key path outside the repository (requires --new-debug-identity).')
+ parser.add_argument('--preview-package',help='Isolated review package com.almostgod.game.review.r<RUN_ID>[.a<ATTEMPT>]; requires --new-debug-identity. Installs alongside legacy previews, with separate progress.')
  args=parser.parse_args()
  try:build(args)
  except (RuntimeError,subprocess.TimeoutExpired,subprocess.CalledProcessError) as error:raise SystemExit(str(error))

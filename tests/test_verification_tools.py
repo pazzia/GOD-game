@@ -1,6 +1,8 @@
 """Regression checks for diagnostics that must never produce a false pass."""
 import base64
 import hashlib
+import http.client
+import io
 import json
 import struct
 import subprocess
@@ -11,13 +13,15 @@ import sys
 import tempfile
 from types import SimpleNamespace
 import unittest
-from unittest.mock import patch
+import urllib.error
+from unittest.mock import patch, call
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'tools'))
 import verify_audio
 import verify_project
 import build_android
 import ci_android
+import bootstrap_native
 
 
 class VerificationDiagnostics(unittest.TestCase):
@@ -33,7 +37,8 @@ class VerificationDiagnostics(unittest.TestCase):
             build = {'source_runtime_digest_sha256': 'source-fixture', 'signature_verified': True,
                      'new_debug_identity': True, 'sha256': checksum, 'size_bytes': apk.stat().st_size,
                      'manifest': [{'element': 'activity', 'attributes':
-                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 11}}],
+                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 11}},
+                                  {'element': 'manifest', 'attributes': {'package': build_android.PREVIEW_PACKAGE}}],
                      'source_verification': {'missing': [], 'mismatched': []}}
             ci_android.validate_reports(verification, build, 'source-fixture', apk)
             for mode in ('missing', 'duplicate', 'zero'):
@@ -132,6 +137,191 @@ class VerificationDiagnostics(unittest.TestCase):
                     broken['manifest'][element]['attributes'][field] = invalid
                     with self.subTest(field=field), self.assertRaises(RuntimeError):
                         build_android.validate_android_manifest(broken, True)
+
+    def test_isolated_package_scope_preserves_legacy_modes_and_separates_attempts(self):
+        self.assertEqual(build_android.selected_android_package(False), 'com.almostgod.game')
+        self.assertEqual(build_android.selected_android_package(True), 'com.almostgod.game.preview')
+        first = 'com.almostgod.game.review.r40277559409.a1'
+        retry = 'com.almostgod.game.review.r40277559409.a2'
+        self.assertEqual(build_android.selected_android_package(True, first), first)
+        self.assertEqual(build_android.selected_android_package(True, retry), retry)
+        self.assertNotEqual(first, retry)
+        with self.assertRaisesRegex(RuntimeError, 'requires --new-debug-identity'):
+            build_android.selected_android_package(False, first)
+        for invalid in ('', 'com.almostgod.game', 'com.almostgod.game.preview',
+                        'com.almostgod.game.preview.stable', 'com.almostgod.game.review',
+                        'com.almostgod.game.review.r0.a1', 'com.almostgod.game.review.r1.a0',
+                        'com.almostgod.game.review.r01.a1', 'com.almostgod.game.review.r1.a01',
+                        'com.almostgod.game.review.r1.a1.extra', 'com.almostgod.game.review.r1\n',
+                        'com.almostgod.game.review.r1/a1'):
+            with self.subTest(package=invalid), self.assertRaisesRegex(RuntimeError, 'Review package must be'):
+                build_android.selected_android_package(True, invalid)
+
+    def test_invalid_review_package_fails_before_signing_or_tool_access(self):
+        args = SimpleNamespace(new_debug_identity=True, preview_package='com.almostgod.game.preview')
+        with patch.object(build_android, 'signing_identity') as signing:
+            with self.assertRaisesRegex(RuntimeError, 'Review package must be'):
+                build_android.build(args)
+            signing.assert_not_called()
+
+    def test_review_export_checks_exact_attempt_package_in_actual_manifest(self):
+        package = 'com.almostgod.game.review.r40277559409.a1'
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'export_presets.cfg').write_text('version/code=7\nversion/name="0.5.1-preview"\n')
+            report = {'manifest': [
+                {'element': 'manifest', 'attributes': {'package': package, 'versionCode': 7, 'versionName': '0.5.1-preview'}},
+                {'element': 'uses-sdk', 'attributes': {'minSdkVersion': 29}},
+                {'element': 'provider', 'attributes': {'name': 'androidx.core.content.FileProvider',
+                                                       'authorities': package + '.fileprovider'}},
+                {'element': 'provider', 'attributes': {'name': 'androidx.startup.InitializationProvider',
+                                                       'authorities': package + '.fileprovider'}},
+            ]}
+            with patch.object(build_android, 'ROOT', root):
+                build_android.validate_android_manifest(report, True, package)
+                for actual in ('com.almostgod.game.preview', 'com.almostgod.game',
+                               'com.almostgod.game.review.r40277559409.a2'):
+                    wrong = json.loads(json.dumps(report))
+                    wrong['manifest'][0]['attributes']['package'] = actual
+                    with self.subTest(package=actual), self.assertRaisesRegex(RuntimeError, 'APK package does not match'):
+                        build_android.validate_android_manifest(wrong, True, package)
+                for actual in ('com.almostgod.game.preview.fileprovider', package + '2.fileprovider',
+                               package + '.fileprovider;com.almostgod.game.preview.other', ''):
+                    wrong = json.loads(json.dumps(report))
+                    wrong['manifest'][3]['attributes']['authorities'] = actual
+                    with self.subTest(authority=actual), self.assertRaisesRegex(RuntimeError, 'provider authorities'):
+                        build_android.validate_android_manifest(wrong, True, package)
+
+    def test_ci_rejects_missing_duplicate_or_different_review_package(self):
+        package = 'com.almostgod.game.review.r40277559409.a1'
+        required = verify_project.expected_check_names(ui=True, audio=True)
+        with tempfile.TemporaryDirectory() as folder:
+            apk = Path(folder) / 'fixture.apk'
+            apk.write_bytes(b'fixture for checking CI identity contracts; not an Android package')
+            verification = {'status': 'passed', 'checks': [
+                {'name': name, 'exit_code': 0, 'engine_errors': []} for name in required
+            ], 'files_changed_during_verification': [], 'runtime_digest_sha256': 'source-fixture'}
+            build = {'source_runtime_digest_sha256': 'source-fixture', 'signature_verified': True,
+                     'new_debug_identity': True, 'sha256': hashlib.sha256(apk.read_bytes()).hexdigest(),
+                     'size_bytes': apk.stat().st_size, 'source_verification': {'missing': [], 'mismatched': []},
+                     'manifest': [{'element': 'manifest', 'attributes': {'package': package}},
+                                  {'element': 'activity', 'attributes':
+                                   {'name': 'com.godot.game.GodotApp', 'screenOrientation': 11}},
+                                  {'element': 'provider', 'attributes': {'authorities': package + '.fileprovider'}}]}
+            ci_android.validate_reports(verification, build, 'source-fixture', apk, package)
+            for mode in ('missing', 'duplicate', 'legacy', 'other_attempt', 'legacy_provider'):
+                wrong = json.loads(json.dumps(build))
+                message = 'Android package must match'
+                if mode == 'missing':
+                    wrong['manifest'].pop(0)
+                elif mode == 'duplicate':
+                    wrong['manifest'].append(wrong['manifest'][0])
+                elif mode == 'legacy_provider':
+                    wrong['manifest'][2]['attributes']['authorities'] = 'com.almostgod.game.preview.fileprovider'
+                    message = 'provider authorities'
+                else:
+                    wrong['manifest'][0]['attributes']['package'] = (
+                        build_android.PREVIEW_PACKAGE if mode == 'legacy' else 'com.almostgod.game.review.r40277559409.a2')
+                with self.subTest(mode=mode), self.assertRaisesRegex(RuntimeError, message):
+                    ci_android.validate_reports(verification, wrong, 'source-fixture', apk, package)
+
+    def test_isolated_release_notes_never_instruct_deleting_legacy_progress(self):
+        package = 'com.almostgod.game.review.r40277559409.a1'
+        notes = ci_android.release_notes('source-fixture', 'https://github.com/fixture/run',
+                                         {'sha256': 'checksum-fixture'}, 32, package)
+        self.assertIn(package, notes)
+        self.assertIn('ставится рядом', notes)
+        self.assertIn('удалять старую preview или её данные не требуется', notes)
+        self.assertIn('Прохождение и настройки новой сборки отдельные', notes)
+        self.assertIn('не исправление постоянной подписи', notes)
+        self.assertIn(ci_android.APK_NAME, notes)
+        self.assertNotIn('потребуется удалить её', notes)
+
+    def test_ci_rejects_legacy_authority_inside_otherwise_valid_review(self):
+        package = 'com.almostgod.game.review.r40277559409.a1'
+        report = {'manifest': [{'element': 'provider', 'attributes':
+                              {'authorities': 'com.almostgod.game.preview.fileprovider'}}]}
+        with self.assertRaisesRegex(RuntimeError, 'provider authorities'):
+            build_android.validate_review_provider_authorities(report, package)
+        report['manifest'][0]['attributes']['authorities'] = package + '.fileprovider;' + package + '.startup'
+        build_android.validate_review_provider_authorities(report, package)
+
+
+class PinnedDownloadRecovery(unittest.TestCase):
+    def test_transient_http_retry_retains_pinned_digest_and_atomic_result(self):
+        payload = b'pinned tool fixture'
+        checksum = hashlib.sha512(payload).hexdigest()
+        for status in (408, 429, 500, 502, 503, 504):
+            with self.subTest(status=status), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder) / 'tool.zip'
+                responses = [urllib.error.HTTPError('https://example.invalid/tool', status, 'transient', {}, None),
+                             urllib.error.HTTPError('https://example.invalid/tool', status, 'transient', {}, None),
+                             io.BytesIO(payload)]
+                with patch.object(bootstrap_native.urllib.request, 'urlopen', side_effect=responses) as fetch, patch.object(bootstrap_native.time, 'sleep') as sleep:
+                    self.assertEqual(bootstrap_native.fetch('https://example.invalid/tool', path, checksum), path)
+                    self.assertEqual(fetch.call_count, 3)
+                    self.assertEqual(sleep.call_args_list, [call(1), call(2)])
+                self.assertEqual(path.read_bytes(), payload)
+                self.assertFalse(path.with_suffix('.zip.partial').exists())
+
+    def test_transport_retry_is_bounded_and_leaves_no_partial(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'tool.zip'
+            with patch.object(bootstrap_native.urllib.request, 'urlopen', side_effect=urllib.error.URLError(TimeoutError('fixture timeout'))) as fetch, patch.object(bootstrap_native.time, 'sleep') as sleep:
+                with self.assertRaises(urllib.error.URLError):
+                    bootstrap_native.fetch('https://example.invalid/tool', path, 'pinned-digest')
+                self.assertEqual(fetch.call_count, 3)
+                self.assertEqual(sleep.call_args_list, [call(1), call(2)])
+            self.assertFalse(path.exists())
+            self.assertFalse(path.with_suffix('.zip.partial').exists())
+
+    def test_denials_and_not_found_never_retry(self):
+        errors = [urllib.error.HTTPError('https://example.invalid/tool', code, 'not transient', {}, None)
+                  for code in (401, 403, 404, 407)]
+        errors.append(urllib.error.URLError(OSError('Tunnel connection failed: 403 Forbidden')))
+        for error in errors:
+            with self.subTest(error=str(error)), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder) / 'tool.zip'
+                with patch.object(bootstrap_native.urllib.request, 'urlopen', side_effect=error) as fetch, patch.object(bootstrap_native.time, 'sleep') as sleep:
+                    with self.assertRaises(urllib.error.URLError):
+                        bootstrap_native.fetch('https://example.invalid/tool', path, 'pinned-digest')
+                    self.assertEqual(fetch.call_count, 1)
+                    sleep.assert_not_called()
+
+    def test_hash_mismatch_never_retries_or_replaces_cached_bytes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'tool.zip'
+            path.write_bytes(b'previous cache bytes')
+            checksum = hashlib.sha512(b'expected payload').hexdigest()
+            with patch.object(bootstrap_native.urllib.request, 'urlopen', return_value=io.BytesIO(b'wrong payload')) as fetch, patch.object(bootstrap_native.time, 'sleep') as sleep:
+                with self.assertRaisesRegex(RuntimeError, 'Checksum mismatch'):
+                    bootstrap_native.fetch('https://example.invalid/tool', path, checksum)
+                self.assertEqual(fetch.call_count, 1)
+                sleep.assert_not_called()
+            self.assertEqual(path.read_bytes(), b'previous cache bytes')
+            self.assertFalse(path.with_suffix('.zip.partial').exists())
+
+    def test_interrupted_read_restarts_download_from_zero(self):
+        class Interrupted(io.BytesIO):
+            def read(self, size=-1):
+                if self.tell():
+                    raise http.client.IncompleteRead(b'fragment')
+                return super().read(3)
+        payload = b'complete pinned fixture'
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'tool.zip'
+            with patch.object(bootstrap_native.urllib.request, 'urlopen', side_effect=[Interrupted(payload), io.BytesIO(payload)]), patch.object(bootstrap_native.time, 'sleep') as sleep:
+                bootstrap_native.fetch('https://example.invalid/tool', path, hashlib.sha512(payload).hexdigest())
+                self.assertEqual(sleep.call_args_list, [call(1)])
+            self.assertEqual(path.read_bytes(), payload)
+
+    def test_verified_cache_never_contacts_network(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / 'tool.zip'
+            payload = b'verified cache fixture'; path.write_bytes(payload)
+            with patch.object(bootstrap_native.urllib.request, 'urlopen') as fetch:
+                self.assertEqual(bootstrap_native.fetch('https://example.invalid/tool', path, hashlib.sha512(payload).hexdigest()), path)
+                fetch.assert_not_called()
 
 
 # Exact binary AndroidManifest.xml from official Godot 4.7.2 android_debug.apk.

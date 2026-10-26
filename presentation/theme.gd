@@ -76,10 +76,15 @@ static func make_theme() -> Theme:
 	result.default_font_size = BODY_FONT_SIZE
 	result.set_color("font_color", "Label", INK)
 	result.set_color("font_color", "Button", INK)
-	result.set_color("font_hover_color", "Button", PURPLE)
-	result.set_color("font_pressed_color", "Button", PURPLE)
+	result.set_color("font_hover_color", "Button", INK)
+	result.set_color("font_hover_pressed_color", "Button", INK)
+	result.set_color("font_pressed_color", "Button", INK)
 	result.set_color("font_disabled_color", "Button", DISABLED_TEXT)
 	result.set_color("font_focus_color", "Button", INK)
+	for control_type in ["CheckButton","CheckBox"]:
+		for state in ["font_color","font_hover_color","font_hover_pressed_color","font_pressed_color","font_focus_color"]:
+			result.set_color(state,control_type,INK)
+		result.set_color("font_disabled_color",control_type,DISABLED_TEXT)
 	result.set_constant("outline_size", "Label", 0)
 	result.set_constant("h_separation", "Button", 16)
 	for state_name in ["normal", "hover", "pressed", "disabled", "focus"]:

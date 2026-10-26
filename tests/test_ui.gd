@@ -49,13 +49,13 @@ func run() -> void:
 	await click_control(app.primary)
 	if not await select_object("screen_a"):await finish();return
 	if not await click_named("ObjectContext"):await finish();return
-	if not await click_text("Сложить ширму"):await finish();return
+	if not await click_text(app._uxt("fold_top","Сложить верх","Fold the top")):await finish();return
 	check(app.kernel.state.entities.screen_a.folded,"context action folds only the selected screen")
 	if not await click_named("UndoAction"):await finish();return
 	check(not app.kernel.state.entities.screen_a.folded and app.kernel.state.entities.screen_a.slot=="screen_left","one undo reverses folding, retaining previous placement")
 	if not await select_object("screen_a"):await finish();return
 	if not await click_named("ObjectContext"):await finish();return
-	if not await click_text("Сложить ширму"):await finish();return
+	if not await click_text(app._uxt("fold_top","Сложить верх","Fold the top")):await finish();return
 	await click_control(app.primary)
 	if not await wait_phase("PROOF_ACCEPTED",7):await finish();return
 	check(app.kernel.state.proofs.M01.votes==1 and app.kernel.state.active_laws.is_empty(),"one genuine observer validates the trial without silently changing the law")
@@ -175,7 +175,7 @@ func run() -> void:
 	app._close_overlay()
 	# Settings wrappers pass vertical touch scroll too; a drag over an option must
 	# not toggle it, and 140% labels/slider rows keep their separate hit areas.
-	app._open_settings();await process_frame;await process_frame
+	app._open_settings("audio");await process_frame;await process_frame
 	var settings_scroll: ScrollContainer=null
 	for child in app.overlay.get_children():
 		if child is ScrollContainer:settings_scroll=child
@@ -196,6 +196,8 @@ func run() -> void:
 	if not await click_text(app.tx("ui.all_sound","Весь звук")):await finish();return
 	check(app.settings.audio.master_muted!=was_muted and app.saver.read_slot("settings").audio.master_muted==app.settings.audio.master_muted,"native sound toggle applies and persists the player's actual audio choice")
 	if not await click_text(app.tx("ui.all_sound","Весь звук")):await finish();return
+	if not await click_text(app._uxt("settings_text_tab","Текст","Text")):await finish();return
+	check(app._settings_section=="accessibility" and find_button(app.overlay,"140%")!=null,"accessibility opens directly without scrolling audio channels")
 	if not await click_text(app.tx("ui.reduced_motion","Уменьшить движение")):await finish();return
 	check(app.settings.accessibility.reduced_motion and app.stage.reduced_motion,"native reduced-motion toggle reaches the illustrated stage")
 	check(app.kernel.state_hash()==settings_truth,"settings changes cannot mutate puzzle truth")

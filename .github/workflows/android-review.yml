@@ -1,4 +1,4 @@
-name: Scientist reboot review APK
+name: Isolated UX review APK
 
 on:
   workflow_dispatch:
@@ -10,6 +10,8 @@ on:
       - 'README.md'
       - 'AGENTS.md'
       - 'tests/reports/**'
+      - 'artifacts/**'
+      - '.agents/**'
 
 permissions:
   contents: read
@@ -29,6 +31,7 @@ jobs:
             "TOOLS_DIR=$RUNNER_TEMP/god-native-tools" \
             "APK_OUTPUT_DIR=$GITHUB_WORKSPACE/build/scientist-review" \
             "PREVIEW_KEYSTORE=$RUNNER_TEMP/god-signing/preview-debug.keystore" \
+            "PREVIEW_PACKAGE=com.almostgod.game.review.r${GITHUB_RUN_ID}.a${GITHUB_RUN_ATTEMPT}" \
             "XDG_CONFIG_HOME=$RUNNER_TEMP/god-config" \
             "XDG_CACHE_HOME=$RUNNER_TEMP/god-cache" \
             "XDG_DATA_HOME=$RUNNER_TEMP/god-data" >> "$GITHUB_ENV"
@@ -38,6 +41,9 @@ jobs:
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
+
+      - name: Discard historical verification from the checkout
+        run: rm -f -- tests/reports/project-verification.json
 
       - name: Set up Python 3.12
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -58,11 +64,14 @@ jobs:
           mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME"
 
       - name: Provision pinned engine and Android tools
-        run: python tools/bootstrap_native.py --tools-dir "$TOOLS_DIR" --no-graphics
+        run: |
+          set -o pipefail
+          mkdir -p "$APK_OUTPUT_DIR"
+          python tools/bootstrap_native.py --tools-dir "$TOOLS_DIR" --no-graphics 2>&1 | tee "$APK_OUTPUT_DIR/bootstrap.log"
 
       - name: Verify all content and build the review APK
         run: |
-          python tools/ci_android.py --tools-dir "$TOOLS_DIR" --output-dir "$APK_OUTPUT_DIR" --debug-keystore "$PREVIEW_KEYSTORE" --source-sha "$GITHUB_SHA"
+          python tools/ci_android.py --tools-dir "$TOOLS_DIR" --output-dir "$APK_OUTPUT_DIR" --debug-keystore "$PREVIEW_KEYSTORE" --source-sha "$GITHUB_SHA" --preview-package "$PREVIEW_PACKAGE"
 
       - name: Preserve review APK and evidence
         if: always()

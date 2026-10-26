@@ -5,7 +5,7 @@ built-in Godot APK export/signing path, not the Gradle or complete Android SDK.
 """
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
-import argparse,hashlib,json,os,platform,shutil,subprocess,sys,urllib.request,urllib.parse,zipfile
+import argparse,hashlib,http.client,json,os,platform,shutil,socket,subprocess,sys,time,urllib.error,urllib.request,urllib.parse,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 VERSION='4.7.2'
 GODOT_BASE=f'https://github.com/godotengine/godot/releases/download/{VERSION}-stable/'
@@ -14,12 +14,26 @@ def digest(path,algorithm='sha512'):
  with path.open('rb') as f:
   for chunk in iter(lambda:f.read(4*1024*1024),b''):h.update(chunk)
  return h.hexdigest()
+def retryable_fetch_error(error):
+ if isinstance(error,urllib.error.HTTPError):return error.code in (408,429) or 500<=error.code<600
+ if isinstance(error,urllib.error.URLError):
+  reason=error.reason
+  return isinstance(reason,(TimeoutError,ConnectionError)) or isinstance(reason,socket.gaierror) and reason.errno==socket.EAI_AGAIN
+ return isinstance(error,(TimeoutError,ConnectionError,http.client.IncompleteRead))
 def fetch(url,path,expected,algorithm='sha512'):
  if path.exists() and digest(path,algorithm)==expected:return path
  path.parent.mkdir(parents=True,exist_ok=True)
  temp=path.with_suffix(path.suffix+'.partial')
- with urllib.request.urlopen(url,timeout=90) as source,temp.open('wb') as out:
-  while chunk:=source.read(4*1024*1024):out.write(chunk)
+ for attempt in range(3):
+  try:
+   with urllib.request.urlopen(url,timeout=90) as source,temp.open('wb') as out:
+    while chunk:=source.read(4*1024*1024):out.write(chunk)
+   break
+  except (urllib.error.URLError,TimeoutError,ConnectionError,http.client.IncompleteRead) as error:
+   temp.unlink(missing_ok=True)
+   if not retryable_fetch_error(error) or attempt==2:raise
+   print(f'Retrying pinned download {path.name} after a transient transport error ({attempt+1}/3).',flush=True)
+   time.sleep(2**attempt)
  if digest(temp,algorithm)!=expected:
   temp.unlink();raise RuntimeError('Checksum mismatch: '+path.name)
  temp.replace(path)

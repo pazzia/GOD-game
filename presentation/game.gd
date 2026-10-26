@@ -35,6 +35,10 @@ var witness_labels: Dictionary={}
 var selected: String=""
 var inspected: String=""
 var _hint_index: int=0
+var _hint_indices: Dictionary={}
+var _placement_entity: String=""
+var _settings_section: String="accessibility"
+var _overlay_kind: String=""
 var _accumulator: float=0
 var _last_phase: String=""
 var _app_paused: bool=false
@@ -109,10 +113,11 @@ func _json(path: String) -> Dictionary:
 func _load_catalog() -> void:catalog=_json("res://data/localization/"+settings.get("locale","ru")+".json")
 func tx(key: String,fallback: String) -> String:return catalog.get(key,fallback)
 func txf(key: String,fallback: String,values: Dictionary) -> String:return tx(key,fallback).format(values)
+func _uxt(key: String,ru: String,en: String) -> String:return tx("ui."+key,QuestGuide._t(str(settings.get("locale","ru")),ru,en))
 func _key(suffix: String) -> String:return "level."+level_ids[level_number-1]+"."+suffix
 func _name(entity_id: String) -> String:
 	var d: Dictionary=kernel._entities[entity_id]
-	return tx("entity."+entity_id+".name",tx("prop."+d.type_id+".name",PROP_NAMES.get(d.type_id,"Реквизит")))
+	return tx(_key("entity."+entity_id+".name"),tx("entity."+entity_id+".name",tx("prop."+d.type_id+".name",PROP_NAMES.get(d.type_id,"Реквизит"))))
 func _law_name(id: String) -> String:return tx("law."+id+".name",{"M01":"Камни плавают","M02":"Огонь замораживает","M03":"Бумага прочнее стали"}.get(id,"Чудо"))
 func _route_name(id: String) -> String:return tx("route."+id+".name",{"cross":"Переправа","to_island":"На остров","to_far":"На дальний берег","unload":"Разгрузить лодку","dry_delivery":"Доставка по суше","return_to_hoist":"Вернуться к тали","boat_route":"Лодочная протока","detour":"В обход","first_delivery":"Первая доставка","final_cross":"Финальная переправа"}.get(id,"Путь"))
 func _character_name(id: String) -> String:return tx("character."+id+".name",CHARACTER_NAMES.get(id,"Зритель"))
@@ -131,7 +136,7 @@ func start_level(number: int,resume: bool=false) -> bool:
 	var checkpoint=progress.get("checkpoint")
 	if resume and checkpoint is Dictionary and checkpoint.get("level_id","")==id:
 		_checkpoint_reset_pending=not kernel.restore(checkpoint)
-	selected="";inspected="";_hint_index=0;_accumulator=0;_last_phase="";_caption_remaining=0;_caption_queue.clear()
+	selected="";inspected="";_hint_index=0;_hint_indices.clear();_placement_entity="";_accumulator=0;_last_phase="";_caption_remaining=0;_caption_queue.clear()
 	_build_ui();_update_ui();_save_progress()
 	if not _front_menu:audio.set_chapter_theme(definition.get("scene_id","ENV01"),id=="L30")
 	if (not resume or not progress.completed.has(id)) and _capture_stage.is_empty():_briefing()
@@ -200,22 +205,27 @@ func _build_ui() -> void:
 			var factor: Vector2=screen/Vector2(window)
 			safe_left=maxf(margin,safe.position.x*factor.x+12);safe_right=maxf(margin,(window.x-safe.end.x)*factor.x+12)
 			safe_top=maxf(safe_top,safe.position.y*factor.y+12);safe_bottom=maxf(safe_bottom,(window.y-safe.end.y)*factor.y+12)
-	stage=reusable_stage if reusable_stage!=null else Stage.new();stage.name="ResearchStage";stage.kernel=kernel;stage.translator=tx;stage.selected=selected;stage.inspected=inspected
+	stage=reusable_stage if reusable_stage!=null else Stage.new();stage.name="ResearchStage";stage.kernel=kernel;stage.translator=tx;stage.selected=selected;stage.inspected=inspected;stage.placement_entity=_placement_entity
 	stage.position=Vector2.ZERO;stage.size=screen;stage.reduced_motion=settings.accessibility.reduced_motion;stage.ui_text_scale=float(settings.accessibility.text_scale);stage.process_mode=Node.PROCESS_MODE_DISABLED if _app_paused else Node.PROCESS_MODE_INHERIT;ui.add_child(stage)
 	if not stage.target_tapped.is_connected(_on_target):stage.target_tapped.connect(_on_target)
 	# A short objective ticket is the entry to the complete journal; the world keeps the full canvas.
 	var goal_width: float=minf(screen.x-540-safe_left-safe_right,1160)
 	var goal_button: Button=_button(ui,"",Rect2(safe_left,safe_top,goal_width,144),_open_objective,false,BODY_FONT_SIZE)
 	goal_button.name="ObjectiveTicket"
-	_text(goal_button,"%02d" % level_number,Rect2(20,12,100,112),58,INK).horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	var number_text: String="%02d" % level_number
+	var number_width: float=maxf(100,ceilf(ThemeKit.heading_font().get_string_size(number_text,HORIZONTAL_ALIGNMENT_LEFT,-1,int(58*text_scale)).x)+24)
+	var number_label: Label=_text(goal_button,number_text,Rect2(20,12,number_width,112),58,INK)
+	number_label.name="ObjectiveLevelNumber";number_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER
+	number_label.autowrap_mode=TextServer.AUTOWRAP_OFF;number_label.clip_text=false
+	var goal_text_left: float=20+number_width+24
 	var headline: Dictionary=copy.get("goal_headline",{"label":copy.get("objective",""),"done":false})
 	var headline_text: String=("✓  " if headline.get("done",false) else "")+str(headline.get("label",""))
-	_text(goal_button,tx(_key("title"),"Новое открытие"),Rect2(144,10,goal_width-170,40),28,ThemeKit.GREEN)
-	_goal_headline=_text(goal_button,headline_text,Rect2(144,48,goal_width-170,84),BODY_FONT_SIZE,INK);_goal_headline.name="CurrentGoal"
+	_text(goal_button,tx(_key("title"),"Новое открытие"),Rect2(goal_text_left,6,goal_width-goal_text_left-26,50),28,ThemeKit.GREEN)
+	_goal_headline=_text(goal_button,headline_text,Rect2(goal_text_left,56,goal_width-goal_text_left-26,84),BODY_FONT_SIZE,INK);_goal_headline.name="CurrentGoal"
 	_goal_headline.autowrap_mode=TextServer.AUTOWRAP_OFF;_goal_headline.text_overrun_behavior=TextServer.OVERRUN_TRIM_ELLIPSIS;_goal_headline.clip_text=true
 	goal_button.tooltip_text=str(copy.get("objective",""))+"\n"+str(copy.get("body",""))
 	var right: float=screen.x-safe_right
-	_button(ui,"",Rect2(right-144,safe_top,144,144),_open_settings,false,BODY_FONT_SIZE,"settings").name="PauseSettings"
+	_button(ui,"",Rect2(right-144,safe_top,144,144),_open_pause,false,BODY_FONT_SIZE,"settings").name="PauseSettings"
 	_button(ui,"",Rect2(right-308,safe_top,144,144),_hint,false,BODY_FONT_SIZE,"hint").name="AskPlum"
 	var undo_button: Button=_button(ui,"",Rect2(right-472,safe_top,144,144),func():_command("Undo"),false,BODY_FONT_SIZE,"undo")
 	undo_button.name="UndoAction";undo_button.disabled=kernel._history.is_empty()
@@ -224,6 +234,7 @@ func _build_ui() -> void:
 	var instruction_h: float=maxf(96,_text_height(instruction_text,instruction_width-48,font_size)+28)
 	var note: Panel=_box(ui,Rect2(safe_left,safe_top+164,instruction_width,instruction_h),Color("252647e8"),20)
 	instruction=_text(note,instruction_text,Rect2(24,12,instruction_width-48,instruction_h-24),BODY_FONT_SIZE,CREAM);instruction.name="NextActionHint"
+	stage.hud_safe_top=note.position.y+note.size.y+16
 	# The active law is optional context, with all details available in the Atlas sheet.
 	var law_text: String=_compact_law_text()
 	var law_width: float=700 if text_scale>=1.4 else 610
@@ -246,6 +257,10 @@ func _build_ui() -> void:
 	var primary_h: float=maxf(144,(primary_lines.count("\n")+1)*get_theme_font("font").get_height(primary_font)+28)
 	primary=_button(ui,primary_text,Rect2(screen.x-safe_right-primary_width,screen.y-safe_bottom-primary_h,primary_width,primary_h),_primary,true,BODY_FONT_SIZE)
 	primary.name="PrimaryAction";primary.disabled=bool(copy.get("primary_disabled",false))
+	if not _placement_entity.is_empty():
+		var cancel_left: float=safe_left+objects_width+plan_width+40
+		var cancel_width: float=minf(400,primary.position.x-cancel_left-20)
+		_button(ui,tx("ui.cancel","Отмена"),Rect2(cancel_left,bottom,cancel_width,144),_cancel_placement,false,BODY_FONT_SIZE).name="CancelPlacement"
 	if not selected.is_empty():_build_context_button(screen,copy,safe_left,safe_right,safe_top)
 	_caption_panel=_box(ui,Rect2(screen.x*.25,screen.y-336,screen.x*.5,124),Color("fff2d8f2"),24)
 	_caption_panel.name="CharacterCaption";_caption_panel.visible=previous_remaining>0 and settings.accessibility.subtitles
@@ -268,26 +283,26 @@ func _compact_law_text() -> String:
 	return "\n".join(names)
 
 func _copy_key(copy: Dictionary) -> String:
-	return str(copy.get("stage_title",""))+"|"+str(copy.get("law",""))+"|"+str(copy.get("body",""))+"|"+str(copy.get("short_body",""))+"|"+str(copy.get("primary",""))+"|"+str(copy.get("primary_intent",""))+"|"+selected+"|"+JSON.stringify(copy.get("goals",[]))
+	return str(copy.get("stage_title",""))+"|"+str(copy.get("law",""))+"|"+str(copy.get("body",""))+"|"+str(copy.get("short_body",""))+"|"+str(copy.get("primary",""))+"|"+str(copy.get("primary_intent",""))+"|"+selected+"|"+_placement_entity+"|"+_inspection_text()+"|"+JSON.stringify(copy.get("goals",[]))
+
+func _inspection_text() -> String:
+	if inspected.is_empty() or not kernel.state.get("witnesses",{}).has(inspected):return ""
+	var wd: Dictionary=kernel._find(kernel.definition.witnesses,inspected)
+	var sight: Dictionary=kernel.visibility_for(inspected)
+	var state_text: String=tx("stage.visible","виден") if bool(sight.get("method_visible",false)) else tx("stage.hidden","скрыт")
+	return _uxt("inspection_status","{observer}: результат {visible}/3 · механизм {state}","{observer}: result {visible}/3 · method {state}").format({"observer":_character_name(str(wd.get("character_id",""))),"visible":int(sight.get("visible_results",0)),"state":state_text})
 
 func _short_instruction(copy: Dictionary) -> String:
-	if not selected.is_empty():
-		if selected.begins_with("w:"):
-			var wd: Dictionary=kernel._find(kernel.definition.witnesses,selected.trim_prefix("w:"))
-			return _character_name(str(wd.get("character_id","")))+" · "+str(copy.get("witness_status",{}).get(selected.trim_prefix("w:"),""))
-		return _name(selected)+QuestGuide._t(str(settings.locale)," · выберите место или действия."," · choose a place or actions.")
-	if not str(copy.get("short_body","")).is_empty():return str(copy.short_body)
-	var tips: Dictionary={
-		"PLAN_SHOW":QuestGuide._t(str(settings.locale),"Коснитесь предмета, чтобы подготовить опыт.","Tap an object to prepare the experiment."),
-		"PERFORMANCE":QuestGuide._t(str(settings.locale),"Результат должен быть виден, механизм — скрыт.","Keep the result visible and its mechanism hidden."),
-		"REHEARSAL":QuestGuide._t(str(settings.locale),"Проверьте опыт: результат виден, механизм скрыт.","Test the experiment: show the result, hide its mechanism."),
-		"PROOF_ACCEPTED":QuestGuide._t(str(settings.locale),"Демонстрация удалась. Теперь измените закон.","The demonstration worked. Now change the law."),
-		"LAW_SELECTION":QuestGuide._t(str(settings.locale),"Атлас хранит два закона. Выберите замену.","The Atlas holds two laws. Choose one to replace."),
-		"PLAN_RESOLUTION":QuestGuide._t(str(settings.locale),"Новый закон действует. Примените его к задаче.","The new law is active. Use it to solve the task."),
-		"RUN_RESOLUTION":QuestGuide._t(str(settings.locale),"План выполняется. Откат вернёт начало проверки.","The plan is running. Undo restores its starting point."),
-		"RECOVERABLE_FAILURE":QuestGuide._t(str(settings.locale),"План нужно поправить. Откат бесплатный.","Adjust the plan. Undo is always free."),
-		"SUCCESS":QuestGuide._t(str(settings.locale),"Задача решена. Впереди следующее открытие.","Task complete. Your next discovery awaits.")}
-	return str(tips.get(str(kernel.state.phase),str(copy.get("body",""))))
+	var text: String=str(copy.get("short_body",copy.get("body","")))
+	# A blocked plan's cause remains visible even while inspecting another object.
+	if str(kernel.state.phase)!="RECOVERABLE_FAILURE":
+		if not _placement_entity.is_empty():
+			text=_uxt("placement_active","Разместить {entity}: коснитесь подсвеченного места.","Place {entity}: tap a highlighted location.").format({"entity":_name(_placement_entity)})
+		elif not selected.is_empty() and not selected.begins_with("w:"):
+			text=_name(selected)+QuestGuide._t(str(settings.locale)," · выберите действия."," · choose an action.")
+	var observation: String=_inspection_text()
+	if not observation.is_empty():text+="\n"+observation
+	return text
 
 func _build_context_button(screen: Vector2,copy: Dictionary,left: float,right: float,top: float) -> void:
 	var is_witness: bool=selected.begins_with("w:")
@@ -392,7 +407,7 @@ func _process(delta: float) -> void:
 func _command(kind: String,payload: Dictionary={}) -> bool:
 	var response: Dictionary=kernel.dispatch({"type":kind,"payload":payload,"precondition_hash":kernel.state_hash()})
 	if not response.accepted:_toast(_reason(response.reason_code));return false
-	_events(response.events);selected="";stage.selected="";_update_ui();_save_progress()
+	_events(response.events);selected="";_placement_entity="";stage.selected="";stage.placement_entity="";_update_ui();_save_progress()
 	if kernel.state.phase=="LAW_SELECTION":_replacement_menu()
 	return true
 func _events(events: Array) -> void:
@@ -445,10 +460,23 @@ func _reason(code: String) -> String:
 	return tx("reason."+code,{"WRONG_PHASE":"Сначала закончи показ или вернись к плану.","NO_UNDO":"Мы ещё ничего не изменили.","INCOMPATIBLE_SLOT":"Этому предмету нужно другое место.","SLOT_OCCUPIED":"Место уже занято.","OUT_OF_REACH":"Отсюда не дотянуться. Сначала пройди к следующему берегу.","CARRIER_NOT_AT_START":"Перевозчик должен вернуться к началу пути.","CARRIER_ALREADY_ASSIGNED":"Этот перевозчик уже занят другим путём.","PAYLOAD_NOT_LOADED":"Сначала погрузи все части доставки рядом с ящиком.","HOIST_REQUIRED":"Для тяжёлого груза нужна таль.","HOIST_CAPACITY":"Таль не поднимет этот вес.","HOIST_CANNOT_REACH":"Таль не достаёт до этого места.","OVER_CAPACITY":"Общий груз тяжелее опоры. Раздели перевозку.","MISSING_FLOATING_BRIDGE":"Опора отсутствует или перестала работать.","NOT_ENOUGH_WITNESSES":"Убедились не все зрители. Проверь их обзор.","ROUTE_IN_PROGRESS":"Путь ещё не завершён. Можно бесплатно откатить весь запуск.","GOALS_INCOMPLETE":"За это время план не выполнил все цели.","FIXED_INSPECTION_PATH":"Инспектор сам выбирает ракурсы для проверки."}.get(code,tx("reason.GENERIC","Действие сейчас недоступно. Проверь план или сделай откат.")))
 func _select(id: String) -> void:
 	if kernel.state.entities[id].removed:_toast(tx("ui.prop_removed","Этот предмет уже убран. Бесплатный откат вернёт его."));return
-	selected="" if selected==id else id;stage.selected=selected;_update_ui()
+	selected="" if selected==id else id
+	_placement_entity=""
+	if not selected.is_empty() and bool(kernel._entities[id].movable) and kernel.state.phase in Kernel.PLAN_PHASES+["PROOF_ACCEPTED"]:
+		var slot: Dictionary=kernel._find(kernel.definition.slots,str(kernel.state.entities[id].slot))
+		if str(slot.get("mount_layer",""))=="tray":_placement_entity=id
+	stage.selected=selected;stage.placement_entity=_placement_entity;_update_ui()
+func _begin_placement(id: String) -> void:
+	selected=id;_placement_entity=id;stage.selected=id;stage.placement_entity=id;_update_ui()
+func _cancel_placement() -> void:
+	_placement_entity="";stage.placement_entity="";_update_ui()
 func _inspect(id: String) -> void:
+	_placement_entity="";stage.placement_entity=""
 	inspected="" if inspected==id else id;stage.inspected=inspected;selected="w:"+id if not inspected.is_empty() else "";stage.selected=selected;_update_ui()
+
 func _on_target(kind: String,id: String) -> void:
+	if kind=="placement_invalid":
+		_toast(_uxt("placement_invalid","Здесь этот предмет не поставить. Выберите подсвеченное место или отмените размещение.","This object cannot be placed here. Choose a highlighted location or cancel placement."));return
 	if kind=="slot":
 		if selected.begins_with("w:"):_command("SetWitnessSlot",{"witness_id":selected.trim_prefix("w:"),"slot_id":id})
 		elif not selected.is_empty():
@@ -502,8 +530,10 @@ func _save_progress() -> void:
 	if kernel.state.phase=="SUCCESS":progress.completed[kernel.state.level_id]={"stars":1};progress.unlocked=maxi(int(progress.get("unlocked",1)),mini(level_number+1,level_ids.size()))
 	saver.write_slot("progress",progress)
 func _close_overlay() -> void:
+	var was_pause: bool=_overlay_kind in ["pause","settings","album_pause"]
 	if is_instance_valid(overlay):overlay.queue_free()
-	overlay=null
+	overlay=null;_overlay_kind=""
+	if was_pause and is_instance_valid(audio):audio.set_paused(_app_paused)
 func _sheet(title: String) -> Control:
 	_close_overlay();overlay=Control.new();overlay.size=get_viewport_rect().size;overlay.position=Vector2.ZERO;add_child(overlay)
 	var shade=ColorRect.new();shade.size=overlay.size;shade.color=Color(.04,.13,.19,.66);overlay.add_child(shade)
@@ -529,16 +559,21 @@ func _modal(title: String,body: String,confirm: String,callback: Callable) -> vo
 	var label: Label=_text(scroll,body,Rect2(0,0,width,0),BODY_FONT_SIZE);label.custom_minimum_size=Vector2(width,0)
 	_sheet_action(confirm,func():_close_overlay();callback.call())
 
-func _choices(title: String,choices: Array) -> void:
+func _choices(title: String,choices: Array,body: String="",body_name: String="") -> void:
 	_sheet(title)
 	var scroll: ScrollContainer=_sheet_scroll()
 	var width: float=_sheet_inner.size.x-24
 	var rows=VBoxContainer.new();rows.mouse_filter=MOUSE_FILTER_PASS;rows.custom_minimum_size=Vector2(width,0);rows.add_theme_constant_override("separation",16);scroll.add_child(rows)
+	if not body.is_empty():
+		var body_label: Label=_text(rows,body,Rect2(0,0,width,0),BODY_FONT_SIZE)
+		body_label.custom_minimum_size=Vector2(width,_text_height(body,width,int(BODY_FONT_SIZE*float(settings.accessibility.text_scale)))+12)
+		if not body_name.is_empty():body_label.name=body_name
 	for choice in choices:
 		var b: Button=_button(rows,choice.label,Rect2(0,0,width,144),func():_close_overlay();choice.action.call(),choice.get("primary",false),BODY_FONT_SIZE)
 		b.custom_minimum_size=Vector2(width,maxf(144,(b.text.count("\n")+1)*b.get_theme_font_size("font_size")*1.25+32))
 		b.disabled=bool(choice.get("disabled",false))
 		b.tooltip_text=str(choice.get("help",""))
+		if not str(choice.get("name","")).is_empty():b.name=str(choice.name)
 	_sheet_action(tx("ui.close","Вернуться"),_dismiss_overlay)
 
 func _toast(message: String) -> void:_modal(tx("ui.plum_help","Плюм подсказывает"),message,tx("ui.understood","Понятно"),func():pass)
@@ -547,8 +582,10 @@ func _briefing() -> void:
 	_modal(tx(_key("title"),"Новое чудо"),body,tx("ui.begin","За работу"),func():audio.play("voice_felix","Voice"))
 
 func _hint() -> void:
-	_hint_index=mini(_hint_index+1,3);audio.play("hint","UI")
-	_modal(txf("ui.hint_stage","Подсказка {number} из 3",{"number":_hint_index}),tx(_key("hint%d" % _hint_index),"Проверь обзор зрителей и состояние опор."),tx("ui.try","Попробую"),func():pass)
+	var context: String=QuestGuide.hint_context(kernel)
+	_hint_index=mini(int(_hint_indices.get(context,0))+1,3);_hint_indices[context]=_hint_index;audio.play("hint","UI")
+	var copy: Dictionary=QuestGuide.hint(kernel,str(settings.locale),_hint_index,catalog)
+	_modal(str(copy.get("title",txf("ui.hint_stage","Подсказка {number} из 3",{"number":_hint_index}))),str(copy.get("body","")),tx("ui.try","Попробую"),func():pass)
 func _object_menu(id: String) -> void:
 	var d: Dictionary=kernel._entities[id];var props: Dictionary=d.properties;var e: Dictionary=kernel.state.entities[id];var choices: Array=[]
 	if kernel.state.phase not in Kernel.PLAN_PHASES and kernel.state.phase!="PROOF_ACCEPTED":
@@ -556,7 +593,7 @@ func _object_menu(id: String) -> void:
 	if d.movable:choices.append({"label":tx("ui.place_prop","Выбрать место…"),"action":func():_slot_menu(id)})
 	if props.get("foldable",false):
 		var folded: bool=bool(e.get("folded",false))
-		choices.append({"label":QuestGuide._t(str(settings.locale),"Развернуть ширму" if folded else "Сложить ширму","Unfold screen" if folded else "Fold screen"),"action":func():_command("Interact",{"entity_id":id,"action":"unfold" if folded else "fold"}),"primary":true})
+		choices.append({"label":_uxt("unfold_top","Развернуть верх","Unfold the top") if folded else _uxt("fold_top","Сложить верх","Fold the top"),"action":func():_command("Interact",{"entity_id":id,"action":"unfold" if folded else "fold"}),"primary":true})
 	if d.movable or props.get("removable",false):
 		var required_law: String=str(props.get("remove_requires_law",""))
 		var removal_locked: bool=not required_law.is_empty() and required_law not in kernel.state.active_laws
@@ -573,9 +610,9 @@ func _object_menu(id: String) -> void:
 		choices.append({"label":tx("ui.disable","Выключить источник") if e.get("enabled",true) else tx("ui.enable","Включить источник"),"action":func():_command("Interact",{"entity_id":id,"action":"disable" if e.get("enabled",true) else "enable"})})
 	if kernel.state.phase=="PLAN_RESOLUTION" and (d.apparent_class in ["CARGO","PERSON","ANIMAL"] or props.has("locomotion")):choices.append({"label":tx("ui.assign_route","Назначить маршрут…"),"action":func():_route_menu(id)})
 	if choices.is_empty():
-		var description: String=tx("entity."+id+".description",tx("prop."+str(d.type_id)+".description",QuestGuide._t(str(settings.locale),"Этот предмет — часть опыта. Его положение закреплено; учитывайте его свойства при выборе действий.","This object is part of the experiment. Its position is fixed; account for its properties when choosing your actions.")))
+		var description: String=tx(_key("entity."+id+".description"),tx("entity."+id+".description",tx("prop."+str(d.type_id)+".description",QuestGuide._t(str(settings.locale),"Этот предмет — часть опыта. Его положение закреплено; учитывайте его свойства при выборе действий.","This object is part of the experiment. Its position is fixed; account for its properties when choosing your actions."))))
 		_modal(_name(id),description,tx("ui.back_game","Вернуться в игру"),func():pass)
-	else:_choices(_name(id),choices)
+	else:_choices(_name(id),choices,tx(_key("entity."+id+".description"),tx("entity."+id+".description","")))
 func _attachment_menu(tool_id: String) -> void:
 	var choices: Array=[]
 	for id in kernel.state.entities:
@@ -608,11 +645,78 @@ func _replacement_menu() -> void:
 	for law in kernel.state.active_laws:choices.append({"label":tx("ui.replace","Заменить")+" · "+_law_name(law),"action":func():_command("ActivateLaw",{"myth_id":kernel.state.candidate_law,"replace_law_id":law})})
 	choices.append({"label":tx("ui.cancel","Отмена"),"action":func():_command("CancelLawSelection")})
 	_choices(tx("ui.two_laws","Можно сохранить два закона"),choices)
+func _plan_summary() -> String:
+	var lines: Array[String]=[_uxt("plan_summary","Подготовлено сейчас","Current setup")]
+	if str(kernel.state.phase) in ["RUN_RESOLUTION","RECOVERABLE_FAILURE"]:lines.append(str(_hud_copy().get("short_body","")))
+	var has_routes: bool=false
+	for id in kernel.state.get("routes",{}):
+		var task: Dictionary=kernel.state.routes[id]
+		var state_text: String=_uxt("route_assigned","Маршрут назначен","Route assigned")
+		if bool(task.get("completed",false)):state_text=_uxt("route_completed","Доставка выполнена","Delivery complete")
+		elif str(kernel.state.phase)=="RECOVERABLE_FAILURE":state_text=_uxt("route_stopped","Запуск остановлен","Run stopped")
+		elif not str(task.get("waiting_for","")).is_empty():state_text=_uxt("route_waiting","Ожидает изменения среды","Waiting for the environment")
+		elif str(kernel.state.phase)=="RUN_RESOLUTION":state_text=_uxt("route_running","Выполняется","In progress")
+		lines.append(_name(id)+" → "+_route_name(str(task.route_id))+" · "+state_text)
+		has_routes=true
+	if not has_routes:lines.append(_uxt("plan_no_routes","Маршруты ещё не назначены.","No routes have been assigned yet."))
+	for definition in kernel.definition.entities:
+		var entity: Dictionary=kernel.state.entities[definition.id]
+		if bool(entity.removed) or str(definition.properties.get("attachment_kind","")).is_empty():continue
+		var target: String=str(entity.get("attachment_target",""))
+		var status: String=_uxt("attachment_missing","Не закреплено","Not attached")
+		if not target.is_empty():
+			status=_uxt("attachment_attached","Закреплено: {target}","Attached to: {target}").format({"target":_name(target)})
+			var owner: String=str(definition.properties.get("mooring_owner_entity_id",""))
+			if not owner.is_empty() and not bool(kernel.state.entities[owner].get("moored",false)):status+=" · "+_uxt("mooring_not_secure","Связь есть, но лодка ещё не удерживается","Attached, but the boat is not held securely")
+		lines.append(_name(definition.id)+" · "+status)
+	var support_loads: Dictionary={}
+	for id in kernel.state.get("routes",{}):
+		var task: Dictionary=kernel.state.routes[id]
+		if bool(task.get("completed",false)):continue
+		for requirement in kernel._route_requirements(kernel._find(kernel.definition.navigation.routes,str(task.route_id))):
+			if requirement.type=="support":
+				var support_id: String=str(requirement.parameters.entity_id)
+				support_loads[support_id]=int(support_loads.get(support_id,0))+kernel._task_mass(str(id),task)
+	var shown_supports: Dictionary={}
+	for task in kernel.state.get("routes",{}).values():
+		if bool(task.get("completed",false)):continue
+		for requirement in kernel._route_requirements(kernel._find(kernel.definition.navigation.routes,str(task.route_id))):
+			if requirement.type!="support":continue
+			var params: Dictionary=requirement.parameters
+			var id: String=str(params.entity_id)
+			if shown_supports.has(id):continue
+			shown_supports[id]=true
+			var entity: Dictionary=kernel.state.entities[id]
+			var status: String=_uxt("support_ready","Опора готова","Support ready")
+			var capacity: int=kernel._paper_capacity(id) if str(params.get("kind",""))=="paper" else int(entity.effective.get("carry_capacity",0))
+			if bool(entity.removed):status=_uxt("support_missing","Опора убрана","Support removed")
+			elif str(entity.slot)!=str(params.slot_id):status=_uxt("support_wrong_slot","Опора не в месте переправы","Support is away from the crossing")
+			elif not bool(entity.support):status=_uxt("support_unstable","Опора не удерживается","Support is not supported")
+			elif int(support_loads.get(id,0))>capacity:status=_uxt("support_over_capacity","Опора не выдержит общий груз","Support cannot carry the combined load")
+			lines.append(_name(id)+" · "+status)
+	for goal in QuestGuide.goal_rows(kernel,catalog,str(settings.locale)):
+		if not bool(goal.required):continue
+		lines.append(("✓  " if bool(goal.done) else "○  ")+str(goal.label)+" · "+(_uxt("goal_done","Выполнено","Completed") if bool(goal.done) else _uxt("goal_pending","Ещё не выполнено","Not completed yet")))
+	return "\n".join(lines)
+
 func _plan_menu() -> void:
+	var choices: Array=[]
+	if str(kernel.state.phase)=="PLAN_RESOLUTION":
+		for actor_id in kernel.state.get("routes",{}):
+			var id: String=str(actor_id)
+			choices.append({"label":_name(id)+" → "+_route_name(str(kernel.state.routes[id].route_id)),"action":func():_route_menu(id),"name":"PlanRoute_"+id})
+		for definition in kernel.definition.entities:
+			if str(definition.properties.get("attachment_kind","")).is_empty() or bool(kernel.state.entities[definition.id].removed):continue
+			var id: String=str(definition.id)
+			choices.append({"label":_name(id)+" · "+tx("ui.attach","Закрепить"),"action":func():_attachment_menu(id),"name":"PlanAttachment_"+id})
+	choices.append_array(_plan_actions())
+	_choices(tx("ui.plan","План"),choices,_plan_summary(),"PlanSummary")
+
+func _plan_actions() -> Array:
 	var choices: Array=[]
 	var phase: String=kernel.state.phase
 	if phase in Kernel.PLAN_PHASES:
-		if phase=="PLAN_RESOLUTION":choices.append({"label":QuestGuide._t(str(settings.locale),"Маршруты","Routes"),"action":_actor_menu})
+		if phase=="PLAN_RESOLUTION":choices.append({"label":QuestGuide._t(str(settings.locale),"Маршруты","Routes"),"action":_actor_menu,"name":"PlanRoutes"})
 		choices.append({"label":tx("ui.laws","Законы и следующий фокус"),"action":_law_menu})
 		if not kernel.state.get("candidate_law","").is_empty() and kernel.state.candidate_law not in kernel.state.active_laws:
 			choices.append({"label":tx("ui.perform","Показать фокус")+" · "+_law_name(kernel.state.candidate_law),"action":func():_command("BeginPerformance"),"primary":true})
@@ -625,7 +729,7 @@ func _plan_menu() -> void:
 		if pending_routes:choices.append({"label":tx("ui.undo_short","Откат"),"action":func():_command("Undo"),"disabled":kernel._history.is_empty()})
 		else:choices.append({"label":tx("ui.stop_resolution","Вернуться к плану"),"action":func():_command("StopResolution")})
 	choices.append({"label":tx("ui.album","Альбом уровней"),"action":_open_levels})
-	_choices(tx("ui.plan","План"),choices)
+	return choices
 func _victory() -> void:
 	_save_progress()
 	var next_title: String=tx("level."+level_ids[level_number]+".title","") if level_number<level_ids.size() else ""
@@ -639,8 +743,10 @@ func _next_level() -> void:
 	else:_show_credits()
 
 func _open_levels() -> void:
+	var from_pause: bool=_overlay_kind=="pause"
 	audio.play_music("music_album")
 	_sheet(tx("ui.album","Альбом невозможного"))
+	if from_pause:_overlay_kind="album_pause";audio.set_paused(true)
 	var scroll: ScrollContainer=_sheet_scroll()
 	var width: float=_sheet_inner.size.x-24
 	var rows=VBoxContainer.new();rows.name="ChapterJourney";rows.mouse_filter=MOUSE_FILTER_PASS;rows.custom_minimum_size=Vector2(width,0);rows.add_theme_constant_override("separation",20);scroll.add_child(rows)
@@ -666,13 +772,59 @@ func _toggle(parent: Control,label: String,rect: Rect2,value: bool,callback: Cal
 	var label_height: float=get_theme_font("font").get_height(font_size)*(check.text.count("\n")+1)+24
 	check.custom_minimum_size=Vector2(rect.size.x,maxf(rect.size.y,label_height))
 	check.add_theme_icon_override("checked",load("res://presentation/resources/toggle_on.svg"));check.add_theme_icon_override("unchecked",load("res://presentation/resources/toggle_off.svg"))
-	for color_name in ["font_color","font_hover_color","font_pressed_color","font_focus_color","font_disabled_color"]:check.add_theme_color_override(color_name,INK)
+	for color_name in ["font_color","font_hover_color","font_hover_pressed_color","font_pressed_color","font_focus_color","font_disabled_color"]:check.add_theme_color_override(color_name,INK)
 	parent.add_child(check);check.toggled.connect(callback);return check
-func _open_settings() -> void:
-	_sheet(tx("ui.settings","Настройки"))
-	var scroll: ScrollContainer=_sheet_scroll()
+func _open_pause() -> void:
+	if _front_menu:_open_settings();return
+	_save_progress()
+	_choices(_uxt("pause_title","Пауза","Pause"),[
+		{"label":tx("ui.settings","Настройки"),"action":func():_open_settings(),"name":"PauseSettingsMenu"},
+		{"label":_uxt("main_menu","Главное меню","Main menu"),"action":func():_save_progress();_show_title(),"name":"PauseMainMenu"},
+		{"label":tx("ui.album","Альбом уровней"),"action":_open_levels,"name":"PauseAtlas"},
+		{"label":_uxt("restart_experiment","Начать опыт заново","Restart experiment"),"action":func():_command("Restart"),"name":"PauseRestart"}
+	])
+	_overlay_kind="pause"
+	var actions: Array=[]
+	for child in overlay.get_children():
+		if child is Button:actions.append(child)
+	if not actions.is_empty():
+		var resume: Button=actions[-1];resume.name="PauseContinue";resume.text=_uxt("resume","Продолжить","Continue");_wrap_button(resume)
+	audio.set_paused(true)
+
+func _settings_back() -> void:
+	if _front_menu:_show_title()
+	else:_open_pause()
+
+func _open_settings(section: String="") -> void:
+	if not section.is_empty():_settings_section=section
+	_sheet(tx("ui.settings","Настройки"));_overlay_kind="settings"
 	var width: float=_sheet_inner.size.x-24
+	var tab_width: float=(width-16)/2
+	var tabs_y: float=_sheet_content_top
+	_button(overlay,_uxt("settings_text_tab","Текст","Text"),Rect2(_sheet_inner.position.x,tabs_y,tab_width,144),func():_open_settings("accessibility"),_settings_section=="accessibility").name="SettingsAccessibility"
+	_button(overlay,_uxt("settings_audio","Звук","Audio"),Rect2(_sheet_inner.position.x+tab_width+16,tabs_y,tab_width,144),func():_open_settings("audio"),_settings_section=="audio").name="SettingsAudio"
+	_sheet_content_top+=164
+	var scroll: ScrollContainer=_sheet_scroll();scroll.name="SettingsContent"
 	var rows=VBoxContainer.new();rows.mouse_filter=MOUSE_FILTER_PASS;rows.custom_minimum_size=Vector2(width,0);rows.add_theme_constant_override("separation",16);scroll.add_child(rows)
+	if _settings_section=="audio":_settings_audio(rows,width)
+	else:_settings_accessibility(rows,width)
+	_sheet_action(_uxt("settings_back","Назад","Back"),_settings_back).name="SettingsBack"
+	audio.set_paused(true)
+
+func _settings_accessibility(rows: VBoxContainer,width: float) -> void:
+	var text_scale_label: Label=_text(rows,_uxt("text_size","Размер текста","Text size"),Rect2(0,0,width,96),BODY_FONT_SIZE)
+	text_scale_label.custom_minimum_size=Vector2(width,96)
+	var scale_row=HBoxContainer.new();scale_row.mouse_filter=MOUSE_FILTER_PASS;scale_row.add_theme_constant_override("separation",16);rows.add_child(scale_row)
+	for scale_value in [1.0,1.2,1.4]:
+		var b: Button=_button(scale_row,"%d%%" % int(scale_value*100),Rect2(0,0,(width-32)/3,144),func():settings.accessibility.text_scale=scale_value;saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings("accessibility"),is_equal_approx(float(settings.accessibility.text_scale),scale_value),BODY_FONT_SIZE)
+		b.name="TextScale_%d" % int(scale_value*100);b.custom_minimum_size=Vector2((width-32)/3,144)
+	_toggle(rows,tx("ui.reduced_motion","Уменьшить движение"),Rect2(0,0,width,144),settings.accessibility.reduced_motion,_set_reduced_motion)
+	_toggle(rows,tx("ui.subtitles","Субтитры"),Rect2(0,0,width,144),settings.accessibility.subtitles,_set_subtitles)
+	_toggle(rows,tx("ui.haptics","Вибрация"),Rect2(0,0,width,144),settings.accessibility.haptics,func(v):settings.accessibility.haptics=v;saver.write_slot("settings",settings))
+	var lang: Button=_button(rows,tx("ui.language","Язык")+": "+settings.locale.to_upper(),Rect2(0,0,width,144),func():settings.locale="en" if settings.locale=="ru" else "ru";_load_catalog();saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings("accessibility"),false,BODY_FONT_SIZE)
+	lang.name="SettingsLanguage";lang.custom_minimum_size=Vector2(width,144)
+
+func _settings_audio(rows: VBoxContainer,width: float) -> void:
 	var toggles=Control.new();toggles.mouse_filter=MOUSE_FILTER_PASS;toggles.custom_minimum_size=Vector2(width,288);rows.add_child(toggles)
 	_toggle(toggles,tx("ui.all_sound","Весь звук"),Rect2(0,0,width,144),not settings.audio.master_muted,func(v):settings.audio.master_muted=not v;_apply_audio())
 	_toggle(toggles,tx("ui.sound","Звуки"),Rect2(0,144,width,144),settings.audio.sound_enabled,func(v):settings.audio.sound_enabled=v;_apply_audio())
@@ -693,24 +845,13 @@ func _open_settings() -> void:
 			if category=="Master":settings.audio.master_volume=v
 			else:settings.audio.categories[category].volume=v
 			percent.text="%d%%" % int(v*100);_apply_audio())
-	var access=VBoxContainer.new();access.mouse_filter=MOUSE_FILTER_PASS;access.custom_minimum_size=Vector2(width,0);access.add_theme_constant_override("separation",8);rows.add_child(access)
-	_toggle(access,tx("ui.reduced_motion","Уменьшить движение"),Rect2(0,0,width,144),settings.accessibility.reduced_motion,_set_reduced_motion)
-	_toggle(access,tx("ui.subtitles","Субтитры"),Rect2(0,144,width,144),settings.accessibility.subtitles,_set_subtitles)
-	_toggle(access,tx("ui.haptics","Вибрация"),Rect2(0,288,width,144),settings.accessibility.haptics,func(v):settings.accessibility.haptics=v;saver.write_slot("settings",settings))
-	var scale_row=HBoxContainer.new();scale_row.mouse_filter=MOUSE_FILTER_PASS;rows.add_child(scale_row)
-	for scale_value in [1.0,1.2,1.4]:
-		var b: Button=_button(scale_row,"%d%%" % int(scale_value*100),Rect2(0,0,(width-32)/3,144),func():settings.accessibility.text_scale=scale_value;saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,BODY_FONT_SIZE)
-		b.custom_minimum_size=Vector2((width-32)/3,144)
-	var lang: Button=_button(rows,tx("ui.language","Язык")+": "+settings.locale.to_upper(),Rect2(0,0,width,144),func():settings.locale="en" if settings.locale=="ru" else "ru";_load_catalog();saver.write_slot("settings",settings);_build_ui();_update_ui();_open_settings(),false,BODY_FONT_SIZE);lang.custom_minimum_size=Vector2(width,144)
-	var restart: Button=_button(rows,tx("ui.restart","Заново"),Rect2(0,0,width,144),func():_close_overlay();_command("Restart"),false,BODY_FONT_SIZE);restart.custom_minimum_size=Vector2(width,144)
-	var menu: Button=_button(rows,QuestGuide._t(str(settings.locale),"Главное меню","Main menu"),Rect2(0,0,width,144),func():_save_progress();_show_title(),false,BODY_FONT_SIZE);menu.custom_minimum_size=Vector2(width,144)
-	var album: Button=_button(rows,tx("ui.album","Альбом уровней"),Rect2(0,0,width,144),_open_levels,false,BODY_FONT_SIZE);album.custom_minimum_size=Vector2(width,144)
-	_sheet_action(tx("ui.back_game","Вернуться в игру"),_dismiss_overlay)
+
 func _apply_audio() -> void:audio.settings=settings.audio;audio.apply_settings();saver.write_slot("settings",settings)
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_GO_BACK_REQUEST:
 		if is_instance_valid(overlay):_dismiss_overlay()
-		else:_open_settings()
+		elif not _placement_entity.is_empty():_cancel_placement()
+		else:_open_pause()
 	if what==NOTIFICATION_APPLICATION_PAUSED:
 		_app_paused=true
 		if is_instance_valid(stage):stage.process_mode=Node.PROCESS_MODE_DISABLED
@@ -760,7 +901,9 @@ func _prepare_capture() -> void:
 	if _capture_stage in ["show","proof","law","success"]:stage.play_actor("felix",{"show":"show_begin","proof":"accept","law":"stamp","success":"bow"}[_capture_stage])
 
 func _dismiss_overlay() -> void:
+	var previous_kind: String=_overlay_kind
 	_close_overlay()
+	if previous_kind in ["settings","album_pause"]:_settings_back();return
 	if kernel.state.is_empty():_show_title();return
 	if kernel.state.get("phase","")=="LAW_SELECTION":_command("CancelLawSelection")
 	if _front_menu:_show_title()
@@ -816,7 +959,7 @@ func _show_credits() -> void:
 func _slot_name(slot: Dictionary,index: int) -> String:
 	var names: Dictionary={"bridge":"Переправа","stage_stone":"Камень на сцене","stage_float":"Под камнем на сцене","stage_cold":"Под чашей","stage_paper":"Пролёт моста","stage_frame":"Под пролётом","stage_weight":"Испытательный стенд","weight_start":"К тали","screen_left":"Левый край сцены","screen_right":"Правый край сцены","near_support":"Ближняя опора","middle_support":"Опора у острова","far_support":"Дальняя опора","bread_box":"В термокороб","bread_delivery":"В доставку","dessert_delivery":"В доставку","box_delivery":"В доставку","thermal_block":"Защитить от тепла","oven_far":"Убрать от воды","warm_boat":"Нагреть протоку","warm_sample":"Нагреть образец","stone_away":"Отнести от образца"}
 	var fallback: String=names.get(slot.id,"В реквизит" if slot.mount_layer=="tray" else "Место %d" % (index+1))
-	return tx("slot."+slot.id+".name",fallback)
+	return tx(_key("slot."+slot.id+".name"),tx("slot."+slot.id+".name",fallback))
 func _slot_menu(entity_id: String) -> void:
 	var choices: Array=[]
 	var count: int=0
@@ -827,7 +970,7 @@ func _slot_menu(entity_id: String) -> void:
 		if props.get("move_mode","")=="hoist":payload.move_mode="hoist";payload.hoist_entity_id=props.get("hoist_entity_id","")
 		choices.append({"label":_slot_name(slot,count),"action":func():_command("PlaceProp",payload)})
 		count+=1
-	choices.append({"label":tx("ui.choose_on_stage","Выбрать место на сцене"),"action":func():selected=entity_id;stage.selected=entity_id;_update_ui()})
+	choices.append({"label":tx("ui.choose_on_stage","Выбрать место на сцене"),"action":func():_begin_placement(entity_id)})
 	_choices(_name(entity_id)+" · "+tx("ui.place","Место"),choices)
 
 func _set_reduced_motion(value: bool) -> void:
@@ -916,5 +1059,6 @@ func _inventory_item_width(label: String,scale_value: float) -> float:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		if is_instance_valid(overlay):_dismiss_overlay()
-		else:_open_settings()
+		elif not _placement_entity.is_empty():_cancel_placement()
+		else:_open_pause()
 		get_viewport().set_input_as_handled()

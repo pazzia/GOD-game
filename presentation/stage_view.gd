@@ -7,12 +7,15 @@ signal target_tapped(kind: String,id: String)
 var kernel: RefCounted
 var translator: Callable
 var selected: String=""
+var placement_entity: String=""
 var inspected: String=""
+var hud_safe_top: float=184.0
 var reduced_motion: bool=false
 var show_capacity: bool=false
 var ui_text_scale: float=1.0
 var clock: float=0
 var _textures: Dictionary={}
+var _pick_images: Dictionary={}
 var _hits: Array=[]
 var _puppets: Dictionary={}
 var _capacity_overlay: Node2D
@@ -44,6 +47,7 @@ func _ready() -> void:
 	mouse_filter=MOUSE_FILTER_PASS;clip_contents=true;texture_repeat=CanvasItem.TEXTURE_REPEAT_DISABLED
 	texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	_capacity_overlay=Node2D.new();_capacity_overlay.name="CapacityBadges";add_child(_capacity_overlay)
+	_capacity_overlay.draw.connect(_draw_interaction_overlay)
 	_capacity_overlay.draw.connect(_draw_capacity_badges)
 	_sample_presentation(0)
 	_sync_puppets()
@@ -138,6 +142,7 @@ func _visual_position(id: String) -> Vector2:
 	elif definition.asset_id=="PROP_CARGO_CRATE":
 		var group: Array=_shared_start_group(id,["PROP_CARGO_CRATE"])
 		if group.size()>1:offset=Vector2((group.find(id)-(group.size()-1)*.5)*140,18)
+		elif kernel.state.get("level_id","")=="L02":offset=Vector2(-215,18)
 	if offset==Vector2.ZERO:return exact
 	# Arrange coincident painted silhouettes around the same logical start point.
 	# The offset eases away as a confirmed route leaves that point; geometry,
@@ -634,19 +639,24 @@ func _mooring_ends(id: String) -> Array:
 	if kernel.state.entities[target].removed or kernel.state.entities[owner].removed:return []
 	return [_visual_position(owner)-Vector2(0,_prop_height(owner)*.38),_visual_position(target)-Vector2(0,_prop_height(target)*.55)]
 
-func _draw_rope(first: Vector2,last: Vector2,taut: bool=false) -> void:
+func _rope_points(first: Vector2,last: Vector2,taut: bool=false) -> PackedVector2Array:
 	var line: PackedVector2Array=[]
 	var sag: float=9 if taut else minf(42,first.distance_to(last)*.12)
 	for i in range(25):
 		var progress: float=float(i)/24
 		line.append(first.lerp(last,progress)+Vector2(0,sin(progress*PI)*sag))
-	draw_polyline(line,Color(.12,.10,.18,.24),11,true)
-	draw_polyline(line,Color("b78246"),7,true)
-	draw_polyline(line,Color("e6c58a"),3,true)
+	return line
+
+func _draw_rope(first: Vector2,last: Vector2,taut: bool=false,canvas: CanvasItem=null) -> void:
+	var drawer: CanvasItem=self if canvas==null else canvas
+	var line: PackedVector2Array=_rope_points(first,last,taut)
+	drawer.draw_polyline(line,Color(.12,.10,.18,.24),11,true)
+	drawer.draw_polyline(line,Color("b78246"),7,true)
+	drawer.draw_polyline(line,Color("e6c58a"),3,true)
 	for i in range(2,line.size()-2,3):
 		var tangent: Vector2=(line[i+1]-line[i-1]).normalized()
 		var across: Vector2=Vector2(-tangent.y,tangent.x)*3.5
-		draw_line(line[i]-across-tangent*2,line[i]+across+tangent*2,Color("976336"),1.5,true)
+		drawer.draw_line(line[i]-across-tangent*2,line[i]+across+tangent*2,Color("976336"),1.5,true)
 
 func _draw_connections() -> void:
 	for id in kernel.state.entities:
@@ -655,10 +665,8 @@ func _draw_connections() -> void:
 		if thread.size()==2:
 			draw_line(thread[0]+Vector2(0,2),thread[1]+Vector2(0,2),Color(.12,.10,.18,.27),5,true)
 			draw_line(thread[0],thread[1],CREAM,2.5,true)
-		var ends: Array=_mooring_ends(id)
-		if ends.size()==2:
-			var owner: String=str(kernel._entities[id].properties.get("mooring_owner_entity_id",""))
-			_draw_rope(ends[0],ends[1],bool(kernel.state.entities[owner].get("moored",false)))
+		# Mooring is a foreground interaction layer, so its real endpoints remain
+		# visible on the boat and bollard instead of disappearing behind props.
 	for id in kernel.state.routes:
 		var task: Dictionary=kernel.state.routes[id]
 		if task.get("transport_mode","")!="towed" or task.completed:continue
@@ -706,6 +714,26 @@ func _prop_height(id: String) -> float:
 	if definition.asset_id=="CH09_RIG":return 200
 	if definition.asset_id=="PROP_CARGO_CRATE" and _shared_start_group(id,["PROP_CARGO_CRATE"]).size()>1:return 116
 	return 156
+
+func _placement_subject() -> String:
+	if kernel==null or kernel.state.is_empty():return ""
+	if selected.begins_with("w:"):
+		var witness: Dictionary=kernel._find(kernel.definition.witnesses,selected.trim_prefix("w:"))
+		return selected if kernel.state.phase in ["PLAN_SHOW","PLAN_RESOLUTION","PROOF_ACCEPTED"] and witness.get("views",[]).size()==1 else ""
+	if kernel.state.phase not in ["PLAN_SHOW","PLAN_RESOLUTION"]:return ""
+	if kernel.state.entities.has(placement_entity) and kernel._entities[placement_entity].get("movable",false) and not kernel.state.entities[placement_entity].removed:return placement_entity
+	return ""
+
+func _placement_slots() -> Array:
+	var result: Array=[]
+	var subject: String=_placement_subject()
+	if subject.is_empty():return result
+	for slot in kernel.definition.slots:
+		if slot.mount_layer=="tray":continue
+		var valid: bool="witness" in slot.allowed_entity_types if subject.begins_with("w:") else kernel._entities[subject].type_id in slot.allowed_entity_types
+		if valid:result.append(slot)
+	return result
+
 func _draw() -> void:
 	_hits.clear()
 	if kernel==null or kernel.state.is_empty():return
@@ -717,18 +745,11 @@ func _draw() -> void:
 		if zone.kind!="WATER" or not zone.has("polygon"):continue
 		_draw_water_zone(zone)
 	_draw_connections()
-	# Slots preserve the exact geometry used by visibility and navigation.
-	for slot in kernel.definition.slots:
-		if slot.mount_layer=="tray":continue
-		var valid: bool=false
-		if selected.begins_with("w:"):valid="witness" in slot.allowed_entity_types
-		elif st.entities.has(selected):valid=kernel._entities[selected].get("movable",false) and kernel._entities[selected].type_id in slot.allowed_entity_types and not st.entities[selected].removed
-		if valid:
-			var pos: Vector2=world(slot.position)
-			draw_circle(pos,40,Color(.94,.98,.98,.8))
-			draw_arc(pos,40,0,TAU,48,PURPLE,4,true)
-			draw_circle(pos,10,Color("f1b44c"))
-			_hits.append({"kind":"slot","id":slot.id,"rect":Rect2(pos-Vector2(72,72),Vector2(144,144))})
+	# The marker hit area keeps the real slot position. Its drawing is deferred
+	# until after puppets, so an occupied but compatible place remains visible.
+	for slot in _placement_slots():
+		var pos: Vector2=world(slot.position)
+		_hits.append({"kind":"slot","id":slot.id,"rect":Rect2(pos-Vector2(72,72),Vector2(144,144))})
 	var ids: Array=st.entities.keys()
 	ids.sort_custom(func(a,b):
 		var depth_a: float=world(st.entities[a].position).y
@@ -759,14 +780,17 @@ func _draw() -> void:
 			draw_line(paper_rect.position+Vector2(12,paper_rect.size.y*.8),paper_rect.end-Vector2(12,paper_rect.size.y*.2),Color(.97,.84,.38,.8),4,true)
 		if not e.get("intact",true):
 			draw_line(pos-Vector2(25,60),pos+Vector2(25,-10),Color("a84148"),5,true)
-		if selected==id:
-			var selection_anchor: Vector2=Vector2(_prop_rect(id,pos,height).get_center().x,pos.y)
-			draw_arc(selection_anchor,54,0,TAU,48,CREAM,10,true)
-			draw_arc(selection_anchor,54,0,TAU,48,PURPLE,5,true)
-		var hit_width: float=maxf(144,_prop_rect(id,pos,height).size.x)
+		var body_rect: Rect2=_prop_rect(id,pos,height)
+		var hit_width: float=maxf(144,body_rect.size.x)
 		var hit_size: Vector2=Vector2(hit_width,maxf(144,height+35))
-		var hit_center: Vector2=_prop_rect(id,pos,height).get_center()
-		_hits.append({"kind":"entity","id":id,"rect":Rect2(hit_center-hit_size/2,hit_size),"anchor":hit_center})
+		var hit_center: Vector2=body_rect.get_center()
+		var target: Dictionary={"kind":"entity","id":id,"rect":Rect2(hit_center-hit_size/2,hit_size),"anchor":hit_center,"body_rect":body_rect}
+		if rope_ends.size()==2:
+			var owner: String=str(d.properties.get("mooring_owner_entity_id",""))
+			target.polyline=_rope_points(rope_ends[0],rope_ends[1],bool(st.entities[owner].get("moored",false)))
+			var line_bounds: Rect2=Rect2(rope_ends[0],Vector2.ZERO).expand(rope_ends[1]).grow(72)
+			target.rect=line_bounds
+		_hits.append(target)
 	# Eye anchors remain true; generous cards below the stage select the same witness.
 	for i in range(kernel.definition.witnesses.size()):
 		var wd: Dictionary=kernel.definition.witnesses[i]
@@ -806,10 +830,65 @@ func _draw() -> void:
 			var color: Color=Color(.15,.5,.35,.75) if ray.visible else Color(.66,.25,.29,.6)
 			if ray.method and not ray.visible:color=Color(.36,.26,.65,.55)
 			draw_line(world(ray.from),world(ray.to),color,3,true);draw_circle(world(ray.to),7,color)
-		var note: String=_t("stage.vision","Обзор {visible}/3 · Механизм {method}").format({"visible":diagnostics.visible_results,"method":_t("stage.visible","виден") if diagnostics.method_visible else _t("stage.hidden","скрыт")})
-		var note_width: float=minf(size.x-72,_font.get_string_size(note,HORIZONTAL_ALIGNMENT_LEFT,-1,36).x+48)
-		_rounded(Rect2(36,184,note_width,66),CREAM)
-		_label(note,Vector2(60,230),36)
+		# Diagnostic text belongs to the measured HUD component. Only the genuine
+		# viewing rays stay on the world; no fixed label can hide under the HUD.
+
+func _entity_label(id: String) -> String:
+	var type_id: String=str(kernel._entities[id].type_id)
+	var fallback: String=_t("entity."+id+".name",_t("prop."+type_id+".name",type_id))
+	return _t("level."+str(kernel.state.get("level_id",""))+".entity."+id+".name",fallback)
+
+func _selection_label_layout() -> Dictionary:
+	if kernel==null or not kernel.state.get("entities",{}).has(selected):return {}
+	var entity: Dictionary=kernel.state.entities[selected]
+	if entity.removed or kernel._slots[entity.slot].mount_layer=="tray":return {}
+	var target: Dictionary={}
+	for item in _hits:
+		if item.kind=="entity" and item.id==selected:target=item;break
+	if target.is_empty():return {}
+	var text: String=_entity_label(selected)
+	if placement_entity==selected:text=_t("ui.placing_prop","Разместить: {name}").format({"name":text})
+	var definition: Dictionary=kernel._entities[selected]
+	if definition.material=="STONE" and definition.properties.has("size"):
+		text+=" · "+_t("stage.load","Вмещает: {capacity}").format({"capacity":int(entity.effective.get("carry_capacity",0))})
+	var font_size: int=int(38*clampf(ui_text_scale,1,1.4))
+	var height: float=font_size+28
+	var width: float=minf(size.x-48,_font.get_string_size(text,HORIZONTAL_ALIGNMENT_LEFT,-1,font_size).x+40)
+	var body: Rect2=target.body_rect
+	var left: float=clampf(body.get_center().x-width*.5,24,maxf(24,size.x-width-24))
+	var minimum_y: float=minf(maxf(12,hud_safe_top+12),size.y-height-184)
+	var top: float=clampf(body.position.y-height-14,minimum_y,maxf(minimum_y,size.y-height-184))
+	return {"id":selected,"text":text,"rect":Rect2(left,top,width,height),"body_rect":body,"font_size":font_size}
+
+func _draw_interaction_overlay() -> void:
+	if kernel==null or kernel.state.is_empty():return
+	for id in kernel.state.entities:
+		if kernel.state.entities[id].removed:continue
+		var ends: Array=_mooring_ends(id)
+		if ends.size()!=2:continue
+		var owner: String=str(kernel._entities[id].properties.get("mooring_owner_entity_id",""))
+		var taut: bool=bool(kernel.state.entities[owner].get("moored",false))
+		_draw_rope(ends[0],ends[1],taut,_capacity_overlay)
+		if taut or selected in [id,owner,str(kernel.state.entities[id].get("attachment_target",""))]:
+			for point in ends:
+				_capacity_overlay.draw_circle(point,13,CREAM)
+				_capacity_overlay.draw_circle(point,8,PURPLE)
+	for slot in _placement_slots():
+		var at: Vector2=world(slot.position)
+		_capacity_overlay.draw_circle(at,42,Color("252647"))
+		_capacity_overlay.draw_circle(at,36,CREAM)
+		_capacity_overlay.draw_arc(at,36,0,TAU,48,PURPLE,5,true)
+		_capacity_overlay.draw_circle(at,10,Color("f7d760"))
+	var label: Dictionary=_selection_label_layout()
+	if label.is_empty():return
+	var outline=StyleBoxFlat.new();outline.bg_color=Color(0,0,0,0);outline.border_color=CREAM;outline.set_border_width_all(7);outline.set_corner_radius_all(18)
+	_capacity_overlay.draw_style_box(outline,label.body_rect.grow(8))
+	outline.border_color=PURPLE;outline.set_border_width_all(3)
+	_capacity_overlay.draw_style_box(outline,label.body_rect.grow(8))
+	var panel=StyleBoxFlat.new();panel.bg_color=CREAM;panel.border_color=PURPLE;panel.set_border_width_all(2);panel.set_corner_radius_all(16)
+	_capacity_overlay.draw_style_box(panel,label.rect)
+	_capacity_overlay.draw_string(_font,label.rect.position+Vector2(20,int(label.font_size)+5),label.text,HORIZONTAL_ALIGNMENT_LEFT,label.rect.size.x-40,int(label.font_size),INK)
+
 func _capacity_badge_layout() -> Array:
 	# Labels are a presentation pass: never relocate props or their input anchors.
 	var badges: Array=[]
@@ -819,6 +898,7 @@ func _capacity_badge_layout() -> Array:
 		var entity: Dictionary=kernel.state.entities[id]
 		var definition: Dictionary=kernel._entities[id]
 		if entity.removed or kernel._slots[entity.slot].mount_layer=="tray" or definition.material!="STONE" or not definition.properties.has("size"):continue
+		if selected==id and not _selection_label_layout().is_empty():continue # The selected name already includes its real capacity.
 		if not show_capacity and selected!=id and inspected!=id:continue
 		var pos: Vector2=_visual_position(id)
 		var height: float=_prop_height(id)
@@ -897,12 +977,51 @@ func _route_position(task: Dictionary,actor_id: String="",render_alpha: float=-1
 	return world(from).lerp(world(to),fmod(progress,float(edge_ticks))/edge_ticks)
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_SCROLL_BEGIN:_tap_cancelled=true
+
+func _painted_hit(target: Dictionary,position: Vector2) -> bool:
+	if target.has("polyline"):
+		var line: PackedVector2Array=target.polyline
+		for index in range(line.size()-1):
+			if Geometry2D.get_closest_point_to_segment(position,line[index],line[index+1]).distance_to(position)<=18:return true
+		return false
+	var body: Rect2=target.get("body_rect",target.rect)
+	if not body.has_point(position):return false
+	if target.kind!="entity":return true
+	# A visible hull beats a neighbouring rope's invisible enlarged touch area.
+	# Transparent corners are not painted ownership; the full 144px target is
+	# still used below when no actual silhouette occupies the tapped point.
+	var id: String=str(target.id)
+	var key: String=str(kernel._entities[id].asset_id)+":"+_prop_variant(id)
+	if not _pick_images.has(key):
+		var tex: Texture2D=asset_texture(id)
+		var image: Image=tex.get_image() if tex!=null else null
+		if image!=null and image.is_compressed() and image.decompress()!=OK:image=null
+		_pick_images[key]=image
+	var picture: Image=_pick_images[key]
+	if picture==null or picture.is_empty():return true
+	var uv: Vector2=(position-body.position)/body.size
+	return picture.get_pixel(clampi(int(uv.x*picture.get_width()),0,picture.get_width()-1),clampi(int(uv.y*picture.get_height()),0,picture.get_height()-1)).a>.12
+
 func _target_at(position: Vector2) -> Dictionary:
 	var nearest: Dictionary={};var distance: float=INF
-	for target in _hits:
-		if target.kind=="slot" and target.rect.has_point(position):
-			var d: float=target.rect.get_center().distance_squared_to(position)
-			if d<distance:nearest=target;distance=d
+	# Mode can change between two rendered frames. Derive current slot targets
+	# from the current explicit subject, never from a stale previous selection.
+	var subject: String=_placement_subject()
+	for slot in _placement_slots():
+		var center: Vector2=world(slot.position)
+		var rect: Rect2=Rect2(center-Vector2(72,72),Vector2(144,144))
+		if rect.has_point(position):
+			var d: float=center.distance_squared_to(position)
+			if d<distance:nearest={"kind":"slot","id":slot.id,"rect":rect};distance=d
+	if not nearest.is_empty():return nearest
+	if not subject.is_empty():return {"kind":"placement_invalid","id":subject}
+	# Prefer actual ink to an expanded neighbour. Where two silhouettes really
+	# overlap, the nearest painted center wins; ties keep the frontmost target.
+	for i in range(_hits.size()-1,-1,-1):
+		var target: Dictionary=_hits[i]
+		if target.kind=="slot" or not _painted_hit(target,position):continue
+		var d: float=target.get("pick_anchor",target.get("anchor",target.rect.get_center())).distance_squared_to(position)
+		if d<distance:nearest=target;distance=d
 	if not nearest.is_empty():return nearest
 	for i in range(_hits.size()-1,-1,-1):
 		var target: Dictionary=_hits[i]

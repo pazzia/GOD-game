@@ -134,6 +134,8 @@ func inspect_layout(context: String) -> void:
 	var objective: Control=app.ui.find_child("ObjectiveTicket",true,false)
 	check(not headline.text.strip_edges().is_empty() and headline.get_line_count()==headline.get_visible_line_count(),context+" compact current goal has a visible complete line")
 	check(objective!=null and screen.encloses(objective.get_global_rect()) and objective.tooltip_text.contains(str(app._hud_copy().objective)),context+" objective ticket exposes the full authored goal")
+	var number: Label=app.ui.find_child("ObjectiveLevelNumber",true,false)
+	check(number!=null and number.get_line_count()==1 and number.get_visible_line_count()==1 and number.get_theme_font("font").get_string_size(number.text,HORIZONTAL_ALIGNMENT_LEFT,-1,number.get_theme_font_size("font_size")).x<=number.size.x,context+" complete two-digit level number fits its real heading font")
 	check(app.law_label.get_line_count()==app.law_label.get_visible_line_count(),context+" active law context has complete shaped lines")
 	var objects: Control=app.ui.find_child("OpenObjects",true,false)
 	var plan: Control=app.ui.find_child("OpenPlan",true,false)
