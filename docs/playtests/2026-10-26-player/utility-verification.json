@@ -1,0 +1,223 @@
+{
+  "checked_at": "2026-10-26T09:20:38.142381+00:00",
+  "status": "passed",
+  "scope": "test-infrastructure safety guards only; no gameplay changes",
+  "original_player_events": 117,
+  "original_manager_events": 11,
+  "original_sessions_used_prior_cli": true,
+  "original_evidence": {
+    "frozen_files": 136,
+    "png_count": 128,
+    "all_files_unchanged": true,
+    "manifest_and_journal_unchanged": true,
+    "baseline_and_final_file_manifest_sha256": "8a6bba4bcb73d1140a865b3167bdfa62aa1c34592ce93f341011a72cb3c1b7bc"
+  },
+  "guard_checks": [
+    {
+      "name": "nonempty_evidence_refused",
+      "passed": true,
+      "detail": "Evidence directory is not empty; choose a fresh --evidence-dir. Existing evidence was preserved"
+    },
+    {
+      "name": "existing_evidence_all_bytes_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "existing_session_state_unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no_profile_or_tool_cache_created_on_refusal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_missing_refused_without_signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_different_pid_refused_without_signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_different_start_time_refused_without_signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_different_boot_refused_without_signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "identity_different_commandline_refused_without_signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stop_preflights_both_processes_before_signals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "failed_stop_preserves_state_file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restart_refuses_wrong_identity_without_kill",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "failed_restart_preserves_state_file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "matching_identity_pidfd_stop_succeeds",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "pidfd_sigkill_escalation_bounded",
+      "passed": true,
+      "detail": "5.006s"
+    }
+  ],
+  "guard_check_count": 15,
+  "guard_failures": [],
+  "native_smoke": {
+    "session_directory": "build/player-utility-final-smoke",
+    "display_number": 105,
+    "viewport": [
+      844,
+      390
+    ],
+    "sequence": [
+      "start",
+      "observe_menu",
+      "XTest_click",
+      "restart_SIGTERM_same_profile",
+      "observe_resume",
+      "stop"
+    ],
+    "journal_records": 5,
+    "raw_png_count": 5,
+    "png_and_chain_checks_passed": true,
+    "click_changes_visible_screen": true,
+    "restart_creates_new_game_pid": true,
+    "stopped_both_recorded_processes": true,
+    "profile_retained": true,
+    "engine_error_or_leak_lines": [],
+    "source_runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+    "events": [
+      {
+        "index": 0,
+        "time_utc": "2026-10-26T09:18:13.788351+00:00",
+        "action": "start",
+        "note": "INFRASTRUCTURE final smoke: guarded native start after player audit",
+        "details": {},
+        "screenshot": "build/player-utility-final-smoke/evidence/0000-start.png",
+        "dimensions": [
+          844,
+          390
+        ],
+        "sha256": "5bce5e2b88ea96076f12e8f99b0b98a6b5361ec3022601812c891ff4dfc3cb5f",
+        "before_screenshot": null,
+        "method": "native X11 screen capture; XTest desktop mouse/keyboard input",
+        "game_pid": 95416
+      },
+      {
+        "index": 1,
+        "time_utc": "2026-10-26T09:18:24.077105+00:00",
+        "action": "capture",
+        "note": "INFRASTRUCTURE: observe the actual menu after boot splash",
+        "details": {},
+        "screenshot": "build/player-utility-final-smoke/evidence/0001-capture.png",
+        "dimensions": [
+          844,
+          390
+        ],
+        "sha256": "69e7b0be1a15fdff017cbaad85ec3fd27792fd61b3a17bbecb39b99f67a3000c",
+        "before_screenshot": "build/player-utility-final-smoke/evidence/0000-start.png",
+        "method": "native X11 screen capture; XTest desktop mouse/keyboard input",
+        "game_pid": 95416
+      },
+      {
+        "index": 2,
+        "time_utc": "2026-10-26T09:18:38.487657+00:00",
+        "action": "click",
+        "note": "INFRASTRUCTURE: real XTest click on visible Start story button",
+        "details": {
+          "x": 166,
+          "y": 304,
+          "button": 1
+        },
+        "screenshot": "build/player-utility-final-smoke/evidence/0002-click.png",
+        "dimensions": [
+          844,
+          390
+        ],
+        "sha256": "0306ca6f0575d6b1990790cb5441e81e06bfe4a640926bda8cbb5f9e15af201a",
+        "before_screenshot": "build/player-utility-final-smoke/evidence/0001-capture.png",
+        "method": "native X11 screen capture; XTest desktop mouse/keyboard input",
+        "game_pid": 95416
+      },
+      {
+        "index": 3,
+        "time_utc": "2026-10-26T09:18:50.821905+00:00",
+        "action": "restart",
+        "note": "INFRASTRUCTURE: guarded SIGTERM and relaunch with the same profile",
+        "details": {},
+        "screenshot": "build/player-utility-final-smoke/evidence/0003-restart.png",
+        "dimensions": [
+          844,
+          390
+        ],
+        "sha256": "e9dc54646226b6d2515077e497787ca19b98278203649f087c64e9c9fc91c4bf",
+        "before_screenshot": "build/player-utility-final-smoke/evidence/0002-click.png",
+        "method": "native X11 screen capture; XTest desktop mouse/keyboard input",
+        "game_pid": 95547
+      },
+      {
+        "index": 4,
+        "time_utc": "2026-10-26T09:19:42.418784+00:00",
+        "action": "capture",
+        "note": "INFRASTRUCTURE: final real screen after guarded restart",
+        "details": {},
+        "screenshot": "build/player-utility-final-smoke/evidence/0004-capture.png",
+        "dimensions": [
+          844,
+          390
+        ],
+        "sha256": "e9dc54646226b6d2515077e497787ca19b98278203649f087c64e9c9fc91c4bf",
+        "before_screenshot": "build/player-utility-final-smoke/evidence/0003-restart.png",
+        "method": "native X11 screen capture; XTest desktop mouse/keyboard input",
+        "game_pid": 95547
+      }
+    ],
+    "archived_evidence_directory": "docs/playtests/2026-10-26-player/utility-smoke",
+    "archive_rule": "Raw journal paths are preserved; matching screenshot basenames are copied byte-identically into the archived directory."
+  },
+  "implementation": {
+    "nonempty_evidence": "refuse before profile/version/Xvfb/Godot starts or manifest writes",
+    "process_identity": [
+      "pid",
+      "/proc stat start_time_ticks",
+      "boot_id",
+      "sha256 of full /proc cmdline"
+    ],
+    "termination": "identity preflight then Linux pidfd SIGTERM; bounded 5s wait then SIGKILL if necessary",
+    "proc_exe_note": "An initial infrastructure smoke safely refused because /proc/<pid>/exe becomes unreadable across commands in this environment. Optional exe-symlink reads were removed; final separate smoke passed with starttime/boot/cmdline identity and pidfd."
+  },
+  "limits": [
+    "Desktop mouse/keyboard AI test, not physical Android or touch.",
+    "Audio driver Dummy; not a listening test.",
+    "Guards were added only after the original 117+11-event sessions were frozen and stopped."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "updated_at": "2026-10-26T09:17:55.392482+00:00",
+  "status": "role_installed_first_native_playtest_completed",
+  "role": "player",
+  "agent": "/root/player",
+  "skill": ".agents/skills/team-player/SKILL.md",
+  "skill_sha256": "4b777c6fb3474d0fb99f3553b67e84c49a8929230e9c5fb2e754ea297e0b3c9d",
+  "source": "Locally authored project role requested by the owner; no upstream skill or installer added",
+  "charter": "Role skill and AGENTS.md first-passage exception",
+  "input_method": "Native Godot window; XTest desktop mouse/keyboard",
+  "initial_profile": "New isolated XDG profile; no gameplay inputs before handoff",
+  "source_commit": "273b50943611385d758aa3681340cc5675b03d3d",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "evidence": "docs/playtests/2026-10-26-player/",
+  "physical_android_tested": false,
+  "human_playtest": false,
+  "subjective_audio_listening": false,
+  "completed_naturally": [
+    "L01",
+    "L02",
+    "L03"
+  ],
+  "partial": "L04 placement and persistence only",
+  "recorded_player_events": 117,
+  "recorded_manager_recheck_events": 11,
+  "observed_player_issues": 9,
+  "issue_severity_counts": {
+    "medium": 7,
+    "low": 2
+  },
+  "game_runtime_changed": false,
+  "ux_fixes_implemented": false,
+  "report": "docs/playtests/2026-10-26-player/README.md",
+  "improvements": "docs/playtests/2026-10-26-player/improvements.md",
+  "manager_review": "docs/playtests/2026-10-26-player/manager-review.md"
+}

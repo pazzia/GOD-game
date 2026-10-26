@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-26T07:54:02.017975+00:00",
+  "display": "127.0.0.1:104",
+  "display_number": 104,
+  "resolution": "844x390",
+  "profile": "/workspace/GOD-game/build/player-manager-review/profile-20261026-075402-017715",
+  "game_log": "/workspace/GOD-game/build/player-manager-review/godot.log",
+  "evidence_dir": "/workspace/GOD-game/docs/playtests/2026-10-26-player/manager-recheck",
+  "source_commit": "273b50943611385d758aa3681340cc5675b03d3d",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "method": "native Godot on Xvfb/Mesa; XTest mouse/keyboard; unedited ImageMagick screen capture",
+  "audio_driver": "Dummy",
+  "physical_android": false,
+  "synthetic_touch": false,
+  "human_player": false,
+  "xvfb_pid": 90411,
+  "game_pid": 90412,
+  "launch_command": [
+    "/workspace/setup-tools/Godot_v4.7.2-stable_linux.x86_64",
+    "--windowed",
+    "--path",
+    "/workspace/GOD-game",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "844x390",
+    "--position",
+    "0,0"
+  ],
+  "boot_visible_after_seconds": 10.603,
+  "stopped_at": "2026-10-26T09:11:27.369150+00:00"
+}

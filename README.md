@@ -12,6 +12,8 @@
 
 Подробности: [утверждение направления](docs/decisions/2026-10-25-approved-scientist-reboot.md), [план и критерии](docs/production/scientist-reboot/plan.md), [дизайн и UX](docs/design/scientist-ui.md), [музыка](docs/design/scientist-audio.md), [состояние проекта](docs/PROJECT_STATE.md). Описание 0.4 сохранено в [архиве](docs/history/README-0.4.0.md).
 
+26 октября добавлена роль «Игрок» и выполнен первый независимый AI-прогон: L01–L03 пройдены через настоящий интерфейс, найдены девять UX-проблем. [Журнал и охват](docs/playtests/2026-10-26-player/README.md), [проблемы](docs/playtests/2026-10-26-player/issues.md), [конкретные предложения](docs/playtests/2026-10-26-player/improvements.md). Проблемы пока не исправлены; этот desktop-прогон не заменяет проверку человеком или на Android.
+
 ## Скачать тестовый APK
 
 **[Открыть отдельный APK в репозитории GitHub](https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk)** → нажмите **Download raw** (значок загрузки). Файл хранится в `artifacts/android/` через Git LFS; скачивается обычный `.apk` без архива. [Папка со сборкой](artifacts/android/).

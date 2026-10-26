@@ -1,0 +1,142 @@
+{
+  "recorded_at": "2026-10-26T07:54:06.673761+00:00",
+  "status": "confirmed_identity_mismatch_between_available_apks",
+  "old": {
+    "apk_path": "/workspace/deliverables/0.4/AlmostGod-0.4.0-preview.apk",
+    "apk_sha256": "3fa416d53fc26730b22e66f9a91057cb7258a684735d1912d213d28960854e31",
+    "size_bytes": 122617683,
+    "package": "com.almostgod.game.preview",
+    "version_name": "0.4.0-preview",
+    "version_code": 5,
+    "debuggable": true,
+    "allow_backup": false,
+    "certificate_sha256": [
+      "5c14e1560144d16366333bb3c5b92080662fdbc23fb434e885fdddd27f471167"
+    ],
+    "signing_schemes": {
+      "v2": {
+        "certificate_sha256": [
+          "5c14e1560144d16366333bb3c5b92080662fdbc23fb434e885fdddd27f471167"
+        ],
+        "additional_attribute_ids": [
+          "0xbeeff00d"
+        ],
+        "proof_of_rotation_present": false
+      },
+      "v3": {
+        "certificate_sha256": [
+          "5c14e1560144d16366333bb3c5b92080662fdbc23fb434e885fdddd27f471167"
+        ],
+        "additional_attribute_ids": [],
+        "proof_of_rotation_present": false
+      }
+    },
+    "ci_report": "/workspace/GOD-game/docs/reviews/0.4.0/ci-build.json",
+    "ci_signature_verified": true,
+    "hash_matches_ci": true,
+    "manifest_matches_ci": true,
+    "v1_certificate_matches_ci": true,
+    "v2_v3_certificates_match_ci": true
+  },
+  "new": {
+    "apk_path": "/workspace/GOD-game/artifacts/android/AlmostGod-0.5.0-preview.apk",
+    "apk_sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
+    "size_bytes": 163631006,
+    "package": "com.almostgod.game.preview",
+    "version_name": "0.5.0-preview",
+    "version_code": 6,
+    "debuggable": true,
+    "allow_backup": false,
+    "certificate_sha256": [
+      "c149045b9f98643e00ce9f89942c96cba782a2570dc3d65c8184cc40f1b690c7"
+    ],
+    "signing_schemes": {
+      "v2": {
+        "certificate_sha256": [
+          "c149045b9f98643e00ce9f89942c96cba782a2570dc3d65c8184cc40f1b690c7"
+        ],
+        "additional_attribute_ids": [
+          "0xbeeff00d"
+        ],
+        "proof_of_rotation_present": false
+      },
+      "v3": {
+        "certificate_sha256": [
+          "c149045b9f98643e00ce9f89942c96cba782a2570dc3d65c8184cc40f1b690c7"
+        ],
+        "additional_attribute_ids": [],
+        "proof_of_rotation_present": false
+      }
+    },
+    "ci_report": "/workspace/GOD-game/docs/reviews/android-signing/ci-build-0.5.0.json",
+    "ci_signature_verified": true,
+    "hash_matches_ci": true,
+    "manifest_matches_ci": true,
+    "v1_certificate_matches_ci": true,
+    "v2_v3_certificates_match_ci": true
+  },
+  "checks": [
+    {
+      "id": "old_hash_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "old_manifest_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "old_v1_certificate_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "old_v2_v3_certificates_match_ci",
+      "observed": true
+    },
+    {
+      "id": "old_no_v3_rotation_proof",
+      "observed": true
+    },
+    {
+      "id": "new_hash_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "new_manifest_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "new_v1_certificate_matches_ci",
+      "observed": true
+    },
+    {
+      "id": "new_v2_v3_certificates_match_ci",
+      "observed": true
+    },
+    {
+      "id": "new_no_v3_rotation_proof",
+      "observed": true
+    },
+    {
+      "id": "same_package",
+      "observed": true
+    },
+    {
+      "id": "increased_version_code",
+      "observed": true
+    },
+    {
+      "id": "different_signing_certificates",
+      "observed": true
+    }
+  ],
+  "evidence_check_count": 13,
+  "physical_device_tested": false,
+  "installed_apk_identity_known": false,
+  "fresh_full_signature_verification": false,
+  "method": "Independently parse binary AndroidManifest, hash APK bytes, extract public v1/v2/v3 certificate identity and v3 rotation attributes; compare with previously verified CI reports.",
+  "limits": [
+    "No connected phone or installed-package error code was inspected.",
+    "This reader does not validate content digests or cryptographic signatures; CI signature_verified is historical evidence tied to matching APK hashes.",
+    "No private keys, passwords or credential files were opened, created or changed."
+  ]
+}
