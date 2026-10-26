@@ -68,6 +68,33 @@ jobs:
         run: |
           python tools/ci_android.py --tools-dir "$TOOLS_DIR" --output-dir "$APK_OUTPUT_DIR" --debug-keystore "$PREVIEW_KEYSTORE" --source-sha "$GITHUB_SHA"
 
+      - name: Summarize verification and build diagnostics
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          report = Path("tests/reports/project-verification.json")
+          lines = ["## Project verification", ""]
+          if report.exists():
+              data = json.loads(report.read_text())
+              lines += ["Status: " + data["status"], "", "| Suite | Result |", "| --- | --- |"]
+              for check in data["checks"]:
+                  lines.append("| " + check["name"] + " | " + str(check["exit_code"]) + " |")
+              for check in data["checks"]:
+                  if check["exit_code"]:
+                      lines += ["", "### " + check["name"], "```text", check.get("output", "")[-6000:], "```"]
+              lines += ["", "Changed runtime files: " + json.dumps(data["files_changed_during_verification"])]
+          else:
+              lines += ["No verification report was produced."]
+          for name in ("import.log", "verification.log", "build.log"):
+              path = Path(os.environ["APK_OUTPUT_DIR"]) / name
+              if path.exists():
+                  lines += ["", "### " + name, "```text", path.read_text(errors="replace")[-6000:], "```"]
+          with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a") as summary:
+              summary.write("\n".join(lines) + "\n")
+          PY
+
       - name: Preserve build logs
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
