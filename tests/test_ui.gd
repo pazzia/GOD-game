@@ -28,6 +28,18 @@ func run() -> void:
 	if not await click_named("ObjectiveTicket"):await finish();return
 	check(collect_text(app.overlay).contains("Марф"),"objective journal gives the concrete bakery task before manipulation")
 	if not await click_last_action():await finish();return
+	# A shared observer/actor body must expose inspection without a precise eye-pin tap.
+	var observer_truth: String=app.kernel.state_hash()
+	var observer_position: Array=app.kernel.state.entities.marfa.position.duplicate()
+	await tap(app.stage.get_global_transform()*(app.stage.entity_display_position("marfa")+Vector2(0,-130)))
+	check(app.selected=="marfa","shared Marfa body pointer input selects the actor, not an unrelated prop")
+	if not await click_named("ObjectContext"):await finish();return
+	var observer_view=find_button(app.overlay,"Проверить обзор")
+	check(observer_view!=null,"shared actor context exposes the observer view advertised by onboarding")
+	if observer_view==null:await finish();return
+	await click_control(observer_view)
+	check(app.inspected=="w1" and app.stage.inspected=="w1" and app.instruction.text.contains("Марф"),"actor context enables the real witness rays and visible diagnostic")
+	check(app.kernel.state_hash()==observer_truth and app.kernel.state.entities.marfa.position==observer_position and app.kernel.state.routes.is_empty(),"observer inspection neither moves the actor nor changes proof or route state")
 	# A visible mechanism must fail, preserving a recoverable task and a truthful explanation.
 	await click_control(app.primary)
 	if not await click_named("PauseSettings"):await finish();return
@@ -63,6 +75,10 @@ func run() -> void:
 	await click_control(app.primary)
 	check(app.kernel.state.active_laws==["M01"] and app.kernel.state.phase=="PLAN_RESOLUTION","explicit law button changes the world before any crossing")
 	check(not app.kernel.state.entities.float.removed and app.kernel.state.routes.is_empty(),"sealing cannot hide the old support or route Marfa automatically")
+	await tap(app.stage.get_global_transform()*(app.stage.entity_display_position("marfa")+Vector2(0,-130)))
+	if not await click_named("ObjectContext"):await finish();return
+	check(find_button(app.overlay,"Проверить обзор")!=null and find_button(app.overlay,app.tx("ui.assign_route","Назначить маршрут…"))!=null,"the shared actor retains both view inspection and legitimate route actions during application")
+	if not await click_last_action():await finish();return
 	check(str(app._hud_copy().get("primary_intent",""))=="remove_l01_float","guide names removal as the next actual action")
 	await click_control(app.primary)
 	check(app.kernel.state.entities.float.removed and app.kernel.state.entities.stone.support,"explicit support removal leaves the magic stone supported")

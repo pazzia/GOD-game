@@ -586,10 +586,30 @@ func _hint() -> void:
 	_hint_index=mini(int(_hint_indices.get(context,0))+1,3);_hint_indices[context]=_hint_index;audio.play("hint","UI")
 	var copy: Dictionary=QuestGuide.hint(kernel,str(settings.locale),_hint_index,catalog)
 	_modal(str(copy.get("title",txf("ui.hint_stage","Подсказка {number} из 3",{"number":_hint_index}))),str(copy.get("body","")),tx("ui.try","Попробую"),func():pass)
+func _entity_witnesses(entity_id: String) -> Array[String]:
+	var result: Array[String]=[]
+	# The presentation link is also what makes the renderer share one actor body.
+	if str(kernel.definition.get("presentation",{}).get("observer_actor_id",""))!=entity_id:return result
+	var character_id: String=str(kernel._entities[entity_id].get("asset_id","")).trim_suffix("_RIG")
+	for witness in kernel.definition.witnesses:
+		if str(witness.get("character_id",""))==character_id:result.append(str(witness.id))
+	return result
+
+func _show_witness_view(witness_id: String) -> void:
+	# Inspecting an actor must not move it, toggle inspection off, or assign its route.
+	_placement_entity="";stage.placement_entity=""
+	inspected=witness_id;selected="w:"+witness_id
+	stage.inspected=witness_id;stage.selected=selected;_update_ui()
+
 func _object_menu(id: String) -> void:
 	var d: Dictionary=kernel._entities[id];var props: Dictionary=d.properties;var e: Dictionary=kernel.state.entities[id];var choices: Array=[]
+	for witness_id in _entity_witnesses(id):
+		choices.append({"label":QuestGuide._t(str(settings.locale),"Проверить обзор","Check view"),"action":func():_show_witness_view(witness_id),"name":"ObjectView_"+witness_id})
 	if kernel.state.phase not in Kernel.PLAN_PHASES and kernel.state.phase!="PROOF_ACCEPTED":
-		_modal(_name(id),QuestGuide._t(str(settings.locale),"Сейчас идёт проверка опыта. Вернитесь к подготовке, чтобы изменить предметы; наблюдать сцену можно в любой момент.","The experiment is being checked. Return to preparation to adjust objects; you can inspect the scene at any time."),tx("ui.back_game","Вернуться в игру"),func():pass);return
+		var explanation: String=QuestGuide._t(str(settings.locale),"Сейчас идёт проверка опыта. Вернитесь к подготовке, чтобы изменить предметы; наблюдать сцену можно в любой момент.","The experiment is being checked. Return to preparation to adjust objects; you can inspect the scene at any time.")
+		if choices.is_empty():_modal(_name(id),explanation,tx("ui.back_game","Вернуться в игру"),func():pass)
+		else:_choices(_name(id),choices,explanation)
+		return
 	if d.movable:choices.append({"label":tx("ui.place_prop","Выбрать место…"),"action":func():_slot_menu(id)})
 	if props.get("foldable",false):
 		var folded: bool=bool(e.get("folded",false))

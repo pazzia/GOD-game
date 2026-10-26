@@ -63,10 +63,40 @@ func run() -> void:
  check(not stage._selection_label_layout().is_empty(),"selected harbor cargo receives a visible name label")
  check(harbor.state_hash()==harbor_hash,"all harbor hit/render aids preserve authored simulation positions and state")
  stage.free();await process_frame
- var file=FileAccess.open("res://tests/reports/stage-targets.json",FileAccess.WRITE);file.store_string(JSON.stringify({"checks":checks,"failures":failures,"engine":Engine.get_version_info().string,"native_mouse_clicks":7},"  "));file.close()
+ await witness_mode_cases()
+ var file=FileAccess.open("res://tests/reports/stage-targets.json",FileAccess.WRITE);file.store_string(JSON.stringify({"checks":checks,"failures":failures,"engine":Engine.get_version_info().string,"native_mouse_clicks":12},"  "));file.close()
  print("STAGE TARGETS: %d checks; %d failures"%[checks,failures.size()])
  for failure in failures:printerr("FAIL: "+failure)
  quit(0 if failures.is_empty() else 1)
+func witness_mode_cases() -> void:
+ var observers=Kernel.new();check(observers.load_level(JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/L30.json")),48121),"three single-view observer fixture loads")
+ var truth: String=observers.state_hash()
+ stage=Stage.new();stage.size=Vector2(1920,1080);stage.kernel=observers;stage.target_tapped.connect(_observe_fixture_target);root.add_child(stage)
+ await process_frame;await process_frame
+ for witness in observers.definition.witnesses:
+  var target: Dictionary=witness_hit(str(witness.id))
+  await tap(target.rect.get_center())
+  check(targets[-1]=={"kind":"witness","id":witness.id} and stage.selected=="w:"+str(witness.id),"ordinary inspection can select the next observer after a previous single-view observer: "+str(witness.id))
+  check(stage._placement_subject().is_empty() and not has_slot_targets(),"inspection does not silently advertise moving positions: "+str(witness.id))
+ stage.selected="w:w1";stage.placement_entity="w:w1";stage.queue_redraw();await process_frame;await process_frame
+ check(stage._placement_subject()=="w:w1" and has_slot_targets(),"explicit witness placement still advertises its real allowed places")
+ var slot_id: String=str(observers.definition.witnesses[0].initial_view_slot)
+ await tap(stage.world(observers._slots[slot_id].position))
+ check(targets[-1]=={"kind":"slot","id":slot_id},"explicit witness placement keeps slot priority over the observer body")
+ stage.placement_entity=""
+ var next: Dictionary=witness_hit("w3")
+ await tap(next.rect.get_center())
+ check(targets[-1]=={"kind":"witness","id":"w3"} and stage._placement_subject().is_empty(),"canceling explicit witness placement immediately restores ordinary observer inspection")
+ check(observers.state_hash()==truth,"inspection and placement target routing cannot move observers or alter the kernel")
+ stage.free();await process_frame
+func _observe_fixture_target(kind: String,id: String) -> void:
+ targets.append({"kind":kind,"id":id})
+ if kind=="witness":
+  stage.selected="w:"+id;stage.inspected=id;stage.queue_redraw()
+func witness_hit(id: String) -> Dictionary:
+ for target in stage._hits:
+  if target.kind=="witness" and target.id==id:return target
+ return {}
 func hit(id: String) -> Dictionary:
  for target in stage._hits:
   if target.kind=="entity" and target.id==id:return target

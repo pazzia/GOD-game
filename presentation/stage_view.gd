@@ -717,7 +717,7 @@ func _prop_height(id: String) -> float:
 
 func _placement_subject() -> String:
 	if kernel==null or kernel.state.is_empty():return ""
-	if selected.begins_with("w:"):
+	if selected.begins_with("w:") and placement_entity==selected:
 		var witness: Dictionary=kernel._find(kernel.definition.witnesses,selected.trim_prefix("w:"))
 		return selected if kernel.state.phase in ["PLAN_SHOW","PLAN_RESOLUTION","PROOF_ACCEPTED"] and witness.get("views",[]).size()==1 else ""
 	if kernel.state.phase not in ["PLAN_SHOW","PLAN_RESOLUTION"]:return ""
