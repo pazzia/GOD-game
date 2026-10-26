@@ -19,5 +19,7 @@
   "physical_device_tested": false,
   "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk",
   "repository_file": "artifacts/android/AlmostGod-0.5.0-preview.apk",
-  "repository_storage": "Git LFS; complete 163631006-byte object uploaded"
+  "repository_storage": "Git LFS; complete 163631006-byte object uploaded",
+  "repository_download_verification": "artifacts/android/download-verification.json",
+  "repository_lfs_object_download_verified": true
 }

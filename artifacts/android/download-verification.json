@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-26T07:27:15.694022+00:00",
+  "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_file": "artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_commit_with_apk": "dc26f5e5906f832ce7cc607e8c7d7abfabb04daa",
+  "storage": "Git LFS",
+  "size_bytes": 163631006,
+  "sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
+  "public_file_page_http_status": 200,
+  "download_button_present": true,
+  "remote_object_download_verified": true,
+  "download_verification_method": "git-lfs fetch into a fresh object directory; complete downloaded bytes independently hashed",
+  "browser_download_note": "The browser raw URL redirects to a media host blocked by this cloud network policy. Full remote object retrieval was verified using normal Git LFS transport."
+}
