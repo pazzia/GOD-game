@@ -12,20 +12,17 @@
 
 Подробности: [утверждение направления](docs/decisions/2026-10-25-approved-scientist-reboot.md), [план и критерии](docs/production/scientist-reboot/plan.md), [дизайн и UX](docs/design/scientist-ui.md), [музыка](docs/design/scientist-audio.md), [состояние проекта](docs/PROJECT_STATE.md). Описание 0.4 сохранено в [архиве](docs/history/README-0.4.0.md).
 
-## Тестовый APK из GitHub Actions
+## Скачать тестовый APK
 
-**[Открыть успешную сборку APK 0.5.0-preview](https://github.com/pazzia/GOD-game/actions/runs/40243718420#artifacts).**
-Войдите в GitHub и скачайте артефакт `AlmostGod-scientist-review-40243718420-1`.
-Внутри ZIP находится `build/scientist-review/AlmostGod-0.5.0-preview.apk` и отчёты.
-GitHub повторил все проверки, проверил подпись и состав APK. Точный исходный
-коммит — `fe678a898f752b8dcef4d458b4998bf7a1f4ad0f`; сведения о поставке —
-[github-build.json](docs/production/scientist-reboot/github-build.json).
+Тестовые сборки выдаются отдельным `.apk` в [GitHub Releases](https://github.com/pazzia/GOD-game/releases), без ZIP и распаковки. Откройте свежий выпуск и выберите `AlmostGod-0.5.0-preview.apk` в Assets. Отчёты скачиваются отдельно.
+
+Первая проверенная сборка нового дизайна сохранена в [истории Actions](https://github.com/pazzia/GOD-game/actions/runs/40243718420). Это архив свидетельств, а не основной способ получения приложения.
 
 [Review workflow](.github/workflows/android-review.yml) запускается при push ветки `feat/scientist-game-reboot`: импортирует ресурсы, выполняет полный прогон и собирает проверенный APK. APK и отчёты хранятся как GitHub Actions artifact 30 дней. Этот процесс не создаёт GitHub Release и не публикует игру в магазин.
 
 Исторический [APK 0.4.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-0.4.0-ci2/AlmostGod-0.4.0-preview.apk) не содержит нового профессора и дизайна. Его результаты не подтверждают переработку 0.5.
 
-Workflow [Android preview APK](.github/workflows/android-preview.yml) собирает APK на GitHub из точного коммита тега `android-preview-*`. Для нового теста создайте и отправьте новый тег на нужном коммите; также доступен ручной запуск workflow после его включения в основную ветку.
+Workflow [Android preview APK](.github/workflows/android-preview.yml) автоматически собирает APK на GitHub при изменениях `main`, кроме документации и сохранённых отчётов. Сборка также запускается тегом `android-preview-*` или вручную. Каждый выпуск связан с точным исходным коммитом.
 
 Сборка устанавливает закреплённый Godot 4.7.2, выполняет полный прогон с UI и аудио, проверяет подпись APK, состав ресурсов и совпадение отпечатков исходников. Только успешный результат публикуется в [GitHub Releases](https://github.com/pazzia/GOD-game/releases): APK, отчёт сборки, результаты проверок, сведения об исходном коммите и SHA-256. Журналы доступны в Actions. Исходники и настройки сборки хранятся в Git; APK хранится в Releases.
 

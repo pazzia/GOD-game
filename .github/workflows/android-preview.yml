@@ -3,8 +3,15 @@ name: Android preview APK
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     tags:
       - 'android-preview-*'
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'AGENTS.md'
+      - 'tests/reports/**'
 
 permissions:
   contents: read
