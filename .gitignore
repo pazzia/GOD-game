@@ -3,8 +3,10 @@
 __pycache__/
 *.py[cod]
 
-# Installable packages are distributed through GitHub Releases.
+# Installable packages are distributed through GitHub Releases; the selected
+# standalone test APK is also stored in Git LFS for repository downloads.
 *.apk
+!/artifacts/android/*.apk
 *.aab
 *.apks
 dist/

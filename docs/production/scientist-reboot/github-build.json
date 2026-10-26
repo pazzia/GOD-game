@@ -14,5 +14,8 @@
   "apk_sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
   "physical_device_tested": false,
   "download_authentication": "None; anonymous full APK download verified",
-  "initial_review_record": "docs/production/scientist-reboot/initial-review-build.json"
+  "initial_review_record": "docs/production/scientist-reboot/initial-review-build.json",
+  "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_file": "artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_storage": "Git LFS; complete 163631006-byte object uploaded"
 }

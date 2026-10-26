@@ -17,5 +17,8 @@
   "delivery_type": "standalone APK; no wrapper archive",
   "anonymous_download_verified": true,
   "apk_sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
-  "apk_size_bytes": 163631006
+  "apk_size_bytes": 163631006,
+  "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_file": "artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_storage": "Git LFS; complete 163631006-byte object uploaded"
 }

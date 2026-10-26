@@ -53,6 +53,12 @@ Runtime SHA-256: `3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc
 изменения `main` (кроме документации), затем публикует APK в GitHub Releases.
 Android 10+/ARM64, package `com.almostgod.game.preview`, versionCode 6.
 
+APK также добавлен отдельным файлом в сам Git через LFS:
+**[Открыть файл APK на GitHub](https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk)**
+→ Download raw. Это те же проверенные байты, SHA-256 не изменился. Такой вход
+используется в чате: владелец сообщил, что прямая бинарная ссылка из чата
+не скачивается. В Git хранится LFS-указатель, полный объект загружен в GitHub.
+
 **[Скачать APK 0.5.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-40277464897-1/AlmostGod-0.5.0-preview.apk)**.
 Для скачивания не нужен вход в GitHub. [Успешная сборка](https://github.com/pazzia/GOD-game/actions/runs/40277464897)
 из `3db6e36d44239cf3ac9bcd836a870e9df0bb21d7` прошла все 32 набора.

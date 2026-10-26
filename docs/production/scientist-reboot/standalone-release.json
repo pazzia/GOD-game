@@ -16,5 +16,8 @@
     "content_type": "application/vnd.android.package-archive",
     "content_disposition": "attachment; filename=AlmostGod-0.5.0-preview.apk"
   },
-  "physical_device_tested": false
+  "physical_device_tested": false,
+  "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_file": "artifacts/android/AlmostGod-0.5.0-preview.apk",
+  "repository_storage": "Git LFS; complete 163631006-byte object uploaded"
 }
