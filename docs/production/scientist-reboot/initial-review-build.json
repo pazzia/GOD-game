@@ -1,0 +1,22 @@
+{
+  "source_commit": "fe678a898f752b8dcef4d458b4998bf7a1f4ad0f",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40243718420",
+  "workflow_job_url": "https://github.com/pazzia/GOD-game/actions/runs/40243718420/job/121320780240",
+  "workflow_status": "success",
+  "artifact_urls": [
+    "https://github.com/pazzia/GOD-game/actions/runs/40243718420/artifacts/12617424075"
+  ],
+  "artifact_retention_days": 30,
+  "delivery_type": "Actions review artifact; no Release or store deployment",
+  "platform": "Android10+ ARM64",
+  "apk_name": "AlmostGod-0.5.0-preview.apk",
+  "physical_device_tested": false,
+  "artifact_id": "12617424075",
+  "artifact_archive_sha256": "2230d2019538e88fcf9e1b61bab0a3c27be5ca3f1b3db05413fb11e41fb61fa4",
+  "artifact_name": "AlmostGod-scientist-review-40243718420-1",
+  "artifact_size_display": "155MB",
+  "download_authentication": "GitHub sign-in required for Actions artifacts",
+  "apk_relative_path": "build/scientist-review/AlmostGod-0.5.0-preview.apk",
+  "anonymous_download_note": "Public run page is accessible; anonymous artifact download redirects to a 404. GitHub sign-in is required."
+}

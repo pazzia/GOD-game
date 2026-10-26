@@ -14,7 +14,9 @@
 
 ## Скачать тестовый APK
 
-Тестовые сборки выдаются отдельным `.apk` в [GitHub Releases](https://github.com/pazzia/GOD-game/releases), без ZIP и распаковки. Откройте свежий выпуск и выберите `AlmostGod-0.5.0-preview.apk` в Assets. Отчёты скачиваются отдельно.
+**[Скачать APK 0.5.0-preview напрямую](https://github.com/pazzia/GOD-game/releases/download/android-preview-40277464897-1/AlmostGod-0.5.0-preview.apk)** — отдельный файл, без ZIP, распаковки и входа в GitHub. Размер: 163 631 006 байт. [Страница выпуска](https://github.com/pazzia/GOD-game/releases/tag/android-preview-40277464897-1).
+
+Прямое скачивание проверено 26 октября 2026; SHA-256 совпал с отчётом сборки. Все 30 уровней и обязательные ресурсы скачанного APK сверены с текущими игровыми файлами. [Сведения о поставке](docs/production/scientist-reboot/standalone-release.json). Следующие тестовые сборки также выдаются отдельным `.apk` в GitHub Releases; отчёты скачиваются отдельно.
 
 Первая проверенная сборка нового дизайна сохранена в [истории Actions](https://github.com/pazzia/GOD-game/actions/runs/40243718420). Это архив свидетельств, а не основной способ получения приложения.
 

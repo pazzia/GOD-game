@@ -1,6 +1,6 @@
 # «Почти бог»: 0.5.0-preview
 
-25 октября 2026. Владелец утвердил зрелого профессора Феликса и новое меню,
+Обновлено 26 октября 2026. Владелец утвердил зрелого профессора Феликса и новое меню,
 затем поручил перенести дизайн и согласованную логику во всю игру.
 Разработка выполнена в `feat/scientist-game-reboot`; проверенный результат
 передан в `main`. Runtime в обеих ветках совпадает с проверенным APK.
@@ -48,11 +48,20 @@ Runtime SHA-256: `3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc
 
 ## GitHub и APK
 
-`android-review.yml` собирает Android 10+/ARM64, package
-`com.almostgod.game.preview`, versionCode 6. После push исходники и проверки
-воспроизводятся на GitHub; APK и отчёты сохраняются как Actions artifact.
-Этот workflow не создаёт Release и не публикует приложение в магазин.
-GitHub Actions успешно завершил сборку из `fe678a898f752b8dcef4d458b4998bf7a1f4ad0f`: [открыть APK и отчёты](https://github.com/pazzia/GOD-game/actions/runs/40243718420#artifacts). Для скачивания Actions artifact требуется вход в GitHub. В ZIP: `build/scientist-review/AlmostGod-0.5.0-preview.apk`.
+Постоянное требование владельца: всегда выдавать отдельный `.apk` и прямую
+ссылку без ZIP. `android-preview.yml` теперь автоматически проверяет и собирает
+изменения `main` (кроме документации), затем публикует APK в GitHub Releases.
+Android 10+/ARM64, package `com.almostgod.game.preview`, versionCode 6.
+
+**[Скачать APK 0.5.0-preview](https://github.com/pazzia/GOD-game/releases/download/android-preview-40277464897-1/AlmostGod-0.5.0-preview.apk)**.
+Для скачивания не нужен вход в GitHub. [Успешная сборка](https://github.com/pazzia/GOD-game/actions/runs/40277464897)
+из `3db6e36d44239cf3ac9bcd836a870e9df0bb21d7` прошла все 32 набора.
+Игровые файлы совпадают с `main`; последующая правка касается ожидания
+освобождения аудио в тесте. Скачанный APK независимо сверен по SHA-256 и составу.
+Сведения: `docs/production/scientist-reboot/standalone-release.json`.
+Первая review-сборка сохранена в `initial-review-build.json`; её архив больше
+не используется как основной способ получения приложения. Магазинная публикация
+не выполнялась.
 
 Каждый запуск CI использует временную тестовую подпись. Установка поверх
 другой preview с иной подписью требует отдельного решения пользователем;

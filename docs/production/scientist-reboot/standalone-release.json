@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-26T06:07:35.502765+00:00",
+  "source_commit": "3db6e36d44239cf3ac9bcd836a870e9df0bb21d7",
+  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40277464897",
+  "release_tag": "android-preview-40277464897-1",
+  "release_page": "https://github.com/pazzia/GOD-game/releases/tag/android-preview-40277464897-1",
+  "download_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-40277464897-1/AlmostGod-0.5.0-preview.apk",
+  "delivery_type": "standalone APK; no wrapper archive",
+  "anonymous_download_verified": true,
+  "required_suites": 32,
+  "apk": {
+    "name": "AlmostGod-0.5.0-preview.apk",
+    "size_bytes": 163631006,
+    "sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
+    "content_type": "application/vnd.android.package-archive",
+    "content_disposition": "attachment; filename=AlmostGod-0.5.0-preview.apk"
+  },
+  "physical_device_tested": false
+}

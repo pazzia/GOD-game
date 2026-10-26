@@ -1,18 +1,21 @@
 {
   "version": "0.5.0-preview",
-  "source_commit": "fe678a898f752b8dcef4d458b4998bf7a1f4ad0f",
+  "source_commit": "3db6e36d44239cf3ac9bcd836a870e9df0bb21d7",
   "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
   "required_suites": 32,
   "campaign_levels": 30,
   "canonical_and_alternative_solutions": 46,
   "localization_keys": 790,
   "ci_status": "success",
-  "ci_url": "https://github.com/pazzia/GOD-game/actions/runs/40243718420",
-  "download_page": "https://github.com/pazzia/GOD-game/actions/runs/40243718420#artifacts",
-  "artifact_name": "AlmostGod-scientist-review-40243718420-1",
-  "apk_in_zip": "build/scientist-review/AlmostGod-0.5.0-preview.apk",
-  "publication": "Review artifact only; no Release or store deployment",
+  "ci_url": "https://github.com/pazzia/GOD-game/actions/runs/40277464897",
+  "download_page": "https://github.com/pazzia/GOD-game/releases/tag/android-preview-40277464897-1",
+  "publication": "GitHub prerelease with standalone APK; no store deployment",
   "source_provenance": "assets/art/source/scientist-reboot/provenance.json",
   "full_review": "docs/reviews/scientist-reboot/README.md",
-  "physical_device_tested": false
+  "physical_device_tested": false,
+  "download_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-40277464897-1/AlmostGod-0.5.0-preview.apk",
+  "delivery_type": "standalone APK; no wrapper archive",
+  "anonymous_download_verified": true,
+  "apk_sha256": "7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7",
+  "apk_size_bytes": 163631006
 }
