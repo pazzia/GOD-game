@@ -1,0 +1,57 @@
+name: Inspect Android build diagnostics
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Failed Android preview workflow run ID
+        required: true
+        type: string
+  push:
+    tags:
+      - 'android-diagnostics-*'
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      SOURCE_RUN: ${{ inputs.run_id }}
+    steps:
+      - name: Recover selected build evidence without signing keys
+        run: |
+          source_run="${SOURCE_RUN:-${GITHUB_REF_NAME##*-}}"
+          [[ "$source_run" =~ ^[0-9]+$ ]]
+          export SOURCE_RUN="$source_run"
+          gh run download "$source_run" --name "android-build-logs-${source_run}-1" --dir "$RUNNER_TEMP/failure-artifact"
+          python - <<'PY'
+          import base64, json, os
+          from pathlib import Path
+          root = Path(os.environ["RUNNER_TEMP"])
+          artifact = root / "failure-artifact"
+          report = next(artifact.rglob("project-verification.json"), None)
+          data = json.loads(report.read_text()) if report else {}
+          diagnostic = {"source_run": os.environ["SOURCE_RUN"], "status": data.get("status"),
+                        "files_changed": data.get("files_changed_during_verification"),
+                        "failed_checks": [c for c in data.get("checks", []) if c["exit_code"]],
+                        "logs": {}}
+          for name in ("import.log", "verification.log", "build.log"):
+              path = next(artifact.rglob(name), None)
+              if path:
+                  diagnostic["logs"][name] = path.read_text(errors="replace")[-12000:]
+          branch = "ci-diagnostics-" + os.environ["GITHUB_RUN_ID"]
+          (root / "diag-ref.json").write_text(json.dumps({"ref": "refs/heads/" + branch, "sha": os.environ["GITHUB_SHA"]}))
+          content = base64.b64encode(json.dumps(diagnostic, indent=2).encode()).decode()
+          (root / "diag-file.json").write_text(json.dumps({"message": "docs: capture Android CI diagnostics", "branch": branch, "content": content}))
+          print("Diagnostic branch: " + branch)
+          PY
+          gh api --method POST "repos/$GH_REPO/git/refs" --input "$RUNNER_TEMP/diag-ref.json" > /dev/null
+          gh api --method PUT "repos/$GH_REPO/contents/diagnostics/android-build.json" --input "$RUNNER_TEMP/diag-file.json" > /dev/null
