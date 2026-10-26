@@ -46,8 +46,9 @@ func run() -> void:
 		if iteration==0:check(save.write_slot("test_recovery",{"marker":"C"}),"commit after recovery preserves backup")
 	for name in ["test_settings","test_recovery"]:
 		for suffix in [".json",".json.bak",".json.tmp"]:DirAccess.remove_absolute("user://"+name+suffix)
-	player.shutdown();sync=null;player.free()
-	await create_timer(.15).timeout
+	sync=null
+	check(await player.shutdown_and_wait(),"native audio playback releases before service destruction")
+	player.free();await process_frame
 	print("SERVICE TESTS: %d checks; %d failures" % [count,failures.size()])
 	for item in failures:printerr("FAIL: "+item)
 	var report=FileAccess.open("res://build/service-tests.json",FileAccess.WRITE);report.store_string(JSON.stringify({"checks":count,"failures":failures,"engine":Engine.get_version_info().string},"  "))
