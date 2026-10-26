@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-26T11:48:52.092519+00:00",
+  "display": "127.0.0.1:108",
+  "display_number": 108,
+  "resolution": "844x390",
+  "profile": "/workspace/GOD-ux051-observers/build/qa-observer-final/profile-20261026-114852-092261",
+  "game_log": "/workspace/GOD-ux051-observers/build/qa-observer-final/godot.log",
+  "evidence_dir": "/workspace/GOD-ux051-observers/docs/reviews/ux-fixes-0.5.1/qa-observer-final",
+  "source_commit": "f29e4d282c784fb626f26fbf645f82a89fd7ab4a",
+  "runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15",
+  "godot_version": "4.7.2.stable.official.ed1daf0bf",
+  "method": "native Godot on Xvfb/Mesa; XTest mouse/keyboard; unedited ImageMagick screen capture",
+  "audio_driver": "Dummy",
+  "physical_android": false,
+  "synthetic_touch": false,
+  "human_player": false,
+  "xvfb_pid": 106558,
+  "xvfb_identity": {
+    "pid": 106558,
+    "start_time_ticks": "8067200",
+    "boot_id": "7e39fb0c-6d85-4e87-812d-86c42ea2fca9",
+    "cmdline_sha256": "c3a8b0be6d10981bb277b9012e1e415d71e98c1767244bb9b1553bd90d358df7"
+  },
+  "game_pid": 106559,
+  "game_identity": {
+    "pid": 106559,
+    "start_time_ticks": "8067211",
+    "boot_id": "7e39fb0c-6d85-4e87-812d-86c42ea2fca9",
+    "cmdline_sha256": "c6d2168c84b335a0af63f4d41e914aa3a332ed86121d7021e406708c40078576"
+  },
+  "launch_command": [
+    "/workspace/setup-tools/Godot_v4.7.2-stable_linux.x86_64",
+    "--windowed",
+    "--path",
+    "/workspace/GOD-ux051-observers",
+    "--audio-driver",
+    "Dummy",
+    "--resolution",
+    "844x390",
+    "--position",
+    "0,0"
+  ],
+  "boot_visible_after_seconds": 10.401,
+  "stopped_at": "2026-10-26T11:53:53.947606+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "source_commit": "f29e4d282c784fb626f26fbf645f82a89fd7ab4a",
+  "runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15",
+  "started_at": "2026-10-26T11:35:02.360247+00:00",
+  "completed_at": "2026-10-26T11:38:34.024164+00:00",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40316007540",
+  "workflow_run_attempt": "1",
+  "apk_sha256": "438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd",
+  "certificate_sha256": "9e0a790c31becbe51c0efea43f640cee0d0ecc0ed1078d5fab77bb37edc4ac70",
+  "verification_suites": 33,
+  "physical_device_tested": false,
+  "android_package": "com.almostgod.game.review.r40316007540.a1",
+  "installation_mode": "parallel_isolated_review",
+  "signing_continuity": false,
+  "progress_migration": "Not implemented; the isolated package has separate progress and settings.",
+  "legacy_installation_action": "No uninstall, reset, or migration is performed or requested.",
+  "signing_key": "Ephemeral test key generated on runner; never uploaded. Not a stable signing channel."
+}

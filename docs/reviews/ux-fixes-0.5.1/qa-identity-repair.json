@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-26T11:09:36.938527+00:00",
+  "scope": "Infrastructure repair solely to stop clean unused QA session; no game input/state/save edits",
+  "previous_game_identity": {
+    "pid": 101503,
+    "start_time_ticks": "7808261",
+    "boot_id": "7e39fb0c-6d85-4e87-812d-86c42ea2fca9",
+    "cmdline_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "repaired_game_identity": {
+    "pid": 101503,
+    "start_time_ticks": "7808261",
+    "boot_id": "7e39fb0c-6d85-4e87-812d-86c42ea2fca9",
+    "cmdline_sha256": "1909882504c9577bbcb60f80656106527d95dd296d744e0f325f0c2b36354db3"
+  },
+  "full_argv_matches_recorded_launch": true,
+  "birth_identity_unchanged": true
+}

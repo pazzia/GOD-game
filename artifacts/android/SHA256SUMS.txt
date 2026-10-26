@@ -1,1 +1,2 @@
+438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd  AlmostGod-0.5.1-preview.apk
 7520f23a0b58b1715240d5f67f7fd331e0bd0f8e1af06ae2b5231df74c336fb7  AlmostGod-0.5.0-preview.apk

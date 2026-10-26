@@ -1,5 +1,5 @@
 {
-  "checks": 4391,
+  "checks": 4460,
   "failures": [],
   "scope": "30 actual authored solutions; guide goals, phase semantics and mutation isolation in RU/EN; L01 real pointer advancement is covered in test_ui",
   "states": 408

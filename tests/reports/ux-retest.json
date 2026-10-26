@@ -1,0 +1,8 @@
+{
+  "checks": 121,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "key_events": 16,
+  "pointer_events": 90,
+  "scope": "Known-state native Control regressions; genuine authored L03 preparation fixture; no pressed-signal emission; not a blind, physical Android, or full-campaign test"
+}

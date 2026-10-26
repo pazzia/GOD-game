@@ -1,0 +1,14 @@
+{
+  "scope": "Only synthetic isolated QA save; no user-device data accessed",
+  "completed": [
+    "L01",
+    "L02",
+    "L03"
+  ],
+  "current_level": 3,
+  "checkpoint_phase": "SUCCESS",
+  "text_scale": 1.4,
+  "reduced_motion": true,
+  "profile_retained": true,
+  "user_device_data_read": false
+}

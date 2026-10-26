@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-26T11:40:07.851549+00:00",
+  "status": "ci_metadata_verified",
+  "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40316007540",
+  "source_commit": "f29e4d282c784fb626f26fbf645f82a89fd7ab4a",
+  "runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15",
+  "release_page": "https://github.com/pazzia/GOD-game/releases/tag/android-preview-0.5.1-ux2",
+  "direct_apk_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-0.5.1-ux2/AlmostGod-0.5.1-preview.apk",
+  "apk_name": "AlmostGod-0.5.1-preview.apk",
+  "apk_size_bytes": 163651486,
+  "apk_sha256": "438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd",
+  "expected_package": "com.almostgod.game.review.r40316007540.a1",
+  "certificate_sha256": "9e0a790c31becbe51c0efea43f640cee0d0ecc0ed1078d5fab77bb37edc4ac70",
+  "required_suites_passed": 33,
+  "providers": [
+    {
+      "name": "androidx.core.content.FileProvider",
+      "exported": false,
+      "authorities": "com.almostgod.game.review.r40316007540.a1.fileprovider",
+      "grantUriPermissions": true
+    },
+    {
+      "name": "androidx.startup.InitializationProvider",
+      "exported": false,
+      "authorities": "com.almostgod.game.review.r40316007540.a1.fileprovider"
+    }
+  ],
+  "downloaded_files": [
+    "provenance.json",
+    "project-verification.json",
+    "AlmostGod-0.5.1-preview.build.json",
+    "SHA256SUMS.txt"
+  ],
+  "apk_downloaded_by_this_check": false,
+  "apk_hash_compared_to_ci_reports_and_sums_only": true,
+  "physical_device_tested": false,
+  "workflow_status": "success",
+  "public_standalone_asset_list_verified": true,
+  "signature_verified_in_ci": true
+}

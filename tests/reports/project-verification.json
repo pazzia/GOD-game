@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "runtime_digest_sha256": "3c21a39d42e2e47914c149ea17e249718d58225ea878fa6459c5f01cb191fc23",
+  "runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15",
   "runtime_files": {
     "assets/art/atlas_metadata.json": "781be03c4606466d1f5ab56500a38dac2c195241312c6087bdfe2c8557de7372",
     "assets/art/characters/caramelka.png": "099774786996444e9fc85e892920346cd7436545c82960dcfbe8eb57334e1ed8",
@@ -1151,17 +1151,17 @@
     "data/levels/L28.json": "b6a33e2283c5a3a1f92f0070b4fe5880fa68b6e9b0bd261ff5ef618333f7dbb9",
     "data/levels/L29.json": "0196461762e94ecc578f939ea99711b8d6419dd04ef635aeaa2b2d213e4a7ad6",
     "data/levels/L30.json": "7307f6930041072c8883b9268c17e7c499f18861fef5a9ead067e65543c438bb",
-    "data/localization/en.json": "a52fc76e74102939d2ec47ff78ae6519ff6186ff0da1d02e02132715fc82c1e2",
-    "data/localization/ru.json": "fa566510e66fc8de51dc4d8efaeab4cd44f8f498d94b3539e64b516d9a1f591c",
+    "data/localization/en.json": "cde7753d5d34415216047ee5d2c97a53ed917527190dcb5e8d1c6428395072a2",
+    "data/localization/ru.json": "30c1586052be46409dd3abd91a96316fa36788c8350b87ab10beca3033d2769b",
     "data/music_composition_seed.json": "d6082286fa6f81849eb843a47dbb88b940aaf0c807a1949e6761d4c0e3eee48e",
     "data/settings_default.json": "3862374e9f67a80af9fa04637ab908d90201395d78d00a4ae8640eb9963f1723",
     "default_bus_layout.tres": "f3ae64871fd45fdf27300f6ccaab0cd958758e0be4332aa73100d3d6a05a3ad5",
-    "export_presets.cfg": "af25ca2adc2598799eb2ffa24a84338392253be3a23258b206f6810bed6daf6f",
+    "export_presets.cfg": "d04bc4ae90fdcf1dfe93b8f367286de062aa8a3269a0bb334fa1430b66740024",
     "main.tscn": "3408e191e6c364b3d1b6cbd4b922157e1376676f7588ef6cb287fb6dbb55a925",
     "presentation/character_acting.gd": "653d570561f53ad83174c17ed11767d91c58133dc64ab7a0377b7e4b29e7c065",
     "presentation/character_puppet.gd": "5941f0dbd4b659309cf2db3991644354ce4c6bcf629b8bf00b04b5fe3a6f2f85",
-    "presentation/game.gd": "e54e9cb550516f137cff1555d94b51815eda35d3cbbcf8edbca0cc3221eec3b0",
-    "presentation/quest_guide.gd": "23c81ce658f7688367ebcc06401e256febdbc21a9b4872b8dceaebfb39b4fcf8",
+    "presentation/game.gd": "bc7338c53c5f77d69dfb81a5328e001a36a1bbdac2e1c899a7f99c31a7161abf",
+    "presentation/quest_guide.gd": "5d344164463c85f8eef6ffb7187663cb8491c5e92f2fd9ea3a768186b7125e3a",
     "presentation/reboot_art.gd": "108e98b8048d79fe3a494c7202fff1c0660557b12d189f709f253418504ec04e",
     "presentation/resources/slider_knob.svg": "953321811b645ae9db5a6f912db46bc974d3840a5725db238f7981e6a15808ed",
     "presentation/resources/slider_knob.svg.import": "f750e7e48646cfa10608ffb2275e8f9bbebc008ce0953c0651bd7f9dc8fd22bc",
@@ -1169,9 +1169,9 @@
     "presentation/resources/toggle_off.svg.import": "82f2c2962c0f45898063259885eb2655d7b151df0da3bf8f8f7588b2210e37e3",
     "presentation/resources/toggle_on.svg": "f4997facced662965390da3f1b72d1d9c9f0ebc296be8cf2a5dbff1dd156d7ad",
     "presentation/resources/toggle_on.svg.import": "97de9473ec2f7c2dc823dad00841ba0e29f3590189b5e7141388b3b65f476fe1",
-    "presentation/stage_view.gd": "be1a1d64a5a0a898775e8990dcb15b42ead60190619d70590b69a0c0c161d944",
-    "presentation/theme.gd": "c6288fdd0a76d66c2fba6238dcff74436a2921c321165348209894fdfa9102cb",
-    "project.godot": "cf6e3ba07f7c07139091149858ff0798d71b06603cbb0b599001f67e89bfd7fc",
+    "presentation/stage_view.gd": "44aadd5bf6ea52a853c8daace54072b07478a93927032f754596c5036aa5e50c",
+    "presentation/theme.gd": "74603f665dc2e10471c0ffbec1dee3c2ae3221ba90bc7d14bfc3015febdbeeac",
+    "project.godot": "1806b4b99b8062bb424dbba760fc51882def1507b9cee9c0105c481df840a3d9",
     "services/audio_service.gd": "66bdc64cdef1a1f4b0209fb96da1a2c2dc445a4f0dc4fbdcf5183c84fac4b103",
     "services/save_service.gd": "9ece2ad0d280a1bf5a17f44d346aacdc9da21b9a6904eb42577ec06ecce2beb3"
   },
@@ -1182,8 +1182,8 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.34,
-      "output": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.146s\n\nOK\n"
+      "elapsed_seconds": 0.61,
+      "output": "......Retrying pinned download tool.zip after a transient transport error (1/3).\n.Retrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\nRetrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\nRetrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\nRetrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\nRetrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\nRetrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\n.Retrying pinned download tool.zip after a transient transport error (1/3).\nRetrying pinned download tool.zip after a transient transport error (2/3).\n.................\n----------------------------------------------------------------------\nRan 25 tests in 0.192s\n\nOK\n"
     },
     {
       "name": "content",
@@ -1191,14 +1191,14 @@
       "process_exit_code": 0,
       "engine_errors": [],
       "elapsed_seconds": 0.05,
-      "output": "{\n  \"kind\": \"content_cross_file_validation\",\n  \"status\": \"passed\",\n  \"levels\": 30,\n  \"replays\": 46,\n  \"alternatives\": 16,\n  \"localization_keys_per_language\": 790,\n  \"referenced_entity_asset_ids\": 33,\n  \"errors\": [],\n  \"scope\": \"References, text and authoring contracts; no gameplay or visual acceptance\"\n}\n"
+      "output": "{\n  \"kind\": \"content_cross_file_validation\",\n  \"status\": \"passed\",\n  \"levels\": 30,\n  \"replays\": 46,\n  \"alternatives\": 16,\n  \"localization_keys_per_language\": 835,\n  \"referenced_entity_asset_ids\": 33,\n  \"errors\": [],\n  \"scope\": \"References, text and authoring contracts; no gameplay or visual acceptance\"\n}\n"
     },
     {
       "name": "art-files",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 3.9,
+      "elapsed_seconds": 3.74,
       "output": "{\n  \"kind\": \"art_file_integrity\",\n  \"status\": \"passed\",\n  \"raster_exports\": 288,\n  \"svg_exports\": 32,\n  \"reboot\": {\n    \"status\": \"passed\",\n    \"characters\": 15,\n    \"environments\": 3,\n    \"props\": 70,\n    \"source_images\": 16,\n    \"errors\": [],\n    \"limits\": \"Metadata, campaign coverage and source identity; composition, acting and readability need visual review.\"\n  },\n  \"portrait_exports\": 81,\n  \"layer_stacks_with_metadata\": 3,\n  \"errors\": [],\n  \"limits\": \"Decoding, alpha, dimensions, distinct files and references only. Does not prove composition, expression quality, animation or phone readability.\"\n}\n"
     },
     {
@@ -1206,7 +1206,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.54,
+      "elapsed_seconds": 0.44,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nKERNEL TESTS: 31 checks; 0 failures\n"
     },
     {
@@ -1222,7 +1222,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.26,
+      "elapsed_seconds": 0.25,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nVALIDATION TESTS: 26 checks; 0 failures\n"
     },
     {
@@ -1230,7 +1230,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.44,
+      "elapsed_seconds": 0.43,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nS2 REGRESSIONS: 37 checks; 0 failures\n"
     },
     {
@@ -1238,7 +1238,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 6.05,
+      "elapsed_seconds": 5.55,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCAMPAIGN TESTS: 30 levels; 16 alternatives; 730 checks; 0 failures\n"
     },
     {
@@ -1246,15 +1246,15 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.38,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSERVICE TESTS: 26 checks; 0 failures\n"
+      "elapsed_seconds": 0.34,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSERVICE TESTS: 27 checks; 0 failures\n"
     },
     {
       "name": "test_service_boundaries.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 3.26,
+      "elapsed_seconds": 2.21,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nINDEPENDENT SERVICE BOUNDARIES: 36 checks; 0 failures; audio clock simulated1200s, not listening\n"
     },
     {
@@ -1262,7 +1262,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.01,
+      "elapsed_seconds": 0.91,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCLIENT LOADING: 13 checks; 0 failures\n"
     },
     {
@@ -1270,7 +1270,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.26,
+      "elapsed_seconds": 0.25,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSAVE RECOVERY EDGES: 26 checks; 0 failures\n"
     },
     {
@@ -1278,7 +1278,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.45,
+      "elapsed_seconds": 0.44,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO CONDUCTOR: 23 checks; 0 failures\n"
     },
     {
@@ -1286,7 +1286,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.05,
+      "elapsed_seconds": 0.92,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO TRANSPORT EDGES: 14 checks; 0 failures\n"
     },
     {
@@ -1294,7 +1294,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.75,
+      "elapsed_seconds": 0.72,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO SHUTDOWN: 5 checks; 0 failures\n"
     },
     {
@@ -1302,7 +1302,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.19,
+      "elapsed_seconds": 1.18,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nAUDIO SHUTDOWN EDGES: 8 checks; 0 failures\n"
     },
     {
@@ -1318,7 +1318,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 2.77,
+      "elapsed_seconds": 2.48,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nWORKBENCH: 79 checks; 0 failures\n"
     },
     {
@@ -1326,7 +1326,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.64,
+      "elapsed_seconds": 0.53,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPUPPET: 43 checks; 0 failures; 9 actual part rigs\n"
     },
     {
@@ -1334,7 +1334,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.45,
+      "elapsed_seconds": 0.25,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPUPPET EDGES: 9 checks; 0 failures\n"
     },
     {
@@ -1342,7 +1342,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.49,
+      "elapsed_seconds": 0.34,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCHARACTER ACTING: 1069 checks; 0 failures; 47 special clips\n"
     },
     {
@@ -1350,7 +1350,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.88,
+      "elapsed_seconds": 1.28,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nCHARACTER ANIMATION CONTRACT: 788 checks; 0 failures\n"
     },
     {
@@ -1358,15 +1358,15 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 17.56,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE LAYOUT: 11672 checks across 824 layouts; 0 failures\n"
+      "elapsed_seconds": 15.89,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE LAYOUT: 12496 checks across 824 layouts; 0 failures\n"
     },
     {
       "name": "test_stage_boundaries.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 2.61,
+      "elapsed_seconds": 2.21,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE BOUNDARIES: 91 checks; 0 failures\n"
     },
     {
@@ -1374,7 +1374,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 0.91,
+      "elapsed_seconds": 0.81,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nPRESENTATION: 33 checks; 0 failures\n"
     },
     {
@@ -1382,15 +1382,15 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.0,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE TARGETS: 12 checks; 0 failures\n"
+      "elapsed_seconds": 1.28,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE TARGETS: 34 checks; 0 failures\n"
     },
     {
       "name": "test_stage_input_edges.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.01,
+      "elapsed_seconds": 0.91,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nSTAGE INPUT EDGES: 7 checks; 0 failures; 9 native input events\n"
     },
     {
@@ -1398,15 +1398,15 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 7.42,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE POINTER UI: 87 checks; 0 failures; 122 pointer events\n"
+      "elapsed_seconds": 6.86,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nNATIVE POINTER UI: 93 checks; 0 failures; 136 pointer events\n"
     },
     {
       "name": "test_touch_capability.gd",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 1.85,
+      "elapsed_seconds": 1.66,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nTOUCH CAPABILITY: 14 checks; 0 failures; 30 native touch events\n"
     },
     {
@@ -1414,7 +1414,7 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 14.57,
+      "elapsed_seconds": 13.86,
       "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nUI JOURNEY L11 actual initial→victory; 7 UI commands\nUI JOURNEY L21 actual initial→victory; 11 UI commands\nUI JOURNEY L30 actual initial→victory; 30 UI commands\nCOMPLEX UI JOURNEYS: 59 checks; 0 failures; 334 pointer events\n"
     },
     {
@@ -1422,15 +1422,23 @@
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 3.98,
-      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nQUEST JOURNEY: 4391 checks; 408 real states; 0 failures\n"
+      "elapsed_seconds": 3.88,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nQUEST JOURNEY: 4460 checks; 408 real states; 0 failures\n"
+    },
+    {
+      "name": "test_ux_retest.gd",
+      "exit_code": 0,
+      "process_exit_code": 0,
+      "engine_errors": [],
+      "elapsed_seconds": 3.55,
+      "output": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\n\nUX RETEST: 121 checks; 0 failures; 90 pointer and 16 key events\n"
     },
     {
       "name": "audio-files",
       "exit_code": 0,
       "process_exit_code": 0,
       "engine_errors": [],
-      "elapsed_seconds": 36.28,
+      "elapsed_seconds": 44.39,
       "output": "{\n  \"kind\": \"audio_file_measurements\",\n  \"status\": \"passed\",\n  \"files\": 222,\n  \"music_runtime_files\": 15,\n  \"stingers\": 5,\n  \"voices\": 90,\n  \"sfx_variants\": 106,\n  \"ambiences\": 6,\n  \"errors\": [],\n  \"advisories\": [],\n  \"limits\": \"No subjective listening, speaker/headphone, mobile interruption or 20-minute scene-mix acceptance.\"\n}\n"
     }
   ],

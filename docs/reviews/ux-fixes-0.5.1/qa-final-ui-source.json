@@ -1,0 +1,118 @@
+{
+  "L01_ui_commands": [
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "BeginPerformance"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "Undo"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "entity_id": "screen_a",
+        "slot_id": "screen_left"
+      },
+      "type": "PlaceProp"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "BeginPerformance"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "Undo"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "action": "fold",
+        "entity_id": "screen_a"
+      },
+      "type": "Interact"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "Undo"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "action": "fold",
+        "entity_id": "screen_a"
+      },
+      "type": "Interact"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "BeginPerformance"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "myth_id": "M01",
+        "replace_law_id": null
+      },
+      "type": "ActivateLaw"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "action": "remove",
+        "entity_id": "float"
+      },
+      "type": "Interact"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "actor_id": "marfa",
+        "route_id": "cross"
+      },
+      "type": "AssignRoute"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "RunResolution"
+    }
+  ],
+  "L02_ui_commands": [
+    {
+      "accepted": true,
+      "payload": {
+        "action": "attach",
+        "entity_id": "mooring",
+        "target_entity_id": "bollard"
+      },
+      "type": "Interact"
+    },
+    {
+      "accepted": true,
+      "payload": {
+        "actor_id": "cargo",
+        "route_id": "unload"
+      },
+      "type": "AssignRoute"
+    },
+    {
+      "accepted": true,
+      "payload": {},
+      "type": "RunResolution"
+    }
+  ],
+  "L30_scope": "actual pointer cancel/close after authored third-proof fixture; not a full L30 pointer journey",
+  "checks": 93,
+  "contract_matrix": "Native menu choices with explicit isolated kernel setup; separate from the full L01/L02 pointer journey",
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "pointer_events": 136,
+  "touch_events": 20
+}

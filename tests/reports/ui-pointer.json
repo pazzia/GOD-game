@@ -109,10 +109,10 @@
     }
   ],
   "L30_scope": "actual pointer cancel/close after authored third-proof fixture; not a full L30 pointer journey",
-  "checks": 87,
+  "checks": 93,
   "contract_matrix": "Native menu choices with explicit isolated kernel setup; separate from the full L01/L02 pointer journey",
   "engine": "4.7.2-stable (official)",
   "failures": [],
-  "pointer_events": 122,
+  "pointer_events": 136,
   "touch_events": 20
 }

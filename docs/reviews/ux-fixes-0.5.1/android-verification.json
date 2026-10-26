@@ -1,6 +1,6 @@
 {
   "checked_at": "2026-10-26T11:00:51.539169+00:00",
-  "status": "tooling_checks_passed_build_not_run",
+  "status": "tooling_checks_passed_ci_ux2_passed_metadata_verified",
   "task": "APK-UX-051",
   "version_name": "0.5.1-preview",
   "version_code": 7,
@@ -42,5 +42,68 @@
     ".github/workflows/android-diagnostics.yml": "db8b11efc4d1ce8edf5897db69d7a1de1204b321f7e14f2b3b506c7da7879c69",
     "export_presets.cfg": "d04bc4ae90fdcf1dfe93b8f367286de062aa8a3269a0bb334fa1430b66740024",
     "project.godot": "1806b4b99b8062bb424dbba760fc51882def1507b9cee9c0105c481df840a3d9"
+  },
+  "ci_ux1": {
+    "checked_at": "2026-10-26T11:22:24.440574+00:00",
+    "run_id": "40313133435",
+    "job_id": "121538988208",
+    "source_commit": "388b0949968c0bb8acfdd0166df5f28254b5ff9d",
+    "workflow_url": "https://github.com/pazzia/GOD-game/actions/runs/40313133435",
+    "status": "failed",
+    "bootstrap": "passed",
+    "failed_step": "Verify project, build APK, and check signature and resources",
+    "failed_suite": "test_touch_capability.gd",
+    "suite_checks": 14,
+    "suite_failures": 2,
+    "touch_events": 30,
+    "failed_assertions": [
+      "native touch inspection names the actual observer and live viewing status: w2",
+      "native touch inspection names the actual observer and live viewing status: w3"
+    ],
+    "runtime_files_changed_during_verification": [],
+    "apk_export_or_provider_gate_run": false,
+    "release_published": false,
+    "diagnostic_url": "https://raw.githubusercontent.com/pazzia/GOD-game/ci-diagnostics-40314157194/diagnostics/android-build.json",
+    "diagnostic_snapshot": "android-ci-ux1.json"
+  },
+  "ci_ux2": {
+    "checked_at": "2026-10-26T11:40:07.851549+00:00",
+    "status": "ci_metadata_verified",
+    "workflow_run_url": "https://github.com/pazzia/GOD-game/actions/runs/40316007540",
+    "source_commit": "f29e4d282c784fb626f26fbf645f82a89fd7ab4a",
+    "runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15",
+    "release_page": "https://github.com/pazzia/GOD-game/releases/tag/android-preview-0.5.1-ux2",
+    "direct_apk_url": "https://github.com/pazzia/GOD-game/releases/download/android-preview-0.5.1-ux2/AlmostGod-0.5.1-preview.apk",
+    "apk_name": "AlmostGod-0.5.1-preview.apk",
+    "apk_size_bytes": 163651486,
+    "apk_sha256": "438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd",
+    "expected_package": "com.almostgod.game.review.r40316007540.a1",
+    "certificate_sha256": "9e0a790c31becbe51c0efea43f640cee0d0ecc0ed1078d5fab77bb37edc4ac70",
+    "required_suites_passed": 33,
+    "providers": [
+      {
+        "name": "androidx.core.content.FileProvider",
+        "exported": false,
+        "authorities": "com.almostgod.game.review.r40316007540.a1.fileprovider",
+        "grantUriPermissions": true
+      },
+      {
+        "name": "androidx.startup.InitializationProvider",
+        "exported": false,
+        "authorities": "com.almostgod.game.review.r40316007540.a1.fileprovider"
+      }
+    ],
+    "downloaded_files": [
+      "provenance.json",
+      "project-verification.json",
+      "AlmostGod-0.5.1-preview.build.json",
+      "SHA256SUMS.txt"
+    ],
+    "apk_downloaded_by_this_check": false,
+    "apk_hash_compared_to_ci_reports_and_sums_only": true,
+    "physical_device_tested": false,
+    "workflow_status": "success",
+    "public_standalone_asset_list_verified": true,
+    "signature_verified_in_ci": true
   }
 }
