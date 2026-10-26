@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-10-26T11:00:51.539169+00:00",
+  "status": "tooling_checks_passed_build_not_run",
+  "task": "APK-UX-051",
+  "version_name": "0.5.1-preview",
+  "version_code": 7,
+  "apk_name": "AlmostGod-0.5.1-preview.apk",
+  "ci_package": "com.almostgod.game.review.r${GITHUB_RUN_ID}.a${GITHUB_RUN_ATTEMPT}",
+  "install_mode": "parallel_isolated_review",
+  "stable_signing_channel": false,
+  "progress_migration": false,
+  "private_keys_or_github_secrets_read_or_modified": false,
+  "local_android_build_run": false,
+  "physical_android_install_tested": false,
+  "checks": {
+    "python_unit_tests": 25,
+    "python_unit_tests_status": "passed",
+    "python_compile": "passed",
+    "workflow_yaml_and_shell_syntax": "passed for preview, review and diagnostics",
+    "bootstrap_pipefail": "a failed bootstrap mock returns 9 instead of tee success in both workflows",
+    "historical_report_cleanup": "runs immediately after checkout, before bootstrap in both workflows",
+    "actual_apk_package_and_provider_guard": "implemented; actual new APK still awaits CI build after source freeze",
+    "git_diff_check": "passed"
+  },
+  "retry_policy": {
+    "attempts": 3,
+    "backoff_seconds": [
+      1,
+      2
+    ],
+    "retryable": "HTTP408/429/5xx; known timeout/connection/transient-DNS causes; incomplete body read",
+    "no_retry": "HTTP401/403/404/407; proxy403; unknown URLError causes; checksum mismatch",
+    "pinned_lockfiles_changed": false
+  },
+  "tested_file_sha256": {
+    "tools/build_android.py": "d304585246face5959e6075052cf1ca46e640a3bdb5506cb41082974081fd018",
+    "tools/ci_android.py": "119e843b851a02d5a9ded809038d754c497dfbe25738ff2c234532bfba367154",
+    "tools/bootstrap_native.py": "bef58f8c5974f4cffc41cc0e1f526207275da895e65761c2d7335e9db83d5e9f",
+    "tests/test_verification_tools.py": "c9d5b796ed1560915ab524ce5e42c5cbf37c6c38c3cf73daff75b038249d520a",
+    ".github/workflows/android-preview.yml": "b85dfdf1275de2f2b0bf8007ffcb00313e261cfa2760330d68eee30a036d788e",
+    ".github/workflows/android-review.yml": "75c1c2ee1fa1d0bf60b6e2484e6a879e9ddbaedd4d9c3256651d5f4d3fa0fc4c",
+    ".github/workflows/android-diagnostics.yml": "db8b11efc4d1ce8edf5897db69d7a1de1204b321f7e14f2b3b506c7da7879c69",
+    "export_presets.cfg": "d04bc4ae90fdcf1dfe93b8f367286de062aa8a3269a0bb334fa1430b66740024",
+    "project.godot": "1806b4b99b8062bb424dbba760fc51882def1507b9cee9c0105c481df840a3d9"
+  }
+}

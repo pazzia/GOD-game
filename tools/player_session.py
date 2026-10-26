@@ -46,6 +46,22 @@ def process_identity(pid):
             "cmdline_sha256": hashlib.sha256((process / "cmdline").read_bytes()).hexdigest()}
 
 
+def launch_identity(pid, initial, command, timeout=3):
+    """Wait out exec's empty cmdline without changing the child's birth identity."""
+    expected = b"\0".join(os.fsencode(part) for part in command) + b"\0"
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        current = process_identity(pid)
+        if any(current[name] != initial[name] for name in ("pid", "start_time_ticks", "boot_id")):
+            raise RuntimeError("Child identity changed while waiting for its launch command")
+        actual = Path(f"/proc/{pid}/cmdline").read_bytes()
+        if actual == expected and actual:
+            current["cmdline_sha256"] = hashlib.sha256(actual).hexdigest()
+            return current
+        time.sleep(.02)
+    raise RuntimeError("Expected nonempty child launch command did not appear before timeout")
+
+
 def require_identity(pid, expected):
     if not alive(pid):
         return False
@@ -170,6 +186,17 @@ def launch_game(state):
     state["game_pid"] = process.pid
     state["game_identity"] = process_identity(process.pid)
     state["launch_command"] = command
+    try:
+        state["game_identity"] = launch_identity(process.pid, state["game_identity"], command)
+    except Exception:
+        # This direct, unreaped Popen child cannot have its PID reused.
+        if process.poll() is None:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill(); process.wait(timeout=5)
+        raise
     from PIL import Image, ImageStat
     started = time.monotonic()
     probe = profile / "boot-screen.png"

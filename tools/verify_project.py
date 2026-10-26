@@ -31,7 +31,7 @@ BASE_SUITES = ['test_kernel.gd','test_scientist_kernel.gd','test_validation.gd',
               'test_workbench.gd','test_puppet.gd','test_puppet_edges.gd',
               'test_character_acting.gd','test_character_animation_contract.gd',
               'test_layout.gd','test_stage_boundaries.gd','test_presentation.gd','test_stage_targets.gd','test_stage_input_edges.gd']
-UI_SUITES = ['test_ui.gd','test_touch_capability.gd','test_complex_ui_journeys.gd','test_quest_journey.gd']
+UI_SUITES = ['test_ui.gd','test_touch_capability.gd','test_complex_ui_journeys.gd','test_quest_journey.gd','test_ux_retest.gd']
 
 def expected_check_names(ui=False, audio=False):
     names = ['verification-tools', 'content', 'art-files'] + BASE_SUITES

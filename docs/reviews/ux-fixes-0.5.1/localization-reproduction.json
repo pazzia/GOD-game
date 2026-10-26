@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "generator": "tools/author_localization.py",
+  "compared_files": 3,
+  "files_unchanged": true,
+  "sha256": {
+    "data/localization/ru.json": "30c1586052be46409dd3abd91a96316fa36788c8350b87ab10beca3033d2769b",
+    "data/localization/en.json": "cde7753d5d34415216047ee5d2c97a53ed917527190dcb5e8d1c6428395072a2",
+    "data/campaign.json": "21a81c55e71e0362f70fd84b8d8b3abd1d489af32b4065d04a7e5d91731ed5d6"
+  },
+  "output": "835 keys per language,30 levels,90 hints"
+}
