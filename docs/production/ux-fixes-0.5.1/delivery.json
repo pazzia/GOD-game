@@ -28,5 +28,8 @@
   "known_open_player_notes": [
     "PRT-01: placement targets do not show their purpose until the named-place menu",
     "PRT-02: floating Actions button partly overlaps an alternative target at140%; no blocked placement demonstrated"
-  ]
+  ],
+  "repository_full_lfs_download_verified": true,
+  "repository_lfs_checked_at": "2026-10-26T12:12:43.613661+00:00",
+  "repository_lfs_download_sha256": "438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd"
 }

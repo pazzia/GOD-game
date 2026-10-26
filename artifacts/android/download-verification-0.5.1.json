@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-26T12:12:43.613661+00:00",
+  "repository_page": "https://github.com/pazzia/GOD-game/blob/main/artifacts/android/AlmostGod-0.5.1-preview.apk",
+  "file": "artifacts/android/AlmostGod-0.5.1-preview.apk",
+  "size_bytes": 163651486,
+  "sha256": "438a3b72a4ca642613da865b5284ee3cb2d96e8d104af457004c82272c26b1cd",
+  "verification": "Full object fetched from GitHub main using Git LFS into fresh object storage; bytes independently hashed",
+  "public_file_page_http_status": 200,
+  "download_raw_button_present": true,
+  "game_runtime_digest_sha256": "b61f531c136fa30d5e67b8df83f29e2011c49b786bf5d7d7ecdcf5b2d1ee2f15"
+}
